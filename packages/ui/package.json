@@ -9,7 +9,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
-    "build": "tsc && vite build"
+    "build": "tsc"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
