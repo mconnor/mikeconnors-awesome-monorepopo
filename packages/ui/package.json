@@ -1,6 +1,7 @@
 {
   "name": "@repo/ui",
   "version": "0.0.0",
+  "type": "module",
   "exports": {
     "./counter": "./components/counter.ts",
     "./header": "./components/header.ts",
@@ -11,7 +12,7 @@
     "lint": "eslint \"**/*.ts\"",
     "fix": "eslint \"**/*.ts\" --fix",
     "build": "tsc",
-    "format": "prettier --write  --ignore-unknown .",
+    "format": "prettier  .",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {

@@ -8,6 +8,9 @@
     },
     "lint": {},
     "fix": {},
+    "format": {
+      "inputs": ["**/*.{ts,tsx}"]
+    },
     "dev": {
       "cache": false,
       "persistent": true
@@ -20,7 +23,8 @@
       "dependsOn": ["^topo"]
     },
     "check-types": {
-      "dependsOn": ["topo"]
+      "dependsOn": ["topo"],
+      "inputs": ["**/*.{ts,tsx}"]
     }
   }
 }

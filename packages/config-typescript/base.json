@@ -20,5 +20,11 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "exclude": ["node_modules", "eslint.config.js", "eslint.config.mjs", "dist"]
+  "exclude": [
+    "node_modules",
+    "eslint.config.js",
+    "eslint.config.mjs",
+    "dist",
+    ".turbo"
+  ]
 }
