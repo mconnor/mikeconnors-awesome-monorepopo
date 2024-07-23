@@ -83,10 +83,6 @@ importers:
       typescript-eslint:
         specifier: ^7.17.0
         version: 7.17.0(eslint@8.57.0)(typescript@5.5.4)
-    devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../config-typescript
 
   packages/config-typescript: {}
 

@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.ts\"",
     "fix": "eslint \"src/**/*.ts\"  --fix  .",
-    "format": "prettier --write  --ignore-unknown ."
+    "format": "prettier --write  --ignore-unknown .",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/ui": "workspace:*"

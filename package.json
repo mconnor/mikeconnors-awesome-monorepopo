@@ -3,10 +3,12 @@
   "name": "with-vite",
   "scripts": {
     "build": "turbo build",
+    "preview": "turbo preview",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "fix": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "fix": "turbo fix",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "tsc --noEmit"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

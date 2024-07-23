@@ -9,7 +9,10 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
-    "build": "tsc"
+    "fix": "eslint \"**/*.ts\" --fix",
+    "build": "tsc",
+    "format": "prettier --write  --ignore-unknown .",
+    "check-types": "tsc --noEmit"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

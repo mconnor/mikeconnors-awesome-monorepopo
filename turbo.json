@@ -11,6 +11,16 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "preview": {
+      "cache": true,
+      "persistent": true
+    },
+    "topo": {
+      "dependsOn": ["^topo"]
+    },
+    "check-types": {
+      "dependsOn": ["topo"]
     }
   }
 }
