@@ -12,7 +12,6 @@
     "lint": "eslint \"**/*.ts\"",
     "fix": "eslint \"**/*.ts\" --fix",
     "build": "tsc",
-    "format": "prettier  .",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {

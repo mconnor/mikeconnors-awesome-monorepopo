@@ -9,7 +9,6 @@
     "preview": "vite preview",
     "lint": "eslint \"src/**/*.ts\"",
     "fix": "eslint \"src/**/*.ts\"  --fix  .",
-    "format": "prettier  .",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
