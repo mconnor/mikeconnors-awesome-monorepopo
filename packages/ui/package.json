@@ -32,7 +32,8 @@
     "build": "tsc",
     "lint": "eslint \"**/*.ts\"",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
