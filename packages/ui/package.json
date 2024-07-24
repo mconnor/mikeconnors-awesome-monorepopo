@@ -2,13 +2,34 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
-    "./counter": "./src/components/counter.ts",
-    "./header": "./src/components/header.ts",
-    "./setup-counter": "./src/utils/counter.ts"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./components/counter": {
+      "import": "./dist/components/counter.js",
+      "require": "./dist/components/counter.js",
+      "types": "./dist/components/counter.d.ts"
+    },
+    "./components/header": {
+      "import": "./dist/components/header.js",
+      "require": "./dist/components/header.js",
+      "types": "./dist/components/header.d.ts"
+    },
+    "./utils/counter": {
+      "import": "./dist/utils/counter.js",
+      "require": "./dist/utils/counter.js",
+      "types": "./dist/utils/counter.d.ts"
+    }
   },
   "license": "MIT",
   "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
     "lint": "eslint \"**/*.ts\"",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
     "check-types": "tsc --noEmit"
