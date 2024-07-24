@@ -9,7 +9,6 @@
   },
   "license": "MIT",
   "scripts": {
-    "dev": "tsc --watch",
     "lint": "eslint \"**/*.ts\"",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
     "check-types": "tsc --noEmit"
