@@ -6,7 +6,12 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**"]
     },
-    "lint": {},
+
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "//#lint:root": {},
+
     "fix": {},
     "format": {},
     "dev": {
@@ -17,12 +22,12 @@
       "cache": true,
       "persistent": true
     },
-    "topo": {
-      "dependsOn": ["^topo"]
+
+    "transit": {
+      "dependsOn": ["^transit"]
     },
     "check-types": {
-      "dependsOn": ["topo"],
-      "inputs": ["**/*.{ts,tsx}"]
+      "dependsOn": ["transit"]
     }
   }
 }
