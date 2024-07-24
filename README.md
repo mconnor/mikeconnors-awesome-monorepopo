@@ -1,14 +1,11 @@
-# `Turborepo` Vite starter
+# vite-turbo-eslint-flatconfig
 
-This is an official starter Turborepo.
+## `Turborepo` Vite starter with eslint flat config
 
-## Using this example
+I began with [Turborepo Vite example](https://github.com/vercel/turbo/tree/main/examples/with-vite) and added
 
-Run the following command:
-
-```sh
-npx create-turbo@latest -e with-vite
-```
+- an Astro project in apps/
+- a custom eslint flag configuruation library
 
 ## What's inside?
 
@@ -31,3 +28,4 @@ This Turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+- [turbovite](https://github.com/vercel/turbo/tree/main/examples/with-vite)
