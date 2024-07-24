@@ -8,7 +8,7 @@ export default [
       sourceType: 'module',
 
       parserOptions: {
-        project: true,
+        project: 'tsconfig.json',
       },
     },
   },
@@ -30,6 +30,8 @@ export default [
       'my-custom-cache-directory',
       'src/env.d.ts',
       '.vercel/',
+      '**/*.d.ts.map',
+      '**/*.d.ts',
     ],
   },
 ];

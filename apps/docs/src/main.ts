@@ -1,9 +1,10 @@
-import { Header } from '@repo/ui/header';
 import './style.css';
+
 import typescriptLogo from '/typescript.svg';
+
+import { Header } from '@repo/ui/header';
 import { Counter } from '@repo/ui/counter';
 import { setupCounter } from '@repo/ui/setup-counter';
-
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">

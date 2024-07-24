@@ -19,7 +19,7 @@
     "lint": "turbo lint",
     "fix": "turbo fix",
     "format": "turbo format",
-    "check-types": "tsc --noEmit"
+    "check-types": "turbo check-types"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

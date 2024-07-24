@@ -3,16 +3,15 @@
   "version": "0.0.0",
   "type": "module",
   "exports": {
-    "./counter": "./components/counter.ts",
-    "./header": "./components/header.ts",
-    "./setup-counter": "./utils/counter.ts"
+    "./counter": "./src/components/counter.ts",
+    "./header": "./src/components/header.ts",
+    "./setup-counter": "./src/utils/counter.ts"
   },
   "license": "MIT",
   "scripts": {
+    "dev": "tsc --watch",
     "lint": "eslint \"**/*.ts\"",
-    "fix": "eslint \"**/*.ts\" --fix",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
-    "build": "tsc",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
