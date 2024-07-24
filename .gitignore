@@ -16,5 +16,4 @@ public/dist
 /packages/ui/src/utils/counter.js
 /packages/ui/src/components/counter.js
 /packages/ui/src/index.js
-/apps/blog/my-astro-build-directory/index.html
-/apps/blog/my-astro-build-directory/favicon.svg
+/apps/blog/my-astro-build-directory
