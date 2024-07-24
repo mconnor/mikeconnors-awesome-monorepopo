@@ -13,3 +13,6 @@ public/dist
 **/*.d.ts.map
 *.map
 **/*.d.ts
+/packages/ui/src/utils/counter.js
+/packages/ui/src/components/counter.js
+/packages/ui/src/index.js
