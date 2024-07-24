@@ -1,0 +1,26 @@
+{
+  "name": "blog",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint .",
+    "fix": "eslint src --fix",
+    "check-types": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{astro,js, jsx,ts,tsx,md}\""
+  },
+  "dependencies": {
+    "astro": "^4.12.2",
+    "@astrojs/check": "^0.8.2"
+  },
+  "devDependencies": {
+    "@repo/config-astro-eslint": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.4"
+  }
+}

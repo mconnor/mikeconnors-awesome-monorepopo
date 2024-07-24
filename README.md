@@ -1,6 +1,4 @@
-# vite-turbo-eslint-flatconfig
-
-## `Turborepo` Vite starter with eslint flat config
+# `Turborepo` Vite starter with eslint flat config
 
 I began with [Turborepo Vite example](https://github.com/vercel/turbo/tree/main/examples/with-vite) and added
 

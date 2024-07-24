@@ -8,6 +8,7 @@
     },
     "lint": {},
     "fix": {},
+    "format": {},
     "dev": {
       "cache": false,
       "persistent": true

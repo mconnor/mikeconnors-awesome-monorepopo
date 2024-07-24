@@ -1,14 +1,24 @@
 {
-  "private": true,
+  "public": true,
+  "author": "Mike Connor",
   "name": "with-vite",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mconnor/vite-turbo"
+  },
+  "keywords": [
+    "vite",
+    "eslint",
+    "astro"
+  ],
   "scripts": {
     "build": "turbo build",
     "preview": "turbo preview",
     "dev": "turbo dev",
     "lint": "turbo lint",
     "fix": "turbo fix",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "turbo format",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
@@ -21,6 +31,7 @@
   },
   "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e",
   "dependencies": {
-    "eslint": "^8.56.0"
+    "eslint": "^9.7.0",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }
