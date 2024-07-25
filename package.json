@@ -19,7 +19,8 @@
     "lint": "turbo lint",
     "fix": "turbo fix",
     "format": "turbo format",
-    "check-types": "turbo check-types"
+    "check-types": "turbo check-types",
+    "all": "turbo run lint test build"
   },
   "devDependencies": {
     "prettier": "^3.3.3",
