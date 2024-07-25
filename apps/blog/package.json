@@ -14,12 +14,13 @@
     "format": "prettier --write \"**/*.{astro,js, jsx,ts,tsx,md}\""
   },
   "dependencies": {
-    "astro": "^4.12.2",
-    "@astrojs/check": "^0.8.2"
+    "@astrojs/check": "^0.8.2",
+    "astro": "^4.12.2"
   },
   "devDependencies": {
     "@repo/config-astro-eslint": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "eslint": "^9.7.0",
     "typescript": "^5.5.4",
     "vite": "^5.3.4"
   }
