@@ -1,16 +1,15 @@
 {
-  "name": "@repo/astro-component",
-  "description": "Component description",
+  "name": "@repo/ui-astro",
   "version": "1.0.0",
-  "homepage": "https://github.com/owner/project#readme",
+  "description": "Astro UI",
+  "main": "index.js",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts",
-    "./astro": "./src/MyAstroComponent.astro"
+    "./Card": "./src/Card.astro"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
+    "lint": "eslint \"src/**/*.{ts,astro}\"",
+    "fix": "eslint \"src/**/*.{ts,astro}\" --fix",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
     "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
@@ -21,15 +20,7 @@
     "eslint": "^8.56.0",
     "typescript": "^5.5.4"
   },
-  "files": [
-    "index.ts",
-    "MyAstroComponent.astro"
-  ],
-  "keywords": [
-    "astro",
-    "withastro",
-    "astro-component",
-    "...",
-    "..."
-  ]
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

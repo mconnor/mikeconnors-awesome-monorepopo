@@ -1,7 +1,7 @@
 import * as MyLints from '@repo/eslint-config';
 
 export default [
-  ...MyLints.astroLintConfig,
+  ...MyLints.tsLintConfigfrom,
   {
     languageOptions: {
       ecmaVersion: 'latest',

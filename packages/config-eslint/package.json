@@ -1,12 +1,17 @@
 {
   "name": "@repo/eslint-config",
   "version": "0.0.0",
-  "main": "./index.mjs",
-  "types": "./index.mjs",
+  "main": "index.mjs",
   "export": {
-    "./tsConfig": "./index.mjs",
+    "./": "./index.mjs",
+    "./tsConfig": "./tsLintConfig.mjs",
     "./astroConfig": "./astroLint.mjs"
   },
+  "files": [
+    "index.js",
+    "tsLintConfig.mjs",
+    "astroLint.mjs"
+  ],
   "license": "MIT",
   "type": "module",
   "dependencies": {

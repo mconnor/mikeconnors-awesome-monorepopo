@@ -172,6 +172,21 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
 
+  packages/ui-astro:
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../config-eslint
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../config-typescript
+      eslint:
+        specifier: ^8.56.0
+        version: 8.57.0
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+
 packages:
 
   '@ampproject/remapping@2.3.0':

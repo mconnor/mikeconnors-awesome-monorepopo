@@ -4,9 +4,14 @@
     "outDir": "dist",
   },
   "include": [
-    "src"
+    "src/**/*.astro"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist",
+    ".astro",
+    ".turbo",
+    "**/*.d.ts.map",
+    "**/*.d.ts"
   ]
 }

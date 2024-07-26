@@ -1,4 +1,10 @@
 {
   "extends": "@repo/typescript-config/vite.json",
-  "include": ["src"]
+  "include": [
+    "src/*.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

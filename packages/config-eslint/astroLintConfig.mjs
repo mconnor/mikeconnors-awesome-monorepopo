@@ -6,20 +6,17 @@ import markdown from 'eslint-plugin-markdown';
 import regexp from 'eslint-plugin-regexp';
 import wc from 'eslint-plugin-wc';
 import lit from 'eslint-plugin-lit';
-
-import basic from './index.mjs';
 // import jsxA11y from 'eslint-plugin-jsx-a11y';
 
 import eslintConfigPrettier from 'eslint-config-prettier';
-import * as globals from 'globals';
+import globals from 'globals';
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
-  ...basic,
-  //   js.configs.recommended,
-  //   ...tseslint.configs.recommended,
-  //   ...tseslint.configs.stylistic,
+const astroLintConfig = tseslint.config(
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  ...tseslint.configs.stylistic,
   //If your project enables typed linting, we suggest enabling the recommended-type-checked
   // and stylistic-type-checked configurations to start:
   // ...tseslint.configs.recommendedTypeChecked,
@@ -123,3 +120,5 @@ export default tseslint.config(
   },
   eslintConfigPrettier,
 );
+
+export { astroLintConfig };

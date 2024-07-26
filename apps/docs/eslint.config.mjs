@@ -1,18 +1,19 @@
-import repoEslint from '@repo/eslint-config';
+import * as MyLints from '@repo/eslint-config';
 
 export default [
-  ...repoEslint,
+  ...MyLints.tsLintConfigfrom,
   {
-    ignores: [
-      '**/_*.*',
-      '**/temp.js',
-      '*lock.yaml',
-      '.turbo/',
-      '.astro/',
-      'dist/',
-      'my-custom-cache-directory',
-      'src/env.d.ts',
-      '.vercel/',
-    ],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+
+      parserOptions: {
+        project: ['./tsconfig.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
+    ignores: ['dist', 'turbo'],
   },
 ];

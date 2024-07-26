@@ -1,18 +1,18 @@
-import repoEslint from "@repo/config-astro-eslint";
+import * as MyLints from '@repo/eslint-config';
 
 export default [
-  ...repoEslint,
+  ...MyLints.astroLintConfig,
   {
     ignores: [
-      "**/_*.*",
-      "**/temp.js",
-      "*lock.yaml",
-      ".turbo/",
-      ".astro/",
-      "dist/",
-      "my-custom-cache-directory",
-      "src/env.d.ts",
-      ".vercel/",
+      '**/_*.*',
+      '**/temp.js',
+      '*lock.yaml',
+      '.turbo/',
+      '.astro/',
+      'dist/',
+      'my-custom-cache-directory',
+      'src/env.d.ts',
+      '.vercel/',
     ],
   },
 ];
