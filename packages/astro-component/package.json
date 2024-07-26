@@ -9,7 +9,7 @@
     "./astro": "./src/MyAstroComponent.astro"
   },
   "scripts": {
-    "lint": "eslint \"**/*.ts\"",
+    "lint": "eslint .",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
     "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"

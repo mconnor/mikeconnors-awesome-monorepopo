@@ -1,17 +1,8 @@
-import repoEslint from '@repo/eslint-config';
+import astroConfig from '@repo/eslint-config';
 
 export default [
-  ...repoEslint,
-  {
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+  ...astroConfig,
 
-      parserOptions: {
-        project: 'tsconfig.json',
-      },
-    },
-  },
   // {
   //   rules: {
   //     "@typescript-eslint/no-unused-vars": ["warn"],

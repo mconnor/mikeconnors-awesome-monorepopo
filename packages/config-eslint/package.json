@@ -3,12 +3,22 @@
   "version": "0.0.0",
   "main": "./index.mjs",
   "types": "./index.mjs",
+  "export": {
+    "./tsConfig": "./index.mjs",
+    "./astroConfig": "./astroLint.mjs"
+  },
   "license": "MIT",
   "type": "module",
   "dependencies": {
     "@eslint/js": "^9.7.0",
     "globals": "^15.8.0",
-    "typescript-eslint": "^7.17.0"
+    "typescript-eslint": "^7.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-lit": "^1.14.0",
+    "eslint-plugin-markdown": "^5.1.0",
+    "eslint-plugin-regexp": "^2.6.0",
+    "eslint-plugin-wc": "^2.1.0"
   },
   "publishConfig": {
     "access": "public"
