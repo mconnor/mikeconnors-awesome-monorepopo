@@ -15,12 +15,13 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.8.2",
+    "@repo/astro-component": "workspace:*",
+    "@repo/layout-wc": "workspace:*",
     "astro": "^4.12.2"
   },
   "devDependencies": {
     "@repo/config-astro-eslint": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.7.0",
     "typescript": "^5.5.4",
     "vite": "^5.3.4"
   }
