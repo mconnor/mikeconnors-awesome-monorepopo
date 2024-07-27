@@ -1,7 +1,7 @@
-import * as MyLints from '@repo/eslint-config';
+import astroLintConfig from '@repo/eslint-config/astroLintConfig.js';
 
 export default [
-  ...MyLints.astroLintConfig,
+  ...astroLintConfig,
   {
     languageOptions: {
       ecmaVersion: 'latest',

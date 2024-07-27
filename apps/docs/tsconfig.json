@@ -1,10 +1,13 @@
 {
   "extends": "@repo/typescript-config/vite.json",
   "include": [
+    "eslint.config.js",
     "src/*.ts",
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    ".astro",
+    ".turbo",
   ]
 }

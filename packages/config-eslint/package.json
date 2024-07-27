@@ -1,31 +1,26 @@
 {
   "name": "@repo/eslint-config",
-  "version": "0.0.0",
-  "main": "index.mjs",
+  "version": "1.0.1",
+  "private": true,
   "export": {
-    "./": "./index.mjs",
-    "./tsConfig": "./tsLintConfig.mjs",
-    "./astroConfig": "./astroLint.mjs"
+    "./tsLintConfig": "./tsLintConfig.js",
+    "./astroLintConfig": "./astroLintConfig.js"
   },
   "files": [
-    "index.js",
-    "tsLintConfig.mjs",
-    "astroLint.mjs"
+    "tsLintConfig.js",
+    "astroLintConfig.js"
   ],
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@eslint/js": "^9.7.0",
-    "globals": "^15.8.0",
-    "typescript-eslint": "^7.17.0",
+    "@eslint/js": "^9.8.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-lit": "^1.14.0",
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-regexp": "^2.6.0",
-    "eslint-plugin-wc": "^2.1.0"
-  },
-  "publishConfig": {
-    "access": "public"
+    "eslint-plugin-wc": "^2.1.0",
+    "globals": "^15.8.0",
+    "typescript-eslint": "^7.17.0"
   }
 }

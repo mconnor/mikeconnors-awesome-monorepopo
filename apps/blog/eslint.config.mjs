@@ -1,7 +1,7 @@
-import * as MyLints from '@repo/eslint-config';
+import astroLintConfig from '@repo/eslint-config/astroLintConfig.js';
 
 export default [
-  ...MyLints.astroLintConfig,
+  ...astroLintConfig,
   {
     ignores: [
       '**/_*.*',
@@ -13,6 +13,7 @@ export default [
       'my-custom-cache-directory',
       'src/env.d.ts',
       '.vercel/',
+      'my-astro-build-directory/',
     ],
   },
 ];

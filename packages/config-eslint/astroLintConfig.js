@@ -121,4 +121,4 @@ const astroLintConfig = tseslint.config(
   eslintConfigPrettier,
 );
 
-export { astroLintConfig };
+export default astroLintConfig;

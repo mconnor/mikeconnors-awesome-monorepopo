@@ -5,24 +5,26 @@
   "homepage": "https://github.com/owner/project#readme",
   "type": "module",
   "exports": {
-    ".": "./src/index.ts",
-    "./astro": "./src/MyAstroComponent.astro"
+    ".": "./src/index.ts"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
+    "lint": "eslint \"src/**/*.{ts,astro}\"",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
+    "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
+  "dependencies": {
+    "astro": "^4.12.2"
+  },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:1.0.1",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^8.56.0",
     "typescript": "^5.5.4"
   },
   "files": [
-    "index.ts",
     "MyAstroComponent.astro"
   ],
   "keywords": [

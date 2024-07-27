@@ -16,7 +16,7 @@
     "@repo/ui": "workspace:*"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:1.0.1",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.7.0",
     "typescript": "^5.5.4",

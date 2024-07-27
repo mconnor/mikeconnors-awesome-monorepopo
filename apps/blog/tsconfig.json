@@ -4,14 +4,13 @@
     "outDir": "dist",
   },
   "include": [
-    "src/**/*.astro"
+    "eslint.config.js",
+    "src"
   ],
   "exclude": [
     "node_modules",
     "dist",
     ".astro",
     ".turbo",
-    "**/*.d.ts.map",
-    "**/*.d.ts"
   ]
 }

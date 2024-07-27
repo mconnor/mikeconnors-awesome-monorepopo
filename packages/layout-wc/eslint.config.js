@@ -1,7 +1,7 @@
-import * as MyLints from '@repo/eslint-config';
+import tsLintConfig from '@repo/eslint-config/tsLintConfig.js';
 
 export default [
-  ...MyLints.tsLintConfigfrom,
+  ...tsLintConfig,
   {
     languageOptions: {
       ecmaVersion: 'latest',

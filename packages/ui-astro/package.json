@@ -2,7 +2,6 @@
   "name": "@repo/ui-astro",
   "version": "1.0.0",
   "description": "Astro UI",
-  "main": "index.js",
   "type": "module",
   "exports": {
     "./Card": "./src/Card.astro"
@@ -15,7 +14,7 @@
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:1.0.1",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^8.56.0",
     "typescript": "^5.5.4"

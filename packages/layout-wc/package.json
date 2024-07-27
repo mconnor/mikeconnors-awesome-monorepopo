@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"src/**/*.{ts,astro}\"",
-    "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
+    "format": "prettier ",
     "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit"
   },
@@ -17,7 +17,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:1.0.1",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^8.56.0",
     "typescript": "^5.5.4"
