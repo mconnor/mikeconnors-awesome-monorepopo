@@ -1,0 +1,43 @@
+{
+  "name": "astrodemo",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint src",
+    "fix": "eslint src --fix",
+    "check-types": "tsc --noEmit",
+    "format": "prettier --write \"**/*.{astro,js, jsx,ts,tsx,md}\""
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.8.2",
+    "@astrojs/lit": "^4.3.0",
+    "@astrojs/mdx": "^3.1.3",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/vercel": "^7.7.2",
+    "@repo/astro-component": "workspace:*",
+    "@repo/layout-wc": "workspace:*",
+    "@repo/lit-layout-wc": "workspace:*",
+    "@webcomponents/template-shadowroot": "^0.2.1",
+    "astro": "^4.12.2",
+    "lit": "^3.1.4",
+    "open-props": "^1.7.5",
+    "postcss-custom-media": "^10.0.8",
+    "postcss-html": "^1.7.0",
+    "postcss-import": "^16.1.0",
+    "postcss-jit-props": "^1.0.14",
+    "postcss-nesting": "^12.1.5",
+    "postcss-pow": "^1.0.1"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:1.0.1",
+    "@repo/typescript-config": "workspace:*",
+    "autoprefixer": "^10.4.19",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.4"
+  }
+}

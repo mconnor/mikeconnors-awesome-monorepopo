@@ -3,5 +3,44 @@
     {
       "mode": "auto"
     }
-  ]
+  ],
+  "cssvar.themes": [
+    "dark",
+    "light",
+    "dim",
+    "choco"
+  ],
+  "cssvar.enable": true,
+  // Since we want to scan css files inside `node_modules as well
+  // we need to set cssvar.ignore property to empty array
+  "cssvar.ignore": [],
+  "cssvar.excludeThemedVariables": true,
+  // add support for autocomplete in JS or JS like files
+  /**
+   * This setting controls whether inlay hints are enabled in the editor.
+   * Inlay hints are small pieces of information displayed inline with the code,
+   * providing additional context or details about the code.
+   *
+   * Possible values:
+   * - "off": Inlay hints are disabled.
+   * - "on": Inlay hints are enabled.
+   * - "off": Inlay hints are disabled.
+   */
+  "cssvar.files": [
+    "./apps/astrodemo/src/styles/**/*css",
+    "./apps/astrodemo/node_modules/open-props/open-props.min.css"
+    // if you have an alternative path to where your styles are located
+    // you can add it in this array of files
+    // "assets/styles/variables.css"
+  ],
+  "cssvar.extensions": [
+    "css",
+    "postcss",
+    "jsx",
+    "tsx",
+    "astro"
+  ],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

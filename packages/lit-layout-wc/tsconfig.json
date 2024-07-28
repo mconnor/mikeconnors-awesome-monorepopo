@@ -1,5 +1,10 @@
 {
     "extends": "astro/tsconfigs/base",
+    "compilerOptions": {
+        "verbatimModuleSyntax": true,
+        "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
+        "useDefineForClassFields": false,
+    },
     "include": [
         "eslint.config.js",
         "src"

@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import { MyAstroComponent, Card } from '@repo/astro-component';
+import { Box } from '@repo/lit-layout-wc';
+import { Stack, Center } from '@repo/layout-wc';
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <MyAstroComponent prefix="hello" />
+    <Box invert borderWidth="var(--s2)">
+      <h1>Welcome to <span class="text-gradient">Astro</span></h1></Box
+    >
+
+    <p class="instructions">
+      To get started, open the directory <code>src/pages</code> in your project.<br
+      />
+      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+    </p>
+    <Center>
+      <Stack space="10px" splitAfter={3}>
+        <Box padding="0" borderWidth="var(--s3)">
+          <Card
+            href="https://docs.astro.build/"
+            title="Documentation"
+            body="Learn how Astro works and explore the official API docs."
+          /></Box
+        >
+
+        <Box padding="0">
+          <Card
+            href="https://docs.astro.build/"
+            title="Documentation"
+            body="Learn how Astro works and explore the official API docs."
+          /></Box
+        >
+        <Box invert padding="0">
+          <Card
+            href="https://docs.astro.build/"
+            title="Documentation"
+            body="Learn how Astro works and explore the official API docs."
+          /></Box
+        >
+        <Box padding="0">
+          <Card
+            href="https://docs.astro.build/"
+            title="Documentation"
+            body="Learn how Astro works and explore the official API docs."
+          /></Box
+        >
+        <Box padding="0">
+          <Card
+            href="https://docs.astro.build/"
+            title="Documentation"
+            body="Learn how Astro works and explore the official API docs."
+          /></Box
+        >
+      </Stack>
+    </Center>
+  </main>
+</Layout>

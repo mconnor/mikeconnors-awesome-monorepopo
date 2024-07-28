@@ -1,0 +1,11 @@
+:where(html) {
+  --brand-choco: var(--choco-5);
+  --text-1-choco: var(--choco-1);
+  --text-2-choco: var(--choco-2);
+  --surface-1-choco: var(--choco-12);
+  --surface-2-choco: var(--choco-11);
+  --surface-3-choco: var(--choco-10);
+  --surface-4-choco: var(--choco-9);
+  --surface-shadow-choco: 25deg 65% 11%;
+  --shadow-strength-choco: 50%;
+}

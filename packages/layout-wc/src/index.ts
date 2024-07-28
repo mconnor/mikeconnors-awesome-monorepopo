@@ -1,4 +1,4 @@
-export { default as Box } from './Box/index.astro';
+// export { default as Box } from './Box/index.astro';
 export { default as Center } from './Center/index.astro';
 export { default as Frame } from './Frame/index.astro';
 export { default as Stack } from './Stack/index.astro';

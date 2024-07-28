@@ -1,0 +1,36 @@
+---
+// import '@fontsource/patrick-hand';
+// import '@fontsource/patrick-hand-sc';
+
+import 'open-props/postcss/style';
+import 'open-props/postcss/buttons';
+import 'open-props/postcss/normalize';
+
+import 'open-props/masks/edges';
+import 'open-props/animations';
+
+import './modular-scale.css';
+
+// import './layoutStyles/box.css';
+// import './EveryLayout.css';
+import './utility-classes.css';
+import './extra/theme.css';
+import './typography.css';
+// import './syntax-hilite.css';
+---
+
+<style is:global>
+  :root {
+    --my-bg-color: var(--surface-4);
+    --my-color: var(--text-2);
+  }
+
+  body {
+    color: var(--my-color);
+    background-color: var(--my-bg-color);
+  }
+  .appColor {
+    color: var(--my-color);
+    background-color: var(--my-bg-color);
+  }
+</style>

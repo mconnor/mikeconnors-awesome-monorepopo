@@ -1,0 +1,18 @@
+:where([data-theme='dim'], .dim, .dim-theme) {
+  color-scheme: dim;
+
+  --link: var(--indigo-3);
+  --link-visited: var(--link-visited-dim);
+
+  --text-1: var(--text-1-dim);
+  --text-2: var(--text-2-dim);
+
+  --surface-1: var(--surface-1-dim);
+  --surface-2: var(--surface-2-dim);
+  --surface-3: var(--surface-3-dim);
+  --surface-4: var(--surface-4-dim);
+  --brand: var(--brand-dim);
+  --border-color: var(--brand-dim);
+
+  /* --scrollthumb-color: var(--dim-6); */
+}

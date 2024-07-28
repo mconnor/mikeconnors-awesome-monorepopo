@@ -1,0 +1,20 @@
+:where(html) {
+  --accent-toucan: var(--orange-2);
+  --accent-hover-toucan: var(--orange-3);
+  --accent-visited-toucan: var(--orange-4);
+
+  --brand-toucan: var(--orange-3);
+  --brand-gradient-toucan: var(--gradient-27);
+
+  --link-visited-toucan: var(--orange-10);
+
+  --text-1-toucan: var(--blue-12);
+  --text-2-toucan: var(--blue-11);
+
+  --surface-1-toucan: var(--orange-0);
+  --surface-2-toucan: var(--orange-1);
+  --surface-3-toucan: var(--orange-2);
+  --surface-4-toucan: var(--orange-3);
+  --surface-shadow-toucan: var(--gray-8-hsl);
+  --shadow-strength-toucan: 2%;
+}

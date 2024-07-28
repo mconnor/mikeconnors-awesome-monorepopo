@@ -1,0 +1,11 @@
+p {
+  font-size: var(--font-size-fluid-1);
+  &::first-letter {
+    font-style: italic;
+  }
+}
+article {
+  background-color: red;
+  color: var(--text-1);
+  padding: 0;
+}

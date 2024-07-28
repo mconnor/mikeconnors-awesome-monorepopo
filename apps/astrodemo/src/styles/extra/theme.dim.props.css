@@ -1,0 +1,11 @@
+:where(html) {
+  --brand-dim: var(--orange-4);
+  --text-1-dim: var(--gray-3);
+  --text-2-dim: var(--gray-4);
+  --surface-1-dim: var(--gray-8);
+  --surface-2-dim: var(--gray-7);
+  --surface-3-dim: var(--gray-6);
+  --surface-4-dim: var(--gray-5);
+  --surface-shadow-dim: var(--gray-9-hsl);
+  --shadow-strength-dim: 20%;
+}
