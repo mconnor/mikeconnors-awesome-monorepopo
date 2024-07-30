@@ -21,6 +21,6 @@
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-wc": "^2.1.0",
     "globals": "^15.8.0",
-    "typescript-eslint": "^7.17.0"
+    "typescript-eslint": "^7.18.0"
   }
 }

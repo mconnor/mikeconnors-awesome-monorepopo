@@ -5,13 +5,10 @@
     "rootDir": "src"
   },
   "include": [
-    "eslint.config.js",
-    "src/"
+    "src"
   ],
   "exclude": [
-    "node_modules",
     "dist",
-    ".astro",
     ".turbo",
   ]
 }

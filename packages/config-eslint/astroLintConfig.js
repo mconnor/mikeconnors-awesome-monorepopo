@@ -36,7 +36,9 @@ const astroLintConfig = tseslint.config(
       sourceType: 'module',
 
       parserOptions: {
-        project: true,
+        // processor: astro.processors['client-side-ts'],
+        project: ['./tsconfig.json'],
+        tsconfigRootDir: import.meta.dirname,
 
         // For example, if you use a specific tsconfig.eslint.json for linting, you'd specify:
         // tsconfigRootDir: import.meta.dirname,
@@ -110,12 +112,11 @@ const astroLintConfig = tseslint.config(
     ignores: [
       '**/_*.*',
       '**/temp.js',
-      '*lock.yaml',
-      '.astro/',
+
       'dist/',
       'my-custom-cache-directory',
       'src/env.d.ts',
-      '.vercel/',
+      '.*',
     ],
   },
   eslintConfigPrettier,

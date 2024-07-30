@@ -13,6 +13,7 @@
     "astro"
   ],
   "scripts": {
+    "graph": "turbo run build --graph",
     "build": "turbo build",
     "preview": "turbo preview",
     "dev": "turbo dev",

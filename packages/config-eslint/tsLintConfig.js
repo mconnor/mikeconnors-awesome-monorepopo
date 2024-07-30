@@ -15,6 +15,10 @@ const tsLintConfig = tseslint.config(
       ecmaVersion: 'latest',
       sourceType: 'module',
       parser: tseslint.parser,
+      parserOptions: {
+        project: ['./tsconfig.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
 
       globals: {
         ...globals.browser,
@@ -26,6 +30,15 @@ const tsLintConfig = tseslint.config(
   {
     files: ['**/*.js', '**/*.mjs'],
     ...tseslint.configs.disableTypeChecked,
+  },
+  {
+    ignores: [
+      '**/_*.*',
+      '**/temp.js',
+      'dist/',
+      'my-custom-cache-directory',
+      'src/env.d.ts',
+    ],
   },
   eslintConfigPrettier,
 );
