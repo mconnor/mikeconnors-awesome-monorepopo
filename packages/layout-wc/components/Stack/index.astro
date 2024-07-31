@@ -1,5 +1,5 @@
 ---
-// import './Stack.css'
+import './Stack.css';
 import type { RmUnitType } from '../Types';
 interface Props {
   space?: RmUnitType; //"var(--s000)"
@@ -14,22 +14,3 @@ const { space = 'var(--s1)', recursive = false, splitAfter } = Astro.props;
 </stack-l>
 
 <script src="./Stack.js"></script>
-
-<style>
-  stack-l {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-stack-l > * + * {
-  margin-block-start: var(--s1);
-}
-
-.stack-exception,
-.stack-exception + * {
-  --space: 3rem;
-}
-
-</style>
-
