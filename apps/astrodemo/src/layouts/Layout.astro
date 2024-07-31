@@ -1,29 +1,22 @@
 ---
 interface Props {
   title: string;
+  children: any;
 }
-import GlobalStyle from '@/styles/GlobalStyle.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+
 // import BaseHead from '@/components/BaseHead.astro';
 import { Cover, Center } from '@repo/layout-wc';
-const { title } = Astro.props;
+const { title = 'mike connor' } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <GlobalStyle />
-  </head>
-  <body>
-    <Cover centeredElement="center-l"
-      ><Center>
-        <slot />
-      </Center>
-    </Cover>
-  </body>
-</html>
+<BaseLayout title={title}>
+  <Cover centeredElement="center-l">
+    <Header desc={title} />
+    <Center>
+      <slot />
+    </Center>
+    <Header desc="footer" />
+  </Cover>
+</BaseLayout>

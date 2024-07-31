@@ -1,0 +1,39 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import {  Box } from '@repo/lit-layout-wc';
+
+import { Sidebar, Stack } from '@repo/layout-wc';
+// import { Cover } from '@/astro-custom-layout-components/index.js';
+---
+
+<Layout>
+  <Box borderWidth="var(--border-thin)">
+    <Sidebar contentMin="66%">
+      <Stack recursive space="var(--s00)" splitAfter={2}>
+        <Box> Lorem ipsum dolor </Box>
+        <Box> Lorem ipsum dolor </Box>
+
+        <button class="btn">start</button>
+      </Stack>
+      <Box
+        >Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque,
+        asperiores? Perspiciatis, optio molestiae officiis maiores sequi esse
+        iste suscipit nulla commodi nihil rerum excepturi porro quos nesciunt
+        minus dolorem doloremque? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Atque, asperiores? Perspiciatis, optio molestiae
+        officiis maiores sequi esse iste suscipit nulla commodi nihil rerum
+        excepturi porro quos nesciunt minus dolorem doloremque? Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Atque, asperiores?
+        Perspiciatis, optio molestiae officiis maiores sequi esse iste suscipit
+        nulla commodi nihil rerum excepturi porro quos nesciunt minus dolorem
+        doloremque?</Box
+      >
+    </Sidebar>
+  </Box>
+</Layout>
+
+<style>
+  p.copy {
+    font-size: var(--font-size-0);
+  }
+</style>

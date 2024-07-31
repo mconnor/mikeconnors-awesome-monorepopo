@@ -1,0 +1,15 @@
+---
+import { Box } from '@repo/lit-layout-wc';
+
+interface Props {
+  desc: string;
+}
+
+const { desc } = Astro.props;
+---
+
+<Box invert>
+  <h2>
+    {desc}
+  </h2>
+</Box>
