@@ -3,20 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "main": "index.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./index.ts"
   },
+  "files": [
+    "components",
+    "index.ts"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"src/**/*.{ts,astro}\"",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
     "format": "prettier ",
     "inspect": "eslint --inspect-config",
-    "check-types": "tsc --noEmit"
+    "check-types": "astro check"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@astrojs/check": "^0.8.3",
     "@repo/eslint-config": "workspace:1.0.1",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^8.56.0",

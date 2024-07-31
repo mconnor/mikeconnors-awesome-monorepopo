@@ -33,7 +33,6 @@ export default defineConfig({
         '@repo/lit-layout-wc',
         '@repo/astro-component',
         '@repo/layout-wc',
-        '@repo/layout-wc',
       ],
     },
     // lit: {

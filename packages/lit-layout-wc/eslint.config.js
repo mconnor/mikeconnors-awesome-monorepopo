@@ -1,7 +1,7 @@
-import tsLintConfig from '@repo/eslint-config/tsLintConfig.js';
+import astroLintConfig from '@repo/eslint-config/astroLintConfig.js';
 
 export default [
-  ...tsLintConfig,
+  ...astroLintConfig,
   {
     languageOptions: {
       parserOptions: {

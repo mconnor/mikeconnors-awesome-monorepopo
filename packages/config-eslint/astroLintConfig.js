@@ -34,22 +34,14 @@ const astroLintConfig = tseslint.config(
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
-
       parserOptions: {
-        // processor: astro.processors['client-side-ts'],
-        project: ['./tsconfig.json'],
-        tsconfigRootDir: import.meta.dirname,
-
-        // For example, if you use a specific tsconfig.eslint.json for linting, you'd specify:
-        // tsconfigRootDir: import.meta.dirname,
-
         ecmaFeatures: {
           jsx: true,
         },
       },
       globals: {
         ...globals.browser,
-        // ...globals.node,
+        ...globals.node,
       },
     },
   },
@@ -66,16 +58,8 @@ const astroLintConfig = tseslint.config(
       'lit/no-invalid-html': 'warn',
     },
   },
-
   {
-    files: ['**/*.js', '**/*.mjs'],
-    ...tseslint.configs.disableTypeChecked,
-  },
-  {
-    files: [
-      'scr/web-components/**/*.js',
-      'src/astro-custom-layout-components/**/*.js',
-    ],
+    files: ['**/*.js'],
     ...tseslint.configs.disableTypeChecked,
     rules: {
       'wc/no-constructor-attributes': 'off',
@@ -92,15 +76,15 @@ const astroLintConfig = tseslint.config(
   //   files: ['**/*.md'],
   //   processor: 'markdown/markdown',
   // },
-  {
-    files: ['**/*.md/*.js'],
-    ...tseslint.configs.disableTypeChecked,
-    // ...
-    rules: {
-      'no-console': 'off',
-      'import/no-unresolved': 'off',
-    },
-  },
+  // {
+  //   files: ['**/*.md/*.js'],
+  //   ...tseslint.configs.disableTypeChecked,
+  //   // ...
+  //   rules: {
+  //     'no-console': 'off',
+  //     'import/no-unresolved': 'off',
+  //   },
+  // },
 
   {
     linterOptions: {
@@ -109,15 +93,7 @@ const astroLintConfig = tseslint.config(
   },
 
   {
-    ignores: [
-      '**/_*.*',
-      '**/temp.js',
-
-      'dist/',
-      'my-custom-cache-directory',
-      'src/env.d.ts',
-      '.*',
-    ],
+    ignores: ['**/temp.js', 'dist/', '**/*.d.ts'],
   },
   eslintConfigPrettier,
 );

@@ -4,9 +4,6 @@ export default [
   ...tsLintConfig,
   {
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-
       parserOptions: {
         project: ['./tsconfig.json'],
         tsconfigRootDir: import.meta.dirname,
@@ -14,6 +11,14 @@ export default [
     },
   },
   {
-    ignores: ['dist', 'turbo'],
+    ignores: [
+      '*.config.*',
+      '.dist',
+      'turbo',
+      '**/_*.*',
+      '**/temp.js',
+      '.*',
+      '**/*.d.ts',
+    ],
   },
 ];

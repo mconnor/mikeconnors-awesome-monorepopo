@@ -3,11 +3,15 @@
     "compilerOptions": {
         "verbatimModuleSyntax": true,
         "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
-        "useDefineForClassFields": false,
+        "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
+        "declaration": true,
+        "declarationMap": true,
+        "allowJs": true,
+        "jsx": "preserve"
     },
     "include": [
-        "eslint.config.js",
-        "src"
+        "index.ts",
+        "components"
     ],
     "exclude": [
         "node_modules",

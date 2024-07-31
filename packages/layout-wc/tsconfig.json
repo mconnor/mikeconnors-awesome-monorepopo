@@ -1,8 +1,14 @@
 {
     "extends": "astro/tsconfigs/base",
+    "compilerOptions": {
+        "verbatimModuleSyntax": true,
+        "allowJs": true,
+        // Allow JSX files (or files that are internally considered JSX, like Astro files) to be imported inside `.js` and `.ts` files.
+        "jsx": "preserve"
+    },
     "include": [
-        "eslint.config.js",
-        "src"
+        "index.ts",
+        "components"
     ],
     "exclude": [
         "node_modules",

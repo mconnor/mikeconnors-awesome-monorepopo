@@ -1,7 +1,7 @@
-import tsLintConfig from '@repo/eslint-config/tsLintConfig.js';
+import astroLintConfig from '@repo/eslint-config/astroLintConfig.js';
 
 export default [
-  ...tsLintConfig,
+  ...astroLintConfig,
   {
     languageOptions: {
       parserOptions: {
@@ -9,5 +9,17 @@ export default [
         tsconfigRootDir: import.meta.dirname,
       },
     },
+  },
+
+  {
+    ignores: [
+      '*.config.*',
+      '.dist',
+      'turbo',
+      '**/_*.*',
+      '**/temp.js',
+      '.*',
+      '**/*.d.ts',
+    ],
   },
 ];

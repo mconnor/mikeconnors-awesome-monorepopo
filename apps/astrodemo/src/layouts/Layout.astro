@@ -4,7 +4,7 @@ interface Props {
 }
 import GlobalStyle from '@/styles/GlobalStyle.astro';
 // import BaseHead from '@/components/BaseHead.astro';
-
+import { Cover, Center } from '@repo/layout-wc';
 const { title } = Astro.props;
 ---
 
@@ -20,6 +20,10 @@ const { title } = Astro.props;
     <GlobalStyle />
   </head>
   <body>
-    <slot />
+    <Cover centeredElement="center-l"
+      ><Center>
+        <slot />
+      </Center>
+    </Cover>
   </body>
 </html>

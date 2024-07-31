@@ -10,4 +10,15 @@ export default [
       },
     },
   },
+  {
+    ignores: [
+      '**/_*.*',
+      '**/temp.js',
+      '*.config.*',
+      'dist/',
+      'my-custom-cache-directory',
+      '**/env.d.ts',
+      '.*',
+    ],
+  },
 ];

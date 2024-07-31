@@ -33,11 +33,14 @@ const tsLintConfig = tseslint.config(
   },
   {
     ignores: [
+      '*.config.*',
+      'turbo',
+      '**/temp.js',
+      '**/*.d.ts',
       '**/_*.*',
       '**/temp.js',
       'dist/',
       'my-custom-cache-directory',
-      'src/env.d.ts',
     ],
   },
   eslintConfigPrettier,

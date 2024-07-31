@@ -10,5 +10,6 @@
   "exclude": [
     "dist",
     ".turbo",
+    "eslint.config.js"
   ]
 }
