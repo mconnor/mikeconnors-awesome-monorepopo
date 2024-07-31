@@ -16,12 +16,12 @@
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "dependencies": {
-    "astro": "^4.12.2"
+    "astro": "^4.12.3"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:1.0.1",
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "typescript": "^5.5.4"
   },
   "files": [

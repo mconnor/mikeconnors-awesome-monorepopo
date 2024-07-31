@@ -93,7 +93,7 @@ const astroLintConfig = tseslint.config(
   },
 
   {
-    ignores: ['**/temp.js', 'dist/', '**/*.d.ts'],
+    ignores: ['*.config.*', '**/temp.js', 'dist/', '**/*.d.ts'],
   },
   eslintConfigPrettier,
 );

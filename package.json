@@ -21,7 +21,8 @@
     "fix": "turbo fix",
     "format": "turbo format",
     "check-types": "turbo check-types",
-    "all": "turbo run lint test build"
+    "all": "turbo run lint test build",
+    "update:all": "turbo run update --filter=..."
   },
   "devDependencies": {
     "prettier": "^3.3.3",

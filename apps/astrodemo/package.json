@@ -1,7 +1,7 @@
 {
-  "name": "astrodemo",
+  "name": "@app/astrodemo",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -23,7 +23,7 @@
     "@repo/layout-wc": "workspace:*",
     "@repo/lit-layout-wc": "workspace:*",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "astro": "^4.12.2",
+    "astro": "^4.12.3",
     "lit": "^3.1.4",
     "open-props": "^1.7.5",
     "postcss-custom-media": "^10.0.8",
@@ -34,11 +34,11 @@
     "postcss-pow": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "@repo/eslint-config": "workspace:1.0.1",
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
     "typescript": "^5.5.4",
-    "vite": "^5.3.4"
+    "vite": "^5.3.5"
   }
 }
