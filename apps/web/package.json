@@ -7,8 +7,8 @@
     "dev": "vite --clearScreen false",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint \"src/**/*.ts\"",
-    "fix": "eslint \"src/**/*.ts\"  --fix  .",
+    "lint": "eslint",
+    "fix": "eslint --fix",
     "format": "prettier --write \"**/*.ts\"",
     "check-types": "tsc --noEmit"
   },
@@ -16,7 +16,7 @@
     "@repo/ui": "workspace:*"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:1.0.1",
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.7.0",
     "typescript": "^5.5.4",

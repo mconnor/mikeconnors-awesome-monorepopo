@@ -1,8 +1,0 @@
-{
-  "extends": "astro/tsconfigs/base",
-  "compilerOptions": {
-    "verbatimModuleSyntax": true
-  },
-
-  "exclude": ["dist", ".astro", ".turbo"]
-}

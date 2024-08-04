@@ -1,6 +1,7 @@
 {
   "name": "@repo/ui",
   "version": "0.1.0",
+  "private": true,
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -30,14 +31,12 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
-    "lint": "eslint \"src/**/*.ts\"",
-    "fix": "eslint \"src/**/*.ts\" --fix",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
     "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:1.0.1",
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.7.0",
     "typescript": "^5.5.4"

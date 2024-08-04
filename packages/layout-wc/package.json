@@ -2,6 +2,7 @@
   "name": "@repo/layout-wc",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "type": "module",
   "main": "index.ts",
   "exports": {
@@ -13,8 +14,8 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
-    "fix": "eslint . --fix",
+    "lint": "eslint",
+    "fix": "eslint --fix",
     "format": "prettier ",
     "inspect": "eslint --inspect-config",
     "check-types": "astro check"
@@ -23,13 +24,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@astrojs/check": "^0.8.3",
-    "@repo/eslint-config": "workspace:1.0.1",
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^8.56.0",
+    "eslint": "^9.7.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.1",
     "astro": "^4.12.2"
   }
 }

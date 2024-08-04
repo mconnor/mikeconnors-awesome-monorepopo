@@ -9,19 +9,21 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint \"src/**/*.{ts,astro}\"",
+    "lint": "eslint",
+    "fix": "eslint --fix",
     "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
     "inspect": "eslint --inspect-config",
-    "check-types": "tsc --noEmit",
+    "check-types": "astro check",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.1",
     "astro": "^4.12.3"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^8.57.0",
+    "eslint": "^9.7.0",
     "typescript": "^5.5.4"
   },
   "files": [

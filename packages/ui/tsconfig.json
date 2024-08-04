@@ -1,8 +1,7 @@
 {
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
-    "outDir": "dist",
-    "rootDir": "src"
+    "outDir": "dist"
   },
   "include": [
     "src"
@@ -10,6 +9,6 @@
   "exclude": [
     "dist",
     ".turbo",
-    "eslint.config.js"
+    "build"
   ]
 }

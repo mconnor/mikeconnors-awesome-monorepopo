@@ -5,9 +5,20 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        project: true,
+        project: ['./tsconfig.eslint.json', './packages/*/tsconfig.json'],
         tsconfigRootDir: import.meta.dirname,
       },
     },
+  },
+  {
+    ignores: [
+      '*.config.*',
+      '.dist',
+      'turbo',
+      '**/_*.*',
+      '**/temp.js',
+      '.*',
+      '**/*.d.ts',
+    ],
   },
 ];

@@ -3,8 +3,7 @@
   "version": "1.0.1",
   "private": true,
   "export": {
-    "./tsLintConfig": "./tsLintConfig.js",
-    "./astroLintConfig": "./astroLintConfig.js"
+    "./*": "./*.js"
   },
   "files": [
     "tsLintConfig.js",

@@ -1,13 +1,14 @@
 // @ts-check
+import path from 'node:path';
+
 import eslintConfigPrettier from 'eslint-config-prettier';
-import * as globals from 'globals';
+import globals from 'globals';
 
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 const tsLintConfig = tseslint.config(
   js.configs.recommended,
-
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
   {
@@ -15,14 +16,10 @@ const tsLintConfig = tseslint.config(
       ecmaVersion: 'latest',
       sourceType: 'module',
       parser: tseslint.parser,
-      parserOptions: {
-        project: ['./tsconfig.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
 
       globals: {
         ...globals.browser,
-        // ...globals.node,
+        ...globals.node,
       },
     },
   },
@@ -34,7 +31,7 @@ const tsLintConfig = tseslint.config(
   {
     ignores: [
       '*.config.*',
-      'turbo',
+      '.turbo',
       '**/temp.js',
       '**/*.d.ts',
       '**/_*.*',

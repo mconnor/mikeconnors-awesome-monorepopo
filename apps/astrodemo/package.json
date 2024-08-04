@@ -1,16 +1,17 @@
 {
   "name": "@app/astrodemo",
-  "type": "module",
+  "private": true,
   "version": "0.0.2",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint src",
-    "fix": "eslint src --fix",
-    "check-types": "tsc --noEmit",
+    "lint": "eslint",
+    "fix": "eslint --fix",
+    "check-types": "astro check",
     "format": "prettier --write \"**/*.{astro,js, jsx,ts,tsx,md}\""
   },
   "dependencies": {
@@ -37,7 +38,7 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
+    "eslint": "^9.7.0",
     "typescript": "^5.5.4",
     "vite": "^5.3.5"
   }
