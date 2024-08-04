@@ -2,7 +2,7 @@
   "extends": "@repo/typescript-config/vite.json",
   "include": [
     "eslint.config.js",
-    "src/*.ts",
+    "src",
   ],
   "exclude": [
     "node_modules",

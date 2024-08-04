@@ -243,15 +243,6 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
 
-  packages/new-ui:
-    dependencies:
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../config-eslint
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../config-typescript
-
   packages/ui:
     devDependencies:
       '@repo/eslint-config':

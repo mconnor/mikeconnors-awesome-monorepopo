@@ -10,9 +10,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint",
+    "format": "prettier --write .",
     "fix": "eslint --fix",
-    "check-types": "astro check",
-    "format": "prettier --write \"**/*.{astro,js, jsx,ts,tsx,md}\""
+    "check-types": "astro check"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.1",

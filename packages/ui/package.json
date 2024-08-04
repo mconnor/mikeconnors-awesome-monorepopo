@@ -31,7 +31,9 @@
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
-    "format": "prettier '../../prettier.config.js' --write './utls/*' --write './components/*' ",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "format": "prettier --write .",
     "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
