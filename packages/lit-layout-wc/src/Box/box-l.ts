@@ -1,14 +1,26 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-
+import type { RmUnitType } from '../Types';
 import { styleMap } from 'lit/directives/style-map.js';
 
+/**
+ * @module box-l
+ * @description
+ * A custom element for generic boxes/containers
+ * @property {string} padding=var(--s1) A CSS `padding` value
+ * @property {string} borderWidth=var(--border-thin) A CSS `border-width` value
+ * @property {boolean} invert=false Whether to apply an inverted theme. Only recommended for greyscale designs.
+ */
 @customElement('box-l')
-export class Box extends LitElement {
+export class BoxClass extends LitElement {
   connectedCallback() {
+    super.connectedCallback();
     // Check if this component was server-side rendered
-    // const isSSR = this.getAttribute('is:ssr') === 'true';
-    // console.log(`Is SSR: ${isSSR}`);
+    const isSSR = this.getAttribute('is:ssr') === 'true';
+    console.log(`Is SSR: ${isSSR}`);
+  }
+  disconnectedCallback() {
+    super.disconnectedCallback();
   }
 
   static styles = [
@@ -21,11 +33,11 @@ export class Box extends LitElement {
     `,
   ];
 
-  @property()
-  padding = 'var(--s0)';
+  @property({ type: String })
+  padding: RmUnitType = 'var(--s0)';
 
   @property()
-  borderWidth = 'var(--border-thin)';
+  borderWidth = '1px';
 
   @property({ type: Boolean })
   invert = false;

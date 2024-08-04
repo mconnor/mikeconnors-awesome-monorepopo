@@ -3,14 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "module": "index.ts",
-  "main": "index.ts",
+  "main": "./src/index.js",
   "exports": {
-    ".": "./index.ts"
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js"
+    },
+    "./Box": {
+      "import": "./src/Box/index.astro",
+      "require": "./Box/index.astro"
+    }
   },
   "files": [
-    "components",
-    "index.ts"
+    "src"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

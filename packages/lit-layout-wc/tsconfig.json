@@ -10,13 +10,10 @@
         "jsx": "preserve"
     },
     "include": [
-        "index.ts",
-        "components"
+        "src"
     ],
     "exclude": [
         "node_modules",
-        "dist",
-        ".astro",
         ".turbo",
     ]
 }
