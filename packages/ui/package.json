@@ -34,6 +34,7 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },

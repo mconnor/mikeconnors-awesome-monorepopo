@@ -11,12 +11,14 @@
       "dependsOn": ["^lint"]
     },
     "//#lint:root": {},
+
     "update": {
       "cache": false
     },
 
     "fix": {},
     "format": {},
+    "format:check": {},
     "dev": {
       "cache": false,
       "persistent": true

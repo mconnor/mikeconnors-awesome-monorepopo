@@ -15,6 +15,7 @@
     "lint": "eslint",
     "fix": "eslint --fix",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "inspect": "eslint --inspect-config",
     "check-types": "astro check"
   },

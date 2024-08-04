@@ -7,14 +7,13 @@ settings:
 importers:
 
   .:
-    dependencies:
-      prettier-plugin-astro:
-        specifier: ^0.14.1
-        version: 0.14.1
     devDependencies:
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
+      prettier-plugin-astro:
+        specifier: ^0.14.1
+        version: 0.14.1
       turbo:
         specifier: ^2.0.11
         version: 2.0.11
@@ -190,6 +189,15 @@ importers:
       typescript-eslint:
         specifier: ^7.18.0
         version: 7.18.0(eslint@9.7.0)(typescript@5.5.4)
+
+  packages/config-prettier:
+    dependencies:
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      prettier-plugin-astro:
+        specifier: ^0.14.1
+        version: 0.14.1
 
   packages/config-typescript: {}
 

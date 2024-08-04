@@ -16,7 +16,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint",
     "fix": "eslint --fix",
-    "format": "prettier ",
+    "format": "prettier --write .",
     "inspect": "eslint --inspect-config",
     "check-types": "astro check"
   },

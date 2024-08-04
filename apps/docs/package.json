@@ -10,6 +10,7 @@
     "lint": "eslint",
     "fix": "eslint --fix",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {

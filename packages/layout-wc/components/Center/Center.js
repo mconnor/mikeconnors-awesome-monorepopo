@@ -1,4 +1,3 @@
-
 export default class Center extends HTMLElement {
   constructor() {
     super();
