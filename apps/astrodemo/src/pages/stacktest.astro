@@ -1,31 +1,28 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { Box } from '@repo/lit-layout-wc';
+import Box from '@repo/lit-layout-wc/Box';
 import { Stack } from '@repo/layout-wc';
 ---
+
 <Layout title="xxx">
-
-      <Stack  space="var(--s00)" splitAfter={2}>
-        <Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-        </Box>
-        <Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-        </Box>
-        <Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-            <Box> Lorem ipsum dolor </Box>
-        </Box>
-      </Stack>
-
+  <Stack space="var(--s1)" recursive splitAfter={2}>
+    <Box>
+      <Box> Lorem ipsum dolor </Box>
+      <Box> Lorem ipsum dolor </Box>
+      <Box> Lorem ipsum dolor </Box>
+      <Box> Lorem ipsum dolor </Box>
+    </Box>
+    <Box invert>
+      <Box> Lorem ipsum dolor </Box>
+      <Box> Lorem ipsum dolor </Box>
+      <Box invert> Lorem ipsum dolor </Box>
+      <Box> Lorem ipsum dolor </Box>
+    </Box>
+    <Box>
+      <Box> Lorem ipsum dolor </Box>
+      <Box> Lorem ipsum dolor </Box>
+      <Box> Lorem ipsum dolor </Box>
+      <Box> Lorem ipsum dolor </Box>
+    </Box>
+  </Stack>
 </Layout>
-
-

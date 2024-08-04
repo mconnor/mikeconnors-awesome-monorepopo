@@ -3,16 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "./src/index.js",
   "exports": {
-    ".": {
-      "import": "./src/index.js",
-      "require": "./src/index.js"
-    },
-    "./Box": {
-      "import": "./src/Box/index.astro",
-      "require": "./Box/index.astro"
-    }
+    "./Box": "./src/Box/index.astro"
   },
   "files": [
     "src"
