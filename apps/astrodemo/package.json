@@ -4,6 +4,7 @@
   "version": "0.0.2",
   "type": "module",
   "scripts": {
+    "update": "pnpm update",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",

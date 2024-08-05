@@ -9,6 +9,9 @@
     "tsLintConfig.js",
     "astroLintConfig.js"
   ],
+  "scripts": {
+    "update": "pnpm update"
+  },
   "license": "MIT",
   "type": "module",
   "dependencies": {

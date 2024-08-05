@@ -29,6 +29,7 @@
   },
   "license": "MIT",
   "scripts": {
+    "update": "pnpm update",
     "dev": "tsc --watch",
     "build": "tsc",
     "lint": "eslint .",

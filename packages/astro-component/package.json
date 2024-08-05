@@ -8,6 +8,7 @@
     "Card": "./src/Card.astro"
   },
   "scripts": {
+    "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint",
     "format": "prettier --write .",

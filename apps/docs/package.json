@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "update": "pnpm update",
     "dev": "vite --clearScreen false",
     "build": "tsc && vite build",
     "preview": "vite preview",
