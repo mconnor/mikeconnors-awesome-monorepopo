@@ -6,5 +6,8 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "astro": "^4.13.1"
   }
 }

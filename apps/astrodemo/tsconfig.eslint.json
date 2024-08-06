@@ -18,6 +18,6 @@
         ".astro",
         "dist",
         ".turbo",
-        "src/demo"
+        "src/pages/demo/"
     ]
 }

@@ -5,7 +5,7 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        project: ['./tsconfig.json'],
+        project: ['./tsconfig.eslint.json'],
         tsconfigRootDir: import.meta.dirname,
       },
     },
@@ -19,7 +19,7 @@ export default [
       'my-custom-cache-directory',
       '**/env.d.ts',
       '.*',
-      'src/pages/demo',
+      'src/pages/demo/',
     ],
   },
 ];

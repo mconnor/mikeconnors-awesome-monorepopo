@@ -1,8 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import Box from '@repo/lit-layout-wc/Box';
+// import Box from '@repo/lit-layout-wc/Box';
 import { Image } from 'astro:assets';
-import { Grid, Frame } from '@repo/layout-wc';
+import { Grid } from '@repo/layout-wc';
+import { Frame } from '@repo/layout-wc';
 import Card from '@/components/Card.astro';
 const W = '120';
 const H = '120';
@@ -15,15 +16,15 @@ const getRandomSrc = () => {
 const pic = getRandomSrc();
 ---
 
-<Layout title="xxx">
+<Layout title="Grid Test">
   <Grid space="1rem" min=`${W}px`>
+    <!-- <Box>At the forefront of industry innovation, our paradigm-shifting </Box>
     <Box>At the forefront of industry innovation, our paradigm-shifting </Box>
     <Box>At the forefront of industry innovation, our paradigm-shifting </Box>
     <Box>At the forefront of industry innovation, our paradigm-shifting </Box>
     <Box>At the forefront of industry innovation, our paradigm-shifting </Box>
-    <Box>At the forefront of industry innovation, our paradigm-shifting </Box>
-    <Box>At the forefront of industry innovation, our paradigm-shifting </Box>
-    <!-- <Card>
+    <Box>At the forefront of industry innovation, our paradigm-shifting </Box> -->
+    <Card>
       <Frame ratio="16:9" slot="image-slot">
         <Image width={W} height={H} src={pic} alt="Image alt text" />
       </Frame></Card
@@ -73,6 +74,6 @@ const pic = getRandomSrc();
       <Frame ratio="16:9" slot="image-slot">
         <Image width={W} height={H} src={getRandomSrc()} alt="Image alt text" />
       </Frame></Card
-    > -->
+    >
   </Grid>
 </Layout>

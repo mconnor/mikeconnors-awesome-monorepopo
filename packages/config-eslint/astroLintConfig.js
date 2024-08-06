@@ -16,7 +16,7 @@ import tseslint from 'typescript-eslint';
 const astroLintConfig = tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylistic,
+  ...tseslint.configs.stylisticTypeChecked,
   //If your project enables typed linting, we suggest enabling the recommended-type-checked
   // and stylistic-type-checked configurations to start:
   // ...tseslint.configs.recommendedTypeChecked,

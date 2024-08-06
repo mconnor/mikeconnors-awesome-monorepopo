@@ -32,8 +32,8 @@
     "update": "pnpm update",
     "dev": "tsc --watch",
     "build": "tsc",
-    "lint": "eslint .",
-    "fix": "eslint . --fix",
+    "lint": "eslint",
+    "fix": "eslint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check-types": "tsc --noEmit",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.7.0",
+    "eslint": "^9.8.0",
     "typescript": "^5.5.4"
   }
 }

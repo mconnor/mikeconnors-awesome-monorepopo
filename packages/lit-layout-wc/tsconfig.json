@@ -1,11 +1,12 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "@repo/typescript-config/myAstro.json",
   "compilerOptions": {
     "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
     "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
     "declaration": true,
     "declarationMap": true
   },
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "include": [
+    "src"
+  ]
 }

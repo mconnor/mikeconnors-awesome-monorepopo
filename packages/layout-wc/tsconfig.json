@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "@repo/typescript-config/myAstro.json",
   "compilerOptions": {
     "verbatimModuleSyntax": true,
     "allowJs": true,
