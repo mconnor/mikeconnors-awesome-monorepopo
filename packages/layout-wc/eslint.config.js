@@ -10,6 +10,12 @@ export default [
       },
     },
   },
+  {
+    rules: {
+      'no-constant-binary-expression': 'off',
+      '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    },
+  },
 
   {
     ignores: [

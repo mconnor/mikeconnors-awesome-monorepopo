@@ -6,8 +6,7 @@
   "type": "module",
   "main": "index.ts",
   "exports": {
-    ".": "./index.ts",
-    "./*.astro": "./src/components/*/index.astro"
+    ".": "./index.ts"
   },
   "files": [
     "src",
