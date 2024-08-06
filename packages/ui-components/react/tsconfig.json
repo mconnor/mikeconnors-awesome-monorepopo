@@ -4,9 +4,12 @@
         "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
         "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
         "declaration": true,
-        "declarationMap": true
+        "declarationMap": true,
+        "jsx": "react-jsx",
+        "jsxImportSource": "react"
     },
     "include": [
-        "src"
+        "src",
+        "index.ts"
     ]
 }

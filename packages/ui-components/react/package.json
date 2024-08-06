@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.ts",
   "type": "module",
+  "exports": {
+    "./ReactCounter": "./src/ReactCounter.tsx"
+  },
   "files": [
     "index.ts",
     "src"
