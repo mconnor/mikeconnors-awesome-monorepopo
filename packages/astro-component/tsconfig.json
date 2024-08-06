@@ -1,13 +1,5 @@
 {
   "extends": "@repo/typescript-config/myAstro.json",
-  "include": [
-    "eslint.config.js",
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".astro",
-    ".turbo"
-  ]
+  "include": ["eslint.config.js", "src"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
 }

@@ -1,14 +1,14 @@
 {
-    "extends": "./tsconfig.json",
-    "include": [
-        "src/**/*.js",
-        "src/**/*.ts",
-        "src/**/*.astro",
-        "src/Types.ts",
-        "index.ts",
-        "*.config.mjs",
-        "*.config.js",
-        "test/*.ts",
-        "jsx.d.ts"
-    ]
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.astro",
+    "src/Types.ts",
+    "index.ts",
+    "*.config.mjs",
+    "*.config.js",
+    "test/*.ts",
+    "jsx.d.ts"
+  ]
 }
