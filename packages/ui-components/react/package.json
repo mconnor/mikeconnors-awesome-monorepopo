@@ -1,0 +1,36 @@
+{
+  "name": "@repo/react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "files": [
+    "index.ts",
+    "src"
+  ],
+  "scripts": {
+    "update": "pnpm update",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint",
+    "fix": "eslint --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "inspect": "eslint --inspect-config",
+    "check-types": "astro check"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4"
+  }
+}

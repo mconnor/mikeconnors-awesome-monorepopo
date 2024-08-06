@@ -1,15 +1,24 @@
 {
-  "name": "multi-app",
+  "name": "@app/multi",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "update": "pnpm update",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "fix": "eslint --fix",
+    "check-types": "astro check"
   },
   "dependencies": {
+    "@repo/astro-component": "workspace:*",
+    "@repo/layout-wc": "workspace:*",
+    "@repo/lit-layout-wc": "workspace:*",
     "@astrojs/check": "^0.9.2",
     "@astrojs/preact": "^3.5.1",
     "@astrojs/react": "^3.6.1",
@@ -26,5 +35,11 @@
     "svelte": "^4.2.18",
     "typescript": "^5.5.4",
     "vue": "^3.4.36"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^9.8.0",
+    "typescript": "^5.5.4"
   }
 }
