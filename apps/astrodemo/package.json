@@ -26,7 +26,7 @@
     "@repo/layout-wc": "workspace:*",
     "@repo/lit-layout-wc": "workspace:*",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "astro": "^4.12.3",
+    "astro": "^4.13.1",
     "lit": "^3.1.4",
     "open-props": "^1.7.5",
     "postcss-custom-media": "^10.0.8",

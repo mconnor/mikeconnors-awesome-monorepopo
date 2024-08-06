@@ -6,10 +6,11 @@
   "type": "module",
   "main": "index.ts",
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./*.astro": "./src/components/*/index.astro"
   },
   "files": [
-    "components",
+    "src",
     "index.ts"
   ],
   "scripts": {
@@ -32,6 +33,6 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.1",
-    "astro": "^4.12.2"
+    "astro": "^4.13.1"
   }
 }

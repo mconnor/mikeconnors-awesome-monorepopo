@@ -6,6 +6,14 @@
     // Allow JSX files (or files that are internally considered JSX, like Astro files) to be imported inside `.js` and `.ts` files.
     "jsx": "preserve"
   },
-  "include": ["index.ts", "components"],
-  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
+  "include": [
+    "index.ts",
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".astro",
+    ".turbo"
+  ]
 }
