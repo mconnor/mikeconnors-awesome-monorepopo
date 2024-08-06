@@ -1,7 +1,7 @@
-import astroLintConfig from '@repo/eslint-config/astroLintConfig.js';
+import config from '@repo/eslint-config/astroLintConfig.mjs';
 
 export default [
-  ...astroLintConfig,
+  ...config,
   {
     languageOptions: {
       parserOptions: {

@@ -1,7 +1,7 @@
-import tsLintConfig from '@repo/eslint-config/tsLintConfig.js';
+import config from '@repo/eslint-config/tsLintConfig.mjs';
 
 export default [
-  ...tsLintConfig,
+  ...config,
   {
     languageOptions: {
       parserOptions: {

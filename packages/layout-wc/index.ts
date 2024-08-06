@@ -9,3 +9,4 @@ export { default as Grid } from './src/components/Grid/index.astro';
 export { default as Imposter } from './src/components/Imposter/index.astro';
 export { default as Icon } from './src/components/Icon/index.astro';
 export { default as Cover } from './src/components/Cover/index.astro';
+// export type { } from './src/components/Types.ts'

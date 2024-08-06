@@ -3,11 +3,12 @@
   "version": "1.0.1",
   "private": true,
   "export": {
-    "./*": "./*.js"
+    "./*": "./*.mjs"
   },
   "files": [
-    "tsLintConfig.js",
-    "astroLintConfig.js"
+    "tsLintConfig.mjs",
+    "astroLintConfig.mjs",
+    "astroBasicConfig.mjs"
   ],
   "scripts": {
     "update": "pnpm update"
@@ -16,6 +17,7 @@
   "type": "module",
   "dependencies": {
     "@eslint/js": "^9.8.0",
+    "@types/eslint__js": "^8.42.3",
     "astro-eslint-parser": "^1.0.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",

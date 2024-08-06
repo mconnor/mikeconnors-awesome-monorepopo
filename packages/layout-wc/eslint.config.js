@@ -1,7 +1,7 @@
-import astroLintConfig from '@repo/eslint-config/astroLintConfig.js';
+import config from '@repo/eslint-config/astroBasicConfig.mjs';
 
 export default [
-  ...astroLintConfig,
+  ...config,
   {
     languageOptions: {
       parserOptions: {
@@ -12,20 +12,7 @@ export default [
   },
   {
     rules: {
-      'no-constant-binary-expression': 'off',
-      '@typescript-eslint/prefer-nullish-coalescing': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
     },
-  },
-
-  {
-    ignores: [
-      '*.config.*',
-      '.dist',
-      'turbo',
-      '**/_*.*',
-      '**/temp.js',
-      '.*',
-      '**/*.d.ts',
-    ],
   },
 ];

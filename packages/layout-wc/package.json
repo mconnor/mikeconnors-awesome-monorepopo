@@ -10,7 +10,7 @@
   },
   "files": [
     "src",
-    "index.ts"
+    "index.js"
   ],
   "scripts": {
     "update": "pnpm update",
