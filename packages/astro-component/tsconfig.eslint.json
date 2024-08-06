@@ -1,13 +1,5 @@
 {
-    "extends": "./tsconfig.json",
-    "include": [
-        "*.config.*",
-        "src"
-    ],
-    "exclude": [
-        "node_modules",
-        "dist",
-        ".astro",
-        ".turbo"
-    ]
+  "extends": "./tsconfig.json",
+  "include": ["*.config.*", "src"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
 }
