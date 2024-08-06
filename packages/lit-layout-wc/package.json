@@ -32,7 +32,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.1",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "astro": "^4.12.2",
+    "astro": "^4.13.1",
     "lit": "^3.1.4"
   }
 }

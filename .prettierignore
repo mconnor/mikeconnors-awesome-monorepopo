@@ -35,3 +35,5 @@ pnpm-lock.yaml
 **/node_modules/
 **/dist/
 **/.turbo/
+
+apps/astrodemo/src/pages/demo/

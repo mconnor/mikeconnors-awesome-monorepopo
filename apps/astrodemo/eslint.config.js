@@ -19,6 +19,7 @@ export default [
       'my-custom-cache-directory',
       '**/env.d.ts',
       '.*',
+      'src/pages/demo',
     ],
   },
 ];

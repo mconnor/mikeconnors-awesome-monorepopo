@@ -1,15 +1,8 @@
 ---
 import Box from '@repo/lit-layout-wc/Box';
-
-interface Props {
-  desc: string;
-}
-
-const { desc } = Astro.props;
+import MainNav from './MainNav.astro';
 ---
 
 <Box invert>
-  <h2>
-    {desc}
-  </h2>
+  <MainNav />
 </Box>

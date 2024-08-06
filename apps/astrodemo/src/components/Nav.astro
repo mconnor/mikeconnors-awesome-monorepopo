@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import Box from '@repo/lit-layout-wc/Box';
+
+type Props = HTMLAttributes<'a'>;
+
+// const path = Astro.url.pathname;
+const { href } = Astro.props;
+
+// const isActive = href === path || href === path.replace(/\/$/, '');
+---
+
+<Box> <a href={href}><slot /></a></Box>

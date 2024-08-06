@@ -1,6 +1,6 @@
 // @ts-check
 // import astroEslintParser from 'astro-eslint-parser';
-
+import astroParser from 'astro-eslint-parser';
 import astro from 'eslint-plugin-astro';
 import markdown from 'eslint-plugin-markdown';
 import regexp from 'eslint-plugin-regexp';
@@ -15,7 +15,7 @@ import tseslint from 'typescript-eslint';
 
 const astroLintConfig = tseslint.config(
   js.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
   //If your project enables typed linting, we suggest enabling the recommended-type-checked
   // and stylistic-type-checked configurations to start:
@@ -32,6 +32,7 @@ const astroLintConfig = tseslint.config(
 
   {
     languageOptions: {
+      parser: tseslint.parser,
       ecmaVersion: 'latest',
       sourceType: 'module',
       parserOptions: {
@@ -59,10 +60,24 @@ const astroLintConfig = tseslint.config(
     },
   },
   {
+    files: ['**/*.astro'],
+
+    languageOptions: {
+      parser: astroParser,
+      parserOptions: {
+        parser: tseslint.parser,
+      },
+    },
+  },
+  {
     files: ['**/*.js'],
     ...tseslint.configs.disableTypeChecked,
     rules: {
       'wc/no-constructor-attributes': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-unsafe-call': 'warn',
+      '@typescript-eslint/no-unsafe-member-access': 'warn',
+      '@typescript-eslint/restrict-template-expressions': 'warn',
     },
   },
 

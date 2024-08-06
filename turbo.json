@@ -11,6 +11,10 @@
       "dependsOn": ["^lint"]
     },
     "//#lint:root": {},
+    "inspect": {
+      "dependsOn": ["^inspect"]
+    },
+    "//#inspect:root": {},
 
     "update": {
       "cache": false
