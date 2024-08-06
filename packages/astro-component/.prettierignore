@@ -32,6 +32,6 @@ pnpm-lock.yaml
 **/.git
 **/.svn
 **/.hg
-**/node_modules/
-**/dist/
-**/.turbo/
+node_modules/
+dist/
+.turbo/
