@@ -1,6 +1,27 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "@repo/typescript-config/vite.json",
   "compilerOptions": {
-    "jsx": "preserve"
-  }
+    "verbatimModuleSyntax": true,
+    "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
+    "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".astro",
+    ".turbo",
+    "src/pages/demo/"
+  ]
 }

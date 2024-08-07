@@ -1,4 +1,4 @@
-import config from '@repo/eslint-config/reactConfig.mjs';
+import config from '@repo/eslint-config/tsLintConfig.mjs';
 
 export default [
   ...config,
@@ -10,16 +10,9 @@ export default [
       },
     },
   },
-
   {
-    ignores: [
-      '*.config.*',
-      '.dist',
-      'turbo',
-      '**/_*.*',
-      '**/temp.js',
-      '.*',
-      '**/*.d.ts',
-    ],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
   },
 ];

@@ -1,17 +1,17 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "src/**/*.ts",
-    "src/**/*.mts",
-    "src/**/*.js",
-    "src/**/*.mjs",
-    "src/**/*.jsx",
-    "src/**/*.tsx",
-    "src/**/*.astro",
+    "src",
     "*.config.mjs",
     "*.config.js",
     "test/*.ts",
     "jsx.d.ts"
   ],
-  "exclude": ["node_modules", ".astro", "dist", ".turbo", "src/pages/demo/"]
+  "exclude": [
+    "node_modules",
+    ".astro",
+    "dist",
+    ".turbo",
+    "src/pages/demo/"
+  ]
 }

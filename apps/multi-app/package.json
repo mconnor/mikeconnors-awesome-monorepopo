@@ -16,9 +16,8 @@
     "check-types": "astro check"
   },
   "dependencies": {
-    "@repo/astro-component": "workspace:*",
-    "@repo/layout-wc": "workspace:*",
-    "@repo/lit-layout-wc": "workspace:*",
+    "@repo/react": "workspace:*",
+    "@repo/preact": "workspace:*",
     "@astrojs/check": "^0.9.2",
     "@astrojs/preact": "^3.5.1",
     "@astrojs/react": "^3.6.1",
@@ -34,8 +33,7 @@
     "solid-js": "^1.8.19",
     "svelte": "^4.2.18",
     "typescript": "^5.5.4",
-    "vue": "^3.4.36",
-    "@repo/react": "workspace:*"
+    "vue": "^3.4.36"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

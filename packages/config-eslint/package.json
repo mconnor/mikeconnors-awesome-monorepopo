@@ -8,7 +8,9 @@
   "files": [
     "tsLintConfig.mjs",
     "astroLintConfig.mjs",
-    "astroBasicConfig.mjs"
+    "astroBasicConfig.mjs",
+    "reactConfig.mjs",
+    "reactSimple.mjs"
   ],
   "scripts": {
     "update": "pnpm update"
@@ -23,6 +25,7 @@
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-lit": "^1.14.0",
     "eslint-plugin-markdown": "^5.1.0",
+    "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-wc": "^2.1.0",
     "globals": "^15.9.0",

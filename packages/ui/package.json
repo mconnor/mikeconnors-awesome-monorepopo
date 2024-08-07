@@ -31,7 +31,7 @@
   "scripts": {
     "update": "pnpm update",
     "dev": "tsc --watch",
-    "build": "tsc",
+    "build": "tsc && vite build",
     "lint": "eslint",
     "fix": "eslint --fix",
     "format": "prettier --write .",
@@ -43,6 +43,7 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.8.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vite": "^5.3.4"
   }
 }
