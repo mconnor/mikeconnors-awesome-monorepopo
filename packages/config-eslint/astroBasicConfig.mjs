@@ -10,7 +10,7 @@ import tseslint from 'typescript-eslint';
 
 const astroBasicConfig = tseslint.config(
   js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
 
   ...astro.configs.recommended,
@@ -21,7 +21,9 @@ const astroBasicConfig = tseslint.config(
       sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
+        projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         ecmaFeatures: {
           jsx: true,
         },

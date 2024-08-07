@@ -51,7 +51,7 @@ importers:
         specifier: ^4.13.1
         version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
       lit:
-        specifier: ^3.1.4
+        specifier: ^3.2.0
         version: 3.2.0
       open-props:
         specifier: ^1.7.5
@@ -91,30 +91,8 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
       vite:
-        specifier: ^5.3.5
-        version: 5.3.5(@types/node@22.1.0)
-
-  apps/docs:
-    dependencies:
-      '@repo/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-    devDependencies:
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config-eslint
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config-typescript
-      eslint:
-        specifier: ^9.8.0
-        version: 9.8.0
-      typescript:
-        specifier: ^5.5.4
-        version: 5.5.4
-      vite:
-        specifier: ^5.3.4
-        version: 5.3.5(@types/node@22.1.0)
+        specifier: ^5.4.0
+        version: 5.4.0(@types/node@22.1.0)
 
   apps/multi-app:
     dependencies:
@@ -123,19 +101,19 @@ importers:
         version: 0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
       '@astrojs/preact':
         specifier: ^3.5.1
-        version: 3.5.1(@babel/core@7.25.2)(preact@10.23.1)(vite@5.3.5(@types/node@22.1.0))
+        version: 3.5.1(@babel/core@7.25.2)(preact@10.23.1)(vite@5.4.0(@types/node@22.1.0))
       '@astrojs/react':
         specifier: ^3.6.1
-        version: 3.6.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.3.5(@types/node@22.1.0))
+        version: 3.6.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.0(@types/node@22.1.0))
       '@astrojs/solid-js':
         specifier: ^4.4.0
-        version: 4.4.0(solid-js@1.8.19)(vite@5.3.5(@types/node@22.1.0))
+        version: 4.4.0(solid-js@1.8.19)(vite@5.4.0(@types/node@22.1.0))
       '@astrojs/svelte':
         specifier: ^5.7.0
-        version: 5.7.0(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(svelte@4.2.18)(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0))
+        version: 5.7.0(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(svelte@4.2.18)(typescript@5.5.4)(vite@5.4.0(@types/node@22.1.0))
       '@astrojs/vue':
         specifier: ^4.5.0
-        version: 4.5.0(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(rollup@4.19.1)(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
+        version: 4.5.0(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(rollup@4.19.1)(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
       '@repo/preact':
         specifier: workspace:*
         version: link:../../packages/ui-components/preact
@@ -183,37 +161,15 @@ importers:
         specifier: ^9.8.0
         version: 9.8.0
 
-  apps/web:
-    dependencies:
-      '@repo/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
-    devDependencies:
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config-eslint
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config-typescript
-      eslint:
-        specifier: ^9.8.0
-        version: 9.8.0
-      typescript:
-        specifier: ^5.5.4
-        version: 5.5.4
-      vite:
-        specifier: ^5.3.4
-        version: 5.3.5(@types/node@22.1.0)
-
   packages/astro-component:
     dependencies:
-      '@astrojs/check':
-        specifier: ^0.9.1
-        version: 0.9.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
       astro:
         specifier: ^4.13.1
         version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
     devDependencies:
+      '@astrojs/check':
+        specifier: ^0.9.2
+        version: 0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../config-eslint
@@ -266,9 +222,9 @@ importers:
         specifier: ^8.0.1
         version: 8.0.1(eslint@9.8.0)(typescript@5.5.4)
     devDependencies:
-      eslint-plugin-jest:
-        specifier: ^28.7.0
-        version: 28.7.0(@typescript-eslint/eslint-plugin@8.0.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)
+      '@types/eslint-config-prettier':
+        specifier: ^6.11.3
+        version: 6.11.3
 
   packages/config-typescript:
     dependencies:
@@ -279,8 +235,8 @@ importers:
   packages/layout-wc:
     dependencies:
       '@astrojs/check':
-        specifier: ^0.9.1
-        version: 0.9.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
+        specifier: ^0.9.2
+        version: 0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
       astro:
         specifier: ^4.13.1
         version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
@@ -300,9 +256,6 @@ importers:
 
   packages/lit-layout-wc:
     dependencies:
-      '@astrojs/check':
-        specifier: ^0.9.1
-        version: 0.9.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
       '@webcomponents/template-shadowroot':
         specifier: ^0.2.1
         version: 0.2.1
@@ -310,9 +263,12 @@ importers:
         specifier: ^4.13.1
         version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
       lit:
-        specifier: ^3.1.4
+        specifier: ^3.2.0
         version: 3.2.0
     devDependencies:
+      '@astrojs/check':
+        specifier: ^0.9.2
+        version: 0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../config-eslint
@@ -341,14 +297,10 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
       vite:
-        specifier: ^5.3.4
-        version: 5.3.5(@types/node@22.1.0)
+        specifier: ^5.4.0
+        version: 5.4.0(@types/node@22.1.0)
 
   packages/ui-components/preact:
-    dependencies:
-      preact:
-        specifier: ^10.23.1
-        version: 10.23.1
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -359,40 +311,42 @@ importers:
       eslint:
         specifier: ^9.8.0
         version: 9.8.0
+      preact:
+        specifier: ^10.23.1
+        version: 10.23.1
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
 
   packages/ui-components/react:
-    dependencies:
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../config-eslint
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../config-typescript
       '@types/react':
         specifier: ^18.3.3
         version: 18.3.3
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
+      eslint:
+        specifier: ^9.8.0
+        version: 9.8.0
       react:
         specifier: ^18.3.1
         version: 18.3.1
       react-dom:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
-    devDependencies:
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../../config-eslint
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../config-typescript
-      eslint:
-        specifier: ^9.8.0
-        version: 9.8.0
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
       vite:
-        specifier: ^5.3.5
-        version: 5.3.5(@types/node@22.1.0)
+        specifier: ^5.4.0
+        version: 5.4.0(@types/node@22.1.0)
 
 packages:
 
@@ -402,12 +356,6 @@ packages:
 
   '@antfu/utils@0.7.10':
     resolution: {integrity: sha512-+562v9k4aI80m1+VuMHehNJWLOFjBnXn3tdOitzD0il5b7smkSBal4+a3oKiQTbrwMmN/TBUMDvbdoWDehgOww==}
-
-  '@astrojs/check@0.9.1':
-    resolution: {integrity: sha512-VvN5ukVzg0IccKuZlI/pdsp4MSpHxWf9a36eOmS8Wpp+NM0MhJLYv3yvQC+qa472Kdf8DHEt/wmVZYwJUMFW+w==}
-    hasBin: true
-    peerDependencies:
-      typescript: ^5.0.0
 
   '@astrojs/check@0.9.2':
     resolution: {integrity: sha512-6rWxtJTbd/ctdAlmla0CAvloGaai5IUTG0K21kctJHHGKJKnGH6Xana7m0zNOtHpVPEJi1SgC/TcsN+ltYt0Cg==}
@@ -423,18 +371,6 @@ packages:
 
   '@astrojs/internal-helpers@0.4.1':
     resolution: {integrity: sha512-bMf9jFihO8YP940uD70SI/RDzIhUHJAolWVcO1v5PUivxGKvfLZTLTVVxEYzGYyPsA3ivdLNqMnL5VgmQySa+g==}
-
-  '@astrojs/language-server@2.13.1':
-    resolution: {integrity: sha512-Cl9ynfnge6+MaCpehYn7w9WrAE+sVS7onhxhMzCdqzPtIt/Yo5zIaiGZdu4QgvmOV/mdNBZCZgaTpAIeGjWwsQ==}
-    hasBin: true
-    peerDependencies:
-      prettier: ^3.0.0
-      prettier-plugin-astro: '>=0.11.0'
-    peerDependenciesMeta:
-      prettier:
-        optional: true
-      prettier-plugin-astro:
-        optional: true
 
   '@astrojs/language-server@2.13.2':
     resolution: {integrity: sha512-l435EZLKjaUO/6iewJ7xqd3eHf3zAosVWG4woILbxluQcianBoNPepnnqAg7uUriZUaC44ae5v0Q+AfB8UI64g==}
@@ -1265,6 +1201,9 @@ packages:
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
+
+  '@types/eslint-config-prettier@6.11.3':
+    resolution: {integrity: sha512-3wXCiM8croUnhg9LdtZUJQwNcQYGWxxdOWDjPe1ykCqJFPVpzAKfs/2dgSoCtAvdPeaponcWPI7mPcGGp9dkKQ==}
 
   '@types/eslint@9.6.0':
     resolution: {integrity: sha512-gi6WQJ7cHRgZxtkQEoyHMppPjq9Kxo5Tjn2prSKDSmZrCz8TZ3jSRCeTJm+WoM+oB0WG37bRqLzaaU3q7JypGg==}
@@ -2115,19 +2054,6 @@ packages:
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.57.0'
-
-  eslint-plugin-jest@28.7.0:
-    resolution: {integrity: sha512-fzPGN7awL2ftVRQh/bsCi+16ArUZWujZnD1b8EGJqy8nr4//7tZ3BIdc/9edcJBtB3hpci3GtdMNFVDwHU0Eag==}
-    engines: {node: ^16.10.0 || ^18.12.0 || >=20.0.0}
-    peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^6.0.0 || ^7.0.0 || ^8.0.0
-      eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-      jest: '*'
-    peerDependenciesMeta:
-      '@typescript-eslint/eslint-plugin':
-        optional: true
-      jest:
-        optional: true
 
   eslint-plugin-lit@1.14.0:
     resolution: {integrity: sha512-J4w+CgO31621GreLFCdTUbTr5yeV2/RJ/M0myw0dykD5p9FGGIRLityQiNa6SG+JpVbmeQTQPJy4pNFmiurJ/w==}
@@ -4092,8 +4018,8 @@ packages:
     peerDependencies:
       vite: ^3.0.0-0 || ^4.0.0-0 || ^5.0.0-0
 
-  vite@5.3.5:
-    resolution: {integrity: sha512-MdjglKR6AQXQb9JGiS7Rc2wC6uMjcm7Go/NHNO63EwiJXfuk9PgqiP/n5IDJCziMkfw9n4Ubp7lttNwz+8ZVKA==}
+  vite@5.4.0:
+    resolution: {integrity: sha512-5xokfMX0PIiwCMCMb9ZJcMyh5wbBun0zUzKib+L65vAZ8GY9ePZMXxFrHbr/Kyll2+LSCY7xtERPpxkBDKngwg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -4101,6 +4027,7 @@ packages:
       less: '*'
       lightningcss: ^1.21.0
       sass: '*'
+      sass-embedded: '*'
       stylus: '*'
       sugarss: '*'
       terser: ^5.4.0
@@ -4112,6 +4039,8 @@ packages:
       lightningcss:
         optional: true
       sass:
+        optional: true
+      sass-embedded:
         optional: true
       stylus:
         optional: true
@@ -4331,18 +4260,6 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@astrojs/check@0.9.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)':
-    dependencies:
-      '@astrojs/language-server': 2.13.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
-      chokidar: 3.6.0
-      fast-glob: 3.3.2
-      kleur: 4.1.5
-      typescript: 5.5.4
-      yargs: 17.7.2
-    transitivePeerDependencies:
-      - prettier
-      - prettier-plugin-astro
-
   '@astrojs/check@0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)':
     dependencies:
       '@astrojs/language-server': 2.13.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
@@ -4360,31 +4277,6 @@ snapshots:
   '@astrojs/compiler@2.10.2': {}
 
   '@astrojs/internal-helpers@0.4.1': {}
-
-  '@astrojs/language-server@2.13.1(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)':
-    dependencies:
-      '@astrojs/compiler': 2.10.1
-      '@jridgewell/sourcemap-codec': 1.5.0
-      '@volar/kit': 2.4.0-alpha.18(typescript@5.5.4)
-      '@volar/language-core': 2.4.0-alpha.18
-      '@volar/language-server': 2.4.0-alpha.18
-      '@volar/language-service': 2.4.0-alpha.18
-      '@volar/typescript': 2.4.0-alpha.18
-      fast-glob: 3.3.2
-      muggle-string: 0.4.1
-      volar-service-css: 0.0.59(@volar/language-service@2.4.0-alpha.18)
-      volar-service-emmet: 0.0.59(@volar/language-service@2.4.0-alpha.18)
-      volar-service-html: 0.0.59(@volar/language-service@2.4.0-alpha.18)
-      volar-service-prettier: 0.0.59(@volar/language-service@2.4.0-alpha.18)(prettier@3.3.3)
-      volar-service-typescript: 0.0.59(@volar/language-service@2.4.0-alpha.18)
-      volar-service-typescript-twoslash-queries: 0.0.59(@volar/language-service@2.4.0-alpha.18)
-      vscode-html-languageservice: 5.3.0
-      vscode-uri: 3.0.8
-    optionalDependencies:
-      prettier: 3.3.3
-      prettier-plugin-astro: 0.14.1
-    transitivePeerDependencies:
-      - typescript
 
   '@astrojs/language-server@2.13.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)':
     dependencies:
@@ -4464,11 +4356,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/preact@3.5.1(@babel/core@7.25.2)(preact@10.23.1)(vite@5.3.5(@types/node@22.1.0))':
+  '@astrojs/preact@3.5.1(@babel/core@7.25.2)(preact@10.23.1)(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.25.2(@babel/core@7.25.2)
       '@babel/plugin-transform-react-jsx-development': 7.24.7(@babel/core@7.25.2)
-      '@preact/preset-vite': 2.8.2(@babel/core@7.25.2)(preact@10.23.1)(vite@5.3.5(@types/node@22.1.0))
+      '@preact/preset-vite': 2.8.2(@babel/core@7.25.2)(preact@10.23.1)(vite@5.4.0(@types/node@22.1.0))
       '@preact/signals': 1.3.0(preact@10.23.1)
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.25.2)
       preact: 10.23.1
@@ -4482,11 +4374,11 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/react@3.6.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.3.5(@types/node@22.1.0))':
+  '@astrojs/react@3.6.1(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
       '@types/react': 18.3.3
       '@types/react-dom': 18.3.0
-      '@vitejs/plugin-react': 4.3.1(vite@5.3.5(@types/node@22.1.0))
+      '@vitejs/plugin-react': 4.3.1(vite@5.4.0(@types/node@22.1.0))
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       ultrahtml: 1.5.3
@@ -4499,18 +4391,18 @@ snapshots:
       fast-xml-parser: 4.4.1
       kleur: 4.1.5
 
-  '@astrojs/solid-js@4.4.0(solid-js@1.8.19)(vite@5.3.5(@types/node@22.1.0))':
+  '@astrojs/solid-js@4.4.0(solid-js@1.8.19)(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
       solid-js: 1.8.19
-      vite-plugin-solid: 2.10.2(solid-js@1.8.19)(vite@5.3.5(@types/node@22.1.0))
+      vite-plugin-solid: 2.10.2(solid-js@1.8.19)(vite@5.4.0(@types/node@22.1.0))
     transitivePeerDependencies:
       - '@testing-library/jest-dom'
       - supports-color
       - vite
 
-  '@astrojs/svelte@5.7.0(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(svelte@4.2.18)(typescript@5.5.4)(vite@5.3.5(@types/node@22.1.0))':
+  '@astrojs/svelte@5.7.0(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(svelte@4.2.18)(typescript@5.5.4)(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.3.5(@types/node@22.1.0))
+      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.4.0(@types/node@22.1.0))
       astro: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
       svelte: 4.2.18
       svelte2tsx: 0.7.15(svelte@4.2.18)(typescript@5.5.4)
@@ -4548,13 +4440,13 @@ snapshots:
       - react
       - supports-color
 
-  '@astrojs/vue@4.5.0(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(rollup@4.19.1)(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))':
+  '@astrojs/vue@4.5.0(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(rollup@4.19.1)(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))':
     dependencies:
-      '@vitejs/plugin-vue': 5.1.2(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
-      '@vitejs/plugin-vue-jsx': 4.0.0(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
+      '@vitejs/plugin-vue': 5.1.2(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
+      '@vitejs/plugin-vue-jsx': 4.0.0(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
       '@vue/compiler-sfc': 3.4.36
       astro: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
-      vite-plugin-vue-devtools: 7.3.7(rollup@4.19.1)(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
+      vite-plugin-vue-devtools: 7.3.7(rollup@4.19.1)(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
       vue: 3.4.36(typescript@5.5.4)
     transitivePeerDependencies:
       - '@nuxt/kit'
@@ -5142,12 +5034,12 @@ snapshots:
 
   '@polka/url@1.0.0-next.25': {}
 
-  '@preact/preset-vite@2.8.2(@babel/core@7.25.2)(preact@10.23.1)(vite@5.3.5(@types/node@22.1.0))':
+  '@preact/preset-vite@2.8.2(@babel/core@7.25.2)(preact@10.23.1)(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-react-jsx': 7.25.2(@babel/core@7.25.2)
       '@babel/plugin-transform-react-jsx-development': 7.24.7(@babel/core@7.25.2)
-      '@prefresh/vite': 2.4.6(preact@10.23.1)(vite@5.3.5(@types/node@22.1.0))
+      '@prefresh/vite': 2.4.6(preact@10.23.1)(vite@5.4.0(@types/node@22.1.0))
       '@rollup/pluginutils': 4.2.1
       babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.25.2)
       debug: 4.3.6
@@ -5157,7 +5049,7 @@ snapshots:
       resolve: 1.22.8
       source-map: 0.7.4
       stack-trace: 1.0.0-pre2
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
     transitivePeerDependencies:
       - preact
       - supports-color
@@ -5177,7 +5069,7 @@ snapshots:
 
   '@prefresh/utils@1.2.0': {}
 
-  '@prefresh/vite@2.4.6(preact@10.23.1)(vite@5.3.5(@types/node@22.1.0))':
+  '@prefresh/vite@2.4.6(preact@10.23.1)(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
       '@babel/core': 7.25.2
       '@prefresh/babel-plugin': 0.5.1
@@ -5185,7 +5077,7 @@ snapshots:
       '@prefresh/utils': 1.2.0
       '@rollup/pluginutils': 4.2.1
       preact: 10.23.1
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5254,26 +5146,26 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
 
-  '@sveltejs/vite-plugin-svelte-inspector@2.1.0(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.5(@types/node@22.1.0)))(svelte@4.2.18)(vite@5.3.5(@types/node@22.1.0))':
+  '@sveltejs/vite-plugin-svelte-inspector@2.1.0(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.4.0(@types/node@22.1.0)))(svelte@4.2.18)(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.3.5(@types/node@22.1.0))
+      '@sveltejs/vite-plugin-svelte': 3.1.1(svelte@4.2.18)(vite@5.4.0(@types/node@22.1.0))
       debug: 4.3.6
       svelte: 4.2.18
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.5(@types/node@22.1.0))':
+  '@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 2.1.0(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.5(@types/node@22.1.0)))(svelte@4.2.18)(vite@5.3.5(@types/node@22.1.0))
+      '@sveltejs/vite-plugin-svelte-inspector': 2.1.0(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.4.0(@types/node@22.1.0)))(svelte@4.2.18)(vite@5.4.0(@types/node@22.1.0))
       debug: 4.3.6
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.11
       svelte: 4.2.18
       svelte-hmr: 0.16.0(svelte@4.2.18)
-      vite: 5.3.5(@types/node@22.1.0)
-      vitefu: 0.2.5(vite@5.3.5(@types/node@22.1.0))
+      vite: 5.4.0(@types/node@22.1.0)
+      vitefu: 0.2.5(vite@5.4.0(@types/node@22.1.0))
     transitivePeerDependencies:
       - supports-color
 
@@ -5307,6 +5199,8 @@ snapshots:
   '@types/debug@4.1.12':
     dependencies:
       '@types/ms': 0.7.34
+
+  '@types/eslint-config-prettier@6.11.3': {}
 
   '@types/eslint@9.6.0':
     dependencies:
@@ -5505,30 +5399,30 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vitejs/plugin-react@4.3.1(vite@5.3.5(@types/node@22.1.0))':
+  '@vitejs/plugin-react@4.3.1(vite@5.4.0(@types/node@22.1.0))':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.25.2)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.25.2)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue-jsx@4.0.0(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))':
+  '@vitejs/plugin-vue-jsx@4.0.0(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-typescript': 7.25.2(@babel/core@7.25.2)
       '@vue/babel-plugin-jsx': 1.2.2(@babel/core@7.25.2)
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
       vue: 3.4.36(typescript@5.5.4)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitejs/plugin-vue@5.1.2(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))':
+  '@vitejs/plugin-vue@5.1.2(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))':
     dependencies:
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
       vue: 3.4.36(typescript@5.5.4)
 
   '@volar/kit@2.4.0-alpha.18(typescript@5.5.4)':
@@ -5646,14 +5540,14 @@ snapshots:
       '@vue/compiler-dom': 3.4.36
       '@vue/shared': 3.4.36
 
-  '@vue/devtools-core@7.3.7(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))':
+  '@vue/devtools-core@7.3.7(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))':
     dependencies:
       '@vue/devtools-kit': 7.3.7
       '@vue/devtools-shared': 7.3.7
       mitt: 3.0.1
       nanoid: 3.3.7
       pathe: 1.1.2
-      vite-hot-client: 0.2.3(vite@5.3.5(@types/node@22.1.0))
+      vite-hot-client: 0.2.3(vite@5.4.0(@types/node@22.1.0))
       vue: 3.4.36(typescript@5.5.4)
     transitivePeerDependencies:
       - vite
@@ -5901,8 +5795,8 @@ snapshots:
       tsconfck: 3.1.1(typescript@5.5.4)
       unist-util-visit: 5.0.0
       vfile: 6.0.2
-      vite: 5.3.5(@types/node@22.1.0)
-      vitefu: 0.2.5(vite@5.3.5(@types/node@22.1.0))
+      vite: 5.4.0(@types/node@22.1.0)
+      vitefu: 0.2.5(vite@5.4.0(@types/node@22.1.0))
       which-pm: 3.0.0
       yargs-parser: 21.1.1
       zod: 3.23.8
@@ -5914,6 +5808,7 @@ snapshots:
       - less
       - lightningcss
       - sass
+      - sass-embedded
       - stylus
       - sugarss
       - supports-color
@@ -6445,16 +6340,6 @@ snapshots:
       globals: 15.9.0
       postcss: 8.4.40
       postcss-selector-parser: 6.1.1
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-
-  eslint-plugin-jest@28.7.0(@typescript-eslint/eslint-plugin@8.0.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4):
-    dependencies:
-      '@typescript-eslint/utils': 8.0.1(eslint@9.8.0)(typescript@5.5.4)
-      eslint: 9.8.0
-    optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 8.0.1(@typescript-eslint/parser@8.0.1(eslint@9.8.0)(typescript@5.5.4))(eslint@9.8.0)(typescript@5.5.4)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -8950,11 +8835,11 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-hot-client@0.2.3(vite@5.3.5(@types/node@22.1.0)):
+  vite-hot-client@0.2.3(vite@5.4.0(@types/node@22.1.0)):
     dependencies:
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
 
-  vite-plugin-inspect@0.8.5(rollup@4.19.1)(vite@5.3.5(@types/node@22.1.0)):
+  vite-plugin-inspect@0.8.5(rollup@4.19.1)(vite@5.4.0(@types/node@22.1.0)):
     dependencies:
       '@antfu/utils': 0.7.10
       '@rollup/pluginutils': 5.1.0(rollup@4.19.1)
@@ -8965,12 +8850,12 @@ snapshots:
       perfect-debounce: 1.0.0
       picocolors: 1.0.1
       sirv: 2.0.4
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
     transitivePeerDependencies:
       - rollup
       - supports-color
 
-  vite-plugin-solid@2.10.2(solid-js@1.8.19)(vite@5.3.5(@types/node@22.1.0)):
+  vite-plugin-solid@2.10.2(solid-js@1.8.19)(vite@5.4.0(@types/node@22.1.0)):
     dependencies:
       '@babel/core': 7.25.2
       '@types/babel__core': 7.20.5
@@ -8978,28 +8863,28 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.8.19
       solid-refresh: 0.6.3(solid-js@1.8.19)
-      vite: 5.3.5(@types/node@22.1.0)
-      vitefu: 0.2.5(vite@5.3.5(@types/node@22.1.0))
+      vite: 5.4.0(@types/node@22.1.0)
+      vitefu: 0.2.5(vite@5.4.0(@types/node@22.1.0))
     transitivePeerDependencies:
       - supports-color
 
-  vite-plugin-vue-devtools@7.3.7(rollup@4.19.1)(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4)):
+  vite-plugin-vue-devtools@7.3.7(rollup@4.19.1)(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4)):
     dependencies:
-      '@vue/devtools-core': 7.3.7(vite@5.3.5(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
+      '@vue/devtools-core': 7.3.7(vite@5.4.0(@types/node@22.1.0))(vue@3.4.36(typescript@5.5.4))
       '@vue/devtools-kit': 7.3.7
       '@vue/devtools-shared': 7.3.7
       execa: 8.0.1
       sirv: 2.0.4
-      vite: 5.3.5(@types/node@22.1.0)
-      vite-plugin-inspect: 0.8.5(rollup@4.19.1)(vite@5.3.5(@types/node@22.1.0))
-      vite-plugin-vue-inspector: 5.1.3(vite@5.3.5(@types/node@22.1.0))
+      vite: 5.4.0(@types/node@22.1.0)
+      vite-plugin-inspect: 0.8.5(rollup@4.19.1)(vite@5.4.0(@types/node@22.1.0))
+      vite-plugin-vue-inspector: 5.1.3(vite@5.4.0(@types/node@22.1.0))
     transitivePeerDependencies:
       - '@nuxt/kit'
       - rollup
       - supports-color
       - vue
 
-  vite-plugin-vue-inspector@5.1.3(vite@5.3.5(@types/node@22.1.0)):
+  vite-plugin-vue-inspector@5.1.3(vite@5.4.0(@types/node@22.1.0)):
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-proposal-decorators': 7.24.7(@babel/core@7.25.2)
@@ -9010,11 +8895,11 @@ snapshots:
       '@vue/compiler-dom': 3.4.36
       kolorist: 1.8.0
       magic-string: 0.30.11
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.3.5(@types/node@22.1.0):
+  vite@5.4.0(@types/node@22.1.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.40
@@ -9023,9 +8908,9 @@ snapshots:
       '@types/node': 22.1.0
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.3.5(@types/node@22.1.0)):
+  vitefu@0.2.5(vite@5.4.0(@types/node@22.1.0)):
     optionalDependencies:
-      vite: 5.3.5(@types/node@22.1.0)
+      vite: 5.4.0(@types/node@22.1.0)
 
   volar-service-css@0.0.59(@volar/language-service@2.4.0-alpha.18):
     dependencies:

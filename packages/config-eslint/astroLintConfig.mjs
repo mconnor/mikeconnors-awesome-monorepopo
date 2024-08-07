@@ -32,10 +32,13 @@ const astroLintConfig = tseslint.config(
 
   {
     languageOptions: {
-      parser: tseslint.parser,
       ecmaVersion: 'latest',
       sourceType: 'module',
+      parser: tseslint.parser,
       parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+        projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         ecmaFeatures: {
           jsx: true,
         },
@@ -69,17 +72,17 @@ const astroLintConfig = tseslint.config(
       },
     },
   },
-  {
-    files: ['**/*.js'],
-    ...tseslint.configs.disableTypeChecked,
-    rules: {
-      'wc/no-constructor-attributes': 'off',
-      '@typescript-eslint/no-unused-expressions': 'off',
-      '@typescript-eslint/no-unsafe-call': 'warn',
-      '@typescript-eslint/no-unsafe-member-access': 'warn',
-      '@typescript-eslint/restrict-template-expressions': 'warn',
-    },
-  },
+  // {
+  //   files: ['**/*.js'],
+  //   ...tseslint.configs.disableTypeChecked,
+  //   rules: {
+  //     'wc/no-constructor-attributes': 'off',
+  //     '@typescript-eslint/no-unused-expressions': 'off',
+  //     '@typescript-eslint/no-unsafe-call': 'warn',
+  //     '@typescript-eslint/no-unsafe-member-access': 'warn',
+  //     '@typescript-eslint/restrict-template-expressions': 'warn',
+  //   },
+  // },
 
   {
     plugins: {
@@ -108,7 +111,7 @@ const astroLintConfig = tseslint.config(
   },
 
   {
-    ignores: ['*.config.*', '**/temp.js', 'dist/', '**/*.d.ts'],
+    ignores: ['**/temp.js', 'dist/', '**/*.d.ts'],
   },
   eslintConfigPrettier,
 );

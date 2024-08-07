@@ -34,6 +34,7 @@
     "build": "tsc && vite build",
     "lint": "eslint",
     "fix": "eslint --fix",
+    "inspect": "eslint  --inspect-config",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "check-types": "tsc --noEmit",
@@ -44,6 +45,6 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.8.0",
     "typescript": "^5.5.4",
-    "vite": "^5.3.4"
+    "vite": "^5.4.0"
   }
 }

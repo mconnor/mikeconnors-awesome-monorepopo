@@ -1,24 +1,3 @@
-import config from '@repo/eslint-config/astroLintConfig.mjs';
+import config from '@repo/eslint-config/astroBasicConfig.mjs';
 
-export default [
-  ...config,
-  {
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-    },
-  },
-  {
-    ignores: [
-      '*.config.*',
-      '.dist',
-      'turbo',
-      '**/_*.*',
-      '**/temp.js',
-      '.*',
-      '**/*.d.ts',
-    ],
-  },
-];
+export default [...config];

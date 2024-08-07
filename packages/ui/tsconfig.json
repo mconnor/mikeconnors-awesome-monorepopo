@@ -3,6 +3,12 @@
   "compilerOptions": {
     "outDir": "dist"
   },
-  "include": ["src"],
-  "exclude": ["dist", ".turbo", "build"]
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    ".turbo",
+    "build",
+  ]
 }

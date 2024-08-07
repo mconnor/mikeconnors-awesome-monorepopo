@@ -14,7 +14,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "fix": "eslint --fix",
-    "check-types": "astro check"
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/ui": "workspace:*"
@@ -24,6 +24,6 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.8.0",
     "typescript": "^5.5.4",
-    "vite": "^5.3.4"
+    "vite": "^5.4.0"
   }
 }

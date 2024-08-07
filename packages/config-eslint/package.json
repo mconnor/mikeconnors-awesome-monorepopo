@@ -3,14 +3,16 @@
   "version": "1.0.1",
   "private": true,
   "export": {
-    "./*": "./*.mjs"
+    "./*.mjs": "./*.mjs"
   },
   "files": [
     "tsLintConfig.mjs",
     "astroLintConfig.mjs",
     "astroBasicConfig.mjs",
     "reactConfig.mjs",
-    "reactSimple.mjs"
+    "reactSimple.mjs",
+    "myTslint.config.mjs",
+    "lintMarkdown.config.mjs"
   ],
   "scripts": {
     "update": "pnpm update"
@@ -32,6 +34,6 @@
     "typescript-eslint": "^8.0.1"
   },
   "devDependencies": {
-    "eslint-plugin-jest": "^28.7.0"
+    "@types/eslint-config-prettier": "^6.11.3"
   }
 }

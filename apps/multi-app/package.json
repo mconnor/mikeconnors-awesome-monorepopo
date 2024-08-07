@@ -13,7 +13,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "fix": "eslint --fix",
-    "check-types": "astro check"
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/react": "workspace:*",

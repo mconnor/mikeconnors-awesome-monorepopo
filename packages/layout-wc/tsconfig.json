@@ -1,17 +1,13 @@
 {
   "extends": "@repo/typescript-config/myAstro.json",
-  "compilerOptions": {
-    "verbatimModuleSyntax": true,
-    "allowJs": true,
-    // Allow JSX files (or files that are internally considered JSX, like Astro files) to be imported inside `.js` and `.ts` files.
-    "jsx": "preserve"
-  },
   "include": [
-    "src/**/*.js",
-    "src/**/*.ts",
-    "src/**/*.astro",
-    "src/Types.ts",
-    "index.ts"
+    "src",
+    "eslint.config.js"
   ],
-  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".astro",
+    ".turbo"
+  ]
 }

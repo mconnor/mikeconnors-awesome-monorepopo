@@ -1,12 +1,11 @@
 ---
 import { BoxClass } from './box-l';
-import type { RmUnitType } from '../Types';
+import type { RmUnitType } from '../Types.js';
 
 interface Props {
   padding?: RmUnitType;
   borderWidth?: RmUnitType;
   invert?: boolean;
-  children?: unknown;
 }
 const props = Astro.props;
 ---

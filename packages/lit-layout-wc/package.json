@@ -5,7 +5,7 @@
   "description": "",
   "type": "module",
   "exports": {
-    "./Box": "./src/Box/index.astro"
+    "./*": "./src/*/index.astro"
   },
   "files": [
     "src"
@@ -18,21 +18,21 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "inspect": "eslint --inspect-config",
-    "check-types": "astro check"
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@astrojs/check": "^0.9.2",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.8.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.1",
-    "@webcomponents/template-shadowroot": "^0.2.1",
     "astro": "^4.13.1",
-    "lit": "^3.1.4"
+    "lit": "^3.2.0",
+    "@webcomponents/template-shadowroot": "^0.2.1"
   }
 }
