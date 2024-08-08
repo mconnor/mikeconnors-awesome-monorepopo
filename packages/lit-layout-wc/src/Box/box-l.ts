@@ -1,6 +1,6 @@
 import { html, css, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import type { RmUnitType } from '../Types';
+// import type { RmUnitType } from '../Types';
 import { styleMap } from 'lit/directives/style-map.js';
 
 /**
@@ -12,7 +12,7 @@ import { styleMap } from 'lit/directives/style-map.js';
  * @property {boolean} invert=false Whether to apply an inverted theme. Only recommended for greyscale designs.
  */
 @customElement('box-l')
-export class BoxClass extends LitElement {
+export class Box extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     // Check if this component was server-side rendered
@@ -34,7 +34,7 @@ export class BoxClass extends LitElement {
   ];
 
   @property({ type: String })
-  padding: RmUnitType = 'var(--s0)';
+  padding = 'var(--s0)';
 
   @property()
   borderWidth = '1px';

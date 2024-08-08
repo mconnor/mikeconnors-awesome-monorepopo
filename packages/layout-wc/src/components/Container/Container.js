@@ -48,6 +48,4 @@ class Container extends HTMLElement {
   }
 }
 
-if ('customElements' in window) {
-  customElements.define('container-l', Container);
-}
+customElements.define('container-l', Container);

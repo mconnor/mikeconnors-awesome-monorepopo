@@ -1,7 +1,7 @@
 // @ts-check
 // import astroEslintParser from 'astro-eslint-parser';
 import astroParser from 'astro-eslint-parser';
-import astro from 'eslint-plugin-astro';
+import astroPlugin from 'eslint-plugin-astro';
 import markdown from 'eslint-plugin-markdown';
 import regexp from 'eslint-plugin-regexp';
 import wc from 'eslint-plugin-wc';
@@ -15,14 +15,14 @@ import tseslint from 'typescript-eslint';
 
 const astroLintConfig = tseslint.config(
   js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  ...tseslint.configs.recommended,
+  ...tseslint.configs.stylistic,
   //If your project enables typed linting, we suggest enabling the recommended-type-checked
   // and stylistic-type-checked configurations to start:
   // ...tseslint.configs.recommendedTypeChecked,
   // ...tseslint.configs.stylisticTypeChecked,
 
-  ...astro.configs.recommended,
+  ...astroPlugin.configs.recommended,
   // jsxA11y.flatConfigs.recommended,
   // ...markdown.configs.recommended,
 
@@ -62,6 +62,20 @@ const astroLintConfig = tseslint.config(
       'lit/no-invalid-html': 'warn',
     },
   },
+
+  // {
+  //   files: ['src/**/*.astro'],
+  //   ...tseslint.configs.disableTypeChecked,
+
+  //   languageOptions: {
+  //     parser: astroParser,
+  //   },
+
+  //   rules: {
+  //     '@typescript-eslint/no-unused-vars': 'off',
+  //   },
+  // },
+
   {
     files: ['**/*.astro'],
 

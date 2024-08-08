@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      astro:
+        specifier: ^4.13.1
+        version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -17,15 +20,15 @@ importers:
       turbo:
         specifier: ^2.0.12
         version: 2.0.12
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
 
   apps/astrodemo:
     dependencies:
       '@astrojs/check':
         specifier: ^0.9.2
         version: 0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
-      '@astrojs/lit':
-        specifier: ^4.3.0
-        version: 4.3.0(@webcomponents/template-shadowroot@0.2.1)(lit@3.2.0)
       '@astrojs/mdx':
         specifier: ^3.1.3
         version: 3.1.3(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))
@@ -35,9 +38,6 @@ importers:
       '@astrojs/vercel':
         specifier: ^7.7.2
         version: 7.7.2(astro@4.13.1(@types/node@22.1.0)(typescript@5.5.4))(react@18.3.1)
-      '@repo/astro-component':
-        specifier: workspace:*
-        version: link:../../packages/astro-component
       '@repo/layout-wc':
         specifier: workspace:*
         version: link:../../packages/layout-wc
@@ -50,9 +50,6 @@ importers:
       astro:
         specifier: ^4.13.1
         version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
-      lit:
-        specifier: ^3.2.0
-        version: 3.2.0
       open-props:
         specifier: ^1.7.5
         version: 1.7.5
@@ -99,6 +96,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.2
         version: 0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
+      '@astrojs/lit':
+        specifier: ^4.3.0
+        version: 4.3.0(@webcomponents/template-shadowroot@0.2.1)(lit@3.2.0)
       '@astrojs/preact':
         specifier: ^3.5.1
         version: 3.5.1(@babel/core@7.25.2)(preact@10.23.1)(vite@5.4.0(@types/node@22.1.0))
@@ -126,9 +126,15 @@ importers:
       '@types/react-dom':
         specifier: ^18.3.0
         version: 18.3.0
+      '@webcomponents/template-shadowroot':
+        specifier: ^0.2.1
+        version: 0.2.1
       astro:
         specifier: ^4.13.1
         version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
+      lit:
+        specifier: ^3.2.0
+        version: 3.2.0
       preact:
         specifier: ^10.23.1
         version: 10.23.1
@@ -160,37 +166,15 @@ importers:
       eslint:
         specifier: ^9.8.0
         version: 9.8.0
-
-  packages/astro-component:
-    dependencies:
-      astro:
-        specifier: ^4.13.1
-        version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
-    devDependencies:
-      '@astrojs/check':
-        specifier: ^0.9.2
-        version: 0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../config-eslint
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../config-typescript
-      eslint:
-        specifier: ^9.8.0
-        version: 9.8.0
-      typescript:
-        specifier: ^5.5.4
-        version: 5.5.4
+      vite:
+        specifier: ^5.4.0
+        version: 5.4.0(@types/node@22.1.0)
 
   packages/config-eslint:
     dependencies:
       '@eslint/js':
         specifier: ^9.8.0
         version: 9.8.0
-      '@types/eslint__js':
-        specifier: ^8.42.3
-        version: 8.42.3
       astro-eslint-parser:
         specifier: ^1.0.2
         version: 1.0.2(typescript@5.5.4)
@@ -221,10 +205,6 @@ importers:
       typescript-eslint:
         specifier: ^8.0.1
         version: 8.0.1(eslint@9.8.0)(typescript@5.5.4)
-    devDependencies:
-      '@types/eslint-config-prettier':
-        specifier: ^6.11.3
-        version: 6.11.3
 
   packages/config-typescript:
     dependencies:
@@ -233,20 +213,19 @@ importers:
         version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
 
   packages/layout-wc:
-    dependencies:
+    devDependencies:
       '@astrojs/check':
         specifier: ^0.9.2
         version: 0.9.2(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
-      astro:
-        specifier: ^4.13.1
-        version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
-    devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../config-eslint
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
+      astro:
+        specifier: ^4.13.1
+        version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
       eslint:
         specifier: ^9.8.0
         version: 9.8.0
@@ -255,16 +234,6 @@ importers:
         version: 5.5.4
 
   packages/lit-layout-wc:
-    dependencies:
-      '@webcomponents/template-shadowroot':
-        specifier: ^0.2.1
-        version: 0.2.1
-      astro:
-        specifier: ^4.13.1
-        version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
-      lit:
-        specifier: ^3.2.0
-        version: 3.2.0
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.2
@@ -275,9 +244,18 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
+      '@webcomponents/template-shadowroot':
+        specifier: ^0.2.1
+        version: 0.2.1
+      astro:
+        specifier: ^4.13.1
+        version: 4.13.1(@types/node@22.1.0)(typescript@5.5.4)
       eslint:
         specifier: ^9.8.0
         version: 9.8.0
+      lit:
+        specifier: ^3.2.0
+        version: 3.2.0
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -1202,15 +1180,6 @@ packages:
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
 
-  '@types/eslint-config-prettier@6.11.3':
-    resolution: {integrity: sha512-3wXCiM8croUnhg9LdtZUJQwNcQYGWxxdOWDjPe1ykCqJFPVpzAKfs/2dgSoCtAvdPeaponcWPI7mPcGGp9dkKQ==}
-
-  '@types/eslint@9.6.0':
-    resolution: {integrity: sha512-gi6WQJ7cHRgZxtkQEoyHMppPjq9Kxo5Tjn2prSKDSmZrCz8TZ3jSRCeTJm+WoM+oB0WG37bRqLzaaU3q7JypGg==}
-
-  '@types/eslint__js@8.42.3':
-    resolution: {integrity: sha512-alfG737uhmPdnvkrLdZLcEKJ/B8s9Y4hrZ+YAdzUeoArBlSUERA2E87ROfOaS4jd/C45fzOoZzidLc1IPwLqOw==}
-
   '@types/estree-jsx@1.0.5':
     resolution: {integrity: sha512-52CcUVNFyfb1A2ALocQw/Dd1BQFNmSdkuC3BkZ6iqhdMfQz7JWOFRuJFloOzjk+6WijU56m9oKXFAXc7o3Towg==}
 
@@ -1219,9 +1188,6 @@ packages:
 
   '@types/hast@3.0.4':
     resolution: {integrity: sha512-WPs+bbQw5aCj+x6laNGWLH3wviHtoCv/P3+otBhbOhJgG8qtpdAMlTCxLtsTWA7LH1Oh/bFCHsBn0TPS5m30EQ==}
-
-  '@types/json-schema@7.0.15':
-    resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
   '@types/mdast@3.0.15':
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
@@ -5200,17 +5166,6 @@ snapshots:
     dependencies:
       '@types/ms': 0.7.34
 
-  '@types/eslint-config-prettier@6.11.3': {}
-
-  '@types/eslint@9.6.0':
-    dependencies:
-      '@types/estree': 1.0.5
-      '@types/json-schema': 7.0.15
-
-  '@types/eslint__js@8.42.3':
-    dependencies:
-      '@types/eslint': 9.6.0
-
   '@types/estree-jsx@1.0.5':
     dependencies:
       '@types/estree': 1.0.5
@@ -5220,8 +5175,6 @@ snapshots:
   '@types/hast@3.0.4':
     dependencies:
       '@types/unist': 3.0.2
-
-  '@types/json-schema@7.0.15': {}
 
   '@types/mdast@3.0.15':
     dependencies:
@@ -8057,7 +8010,7 @@ snapshots:
 
   prettier-plugin-astro@0.14.1:
     dependencies:
-      '@astrojs/compiler': 2.10.1
+      '@astrojs/compiler': 2.10.2
       prettier: 3.3.3
       sass-formatter: 0.7.9
 

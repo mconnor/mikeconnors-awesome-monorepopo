@@ -16,14 +16,15 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/react": "workspace:*",
-    "@repo/preact": "workspace:*",
     "@astrojs/check": "^0.9.2",
+    "@astrojs/lit": "^4.3.0",
     "@astrojs/preact": "^3.5.1",
     "@astrojs/react": "^3.6.1",
     "@astrojs/solid-js": "^4.4.0",
     "@astrojs/svelte": "^5.7.0",
     "@astrojs/vue": "^4.5.0",
+    "@repo/preact": "workspace:*",
+    "@repo/react": "workspace:*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.13.1",
@@ -39,6 +40,11 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.8.0",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0"
+  },
+  "peerDependencies": {
+    "@webcomponents/template-shadowroot": "^0.2.1",
+    "lit": "^3.2.0"
   }
 }

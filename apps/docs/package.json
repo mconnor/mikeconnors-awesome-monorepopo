@@ -5,12 +5,8 @@
   "type": "module",
   "scripts": {
     "update": "pnpm update",
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "fix": "eslint --fix",

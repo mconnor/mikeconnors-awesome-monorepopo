@@ -4,6 +4,7 @@ import react from '@astrojs/react';
 import svelte from '@astrojs/svelte';
 import vue from '@astrojs/vue';
 import solid from '@astrojs/solid-js';
+import lit from '@astrojs/lit';
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,5 +15,23 @@ export default defineConfig({
     react({ include: ['**/react/*'] }),
     svelte(),
     vue(),
+    lit(),
   ],
+  vite: {
+    ssr: {
+      noExternal: [
+        'date-fns',
+        'open-props',
+        '@repo/lit-layout-wc',
+        '@repo/layout-wc',
+        '@astrojs/lit',
+        'lit',
+      ],
+    },
+    // lit: {
+    //   // Enable the `lit-analyzer` plugin to provide diagnostics in the editor.
+    //   litAnalyzer: true,
+    //   dev,
+    // },
+  },
 });

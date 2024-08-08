@@ -31,14 +31,10 @@ export default defineConfig({
         'date-fns',
         'open-props',
         '@repo/lit-layout-wc',
-        '@repo/astro-component',
         '@repo/layout-wc',
+        '@astrojs/lit',
+        'lit',
       ],
     },
-    // lit: {
-    //   // Enable the `lit-analyzer` plugin to provide diagnostics in the editor.
-    //   litAnalyzer: true,
-    //   dev,
-    // },
   },
 });
