@@ -41,6 +41,9 @@ importers:
       '@repo/lit-layout-wc':
         specifier: workspace:*
         version: link:../../packages/lit-layout-wc
+      '@repo/ui-astro':
+        specifier: workspace:*
+        version: link:../../packages/ui-astro
       '@webcomponents/template-shadowroot':
         specifier: ^0.2.1
         version: 0.2.1

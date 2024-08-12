@@ -14,6 +14,8 @@ const reactConfig = tseslint.config(
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
   reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat['jsx-runtime'],
+
   {
     settings: {
       react: {
@@ -24,13 +26,11 @@ const reactConfig = tseslint.config(
 
   {
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       parser: tseslint.parser,
 
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+
         projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         ecmaFeatures: {
           jsx: true,
@@ -46,7 +46,7 @@ const reactConfig = tseslint.config(
   {
     files: ['**/*.jsx', '**/*.tsx'],
     rules: {
-      'react/react-in-jsx-scope': 'warn',
+      'react/react-in-jsx-scope': 'off',
     },
   },
 

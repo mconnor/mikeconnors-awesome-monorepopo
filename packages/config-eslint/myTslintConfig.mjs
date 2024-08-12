@@ -13,12 +13,10 @@ const config = tseslint.config(
 
   {
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        parser: tseslint.parser,
         projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         // ecmaFeatures: {
         //   jsx: true,

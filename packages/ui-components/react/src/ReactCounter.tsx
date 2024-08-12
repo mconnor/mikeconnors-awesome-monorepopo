@@ -1,6 +1,7 @@
 /** @jsxImportSource react */
 
 import { useState, type ReactNode } from 'react';
+import { Button } from '#components/Button.tsx';
 
 /** A counter written with React */
 export function Counter({ children }: { children?: ReactNode }) {
@@ -11,9 +12,12 @@ export function Counter({ children }: { children?: ReactNode }) {
   return (
     <>
       <div className="counter">
-        <button onClick={subtract}>-</button>
+        <Button mathFunc={subtract}>-</Button>
         <pre>{count}</pre>
-        <button onClick={add}>+</button>
+
+        <Button mathFunc={add}>+</Button>
+
+        {/* <button onClick={add}>+</button> */}
       </div>
       <div className="counter-message">{children}</div>
     </>

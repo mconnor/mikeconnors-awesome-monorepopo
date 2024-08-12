@@ -10,15 +10,13 @@ import tseslint from 'typescript-eslint';
 
 const astroBasicConfig = tseslint.config(
   js.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
 
   ...astro.configs.recommended,
 
   {
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
         projectService: true,
@@ -38,9 +36,6 @@ const astroBasicConfig = tseslint.config(
     files: ['**/*.astro'],
     languageOptions: {
       parser: astroParser,
-      parserOptions: {
-        parser: tseslint.parser,
-      },
     },
   },
   {

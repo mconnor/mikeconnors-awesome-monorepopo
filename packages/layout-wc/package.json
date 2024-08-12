@@ -4,28 +4,28 @@
   "description": "",
   "private": true,
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "imports": {
+    "#*": "./src/components/*"
+  },
   "exports": {
     ".": {
-      "import": "./src/index.js",
-      "require": "./src/index.js",
-      "types": "./src/env.d.ts"
+      "import": "./src/index.ts",
+      "types": "./src/components/Types.ts"
     },
     "./Center": {
-      "types": "./src/Center/index.astro",
-      "default": "./src/Center/index.astro"
+      "types": "./src/components/Center/index.astro",
+      "default": "./src/components/Center/index.astro"
     },
-    "./Reel": "./src/Reel/index.astro",
-    "./Frame": "./src/Frame/index.astro",
-    "./Sidebar": "./src/Sidebar/index.astro",
-    "./Stack": "./src/Stack/index.astro",
-    "./Switcher": "./src/Switcher/index.astro",
-    "./Cluster": "./src/Cluster/index.astro",
-    "./Grid": "./src/Grid/index.astro",
-    "./Imposter": "./src/Imposter/index.astro",
-    "./Icon": "./src/Icon/index.astro",
-    "./Cover": "./src/Cover/index.astro"
+    "./Reel": "./src/components/Reel/index.astro",
+    "./Frame": "./src/components/Frame/index.astro",
+    "./Sidebar": "./src/components/Sidebar/index.astro",
+    "./Stack": "./src/components/Stack/index.astro",
+    "./Switcher": "./src/components/Switcher/index.astro",
+    "./Cluster": "./src/components/Cluster/index.astro",
+    "./Grid": "./src/components/Grid/index.astro",
+    "./Imposter": "./src/components/Imposter/index.astro",
+    "./Icon": "./src/components/Icon/index.astro",
+    "./Cover": "./src/components/Cover/index.astro"
   },
   "files": [
     "src"

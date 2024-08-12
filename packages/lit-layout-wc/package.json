@@ -6,18 +6,15 @@
   "type": "module",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
+  "imports": {
+    "#*": "./src/*"
+  },
   "exports": {
     "./Box": "./src/Box/index.astro"
   },
   "files": [
     "src"
   ],
-  "imports": {
-    "#lints": {
-      "node": "@repo/eslint-config",
-      "default": "./astroLintConfig.mjs"
-    }
-  },
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",

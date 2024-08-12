@@ -13,8 +13,6 @@ const tsLintConfig = tseslint.config(
   ...tseslint.configs.stylistic,
   {
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       parser: tseslint.parser,
 
       globals: {

@@ -15,7 +15,7 @@ import tseslint from 'typescript-eslint';
 
 const astroLintConfig = tseslint.config(
   js.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
   //If your project enables typed linting, we suggest enabling the recommended-type-checked
   // and stylistic-type-checked configurations to start:
@@ -32,12 +32,9 @@ const astroLintConfig = tseslint.config(
 
   {
     languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
-        projectService: ['tsconfig.json'],
-        tsconfigRootDir: import.meta.dirname,
+        projectService: true,
         projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         ecmaFeatures: {
           jsx: true,
