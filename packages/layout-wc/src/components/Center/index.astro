@@ -5,7 +5,7 @@ import type { RmUnitType } from '../Types';
 interface Props {
   max?: RmUnitType;
   andText?: boolean;
-  gutters?: boolean;
+  gutters?: RmUnitType;
   intrinsic?: boolean;
 }
 const { max = '60ch', ...rest } = Astro.props;

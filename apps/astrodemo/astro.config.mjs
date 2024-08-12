@@ -34,6 +34,7 @@ export default defineConfig({
         '@repo/layout-wc',
         '@astrojs/lit',
         'lit',
+        '@webcomponents/template-shadowroot',
       ],
     },
   },

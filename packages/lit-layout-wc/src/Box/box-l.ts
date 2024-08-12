@@ -1,4 +1,5 @@
-import { html, css, LitElement } from 'lit';
+import { css, LitElement } from 'lit';
+import { html } from 'lit-html';
 import { customElement, property } from 'lit/decorators.js';
 // import type { RmUnitType } from '../Types';
 import { styleMap } from 'lit/directives/style-map.js';

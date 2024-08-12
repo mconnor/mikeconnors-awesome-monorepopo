@@ -7,8 +7,5 @@
     "declaration": true,
     "declarationMap": true
   },
-  "include": [
-    "src",
-    "eslint.config.js"
-  ]
+  "include": ["src", "eslint.config.js"]
 }

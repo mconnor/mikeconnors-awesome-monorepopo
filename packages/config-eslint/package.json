@@ -1,26 +1,20 @@
 {
   "name": "@repo/eslint-config",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "private": true,
-  "export": {
-    "./*.mjs": "./*.mjs"
+  "imports": {
+    "#*": "./*"
   },
-  "files": [
-    "tsLintConfig.mjs",
-    "astroLintConfig.mjs",
-    "astroBasicConfig.mjs",
-    "reactConfig.mjs",
-    "reactSimple.mjs",
-    "myTslint.config.mjs",
-    "lintMarkdown.config.mjs"
-  ],
+  "exports": {
+    "./*": "./*.mjs"
+  },
   "scripts": {
     "update": "pnpm update"
   },
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "@eslint/js": "^9.8.0",
+    "@eslint/js": "^9.9.0",
     "astro-eslint-parser": "^1.0.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",

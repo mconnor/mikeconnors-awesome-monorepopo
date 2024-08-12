@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /**
  * @module reel-l
  * @description
@@ -20,32 +21,32 @@ export default class Reel extends HTMLElement {
           [data-i="${this.i}"] {
             height: ${this.height};
           }
-      
+
           [data-i="${this.i}"] > * {
             flex: 0 0 ${this.itemWidth};
           }
-      
+
           [data-i="${this.i}"] > img {
             height: 100%;
             flex-basis: auto;
             width: auto;
           }
-      
+
           [data-i="${this.i}"] > * + * {
             margin-inline-start: ${this.space};
           }
-      
+
           [data-i="${this.i}"].overflowing {
             ${!this.noBar ? `padding-bottom: ${this.space}` : ''}
           }
-      
+
           ${
             this.noBar
               ? `
           [data-i="${this.i}"] {
             scrollbar-width: none;
           }
-          
+
           [data-i="${this.i}"]::-webkit-scrollbar {
             display: none;
           }
@@ -61,6 +62,7 @@ export default class Reel extends HTMLElement {
   }
 
   toggleOverflowClass(elem) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     elem.classList.toggle('overflowing', this.scrollWidth > this.clientWidth);
   }
 

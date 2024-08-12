@@ -36,7 +36,7 @@ const astroLintConfig = tseslint.config(
       sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
-        projectService: true,
+        projectService: ['tsconfig.json'],
         tsconfigRootDir: import.meta.dirname,
         projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         ecmaFeatures: {
@@ -125,7 +125,13 @@ const astroLintConfig = tseslint.config(
   },
 
   {
-    ignores: ['**/temp.js', 'dist/', '**/*.d.ts'],
+    ignores: [
+      '**/temp.js',
+      'dist/',
+      '**/*.d.ts',
+      '*.config.js',
+      '*.config.mjs',
+    ],
   },
   eslintConfigPrettier,
 );

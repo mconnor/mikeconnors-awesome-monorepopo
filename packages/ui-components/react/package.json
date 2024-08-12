@@ -2,13 +2,11 @@
   "name": "@repo/react",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.ts",
-  "module": "src/index.ts",
   "type": "module",
-  "files": [
-    "index.ts",
-    "src"
-  ],
+  "main": "index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,16 +20,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.8.0",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "eslint": "^9.9.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0"
   }
 }

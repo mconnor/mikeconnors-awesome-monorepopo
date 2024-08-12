@@ -8,7 +8,9 @@
     "dark",
     "light",
     "dim",
-    "choco"
+    "choco",
+    "toucan",
+    "grape"
   ],
   "cssvar.enable": true,
   // Since we want to scan css files inside `node_modules as well

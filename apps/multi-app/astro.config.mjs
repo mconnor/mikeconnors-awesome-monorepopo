@@ -19,14 +19,7 @@ export default defineConfig({
   ],
   vite: {
     ssr: {
-      noExternal: [
-        'date-fns',
-        'open-props',
-        '@repo/lit-layout-wc',
-        '@repo/layout-wc',
-        '@astrojs/lit',
-        'lit',
-      ],
+      noExternal: ['date-fns', 'open-props'],
     },
     // lit: {
     //   // Enable the `lit-analyzer` plugin to provide diagnostics in the editor.

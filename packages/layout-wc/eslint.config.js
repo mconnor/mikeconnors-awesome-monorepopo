@@ -1,4 +1,4 @@
-import config from '@repo/eslint-config/astroBasicConfig.mjs';
+import config from '@repo/eslint-config/astroBasicConfig';
 
 export default [
   ...config,

@@ -27,6 +27,9 @@ const tsLintConfig = tseslint.config(
   {
     files: ['**/*.js', '**/*.mjs'],
     ...tseslint.configs.disableTypeChecked,
+    rules: {
+      'wc/no-constructor-attributes': 'off',
+    },
   },
   {
     ignores: [

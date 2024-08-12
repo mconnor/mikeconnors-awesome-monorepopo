@@ -8,6 +8,7 @@ class Container extends HTMLElement {
   constructor() {
     super();
     this.render = () => {
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       this.i = `Container-${[this.name]}`;
       this.dataset.i = this.i;
       if (!document.getElementById(this.i)) {

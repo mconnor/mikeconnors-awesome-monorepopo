@@ -1,3 +1,3 @@
-import config from '@repo/eslint-config/astroLintConfig.mjs';
+import config from '@repo/eslint-config/astroLintConfig';
 
-export default [...config];
+export default [...config, { ignores: ['.turbo/'] }];

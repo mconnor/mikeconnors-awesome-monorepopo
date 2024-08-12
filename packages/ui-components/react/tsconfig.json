@@ -1,9 +1,5 @@
 {
-  "extends": "@repo/typescript-config/vite.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
-  },
+  "extends": "@repo/typescript-config/react.json",
   "include": [
     "src"
   ]

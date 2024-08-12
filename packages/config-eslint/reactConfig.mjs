@@ -1,5 +1,5 @@
 // @ts-check
-import path from 'node:path';
+
 import reactPlugin from 'eslint-plugin-react';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
@@ -44,17 +44,15 @@ const reactConfig = tseslint.config(
     },
   },
   {
+    files: ['**/*.jsx', '**/*.tsx'],
     rules: {
-      'react/react-in-jsx-scope': 'off',
+      'react/react-in-jsx-scope': 'warn',
     },
   },
 
   {
     files: ['**/*.js', '**/*.mjs'],
     ...tseslint.configs.disableTypeChecked,
-  },
-  {
-    ignores: ['dist', '.turbo'],
   },
   eslintConfigPrettier,
 );

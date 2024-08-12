@@ -11,7 +11,7 @@ interface Props {
 const props = Astro.props;
 ---
 
-<switcher-l {...props}>
+<switcher-l threshold={props.threshold} space={props.space} limit={props.limit}>
   <slot />
 </switcher-l>
 

@@ -1,3 +1,3 @@
-import config from '@repo/eslint-config/myTslint.config.mjs';
+import config from '@repo/eslint-config/myTslintConfig';
 
 export default [...config];

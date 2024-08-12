@@ -17,4 +17,5 @@ public/dist
 /packages/ui/src/components/counter.js
 /packages/ui/src/index.js
 /apps/blog/my-astro-build-directory
-apps/astrodemo/src/pages/demo/
+
+/notes.txt

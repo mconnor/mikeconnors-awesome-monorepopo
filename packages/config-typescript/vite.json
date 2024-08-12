@@ -3,6 +3,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "useDefineForClassFields": true,
+    "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -10,8 +11,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "strictNullChecks": true,
-       "allowImportingTsExtensions": true
+
+    "allowArbitraryExtensions": true
   },
   "exclude": ["node_modules"]
 }

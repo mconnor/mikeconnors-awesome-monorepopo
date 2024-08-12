@@ -37,9 +37,9 @@
     "vue": "^3.4.36"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.0"
   },

@@ -4,11 +4,13 @@ import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import eslintConfigPrettier from 'eslint-config-prettier';
-const myTsLint = tseslint.config(
+
+const config = tseslint.config(
   js.configs.recommended,
-  ...tseslint.configs.recommended,
+  // ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
-  // ...tseslint.configs.recommendedTypeChecked
+
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -35,7 +37,8 @@ const myTsLint = tseslint.config(
   {
     ignores: ['dist', '.turbo'],
   },
-  eslintConfigPrettier,
 );
 
-export default myTsLint;
+export default [...config, eslintConfigPrettier];
+
+// myTsLint

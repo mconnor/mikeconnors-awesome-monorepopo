@@ -29,7 +29,9 @@
   },
   "license": "MIT",
   "scripts": {
+    "build": "tsc",
     "update": "pnpm update",
+    "lint": "eslint",
     "fix": "eslint --fix",
     "inspect": "eslint  --inspect-config",
     "format": "prettier --write .",
@@ -38,9 +40,9 @@
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.0"
   }

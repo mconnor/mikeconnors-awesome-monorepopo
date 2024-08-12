@@ -36,7 +36,8 @@
       "dependsOn": ["^transit"]
     },
     "check-types": {
-      "dependsOn": ["transit"]
+      "dependsOn": ["transit"],
+      "inputs": ["**/*.{ts,tsx}"]
     }
   }
 }

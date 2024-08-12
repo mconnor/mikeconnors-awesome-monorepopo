@@ -1,23 +1,31 @@
 {
   "name": "@repo/layout-wc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "private": true,
   "type": "module",
   "main": "./src/index.ts",
   "types": "./src/index.ts",
   "exports": {
-    "Center": "./src/Center/index.astro",
-    "Reel": "./src/Reel/index.astro",
-    "Frame": "./src/Frame/index.astro",
-    "Sidebar": "./src/Sidebar/index.astro",
-    "Stack": "./src/Stack/index.astro",
-    "Switcher": "./src/Switcher/index.astro",
-    "Cluster": "./src/Cluster/index.astro",
-    "Grid": "./src/Grid/index.astro",
-    "Imposter": "./src/Imposter/index.astro",
-    "Icon": "./src/Icon/index.astro",
-    "Cover": "./src/Cover/index.astro"
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js",
+      "types": "./src/env.d.ts"
+    },
+    "./Center": {
+      "types": "./src/Center/index.astro",
+      "default": "./src/Center/index.astro"
+    },
+    "./Reel": "./src/Reel/index.astro",
+    "./Frame": "./src/Frame/index.astro",
+    "./Sidebar": "./src/Sidebar/index.astro",
+    "./Stack": "./src/Stack/index.astro",
+    "./Switcher": "./src/Switcher/index.astro",
+    "./Cluster": "./src/Cluster/index.astro",
+    "./Grid": "./src/Grid/index.astro",
+    "./Imposter": "./src/Imposter/index.astro",
+    "./Icon": "./src/Icon/index.astro",
+    "./Cover": "./src/Cover/index.astro"
   },
   "files": [
     "src"
@@ -34,13 +42,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "astro": "^4.13.1",
     "@astrojs/check": "^0.9.2",
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "astro": "^4.13.1"
   }
 }

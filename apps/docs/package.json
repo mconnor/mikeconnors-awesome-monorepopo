@@ -6,9 +6,12 @@
   "scripts": {
     "update": "pnpm update",
     "preview": "astro preview",
+    "dev": "vite --clearScreen false",
+    "build": "tsc && vite build",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "lint": "eslint",
     "fix": "eslint --fix",
     "check-types": "tsc --noEmit"
   },
@@ -16,9 +19,9 @@
     "@repo/ui": "workspace:*"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "typescript": "^5.5.4",
     "vite": "^5.3.4"
   }

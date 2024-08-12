@@ -1,13 +1,9 @@
 {
   "name": "@repo/typescript-config",
   "version": "0.0.0",
-  "type": "module",
   "private": true,
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "astro": "^4.13.1"
   }
 }

@@ -11,8 +11,6 @@
     }
   },
   "include": [
-    "eslint.config.js",
-    "astro.config.js",
     "src"
   ],
   "exclude": [

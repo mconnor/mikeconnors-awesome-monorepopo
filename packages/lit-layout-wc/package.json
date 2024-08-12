@@ -12,6 +12,12 @@
   "files": [
     "src"
   ],
+  "imports": {
+    "#lints": {
+      "node": "@repo/eslint-config",
+      "default": "./astroLintConfig.mjs"
+    }
+  },
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,13 +32,14 @@
   "license": "ISC",
   "devDependencies": {
     "@astrojs/check": "^0.9.2",
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.8.0",
-    "typescript": "^5.5.4",
-    "astro": "^4.13.1",
+    "@webcomponents/template-shadowroot": "^0.2.1",
+    "eslint": "^9.9.0",
     "lit": "^3.2.0",
-    "@webcomponents/template-shadowroot": "^0.2.1"
+    "typescript": "^5.5.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "astro": "^4.13.1"
+  }
 }
