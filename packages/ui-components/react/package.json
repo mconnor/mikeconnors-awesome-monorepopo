@@ -5,7 +5,8 @@
   "type": "module",
   "main": "index.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./Counter": "./src/ReactCounter.tsx"
   },
   "scripts": {
     "update": "pnpm update",

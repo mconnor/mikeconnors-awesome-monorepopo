@@ -5,10 +5,10 @@
   "main": "src/index.ts",
   "module": "src/index.ts",
   "type": "module",
-  "files": [
-    "index.ts",
-    "src"
-  ],
+  "exports": {
+    ".": "./src/index.ts",
+    "./PreactCounter": "./src/PreactCounter.tsx"
+  },
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
