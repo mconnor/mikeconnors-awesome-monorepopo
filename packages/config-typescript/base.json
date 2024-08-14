@@ -2,6 +2,15 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
   "compilerOptions": {
+    "target": "ESNext",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "allowJs": true,
+    "jsx": "preserve",
+    "strictNullChecks": true,
+
     "composite": false,
     "declaration": true,
     "declarationMap": true,
@@ -17,6 +26,5 @@
     "skipLibCheck": true,
     "strict": false,
     "allowArbitraryExtensions": true
-  },
-  "exclude": ["node_modules"]
+  }
 }
