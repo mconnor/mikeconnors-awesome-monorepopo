@@ -17,6 +17,10 @@
     "astro"
   ],
   "scripts": {
+    "syncpack": "syncpack list",
+    "syncpack-fix": "syncpack fix-mismatches",
+    "syncpack-format": "syncpack format",
+    "syncpack-update": "syncpack update",
     "graph": "turbo run build --graph",
     "build": "turbo build",
     "preview": "turbo preview",
@@ -33,6 +37,7 @@
   "devDependencies": {
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
+    "syncpack": "^12.4.0",
     "turbo": "^2.0.14",
     "typescript": "^5.5.4"
   },

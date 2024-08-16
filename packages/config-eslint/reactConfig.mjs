@@ -12,14 +12,6 @@ const reactConfig = tseslint.config(
   reactPlugin.configs.flat['jsx-runtime'],
 
   {
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-
-  {
     languageOptions: {
       parserOptions: {
         projectService: true,
@@ -32,8 +24,15 @@ const reactConfig = tseslint.config(
     },
   },
   {
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
     files: ['**/*.jsx'],
-    ...tseslint.configs.disableTypeChecked,
+    extends: [tseslint.configs.disableTypeChecked],
   },
   {
     files: ['**/*.jsx', '**/*.tsx'],
@@ -43,4 +42,4 @@ const reactConfig = tseslint.config(
   },
 );
 
-export default reactConfig;
+export default [...reactConfig];

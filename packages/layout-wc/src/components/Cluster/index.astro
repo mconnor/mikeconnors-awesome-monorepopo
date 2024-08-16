@@ -1,5 +1,10 @@
 ---
 import './Cluster.css';
+import type {
+  RmUnitType,
+  JustifyContentTypes,
+  AlignItemsTypes,
+} from '@repo/styles/Types';
 // import type {
 //   RmUnitType,
 //   JustifyContentTypes,
@@ -9,9 +14,9 @@ import './Cluster.css';
 // const LIST = 'list'
 
 interface Props {
-  justify?: string; //"flex-start"
-  align?: string; // "flex-start"
-  space?: string;
+  justify?: JustifyContentTypes; //"flex-start"
+  align?: AlignItemsTypes; // "flex-start"
+  space?: RmUnitType;
   // role?: typeof LIST
 }
 

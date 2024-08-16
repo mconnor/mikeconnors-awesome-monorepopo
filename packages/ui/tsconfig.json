@@ -7,7 +7,7 @@
   },
   "include": [
     "src",
-    "eslint.config.js"
+    "*.config.*"
   ],
   "exclude": [
     "node_modules",

@@ -40,8 +40,8 @@
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "devDependencies": {
-    "@repo/eslint-config": "1.0.4",
-    "@repo/typescript-config": "0.1.0",
+    "@repo/eslint-config": "workspace:1.0.4",
+    "@repo/typescript-config": "workspace:0.1.0",
     "@types/eslint__js": "^8.42.3",
     "eslint": "^9.9.0",
     "typescript": "^5.5.4",

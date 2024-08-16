@@ -13,8 +13,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "pnpm update",
-    "lint": "eslint",
-    "fix": "eslint --fix",
     "inspect": "eslint  --inspect-config",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -25,8 +23,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "1.0.4",
-    "@repo/typescript-config": "0.1.0",
+    "@repo/lit-layout-wc": "workspace:1.0.0",
+    "@repo/eslint-config": "workspace:1.0.4",
+    "@repo/typescript-config": "workspace:0.1.0",
     "@types/eslint__js": "^8.42.3",
     "eslint": "^9.9.0",
     "typescript": "^5.5.4"

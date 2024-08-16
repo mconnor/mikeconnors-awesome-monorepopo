@@ -29,13 +29,6 @@ const myTslintConfig = tseslint.config(
   },
   {
     files: ['**/*.js'],
-    ...tseslint.configs.disableTypeChecked,
-
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-      },
-    },
     rules: {
       '@typescript-eslint/no-unused-expressions': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'warn',
