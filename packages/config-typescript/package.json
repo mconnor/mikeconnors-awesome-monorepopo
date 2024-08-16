@@ -6,5 +6,8 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@types/eslint__js": "^8.42.3"
   }
 }

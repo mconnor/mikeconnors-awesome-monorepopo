@@ -2,6 +2,9 @@
   "name": "@app/multi",
   "type": "module",
   "version": "0.0.1",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "update": "pnpm update",
     "dev": "astro dev",
@@ -23,8 +26,6 @@
     "@astrojs/solid-js": "^4.4.0",
     "@astrojs/svelte": "^5.7.0",
     "@astrojs/vue": "^4.5.0",
-    "@repo/preact": "workspace:*",
-    "@repo/react": "workspace:*",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "astro": "^4.13.1",
@@ -39,6 +40,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
+    "@types/eslint__js": "^8.42.3",
     "eslint": "^9.9.0",
     "typescript": "^5.5.4",
     "vite": "^5.4.0"

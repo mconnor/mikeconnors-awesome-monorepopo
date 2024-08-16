@@ -6,13 +6,11 @@
     "module": "ESNext",
     "lib": ["ESNext", "DOM"],
     "sourceMap": true,
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
     "noEmit": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true,
-
-    "allowArbitraryExtensions": true
-  },
-  "exclude": ["node_modules"]
+    "noImplicitReturns": true
+  }
 }

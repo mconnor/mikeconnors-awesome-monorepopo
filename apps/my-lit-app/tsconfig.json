@@ -1,6 +1,17 @@
 {
-  "extends": "@repo/typescript-config/lit.json",
+  "extends": "@repo/typescript-config/vite.json",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false
+  },
   "include": [
+    "eslint.config.js",
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".astro",
+    ".turbo"
   ]
 }

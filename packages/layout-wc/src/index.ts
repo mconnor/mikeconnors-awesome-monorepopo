@@ -10,9 +10,11 @@
 // export { default as Icon } from './components/Icon/index.astro';
 // export { default as Cover } from './components/Cover/index.astro';
 // export type { } from './src/components/Types.ts'
-export type {
-  Percentage,
-  RmUnitType,
-  JustifyContentTypes,
-  AlignItemsTypes,
-} from '#Types.ts';
+// export type {
+//   Percentage,
+//   RmUnitType,
+//   JustifyContentTypes,
+//   AlignItemsTypes,
+// } from '#Types.ts';
+
+export {};

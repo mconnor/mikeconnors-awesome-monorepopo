@@ -1,3 +1,10 @@
 import config from '@repo/eslint-config/preactConfig';
 
-export default [...config];
+export default [
+  ...config,
+  {
+    rules: {
+      'react/no-unknown-property': 'warn',
+    },
+  },
+];

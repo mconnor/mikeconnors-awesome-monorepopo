@@ -5,10 +5,10 @@ import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import eslintConfigPrettier from 'eslint-config-prettier';
 
-const config = tseslint.config(
+const myTslintConfig = tseslint.config(
   js.configs.recommended,
-  // ...tseslint.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.recommended,
+  // ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
 
   {
@@ -16,8 +16,7 @@ const config = tseslint.config(
       parser: tseslint.parser,
       parserOptions: {
         projectService: true,
-        parser: tseslint.parser,
-        projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
+        tsconfigRootDir: import.meta.dirname,
         // ecmaFeatures: {
         //   jsx: true,
         // },
@@ -29,14 +28,21 @@ const config = tseslint.config(
     },
   },
   {
-    files: ['**/*.js', '**/*.mjs'],
+    files: ['**/*.js'],
     ...tseslint.configs.disableTypeChecked,
-  },
-  {
-    ignores: ['dist', '.turbo'],
+
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+      },
+    },
+    rules: {
+      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'warn',
+      '@typescript-eslint/no-unsafe-call': 'warn',
+      '@typescript-eslint/restrict-template-expressions': 'warn',
+    },
   },
 );
 
-export default [...config, eslintConfigPrettier];
-
-// myTsLint
+export default [...myTslintConfig, eslintConfigPrettier];

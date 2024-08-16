@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.2",
   "type": "module",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "update": "pnpm update",
     "dev": "astro dev",
@@ -23,6 +26,7 @@
     "@astrojs/vercel": "^7.7.2",
     "@repo/layout-wc": "workspace:1.1.0",
     "@repo/lit-layout-wc": "workspace:*",
+    "@repo/styles": "workspace:*",
     "@webcomponents/template-shadowroot": "^0.2.1",
     "astro": "^4.13.1",
     "open-props": "^1.7.5",
@@ -36,6 +40,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
+    "@types/eslint__js": "^8.42.3",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.9.0",
     "typescript": "^5.5.4",

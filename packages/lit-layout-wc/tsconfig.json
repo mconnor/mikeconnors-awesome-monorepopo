@@ -7,5 +7,17 @@
     "declaration": true,
     "declarationMap": true
   },
-  "include": ["src", "eslint.config.js"]
+  "include": [
+    "src",
+    "eslint.config.js"
+  ],
+  "exclude": [
+    "node_modules",
+    ".turbo",
+    ".vercel",
+    ".astro",
+    "dist",
+    ".turbo",
+    "build"
+  ]
 }

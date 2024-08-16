@@ -1,0 +1,17 @@
+{
+    "extends": "@repo/typescript-config/vite.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "rootDir": "src"
+    },
+    "include": [
+        "eslint.config.js",
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        ".turbo",
+        "build"
+    ]
+}

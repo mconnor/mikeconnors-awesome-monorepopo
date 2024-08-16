@@ -2,10 +2,10 @@
   "extends": "@repo/typescript-config/vite.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": ".",
+    "moduleResolution": "Bundler",
   },
   "include": [
-    "eslint.config.js",
     "src"
   ],
   "exclude": [

@@ -1,6 +1,7 @@
 {
   "extends": "@repo/typescript-config/react.json",
   "include": [
-    "src"
+    "src",
+    "eslint.config.js"
   ]
 }

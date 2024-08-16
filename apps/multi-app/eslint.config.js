@@ -1,3 +1,8 @@
-import config from '@repo/eslint-config/astroLintConfig';
+import astroConfig from '@repo/eslint-config/astroLintConfig';
 
-export default [...config];
+export default [
+  ...astroConfig,
+  {
+    ignores: ['.prettierrc.mjs'],
+  },
+];

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /**
  * @module reel-l
  * @description
@@ -62,7 +61,6 @@ export default class Reel extends HTMLElement {
   }
 
   toggleOverflowClass(elem) {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     elem.classList.toggle('overflowing', this.scrollWidth > this.clientWidth);
   }
 

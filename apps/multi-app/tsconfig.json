@@ -3,15 +3,10 @@
   "compilerOptions": {
     "jsx": "preserve",
     "outDir": "dist",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
   },
   "include": [
-    "src"
+    "src",
+    "*.config.*"
   ],
   "exclude": [
     "node_modules",

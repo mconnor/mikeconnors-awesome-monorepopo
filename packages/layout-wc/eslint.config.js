@@ -1,10 +1,3 @@
-import config from '@repo/eslint-config/astroBasicConfig';
+import astroConfig from '@repo/eslint-config/astroLintConfig';
 
-export default [
-  ...config,
-  {
-    rules: {
-      '@typescript-eslint/no-unused-expressions': 'off',
-    },
-  },
-];
+export default astroConfig;

@@ -14,8 +14,6 @@
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint",
-    "fix": "eslint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "inspect": "eslint --inspect-config",
@@ -27,6 +25,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^1.0.4",
     "@repo/typescript-config": "workspace:*",
+    "@types/eslint__js": "^8.42.3",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "eslint": "^9.9.0",

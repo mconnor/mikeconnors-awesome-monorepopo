@@ -1,9 +1,8 @@
 {
-  "extends": "./base.json",
+  "extends": "./vite.json",
   "compilerOptions": {
     "allowImportingTsExtensions": true,
     "jsx": "react-jsx",
     "jsxImportSource": "react"
-  },
-  "include": ["src"]
+  }
 }

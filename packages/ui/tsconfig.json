@@ -2,13 +2,18 @@
   "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src"
+    "declaration": true,
+    "declarationMap": true
   },
   "include": [
-    "src"
+    "src",
+    "eslint.config.js"
   ],
   "exclude": [
     "node_modules",
+    ".turbo",
+    ".vercel",
+    ".astro",
     "dist",
     ".turbo",
     "build"

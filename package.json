@@ -3,6 +3,10 @@
   "author": "Mike Connor",
   "name": "with-vite",
   "type": "module",
+  "imports": {
+    "#*": "./src/*",
+    "#unit-types": "./src/UnitTypes.ts"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mconnor/vite-turbo"
@@ -33,7 +37,7 @@
     "typescript": "^5.5.4"
   },
   "engines": {
-    "node": "^20.3.0",
+    "node": ">= 20.11.0 <21 || >= 21.2.0",
     "pnpm": ">=9.1.2"
   },
   "packageManager": "pnpm@9.7.0"

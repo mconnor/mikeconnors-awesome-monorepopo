@@ -1,8 +1,5 @@
 {
   "extends": "@repo/typescript-config/myAstro.json",
-  "compilerOptions": {
-    "verbatimModuleSyntax": false
-  },
   "include": [
     "src"
   ],

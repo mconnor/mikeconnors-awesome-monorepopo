@@ -1,18 +1,13 @@
 // @ts-check
 
 import reactPlugin from 'eslint-plugin-react';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import globals from 'globals';
-
-import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import myTslintConfig from './myTslintConfig.mjs';
 
-// const { configs } = reactPlugin;
+const extraFileExtensions = ['.tsx', '.jsx'];
 
 const reactConfig = tseslint.config(
-  js.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylistic,
+  ...myTslintConfig,
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat['jsx-runtime'],
 
@@ -26,22 +21,19 @@ const reactConfig = tseslint.config(
 
   {
     languageOptions: {
-      parser: tseslint.parser,
-
       parserOptions: {
         projectService: true,
-
+        tsconfigRootDir: import.meta.dirname,
         projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         ecmaFeatures: {
           jsx: true,
         },
       },
-
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
     },
+  },
+  {
+    files: ['**/*.jsx'],
+    ...tseslint.configs.disableTypeChecked,
   },
   {
     files: ['**/*.jsx', '**/*.tsx'],
@@ -49,12 +41,6 @@ const reactConfig = tseslint.config(
       'react/react-in-jsx-scope': 'off',
     },
   },
-
-  {
-    files: ['**/*.js', '**/*.mjs'],
-    ...tseslint.configs.disableTypeChecked,
-  },
-  eslintConfigPrettier,
 );
 
 export default reactConfig;
