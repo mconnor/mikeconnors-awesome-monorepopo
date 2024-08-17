@@ -5,10 +5,7 @@
     "declaration": true,
     "declarationMap": true
   },
-  "include": [
-    "src",
-    "*.config.*"
-  ],
+  "include": ["src", "*.config.*"],
   "exclude": [
     "node_modules",
     ".turbo",

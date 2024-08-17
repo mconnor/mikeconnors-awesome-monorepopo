@@ -8,17 +8,8 @@
     "declarationMap": true,
     "outDir": "dist",
     "rootDir": ".",
-    "baseUrl": ".",
+    "baseUrl": "."
   },
-  "include": [
-    "src",
-    "*.config.*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".astro",
-    ".turbo",
-    "src/pages/demo/"
-  ]
+  "include": ["src", "*.config.*"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo", "src/pages/demo/"]
 }

@@ -3,16 +3,8 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": ".",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Bundler"
   },
-  "include": [
-    "src",
-    "*.config.*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".astro",
-    ".turbo"
-  ]
+  "include": ["src", "*.config.*"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
 }

@@ -1,14 +1,5 @@
 {
   "extends": "@repo/typescript-config/preact.json",
-  "include": [
-    "src",
-    "*.config.*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".astro",
-    ".turbo",
-    "src/pages/demo/"
-  ]
+  "include": ["src", "*.config.*"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo", "src/pages/demo/"]
 }
