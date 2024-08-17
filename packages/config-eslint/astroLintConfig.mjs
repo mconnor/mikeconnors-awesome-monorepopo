@@ -15,9 +15,9 @@ const astroConfig = tseslint.config(
     languageOptions: {
       parser: astroParser,
       parserOptions: {
-        // parser: tseslint.parser,
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        parser: tseslint.parser,
+        project: true,
+        // tsconfigRootDir: import.meta.dirname,
         // extraFileExtensions,
       },
     },

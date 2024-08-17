@@ -10,8 +10,7 @@ const tsLitConfig = tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        project: true,
       },
       globals: {
         ...globals.browser,

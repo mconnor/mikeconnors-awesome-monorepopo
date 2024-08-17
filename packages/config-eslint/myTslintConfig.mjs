@@ -3,7 +3,6 @@
 import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
-import eslintConfigPrettier from 'eslint-config-prettier';
 
 const myTslintConfig = tseslint.config(
   js.configs.recommended,
@@ -15,8 +14,8 @@ const myTslintConfig = tseslint.config(
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        project: true,
+        // tsconfigRootDir: import.meta.dirname,
         // ecmaFeatures: {
         //   jsx: true,
         // },
@@ -29,13 +28,8 @@ const myTslintConfig = tseslint.config(
   },
   {
     files: ['**/*.js'],
-    rules: {
-      '@typescript-eslint/no-unused-expressions': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'warn',
-      '@typescript-eslint/no-unsafe-call': 'warn',
-      '@typescript-eslint/restrict-template-expressions': 'warn',
-    },
+    extends: [tseslint.configs.disableTypeChecked],
   },
 );
 
-export default [...myTslintConfig, eslintConfigPrettier];
+export default myTslintConfig;

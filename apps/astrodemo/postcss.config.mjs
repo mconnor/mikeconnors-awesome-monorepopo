@@ -13,7 +13,6 @@ import postcssCustomMedia from 'postcss-custom-media';
 export default {
   plugins: [
     postcssImport,
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     postcssJitProps(OpenProps),
     autoprefixer,
     postcssNesting,

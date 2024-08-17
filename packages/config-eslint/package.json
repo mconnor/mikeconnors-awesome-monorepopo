@@ -6,7 +6,8 @@
     "#*": "./*"
   },
   "exports": {
-    "./*": "./*.mjs"
+    "./*": "./*.mjs",
+    "./EslintPrettier": "eslint-config-prettier"
   },
   "scripts": {
     "update": "pnpm update"
@@ -15,6 +16,8 @@
   "type": "module",
   "dependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3",
     "astro-eslint-parser": "^1.0.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",
@@ -25,8 +28,5 @@
     "eslint-plugin-wc": "^2.1.0",
     "globals": "^15.9.0",
     "typescript-eslint": "^8.1.0"
-  },
-  "devDependencies": {
-    "@types/eslint__js": "^8.42.3"
   }
 }

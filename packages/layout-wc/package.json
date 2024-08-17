@@ -27,9 +27,6 @@
     "./Icon": "./src/components/Icon/index.astro",
     "./Cover": "./src/components/Cover/index.astro"
   },
-  "files": [
-    "src"
-  ],
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",

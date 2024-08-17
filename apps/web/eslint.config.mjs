@@ -1,3 +1,3 @@
 import config from '@repo/eslint-config/myTslintConfig';
-
-export default [...config];
+eslintConfigPrettier;
+export default [...config, eslintConfigPrettier];

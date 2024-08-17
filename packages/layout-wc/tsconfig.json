@@ -1,7 +1,10 @@
 {
   "extends": "@repo/typescript-config/myAstro.json",
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+  },
   "include": [
-    "*.config.*",
+    "eslint.config.js",
     "src"
   ],
   "exclude": [

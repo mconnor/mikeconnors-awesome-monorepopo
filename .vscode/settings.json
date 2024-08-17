@@ -4,6 +4,9 @@
       "mode": "auto"
     }
   ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "never"
+  },
   "cssvar.themes": [
     "dark",
     "light",
