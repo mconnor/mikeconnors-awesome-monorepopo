@@ -27,15 +27,7 @@ export default defineConfig({
   ],
   vite: {
     ssr: {
-      noExternal: [
-        'date-fns',
-        'open-props',
-        '@repo/lit-layout-wc',
-        '@repo/layout-wc',
-        '@astrojs/lit',
-        'lit',
-        '@webcomponents/template-shadowroot',
-      ],
+      noExternal: ['date-fns', 'open-props'],
     },
   },
 });
