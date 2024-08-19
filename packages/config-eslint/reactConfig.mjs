@@ -15,7 +15,7 @@ const reactConfig = tseslint.config(
     languageOptions: {
       parserOptions: {
         project: true,
-        tsconfigRootDir: import.meta.dirname,
+
         projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         ecmaFeatures: {
           jsx: true,

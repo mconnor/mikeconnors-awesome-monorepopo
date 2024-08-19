@@ -1,6 +1,6 @@
 ---
-// import { Counter } from '@repo/react/Counter';
-// import { PreactCounter } from '@repo/preact/PreactCounter';
+import { Counter } from '@repo/react/Counter';
+import { PreactCounter } from '@repo/preact/PreactCounter.tsx';
 import Layout from '#layouts/Layout.astro';
 import SolidCounter from '#components/solid/SolidCounter.tsx';
 import VueCounter from '#components/vue/VueCounter.vue';
@@ -9,13 +9,13 @@ import SvelteCounter from '#components/svelte/SvelteCounter.svelte';
 
 <Layout>
   <main>
-    <!-- <Counter client:visible>
+    <Counter client:visible>
       <h1>Hello from React!</h1>
     </Counter>
 
     <PreactCounter client:visible>
       <h1>Hello from Preact!</h1>
-    </PreactCounter> -->
+    </PreactCounter>
 
     <SolidCounter client:visible>
       <h1>Hello from Solid!</h1>
