@@ -2,9 +2,15 @@
   "extends": "@repo/typescript-config/vite.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": ".",
-    "moduleResolution": "Bundler"
+    "rootDir": "src"
   },
-  "include": ["src", "*.config.*"],
-  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".astro",
+    ".turbo"
+  ]
 }

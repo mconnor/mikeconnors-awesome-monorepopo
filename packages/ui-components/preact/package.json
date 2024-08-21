@@ -1,7 +1,7 @@
 {
   "name": "@repo/preact",
   "version": "1.1.0",
-  "description": "",
+  "description": "preact ui",
   "main": "src/index.ts",
   "module": "src/index.ts",
   "type": "module",
@@ -9,8 +9,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    ".": "./src/index.ts",
-    "./PreactCounter.tsx": "./src/PreactCounter.tsx"
+    "./counter": "./src/PreactCounter.tsx"
   },
   "scripts": {
     "update": "pnpm update",
@@ -29,9 +28,9 @@
     "extends": "preact"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:0.1.0",
+    "@repo/typescript-config": "workspace:*",
     "@types/eslint__js": "^8.42.3",
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-preact": "^1.4.0",
     "preact": "^10.23.2",
     "typescript": "^5.5.4"

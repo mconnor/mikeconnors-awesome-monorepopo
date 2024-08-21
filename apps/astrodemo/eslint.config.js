@@ -1,9 +1,9 @@
-import astroConfig from '@repo/eslint-config/astroLintConfig';
-import eslintConfigPrettier from '@repo/eslint-config/eslintConfigPrettier';
+import astroConfig from '@repo/eslint-config/astro';
+import prettierConfig from '@repo/eslint-config/prettier-config';
 
 export default [
   ...astroConfig,
-  eslintConfigPrettier,
+  prettierConfig,
   {
     ignores: ['.prettierrc.mjs'],
   },

@@ -1,5 +1,6 @@
 {
   "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env", "tsconfig.json"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
@@ -17,10 +18,13 @@
     "//#inspect:root": {},
 
     "update": {
+      "dependsOn": ["^update"],
       "cache": false
     },
 
-    "fix": {},
+    "fix": {
+      "dependsOn": ["^fix"]
+    },
     "format": {},
     "format:check": {},
     "dev": {
@@ -37,7 +41,7 @@
     },
     "check-types": {
       "dependsOn": ["transit"],
-      "inputs": ["**/*.{ts,tsx}"]
+      "inputs": ["**/*.{ts,tsx, astro}"]
     }
   }
 }

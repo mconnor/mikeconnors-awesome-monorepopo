@@ -1,9 +1,19 @@
 {
   "extends": "@repo/typescript-config/vite.json",
   "compilerOptions": {
+    "verbatimModuleSyntax": true,
     "jsx": "preserve",
-    "outDir": "dist"
+    "outDir": "dist",
+    "rootDir": "src",
+    "baseUrl": "."
   },
-  "include": ["src", "*.config.*"],
-  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".astro",
+    ".turbo"
+  ]
 }

@@ -3,7 +3,7 @@ import { html } from 'lit-html';
 import { customElement, property } from 'lit/decorators.js';
 // import type { RmUnitType } from '../Types';
 import { styleMap } from 'lit/directives/style-map.js';
-
+import type { RmUnitType } from '@repo/styles/Types';
 /**
  * @module box-l
  * @description
@@ -35,10 +35,10 @@ export class Box extends LitElement {
   ];
 
   @property({ type: String })
-  padding = 'var(--s0)';
+  padding: RmUnitType = 'var(--s0)';
 
   @property()
-  borderWidth = '1px';
+  borderWidth: RmUnitType = '1px';
 
   @property({ type: Boolean })
   invert = false;
@@ -58,8 +58,8 @@ export class Box extends LitElement {
   }
 }
 
-// declare global {
-//   interface HTMLElementTagNameMap {
-//     'box-l': Box;
-//   }
-// }
+declare global {
+  interface HTMLElementTagNameMap {
+    'box-l': Box;
+  }
+}

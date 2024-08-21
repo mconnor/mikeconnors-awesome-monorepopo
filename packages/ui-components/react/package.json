@@ -8,8 +8,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    ".": "./src/index.ts",
-    "./Counter": "./src/ReactCounter.tsx"
+    "./counter": "./src/ReactCounter.tsx"
   },
   "scripts": {
     "update": "pnpm update",
@@ -23,15 +22,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "workspace:1.0.4",
-    "@repo/typescript-config": "workspace:0.1.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/eslint__js": "^8.42.3",
-    "@types/react": "^18.3.3",
+    "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
     "eslint": "^9.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.5.4",
-    "vite": "^5.4.1"
+    "vite": "^5.4.2"
   }
 }

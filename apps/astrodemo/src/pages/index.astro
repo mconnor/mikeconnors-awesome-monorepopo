@@ -2,12 +2,17 @@
 import Layout from '#layouts/Layout.astro';
 // import Card from '@/components/Card.astro';
 import Stack from '@repo/layout-wc/Stack';
+import MyElement from '@repo/lit-layout-wc/MyElement';
+import MyOpenWc from '@repo/lit-layout-wc/MyOpenWc';
 
 import Box from '@repo/lit-layout-wc/Box';
 ---
 
 <Layout title="Welcome to Astro.">
   <Stack space="2rem">
+    <MyElement>Hello from astro demo</MyElement>
+
+    <MyOpenWc />
     <Box><h4>Learn how Astro works and explore the official API docs.</h4></Box>
 
     <Box invert

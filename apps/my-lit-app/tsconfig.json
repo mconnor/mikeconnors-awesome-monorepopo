@@ -1,11 +1,10 @@
 {
-  "extends": "@repo/typescript-config/vite.json",
+  "extends": "@repo/typescript-config/lit.json",
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false
+    "outDir": "dist",
+    "rootDir": "src",
   },
   "include": [
-    "eslint.config.js",
     "src"
   ],
   "exclude": [

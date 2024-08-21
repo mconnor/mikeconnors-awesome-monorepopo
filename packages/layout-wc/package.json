@@ -8,14 +8,7 @@
     "#*": "./src/components/*"
   },
   "exports": {
-    ".": {
-      "import": "./src/components/Types.ts",
-      "types": "./src/components/Types.ts"
-    },
-    "./Center": {
-      "types": "./src/components/Center/index.astro",
-      "default": "./src/components/Center/index.astro"
-    },
+    "./Center": "./src/components/Center/index.astro",
     "./Reel": "./src/components/Reel/index.astro",
     "./Frame": "./src/components/Frame/index.astro",
     "./Sidebar": "./src/components/Sidebar/index.astro",

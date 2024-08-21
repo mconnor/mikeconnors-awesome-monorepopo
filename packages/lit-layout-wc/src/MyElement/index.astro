@@ -1,0 +1,21 @@
+---
+import './MyElement.css';
+import { Image } from 'astro:assets';
+import litLogo from '#assets/lit.svg';
+import { MyElement } from './my-element.js';
+
+interface Props {
+  docsHint?: string;
+}
+const props = Astro.props;
+---
+
+<MyElement {...props} client:visible>
+  <div slot="logo">
+    <a href="https://lit.dev" target="_blank">
+      <Image src={litLogo} class="logo lit" alt="Lit logo" />
+    </a>
+  </div>
+
+  <slot />
+</MyElement>

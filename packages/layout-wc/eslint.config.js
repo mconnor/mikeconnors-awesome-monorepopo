@@ -1,11 +1,5 @@
-import eslintConfigPrettier from '@repo/eslint-config/eslintConfigPrettier';
-import astroConfig from '@repo/eslint-config/astroLintConfig';
-export default [
-  ...astroConfig,
-  {
-    rules: {
-      '@typescript-eslint/no-unused-expressions': 'off',
-    },
-  },
-  eslintConfigPrettier,
-];
+import eslintConfigPrettier from '@repo/eslint-config/prettier-config';
+import astroConfig from '@repo/eslint-config/astro';
+import typeCheckingDisable from '@repo/eslint-config/type-disable';
+
+export default [...astroConfig, ...typeCheckingDisable, eslintConfigPrettier];

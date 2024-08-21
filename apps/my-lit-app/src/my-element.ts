@@ -1,6 +1,8 @@
-import { LitElement, css, html } from 'lit';
+import { LitElement, css } from 'lit';
+import { html } from 'lit-html';
 import { customElement, property } from 'lit/decorators.js';
 import litLogo from './assets/lit.svg';
+
 import viteLogo from '/vite.svg';
 
 /**
@@ -35,7 +37,6 @@ export class MyElement extends LitElement {
       </div>
       <slot></slot>
       <div class="card">
-        // eslint-disable-next-line @typescript-eslint/unbound-method
         <button @click=${this._onClick} part="button">
           count is ${this.count}
         </button>
@@ -44,9 +45,9 @@ export class MyElement extends LitElement {
     `;
   }
 
-  private _onClick() {
+  private _onClick = () => {
     this.count++;
-  }
+  };
 
   static styles = css`
     :host {

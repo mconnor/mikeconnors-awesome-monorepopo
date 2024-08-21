@@ -1,8 +1,8 @@
-import config from '@repo/eslint-config/reactConfig';
-import eslintConfigPrettier from '@repo/eslint-config/eslintConfigPrettier';
+import reactConfig from '@repo/eslint-config/react';
+import eslintConfigPrettier from '@repo/eslint-config/prettier-config';
 
 export default [
-  ...config,
+  ...reactConfig,
   eslintConfigPrettier,
   {
     ignores: ['dist', '.turbo'],

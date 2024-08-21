@@ -1,32 +1,32 @@
 // @ts-check
 
-import wc from 'eslint-plugin-wc';
+import { configs as wcConfigs } from 'eslint-plugin-wc';
+// import path from 'path';
+// import { fileURLToPath } from 'url';
 
-import lit from 'eslint-plugin-lit';
-import globals from 'globals';
+import { configs as litConfigs } from 'eslint-plugin-lit';
+// import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 const tsLitConfig = tseslint.config(
+  wcConfigs['flat/recommended'],
+  litConfigs['flat/recommended'],
   {
     languageOptions: {
       parserOptions: {
-        project: true,
-      },
-      globals: {
-        ...globals.browser,
-        ...globals.node,
+        tsconfigRootDir: import.meta.dirname,
+        parserServices: true,
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
   },
   {
-    plugins: {
-      wc,
-      lit,
-    },
-  },
-  {
-    rules: {
-      '@typescript-eslint/unbound-method': 'warn',
+    settings: {
+      wc: {
+        elementBaseClasses: ['LitElement'], // Recognize `LitElement` as a Custom Element base class
+      },
     },
   },
 );

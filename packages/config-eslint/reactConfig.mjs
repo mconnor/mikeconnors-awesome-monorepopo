@@ -4,7 +4,7 @@ import reactPlugin from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
 import myTslintConfig from './myTslintConfig.mjs';
 
-const extraFileExtensions = ['.tsx', '.jsx'];
+// const extraFileExtensions = ['.tsx', '.jsx'];
 
 const reactConfig = tseslint.config(
   ...myTslintConfig,
@@ -14,7 +14,8 @@ const reactConfig = tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        project: true,
+        parserServices: true,
+        // tsconfigRootDir: import.meta.dirname,
 
         projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
         ecmaFeatures: {

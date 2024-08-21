@@ -5,7 +5,7 @@ import astroParser from 'astro-eslint-parser';
 import tseslint from 'typescript-eslint';
 
 import myTslintConfig from './myTslintConfig.mjs';
-// const extraFileExtensions = ['.astro'];
+const extraFileExtensions = ['.astro'];
 
 const astroConfig = tseslint.config(
   ...myTslintConfig,
@@ -16,9 +16,9 @@ const astroConfig = tseslint.config(
       parser: astroParser,
       parserOptions: {
         parser: tseslint.parser,
-        project: true,
-        // tsconfigRootDir: import.meta.dirname,
-        // extraFileExtensions,
+        parserServices: true,
+        tsconfigRootDir: import.meta.dirname,
+        extraFileExtensions,
       },
     },
   },

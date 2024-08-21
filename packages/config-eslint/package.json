@@ -6,8 +6,13 @@
     "#*": "./*"
   },
   "exports": {
-    "./*": "./*.mjs",
-    "./EslintPrettier": "eslint-config-prettier"
+    "./astro": "./astroLintConfig.mjs",
+    "./markdown": "./markdown.mjs",
+    "./react": "./reactConfig.mjs",
+    "./ts-lint": "./myTslintConfig.mjs",
+    "./lit-config": "./tsLit.mjs",
+    "./prettier-config": "./eslintConfigPrettier.mjs",
+    "./type-disable": "./typeCheckingDisable.mjs"
   },
   "scripts": {
     "update": "pnpm update"
@@ -16,6 +21,7 @@
   "type": "module",
   "dependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.9.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
@@ -28,7 +34,7 @@
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-wc": "^2.1.0",
     "globals": "^15.9.0",
-    "typescript-eslint": "^8.1.0"
+    "typescript-eslint": "^8.2.0"
   },
   "devDependencies": {
     "eslint": "^9.9.0"

@@ -1,3 +1,3 @@
-import myTslintConfig from '@repo/eslint-config/myTslintConfig';
+import myTslintConfig from '@repo/eslint-config/ts-lint';
 
 export default myTslintConfig;

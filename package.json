@@ -17,6 +17,7 @@
     "astro"
   ],
   "scripts": {
+    "new": "turbo gen workspace --copy",
     "syncpack": "syncpack list",
     "syncpack-fix": "syncpack fix-mismatches",
     "syncpack-format": "syncpack format",
@@ -24,7 +25,7 @@
     "graph": "turbo run build --graph",
     "build": "turbo build",
     "preview": "turbo preview",
-    "dev": "turbo --filter @app/multi dev",
+    "dev": "turbo",
     "lint": "turbo lint",
     "fix": "turbo fix",
     "inspect": "turbo inspect",
@@ -45,5 +46,5 @@
     "node": ">= 20.11.0 <21 || >= 21.2.0",
     "pnpm": ">=9.1.2"
   },
-  "packageManager": "pnpm@9.7.0"
+  "packageManager": "pnpm@9.7.1"
 }

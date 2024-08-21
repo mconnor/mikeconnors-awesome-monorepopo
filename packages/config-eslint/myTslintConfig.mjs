@@ -9,13 +9,12 @@ const myTslintConfig = tseslint.config(
   ...tseslint.configs.recommended,
   // ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylistic,
-
   {
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
-        project: true,
-        // tsconfigRootDir: import.meta.dirname,
+        parserServices: true,
+        tsconfigRootDir: import.meta.dirname,
         // ecmaFeatures: {
         //   jsx: true,
         // },
@@ -29,6 +28,9 @@ const myTslintConfig = tseslint.config(
   {
     files: ['**/*.js'],
     extends: [tseslint.configs.disableTypeChecked],
+  },
+  {
+    ignores: ['dist'],
   },
 );
 

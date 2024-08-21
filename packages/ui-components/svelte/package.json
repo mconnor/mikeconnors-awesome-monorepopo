@@ -1,0 +1,30 @@
+{
+  "name": "@repo/svelte",
+  "version": "1.0.0",
+  "description": "svelte ui",
+  "type": "module",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "exports": {
+    "./counter": "./src/SvelteCounter.svelte"
+  },
+  "scripts": {
+    "update": "pnpm update",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "inspect": "eslint --inspect-config",
+    "check-types": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^9.9.0",
+    "typescript": "^5.5.4",
+    "svelte": "^4.2.18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

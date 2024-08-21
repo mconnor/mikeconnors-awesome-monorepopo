@@ -4,19 +4,17 @@
   "private": true,
   "description": "",
   "type": "module",
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
   "imports": {
     "#*": "./src/*"
   },
   "exports": {
-    "./Box": "./src/Box/index.astro"
+    "./Box": "./src/Box/index.astro",
+    "./MyElement": "./src/MyElement/index.astro",
+    "./MyOpenWc": "./src/MyOpenWc/index.astro"
   },
-  "files": [
-    "src"
-  ],
   "scripts": {
     "update": "pnpm update",
+    "check": "astro check",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint",
     "fix": "eslint --fix",
@@ -35,10 +33,12 @@
     "@types/eslint__js": "^8.42.3",
     "@webcomponents/template-shadowroot": "^0.2.1",
     "eslint": "^9.9.0",
-    "lit": "^3.2.0",
     "typescript": "^5.5.4"
   },
   "dependencies": {
+    "@repo/styles": "workspace:1.0.0",
+    "lit": "^3.2.0",
+    "lit-html": "^3.2.0",
     "astro": "^4.14.2"
   }
 }
