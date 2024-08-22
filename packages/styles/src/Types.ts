@@ -22,4 +22,22 @@ type AlignItemsTypes =
   | 'baseline'
   | 'stretch';
 
-export type { Percentage, RmUnitType, JustifyContentTypes, AlignItemsTypes };
+type BorderStyle =
+  | 'none'
+  | 'hidden'
+  | 'dotted'
+  | 'dashed'
+  | 'solid'
+  | 'double'
+  | 'groove'
+  | 'ridge'
+  | 'inset'
+  | 'outset';
+
+export type {
+  Percentage,
+  RmUnitType,
+  JustifyContentTypes,
+  AlignItemsTypes,
+  BorderStyle,
+};

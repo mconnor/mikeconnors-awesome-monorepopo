@@ -9,6 +9,7 @@
     "./astro": "./astroLintConfig.mjs",
     "./markdown": "./markdown.mjs",
     "./react": "./reactConfig.mjs",
+    "./preact": "./preactConfig.mjs",
     "./ts-lint": "./myTslintConfig.mjs",
     "./lit-config": "./tsLit.mjs",
     "./prettier-config": "./eslintConfigPrettier.mjs",
@@ -32,11 +33,12 @@
     "eslint-plugin-markdown": "^5.1.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-regexp": "^2.6.0",
+    "eslint-plugin-svelte": "^2.43.0",
     "eslint-plugin-wc": "^2.1.0",
     "globals": "^15.9.0",
     "typescript-eslint": "^8.2.0"
   },
-  "devDependencies": {
-    "eslint": "^9.9.0"
+  "peerDependencies": {
+    "eslint": "^9"
   }
 }
