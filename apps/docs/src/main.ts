@@ -2,7 +2,10 @@ import './style.css';
 
 import typescriptLogo from '/typescript.svg';
 
-import { Header, Counter, setupCounter } from '@repo/ui';
+// import { Header, Counter, setupCounter } from '@repo/ui';
+import { Header } from '@repo/ui/header';
+import { Counter } from '@repo/ui/counter';
+import { setupCounter } from '@repo/ui/setup-counter';
 
 document.querySelector('#app')!.innerHTML = `
   <div>
@@ -12,7 +15,7 @@ document.querySelector('#app')!.innerHTML = `
     <a href="https://www.typescriptlang.org/" target="_blank">
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
-    ${Header({ title: 'Docs' })}
+    ${Header({ title: 'my Docs' })}
     <div class="card">
       ${Counter()}
     </div>

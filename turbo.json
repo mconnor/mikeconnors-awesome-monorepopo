@@ -11,12 +11,9 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
-    "//#lint:root": {},
     "inspect": {
       "dependsOn": ["^inspect"]
     },
-    "//#inspect:root": {},
-
     "update": {
       "dependsOn": ["^update"],
       "cache": false
@@ -35,13 +32,8 @@
       "cache": true,
       "persistent": true
     },
-
-    "transit": {
-      "dependsOn": ["^transit"]
-    },
     "check-types": {
-      "dependsOn": ["transit"],
-      "inputs": ["**/*.{ts,tsx, astro}"]
+      "dependsOn": ["^check-types"]
     }
   }
 }

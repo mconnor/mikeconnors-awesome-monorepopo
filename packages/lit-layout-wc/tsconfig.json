@@ -1,15 +1,14 @@
 {
   "extends": "@repo/typescript-config/myAstro.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "outDir": "src",
     "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
     "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
     "declaration": true,
     "declarationMap": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.astro",
+    "src",
     "*.config.js",
     "*.config.mjs"
   ],

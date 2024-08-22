@@ -36,7 +36,7 @@
     "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@repo/styles": "workspace:1.0.0",
+    "@repo/styles": "workspace:*",
     "lit": "^3.2.0",
     "lit-html": "^3.2.0",
     "astro": "^4.14.2"

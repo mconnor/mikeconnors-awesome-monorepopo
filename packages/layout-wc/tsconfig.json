@@ -4,8 +4,6 @@
     "rootDir": "src"
   },
   "include": [
-    "*.config.js",
-    "*.config.mjs",
     "src/**/*.ts",
     "src/**/*.astro",
   ],

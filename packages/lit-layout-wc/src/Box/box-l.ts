@@ -3,7 +3,7 @@ import { html } from 'lit-html';
 import { customElement, property } from 'lit/decorators.js';
 // import type { RmUnitType } from '../Types';
 import { styleMap } from 'lit/directives/style-map.js';
-import type { RmUnitType } from '@repo/styles/Types';
+import type { RmUnitType, BorderStyle } from '@repo/styles/Types';
 /**
  * @module box-l
  * @description
@@ -13,7 +13,7 @@ import type { RmUnitType } from '@repo/styles/Types';
  * @property {boolean} invert=false Whether to apply an inverted theme. Only recommended for greyscale designs.
  */
 @customElement('box-l')
-export class Box extends LitElement {
+export class BoxClass extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     // Check if this component was server-side rendered
@@ -30,6 +30,22 @@ export class Box extends LitElement {
         display: block;
         outline: 0.125rem solid transparent;
         outline-offset: -0.125rem;
+        border-style: solid;
+        color: inherit;
+        background-color: inherit;
+        /* border-width: var(--border-thin);
+        padding: var(--s1); */
+        /* color: var(--my-color);
+        background-color: var(--my-bg-color); */
+      }
+
+      :host(.invert) {
+        color: var(--my-bg-color, black);
+        background-color: var(--my-color, white);
+      }
+
+      .highlighted {
+        opacity: 0.2;
       }
     `,
   ];
@@ -37,29 +53,33 @@ export class Box extends LitElement {
   @property({ type: String })
   padding: RmUnitType = 'var(--s0)';
 
-  @property()
+  @property({ type: String })
   borderWidth: RmUnitType = '1px';
 
   @property({ type: Boolean })
   invert = false;
 
   @property({ type: Boolean })
-  is = false;
+  highlight = false;
 
-  override render() {
+  @property({ type: String })
+  borderStyle: BorderStyle = 'solid';
+
+  protected render() {
     const styles = {
-      border: `${this.borderWidth} solid`,
+      borderWidth: this.borderWidth,
+      borderStyle: this.borderStyle,
       padding: this.padding,
-      color: this.invert ? 'var(--my-bg-color)' : 'var(--my-color)',
-      backgroundColor: this.invert ? 'var(--my-color)' : 'var(--my-bt-color)',
     };
 
-    return html`<div style=${styleMap(styles)}><slot></slot></div>`;
+    return html`<div style=${styleMap(styles)}>
+      <slot></slot>
+    </div>`;
   }
 }
 
-declare global {
-  interface HTMLElementTagNameMap {
-    'box-l': Box;
-  }
-}
+// declare global {
+//   interface HTMLElementTagNameMap {
+//     'box-l': Box;
+//   }
+// }
