@@ -1,0 +1,37 @@
+---
+import { BoxClass } from './box-l';
+import type { RmUnitType, BorderStyle } from '@repo/styles/Types';
+
+interface Props {
+  padding?: RmUnitType;
+  borderWidth?: RmUnitType;
+  highlight?: boolean;
+  borderStyle?: BorderStyle;
+  class?: string;
+}
+const props = Astro.props;
+---
+
+<BoxClass {...props} client:visible>
+  <slot />
+</BoxClass>
+
+<style>
+  box-l {
+    display: block;
+
+    /* background-color: var(--surface-1) !important;
+    color: var(--text-2) !important; */
+
+    /* ↓ For high contrast mode */
+    outline: 0.125rem solid transparent;
+    outline-offset: -0.125rem;
+
+    --box-color: var(--my-color, black);
+    --box-background: var(--my-bg-color, white);
+  }
+  /* box-l.inverted {
+    --box-color: var(--my-bg-color, white);
+    --box-background: var(--my-color, black);
+  } */
+</style>

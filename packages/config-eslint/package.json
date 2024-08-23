@@ -13,7 +13,8 @@
     "./ts-lint": "./myTslintConfig.mjs",
     "./lit-config": "./tsLit.mjs",
     "./prettier-config": "./eslintConfigPrettier.mjs",
-    "./type-disable": "./typeCheckingDisable.mjs"
+    "./type-disable": "./typeCheckingDisable.mjs",
+    "./regex-config": "./regexConfig.mjs"
   },
   "scripts": {
     "update": "pnpm update"

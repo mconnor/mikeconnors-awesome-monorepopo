@@ -23,6 +23,16 @@ const tsLitConfig = tseslint.config(
     },
   },
   {
+    files: ['**/*js'],
+    extends: [tseslint.configs.disableTypeChecked],
+    rules: {
+      'no-unused-expressions': 'off',
+      'wc/no-constructor-attributes': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+    },
+  },
+  {
     settings: {
       wc: {
         elementBaseClasses: ['LitElement'], // Recognize `LitElement` as a Custom Element base class

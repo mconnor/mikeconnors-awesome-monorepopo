@@ -20,7 +20,7 @@
     },
 
     "fix": {
-      "dependsOn": ["^fix"]
+      "dependsOn": []
     },
     "format": {},
     "format:check": {},
