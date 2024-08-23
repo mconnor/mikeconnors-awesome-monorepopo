@@ -39,8 +39,10 @@ const reactConfig = tseslint.config(
     files: ['**/*.jsx', '**/*.tsx'],
     rules: {
       'react/react-in-jsx-scope': 'off',
+      'react/no-unknown-property': ['error', { ignore: ['class'] }],
     },
   },
+  { ignores: ['**/*.astro'] },
 );
 
 export default [...reactConfig];

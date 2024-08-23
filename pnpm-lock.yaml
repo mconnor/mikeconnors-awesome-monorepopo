@@ -29,6 +29,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.3
         version: 0.9.3(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
+      '@astrojs/lit':
+        specifier: ^4.3.0
+        version: 4.3.0(@webcomponents/template-shadowroot@0.2.1)(lit@3.2.0)
       '@astrojs/mdx':
         specifier: ^3.1.4
         version: 3.1.4(astro@4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4))
@@ -50,6 +53,12 @@ importers:
       astro:
         specifier: ^4.14.3
         version: 4.14.3(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4)
+      lit:
+        specifier: ^3.2.0
+        version: 3.2.0
+      lit-html:
+        specifier: ^3.2.0
+        version: 3.2.0
       open-props:
         specifier: ^1.7.5
         version: 1.7.5
@@ -102,6 +111,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.9.3
         version: 0.9.3(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.5.4)
+      '@astrojs/lit':
+        specifier: ^4.3.0
+        version: 4.3.0(@webcomponents/template-shadowroot@0.2.1)(lit@3.2.0)
       '@astrojs/mdx':
         specifier: ^3.1.4
         version: 3.1.4(astro@4.14.5(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4))
@@ -111,9 +123,24 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.1.6
         version: 3.1.6
+      '@repo/layout-webcomponents':
+        specifier: workspace:^3.0.0
+        version: link:../../packages/layout-webcomponents
+      '@repo/styles':
+        specifier: workspace:*
+        version: link:../../packages/styles
       astro:
         specifier: ^4.14.5
         version: 4.14.5(@types/node@22.4.2)(rollup@4.21.0)(typescript@5.5.4)
+      lit:
+        specifier: ^3.2.0
+        version: 3.2.0
+      lit-html:
+        specifier: ^3.2.0
+        version: 3.2.0
+      open-props:
+        specifier: ^1.7.5
+        version: 1.7.5
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*

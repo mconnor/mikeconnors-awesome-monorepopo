@@ -5,13 +5,8 @@ import eslintConfigPrettier from '@repo/eslint-config/prettier-config';
 
 export default [
   ...astroConfig,
+  ...reactConfig,
 
-  {
-    ...reactConfig,
-    rules: {
-      'react/no-unknown-property': ['error', { ignore: ['class'] }],
-    },
-  },
   eslintConfigPrettier,
   {
     ignores: ['.prettierrc.mjs'],
