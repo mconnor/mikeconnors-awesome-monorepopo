@@ -7,7 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./box": "./src/lit-wc/Box/index.astro",
+    "./Box": "./src/lit-wc/Box/index.astro",
     "./Center": "./src/astro-wc/Center/index.astro",
     "./Reel": "./src/astro-wc/Reel/index.astro",
     "./Frame": "./src/astro-wc/Frame/index.astro",
