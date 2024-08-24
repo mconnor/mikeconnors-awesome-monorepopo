@@ -41,7 +41,7 @@ export class BoxClass extends LitElement {
         background-color: var(--my-bg-color); */
       }
 
-      :host(.invert) {
+      :host([invert]) {
         color: var(--my-bg-color, black);
         background-color: var(--my-color, white);
       }

@@ -3,10 +3,7 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
-    "rootDir": "src",
-    "declaration": true,
-    "declarationDir": "./types",
-    "declarationMap": true,
+    "rootDir": "src"
   },
   "include": [
     "src"

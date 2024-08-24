@@ -14,8 +14,6 @@ import type { RmUnitType } from '@repo/styles/Types';
  * @property {boolean} intrinsic
  */
 
-
-
 @customElement('center-l')
 export class CenterClass extends LitElement {
   @property({ type: String })
@@ -30,19 +28,17 @@ export class CenterClass extends LitElement {
   @property({ type: Boolean })
   intrinsic = false;
 
-  static styles =
-    css`
-      :host {
-        display: block;
-        margin-inline: auto;
-      }
-      :host([intrinsic]) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    `
-  ;
+  static styles = css`
+    :host {
+      display: block;
+      margin-inline: auto;
+    }
+    :host([intrinsic]) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  `;
 
   connectedCallback() {
     super.connectedCallback();
@@ -51,6 +47,7 @@ export class CenterClass extends LitElement {
   }
 
   updated(changedProperties) {
+    //works
     if (changedProperties.has('max')) {
       this.style.setProperty('max-width', this.max);
     }
@@ -58,22 +55,24 @@ export class CenterClass extends LitElement {
       this.style.setProperty('padding-inline-start', `${this.gutters}px`);
       this.style.setProperty('padding-inline-end', `${this.gutters}px`);
     }
-    if (changedProperties.has('andText')) {
-      this.style.setProperty('text-align', this.andText ? 'center' : 'initial');
-    }
-    if (changedProperties.has('intrinsic') && this.intrinsic) {
-      this.style.setProperty('display', 'flex');
-      this.style.setProperty('justify-content', 'center');
-      this.style.setProperty('align-items', 'center');
-    } else {
-      this.style.setProperty('display', 'block');
-    }
+
+    //not needed
+    // if (changedProperties.has('andText')) {
+    //   this.style.setProperty('text-align', this.andText ? 'center' : 'initial');
+    // }
+
+    // if (changedProperties.has('intrinsic') && this.intrinsic) {
+    //   this.style.setProperty('display', 'flex');
+    //   this.style.setProperty('justify-content', 'center');
+    //   this.style.setProperty('align-items', 'center');
+    // } else {
+    //   this.style.setProperty('display', 'block');
+    // }
   }
 
-  render() {
+  protected render() {
     const myStyles = {
       textAlign: this.andText ? 'center' : 'initial',
-      maxWidth: this.max,
     };
 
     return html`<slot style=${styleMap(myStyles)}></slot>`;

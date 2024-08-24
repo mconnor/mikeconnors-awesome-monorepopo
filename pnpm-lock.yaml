@@ -484,8 +484,6 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
 
-  tools/eslint-plugin-mconnor: {}
-
 packages:
 
   '@ampproject/remapping@2.3.0':

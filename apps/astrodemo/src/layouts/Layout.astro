@@ -19,7 +19,7 @@ const { title = 'mike connor' } = Astro.props;
   <Cover centeredElement="center-l" noPad>
     <Header desc={title} />
 
-    <Center max="var(--measure)">
+    <Center max="var(--measure)" andText intrinsic>
       <slot />
     </Center>
 
