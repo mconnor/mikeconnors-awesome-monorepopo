@@ -9,7 +9,7 @@ import Cover from '@repo/layout-webcomponents/Cover';
 interface Props {
   title?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  children: any;
+  children: unknown;
 }
 
 const { title = 'mike connor' } = Astro.props;
@@ -19,8 +19,8 @@ const { title = 'mike connor' } = Astro.props;
   <Cover centeredElement="center-l" noPad>
     <Header desc={title} />
 
-    <Center max="100%">
-      <main><slot /></main>
+    <Center max="var(--measure)">
+      <slot />
     </Center>
 
     <Footer />

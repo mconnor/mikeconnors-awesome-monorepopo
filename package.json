@@ -26,6 +26,7 @@
     "build": "turbo build",
     "preview": "turbo preview",
     "dev": "turbo",
+    "dev:demo": "turbo dev --filter=@app/astrodemo",
     "lint": "turbo lint",
     "fix": "turbo fix",
     "inspect": "turbo inspect",

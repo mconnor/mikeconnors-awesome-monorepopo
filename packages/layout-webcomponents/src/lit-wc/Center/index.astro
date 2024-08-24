@@ -1,0 +1,28 @@
+---
+import { CenterClass } from './center-l';
+import type { RmUnitType } from '@repo/styles/Types';
+
+interface Props {
+  max?: RmUnitType;
+  andText?: boolean;
+  gutters?: RmUnitType;
+  intrinsic?: boolean;
+  children: unknown;
+}
+const props = Astro.props;
+---
+
+<CenterClass {...props} client:visible>
+  <slot />
+</CenterClass>
+
+<script src="./center-l.js"></script>
+
+<!-- <style>
+  center-l {
+    display: block;
+    box-sizing: content-box;
+    margin-inline: auto;
+    max-inline-size: var(--measure);
+  }
+</style> -->

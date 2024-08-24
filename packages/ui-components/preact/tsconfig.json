@@ -2,17 +2,12 @@
   "extends": "@repo/typescript-config/preact.json",
   "compilerOptions": {
     "rootDir": "src",
-    // Preact specific settings
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
   },
   "include": [
     "src"
   ],
   "exclude": [
-    "node_modules",
     "dist",
-    ".astro",
     ".turbo"
   ]
 }
