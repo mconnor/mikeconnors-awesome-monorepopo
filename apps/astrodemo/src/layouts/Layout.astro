@@ -8,7 +8,6 @@ import Cover from '@repo/layout-webcomponents/Cover';
 
 interface Props {
   title?: string;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: unknown;
 }
 
@@ -16,12 +15,12 @@ const { title = 'mike connor' } = Astro.props;
 ---
 
 <BaseLayout title={title}>
-  <Cover centeredElement="center-l" noPad>
+  <Cover centeredElement="main" noPad>
     <Header desc={title} />
 
-    <Center max="var(--measure)" andText intrinsic>
-      <slot />
-    </Center>
+    <main>
+      <Center max="var(--measure)" andText intrinsic> <slot /></Center>
+    </main>
 
     <Footer />
   </Cover>
