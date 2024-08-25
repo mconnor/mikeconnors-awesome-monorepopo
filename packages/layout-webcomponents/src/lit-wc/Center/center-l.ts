@@ -1,5 +1,5 @@
-import { css, LitElement } from 'lit';
-import { html } from 'lit-html';
+import { css, html, LitElement } from 'lit';
+import { type PropertyValues } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styleMap } from 'lit/directives/style-map.js';
 import type { RmUnitType } from '@repo/styles/Types';
@@ -46,7 +46,7 @@ export class CenterClass extends LitElement {
     this.style.setProperty('max-width', this.max);
   }
 
-  updated(changedProperties) {
+  updated(changedProperties: PropertyValues<this>) {
     //works
     if (changedProperties.has('max')) {
       this.style.setProperty('max-width', this.max);

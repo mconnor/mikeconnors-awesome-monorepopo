@@ -1,5 +1,5 @@
-import { css, LitElement } from 'lit';
-import { html } from 'lit-html';
+import { css, html, LitElement } from 'lit';
+
 import { customElement, property } from 'lit/decorators.js';
 
 import { styleMap } from 'lit/directives/style-map.js';
@@ -12,20 +12,9 @@ import type { RmUnitType, BorderStyle } from '@repo/styles/Types';
  * @property {string} padding=var(--s1) A CSS `padding` value
  * @property {string} borderWidth=var(--border-thin) A CSS `border-width` value
  * @property {string} borderStyle
- * @property {boolean} invert=false Whether to apply an inverted theme. Only recommended for greyscale designs.
  */
 @customElement('box-l')
 export class BoxClass extends LitElement {
-  connectedCallback() {
-    super.connectedCallback();
-    // Check if this component was server-side rendered
-    const isSSR = this.getAttribute('is:ssr') === 'true';
-    console.log(`Issss SSR: ${isSSR}`);
-  }
-  disconnectedCallback() {
-    super.disconnectedCallback();
-  }
-
   static styles = [
     css`
       :host {
@@ -33,17 +22,13 @@ export class BoxClass extends LitElement {
         outline: 0.125rem solid transparent;
         outline-offset: -0.125rem;
         border-style: solid;
-        color: inherit;
-        background-color: inherit;
-        /* border-width: var(--border-thin);
-        padding: var(--s1); */
-        /* color: var(--my-color);
-        background-color: var(--my-bg-color); */
+        color: var(--my-color, black);
+        background-color: var(--my-bg-color, white);
       }
 
       :host([invert]) {
-        color: var(--my-bg-color, black);
-        background-color: var(--my-color, white);
+        color: var(--my-bg-color, white);
+        background-color: var(--my-color, black);
       }
 
       .highlighted {
@@ -57,12 +42,6 @@ export class BoxClass extends LitElement {
 
   @property({ type: String })
   borderWidth: RmUnitType = '1px';
-
-  @property({ type: Boolean })
-  invert = false;
-
-  @property({ type: Boolean })
-  highlight = false;
 
   @property({ type: String })
   borderStyle: BorderStyle = 'solid';
