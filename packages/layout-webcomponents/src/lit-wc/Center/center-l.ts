@@ -15,7 +15,7 @@ import type { RmUnitType } from '@repo/styles/Types';
  */
 
 @customElement('center-l')
-export class CenterClass extends LitElement {
+export class Center extends LitElement {
   @property({ type: String })
   max: RmUnitType;
 
@@ -31,7 +31,9 @@ export class CenterClass extends LitElement {
   static styles = css`
     :host {
       display: block;
+      box-sizing: content-box;
       margin-inline: auto;
+      max-inline-size: var(--measure);
     }
     :host([intrinsic]) {
       display: flex;
@@ -83,3 +85,8 @@ export class CenterClass extends LitElement {
     // };
   }
 }
+// declare global {
+//   interface HTMLElementTagNameMap {
+//     'center-l': Center;
+//   }
+// }

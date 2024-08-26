@@ -14,7 +14,7 @@ import type { RmUnitType, BorderStyle } from '@repo/styles/Types';
  * @property {string} borderStyle
  */
 @customElement('box-l')
-export class BoxClass extends LitElement {
+export class Box extends LitElement {
   static styles = [
     css`
       :host {
@@ -59,8 +59,8 @@ export class BoxClass extends LitElement {
   }
 }
 
-// declare global {
-//   interface HTMLElementTagNameMap {
-//     'box-l': Box;
-//   }
-// }
+declare global {
+  interface HTMLElementTagNameMap {
+    'box-l': Box;
+  }
+}

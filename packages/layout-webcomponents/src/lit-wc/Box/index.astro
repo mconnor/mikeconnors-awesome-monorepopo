@@ -1,5 +1,5 @@
 ---
-import { BoxClass } from './box-l';
+import { Box } from './box-l';
 import type { RmUnitType, BorderStyle } from '@repo/styles/Types';
 
 interface Props {
@@ -12,6 +12,6 @@ interface Props {
 const props = Astro.props;
 ---
 
-<BoxClass {...props} client:visible>
+<Box {...props} client:visible>
   <slot />
-</BoxClass>
+</Box>

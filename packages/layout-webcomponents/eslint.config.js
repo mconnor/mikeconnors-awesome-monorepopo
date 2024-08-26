@@ -9,4 +9,5 @@ export default [
   ...litConfig,
 
   eslintConfigPrettier,
+  { ignores: ['test/*.ts'] },
 ];
