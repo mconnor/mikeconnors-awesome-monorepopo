@@ -40,7 +40,7 @@
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "syncpack": "^12.4.0",
-    "turbo": "^2.1.0",
+    "turbo": "^2.1.1",
     "typescript": "^5.5.4"
   },
   "engines": {
