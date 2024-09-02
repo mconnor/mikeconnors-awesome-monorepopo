@@ -1,15 +1,11 @@
 {
   "public": true,
   "author": "Mike Connor",
-  "name": "with-vite",
+  "name": "mikeconnors-awesome-monorepo",
   "type": "module",
-  "imports": {
-    "#*": "./src/*",
-    "#unit-types": "./src/UnitTypes.ts"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mconnor/vite-turbo"
+    "url": "https://github.com/mconnor/mikeconnors-awesome-monorepopo"
   },
   "keywords": [
     "vite",
