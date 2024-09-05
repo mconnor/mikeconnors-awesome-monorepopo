@@ -1,17 +1,19 @@
 ---
 import BaseLayout from '#layouts/BaseLayout.astro';
 import Header from '#components/Header.astro';
-import Footer from '#components/Header.astro';
+import Footer from '#components/Footer.astro';
 
 import Center from '@repo/layout-webcomponents/Center';
 import Cover from '@repo/layout-webcomponents/Cover';
+import type { RmUnitType } from '@repo/styles/Types';
 
 interface Props {
   title?: string;
+  centerWidth?: RmUnitType;
   children: unknown;
 }
 
-const { title = 'mike connor' } = Astro.props;
+const { centerWidth = '60ch', title = 'mike connor' } = Astro.props;
 ---
 
 <BaseLayout title={title}>
@@ -19,7 +21,7 @@ const { title = 'mike connor' } = Astro.props;
     <Header desc={title} />
 
     <main>
-      <Center max="var(--measure)" andText intrinsic> <slot /></Center>
+      <Center max={centerWidth}><slot /></Center>
     </main>
 
     <Footer />

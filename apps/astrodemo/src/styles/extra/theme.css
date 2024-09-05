@@ -18,8 +18,9 @@
 @import './theme.toucan.props.css';
 @import './theme.toucan.switch.css';
 
+/* init color scheme */
 :where(html) {
-  color-scheme: toucan;
+  color-scheme: light;
 }
 
 /* prefers dark scheme */

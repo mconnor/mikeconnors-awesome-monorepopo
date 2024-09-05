@@ -5,24 +5,10 @@ import Stack from '@repo/layout-webcomponents/Stack';
 ---
 
 <Layout title="xxx">
-  <Stack space="var(--s1)" recursive splitAfter={2}>
-    <Box>
-      <Box>Lorem ipsum dolor</Box>
-      <Box>Lorem ipsum dolor</Box>
-      <Box>Lorem ipsum dolor</Box>
-      <Box>Lorem ipsum dolor</Box>
-    </Box>
-    <Box invert>
-      <Box>Lorem ipsum dolor</Box>
-      <Box>Lorem ipsum dolor</Box>
-      <Box invert> Lorem ipsum dolor </Box>
-      <Box>Lorem ipsum dolor</Box>
-    </Box>
-    <Box>
-      <Box>Lorem ipsum dolor</Box>
-      <Box>Lorem ipsum dolor</Box>
-      <Box>Lorem ipsum dolor</Box>
-      <Box>Lorem ipsum dolor</Box>
-    </Box>
+  <Stack space="0">
+    <Box borderWidth="0" invert>Lorem ipsum dolor</Box>
+    <Box borderStyle="double" borderWidth="8px" invert>Lorem ipsum dolor</Box>
+    <Box borderStyle="double" borderWidth="8px" invert>Lorem ipsum dolor</Box>
+    <Box borderStyle="double" borderWidth="8px">Lorem ipsum dolor</Box>
   </Stack>
 </Layout>

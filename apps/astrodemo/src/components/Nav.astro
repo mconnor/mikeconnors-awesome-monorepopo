@@ -1,6 +1,6 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-import Box from '@repo/layout-webcomponents/Box';
+// import Box from '@repo/layout-webcomponents/Box';
 
 type Props = HTMLAttributes<'a'>;
 
@@ -10,4 +10,4 @@ const { href } = Astro.props;
 // const isActive = href === path || href === path.replace(/\/$/, '');
 ---
 
-<Box> <a href={href}><slot /></a></Box>
+<a href={href}><slot /></a>

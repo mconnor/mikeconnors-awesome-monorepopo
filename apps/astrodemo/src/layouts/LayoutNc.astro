@@ -1,0 +1,27 @@
+---
+import BaseLayout from '#layouts/BaseLayout.astro';
+import Header from '#components/Header.astro';
+import Footer from '#components/Header.astro';
+import Sidebar from '@repo/layout-webcomponents/Sidebar';
+
+import Cover from '@repo/layout-webcomponents/Cover';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'mike connor' } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <Cover centeredElement="sidebar-l" noPad>
+    <Header desc={title} />
+
+    <Sidebar sideWidth="30%">
+      <slot name="left" />
+      <main></main><slot name="right" />
+    </Sidebar>
+  </Cover>
+
+  <Footer />
+</BaseLayout>
