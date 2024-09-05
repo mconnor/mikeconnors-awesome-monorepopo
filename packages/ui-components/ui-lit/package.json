@@ -7,6 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
+    "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
     "./my-datepicker": "./src/Datepicker/my-datepicker.ts",
     "./Timer": "./src/Timer/index.astro"
   },

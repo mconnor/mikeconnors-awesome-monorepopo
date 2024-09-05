@@ -1,0 +1,22 @@
+---
+import Label from './Label.astro';
+// interface Props {
+//   storedTheme?: string;
+// }
+
+// const { storedTheme = 'auto' } = Astro.props;
+---
+
+<astro-theme-switcher>
+  <form id="theme" data-select-theme class="appColors">
+    <Label theme="auto" />
+    <Label theme="light" />
+    <Label theme="dark" />
+    <Label theme="toucan" />
+    <Label theme="dim" />
+    <Label theme="grape" />
+    <Label theme="choco" />
+  </form>
+</astro-theme-switcher>
+
+<script src="./AstroThemeSwitcher.js"></script>

@@ -7,7 +7,6 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./ThemeSwitcher": "./src/lit-ui/ThemeSwitcher/index.astro",
     "./Box": "./src/lit-wc/Box/index.astro",
     "./Center": "./src/astro-wc/Center/index.astro",
     "./Reel": "./src/astro-wc/Reel/index.astro",
