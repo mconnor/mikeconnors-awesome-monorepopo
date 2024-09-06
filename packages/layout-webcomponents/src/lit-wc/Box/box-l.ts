@@ -14,28 +14,35 @@ import type { RmUnitType, BorderStyle } from '@repo/styles/Types';
  * @property {string} borderStyle
  */
 
+const mainColor = css`var(--theme-primary, blue)`;
+const bgColor = css`var(--theme-secondary, yellow)`;
+
 @customElement('box-l')
 export class BoxClass extends LitElement {
   static styles = [
     css`
       :host {
-        font-family: var(--box-font-family, Roboto);
         display: block;
-
         outline: 0.125rem solid transparent;
         outline-offset: -0.125rem;
+      }
+
+      ::slotted {
+        color: ${mainColor};
+        background-color: ${bgColor};
+      }
+      ::slotted(*) {
+        color: inherit;
+        background-color: inherit;
       }
 
       .highlighted {
         opacity: 0.2;
       }
+
       .inverted {
-        color: var(--box-background-color, white);
-        background-color: var(--box-text-color, green);
-      }
-      .notInverted {
-        color: var(--box-text-color, green);
-        background-color: var(--box-background-color, white);
+        color: ${bgColor};
+        background-color: ${mainColor};
       }
     `,
   ];
@@ -60,7 +67,7 @@ export class BoxClass extends LitElement {
     };
 
     return html`<div
-      class=${classMap({ inverted: this.invert, notInverted: !this.invert })}
+      class=${classMap({ inverted: this.invert })}
       style=${styleMap(styles)}
     >
       <slot></slot>
