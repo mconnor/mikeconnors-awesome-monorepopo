@@ -27,8 +27,8 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/eslint__js": "^8.42.3",
-    "eslint": "^9.9.1",
-    "typescript": "^5.5.4"
+    "eslint": "^9.10.0",
+    "typescript": "^5.6.2"
   },
   "dependencies": {
     "zod": "^3.23.8"

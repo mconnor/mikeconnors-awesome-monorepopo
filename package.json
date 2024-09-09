@@ -35,7 +35,7 @@
   "devDependencies": {
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "syncpack": "^12.4.0",
+    "syncpack": "^13.0.0",
     "turbo": "^2.1.1",
     "typescript": "^5.5.4"
   },
@@ -43,5 +43,5 @@
     "node": ">= 20.11.0 <21 || >= 21.2.0",
     "pnpm": ">=9.1.2"
   },
-  "packageManager": "pnpm@9.9.0"
+  "packageManager": "pnpm@9.10.0"
 }

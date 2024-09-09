@@ -24,20 +24,20 @@
   "dependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.3",
     "@eslint/eslintrc": "^3.1.0",
-    "@eslint/js": "^9.9.1",
+    "@eslint/js": "^9.10.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
     "astro-eslint-parser": "^1.0.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-astro": "^1.2.3",
-    "eslint-plugin-lit": "^1.14.0",
+    "eslint-plugin-lit": "^1.15.0",
     "eslint-plugin-markdown": "^5.1.0",
-    "eslint-plugin-react": "^7.35.1",
+    "eslint-plugin-react": "^7.35.2",
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-svelte": "^2.43.0",
     "eslint-plugin-wc": "^2.1.1",
     "globals": "^15.9.0",
-    "typescript-eslint": "^8.4.0"
+    "typescript-eslint": "^8.5.0"
   },
   "peerDependencies": {
     "eslint": "^9"
