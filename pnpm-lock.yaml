@@ -34,25 +34,28 @@ importers:
         version: 4.3.0(@webcomponents/template-shadowroot@0.2.1)(lit@3.2.0)
       '@astrojs/mdx':
         specifier: ^3.1.5
-        version: 3.1.5(astro@4.15.2(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2))
+        version: 3.1.5(astro@4.15.4(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2))
       '@astrojs/rss':
         specifier: ^4.0.7
         version: 4.0.7
       '@astrojs/vercel':
         specifier: ^7.8.0
-        version: 7.8.0(astro@4.15.2(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2))(react@18.3.1)
+        version: 7.8.0(astro@4.15.4(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2))(react@18.3.1)
       '@repo/layout-webcomponents':
         specifier: workspace:^
         version: link:../../packages/layout-webcomponents
       '@repo/styles':
         specifier: workspace:*
         version: link:../../packages/styles
+      '@repo/ui-lit':
+        specifier: workspace:^
+        version: link:../../packages/ui-components/ui-lit
       '@webcomponents/template-shadowroot':
         specifier: ^0.2.1
         version: 0.2.1
       astro:
-        specifier: ^4.15.2
-        version: 4.15.2(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2)
+        specifier: ^4.15.4
+        version: 4.15.4(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2)
       lit:
         specifier: ^3.2.0
         version: 3.2.0
@@ -495,10 +498,10 @@ importers:
         version: 4.2.19
       svelte-check:
         specifier: ^3.8.6
-        version: 3.8.6(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.44))(postcss@8.4.44)(svelte@4.2.19)
+        version: 3.8.6(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.45))(postcss@8.4.45)(svelte@4.2.19)
       svelte-preprocess:
         specifier: ^6.0.2
-        version: 6.0.2(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.44))(postcss@8.4.44)(svelte@4.2.19)(typescript@5.6.2)
+        version: 6.0.2(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.45))(postcss@8.4.45)(svelte@4.2.19)(typescript@5.6.2)
       typescript:
         specifier: ^5.6.2
         version: 5.6.2
@@ -2304,6 +2307,11 @@ packages:
 
   astro@4.15.2:
     resolution: {integrity: sha512-UlkQ/cWRLabOm6eVe6oRwjVAKd47N3+d1ktKpEZ5lqQKwq5uYrXQUu3n0ftsm6SJ+01x2LlPmjRe9OfKAbGpXA==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
+    hasBin: true
+
+  astro@4.15.4:
+    resolution: {integrity: sha512-wqy+m3qygt9DmCSqMsckxyK4ccCUFtti2d/WlLkEpAlqHgyDIg20zRTLHO2v/H4YeSlJ8sAcN0RW2FhOeYbINg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -6121,6 +6129,14 @@ packages:
       vite:
         optional: true
 
+  vitefu@1.0.2:
+    resolution: {integrity: sha512-0/iAvbXyM3RiPPJ4lyD4w6Mjgtf4ejTK6TPvTNG3H32PLwuT0N/ZjJLiXug7ETE/LWtTeHw9WRv7uX/tIKYyKg==}
+    peerDependencies:
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0
+    peerDependenciesMeta:
+      vite:
+        optional: true
+
   vitest@2.0.5:
     resolution: {integrity: sha512-8GUxONfauuIdeSl5f9GTgVEpg5BTOlplET4WEDaeY2QBiN8wSm68vxN/tb5z405OwppfoCavnwXafiaYBC/xOA==}
     engines: {node: ^18.0.0 || >=20.0.0}
@@ -6555,6 +6571,26 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@astrojs/mdx@3.1.5(astro@4.15.4(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2))':
+    dependencies:
+      '@astrojs/markdown-remark': 5.2.0
+      '@mdx-js/mdx': 3.0.1
+      acorn: 8.12.1
+      astro: 4.15.4(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2)
+      es-module-lexer: 1.5.4
+      estree-util-visit: 2.0.0
+      gray-matter: 4.0.3
+      hast-util-to-html: 9.0.2
+      kleur: 4.1.5
+      rehype-raw: 7.0.0
+      remark-gfm: 4.0.0
+      remark-smartypants: 3.0.2
+      source-map: 0.7.4
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+
   '@astrojs/preact@3.5.2(@babel/core@7.25.2)(preact@10.23.2)(vite@5.4.3(@types/node@22.5.2))':
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.25.2(@babel/core@7.25.2)
@@ -6628,13 +6664,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vercel@7.8.0(astro@4.15.2(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2))(react@18.3.1)':
+  '@astrojs/vercel@7.8.0(astro@4.15.4(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2))(react@18.3.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.4.1
       '@vercel/analytics': 1.3.1(react@18.3.1)
       '@vercel/edge': 1.1.2
       '@vercel/nft': 0.27.4
-      astro: 4.15.2(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2)
+      astro: 4.15.4(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2)
       esbuild: 0.21.5
       fast-glob: 3.3.2
       web-vitals: 3.5.2
@@ -8828,6 +8864,89 @@ snapshots:
       vfile: 6.0.3
       vite: 5.4.3(@types/node@22.5.2)
       vitefu: 0.2.5(vite@5.4.3(@types/node@22.5.2))
+      which-pm: 3.0.0
+      xxhash-wasm: 1.0.2
+      yargs-parser: 21.1.1
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.2(zod@3.23.8)
+      zod-to-ts: 1.2.0(typescript@5.6.2)(zod@3.23.8)
+    optionalDependencies:
+      sharp: 0.33.5
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - lightningcss
+      - rollup
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - typescript
+
+  astro@4.15.4(@types/node@22.5.2)(rollup@4.21.2)(typescript@5.6.2):
+    dependencies:
+      '@astrojs/compiler': 2.10.3
+      '@astrojs/internal-helpers': 0.4.1
+      '@astrojs/markdown-remark': 5.2.0
+      '@astrojs/telemetry': 3.1.0
+      '@babel/core': 7.25.2
+      '@babel/plugin-transform-react-jsx': 7.25.2(@babel/core@7.25.2)
+      '@babel/types': 7.25.6
+      '@oslojs/encoding': 0.4.1
+      '@rollup/pluginutils': 5.1.0(rollup@4.21.2)
+      '@types/babel__core': 7.20.5
+      '@types/cookie': 0.6.0
+      acorn: 8.12.1
+      aria-query: 5.3.0
+      axobject-query: 4.1.0
+      boxen: 7.1.1
+      ci-info: 4.0.0
+      clsx: 2.1.1
+      common-ancestor-path: 1.0.1
+      cookie: 0.6.0
+      cssesc: 3.0.0
+      debug: 4.3.7
+      deterministic-object-hash: 2.0.2
+      devalue: 5.0.0
+      diff: 5.2.0
+      dlv: 1.1.3
+      dset: 3.1.3
+      es-module-lexer: 1.5.4
+      esbuild: 0.21.5
+      estree-walker: 3.0.3
+      fast-glob: 3.3.2
+      fastq: 1.17.1
+      flattie: 1.1.1
+      github-slugger: 2.0.0
+      gray-matter: 4.0.3
+      html-escaper: 3.0.3
+      http-cache-semantics: 4.1.1
+      js-yaml: 4.1.0
+      kleur: 4.1.5
+      magic-string: 0.30.11
+      magicast: 0.3.5
+      micromatch: 4.0.8
+      mrmime: 2.0.0
+      neotraverse: 0.6.18
+      ora: 8.1.0
+      p-limit: 6.1.0
+      p-queue: 8.0.1
+      path-to-regexp: 6.2.2
+      preferred-pm: 4.0.0
+      prompts: 2.4.2
+      rehype: 13.0.1
+      semver: 7.6.3
+      shiki: 1.16.1
+      string-width: 7.2.0
+      strip-ansi: 7.1.0
+      tinyexec: 0.3.0
+      tsconfck: 3.1.3(typescript@5.6.2)
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+      vite: 5.4.3(@types/node@22.5.2)
+      vitefu: 1.0.2(vite@5.4.3(@types/node@22.5.2))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -12212,6 +12331,14 @@ snapshots:
     optionalDependencies:
       postcss: 8.4.44
 
+  postcss-load-config@3.1.4(postcss@8.4.45):
+    dependencies:
+      lilconfig: 2.1.0
+      yaml: 1.10.2
+    optionalDependencies:
+      postcss: 8.4.45
+    optional: true
+
   postcss-nesting@13.0.0(postcss@8.4.44):
     dependencies:
       '@csstools/selector-resolve-nested': 2.0.0(postcss-selector-parser@6.1.2)
@@ -12987,14 +13114,14 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@3.8.6(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.44))(postcss@8.4.44)(svelte@4.2.19):
+  svelte-check@3.8.6(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.45))(postcss@8.4.45)(svelte@4.2.19):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 3.6.0
       picocolors: 1.1.0
       sade: 1.8.1
       svelte: 4.2.19
-      svelte-preprocess: 5.1.4(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.44))(postcss@8.4.44)(svelte@4.2.19)(typescript@5.6.2)
+      svelte-preprocess: 5.1.4(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.45))(postcss@8.4.45)(svelte@4.2.19)(typescript@5.6.2)
       typescript: 5.6.2
     transitivePeerDependencies:
       - '@babel/core'
@@ -13021,7 +13148,7 @@ snapshots:
     dependencies:
       svelte: 4.2.19
 
-  svelte-preprocess@5.1.4(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.44))(postcss@8.4.44)(svelte@4.2.19)(typescript@5.6.2):
+  svelte-preprocess@5.1.4(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.45))(postcss@8.4.45)(svelte@4.2.19)(typescript@5.6.2):
     dependencies:
       '@types/pug': 2.0.10
       detect-indent: 6.1.0
@@ -13031,17 +13158,17 @@ snapshots:
       svelte: 4.2.19
     optionalDependencies:
       '@babel/core': 7.25.2
-      postcss: 8.4.44
-      postcss-load-config: 3.1.4(postcss@8.4.44)
+      postcss: 8.4.45
+      postcss-load-config: 3.1.4(postcss@8.4.45)
       typescript: 5.6.2
 
-  svelte-preprocess@6.0.2(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.44))(postcss@8.4.44)(svelte@4.2.19)(typescript@5.6.2):
+  svelte-preprocess@6.0.2(@babel/core@7.25.2)(postcss-load-config@3.1.4(postcss@8.4.45))(postcss@8.4.45)(svelte@4.2.19)(typescript@5.6.2):
     dependencies:
       svelte: 4.2.19
     optionalDependencies:
       '@babel/core': 7.25.2
-      postcss: 8.4.44
-      postcss-load-config: 3.1.4(postcss@8.4.44)
+      postcss: 8.4.45
+      postcss-load-config: 3.1.4(postcss@8.4.45)
       typescript: 5.6.2
 
   svelte2tsx@0.7.15(svelte@4.2.19)(typescript@5.6.2):
@@ -13511,6 +13638,10 @@ snapshots:
       fsevents: 2.3.3
 
   vitefu@0.2.5(vite@5.4.3(@types/node@22.5.2)):
+    optionalDependencies:
+      vite: 5.4.3(@types/node@22.5.2)
+
+  vitefu@1.0.2(vite@5.4.3(@types/node@22.5.2)):
     optionalDependencies:
       vite: 5.4.3(@types/node@22.5.2)
 

@@ -1,11 +1,12 @@
 ---
 import Box from '@repo/layout-webcomponents/Box';
-import Switcher from '@repo/layout-webcomponents/Switcher';
+
 import MainNav from './MainNav.astro';
 import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
 ---
 
 <Box invert borderWidth="0" padding="0">
+  <ThemeSwitcher />
   <Box borderWidth="0"><ThemeSwitcher /></Box>
   <Box borderWidth="0">mike connor tech</Box>
   <Box borderWidth="0"> <MainNav /></Box>
