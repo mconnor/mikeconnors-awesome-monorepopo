@@ -4,10 +4,7 @@
   "type": "module",
   "author": "Mike Connor",
   "imports": {
-    "#*": "./src/*",
-    "#unit-types": "./src/UnitTypes.ts",
-    "#astro-wc/*": "./src/custom-layout-components/astro-wc/*",
-    "#lit-wc/*": "./src/custom-layout-components/lit-wc/*"
+    "#*": "./src/*"
   },
   "keywords": [
     "astro",
@@ -43,6 +40,9 @@
     "sentry:sourcemaps": "sentry-cli sourcemaps inject --org mike-connor --project astro-openprops-blog-w-tags ./dist && sentry-cli sourcemaps upload --org mike-connor --project astro-openprops-blog-w-tags ./dist"
   },
   "dependencies": {
+    "@repo/layout-webcomponents": "workspace:^3.0.0",
+    "@repo/styles": "workspace:*",
+    "@repo/ui-lit": "workspace:^",
     "@astrojs/check": "^0.9.3",
     "@astrojs/lit": "^4.3.0",
     "@astrojs/mdx": "^3.1.5",
@@ -53,8 +53,6 @@
     "@sentry/browser": "^8.30.0",
     "@sentry/cli": "^2.36.1",
     "@sentry/vite-plugin": "^2.22.4",
-    "@repo/layout-webcomponents": "workspace:^3.0.0",
-    "@repo/styles": "workspace:*",
     "astro": "^4.15.4",
     "astro-icon": "^1.1.1",
     "date-fns": "^3.6.0",
@@ -68,18 +66,12 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/eslint__js": "^8.42.3",
     "@types/postcss-import": "^14.0.3",
     "eslint": "^9.10.0",
     "vite": "^5.4.3",
-    "@types/eslint-config-prettier": "^6.11.3",
-    "@types/eslint-plugin-markdown": "^2.0.2",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "astro-eslint-parser": "^1.0.2",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
-    "eslint-config-prettier": "^9.1.0",
-    "globals": "^15.9.0",
     "lit-analyzer": "^2.0.3",
     "postcss": "^8.4.45",
     "postcss-custom-media": "^11.0.1",
