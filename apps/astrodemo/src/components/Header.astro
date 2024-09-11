@@ -1,13 +1,21 @@
 ---
 import Box from '@repo/layout-webcomponents/Box';
+import Cluster from '@repo/layout-webcomponents/Cluster';
 
 import MainNav from './MainNav.astro';
 import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
 ---
 
-<Box invert borderWidth="0" padding="0">
+<Box invert padding="var(--s1)" borderWidth="0">
+  <!-- <Hamburger /> -->
   <ThemeSwitcher />
-  <Box borderWidth="0"><ThemeSwitcher /></Box>
-  <Box borderWidth="0">mike connor tech</Box>
-  <Box borderWidth="0"> <MainNav /></Box>
+  <Cluster align="baseline" justify="space-between" space="0">
+    <Link isMainNav href="/"><h1>Mike Connor</h1></Link>
+
+    <!-- <AstroNavigateSelect /> -->
+
+    <Box borderWidth="0" padding="0">
+      <MainNav />
+    </Box>
+  </Cluster>
 </Box>

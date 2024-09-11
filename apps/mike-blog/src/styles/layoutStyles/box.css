@@ -1,0 +1,24 @@
+[class^='box'] {
+  * {
+    color: inherit;
+    background-color: inherit;
+  }
+}
+
+[class^='box'].invert {
+  /* filter: invert(100%); */
+  color: var(--my-bg-color, black);
+  background-color: var(--my-color, white);
+}
+
+.box {
+  padding: var(--s1);
+
+  border-color: var(--my-color, black);
+  border-style: solid;
+  border-width: var(--border-thin);
+}
+.box-no-border {
+  padding: var(--s1);
+  border: 0 solid;
+}

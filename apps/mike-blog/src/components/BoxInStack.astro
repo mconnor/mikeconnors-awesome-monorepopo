@@ -1,0 +1,25 @@
+---
+import Box from '#lit-wc/Box/index.astro';
+import Stack from '#astro-wc/Stack/index.astro';
+
+// type Props = {
+//   headline: string;
+//   quote: string;
+//   desc: string;
+//   tagCounts: Record<string, number>;
+// };
+
+// const { desc } = Astro.props;
+---
+
+<Stack>
+  <slot name="headline" />
+  <blockquote>
+    <slot name="quote" />
+  </blockquote>
+  <Box>
+    <slot name="box-content" />
+  </Box>
+  <slot name="desc" />
+  <div role="figure"><slot name="image" /></div>
+</Stack>

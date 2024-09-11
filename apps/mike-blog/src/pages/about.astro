@@ -1,0 +1,143 @@
+---
+import Layout from '#layouts/Layout.astro';
+import { Stack } from '#astro-wc/index.js';
+import Box from '#lit-wc/Box/index.astro';
+import CardDelux from '#components/CardDelux.astro';
+// import { Icon } from 'astro-icon/components';
+// import { Code } from 'astro:components';
+
+const pageTitle = 'About';
+---
+
+<Layout title={pageTitle} maxW="60ch">
+  <!-- <div class="app-colors"> -->
+  <Stack>
+    <Box>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis eius
+        cupiditate architecto illo laudantium deleniti iure nemo. Doloribus,
+        maiores ea mollitia nulla aperiam sapiente maxime sint suscipit quae
+        nam? Culpa.
+      </p>
+      <Box invert>
+        <h6>alert: o laudantium deleniti iure nemo</h6>
+      </Box>
+    </Box>
+    <CardDelux num={1}>
+      <span slot="headline">Lorem ipsum dolor sit amet</span>
+      <span slot="sub">Delectus eius itaque accusantium.</span>
+      <span slot="body">
+        <!-- <Icon name="mdi:check-all" size={60} /> -->
+        <p>
+          Consectetur adipisicing elit. Doloribus quam non eaque sapiente,
+          inventore rem facere cum minima, tempora in accusamus voluptatum
+          nobis, delectus eius itaque accusantium. Odio, maiores fugit.
+        </p>
+        <!-- do not put a directive on astro web-components -->
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eos
+          molestiae illo vitae sint modi perspiciatis enim ipsa consectetur
+          sapiente voluptas, ut excepturi! Fuga enim animi ab dolor iusto nam?
+        </p>
+        <p>
+          Consectetur adipisicing elit. Doloribus quam non eaque sapiente,
+          inventore rem facere cum minima, tempora in accusamus voluptatum
+          nobis, delectus eius itaque accusantium. Odio, maiores fugit.
+        </p>
+      </span>
+    </CardDelux>
+    <CardDelux num={2}>
+      <div slot="headline">Lorem ipsum dolor sit amet</div>
+      <div slot="sub">Rem facere cum minima, tempora in accusamus</div>
+      <div slot="body">
+        Consectetur adipisicing elit. Doloribus quam non eaque sapiente,
+        inventore rem facere cum minima, tempora in accusamus voluptatum nobis,
+        delectus eius itaque accusantium. Odio, maiores fugit.
+      </div><CardDelux>
+        <div slot="headline">Lorem ipsum dolor sit amet</div>
+
+        <div slot="sub">on eaque sapiente,</div>
+
+        <div slot="body">Doloribus quam non eaque sapiente</div>
+      </CardDelux>
+    </CardDelux>
+
+    <CardDelux num={3}>
+      <div slot="headline">Lorem ipsum dolor sit amet</div>
+      <div slot="sub">Rem facere cum minima, tempora in accusamus</div>
+      <div slot="body">
+        Consectetur adipisicing elit. Doloribus quam non eaque sapiente,
+        inventore rem facere cum minima, tempora in accusamus voluptatum nobis,
+        delectus eius itaque accusantium. Odio, maiores fugit.
+      </div><CardDelux>
+        <CardDelux num={4}>
+          <div slot="headline">Lorem ipsum dolor sit amet</div>
+          <div slot="sub">Rem facere cum minima, tempora in accusamus</div>
+          <div slot="body">
+            Consectetur adipisicing elit. Doloribus quam non eaque sapiente,
+            inventore rem facere cum minima, tempora in accusamus voluptatum
+            nobis, delectus eius itaque accusantium. Odio, maiores fugit.
+          </div><CardDelux>
+            <div class="surface3 box">
+              <Box
+                ><em
+                  >adipisicing elit. Doloribus quam non eaque sapiente,
+                  inventore rem facere cum minima, tempora in accusamus
+                </em></Box
+              >
+              <Box invert
+                ><em
+                  >invert oloribus quam non eaque sapiente, inventore rem facere
+                  cum minima, tempora in accusamus voluptatum nobis,
+                </em></Box
+              >
+
+              <Box
+                ><p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus quam non eaque sapiente, inventore rem facere cum
+                  minima, tempora in accusamus voluptatum nobis, delectus eius
+                  itaque accusantium. Odio, maiores fugit.
+                </p>
+                <Box invert
+                  ><em
+                    >adipisicing elit. Doloribus quam non eaque sapiente,
+                    inventore rem facere cum minima, tempora in accusamus
+                    voluptatum nobis, delectus eius itaque accusantium. Odio,
+                    maiores fugit.
+                  </em>
+                  <Box
+                    ><em
+                      >adipisicing elit. Doloribus quam non eaque sapiente,
+                      inventore rem facere cum minima, tempora in accusamus
+                      voluptatum nobis, delectus eius itaque accusantium. Odio,
+                      maiores fugit.
+                    </em></Box
+                  ></Box
+                >
+              </Box>
+              <Box
+                ><p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus quam non eaque sapiente, inventore rem facere cum
+                  minima, tempora in accusamus voluptatum nobis, delectus eius
+                  itaque accusantium. Odio, maiores fugit.
+                </p>
+                <Box
+                  ><em
+                    >adipisicing elit. Doloribus quam non eaque sapiente,
+                    inventore rem facere cum minima, tempora in accusamus
+                    voluptatum nobis, delectus eius itaque accusantium. Odio,
+                    maiores fugit.
+                  </em></Box
+                >
+              </Box>
+            </div>
+          </CardDelux>
+        </CardDelux>
+      </CardDelux></CardDelux
+    ></Stack
+  >
+  <!-- </div> -->
+</Layout>

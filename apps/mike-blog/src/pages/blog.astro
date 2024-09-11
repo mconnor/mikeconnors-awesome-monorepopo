@@ -1,0 +1,31 @@
+---
+// import { Debug } from 'astro:components';
+import Layout from '#layouts/Layout.astro';
+import { Stack } from '#astro-wc/index.js';
+
+import { getCollection } from 'astro:content';
+import BlogCard from '#components/BlogCard/index.astro';
+// import { blogSchema } from '#schemas/index.js';
+const pageTitle = 'Blog';
+
+const publishsedPosts = await getCollection('blog', ({ data }) =>
+  import.meta.env.PROD ? data.draft !== true : true,
+);
+---
+
+<Layout title={pageTitle}>
+  <!-- The space (margin) between successive sibling elements -->
+  <Stack space="var(--s1)">
+    <!-- <Box borderWidth="0"><h2>{pageTitle}</h2></Box> -->
+    {
+      publishsedPosts.map((post) => (
+        // <Box class='invert' borderWidth="4px">{data.title}</Box>
+        <BlogCard
+          backgroundColor="var(--surface-4)"
+          foregroundColor="var(--text-2)"
+          post={post}
+        />
+      ))
+    }
+  </Stack>
+</Layout>

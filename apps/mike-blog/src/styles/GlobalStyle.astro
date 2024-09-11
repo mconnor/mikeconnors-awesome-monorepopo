@@ -1,0 +1,36 @@
+---
+// import '@fontsource/patrick-hand';
+// import '@fontsource/patrick-hand-sc';
+
+import 'open-props/postcss/buttons';
+import 'open-props/postcss/normalize';
+
+import 'open-props/masks/edges';
+import 'open-props/animations';
+
+import './modular-scale.css';
+
+import './layoutStyles/box.css';
+// import './EveryLayout.css';
+import './utility-classes.css';
+import './extra/theme.css';
+import './typography.css';
+// import './syntax-hilite.css';
+---
+
+<style is:global>
+  :root {
+    --theme-secondary: var(--surface-4);
+    --theme-primary: var(--text-2);
+    --theme-warning: red;
+    --theme-font-family: var(--theme-font-family);
+  }
+  .warning {
+    --my-element-text-color: var(--theme-warning);
+  }
+
+  body {
+    color: var(--theme-primary);
+    background-color: var(--theme-secondary);
+  }
+</style>

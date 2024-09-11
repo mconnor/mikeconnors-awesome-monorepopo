@@ -1,0 +1,37 @@
+---
+// export const prerender = true;
+// import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
+// import { fade } from 'astro:transitions';
+// interface ImageMetadata {
+//   src: string;
+//   width: number;
+//   height: number;
+//   format: string;
+// }
+import { Image } from 'astro:assets';
+// import Andy from '#assets/andyBushes.jpg';
+import AndyMud from '#assets/andy_mud_color.webp';
+import Layout from '#layouts/Layout.astro';
+import { Stack, Frame } from '#astro-wc/index.js';
+import Box from '#lit-wc/Box/index.astro';
+---
+
+<Layout title="home" maxW="80ch">
+  <Stack space="0">
+    <Box borderWidth="0">
+      <h2>WIP</h2>
+      <h3>Standby for tales of Andy and Mike</h3></Box
+    >
+
+    <Box borderWidth="0" invert borderWidth="1px">
+      <Frame ratio="16:9">
+        <Image
+          src={AndyMud}
+          widths={[240, 540, 720, AndyMud.width]}
+          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${AndyMud.width}px`}
+          alt="A description of my image."
+        />
+      </Frame>
+    </Box>
+  </Stack>
+</Layout>

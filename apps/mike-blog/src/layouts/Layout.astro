@@ -1,0 +1,39 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+import Cover from '#astro-wc/Cover/index.astro';
+import Center from '#astro-wc/Center/index.astro';
+import Header from '#components/Header.astro';
+import type { RmUnitType } from '#UnitTypes.js';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  maxW?: RmUnitType;
+  children: unknown;
+}
+
+const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
+---
+
+<BaseLayout {...rest}>
+  <Cover centeredElement="center-l" space="0">
+    <Header transition:persist />
+    <Center max={maxW} transition:animate="slide"><slot /></Center>
+  </Cover>
+
+  <script is:inline>
+    // on page, get the last theme from the cookie and set it
+    document.addEventListener('astro:page-load', () => {
+      const storedTheme = localStorage.getItem('theme');
+      const doc = document.documentElement;
+      if (storedTheme) {
+        doc.setAttribute('data-theme', storedTheme);
+        // $currTheme.set(storedTheme);
+      } else {
+        doc.setAttribute('data-theme', 'light');
+      }
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,50 @@
+---
+import { Cluster } from '#astro-wc/index.js';
+import MyIcon from '#components/MyIcon.astro';
+// import mdi from '@iconify-json/mdi';
+// import HeaderFooterWrapper from '#components/header-footer.astro';
+
+import Box from '#lit-wc/Box/index.astro';
+const ICONSIZE = 24;
+---
+
+<Box invert transition:persist>
+  <Cluster justify="space-around" align="flex-start">
+    <Box borderWidth="0" padding="var(--s0)">
+      <a href="https://www.linkedin.com/michaelgconnor">
+        <MyIcon name="mdi:linkedin" size={ICONSIZE} />
+      </a>
+    </Box>
+
+    <Box borderWidth="0" padding="var(--s0)">
+      <a href="https://www.github.com/mconnor">
+        <MyIcon name="mdi:github" size={ICONSIZE} />
+      </a>
+    </Box>
+    <Box borderWidth="0" padding="var(--s0)">
+      <a href="https://www.twitter.com/mikeconnor504">
+        <MyIcon name="mdi:x" size={ICONSIZE} />
+      </a>
+    </Box>
+    <Box borderWidth="0" padding="var(--s0)">
+      <a href="https://www.twitter.com/mikeconnor504">
+        <MyIcon name="mdi:twitter" size={ICONSIZE} />
+      </a>
+    </Box>
+    <!-- <Icon name="mdi:account" /> -->
+    <!-- <Social name="mdi:account" href="./" size={ICONSIZE} /> -->
+  </Cluster>
+</Box>
+
+<style>
+  a {
+    color: var(--accent);
+    background-color: var();
+    &:hover {
+      color: var(--accent-hover);
+    }
+    &:visited {
+      color: var(--accent-visited);
+    }
+  }
+</style>

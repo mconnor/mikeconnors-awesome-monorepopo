@@ -5,7 +5,7 @@ import { play, pause, replay } from './icons.js';
 /* playground-fold-end */
 
 @customElement('my-timer')
-export class MyTimer extends LitElement {
+class MyTimer extends LitElement {
   static styles = css`
     /* playground-fold */
 
@@ -84,7 +84,10 @@ export class MyTimer extends LitElement {
 /* playground-fold */
 
 function pad(pad: number, val: number) {
-  if (pad) return String(val).padStart(2, '0');
+  console.log('pad', pad, val);
+  if (pad) {
+    return String(val).padStart(2, '0');
+  }
 
   return val;
 }

@@ -1,0 +1,65 @@
+---
+import { getEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+// import { Box} from '#lit-layout-components';
+
+import Box from '#lit-wc/Box/index.astro';
+
+import { Image } from 'astro:assets';
+
+// interface Props extends HTMLAttributes<'a'> extends CollectionEntry<'blog'>.data;
+
+interface Props {
+  foregroundColor?: string;
+  backgroundColor?: string;
+  post: CollectionEntry<'blog'>;
+}
+
+const {
+  foregroundColor = 'var(--text-2)',
+  backgroundColor = 'var(--surface-4)',
+  post,
+} = Astro.props;
+
+const { slug, data } = post;
+const { title, description, cover, author } = data;
+const authObj = await getEntry('authors', author.id);
+const { name } = authObj.data;
+---
+
+<a slot="left" href={`/posts/${slug}`}>
+  <Box padding="0" borderWidth="0">
+    <!-- <Box padding='4px'> -->
+
+    <!-- <Stack space="var(--s00)" splitAfter={4}> -->
+    <!-- <Cluster></Cluster> -->
+
+    <Box invert padding="var(--s0)" borderWidth="0"><h3>{title},{name}</h3></Box
+    >
+
+    <!-- <Cluster justify="space-between" align="baseline">
+      <Box padding="var(--s00)" borderWidth="0">{name}</Box>
+      <Box padding="var(--s00)" borderWidth="0">
+        <p>{format(pubDate, 'MMMM dd, yyyy')}</p></Box
+      >
+    </Cluster> -->
+
+    <Box padding="0" borderWidth="0">
+      <Image src={cover.src} alt={cover.alt} width="600" height="300" /></Box
+    >
+
+    <Box padding="var(--s0)" borderWidth="0" invert
+      >description{description}</Box
+    >
+
+    <!-- </Box> -->
+  </Box>
+</a>
+<style define:vars={{ foregroundColor, backgroundColor }}>
+  .colors {
+    color: var(--foregroundColor);
+    background-color: var(--backgroundColor);
+    border-width: var(--border-thin);
+  }
+</style>

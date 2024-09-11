@@ -1,0 +1,48 @@
+---
+import Box from '#lit-wc/Box/index.astro';
+
+interface Props {
+  href: string;
+  isMainNav?: boolean;
+}
+
+const path = Astro.url.pathname;
+const { href, isMainNav = false } = Astro.props;
+
+const isActive = href === path || href === path.replace(/\/$/, '');
+---
+
+<Box padding="var(--s00)" borderWidth="0">
+  <a
+    href={href}
+    class:list={[
+      { disabled: isActive },
+      { navItem: !isMainNav },
+      { mainNavItem: isMainNav },
+    ]}><slot /></a
+  >
+</Box>
+
+<style>
+  a {
+    /* font-family: var(--font-sans); */
+    font-weight: var(--font-weight-6);
+    font-size: var(--font-size-2);
+    &:link {
+      color: var(--brand);
+      text-decoration: wavy;
+    }
+    &:hover {
+      color: var(--brand);
+    }
+    &:visited {
+      color: var(--brand);
+      text-decoration: wavy;
+    }
+
+    .mainNavItem {
+      font-weight: var(--font-weight-3);
+      font-size: var(--font-size-3);
+    }
+  }
+</style>

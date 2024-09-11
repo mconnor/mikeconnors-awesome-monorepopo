@@ -1,11 +1,11 @@
 ---
 interface Props {
-  ticks: number;
+  duration: number;
 }
 
-const props = Astro.props;
+const { duration } = Astro.props;
 ---
 
-<my-timer {...props}></my-timer>
+<my-timer duration={duration}></my-timer>
 
 <script src="./my-timer.js"></script>

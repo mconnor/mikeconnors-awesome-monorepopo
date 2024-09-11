@@ -1,0 +1,23 @@
+---
+import Layout from '#layouts/Layout.astro';
+import { Stack } from '#astro-wc/index.js';
+
+const pageTitle = 'box module';
+import Box from '#lit-wc/Box/index.astro';
+---
+
+<Layout title={pageTitle}>
+  <!-- <div class="app-colors"> -->
+  <Stack recursive splitAfter={2}>
+    <Box> Lorem ipsum dolor </Box>
+    <!-- <Box>
+      <Box invert> Lorem ipsum d </Box>
+      <Box invert> Lorem ipsum dolor sit </Box>
+    </Box> -->
+    <Box invert> Lorem ipsum dolor sit </Box>
+    <Box invert>
+      <Box invert> Lorem ipsum dolor </Box>
+    </Box>
+  </Stack>
+  <!-- </Box> -->
+</Layout>

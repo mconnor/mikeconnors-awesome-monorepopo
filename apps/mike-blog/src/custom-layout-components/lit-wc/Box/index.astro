@@ -1,0 +1,21 @@
+---
+import type { RmUnitType, BorderStyle } from '#UnitTypes.js';
+
+import { BoxClass } from './box-l';
+
+interface Props {
+  padding?: RmUnitType;
+  borderWidth?: RmUnitType;
+  highlight?: boolean;
+  borderStyle?: BorderStyle;
+  invert?: boolean;
+  children?: unknown;
+}
+const props = Astro.props;
+---
+
+<div>
+  <BoxClass {...props} client:visible>
+    <slot />
+  </BoxClass>
+</div>

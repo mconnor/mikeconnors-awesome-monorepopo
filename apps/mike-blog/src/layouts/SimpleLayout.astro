@@ -1,0 +1,34 @@
+---
+import BaseHead from '#components/BaseHead.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  // maxW?: RmUnitType;
+  children: unknown;
+}
+
+// const isProd = import.meta.env.PROD
+// const isDev = import.meta.env.DEV
+
+const {
+  title = 'Mike Connor',
+  description = 'my description',
+  image = '/placeholder-social.jpg',
+  // maxW = 'var(--measure)',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<html lang="en" transition:animate="none" data-theme="light">
+  <head>
+    <BaseHead title={title} description={description} image={image} />
+    <link rel="canonical" href={canonicalURL} />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>

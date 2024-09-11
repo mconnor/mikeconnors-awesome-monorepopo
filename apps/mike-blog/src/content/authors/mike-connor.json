@@ -1,0 +1,7 @@
+{
+  "$schema": "../../../.astro/collections/authors.schema.json",
+  "id": "mike-connor",
+  "name": "Mike Connor",
+  "email": "mike@mikeconnor.tech",
+  "bio": "Mike is a software developer and writer based in Kansas City."
+}

@@ -1,0 +1,12 @@
+---
+interface Props {
+  theme: string;
+}
+
+const { theme } = Astro.props;
+---
+
+<label>
+  {theme}
+  <input type="radio" name="theme" value={theme} />
+</label>
