@@ -1,0 +1,21 @@
+:where([data-theme='toucan'], .toucan, .toucan-theme) {
+  color-scheme: toucan;
+
+  --accent: var(--accent-toucan);
+  --accent-hover: var(--accent-hover-toucan);
+  --accent-visited: var(--accent-visited-toucan);
+
+  --brand: var(--brand-toucan);
+
+  --link-visited: var(--link-visited-toucan);
+
+  --text-1: var(--text-1-toucan);
+  --text-2: var(--text-2-toucan);
+
+  --surface-1: var(--surface-1-toucan);
+  --surface-2: var(--surface-2-toucan);
+  --surface-3: var(--surface-3-toucan);
+  --surface-4: var(--surface-4-toucan);
+
+  --border-color: var(--brand-toucan);
+}

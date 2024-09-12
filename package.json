@@ -21,7 +21,7 @@
     "graph": "turbo run build --graph",
     "build": "turbo build",
     "preview": "turbo preview",
-    "dev": "turbo",
+    "dev": "turbo dev",
     "dev:demo": "turbo dev --filter=@app/astrodemo",
     "lint": "turbo lint",
     "fix": "turbo fix",

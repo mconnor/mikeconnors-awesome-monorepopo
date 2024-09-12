@@ -1,0 +1,18 @@
+:where([data-theme='choco'], .choco, .choco-theme) {
+  color-scheme: choco;
+
+  --link: var(--indigo-3);
+  --link-visited: var(--link-visited-choco);
+
+  --text-1: var(--text-1-choco);
+  --text-2: var(--text-2-choco);
+
+  --surface-1: var(--surface-1-choco);
+  --surface-2: var(--surface-2-choco);
+  --surface-3: var(--surface-3-choco);
+  --surface-4: var(--surface-4-choco);
+  --brand: var(--brand-choco);
+  --border-color: var(--brand-choco);
+
+  /* --scrollthumb-color: var(--purple-6); */
+}

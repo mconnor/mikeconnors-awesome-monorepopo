@@ -1,0 +1,44 @@
+/* @import "../props.media.css"; */
+
+@import './theme.light.props.css';
+@import './theme.light.switch.css';
+
+@import './theme.dark.props.css';
+@import './theme.dark.switch.css';
+
+@import './theme.grape.props.css';
+@import './theme.grape.switch.css';
+
+@import './theme.dim.props.css';
+@import './theme.dim.switch.css';
+
+@import './theme.choco.props.css';
+@import './theme.choco.switch.css';
+
+@import './theme.toucan.props.css';
+@import './theme.toucan.switch.css';
+
+/* init color scheme */
+:where(html) {
+  color-scheme: light;
+}
+
+/* prefers dark scheme */
+/* @media (--OSdark) {
+  :where(html) {
+    color-scheme: dark;
+
+    --link: var(--indigo-3);
+    --link-visited: var(--purple-3);
+
+    --text-1: var(--gray-1);
+    --text-2: var(--gray-4);
+
+    --surface-1: var(--gray-9);
+    --surface-2: var(--gray-8);
+    --surface-3: var(--gray-7);
+    --surface-4: var(--gray-6);
+
+    --scrollthumb-color: var(--gray-6);
+  }
+} */
