@@ -18,14 +18,11 @@ const {
   image = '/placeholder-social.jpg',
   // maxW = 'var(--measure)',
 } = Astro.props;
-
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en" transition:animate="none" data-theme="light">
   <head>
     <BaseHead title={title} description={description} image={image} />
-    <link rel="canonical" href={canonicalURL} />
   </head>
 
   <body>

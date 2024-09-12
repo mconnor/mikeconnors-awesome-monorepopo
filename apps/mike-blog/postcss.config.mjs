@@ -7,9 +7,10 @@ import OpenProps from 'open-props';
 import postcssCustomMedia from 'postcss-custom-media';
 import nano from 'cssnano';
 import process from 'process';
-console.log('xxxxxx ' + process.env.NODE_ENV);
+
 // const isProd = import.meta.env.PROD;
 const isDev = process.env.NODE_ENV === 'development';
+const isTest = process.env.NODE_ENV === 'test';
 
 const devConfig = {
   plugins: [
@@ -35,6 +36,6 @@ const prodConfig = {
   ],
 };
 
-const config = isDev ? devConfig : prodConfig;
+const config = isDev || isTest ? devConfig : prodConfig;
 
 export default config;
