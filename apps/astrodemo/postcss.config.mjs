@@ -8,7 +8,8 @@ import postcssCustomMedia from 'postcss-custom-media';
 
 // Use process.env.NODE_ENV to check if the environment is production
 // const isProd = import.meta.env.PROD
-// const isDev = import.meta.env.DEV
+// const isDev = process.env.NODE_ENV === 'development';
+// const isTest = process.env.NODE_ENV === 'test';
 
 export default {
   plugins: [
