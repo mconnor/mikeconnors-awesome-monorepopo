@@ -6,12 +6,15 @@ import Box from '@repo/layout-webcomponents/Box';
 // import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
 
 import Link from '#components/Link.astro';
+
+import AstroSwitcher from '#lit-web-components/AstroSwitcher/index.astro';
 import MainNav from './MainNav.astro';
 ---
 
 <Box invert padding="var(--s1)" borderWidth="0">
-  <!-- <Hamburger />
-  <AstroSwitcher /> -->
+  <!-- <Hamburger /> -->
+
+  <AstroSwitcher />
   <Cluster align="baseline" justify="space-between" space="0">
     <Link isMainNav href="/"><h1>Mike Connor</h1></Link>
 

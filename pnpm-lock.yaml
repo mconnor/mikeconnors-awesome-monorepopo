@@ -458,8 +458,6 @@ importers:
         specifier: ^8.5.0
         version: 8.5.0(eslint@9.10.0(jiti@1.21.6))(typescript@5.6.2)
 
-  packages/config-postcss: {}
-
   packages/config-typescript: {}
 
   packages/layout-webcomponents:
@@ -473,9 +471,6 @@ importers:
       lit:
         specifier: ^3.2.0
         version: 3.2.0
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.3
