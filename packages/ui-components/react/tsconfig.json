@@ -1,15 +1,8 @@
 {
   "extends": "@repo/typescript-config/react.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDir": "src"
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".astro",
-    ".turbo"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
 }

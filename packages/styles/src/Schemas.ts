@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 const zero = z.literal('0');
-const mcUnitsLiteral = z.literal('px|rem|ch|em|%');
+// const mcUnitsLiteral = z.literal('px|rem|ch|em|%');
 // const communUnits =
 const mcUnitsEnum = z.enum(['px', 'rem', 'ch', 'em', '%']);
 // Create a regular expression pattern from the enum values
@@ -35,9 +35,9 @@ const heightUnitUnion = z.union(
   viewportHeightUnitEnum,
 );
 
-const screenWidthViewPortDims = z
-  .string()
-  .regex(/^\d+(vw|svh|lvh|dvh|vmin|vmax|%)$/);
+// const screenWidthViewPortDims = z
+//   .string()
+//   .regex(/^\d+(vw|svh|lvh|dvh|vmin|vmax|%)$/);
 
 const CenterUnits = z.union([widthUnitUnion, myModularCSSvars]);
 

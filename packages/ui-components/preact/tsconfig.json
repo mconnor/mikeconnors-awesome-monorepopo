@@ -1,13 +1,8 @@
 {
   "extends": "@repo/typescript-config/preact.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDir": "src"
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "dist",
-    ".turbo"
-  ]
+  "include": ["src"],
+  "exclude": ["dist", ".turbo"]
 }

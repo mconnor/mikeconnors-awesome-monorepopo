@@ -5,7 +5,6 @@ dist/
 vercel/
 .frontmatter/
 
-
 #  default ignored files
 # **/.git
 # **/.svn
@@ -18,8 +17,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
-
 # Directories
 .github
 .changeset
@@ -31,4 +28,4 @@ my-custom-cache-directory
 pnpm-lock.yaml
 
 node_modules/
-
+cache-directory/

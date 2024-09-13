@@ -9,14 +9,12 @@
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "exclude": [
     "dist",
     ".astro",
     ".turbo",
     "src/pages/demo/",
-    "src/components/DatePicker.astro",
+    "src/components/DatePicker.astro"
   ]
 }
