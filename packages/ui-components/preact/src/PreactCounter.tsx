@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 /** @jsxImportSource preact */
 
 import { useState } from 'preact/hooks';

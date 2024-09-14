@@ -7,6 +7,7 @@ import lit from '@astrojs/lit';
 export default defineConfig({
   outDir: 'dist',
   output: 'static',
+  site: 'https://example.com',
   integrations: [
     // myIntegration,
     lit(),

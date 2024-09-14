@@ -17,13 +17,11 @@ const {
   image = '/placeholder-social.jpg',
 } = Astro.props;
 const mode = process.env.NODE_ENV?.toString().substring(0, 3);
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <html lang="en" data-theme="toucan">
   <head>
     <BaseHead title={title} description={description} image={image} />
-    <link rel="canonical" href={canonicalURL} />
   </head>
 
   <body>

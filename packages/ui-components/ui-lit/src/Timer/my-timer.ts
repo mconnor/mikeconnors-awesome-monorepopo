@@ -5,7 +5,7 @@ import { play, pause, replay } from './icons.js';
 /* playground-fold-end */
 
 @customElement('my-timer')
-class MyTimer extends LitElement {
+export class MyTimer extends LitElement {
   static styles = css`
     /* playground-fold */
 
