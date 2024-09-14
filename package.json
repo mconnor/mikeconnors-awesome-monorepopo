@@ -36,7 +36,7 @@
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "syncpack": "^13.0.0",
-    "turbo": "^2.1.1",
+    "turbo": "^2.1.2",
     "typescript": "^5.6.2"
   },
   "engines": {
