@@ -11,8 +11,8 @@
     "./Types": "./src/Types.ts",
     "./schemas": "./src/Schemas.ts",
     "./css/*": "./src/css/*",
-    "./GlobalStyle": "./src/GlobalStyle.astro",
-    "./DevModeStyle": "./src/DevModeStyle.astro"
+    "./GlobalStyle.astro": "./src/GlobalStyle.astro",
+    "./DevModeStyle.astro": "./src/DevModeStyle.astro"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

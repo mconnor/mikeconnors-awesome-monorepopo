@@ -9,29 +9,12 @@ import 'open-props/postcss/buttons';
 import 'open-props/masks/edges';
 import 'open-props/animations';
 
-import './styles//modular-scale.css';
+import './css/modular-scale.css';
 
-// import './styles//layoutStyles/box.css';
-// import './styles//EveryLayout.css';
-import './styles//utility-classes.css';
-import './styles//extra/theme.css';
-import './styles//typography.css';
-// import './styles//syntax-hilite.css';
+// import './css/layoutStyles/box.css';
+// import './css/EveryLayout.css';
+import './css/utility-classes.css';
+import './css/extra/theme.css';
+import './css/typography.css';
+// import './css/syntax-hilite.css';
 ---
-
-<style is:global>
-  :root {
-    --theme-secondary: var(--surface-4);
-    --theme-primary: var(--text-2);
-    --theme-warning: red;
-    --theme-font-family: var(--theme-font-family);
-  }
-  .warning {
-    --my-element-text-color: var(--theme-warning);
-  }
-
-  body {
-    color: var(--theme-primary);
-    background-color: var(--theme-secondary);
-  }
-</style>
