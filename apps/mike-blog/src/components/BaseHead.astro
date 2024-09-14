@@ -1,8 +1,9 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import GlobalStyle from '#styles/GlobalStyle.astro';
-import DevModeStyle from '#styles/DevModeStyle.astro';
+import GlobalStyle from '@repo/styles/GlobalStyle.astro';
+import DevModeStyle from '@repo/styles/DevModeStyle.astro';
+
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;

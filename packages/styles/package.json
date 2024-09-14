@@ -11,7 +11,8 @@
     "./Types": "./src/Types.ts",
     "./schemas": "./src/Schemas.ts",
     "./css/*": "./src/css/*",
-    "./GlobalStyle": "./src/GlobalStyle.astro"
+    "./GlobalStyle": "./src/GlobalStyle.astro",
+    "./DevModeStyle": "./src/DevModeStyle.astro"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -36,5 +37,9 @@
     "open-props": "^1.7.6",
     "astro": "^4.15.2",
     "zod": "^3.23.8"
+  },
+  "peerDependencies": {
+    "open-props": "^1.7.6",
+    "astro": "^4.15.2"
   }
 }
