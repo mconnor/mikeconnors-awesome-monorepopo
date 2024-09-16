@@ -2,18 +2,32 @@
 import type { HTMLAttributes } from 'astro/types';
 
 type Props = HTMLAttributes<'a'> & {
-  slug?: string;
+  className?: string;
 };
 
-const { href } = Astro.props;
-// const { pathname } = Astro.url
+const { pathname } = Astro.url;
+const subpath = pathname.match(/[^/]+/g);
+const { href, className, ...rest } = Astro.props;
+const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
 <!-- <Box padding='--sizes'><a href={href} class:list={[{ active: isActive }]}>
     <slot />
 </a></Box> -->
-<div class="btn" :active="{ active: isActive }">
+<div class:list={[className, { active: isActive }]} {...rest}>
+  {pathname}-{href}
   <a href={href}>
     <slot />
   </a>
 </div>
+
+<style>
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  a.active {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+</style>

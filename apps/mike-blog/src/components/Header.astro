@@ -2,26 +2,34 @@
 import Cluster from '@repo/layout-webcomponents/Cluster';
 // import Hamburger from './Hamburger.astro';
 import Box from '@repo/layout-webcomponents/Box';
-// import AstroSwitcher from '#lit-web-components/AstroSwitcher/index.astro';
+
 // import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
 
-import Link from '#components/Link.astro';
+import HeaderLink from '#components/HeaderLink.astro';
 
-import AstroSwitcher from '#lit-web-components/AstroSwitcher/index.astro';
-import MainNav from './MainNav.astro';
+import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
 ---
 
 <Box invert padding="var(--s1)" borderWidth="0">
   <!-- <Hamburger /> -->
 
-  <AstroSwitcher />
+  <ThemeSwitcher />
   <Cluster align="baseline" justify="space-between" space="0">
-    <Link isMainNav href="/"><h1>Mike Connor - Tech</h1></Link>
+    <HeaderLink href="/"><h1>Mike Connor - Tech</h1></HeaderLink>
 
     <!-- <AstroNavigateSelect /> -->
 
     <Box borderWidth="0" padding="0">
-      <MainNav />
+      <Cluster align="baseline" justify="flex-end" space="var(--s1)">
+        <HeaderLink href="/about">About</HeaderLink>
+
+        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/tags">Tags</HeaderLink>
+        <!-- <HeaderLink href="/authors/">Authors</HeaderLink>
+
+        <HeaderLink href="/boxclass/">box class</HeaderLink>
+        <HeaderLink href="/boxtest/">box test</HeaderLink> -->
+      </Cluster>
     </Box>
   </Cluster>
 </Box>
