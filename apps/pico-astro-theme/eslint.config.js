@@ -9,6 +9,11 @@ export default [
 
   eslintConfigPrettier,
   {
+    rules: {
+      "react/no-unescaped-entities": "off",
+    },
+  },
+  {
     ignores: [".prettierrc"],
   },
 ];

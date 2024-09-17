@@ -41,7 +41,7 @@ export default function RandomQuote() {
         <u>AstroPico</u>: {randomQuote.title}
       </summary>
       <blockquote>
-        &quot;{randomQuote.description}&quot;
+        "{randomQuote.description}"
         <footer>
           <cite>- {randomQuote.cite}</cite>
         </footer>
