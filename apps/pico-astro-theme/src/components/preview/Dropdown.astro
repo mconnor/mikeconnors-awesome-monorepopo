@@ -72,7 +72,7 @@ const { summary, elements } = Astro.props;
         buttons.forEach((button) => {
           button.addEventListener(
             "click",
-            (event) => {
+            (event: MouseEvent) => {
               event.preventDefault();
               // Set scheme
               this.scheme = button.getAttribute(this.buttonAttribute) as string;
