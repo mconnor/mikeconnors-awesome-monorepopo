@@ -34,7 +34,6 @@
     "vitest": "^2.1.1"
   },
   "dependencies": {
-    "@repo/layout-webcomponents": "workspace:^",
     "@repo/styles": "workspace:*",
     "astro": "^4.15.6",
     "lit": "^3.2.0"

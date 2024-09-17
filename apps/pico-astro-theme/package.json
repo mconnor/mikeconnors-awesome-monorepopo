@@ -1,0 +1,49 @@
+{
+  "name": "@app/pico",
+  "type": "module",
+  "version": "0.8.1",
+  "description": "Astro styled with Pico CSS, build with Astro, shine with Pico",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "scripts": {
+    "update": "pnpm update",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "check": "astro check",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint": "eslint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "fix": "eslint --fix",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": [
+    "astro",
+    "withastro",
+    "pico",
+    "astro-theme"
+  ],
+  "dependencies": {
+    "@astrojs/check": "^0.9.3",
+    "@astrojs/mdx": "^3.1.6",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/rss": "^4.0.7",
+    "@astrojs/sitemap": "^3.1.6",
+    "astro": "^4.15.6",
+    "astro-icon": "^1.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.7",
+    "@types/react-dom": "^18.3.0",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^9.10.0",
+    "typescript": "^5.6.2"
+  }
+}

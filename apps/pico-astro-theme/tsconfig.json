@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/typescript-config/vite.json",
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
+}

@@ -1,5 +1,5 @@
 ---
-import BaseLayout from '#layouts/BaseLayout.astro';
+import Layout from '#layouts/BaseLayout.astro';
 import Header from '#components/Header.astro';
 import Footer from '#components/Header.astro';
 import Sidebar from '@repo/layout-webcomponents/Sidebar';
@@ -13,7 +13,7 @@ interface Props {
 const { title = 'mike connor' } = Astro.props;
 ---
 
-<BaseLayout title={title}>
+<Layout title={title}>
   <Cover centeredElement="sidebar-l" noPad>
     <Header desc={title} />
 
@@ -24,4 +24,4 @@ const { title = 'mike connor' } = Astro.props;
   </Cover>
 
   <Footer />
-</BaseLayout>
+</Layout>

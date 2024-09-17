@@ -4,14 +4,14 @@ import DevModeStyle from '@repo/styles/DevModeStyle.astro';
 import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
-  title: string;
-  description: string;
-  image: string;
+  title?: string;
+  description?: string;
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image } = Astro.props;
+const { title = 'title', description, image } = Astro.props;
 const isDev = process.env.NODE_ENV === 'development';
 ---
 

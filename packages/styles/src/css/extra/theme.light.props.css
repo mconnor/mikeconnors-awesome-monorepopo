@@ -1,5 +1,5 @@
 :where(html) {
-  --brand-light: var(--orange-3);
+  --brand-light: var(--orange-6);
   --link-visited-light: var(--orange-10);
 
   --text-1-light: var(--gray-12);

@@ -10,3 +10,10 @@ const { theme } = Astro.props;
   {theme}
   <input type="radio" name="theme" value={theme} />
 </label>
+
+<style>
+  label {
+    display: in-line;
+    padding-right: var(--s2);
+  }
+</style>
