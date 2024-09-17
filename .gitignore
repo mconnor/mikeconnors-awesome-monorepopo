@@ -16,7 +16,7 @@ public/dist
 /packages/ui/src/utils/counter.js
 /packages/ui/src/components/counter.js
 /packages/ui/src/index.js
-/apps/blog/my-astro-build-directory
+/apps/blog
 
 /notes.txt
 /apps/mike-blog/cache-directory
