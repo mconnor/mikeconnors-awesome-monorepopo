@@ -1,6 +1,6 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
-
+import Box from '@repo/layout-webcomponents/Box';
 type Props = HTMLAttributes<'a'> & {
   className?: string;
 };
@@ -14,20 +14,33 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 <!-- <Box padding='--sizes'><a href={href} class:list={[{ active: isActive }]}>
     <slot />
 </a></Box> -->
-<div class:list={[className, { active: isActive }]} {...rest}>
-  {pathname}-{href}
-  <a href={href}>
-    <slot />
-  </a>
-</div>
+<Box borderWidth="0" padding="0">
+  {
+    !isActive ? (
+      <a
+        href={href}
+        class:list={[className, { active: isActive }]}
+        {...rest}
+        aria-disabled={isActive}
+      >
+        <slot />
+      </a>
+    ) : (
+      <span class="nonLink">
+        <slot />
+      </span>
+    )
+  }
+</Box>
 
 <style>
   a {
     display: inline-block;
     text-decoration: none;
   }
-  a.active {
-    font-weight: bolder;
-    text-decoration: underline;
+
+  .nonLink {
+    text-decoration: underline wavy;
+    text-underline-offset: var(--s0);
   }
 </style>

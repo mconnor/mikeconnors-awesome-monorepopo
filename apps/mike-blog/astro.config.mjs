@@ -8,6 +8,7 @@ import lit from '@astrojs/lit';
 // https://astro.build/config
 export default defineConfig({
   compressHTML: true,
+  trailingSlash: 'ignore',
   cacheDir: './cache-directory',
   redirects: {
     '/index': '/about',

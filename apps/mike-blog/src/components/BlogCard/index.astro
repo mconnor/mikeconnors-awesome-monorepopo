@@ -1,9 +1,5 @@
 ---
-import { getEntry } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-
-// import { Box} from '#lit-layout-components';
-
 import Box from '@repo/layout-webcomponents/Box';
 
 import { Image } from 'astro:assets';
@@ -23,9 +19,9 @@ const {
 } = Astro.props;
 
 const { slug, data } = post;
-const { title, description, cover, author } = data;
-const authObj = await getEntry('authors', author.id);
-const { name } = authObj.data;
+const { title, description, cover } = data;
+// const authObj = await getEntry('authors', author.id);
+// const { name } = authObj.data;
 ---
 
 <a slot="left" href={`/posts/${slug}`}>
@@ -35,8 +31,7 @@ const { name } = authObj.data;
     <!-- <Stack space="var(--s00)" splitAfter={4}> -->
     <!-- <Cluster></Cluster> -->
 
-    <Box invert padding="var(--s0)" borderWidth="0"><h3>{title},{name}</h3></Box
-    >
+    <Box invert padding="var(--s0)" borderWidth="0"><h1>{title}</h1></Box>
 
     <!-- <Cluster justify="space-between" align="baseline">
       <Box padding="var(--s00)" borderWidth="0">{name}</Box>
@@ -56,10 +51,3 @@ const { name } = authObj.data;
     <!-- </Box> -->
   </Box>
 </a>
-<style define:vars={{ foregroundColor, backgroundColor }}>
-  .colors {
-    color: var(--foregroundColor);
-    background-color: var(--backgroundColor);
-    border-width: var(--border-thin);
-  }
-</style>

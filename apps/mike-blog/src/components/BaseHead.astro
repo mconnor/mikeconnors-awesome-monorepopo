@@ -3,6 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import GlobalStyle from '@repo/styles/GlobalStyle.astro';
 import DevModeStyle from '@repo/styles/DevModeStyle.astro';
+import '../styles/global.css';
 
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
@@ -73,20 +74,3 @@ const isDev = process.env.NODE_ENV === 'development';
 <ViewTransitions />
 {isDev && <DevModeStyle />}
 <GlobalStyle />
-
-<style is:global>
-  :root {
-    --theme-secondary: var(--surface-4);
-    --theme-primary: var(--text-2);
-    --theme-warning: red;
-    --theme-font-family: var(--theme-font-family);
-  }
-  .warning {
-    --my-element-text-color: var(--theme-warning);
-  }
-
-  body {
-    color: var(--theme-primary);
-    background-color: var(--theme-secondary);
-  }
-</style>

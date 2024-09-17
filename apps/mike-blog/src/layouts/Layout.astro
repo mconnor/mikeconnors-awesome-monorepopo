@@ -29,7 +29,7 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
     document.addEventListener('astro:page-load', () => {
       const storedTheme = localStorage.getItem('theme');
       const doc = document.documentElement;
-      if (storedTheme) {
+      if ((typeof localStorage !== "undefined" && storedTheme) {
         doc.setAttribute('data-theme', storedTheme);
         // $currTheme.set(storedTheme);
       } else {
@@ -38,3 +38,4 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
     });
   </script>
 </BaseLayout>
+
