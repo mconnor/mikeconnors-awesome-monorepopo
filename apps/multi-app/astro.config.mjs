@@ -6,6 +6,8 @@ import vue from '@astrojs/vue';
 import solid from '@astrojs/solid-js';
 import lit from '@astrojs/lit';
 
+import vercel from '@astrojs/vercel/static';
+
 // https://astro.build/config
 export default defineConfig({
   // Enable many frameworks to support all different kinds of components.
@@ -17,6 +19,7 @@ export default defineConfig({
     vue(),
     lit(),
   ],
+
   vite: {
     ssr: {
       noExternal: ['date-fns', 'open-props'],
@@ -27,4 +30,7 @@ export default defineConfig({
     //   dev,
     // },
   },
+
+  output: 'static',
+  adapter: vercel(),
 });

@@ -3,6 +3,8 @@ import mdx from '@astrojs/mdx';
 // import sentry from '@sentry/astro';
 import lit from '@astrojs/lit';
 
+import vercel from '@astrojs/vercel/static';
+
 // import icon from 'astro-icon';
 
 // https://astro.build/config
@@ -10,20 +12,27 @@ export default defineConfig({
   compressHTML: true,
   trailingSlash: 'ignore',
   cacheDir: './cache-directory',
+
   redirects: {
     '/index': '/about',
   },
+
   // your configuration options here...
   // https://docs.astro.build/en/reference/configuration-reference/
   output: 'static',
+
   site: 'https://staging.mikeconnor.tech/',
+
   image: {
     domains: ['astro.build', 'picsum.photos', 'https://doodleipsum.com'],
   },
+
   markdown: {
     drafts: true,
   },
+
   scopedStyleStrategy: 'attribute',
+
   integrations: [
     lit(),
     mdx({
@@ -47,14 +56,18 @@ export default defineConfig({
     //   },
     // }),
   ],
+
   vite: {
     ssr: {
       noExternal: ['date-fns', 'open-props'],
     },
   },
+
+  // cacheDir: './my-custom-cache-directory',
+
   experimental: {
     contentCollectionCache: true,
   },
-  // cacheDir: './my-custom-cache-directory',
-  // adapter: vercel(),
+
+  adapter: vercel(),
 });
