@@ -20,3 +20,4 @@ public/dist
 
 /notes.txt
 /apps/mike-blog/cache-directory
+**/*/.vercel
