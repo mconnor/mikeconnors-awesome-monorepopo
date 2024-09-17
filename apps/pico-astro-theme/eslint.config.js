@@ -9,6 +9,6 @@ export default [
 
   eslintConfigPrettier,
   {
-    ignores: [".prettierrc.mjs"],
+    ignores: [".prettierrc"],
   },
 ];

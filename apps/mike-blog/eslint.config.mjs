@@ -10,11 +10,6 @@ export default [
 
   // prettierConfig,
   {
-    ignores: [
-      '.prettierrc.mjs',
-      'config-eslint/',
-      'packages/',
-      'cache-directory/',
-    ],
+    ignores: ['.prettierrc.mjs'],
   },
 ];
