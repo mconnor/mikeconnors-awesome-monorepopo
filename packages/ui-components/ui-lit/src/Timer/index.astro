@@ -1,9 +1,9 @@
 ---
 interface Props {
-  duration: number;
+  duration?: number;
 }
 
-const { duration } = Astro.props;
+const { duration = 3600 } = Astro.props;
 ---
 
 <my-timer duration={duration}></my-timer>

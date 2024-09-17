@@ -34,7 +34,7 @@ export class MyTimer extends LitElement {
     const { remaining, running } = this;
     const min = Math.floor(remaining / 60000);
     const sec = pad(min, Math.floor((remaining / 1000) % 60));
-    const hun = pad(true, Math.floor((remaining % 1000) / 10));
+    const hun = padHun(Math.floor((remaining % 1000) / 10));
 
     return html`
       ${min ? `${min}:${sec}` : `${sec}.${hun}`}
@@ -90,6 +90,10 @@ function pad(pad: number, val: number) {
   }
 
   return val;
+}
+
+function padHun(val: number) {
+  return String(val).padStart(2, '0');
 }
 
 /* playground-fold-end */
