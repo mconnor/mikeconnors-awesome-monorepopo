@@ -13,6 +13,8 @@
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint",
+    "fix": "eslint --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "inspect": "eslint --inspect-config",
@@ -24,13 +26,12 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/eslint__js": "^8.42.3",
-    "@types/react": "^18.3.7",
+    "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
-    "eslint": "^9.10.0",
+    "eslint": "^9.11.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "typescript": "^5.6.2",
-    "vite": "^5.4.6"
+    "vite": "^5.4.7"
   }
 }

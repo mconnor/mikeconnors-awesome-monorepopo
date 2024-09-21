@@ -6,5 +6,8 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "peerDependencies": {
+    "typescript": "<5.6"
   }
 }
