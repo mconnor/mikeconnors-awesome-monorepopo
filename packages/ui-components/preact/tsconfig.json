@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": "src"
   },
-  "include": ["src"],
-  "exclude": ["dist", ".turbo"]
+  "include": [
+    "src"
+  ]
 }

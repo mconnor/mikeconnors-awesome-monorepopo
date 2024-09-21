@@ -1,4 +1,4 @@
-import eslintConfigPrettier from '@repo/eslint-config/prettier-config';
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
 import astroConfig from '@repo/eslint-config/astro';
 
 import litConfig from '@repo/eslint-config/lit-config';

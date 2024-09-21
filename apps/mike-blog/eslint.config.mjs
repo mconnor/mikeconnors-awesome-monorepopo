@@ -1,15 +1,7 @@
 // @ts-check
 
 import config from '@repo/eslint-config/astro';
+import prettierConfig from '@repo/eslint-config/prettier';
 import regexConfig from '@repo/eslint-config/regex-config';
-// import prettierConfig from 'eslint-config-prettier';
 
-export default [
-  ...config,
-  ...regexConfig,
-
-  // prettierConfig,
-  {
-    ignores: ['.prettierrc.mjs', '.vercel/', 'cache-directory'],
-  },
-];
+export default [...config, ...regexConfig, prettierConfig];
