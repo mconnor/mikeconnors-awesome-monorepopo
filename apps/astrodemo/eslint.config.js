@@ -7,6 +7,6 @@ export default [
   ...litConfig,
   prettierConfig,
   {
-    ignores: ['.prettierrc.mjs'],
+    ignores: ['.prettierrc.mjs', '.vercel/'],
   },
 ];

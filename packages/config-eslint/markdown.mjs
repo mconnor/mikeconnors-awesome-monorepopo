@@ -37,6 +37,8 @@ const markdownConfig = tseslint.config(
       '**/*.d.ts',
       '*.config.js',
       '*.config.mjs',
+      '.prettierrc.mjs',
+      '.vercel/',
     ],
   },
 );

@@ -1,0 +1,4 @@
+{
+  "$schema": "../../../.astro/collections/authors.schema.json",
+  "test": "test"
+}

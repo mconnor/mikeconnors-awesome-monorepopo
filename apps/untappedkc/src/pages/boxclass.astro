@@ -1,0 +1,36 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import Stack from '@repo/layout-webcomponents/Stack';
+import Sidebar from '@repo/layout-webcomponents/Sidebar';
+import Box from '@repo/layout-webcomponents/Box';
+const pageTitle = 'box class';
+---
+
+<Layout title={pageTitle}>
+  <Sidebar contentMin="20%" noStretch={false} sideWidth="30ch">
+    <Stack recursive splitAfter={2}>
+      <Box>xxx</Box>
+      <Box>xxx</Box>
+      <Box>xxx</Box>
+    </Stack>
+    <Box
+      ><p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam magnam est
+        iure veniam eos saepe unde doloremque corporis? Mollitia ex reiciendis
+        ea iure, at neque velit vero nihil esse sed. Lorem ipsum, dolor sit amet
+        consectetur adipisicing elit. Nam magnam est iure veniam eos saepe unde
+        doloremque corporis? Mollitia ex reiciendis ea iure, at neque velit vero
+        nihil esse sed.
+      </p></Box
+    >
+  </Sidebar>
+  <!-- <div class="app-colors"> -->
+</Layout>
+<!-- </div> -->
+
+<style>
+  .pre-wrap {
+    white-space: pre-wrap;
+  }
+</style>

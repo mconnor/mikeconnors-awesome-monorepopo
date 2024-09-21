@@ -1,0 +1,34 @@
+---
+import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
+import Cluster from '@repo/layout-webcomponents/Cluster';
+// import Hamburger from './Hamburger.astro';
+import Box from '@repo/layout-webcomponents/Box';
+
+// import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
+
+import HeaderLink from '#components/HeaderLink.astro';
+---
+
+<Box invert padding="var(--s1)" borderWidth="0">
+  <!-- <Hamburger /> -->
+
+  <ThemeSwitcher />
+  <Cluster align="baseline" justify="space-between" space="0">
+    <HeaderLink href="/"><h1>Mike Connor - Tech</h1></HeaderLink>
+
+    <!-- <AstroNavigateSelect /> -->
+
+    <Box borderWidth="0" padding="0">
+      <Cluster align="baseline" justify="flex-end" space="var(--s1)">
+        <HeaderLink href="/about">About</HeaderLink>
+
+        <HeaderLink href="/blog">Blog</HeaderLink>
+        <HeaderLink href="/tags">Tags</HeaderLink>
+        <!-- <HeaderLink href="/authors/">Authors</HeaderLink>
+
+        <HeaderLink href="/boxclass/">box class</HeaderLink>
+        <HeaderLink href="/boxtest/">box test</HeaderLink> -->
+      </Cluster>
+    </Box>
+  </Cluster>
+</Box>

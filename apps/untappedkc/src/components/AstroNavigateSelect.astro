@@ -1,0 +1,40 @@
+---
+// const { dog } = Astro.params;
+---
+
+<astro-navigate-select>
+  <select data-navigate-select>
+    <option value="/play">Play</option>
+    <option value="/blog">Blog</option>
+    <option value="/about">About</option>
+    <option value="/tags">Tags</option>
+  </select>
+</astro-navigate-select>
+
+<script>
+  class AstroNavigateSelect extends HTMLElement {
+    connectedCallback() {
+      this.querySelector('[data-navigate-select]')?.addEventListener(
+        'change',
+        this._handleChange.bind(this),
+      );
+    }
+
+    disconnectedCallback() {
+      this.querySelector('[data-navigate-select]')?.removeEventListener(
+        'change',
+        this._handleChange.bind(this),
+      );
+    }
+
+    async _handleChange(e: Event) {
+      const targetUrl = (e.target as HTMLSelectElement).value;
+      console.log(`Navigating to: ${targetUrl}`); // This console log is for debugging purposes
+      // Using 'navigate' function from 'astro:transitions/client'
+      if (!targetUrl) throw new Error('No target URL provided');
+      // navigate(targetUrl);
+      return Astro.redirect(targetUrl);
+    }
+  }
+  customElements.define('astro-navigate-select', AstroNavigateSelect);
+</script>

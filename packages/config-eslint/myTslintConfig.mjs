@@ -30,7 +30,7 @@ const myTslintConfig = tseslint.config(
     extends: [tseslint.configs.disableTypeChecked],
   },
   {
-    ignores: ['dist'],
+    ignores: ['dist', '.vercel/', 'cache-directory'],
   },
 );
 

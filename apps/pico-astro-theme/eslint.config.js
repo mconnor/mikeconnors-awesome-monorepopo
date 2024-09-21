@@ -14,6 +14,6 @@ export default [
     },
   },
   {
-    ignores: [".prettierrc"],
+    ignores: [".prettierrc", ".vercel/"],
   },
 ];

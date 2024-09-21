@@ -1,0 +1,30 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import Box from '@repo/layout-webcomponents/Box';
+
+import LitHeartButton from '#lit-web-components/HeartButton/index.astro';
+import AstroHeart from '#astro-web-component/AstroHeart/index.astro';
+// import MyElement from '#lit-web-components/MyElement/index.astro';
+---
+
+<Layout title="home">
+  <Box>
+    <Box borderStyle="double">Astro Web component</Box>
+    <Box> <AstroHeart /></Box>
+  </Box>
+
+  <Box>
+    <Box>
+      <Box>Lit Web component</Box>
+      <Box> <LitHeartButton>CLICK ME</LitHeartButton></Box>
+    </Box>
+    <Box>
+      <Box invert>Lit Web component again</Box>
+      <Box> <LitHeartButton>CLICK ME</LitHeartButton></Box>
+    </Box>
+  </Box>
+
+  <!--
+  <MyElement> this is my-element</MyElement> -->
+</Layout>

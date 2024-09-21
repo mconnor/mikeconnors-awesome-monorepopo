@@ -24,13 +24,13 @@ const reactConfig = tseslint.config(
       },
     },
   },
-  {
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
+  // {
+  //   settings: {
+  //     react: {
+  //       version: 'detect',
+  //     },
+  //   },
+  // },
   {
     files: ['**/*.jsx'],
     extends: [tseslint.configs.disableTypeChecked],

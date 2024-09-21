@@ -1,0 +1,69 @@
+---
+import Stack from '@repo/layout-webcomponents/Stack';
+import Box from '@repo/layout-webcomponents/Box';
+
+interface Props {
+  // href?: string;
+  num?: number;
+  children: HTMLElement[];
+}
+// const { num = 4 } = Astro.props as Props;
+// const className = `surface${num}`;
+// import { Switcher, Stack, Box, Frame } from '#astro-custom-layout-components/index.ts';
+// const { href } = Astro.props;
+---
+
+<article class="app-colors">
+  <Stack splitAfter={2}>
+    <Box invert>
+      <h2><slot name="headline" /></h2>
+    </Box>
+
+    <Box padding="0">
+      <Box borderWidth="0" padding="var(--size-fluid-3)">
+        <h3><slot name="sub" /></h3>
+      </Box>
+      <Box borderWidth="0" padding="var(--size-fluid-3)">
+        <p class="main-copy"><slot name="body" /></p>
+      </Box>
+    </Box>
+  </Stack>
+</article>
+
+<style>
+  .headline {
+    padding: '0';
+  }
+  .card {
+    border-width: var(--border-size-1);
+    border-radius: var(--radius-conditional-2);
+    /* padding: var(--size-fluid-3); */
+    box-shadow: var(--shadow-2);
+
+    &:hover {
+      box-shadow: var(--shadow-3);
+    }
+
+    @media (--motionOK) {
+      animation: var(--animation-fade-in);
+    }
+  }
+  p {
+    font-size: var(--font-size-4) !important;
+  }
+
+  p.main-copy::first-letter {
+    font-size: var(--font-size-8) !important;
+    line-height: var(--line-height-8) !important;
+    font-style: italic;
+  }
+  .boxx {
+    padding: var(--s0);
+  }
+  .br3 {
+    border-radius: var(--radius-3);
+  }
+</style>
+
+<!--
+class="box-no-border invert surface4" -->

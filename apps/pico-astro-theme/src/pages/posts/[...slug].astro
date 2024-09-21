@@ -1,6 +1,7 @@
 ---
-import { getCollection } from "astro:content";
+import { z, getCollection } from "astro:content";
 import MarkdownPostLayout from "#layouts/MarkdownPostLayout.astro";
+import { postSchema } from "#schemas/index.js";
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection("posts");
@@ -11,9 +12,13 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props;
+const { data, error } = postSchema.safeParse(entry.data);
+if (error) {
+  throw new Error("Validation error:", error);
+}
 const { Content } = await entry.render();
 ---
 
-<MarkdownPostLayout frontmatter={entry.data}>
+<MarkdownPostLayout frontmatter={data}>
   <Content />
 </MarkdownPostLayout>

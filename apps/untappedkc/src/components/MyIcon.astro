@@ -1,0 +1,20 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'svg'> {
+  /** The name of the icon to include */
+  name: string;
+  /** Shorthand for including a <title>{props.title}</title> element in the SVG */
+  title?: string;
+  /** Shorthand for setting width and height */
+  size?: number;
+  width?: number;
+  height?: number;
+}
+
+const { name, size = 50, ...rest } = Astro.props;
+---
+
+<!-- Loads the SVG in `/src/icons/filename.svg` -->
+<Icon name={name} size={size} {...rest} />

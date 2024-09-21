@@ -1,0 +1,36 @@
+{
+  "$ref": "#/definitions/authors",
+  "definitions": {
+    "authors": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string",
+          "default": "Anonymous"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "portfolio": {
+          "type": "string",
+          "format": "uri"
+        },
+        "bio": {
+          "$ref": "#/definitions/authors/properties/name"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

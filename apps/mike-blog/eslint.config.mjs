@@ -10,6 +10,6 @@ export default [
 
   // prettierConfig,
   {
-    ignores: ['.prettierrc.mjs'],
+    ignores: ['.prettierrc.mjs', '.vercel/', 'cache-directory'],
   },
 ];
