@@ -4,11 +4,10 @@ import js from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 
-const myTslintConfig = tseslint.config(
+const tslintTypeCheckedConfig = tseslint.config(
   js.configs.recommended,
-  ...tseslint.configs.recommended,
-  // ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylistic,
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
   {
     languageOptions: {
       parser: tseslint.parser,
@@ -34,4 +33,4 @@ const myTslintConfig = tseslint.config(
   },
 );
 
-export default myTslintConfig;
+export default tslintTypeCheckedConfig;

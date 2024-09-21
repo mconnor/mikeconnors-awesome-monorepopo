@@ -2,35 +2,34 @@
 
 import reactPlugin from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
-import myTslintConfig from './myTslintConfig.mjs';
+// import tslintConfig from './tslintConfig.mjs';
 
 // const extraFileExtensions = ['.tsx', '.jsx'];
 
 const reactConfig = tseslint.config(
-  ...myTslintConfig,
+  // ...tslintConfig,
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat['jsx-runtime'],
 
   {
     languageOptions: {
+      parser: tseslint.parser,
       parserOptions: {
         parserServices: true,
-        // tsconfigRootDir: import.meta.dirname,
-
-        projectFolderIgnoreList: ['**/node_modules/**', '**/dist', '**/.turbo'],
+        tsconfigRootDir: import.meta.dirname,
         ecmaFeatures: {
           jsx: true,
         },
       },
     },
   },
-  // {
-  //   settings: {
-  //     react: {
-  //       version: 'detect',
-  //     },
-  //   },
-  // },
+  {
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
   {
     files: ['**/*.jsx'],
     extends: [tseslint.configs.disableTypeChecked],

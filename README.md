@@ -1,5 +1,7 @@
 # `Turborepo` Vite starter with eslint flat config
 
+import.meta.dirname is only present for ESM files in Node.js >=20.11.0 / >= 21.2.0.
+
 New to Tubrorepos and Monorepos in general. I started with the [Turborepo Vite example](https://github.com/vercel/turbo/tree/main/examples/with-vite).
 
 I wanted to:

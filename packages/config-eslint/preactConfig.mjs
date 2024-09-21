@@ -1,6 +1,10 @@
 import reactConfig from './reactConfig.mjs';
+import preact from 'eslint-config-preact';
 
 export default [
+  {
+    extends: ['preact'],
+  },
   ...reactConfig,
   {
     settings: {

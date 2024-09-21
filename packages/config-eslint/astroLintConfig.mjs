@@ -2,13 +2,13 @@
 // import astroEslintParser from 'astro-eslint-parser';
 import astroParser from 'astro-eslint-parser';
 import tseslint from 'typescript-eslint';
-import myTslintConfig from './myTslintConfig.mjs';
+import tslintConfig from './tslintConfig.mjs';
 import astro from 'eslint-plugin-astro';
 
 const extraFileExtensions = ['.astro'];
 
 const astroConfig = tseslint.config(
-  ...myTslintConfig,
+  ...tslintConfig,
   ...astro.configs.recommended,
   {
     files: ['**/*.astro'],

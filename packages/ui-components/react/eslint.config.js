@@ -1,10 +1,6 @@
+import tsLint from '@repo/eslint-config/ts-lint';
+// import tsLint from '@repo/eslint-config/ts-lint-type-check';
 import reactConfig from '@repo/eslint-config/react';
 import eslintConfigPrettier from '@repo/eslint-config/prettier';
 
-export default [
-  ...reactConfig,
-  eslintConfigPrettier,
-  {
-    ignores: ['dist', '.turbo'],
-  },
-];
+export default [...tsLint, ...reactConfig, eslintConfigPrettier];

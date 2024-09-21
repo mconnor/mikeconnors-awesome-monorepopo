@@ -1,9 +1,11 @@
 {
   "extends": "@repo/typescript-config/preact.json",
   "compilerOptions": {
-    "rootDir": "src"
+    "rootDir": "src",
+    "noEmit": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }

@@ -9,7 +9,8 @@
     },
 
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["^lint"],
+      "cache": true
     },
     "inspect": {
       "dependsOn": ["^inspect"]
@@ -22,7 +23,9 @@
     "fix": {
       "dependsOn": []
     },
-    "format": {},
+    "format": {
+      "cache": true
+    },
     "format:check": {},
     "dev": {
       "cache": false,
