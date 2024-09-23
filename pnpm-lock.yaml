@@ -280,6 +280,9 @@ importers:
       lit:
         specifier: ^3.2.0
         version: 3.2.0
+      open-props:
+        specifier: ^1.7.6
+        version: 1.7.6
       preact:
         specifier: ^10.24.0
         version: 10.24.0
@@ -305,9 +308,39 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config-typescript
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.20(postcss@8.4.47)
+      cssnano:
+        specifier: ^7.0.6
+        version: 7.0.6(postcss@8.4.47)
       eslint:
         specifier: ^9.11.0
         version: 9.11.0(jiti@1.21.6)
+      postcss:
+        specifier: ^8.4.47
+        version: 8.4.47
+      postcss-custom-media:
+        specifier: ^11.0.1
+        version: 11.0.1(postcss@8.4.47)
+      postcss-html:
+        specifier: ^1.7.0
+        version: 1.7.0
+      postcss-import:
+        specifier: ^16.1.0
+        version: 16.1.0(postcss@8.4.47)
+      postcss-jit-props:
+        specifier: ^1.0.14
+        version: 1.0.14(postcss@8.4.47)
+      postcss-nesting:
+        specifier: ^13.0.0
+        version: 13.0.0(postcss@8.4.47)
+      postcss-pow:
+        specifier: ^1.0.1
+        version: 1.0.1
+      prettier-plugin-astro:
+        specifier: ^0.14.1
+        version: 0.14.1
       typescript:
         specifier: <5.6
         version: 5.5.4
