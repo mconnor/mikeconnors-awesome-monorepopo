@@ -40,8 +40,5 @@
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.3"
-  },
-  "peerDependencies": {
-    "typescript": "~5.5.4"
   }
 }
