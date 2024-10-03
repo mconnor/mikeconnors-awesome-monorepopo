@@ -16,7 +16,7 @@ const {
   description = 'my description',
   image = '/placeholder-social.jpg',
 } = Astro.props;
-const mode = process.env.NODE_ENV?.toString().substring(0, 3);
+const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 ---
 
 <html lang="en" data-theme="toucan">
