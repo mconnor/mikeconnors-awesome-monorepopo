@@ -6,33 +6,23 @@ import postcssImport from 'postcss-import';
 import OpenProps from 'open-props';
 import postcssCustomMedia from 'postcss-custom-media';
 import nano from 'cssnano';
-import process from 'process';
 
 // const isProd = import.meta.env.PROD;
-const isDev = process.env.NODE_ENV === 'development';
-const isTest = process.env.NODE_ENV === 'test';
+const isDev = import.meta.env.NODE_ENV === 'development';
+const isTest = import.meta.env.NODE_ENV === 'test';
 
 const devConfig = {
-  plugins: [
-    postcssImport,
-
-    autoprefixer,
-    postcssNesting,
-    postcssPow,
-    postcssCustomMedia,
-    nano,
-  ],
+  plugins: [postcssImport, postcssNesting, postcssPow, postcssCustomMedia],
 };
 
 const prodConfig = {
   plugins: [
     postcssImport,
     postcssJitProps(OpenProps),
-    autoprefixer,
     postcssNesting,
     postcssPow,
-    postcssCustomMedia,
     nano,
+    autoprefixer({ overrideBrowserslist: ['last 2 versions'] }),
   ],
 };
 

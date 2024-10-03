@@ -28,20 +28,22 @@
     "inspect": "turbo inspect",
     "format": "turbo format",
     "format:check": "turbo format:check",
-    "check-types": "turbo check-types",
+    "check-types": "turbo run check-types",
     "all": "turbo run lint test build",
     "update:all": "turbo run update --filter=..."
   },
   "devDependencies": {
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.6",
+    "stylelint": "^16.9.0",
     "syncpack": "^13.0.0",
-    "turbo": "^2.1.2"
+    "turbo": "^2.1.2",
+    "typescript": "~5.6.2",
+    "vite-plugin-stylelint": "^5.3.1"
   },
   "engines": {
     "node": ">= 20.11.0 <21 || >= 22.9.0",
     "pnpm": ">=9.1.2"
   },
-  "packageManager": "pnpm@9.11.0"
+  "packageManager": "pnpm@9.12.0"
 }

@@ -4,21 +4,14 @@ import postcssNesting from 'postcss-nesting';
 import postcssPow from 'postcss-pow';
 import postcssImport from 'postcss-import';
 import OpenProps from 'open-props';
-import postcssCustomMedia from 'postcss-custom-media';
-
-// Use process.env.NODE_ENV to check if the environment is production
-// const isProd = import.meta.env.PROD
-// const isDev = process.env.NODE_ENV === 'development';
-// const isTest = process.env.NODE_ENV === 'test';
 
 export default {
   plugins: [
     postcssImport,
     postcssJitProps(OpenProps),
-    autoprefixer,
     postcssNesting,
     postcssPow,
-    postcssCustomMedia,
+    autoprefixer({ overrideBrowserslist: ['last 2 versions'] }),
   ],
 };
 // Use process.env.NODE_ENV to check if the environment is production

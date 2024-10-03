@@ -7,8 +7,17 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "."
   },
-  "include": ["src"],
-  "exclude": ["dist", ".astro", ".turbo"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    ".*",
+    "dist",
+    ".astro",
+    ".turbo",
+    ".frontmatter",
+    "node_modules"
+  ]
 }

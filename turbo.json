@@ -35,8 +35,11 @@
       "cache": true,
       "persistent": true
     },
+    "transit": {
+      "dependsOn": ["^transit"]
+    },
     "check-types": {
-      "dependsOn": ["^check-types"]
+      "dependsOn": ["transit"]
     }
   }
 }
