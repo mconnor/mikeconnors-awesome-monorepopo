@@ -1,14 +1,6 @@
-import eslintPluginSvelte from 'eslint-plugin-svelte';
-import js from '@eslint/js';
+import tsLint from '@repo/eslint-config/ts-lint';
+// import tsLint from '@repo/eslint-config/ts-lint-type-check';
+import svelte from '@repo/eslint-config/svelte';
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
 
-export default [
-  // add more generic rule sets here, such as:
-  js.configs.recommended,
-  ...eslintPluginSvelte.configs['flat/recommended'],
-  {
-    rules: {
-      // override/add rules settings here, such as:
-      // 'svelte/rule-name': 'error'
-    },
-  },
-];
+export default [...tsLint, ...svelte, eslintConfigPrettier];

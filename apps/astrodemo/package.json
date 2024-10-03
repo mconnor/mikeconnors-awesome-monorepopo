@@ -35,22 +35,22 @@
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:^",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "astro": "^4.15.8",
+    "astro": "^4.15.9",
     "lit": "^3.2.0",
-    "open-props": "^1.7.6",
-    "postcss-custom-media": "11.0.0",
-    "postcss-html": "^1.7.0",
-    "postcss-import": "^16.1.0",
-    "postcss-jit-props": "^1.0.14",
-    "postcss-nesting": "13.0.0",
-    "postcss-pow": "^1.0.1"
+    "open-props": "^1.7.6"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.11.0",
-    "typescript": "<5.6",
+    "eslint": "^9.11.1",
+    "postcss-custom-media": "^11.0.1",
+    "postcss-html": "^1.7.0",
+    "postcss-import": "^16.1.0",
+    "postcss-jit-props": "^1.0.14",
+    "postcss-nesting": "^13.0.0",
+    "postcss-pow": "^1.0.1",
+    "typescript": "5.5.4",
     "vite": "^5.4.7"
   }
 }

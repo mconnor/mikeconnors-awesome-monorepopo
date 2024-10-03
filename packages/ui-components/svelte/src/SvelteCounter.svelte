@@ -2,6 +2,7 @@
 A counter written with Svelte
 -->
 <script lang="ts">
+	export let klass;
 	let count = 0;
 
 	function add() {
@@ -13,7 +14,7 @@ A counter written with Svelte
 	}
 </script>
 
-<div class="counter">
+<div class={klass}>
 	<button on:click={subtract}>-</button>
 	<pre>{count}</pre>
 	<button on:click={add}>+</button>

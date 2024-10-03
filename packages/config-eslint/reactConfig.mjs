@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint';
 
 // const extraFileExtensions = ['.tsx', '.jsx'];
 
-const reactConfig = tseslint.config(
+export default tseslint.config(
   // ...tslintConfig,
   reactPlugin.configs.flat.recommended,
   reactPlugin.configs.flat['jsx-runtime'],
@@ -41,7 +41,4 @@ const reactConfig = tseslint.config(
       'react/no-unknown-property': ['error', { ignore: ['class'] }],
     },
   },
-  { ignores: ['**/*.astro'] },
 );
-
-export default [...reactConfig];

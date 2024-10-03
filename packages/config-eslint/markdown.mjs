@@ -1,10 +1,9 @@
 // @ts-check
 
 import markdown from 'eslint-plugin-markdown';
-
 import tseslint from 'typescript-eslint';
 
-const markdownConfig = tseslint.config(
+export default tseslint.config(
   {
     plugins: {
       markdown,
@@ -42,5 +41,3 @@ const markdownConfig = tseslint.config(
     ],
   },
 );
-
-export default markdownConfig;

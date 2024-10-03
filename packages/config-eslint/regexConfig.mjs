@@ -1,5 +1,4 @@
-import * as regexpPlugin from "eslint-plugin-regexp"
+import tseslint from 'typescript-eslint';
+import * as regexpPlugin from 'eslint-plugin-regexp';
 
-export default [
-    regexpPlugin.configs["flat/recommended"],
-];
+export default tseslint.config(regexpPlugin.configs['flat/recommended']);

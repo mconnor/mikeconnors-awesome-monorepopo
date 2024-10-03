@@ -12,7 +12,6 @@
   },
   "scripts": {
     "update": "pnpm update",
-    "check": "astro check",
     "test": "vitest",
     "lint": "eslint",
     "fix": "eslint --fix",
@@ -21,20 +20,18 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.3",
     "@open-wc/testing": "^4.0.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@web/test-runner": "^0.18.3",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "eslint": "^9.11.0",
+    "eslint": "^9.11.1",
     "jest": "^29.7.0",
-    "typescript": "^5.6.2",
     "vitest": "^2.1.1"
   },
   "dependencies": {
     "@repo/styles": "workspace:*",
-    "astro": "^4.15.8",
+    "astro": "^4.15.9",
     "lit": "^3.2.0"
   },
   "keywords": [],

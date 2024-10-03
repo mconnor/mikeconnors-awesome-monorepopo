@@ -11,5 +11,4 @@ export default [
   ...typeCheckingDisable,
   ...litConfig,
   eslintConfigPrettier,
-  { ignores: ['test/*.ts'] },
 ];

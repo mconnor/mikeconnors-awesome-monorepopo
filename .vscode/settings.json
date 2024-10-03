@@ -51,16 +51,16 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
+    "**/.git": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/CVS": false,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true
+    "**/Thumbs.db": false
   },
   "search.exclude": {
     "**/.git": true
   },
   "explorerExclude.backup": {},
-  "explorer.excludeGitIgnore": true,
+  "explorer.excludeGitIgnore": false,
 }

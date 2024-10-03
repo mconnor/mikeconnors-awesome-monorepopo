@@ -1,5 +1,5 @@
 import reactConfig from './reactConfig.mjs';
-import preact from 'eslint-config-preact';
+// import preact from 'eslint-config-preact';
 
 export default [
   {

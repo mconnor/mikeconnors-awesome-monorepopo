@@ -1,14 +1,12 @@
 // @ts-check
-// import astroEslintParser from 'astro-eslint-parser';
-import astroParser from 'astro-eslint-parser';
+
 import tseslint from 'typescript-eslint';
-import tslintConfig from './tslintConfig.mjs';
+import astroParser from 'astro-eslint-parser';
 import astro from 'eslint-plugin-astro';
 
 const extraFileExtensions = ['.astro'];
 
-const astroConfig = tseslint.config(
-  ...tslintConfig,
+export default tseslint.config(
   ...astro.configs.recommended,
   {
     files: ['**/*.astro'],
@@ -25,21 +23,14 @@ const astroConfig = tseslint.config(
   },
 
   {
-    linterOptions: {
-      reportUnusedDisableDirectives: 'warn',
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
 
   {
-    ignores: [
-      '**/temp.js',
-      'dist/',
-      '**/*.d.ts',
-      '.vercel/',
-      '.astro',
-      'cache-directory',
-    ],
+    linterOptions: {
+      reportUnusedDisableDirectives: 'warn',
+    },
   },
 );
-
-export default astroConfig;
