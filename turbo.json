@@ -19,6 +19,7 @@
       "dependsOn": ["^update"],
       "cache": false
     },
+    "updateAstro": {},
 
     "fix": {
       "dependsOn": []
