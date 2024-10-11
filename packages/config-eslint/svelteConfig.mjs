@@ -1,9 +1,10 @@
 import eslintPluginSvelte from 'eslint-plugin-svelte';
-import js from '@eslint/js';
+// import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
 
-export default [
+export default tseslint.config(
   // add more generic rule sets here, such as:
-  js.configs.recommended,
+  // js.configs.recommended,
   ...eslintPluginSvelte.configs['flat/recommended'],
   {
     rules: {
@@ -11,4 +12,4 @@ export default [
       // 'svelte/rule-name': 'error'
     },
   },
-];
+);

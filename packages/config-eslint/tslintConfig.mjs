@@ -16,7 +16,8 @@ export default tseslint.config(
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
-        parserServices: true,
+        projectService: true,
+        // parserServices: true,
         tsconfigRootDir: import.meta.dirname,
         // ecmaFeatures: {
         //   jsx: true,

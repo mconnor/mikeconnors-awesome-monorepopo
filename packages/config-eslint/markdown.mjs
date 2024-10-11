@@ -1,43 +1,24 @@
 // @ts-check
 
-import markdown from 'eslint-plugin-markdown';
-import tseslint from 'typescript-eslint';
-
-export default tseslint.config(
+import markdown from '@eslint/markdown';
+export default [
   {
+    // Apply the Markdown processor to all .md files
+    files: ['**/*.md'],
     plugins: {
       markdown,
     },
-  },
-  {
-    files: ['**/*.md'],
-    processor: 'markdown/markdown',
-  },
-  {
-    files: ['**/*.md/*.js'],
-    ...tseslint.configs.disableTypeChecked,
-    // ...
+    processor: 'markdown/markdown', // Lint fenced code blocks in Markdown
+    language: 'markdown/commonmark', // Or use "markdown/gfm" for GitHub-Flavored Markdown
     rules: {
-      'no-console': 'off',
-      'import/no-unresolved': 'off',
+      // Markdown rules
+      'markdown/fenced-code-language': 'warn', // Enforce language specification in fenced code blocks
+      'markdown/heading-increment': 'error', // Ensure heading levels increment by one
+      'markdown/no-duplicate-headings': 'warn', // Disallow duplicate headings in the same document
+      'markdown/no-empty-links': 'warn', // Disallow empty link elements
+      'markdown/no-html': 'error', // Disallow HTML in Markdown
+      'markdown/no-invalid-label-refs': 'error', // Disallow invalid label references
+      'markdown/no-missing-label-refs': 'error', // Disallow missing label references
     },
   },
-
-  {
-    linterOptions: {
-      reportUnusedDisableDirectives: 'warn',
-    },
-  },
-
-  {
-    ignores: [
-      '**/temp.js',
-      'dist/',
-      '**/*.d.ts',
-      '*.config.js',
-      '*.config.mjs',
-      '.prettierrc.mjs',
-      '.vercel/',
-    ],
-  },
-);
+];
