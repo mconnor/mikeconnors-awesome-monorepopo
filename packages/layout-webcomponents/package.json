@@ -21,6 +21,7 @@
     "./Cover": "./src/astro-wc/Cover/index.astro"
   },
   "scripts": {
+    "updateAstro": "pnpm dlx @astrojs/upgrade",
     "update": "pnpm update",
     "check": "astro check",
     "test": "vitest",
@@ -34,16 +35,16 @@
     "@open-wc/testing": "^4.0.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@web/test-runner": "^0.18.3",
+    "@web/test-runner": "^0.19.0",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "eslint": "^9.11.1",
+    "eslint": "^9.12.0",
     "jest": "^29.7.0",
-    "vitest": "^2.1.1"
+    "vitest": "^2.1.2"
   },
   "dependencies": {
     "@repo/styles": "workspace:*",
-    "astro": "^4.15.9",
-    "lit": "^3.2.0"
+    "astro": "^4.16.1",
+    "lit": "^3.2.1"
   },
   "keywords": [],
   "author": "",

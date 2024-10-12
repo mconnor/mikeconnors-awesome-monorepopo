@@ -1,27 +1,21 @@
 ---
 import BaseHead from '#components/BaseHead.astro';
-
+import { SITE_TITLE, SITE_DESCRIPTION } from '#config';
 import type { RmUnitType } from '@repo/styles/Types';
 
 interface Props {
-  title?: string;
-  description?: string;
   image?: string;
   maxW?: RmUnitType;
   children: unknown;
 }
 
-const {
-  title = 'Mike Connor',
-  description = 'my description',
-  image = '/placeholder-social.jpg',
-} = Astro.props;
+const { image = '/placeholder-social.jpg' } = Astro.props;
 const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 ---
 
 <html lang="en" data-theme="toucan">
   <head>
-    <BaseHead title={title} description={description} image={image} />
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image={image} />
   </head>
 
   <body>

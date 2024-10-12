@@ -8,18 +8,26 @@ import { configs as litConfigs } from 'eslint-plugin-lit';
 // import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-const tsLitConfig = tseslint.config(
+export default tseslint.config(
   wcConfigs['flat/recommended'],
   litConfigs['flat/recommended'],
   {
     languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      parser: tseslint.parser,
       parserOptions: {
+        projectService: true,
         tsconfigRootDir: import.meta.dirname,
-        parserServices: true,
-        ecmaFeatures: {
-          jsx: true,
-        },
+        // parserServices: true,
+        // ecmaFeatures: {
+        //   jsx: true,
+        // },
       },
+      // globals: {
+      //   ...globals.browser,
+      //   ...globals.node,
+      // },
     },
   },
   {
@@ -29,7 +37,6 @@ const tsLitConfig = tseslint.config(
       'no-unused-expressions': 'off',
       'wc/no-constructor-attributes': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
-      '@typescript-eslint/no-unsafe-member-access': 'off',
     },
   },
   {
@@ -40,5 +47,3 @@ const tsLitConfig = tseslint.config(
     },
   },
 );
-
-export default tsLitConfig;

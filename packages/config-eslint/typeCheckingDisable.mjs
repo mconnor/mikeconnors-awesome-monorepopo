@@ -1,7 +1,7 @@
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config({
-  files: ['**/*.js'],
+  files: ['**/*.js', '**/*.mjs', '**/*.jsx'],
   extends: [tseslint.configs.disableTypeChecked],
   rules: {
     // turn off other type-aware rules

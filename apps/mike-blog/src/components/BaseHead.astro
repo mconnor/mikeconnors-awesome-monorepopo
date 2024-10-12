@@ -47,7 +47,7 @@ const isTest = process.env.NODE_ENV === 'test';
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+{image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 <meta name="color-scheme" content="dark light dim grape choco toucan" />
 
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->

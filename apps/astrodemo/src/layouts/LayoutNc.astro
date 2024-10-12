@@ -9,12 +9,13 @@ import Center from '@repo/layout-webcomponents/Center';
 
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = 'mike connor' } = Astro.props;
+const { title = 'mike connor', description = 'my website' } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout title={title} , description={description}>
   <Cover centeredElement="center-l" noPad>
     <Header desc={title} />
     <Center>

@@ -7,17 +7,17 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": "src"
   },
   "include": [
-    "src"
+    "src",
+    "stylelint.config.mjs"
   ],
   "exclude": [
-    ".*",
     "dist",
     ".astro",
     ".turbo",
     ".frontmatter",
-    "node_modules"
+    "stylelint.config.mjs"
   ]
 }

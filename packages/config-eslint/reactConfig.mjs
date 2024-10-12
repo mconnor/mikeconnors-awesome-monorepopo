@@ -3,42 +3,24 @@
 import reactPlugin from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
 // import tslintConfig from './tslintConfig.mjs';
-
+import globals from 'globals';
+import { rules } from 'eslint-plugin-astro';
 // const extraFileExtensions = ['.tsx', '.jsx'];
 
-export default tseslint.config(
-  // ...tslintConfig,
-  reactPlugin.configs.flat.recommended,
-  reactPlugin.configs.flat['jsx-runtime'],
-
+export default [
   {
+    files: ['**/*.{jsx,tsx}'],
+    ...reactPlugin.configs.flat.recommended,
+    ...reactPlugin.configs['recommended-with-jsx'],
     languageOptions: {
-      parser: tseslint.parser,
-      parserOptions: {
-        parserServices: true,
-        tsconfigRootDir: import.meta.dirname,
-        ecmaFeatures: {
-          jsx: true,
-        },
+      ...reactPlugin.configs.flat.recommended.languageOptions,
+      globals: {
+        ...globals.serviceworker,
+        ...globals.browser,
       },
     },
-  },
-  {
-    settings: {
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  {
-    files: ['**/*.jsx'],
-    extends: [tseslint.configs.disableTypeChecked],
-  },
-  {
-    files: ['**/*.jsx', '**/*.tsx'],
     rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/no-unknown-property': ['error', { ignore: ['class'] }],
+      'react-in-jsx-scope': 'off',
     },
   },
-);
+];
