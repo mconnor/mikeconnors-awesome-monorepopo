@@ -2,25 +2,38 @@
 
 import reactPlugin from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
-// import tslintConfig from './tslintConfig.mjs';
-import globals from 'globals';
-import { rules } from 'eslint-plugin-astro';
-// const extraFileExtensions = ['.tsx', '.jsx'];
+import disableTypeChecking from './typeCheckingDisable.mjs';
 
-export default [
+export default tseslint.config(
   {
-    files: ['**/*.{jsx,tsx}'],
-    ...reactPlugin.configs.flat.recommended,
-    ...reactPlugin.configs['recommended-with-jsx'],
+    files: ['**/*.jsx', '**/*.tsx'],
+    extends: [
+      reactPlugin.configs.flat.recommended,
+      reactPlugin.configs['recommended-with-jsx'],
+    ],
+
     languageOptions: {
-      ...reactPlugin.configs.flat.recommended.languageOptions,
-      globals: {
-        ...globals.serviceworker,
-        ...globals.browser,
+      parserOptions: {
+        projectService: true,
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
     rules: {
-      'react-in-jsx-scope': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/no-unescaped-entities': 'off',
     },
   },
-];
+  {
+    files: ['**/*.jsx'],
+    extends: [...disableTypeChecking],
+  },
+  {
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+);

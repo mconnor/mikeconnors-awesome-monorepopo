@@ -1,12 +1,16 @@
 export default {
   ignores: [
-    'dist',
+    'dist/',
     '.vercel/',
-    'cache-directory',
-    '.astro',
+    'cache-directory/',
+    '.astro/',
     'test/*.ts',
-    '**/*/env.d.ts',
+    '**/*d.ts',
     '.turbo/',
-    '**/*.svg',
+    '*.svg/',
+    'pnpm-lock.yaml',
+    'package-lock.json',
+    'eslint.config.js',
+    'eslint.config.mjs',
   ],
 };

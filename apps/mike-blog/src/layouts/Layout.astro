@@ -11,6 +11,8 @@ interface Props {
   image?: string;
   maxW?: RmUnitType;
   children: unknown;
+  title?: string;
+  description?: string;
 }
 
 const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;

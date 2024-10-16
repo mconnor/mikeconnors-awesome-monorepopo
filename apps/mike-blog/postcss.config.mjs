@@ -7,9 +7,11 @@ import OpenProps from 'open-props';
 import postcssCustomMedia from 'postcss-custom-media';
 import nano from 'cssnano';
 
+import process from 'process';
+
 // const isProd = import.meta.env.PROD;
-const isDev = import.meta.env.NODE_ENV === 'development';
-const isTest = import.meta.env.NODE_ENV === 'test';
+const isDev = process.env.NODE_ENV === 'development';
+const isTest = process.env.NODE_ENV === 'test';
 
 const devConfig = {
   plugins: [postcssImport, postcssNesting, postcssPow, postcssCustomMedia],

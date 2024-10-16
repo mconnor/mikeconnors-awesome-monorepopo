@@ -12,8 +12,8 @@
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint",
-    "fix": "eslint --fix",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "inspect": "eslint --inspect-config",

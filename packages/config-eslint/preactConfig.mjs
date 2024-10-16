@@ -1,21 +1,16 @@
-import reactConfig from './reactConfig.mjs';
-// import preact from 'eslint-config-preact';
+const preactPlugin = require('eslint-plugin-preact');
+const globals = require('globals');
 
-export default [
+module.exports = [
   {
-    extends: ['preact'],
-  },
-  ...reactConfig,
-  {
-    settings: {
-      react: {
-        pragma: 'h',
+    files: ['**/*.{jsx,tsx}'],
+    ...preactPlugin.configs.flat.recommended,
+    languageOptions: {
+      ...preactPlugin.configs.flat.recommended.languageOptions,
+      globals: {
+        ...globals.serviceworker,
+        ...globals.browser,
       },
-    },
-  },
-  {
-    rules: {
-      'react/no-unknown-property': ['error', { ignore: ['class'] }],
     },
   },
 ];

@@ -25,8 +25,8 @@
     "update": "pnpm update",
     "check": "astro check",
     "test": "vitest",
-    "lint": "eslint",
-    "fix": "eslint --fix",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
     "format": "prettier --write .",
     "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit"
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "@repo/styles": "workspace:*",
-    "astro": "^4.16.1",
+    "astro": "^4.16.5",
     "lit": "^3.2.1"
   },
   "keywords": [],

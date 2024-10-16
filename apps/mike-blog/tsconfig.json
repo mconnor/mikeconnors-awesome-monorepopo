@@ -10,14 +10,12 @@
     "rootDir": "src"
   },
   "include": [
-    "src",
-    "stylelint.config.mjs"
+    "src"
   ],
   "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".frontmatter",
-    "stylelint.config.mjs"
+    "dist/",
+    ".astro/",
+    ".turbo/",
+    ".frontmatter/",
   ]
 }

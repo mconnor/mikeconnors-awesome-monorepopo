@@ -14,12 +14,14 @@
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint",
-    "fix": "eslint --fix",
+    "fix": "eslint . --ext .jsx --ext .tsx --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit"
+  },
+  "eslintConfig": {
+    "extends": "preact"
   },
   "keywords": [],
   "author": "",
@@ -29,8 +31,9 @@
     "preact": "^10.24.2"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.12.0"
+    "eslint": "^8.57.1",
+    "eslint-plugin-preact": "^0.1.0",
+    "globals": "^15.11.0"
   }
 }

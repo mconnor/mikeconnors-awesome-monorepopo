@@ -12,26 +12,23 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
+
   {
     languageOptions: {
+      ecmaVersion: 'latest',
       parser: tseslint.parser,
 
       parserOptions: {
-        // parserServices: true,
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
-        // ecmaFeatures: {
-        //   jsx: true,
-        // },
       },
       globals: {
         ...globals.browser,
-        ...globals.node,
       },
     },
   },
   {
-    files: ['**/*.js'],
+    files: ['**/*.js', '**/*.mjs'],
     extends: [tseslint.configs.disableTypeChecked],
   },
 );

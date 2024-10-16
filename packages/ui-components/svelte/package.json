@@ -12,21 +12,22 @@
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint",
+    "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "inspect": "eslint --inspect-config",
     "check-types": "svelte-check"
   },
   "devDependencies": {
-    "@eslint/js": "^9.12.0",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.12.0",
-    "svelte": "^4.2.19",
     "svelte-check": "^3.8.6"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "svelte": "^4.2.19"
+  }
 }

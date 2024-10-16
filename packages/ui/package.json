@@ -14,8 +14,8 @@
   "license": "MIT",
   "scripts": {
     "update": "pnpm update",
-    "lint": "eslint",
-    "fix": "eslint --fix",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
     "inspect": "eslint  --inspect-config",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

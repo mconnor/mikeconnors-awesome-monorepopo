@@ -31,12 +31,24 @@ export default tseslint.config(
     },
   },
   {
-    files: ['**/*js'],
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
+    },
+  },
+  {
+    files: ['**/*.js', '**/*.mjs'],
     extends: [tseslint.configs.disableTypeChecked],
     rules: {
       'no-unused-expressions': 'off',
       'wc/no-constructor-attributes': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
+    },
+  },
+  {
+    files: ['**/*.config.mjs'],
+    extends: [tseslint.configs.disableTypeChecked],
+    rules: {
+      '@typescript-eslint/no-unsafe-assignment': 'off',
     },
   },
   {

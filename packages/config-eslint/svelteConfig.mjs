@@ -6,6 +6,17 @@ export default tseslint.config(
   // add more generic rule sets here, such as:
   // js.configs.recommended,
   ...eslintPluginSvelte.configs['flat/recommended'],
+
+  {
+    files: ['**/*.svelte'],
+    extends: [tseslint.configs.disableTypeChecked],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      parserOptions: {
+        projectService: true,
+      },
+    },
+  },
   {
     rules: {
       // override/add rules settings here, such as:
