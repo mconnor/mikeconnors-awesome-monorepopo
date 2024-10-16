@@ -25,7 +25,7 @@
     "update": "pnpm update",
     "check": "astro check",
     "test": "vitest",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
     "format": "prettier --write .",
     "inspect": "eslint --inspect-config",

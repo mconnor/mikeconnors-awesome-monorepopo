@@ -12,7 +12,7 @@
   "scripts": {
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",

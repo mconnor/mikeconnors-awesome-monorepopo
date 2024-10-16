@@ -2,6 +2,12 @@
     "recommendations": [
         "astro-build.astro-vscode",
         "vercel.turbo-vsc",
-        "mikestead.dotenv"
+        "mikestead.dotenv",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "phoenisx.cssvar",
+        "unifiedjs.vscode-mdx",
+        "stylelint.vscode-stylelint",
+        "runem.lit-plugin"
     ]
 }

@@ -23,7 +23,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings 0",
     "lint:json": "eslint . -c jsonLint.config.mjs",
     "inspect:json": "eslint . -c jsonLint.config.mjs --inspect-config",
     "inspect": "eslint . --inspect-config",

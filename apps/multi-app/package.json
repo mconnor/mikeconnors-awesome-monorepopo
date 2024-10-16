@@ -15,7 +15,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "inspect": "eslint  --inspect-config",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings 0",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "fix": "eslint . --fix",
