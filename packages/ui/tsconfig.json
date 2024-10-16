@@ -1,13 +1,12 @@
 {
-  "extends": "@repo/typescript-config/base.json",
+  "extends": "@repo/typescript-config/myAstro.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src",
-    "declaration": true,
-    "declarationMap": true
+    "rootDir": ".",
   },
   "include": [
-    "src"
+    "src",
+    "*.config.js"
   ],
   "exclude": [
     "node_modules",

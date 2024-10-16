@@ -8,7 +8,9 @@
     "jsxImportSource": "react"
   },
   "include": [
-    "src"
+    "src",
+    "*.js",
+    "*.mjs"
   ],
   "exclude": [
     "node_modules",

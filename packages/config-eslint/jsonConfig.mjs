@@ -5,7 +5,7 @@ export default [
   {
     files: ['**/*.json'],
 
-    ignores: ['package-lock.json'],
+    // ignores: ['package-lock.json'],
     language: 'json/json',
     ...json.configs.recommended,
   },

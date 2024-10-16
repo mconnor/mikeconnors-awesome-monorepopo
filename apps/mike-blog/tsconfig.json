@@ -10,7 +10,9 @@
     "rootDir": "src"
   },
   "include": [
-    "src"
+    "src",
+    "*.js",
+    "*.mjs"
   ],
   "exclude": [
     "dist/",

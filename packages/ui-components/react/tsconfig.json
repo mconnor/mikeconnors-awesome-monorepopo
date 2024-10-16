@@ -4,7 +4,8 @@
     "rootDir": "src"
   },
   "include": [
-    "src"
+    "src",
+    "*.config.js"
   ],
   "exclude": [
     "node_modules",

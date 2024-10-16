@@ -5,7 +5,9 @@
     "useDefineForClassFields": false,
   },
   "include": [
-    "src"
+    "src",
+    "eslint.config.js",
+    "jsx.d.ts"
   ],
   "exclude": [
     "node_modules",

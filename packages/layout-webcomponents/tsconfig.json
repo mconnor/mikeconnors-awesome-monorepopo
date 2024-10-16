@@ -5,12 +5,14 @@
     "useDefineForClassFields": false,
   },
   "include": [
-    "src"
+    "src",
+    "eslint.config.js",
   ],
   "exclude": [
     "node_modules",
     "dist",
     ".astro",
-    ".turbo"
+    ".turbo",
+    "test"
   ]
 }

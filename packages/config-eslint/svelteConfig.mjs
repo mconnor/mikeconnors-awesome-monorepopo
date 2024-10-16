@@ -14,6 +14,7 @@ export default tseslint.config(
       ecmaVersion: 'latest',
       parserOptions: {
         projectService: true,
+        // extraFileExtensions,
       },
     },
   },

@@ -9,7 +9,7 @@ const orderedProjects = allProjects.sort(
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf(),
 );
-const pageTitle: string = "Projects";
+const pageTitle = "Projects";
 ---
 
 <BaseLayout pageTitle={pageTitle}>

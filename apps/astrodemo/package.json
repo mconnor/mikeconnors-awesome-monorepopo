@@ -30,13 +30,13 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/lit": "^4.3.0",
     "@astrojs/mdx": "^3.1.8",
-    "@astrojs/rss": "^4.0.8",
+    "@astrojs/rss": "^4.0.9",
     "@astrojs/vercel": "^7.8.1",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "astro": "^4.16.2",
+    "astro": "^4.16.5",
     "lit": "^3.2.1",
     "open-props": "^1.7.7"
   },
@@ -44,6 +44,7 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
     "eslint": "^9.12.0",
     "eslint-doc-generator": "^1.7.1",
     "postcss-custom-media": "^11.0.3",
@@ -52,6 +53,6 @@
     "postcss-jit-props": "^1.0.14",
     "postcss-nesting": "^13.0.0",
     "postcss-pow": "^1.0.1",
-    "vite": "^5.4.8"
+    "vite": "^5.4.9"
   }
 }

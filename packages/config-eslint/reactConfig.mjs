@@ -14,7 +14,6 @@ export default tseslint.config(
 
     languageOptions: {
       parserOptions: {
-        projectService: true,
         ecmaFeatures: {
           jsx: true,
         },

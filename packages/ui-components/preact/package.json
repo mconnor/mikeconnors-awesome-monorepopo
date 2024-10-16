@@ -28,12 +28,10 @@
   "license": "ISC",
   "dependencies": {
     "@repo/layout-webcomponents": "workspace:*",
-    "preact": "^10.24.2"
+    "preact": "^10.24.3"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^8.57.1",
-    "eslint-plugin-preact": "^0.1.0",
     "globals": "^15.11.0"
   }
 }
