@@ -1,26 +1,46 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [".env", "tsconfig.json"],
+  "globalDependencies": [
+    "tsconfig.json"
+  ],
+  "globalPassThroughEnv": [
+    "AWS_SECRET_KEY",
+    "GITHUB_TOKEN"
+  ],
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", "!README.md", ".env*"],
-      "outputs": ["dist/**"]
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!README.md",
+        ".env*"
+      ],
+      "outputs": [
+        "dist/**",
+        ".next/**",
+        "!.next/cache/**"
+      ]
     },
-
     "lint": {
-      "dependsOn": ["^lint"],
+      "dependsOn": [
+        "^lint"
+      ],
       "cache": true
     },
     "inspect": {
-      "dependsOn": ["^inspect"]
+      "dependsOn": [
+        "^inspect"
+      ]
     },
     "update": {
-      "dependsOn": ["^update"],
+      "dependsOn": [
+        "^update"
+      ],
       "cache": false
     },
     "updateAstro": {},
-
     "fix": {
       "dependsOn": []
     },
@@ -37,10 +57,25 @@
       "persistent": true
     },
     "transit": {
-      "dependsOn": ["^transit"]
+      "dependsOn": [
+        "^transit"
+      ]
     },
     "check-types": {
-      "dependsOn": ["transit"]
+      "dependsOn": [
+        "transit"
+      ]
+    },
+    "check": {
+      "dependsOn": [
+        "transit"
+      ]
+    },
+    "test": {
+      "dependsOn": [
+        "lint",
+        "build"
+      ]
     }
   }
 }
