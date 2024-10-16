@@ -12,7 +12,7 @@ import vercel from '@astrojs/vercel/static';
 export default defineConfig({
   // Enable many frameworks to support all different kinds of components.
   integrations: [
-    preact({ include: ['**/preact/*'] }),
+    preact({ include: ['**/preact/*'], compat: true, devtools: true }),
     solid({ include: ['**/solid/*'] }),
     react({ include: ['**/react/*'] }),
     svelte(),

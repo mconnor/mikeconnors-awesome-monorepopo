@@ -16,10 +16,10 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint",
+    "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "fix": "eslint --fix",
+    "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
   },
   "keywords": [
@@ -35,7 +35,7 @@
     "@astrojs/rss": "^4.0.8",
     "@astrojs/sitemap": "^3.2.0",
     "@astrojs/vercel": "^7.8.1",
-    "astro": "^4.16.1",
+    "astro": "^4.16.2",
     "astro-icon": "^1.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

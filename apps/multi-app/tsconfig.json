@@ -3,15 +3,18 @@
   "compilerOptions": {
     "verbatimModuleSyntax": true,
     "jsx": "preserve",
+    "declaration": true,
+    "declarationMap": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": "src"
   },
   "include": [
-    "src"
+    "src",
   ],
   "exclude": [
     "dist",
     ".astro",
-    ".turbo"
+    ".turbo",
+    ".vercel"
   ]
 }

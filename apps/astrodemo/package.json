@@ -18,13 +18,13 @@
     "toolBarOff": "astro preferences enable devToolbar",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint",
     "lint:eslint-docs": "npm run update:eslint-docs -- --check",
     "update:eslint-docs": "eslint-doc-generator",
     "inspect": "eslint  --inspect-config",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "fix": "eslint --fix"
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -36,7 +36,7 @@
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@webcomponents/template-shadowroot": "^0.2.1",
-    "astro": "^4.16.1",
+    "astro": "^4.16.2",
     "lit": "^3.2.1",
     "open-props": "^1.7.7"
   },
@@ -45,6 +45,7 @@
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "^10.4.20",
     "eslint": "^9.12.0",
+    "eslint-doc-generator": "^1.7.1",
     "postcss-custom-media": "^11.0.3",
     "postcss-html": "^1.7.0",
     "postcss-import": "^16.1.0",
