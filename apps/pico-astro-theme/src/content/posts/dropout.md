@@ -1,12 +1,12 @@
 ---
-title: "[Paper Review] Dropout"
+title: '[Paper Review] Dropout'
 author: Astro Learner
 description: "Dropout, 'Improving neural networks by preventing co-adaptation of feature detectors' (2012)"
 image:
-  url: ""
-  alt: ""
+  url: ''
+  alt: ''
 pubDate: 2018-06-05
-tags: ["paper review"]
+tags: ['paper review']
 ---
 
 Review: 신경망에서 드롭아웃에 관한 첫번째 논문이다. 이후 정리한 논문이 더 자세한 것 같다. 학습단계에서 무작위로 은닉층의 뉴런, 특징추출기 중 절반을 생략한다. 이를 통해 드롭아웃이 미적용된 망에서 보이던 동조화 현상이 현저히 줄어드는 것을 보았고, 자체적으로 앙상블 모델과 같은 모델 평균 효과를 보여준다. 이 두 작용을 통해 과최적화, Overfitting을 방지하는 결과를 보여준다.

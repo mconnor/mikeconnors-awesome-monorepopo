@@ -29,7 +29,7 @@ const { summary, elements } = Astro.props;
 </nav>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener('astro:page-load', () => {
     /*!
      * Minimal theme switcher
      *
@@ -39,12 +39,12 @@ const { summary, elements } = Astro.props;
 
     const themeSwitcher = {
       // Config
-      _scheme: "auto",
-      menuTarget: "details.dropdown",
-      buttonsTarget: "a[data-theme-switcher]",
-      buttonAttribute: "data-theme-switcher",
-      rootAttribute: "data-theme",
-      localStorageKey: "picoPreferredColorScheme",
+      _scheme: 'auto',
+      menuTarget: 'details.dropdown',
+      buttonsTarget: 'a[data-theme-switcher]',
+      buttonAttribute: 'data-theme-switcher',
+      rootAttribute: 'data-theme',
+      localStorageKey: 'picoPreferredColorScheme',
 
       // Init
       init() {
@@ -61,9 +61,9 @@ const { summary, elements } = Astro.props;
 
       // Preferred color scheme
       get preferredColorScheme() {
-        return window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light';
       },
 
       // Init switchers
@@ -71,13 +71,13 @@ const { summary, elements } = Astro.props;
         const buttons = document.querySelectorAll(this.buttonsTarget);
         buttons.forEach((button) => {
           button.addEventListener(
-            "click",
+            'click',
             (event: MouseEvent) => {
               event.preventDefault();
               // Set scheme
               this.scheme = button.getAttribute(this.buttonAttribute) as string;
               // Close dropdown
-              document.querySelector(this.menuTarget)?.removeAttribute("open");
+              document.querySelector(this.menuTarget)?.removeAttribute('open');
             },
             false,
           );
@@ -86,9 +86,9 @@ const { summary, elements } = Astro.props;
 
       // Set scheme
       set scheme(scheme) {
-        if (scheme == "auto") {
+        if (scheme == 'auto') {
           this._scheme = this.preferredColorScheme;
-        } else if (scheme == "dark" || scheme == "light") {
+        } else if (scheme == 'dark' || scheme == 'light') {
           this._scheme = scheme;
         }
         this.applyScheme();
@@ -103,12 +103,12 @@ const { summary, elements } = Astro.props;
       // Apply scheme
       applyScheme() {
         document
-          .querySelector("html")
+          .querySelector('html')
           ?.setAttribute(this.rootAttribute, this.scheme);
-        if (this.scheme === "dark") {
-          document.documentElement.classList.add("dark");
+        if (this.scheme === 'dark') {
+          document.documentElement.classList.add('dark');
         } else {
-          document.documentElement.classList.remove("dark");
+          document.documentElement.classList.remove('dark');
         }
       },
 

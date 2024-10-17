@@ -1,11 +1,11 @@
 ---
-import { getCollection } from "astro:content";
-import BaseLayout from "#layouts/BaseLayout.astro";
-import NavWrapper from "#components/NavigationWrapper.astro";
+import { getCollection } from 'astro:content';
+import BaseLayout from '#layouts/BaseLayout.astro';
+import NavWrapper from '#components/NavigationWrapper.astro';
 
-const allPosts = await getCollection("posts");
+const allPosts = await getCollection('posts');
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
-const pageTitle = "Tag Index";
+const pageTitle = 'Tag Index';
 ---
 
 <BaseLayout pageTitle={pageTitle}>

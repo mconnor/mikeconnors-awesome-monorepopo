@@ -1,42 +1,42 @@
 ---
-import BaseLayout from "#layouts/BaseLayout.astro";
-import NavWrapper from "#components/NavigationWrapper.astro";
+import BaseLayout from '#layouts/BaseLayout.astro';
+import NavWrapper from '#components/NavigationWrapper.astro';
 
-import { Image } from "astro:assets";
-import minimalLandscape from "../assets/aleksandar-jason-a562ZEFKW8I-unsplash-2000x1000.jpg";
+import { Image } from 'astro:assets';
+import minimalLandscape from '../assets/aleksandar-jason-a562ZEFKW8I-unsplash-2000x1000.jpg';
 
-import Hgroup from "#components/preview/Hgroup.astro";
-import Dropdown from "#components/preview/Dropdown.astro";
-import Sample from "#components/preview/Sample.astro";
-import Blockquote from "#components/preview/Blockquote.astro";
-import Lists from "#components/preview/Lists.astro";
-import InlineTextElements from "#components/preview/InlineTextElements.astro";
-import Headings from "#components/preview/Headings.astro";
-import Buttons from "#components/preview/Buttons.astro";
-import States from "#components/preview/States.astro";
-import Accordions from "#components/preview/Accordions.astro";
-import Group from "#components/preview/Group.astro";
+import Hgroup from '#components/preview/Hgroup.astro';
+import Dropdown from '#components/preview/Dropdown.astro';
+import Sample from '#components/preview/Sample.astro';
+import Blockquote from '#components/preview/Blockquote.astro';
+import Lists from '#components/preview/Lists.astro';
+import InlineTextElements from '#components/preview/InlineTextElements.astro';
+import Headings from '#components/preview/Headings.astro';
+import Buttons from '#components/preview/Buttons.astro';
+import States from '#components/preview/States.astro';
+import Accordions from '#components/preview/Accordions.astro';
+import Group from '#components/preview/Group.astro';
 
-import Modal from "#components/Modal.astro";
-import Heading from "#components/Heading.astro";
-import Search from "#components/Search.astro";
-import Text from "#components/Text.astro";
-import Select from "#components/Select.astro";
-import FileBrowser from "#components/FileBrowser.astro";
-import RangeSlider from "#components/RangeSlider.astro";
-import Date from "#components/Date.astro";
-import Time from "#components/Time.astro";
-import Color from "#components/Color.astro";
-import Checkbox from "#components/Checkbox.astro";
-import RadioButton from "#components/RadioButton.astro";
-import Switch from "#components/Switch.astro";
-import Table from "#components/Table.astro";
-import Article from "#components/Article.astro";
-import Progress from "#components/Progress.astro";
-import LoadingArticle from "#components/LoadingArticle.astro";
-import LoadingButton from "#components/LoadingButton.astro";
+import Modal from '#components/Modal.astro';
+import Heading from '#components/Heading.astro';
+import Search from '#components/Search.astro';
+import Text from '#components/Text.astro';
+import Select from '#components/Select.astro';
+import FileBrowser from '#components/FileBrowser.astro';
+import RangeSlider from '#components/RangeSlider.astro';
+import Date from '#components/Date.astro';
+import Time from '#components/Time.astro';
+import Color from '#components/Color.astro';
+import Checkbox from '#components/Checkbox.astro';
+import RadioButton from '#components/RadioButton.astro';
+import Switch from '#components/Switch.astro';
+import Table from '#components/Table.astro';
+import Article from '#components/Article.astro';
+import Progress from '#components/Progress.astro';
+import LoadingArticle from '#components/LoadingArticle.astro';
+import LoadingButton from '#components/LoadingButton.astro';
 
-const pageTitle = "Preview";
+const pageTitle = 'Preview';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -61,7 +61,7 @@ const pageTitle = "Preview";
         title="Pico"
         description="A pure HTML example, without dependencies."
       />
-      <Dropdown summary="Theme" elements={["auto", "light", "dark"]} />
+      <Dropdown summary="Theme" elements={['auto', 'light', 'dark']} />
     </section>
     <!-- ./ HGroup -->
 
@@ -92,10 +92,10 @@ const pageTitle = "Preview";
       <Lists
         title="Lists"
         ctxs={[
-          "Aliquam lobortis lacus eu libero ornare facilisis.",
-          "Nam et magna at libero scelerisque egestas.",
-          "Suspendisse id nisl ut leo finibus vehicula quis eu ex.",
-          "Proin ultricies turpis et volutpat vehicula.",
+          'Aliquam lobortis lacus eu libero ornare facilisis.',
+          'Nam et magna at libero scelerisque egestas.',
+          'Suspendisse id nisl ut leo finibus vehicula quis eu ex.',
+          'Proin ultricies turpis et volutpat vehicula.',
         ]}
       />
 
@@ -154,7 +154,7 @@ const pageTitle = "Preview";
           label="Select"
           id="select"
           name="select"
-          options={["option 1", "option 2", "..."]}
+          options={['option 1', 'option 2', '...']}
         />
 
         <!-- File browser -->

@@ -1,7 +1,7 @@
 ---
-import ProjectCard from "#components/ProjectCard.astro";
+import ProjectCard from '#components/ProjectCard.astro';
 
-const allProjects = await Astro.glob("../pages/projects/*.mdx");
+const allProjects = await Astro.glob('../pages/projects/*.mdx');
 const orderedProjects = allProjects.sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -

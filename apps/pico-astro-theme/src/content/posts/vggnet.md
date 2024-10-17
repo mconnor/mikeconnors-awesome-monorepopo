@@ -1,12 +1,12 @@
 ---
-title: "[Paper Review] VGGNet"
+title: '[Paper Review] VGGNet'
 author: Astro Learner
 description: "VGGNet, 'Very Deep Convolutional Networks for Large-Scale Image Recognition' (2014)"
 image:
-  url: ""
-  alt: ""
+  url: ''
+  alt: ''
 pubDate: 2018-05-29
-tags: ["paper review"]
+tags: ['paper review']
 ---
 
 Review: VGGNet은 구조가 간단하며 이해나 변형이 쉬운 장점을 가진다. 하지만 FC로 인해 파라미터의 수가 매우 많다는 단점을 가지며, 이로 인해 필요한 메모리 수가 크고, 학습 시간이 오래 걸린다는 약점을 가진다.

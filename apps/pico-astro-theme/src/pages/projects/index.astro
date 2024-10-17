@@ -1,15 +1,15 @@
 ---
-import BaseLayout from "#layouts/BaseLayout.astro";
-import NavWrapper from "#components/NavigationWrapper.astro";
-import ProjectCard from "#components/ProjectCard.astro";
+import BaseLayout from '#layouts/BaseLayout.astro';
+import NavWrapper from '#components/NavigationWrapper.astro';
+import ProjectCard from '#components/ProjectCard.astro';
 
-const allProjects = await Astro.glob("../projects/*.mdx");
+const allProjects = await Astro.glob('../projects/*.mdx');
 const orderedProjects = allProjects.sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf(),
 );
-const pageTitle = "Projects";
+const pageTitle = 'Projects';
 ---
 
 <BaseLayout pageTitle={pageTitle}>

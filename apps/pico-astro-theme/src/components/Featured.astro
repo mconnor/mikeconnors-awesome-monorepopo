@@ -1,8 +1,8 @@
 ---
-import { getCollection } from "astro:content";
-import BlogPost from "./BlogPost.astro";
+import { getCollection } from 'astro:content';
+import BlogPost from './BlogPost.astro';
 
-const allPosts = await getCollection("posts");
+const allPosts = await getCollection('posts');
 const firstPost = allPosts[0];
 const secondPost = allPosts[1];
 const thirdPost = allPosts[2];

@@ -2,8 +2,8 @@
 // description: The component was intended to generate Modal using React and React's createPortal() api.
 // obstacle: Astro or Vite has a problem to render nested component from UI integration like react.
 
-import { useState } from "react";
-import { createPortal } from "react-dom";
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
 
 // eslint-disable-next-line react/prop-types
 function ModalContent({ onClose }) {

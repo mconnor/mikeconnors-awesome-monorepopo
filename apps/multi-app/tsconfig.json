@@ -8,15 +8,6 @@
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": [
-    "src",
-    "*config.js",
-    "*config.mjs"
-  ],
-  "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".vercel"
-  ]
+  "include": ["src", "*config.js", "*config.mjs"],
+  "exclude": ["dist", ".astro", ".turbo", ".vercel"]
 }

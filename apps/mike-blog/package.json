@@ -17,6 +17,7 @@
   "scripts": {
     "updateAstro": "pnpm dlx @astrojs/upgrade",
     "update": "pnpm update",
+    "spell-check": "cspell --no-summary --no-progress --no-colors --config cspell.json \"**/*.{md,mts,ts,tsx}\"",
     "dev": "astro dev",
     "start": "astro dev",
     "check": "astro check",

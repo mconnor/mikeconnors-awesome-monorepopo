@@ -1,7 +1,7 @@
 ---
-import { Image } from "astro:assets";
-import BaseLayout from "#layouts/BaseLayout.astro";
-import NavWrapper from "#components/NavigationWrapper.astro";
+import { Image } from 'astro:assets';
+import BaseLayout from '#layouts/BaseLayout.astro';
+import NavWrapper from '#components/NavigationWrapper.astro';
 
 const { frontmatter } = Astro.props;
 const processedDate = new Date(frontmatter.pubDate?.valueOf());

@@ -38,62 +38,62 @@
 </style>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
+  document.addEventListener('astro:page-load', () => {
     const theme = (() => {
       if (
-        typeof localStorage !== "undefined" &&
-        localStorage.getItem("picoPreferredColorScheme")
+        typeof localStorage !== 'undefined' &&
+        localStorage.getItem('picoPreferredColorScheme')
       ) {
-        return localStorage.getItem("picoPreferredColorScheme");
+        return localStorage.getItem('picoPreferredColorScheme');
       }
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        return "dark";
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return 'dark';
       }
-      return "light";
+      return 'light';
     })();
 
-    if (theme === "light") {
-      document.documentElement.setAttribute("data-theme", "light");
-      document.documentElement.classList.remove("dark");
+    if (theme === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.classList.remove('dark');
     } else {
-      document.documentElement.setAttribute("data-theme", "dark");
-      document.documentElement.classList.add("dark");
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.classList.add('dark');
     }
 
-    window.localStorage.setItem("picoPreferredColorScheme", theme as string);
+    window.localStorage.setItem('picoPreferredColorScheme', theme as string);
 
     const handleToggleClick = () => {
       const element = document.documentElement;
-      element.classList.toggle("dark");
+      element.classList.toggle('dark');
 
-      const isDark = element.classList.contains("dark");
+      const isDark = element.classList.contains('dark');
 
       if (isDark) {
-        element.setAttribute("data-theme", "dark");
+        element.setAttribute('data-theme', 'dark');
       } else {
-        element.setAttribute("data-theme", "light");
+        element.setAttribute('data-theme', 'light');
       }
 
       localStorage.setItem(
-        "picoPreferredColorScheme",
-        isDark ? "dark" : "light",
+        'picoPreferredColorScheme',
+        isDark ? 'dark' : 'light',
       );
     };
 
     document
-      .getElementById("themeToggle")!
-      .addEventListener("click", handleToggleClick);
+      .getElementById('themeToggle')!
+      .addEventListener('click', handleToggleClick);
   });
 </script>
 
 <script>
-  document.addEventListener("astro:after-swap", () => {
-    if (localStorage.getItem("picoPreferredColorScheme") === "dark") {
-      document.documentElement.setAttribute("data-theme", "dark");
-      document.documentElement.classList.add("dark");
+  document.addEventListener('astro:after-swap', () => {
+    if (localStorage.getItem('picoPreferredColorScheme') === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.documentElement.classList.add('dark');
     } else {
-      document.documentElement.setAttribute("data-theme", "light");
-      document.documentElement.classList.remove("dark");
+      document.documentElement.setAttribute('data-theme', 'light');
+      document.documentElement.classList.remove('dark');
     }
   });
 </script>

@@ -1,6 +1,6 @@
 ---
-import Footer from "#components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
+import Footer from '#components/Footer.astro';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
   pageTitle: string;
@@ -33,9 +33,9 @@ const { pageTitle } = Astro.props;
     <Footer />
     <!-- <script src="#scripts/menu.js"> -->
     <script>
-      document.addEventListener("astro:page-load", () => {
-        document.querySelector(".hamburger")?.addEventListener("click", () => {
-          document.querySelector(".nav-links")?.classList.toggle("expanded");
+      document.addEventListener('astro:page-load', () => {
+        document.querySelector('.hamburger')?.addEventListener('click', () => {
+          document.querySelector('.nav-links')?.classList.toggle('expanded');
         });
       });
     </script>

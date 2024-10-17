@@ -1,26 +1,26 @@
 // @ts-check
-import { defineConfig } from "astro/config";
-import sitemap from "@astrojs/sitemap";
-import react from "@astrojs/react";
-import mdx from "@astrojs/mdx";
-import icon from "astro-icon";
+import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
+import react from '@astrojs/react';
+import mdx from '@astrojs/mdx';
+import icon from 'astro-icon';
 
-import vercel from "@astrojs/vercel/static";
+import vercel from '@astrojs/vercel/static';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-pico.netlify.app",
+  site: 'https://astro-pico.netlify.app',
   integrations: [react(), icon(), mdx(), sitemap()],
 
   image: {
-    domains: ["astro.build"],
+    domains: ['astro.build'],
     remotePatterns: [
       {
-        protocol: "https",
+        protocol: 'https',
       },
     ],
   },
 
-  output: "static",
+  output: 'static',
   adapter: vercel(),
 });

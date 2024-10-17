@@ -5,9 +5,11 @@
 AstroPico, an [Astro](https://docs.astro.build/) styled with [Pico CSS](https://picocss.com/), is a static, minimal, lightweight, fast, responsive Astro theme for blog or simple web for those who likes simple implementation and good looking visual.
 
 ## 📖 Installation
+
 ```sh
 npm create astro@latest -- --template san-ghun/astro-pico
 ```
+
 <details>
     <summary>additional options</summary>
     
@@ -16,8 +18,10 @@ npm create astro@latest -- --template san-ghun/astro-pico
 npm create astro@latest --template san-ghun/astro-pico
 
 # yarn
+
 yarn create astro --template san-ghun/astro-pico
-```
+
+````
 
 </details>
 
@@ -40,12 +44,12 @@ yarn create astro --template san-ghun/astro-pico
 ## 💻 Tech Stack
 
 - **Main Framework** - [Astro](https://astro.build/)
-- **Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
-- **Component Framework** - [Astro](https://astro.build/) & [ReactJS](https://reactjs.org/)  
-- **Styling** - [Pico CSS](https://picocss.com/)  
-- **Icons** - [Tablers](https://tabler-icons.io/)  
-- **Code Formatting** - [Prettier](https://prettier.io/)  
-- **Deployment** - [Netlify](https://netlify.com/)  
+- **Type Checking** - [TypeScript](https://www.typescriptlang.org/)
+- **Component Framework** - [Astro](https://astro.build/) & [ReactJS](https://reactjs.org/)
+- **Styling** - [Pico CSS](https://picocss.com/)
+- **Icons** - [Tablers](https://tabler-icons.io/)
+- **Code Formatting** - [Prettier](https://prettier.io/)
+- **Deployment** - [Netlify](https://netlify.com/)
 
 ## 🚀 Project Structure
 
@@ -87,7 +91,7 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── astro.config.mjs
 ├── tsconfig.json
 └── package.json
-```
+````
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
@@ -146,5 +150,5 @@ Feel free to open an [issue](https://github.com/san-ghun/astro-pico/issues/) if 
 
 ## 📜 License
 
-MIT, 
+MIT,
 Copyright © 2023-present

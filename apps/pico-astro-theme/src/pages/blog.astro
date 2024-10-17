@@ -1,15 +1,15 @@
 ---
-import { getCollection } from "astro:content";
-import BaseLayout from "#layouts/BaseLayout.astro";
-import NavWrapper from "#components/NavigationWrapper.astro";
-import BlogPost from "#components/BlogPost.astro";
+import { getCollection } from 'astro:content';
+import BaseLayout from '#layouts/BaseLayout.astro';
+import NavWrapper from '#components/NavigationWrapper.astro';
+import BlogPost from '#components/BlogPost.astro';
 
-const allPosts = await getCollection("posts");
+const allPosts = await getCollection('posts');
 const orderedPosts = allPosts.sort(
   (a, b) =>
     new Date(b.data.pubDate).valueOf() - new Date(a.data.pubDate).valueOf(),
 );
-const pageTitle = "Blog";
+const pageTitle = 'Blog';
 ---
 
 <BaseLayout pageTitle={pageTitle}>

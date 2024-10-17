@@ -1,4 +1,4 @@
-import { z } from "astro:content";
+import { z } from 'astro:content';
 export const postSchema = z.object({
   title: z.string(),
   pubDate: z.date(),

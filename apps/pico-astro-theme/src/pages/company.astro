@@ -1,17 +1,17 @@
 ---
-import BaseLayout from "#layouts/BaseLayout.astro";
+import BaseLayout from '#layouts/BaseLayout.astro';
 
-import NavWrapper from "#components/NavigationWrapper.astro";
-import Heading from "#components/Heading.astro";
-import Sample from "#components/preview/Sample.astro";
+import NavWrapper from '#components/NavigationWrapper.astro';
+import Heading from '#components/Heading.astro';
+import Sample from '#components/preview/Sample.astro';
 
-import { Image } from "astro:assets";
-import architecture_1 from "../assets/ashim-d-silva-3Ijt7UkSBYE-unsplash-1500x750.jpg";
-import architecture_2 from "../assets/maarten-deckers-T5nXYXCf50I-unsplash-1500x750.jpg";
-import architecture_3 from "../assets/daniel-von-appen-tb4heMa-ZRo-unsplash-1500-750.jpg";
-import architecture_4 from "../assets/matthew-hamilton-Ru3Ap8TNcsk-unsplash-1500-750.jpg";
+import { Image } from 'astro:assets';
+import architecture_1 from '../assets/ashim-d-silva-3Ijt7UkSBYE-unsplash-1500x750.jpg';
+import architecture_2 from '../assets/maarten-deckers-T5nXYXCf50I-unsplash-1500x750.jpg';
+import architecture_3 from '../assets/daniel-von-appen-tb4heMa-ZRo-unsplash-1500-750.jpg';
+import architecture_4 from '../assets/matthew-hamilton-Ru3Ap8TNcsk-unsplash-1500-750.jpg';
 
-const pageTitle = "Company";
+const pageTitle = 'Company';
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -140,7 +140,7 @@ const pageTitle = "Company";
   /* Header */
   .hero {
     background-color: #394046;
-    background-image: url("../assets/sascha-eremin-DNQ-M93tHmA-unsplash-3000x1000.jpg");
+    background-image: url('../assets/sascha-eremin-DNQ-M93tHmA-unsplash-3000x1000.jpg');
     background-position: center;
     background-size: cover;
   }
@@ -158,7 +158,7 @@ const pageTitle = "Company";
   }
 
   /* Nav */
-  summary[role="link"].contrast:is([aria-current], :hover, :active, :focus) {
+  summary[role='link'].contrast:is([aria-current], :hover, :active, :focus) {
     background-color: transparent;
     color: var(--contrast-hover);
   }
