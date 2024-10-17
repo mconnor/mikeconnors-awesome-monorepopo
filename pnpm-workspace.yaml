@@ -2,4 +2,7 @@ packages:
   - 'apps/*'
   - 'packages/**'
   - '!apps/web'
+    # exclude packages that are inside test directories
+  - '!**/test/**'
+    # Below excludes are only for Turbo because it doesn't respect gitignore like pnpm does
   - '!**/.vercel/**'
