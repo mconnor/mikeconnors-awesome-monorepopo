@@ -10,6 +10,7 @@
   "tasks": {
     "build": {
       "dependsOn": [
+        "^check-types",
         "^build"
       ],
       "inputs": [
@@ -47,6 +48,9 @@
     "format": {
       "cache": true
     },
+    "//#format:root": {
+      "cache": true
+    },
     "format:check": {},
     "dev": {
       "cache": false,
@@ -75,6 +79,12 @@
       "dependsOn": [
         "lint",
         "build"
+      ]
+    },
+    "spell-check": {
+      "inputs": [
+        "**/*.md",
+        "**/*.mdx"
       ]
     }
   }

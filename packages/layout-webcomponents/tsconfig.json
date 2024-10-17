@@ -2,17 +2,8 @@
   "extends": "@repo/typescript-config/myAstro.json",
   "compilerOptions": {
     "experimentalDecorators": true,
-    "useDefineForClassFields": false,
+    "useDefineForClassFields": false
   },
-  "include": [
-    "src",
-    "eslint.config.js",
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".astro",
-    ".turbo",
-    "test"
-  ]
+  "include": ["src", "eslint.config.js"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo", "test"]
 }

@@ -4,14 +4,6 @@
     "rootDir": "src",
     "declarationMap": false
   },
-  "include": [
-    "src",
-    "*.config.js"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".astro",
-    ".turbo"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo"]
 }
