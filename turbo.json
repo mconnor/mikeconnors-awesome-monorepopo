@@ -27,8 +27,7 @@
     "lint": {
       "dependsOn": [
         "^lint"
-      ],
-      "cache": true
+      ]
     },
     "inspect": {
       "dependsOn": [
@@ -45,13 +44,6 @@
     "fix": {
       "dependsOn": []
     },
-    "format": {
-      "cache": true
-    },
-    "//#format:root": {
-      "cache": true
-    },
-    "format:check": {},
     "dev": {
       "cache": false,
       "persistent": true
@@ -72,13 +64,13 @@
     },
     "check": {
       "dependsOn": [
-        "transit"
+        "^check"
       ]
     },
     "test": {
       "dependsOn": [
-        "lint",
-        "build"
+        "^lint",
+        "^build"
       ]
     },
     "spell-check": {

@@ -1,7 +1,9 @@
 packages:
-  - 'apps/*'
+  - 'apps/astrodemo'
+  - 'apps/mike-blog'
+  - 'apps/multi-app'
+  - 'apps/pico-astro-theme'
   - 'packages/**'
-  - '!apps/web'
     # exclude packages that are inside test directories
   - '!**/test/**'
     # Below excludes are only for Turbo because it doesn't respect gitignore like pnpm does

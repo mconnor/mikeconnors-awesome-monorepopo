@@ -13,8 +13,6 @@
     "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --max-warnings 0",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
     "inspect": "eslint --inspect-config",
     "check-types": "svelte-check"
   },

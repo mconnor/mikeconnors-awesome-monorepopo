@@ -16,8 +16,6 @@
     "astro": "astro",
     "inspect": "eslint  --inspect-config",
     "lint": "eslint . --max-warnings 0",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
   },

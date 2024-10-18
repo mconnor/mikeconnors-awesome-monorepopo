@@ -26,8 +26,8 @@
     "lint": "turbo lint",
     "fix": "turbo fix",
     "inspect": "turbo inspect",
-    "format:root": "prettier --write .",
-    "format:check": "turbo format:check",
+    "format": "prettier --write \"**/*.{astro,js,mjs,jsx, ts,tsx,md}\"",
+    "format:check": "prettier --write \"**/*.{astro,js,mjs,jsx,ts,tsx,md}\" --check",
     "check-types": "turbo run check-types",
     "all": "turbo run lint test build",
     "update:all": "turbo run update --filter=..."

@@ -9,6 +9,15 @@
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": ["src", "*.js", "*.mjs"],
-  "exclude": ["dist/", ".astro/", ".turbo/", ".frontmatter/"]
+  "include": [
+    "src/**/*",
+    "*.js",
+    "*.mjs"
+  ],
+  "exclude": [
+    "dist/",
+    ".astro/",
+    ".turbo/",
+    ".frontmatter/"
+  ]
 }

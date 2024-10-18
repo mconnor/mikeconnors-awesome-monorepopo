@@ -13,11 +13,11 @@ public/dist
 **/*.d.ts.map
 *.map
 **/*.d.ts
-/packages/ui/src/utils/counter.js
-/packages/ui/src/components/counter.js
-/packages/ui/src/index.js
+notes.txt
+**/*/notes.txt
+cache-directory/
+.vercel
+.astro
 
-/notes.txt
-/apps/mike-blog/cache-directory
-**/*/.vercel
-/apps/mike-blog/.astro
+# playwright
+playwright-report/
