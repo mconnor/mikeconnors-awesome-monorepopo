@@ -9,10 +9,9 @@
   "scripts": {
     "updateAstro": "pnpm dlx @astrojs/upgrade",
     "dev": "astro dev",
-    "start": "astro dev",
     "astro-check": "astro check",
     "check-types": "tsc --noEmit",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "toolBarOn": "astro preferences disable devToolbar",
     "toolBarOff": "astro preferences enable devToolbar",
     "preview": "astro preview",
