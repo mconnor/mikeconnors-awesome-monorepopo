@@ -4,28 +4,32 @@
   "private": true,
   "type": "module",
   "imports": {
-    "#*": "./src/*"
+    "#*": "./dist/*"
   },
   "exports": {
-    "./header": "./src/components/header.ts",
-    "./counter": "./src/components/counter.ts",
-    "./setup-counter": "./src/utils/counter.ts"
+    "./header": {
+      "types": "./src/components/header.ts",
+      "default": "./dist/components/header.js"
+    },
+    "./counter": {
+      "types": "./src/components/counter.ts",
+      "default": "./dist/components/counter.js"
+    },
+    "./setup-counter": {
+      "types": "./src/utils/counter.ts",
+      "default": "./dist/utils/counter/counter.js"
+    }
   },
   "license": "MIT",
   "scripts": {
-    "update": "pnpm update",
-    "lint": "eslint . --max-warnings 0",
-    "fix": "eslint . --fix",
     "inspect": "eslint  --inspect-config",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.12.0",
-    "vite": "^5.4.9"
+    "eslint": "^9.13.0",
+    "vite": "^5.4.9",
+    "typescript": "^5.5.4"
   }
 }

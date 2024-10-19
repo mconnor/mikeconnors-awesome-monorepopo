@@ -5,12 +5,14 @@
     "strictNullChecks": true,
     "allowJs": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsxImportSource": "react",
+    "outDir": "dist",
+    "rootDir": "src"
   },
   "include": [
     "src/**/*",
-    "*.js",
-    "*.mjs"
+    "*.config.mjs",
+    "*.config.js"
   ],
   "exclude": [
     "node_modules",

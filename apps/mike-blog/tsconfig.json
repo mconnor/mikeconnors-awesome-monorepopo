@@ -11,8 +11,8 @@
   },
   "include": [
     "src/**/*",
-    "*.js",
-    "*.mjs"
+    "*.config.mjs",
+    "*.config.js"
   ],
   "exclude": [
     "dist/",

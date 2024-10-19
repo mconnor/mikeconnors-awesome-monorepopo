@@ -1,31 +1,32 @@
 {
-  "name": "@repo/svelte",
+  "name": "@repo/solid",
   "version": "1.0.0",
-  "description": "svelte ui",
+  "description": "",
   "type": "module",
   "imports": {
     "#*": "./src/*"
   },
   "exports": {
-    "./counter": "./src/SvelteCounter.svelte"
+    "./counter": "./src/SolidCounter.tsx"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --max-warnings 0",
+    "fix": "eslint . --fix",
     "inspect": "eslint --inspect-config",
-    "check-types": "svelte-check"
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf dist"
   },
+  "keywords": [
+    "solid"
+  ],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.13.0",
-    "svelte-check": "^3.8.6",
+    "solid-js": "^1.9.2",
     "typescript": "^5.5.4"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "svelte": "^4.2.19"
   }
 }

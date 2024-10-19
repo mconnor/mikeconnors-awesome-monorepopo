@@ -5,14 +5,14 @@ import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 import prettier from 'eslint-config-prettier';
-// const extraFileExtensions = ['.astro', '.svelte'];
+
 export default tseslint.config(
   {
     ...ignoresConfig,
   },
   js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
-  // ...tseslint.configs.stylisticTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
 
   {
     languageOptions: {
@@ -24,7 +24,6 @@ export default tseslint.config(
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
         warnOnUnsupportedTypeScriptVersion: false,
-        // extraFileExtensions,
       },
       globals: {
         ...globals.browser,
@@ -33,7 +32,7 @@ export default tseslint.config(
   },
   {
     files: ['**/*.js', '**/*.mjs'],
-    extends: [tseslint.configs.disableTypeChecked],
+    ...tseslint.configs.disableTypeChecked,
   },
   prettier,
 );

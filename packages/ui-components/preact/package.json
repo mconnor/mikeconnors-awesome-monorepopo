@@ -12,7 +12,6 @@
     "./counter": "./src/PreactCounter.tsx"
   },
   "scripts": {
-    "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
     "fix": "eslint . --ext .jsx --ext .tsx --fix",
     "inspect": "eslint --inspect-config",
@@ -24,12 +23,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@repo/layout-webcomponents": "workspace:*",
-    "preact": "^10.24.3"
-  },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "globals": "^15.11.0"
+    "preact": "^10.24.3",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "preact": "^18.3.1"
   }
 }

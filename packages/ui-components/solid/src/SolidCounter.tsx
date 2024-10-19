@@ -2,6 +2,10 @@
 
 import { createSignal, type JSX } from 'solid-js';
 
+// type Props = {
+//   klass: string;
+// };
+
 /** A counter written with Solid */
 export default function SolidCounter(props: { children?: JSX.Element }) {
   const [count, setCount] = createSignal(0);

@@ -10,8 +10,9 @@
   },
   "include": [
     "src/**/*",
-    "*config.js",
-    "*config.mjs"
+    "jsx.d.ts",
+    "*.config.mjs",
+    "*.config.js"
   ],
   "exclude": [
     "dist",

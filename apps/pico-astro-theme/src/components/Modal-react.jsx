@@ -5,7 +5,6 @@
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
 
-// eslint-disable-next-line react/prop-types
 function ModalContent({ onClose }) {
   return (
     <div className="modal">

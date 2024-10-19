@@ -58,13 +58,19 @@
       ]
     },
     "check-types": {
+      "inputs": [
+        "**/*.{ts,tsx}"
+      ],
       "dependsOn": [
         "transit"
       ]
     },
-    "check": {
+    "astro-check": {
+      "inputs": [
+        "**/*.{astro}"
+      ],
       "dependsOn": [
-        "^check"
+        "^astro-check"
       ]
     },
     "test": {

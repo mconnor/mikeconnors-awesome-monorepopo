@@ -13,6 +13,7 @@ export default tseslint.config(
     files: ['**/*.ts'],
     ...wc.configs['flat/recommended'],
     ...lit.configs['flat/recommended'],
+
     rules: {
       // '@typescript-eslint/unbound-method': 'off',
       // '@typescript-eslint/triple-slash-reference': 'off',

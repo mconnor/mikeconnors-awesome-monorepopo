@@ -10,28 +10,31 @@
     "./counter": "./src/ReactCounter.tsx"
   },
   "scripts": {
-    "update": "pnpm update",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
     "inspect": "eslint --inspect-config",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf dist"
   },
-  "keywords": [],
+  "keywords": [
+    "react"
+  ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "add": "^2.0.6"
-  },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22.7.5",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
     "@vanilla-extract/vite-plugin": "^4.0.16",
-    "eslint": "^9.12.0",
+    "eslint": "^9.13.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1"
   }
 }

@@ -6,11 +6,8 @@ import disableTypeChecking from './typeCheckingDisable.mjs';
 
 export default tseslint.config(
   {
-    files: ['**/*.jsx', '**/*.tsx'],
-    extends: [
-      reactPlugin.configs.flat.recommended,
-      reactPlugin.configs['recommended-with-jsx'],
-    ],
+    ...reactPlugin.configs.flat.recommended,
+    ...reactPlugin.configs['recommended-with-jsx'],
 
     languageOptions: {
       parserOptions: {
@@ -26,7 +23,7 @@ export default tseslint.config(
   },
   {
     files: ['**/*.jsx'],
-    extends: [...disableTypeChecking],
+    ...disableTypeChecking,
   },
   {
     settings: {
