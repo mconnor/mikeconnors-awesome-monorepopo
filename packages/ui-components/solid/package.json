@@ -7,7 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./counter": "./src/SolidCounter.tsx"
+    "./counter": "./src/SolidCounter.jsx"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,6 +27,7 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.13.0",
     "solid-js": "^1.9.2",
+    "tsup": "^8.3.0",
     "typescript": "^5.5.4"
   }
 }

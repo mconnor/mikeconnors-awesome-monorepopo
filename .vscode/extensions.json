@@ -8,6 +8,7 @@
         "phoenisx.cssvar",
         "unifiedjs.vscode-mdx",
         "stylelint.vscode-stylelint",
-        "runem.lit-plugin"
+        "runem.lit-plugin",
+        "Vercel.turbo-vsc"
     ]
 }

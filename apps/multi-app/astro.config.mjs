@@ -3,7 +3,7 @@ import preact from '@astrojs/preact';
 import react from '@astrojs/react';
 import svelte from '@astrojs/svelte';
 import vue from '@astrojs/vue';
-import solid from '@astrojs/solid-js';
+// import solid from '@astrojs/solid-js';
 import lit from '@astrojs/lit';
 
 import vercel from '@astrojs/vercel/static';
@@ -12,11 +12,11 @@ import vercel from '@astrojs/vercel/static';
 export default defineConfig({
   // Enable many frameworks to support all different kinds of components.
   integrations: [
-    preact({ include: ['**/preact/*'], compat: true, devtools: true }),
-    solid({
-      include: ['@repo/solid/**', '**/node_modules/@suid/material/**'],
-    }),
-    react({ include: ['**/react/*'] }),
+    preact({ include: ['@repo/preact/*'], compat: true, devtools: true }),
+    // solid({
+    //   include: ['@repo/solid/**', '**/node_modules/@suid/material/**'],
+    // }),
+    react({ include: ['@repo/react/*'] }),
     svelte(),
     vue(),
     lit(),

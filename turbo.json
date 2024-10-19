@@ -19,14 +19,15 @@
         ".env*"
       ],
       "outputs": [
-        "dist/**",
-        ".next/**",
-        "!.next/cache/**"
+        ".turbo"
       ]
     },
     "lint": {
       "dependsOn": [
-        "^lint"
+        "transit"
+      ],
+      "outputs": [
+        ".turbo"
       ]
     },
     "inspect": {
@@ -34,15 +35,10 @@
         "^inspect"
       ]
     },
-    "update": {
-      "dependsOn": [
-        "^update"
-      ],
-      "cache": false
-    },
-    "updateAstro": {},
     "fix": {
-      "dependsOn": []
+      "dependsOn": [
+        "^fix"
+      ]
     },
     "dev": {
       "cache": false,
@@ -63,14 +59,15 @@
       ],
       "dependsOn": [
         "transit"
-      ]
+      ],
+      "outputs": []
     },
     "astro-check": {
       "inputs": [
         "**/*.{astro}"
       ],
       "dependsOn": [
-        "^astro-check"
+        "^transit"
       ]
     },
     "test": {

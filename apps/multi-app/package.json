@@ -8,9 +8,8 @@
   "scripts": {
     "updateAstro": "dlx @astrojs/upgrade",
     "dev": "astro dev",
-    "start": "astro dev",
     "astro-check": "astro check",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "inspect": "eslint  --inspect-config",
@@ -31,6 +30,7 @@
     "@repo/preact": "workspace:*",
     "@repo/react": "workspace:*",
     "@repo/styles": "workspace:*",
+    "@repo/solid": "workspace:*",
     "@repo/svelte": "workspace:*",
     "@shoelace-style/shoelace": "^2.17.1",
     "@types/react": "^18.3.11",

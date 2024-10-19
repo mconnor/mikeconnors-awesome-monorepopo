@@ -73,4 +73,9 @@
   },
   "explorerExclude.backup": {},
   "explorer.excludeGitIgnore": false,
+  "Vercel.turbo-vsc": {
+    "turbo.transitNodes": [
+      "transit"
+    ]
+  }
 }
