@@ -8,9 +8,9 @@
     "GITHUB_TOKEN"
   ],
   "tasks": {
+    "//#lint:root": {},
     "build": {
       "dependsOn": [
-        "^check-types",
         "^build"
       ],
       "inputs": [
@@ -30,6 +30,12 @@
         ".turbo"
       ]
     },
+    "format": {
+      "dependsOn": [
+        "^format"
+      ]
+    },
+    "//#format:root": {},
     "inspect": {
       "dependsOn": [
         "^inspect"

@@ -21,3 +21,6 @@ cache-directory/
 
 # playwright
 playwright-report/
+packages/
+apps/
+pnpm-lock.yaml

@@ -2,7 +2,7 @@ packages:
   - 'apps/astrodemo'
   - 'apps/mike-blog'
   - 'apps/multi-app'
-  - 'apps/pico-astro-theme'
+  # 'apps/pico-astro-theme'
   - 'packages/**'
     # exclude packages that are inside test directories
   - '!**/test/**'
