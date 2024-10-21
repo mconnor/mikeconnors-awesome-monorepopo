@@ -1,8 +1,6 @@
 {
-    "extends": [
-        "//"
-    ],
-    "tasks": {
-        "lint": {}
-    }
+  "extends": ["//"],
+  "tasks": {
+    "lint": {}
+  }
 }

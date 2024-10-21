@@ -9,6 +9,6 @@ export default {
     '.turbo/',
     '*.svg/',
     'pnpm-lock.yaml',
-    'package-lock.json'
+    'package-lock.json',
   ],
 };

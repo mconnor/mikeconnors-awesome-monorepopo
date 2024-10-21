@@ -5,4 +5,4 @@ import markdownConfig from '@repo/eslint-config/markdown';
 // import jsonConfig from '@repo/eslint-config/json';
 // import regexConfig from '@repo/eslint-config/regex';
 
-export default [...tsLint, ...astroConfig,...markdownConfig];
+export default [...tsLint, ...astroConfig, ...markdownConfig];

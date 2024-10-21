@@ -13,6 +13,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "format": "prettier . --write",
     "lint": "eslint . --max-warnings 0",
     "lint:json": "eslint . -c jsonLint.config.mjs",
     "inspect:json": "eslint . -c jsonLint.config.mjs --inspect-config",
@@ -24,12 +25,14 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/starlight": "^0.28.3",
     "astro": "^4.16.6",
-    "sharp": "^0.32.6"
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.13.0",
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.6.3"
   }
 }

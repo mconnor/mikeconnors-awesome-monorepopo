@@ -1,14 +1,7 @@
 {
-  "cssvar.themes": [
-    "dark",
-    "light",
-    "dim",
-    "choco",
-    "toucan",
-    "grape"
-  ],
+  "cssvar.themes": ["dark", "light", "dim", "choco", "toucan", "grape"],
   "cssvar.files": [
     "./node_modules/open-props/open-props.min.css",
     "@repo/styles/css/**/*.css"
-  ],
+  ]
 }

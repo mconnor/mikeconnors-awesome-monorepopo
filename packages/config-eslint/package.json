@@ -21,7 +21,8 @@
     "./prettier": "./eslintConfigPrettier.mjs"
   },
   "scripts": {
-    "update": "pnpm update"
+    "update": "pnpm update",
+    "format": "prettier . --write"
   },
   "license": "MIT",
   "type": "module",
@@ -39,12 +40,15 @@
     "eslint-plugin-regexp": "^2.6.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-solid": "^0.14.3",
-    "eslint-plugin-svelte": "^2.45.1",
+    "eslint-plugin-svelte": "^2.46.0",
     "eslint-plugin-wc": "^2.2.0",
     "globals": "^15.11.0",
-    "typescript-eslint": "^8.10.0"
+    "typescript-eslint": "^8.11.0"
   },
   "peerDependencies": {
     "eslint": ">= 9"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
   }
 }

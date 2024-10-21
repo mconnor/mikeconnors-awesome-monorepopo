@@ -36,6 +36,7 @@
         "^format"
       ]
     },
+    "format:check": {},
     "//#format:root": {},
     "inspect": {
       "dependsOn": [

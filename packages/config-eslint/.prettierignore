@@ -1,0 +1,27 @@
+.DS_Store
+node_modules
+.turbo
+*.log
+dist
+dist-ssr
+*.local
+.env
+.cache
+server/dist
+public/dist
+
+**/*.d.ts.map
+*.map
+**/*.d.ts
+notes.txt
+**/*/notes.txt
+cache-directory/
+.vercel
+.astro
+
+# playwright
+playwright-report
+packages
+apps
+pnpm-lock.yaml
+.git
