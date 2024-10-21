@@ -5,8 +5,10 @@
     "useDefineForClassFields": false
   },
   "include": [
-    "src/**/*",
-    "eslint.config.js"
+    "src/**/*.ts",
+    "src/**/*.astro",
+    "jsx.d.ts",
+    "*.config.mjs",
   ],
   "exclude": [
     "node_modules",

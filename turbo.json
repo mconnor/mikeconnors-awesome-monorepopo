@@ -7,6 +7,7 @@
     "AWS_SECRET_KEY",
     "GITHUB_TOKEN"
   ],
+  "envMode": "strict",
   "tasks": {
     "//#lint:root": {},
     "build": {
@@ -19,15 +20,15 @@
         ".env*"
       ],
       "outputs": [
-        ".turbo"
+        "dist/**"
       ]
     },
     "lint": {
       "dependsOn": [
-        "transit"
+        "^lint"
       ],
       "outputs": [
-        ".turbo"
+        "dummy"
       ]
     },
     "format": {

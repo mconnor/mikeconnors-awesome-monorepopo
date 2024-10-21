@@ -22,7 +22,7 @@
   },
   "license": "MIT",
   "scripts": {
-    "inspect": "eslint  --inspect-config",
+    "inspect": "eslint . --inspect-config",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "devDependencies": {

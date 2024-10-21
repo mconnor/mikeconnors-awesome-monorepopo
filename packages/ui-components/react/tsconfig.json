@@ -1,10 +1,12 @@
 {
   "extends": "@repo/typescript-config/react.json",
   "compilerOptions": {
-    "rootDir": "src"
+    "rootDir": "."
   },
   "include": [
-    "src"
+    "src",
+    "*.config.mjs",
+    "*.config.js",
   ],
   "exclude": [
     "dist",

@@ -7,11 +7,12 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "."
   },
   "include": [
     "src",
-    "*.config.mjs"
+    "*.config.mjs",
+    "jsx.d.ts"
   ],
   "exclude": [
     "dist",

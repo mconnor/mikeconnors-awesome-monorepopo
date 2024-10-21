@@ -20,7 +20,8 @@ cache-directory/
 .astro
 
 # playwright
-playwright-report/
-packages/
-apps/
+playwright-report
+packages
+apps
 pnpm-lock.yaml
+.git

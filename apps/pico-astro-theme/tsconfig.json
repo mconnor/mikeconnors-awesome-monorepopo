@@ -7,10 +7,13 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "."
   },
   "include": [
-    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.astro",
+    "jsx.d.ts",
     "*.config.mjs",
     "*.config.js"
   ],

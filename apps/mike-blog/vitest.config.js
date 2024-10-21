@@ -5,9 +5,9 @@ import { getViteConfig } from 'astro/config';
 import stylelint from 'vite-plugin-stylelint';
 
 export default getViteConfig({
-  ssr: {
-    noExternal: ['date-fns', 'open-props'],
-  },
+  // ssr: {
+  //   noExternal: ['date-fns', 'open-props'],
+  // },
   test: {
     // Vitest configuration options
   },

@@ -4,7 +4,7 @@ import CounterSvelte from '@repo/svelte/counter';
 import { PreactCounter as PCount } from '@repo/preact/counter';
 import Box from '@repo/layout-webcomponents/Box';
 import Layout from '#layouts/Layout.astro';
-// import SolidCounter from '@repo/solid/counter';
+import { SolidCounter as SolidC } from '@repo/solid/counter';
 import VueCounter from '#components/vue/VueCounter.vue';
 ---
 
@@ -21,11 +21,11 @@ import VueCounter from '#components/vue/VueCounter.vue';
     </PCount></Box
   >
 
-  <!-- <Box>
-    <SolidCounter client:visible>
+  <Box>
+    <SolidC client:visible>
       <h1>Hello from Solid!</h1>
-    </SolidCounter></Box
-  > -->
+    </SolidC></Box
+  >
 
   <Box>
     <VueCounter client:visible>

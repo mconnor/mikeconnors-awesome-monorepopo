@@ -26,7 +26,8 @@
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "preact": "^10.24.3",
-    "typescript": "^5.5.4"
+    "typescript": "^5.5.4",
+    "eslint": "^9.13.0"
   },
   "peerDependencies": {
     "preact": "^18.3.1"

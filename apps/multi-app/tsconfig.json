@@ -6,13 +6,16 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "."
   },
   "include": [
-    "src/**/*",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.astro",
+    "src/**/*.vue",
     "jsx.d.ts",
     "*.config.mjs",
-    "*.config.js"
+    "*.config.js",
   ],
   "exclude": [
     "dist",
