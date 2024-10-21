@@ -1,5 +1,4 @@
 // @ts-check
-
 import reactPlugin from 'eslint-plugin-react';
 import tseslint from 'typescript-eslint';
 import disableTypeChecking from './typeCheckingDisable.mjs';
@@ -8,7 +7,6 @@ export default tseslint.config(
   {
     ...reactPlugin.configs.flat.recommended,
     ...reactPlugin.configs['recommended-with-jsx'],
-
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {

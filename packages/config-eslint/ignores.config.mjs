@@ -9,8 +9,6 @@ export default {
     '.turbo/',
     '*.svg/',
     'pnpm-lock.yaml',
-    'package-lock.json',
-    'eslint.config.js',
-    'eslint.config.mjs',
+    'package-lock.json'
   ],
 };
