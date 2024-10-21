@@ -94,7 +94,7 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
       vite:
         specifier: ^5.4.9
@@ -209,7 +209,7 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
       vite:
         specifier: ^5.4.9
@@ -339,7 +339,7 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3(@babel/core@7.25.8)(postcss-load-config@6.0.1(jiti@2.3.3)(postcss@8.4.47)(yaml@2.6.0))(postcss@8.4.47)(svelte@4.2.19)(typescript@5.6.3)
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
 
   apps/starlight:
@@ -463,7 +463,7 @@ importers:
         specifier: ^3.2.1
         version: 3.2.1
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
       vitest:
         specifier: ^2.1.3
@@ -491,7 +491,7 @@ importers:
         specifier: ^9.13.0
         version: 9.13.0(jiti@2.3.3)
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
 
   packages/ui:
@@ -506,7 +506,7 @@ importers:
         specifier: ^9.13.0
         version: 9.13.0(jiti@2.3.3)
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
       vite:
         specifier: ^5.4.9
@@ -524,7 +524,7 @@ importers:
         specifier: ^10.24.3
         version: 10.24.3
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
 
   packages/ui-components/react:
@@ -555,7 +555,7 @@ importers:
         specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
 
   packages/ui-components/svelte:
@@ -583,7 +583,7 @@ importers:
         specifier: ^3.8.6
         version: 3.8.6(@babel/core@7.25.8)(postcss-load-config@4.0.2(postcss@8.4.47))(postcss@8.4.47)(svelte@4.2.19)
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
 
   packages/ui-components/ui-lit:
@@ -620,7 +620,7 @@ importers:
         specifier: ^3.2.1
         version: 3.2.1
       typescript:
-        specifier: ^5.5.4
+        specifier: ^5.6.3
         version: 5.6.3
       vitest:
         specifier: ^2.1.3
@@ -7127,6 +7127,11 @@ packages:
       typescript:
         optional: true
 
+  typescript@5.4.5:
+    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   typescript@5.6.3:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
     engines: {node: '>=14.17'}
@@ -8298,7 +8303,7 @@ snapshots:
       custom-elements-manifest: 1.0.0
       debounce: 1.2.1
       globby: 11.0.4
-      typescript: 5.6.3
+      typescript: 5.4.5
 
   '@custom-elements-manifest/find-dependencies@0.0.5':
     dependencies:
@@ -16015,6 +16020,8 @@ snapshots:
     transitivePeerDependencies:
       - eslint
       - supports-color
+
+  typescript@5.4.5: {}
 
   typescript@5.6.3: {}
 
