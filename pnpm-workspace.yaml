@@ -2,6 +2,7 @@ packages:
   - 'apps/astrodemo'
   - 'apps/mike-blog'
   - 'apps/multi-app'
+  - 'apps/starlight'
   # 'apps/pico-astro-theme'
   - 'packages/**'
   - '!packages/solid/**'
