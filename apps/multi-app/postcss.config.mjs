@@ -1,11 +1,11 @@
-import postcssJitProps from 'postcss-jit-props';
 import autoprefixer from 'autoprefixer';
-import postcssNesting from 'postcss-nesting';
-import postcssPow from 'postcss-pow';
-import postcssImport from 'postcss-import';
+import nano from 'cssnano';
 import OpenProps from 'open-props';
 import postcssCustomMedia from 'postcss-custom-media';
-import nano from 'cssnano';
+import postcssImport from 'postcss-import';
+import postcssJitProps from 'postcss-jit-props';
+import postcssNesting from 'postcss-nesting';
+import postcssPow from 'postcss-pow';
 import process from 'process';
 
 // const isProd = import.meta.env.PROD;

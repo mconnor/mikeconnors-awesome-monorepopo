@@ -1,10 +1,8 @@
+import type { BorderStyle,RmUnitType } from '@repo/styles/Types';
 import { css, html, LitElement } from 'lit';
-
 import { customElement, property } from 'lit/decorators.js';
-
-import { styleMap } from 'lit/directives/style-map.js';
 import { classMap } from 'lit/directives/class-map.js';
-import type { RmUnitType, BorderStyle } from '@repo/styles/Types';
+import { styleMap } from 'lit/directives/style-map.js';
 /**
  * @module box-l
  * @description
