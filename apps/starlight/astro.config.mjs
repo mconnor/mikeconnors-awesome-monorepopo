@@ -6,9 +6,9 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'My Docs',
+      title: 'Mike\'s Docs',
       social: {
-        github: 'https://github.com/withastro/starlight',
+        github: 'https://github.com/mconnor/mikeconnors-awesome-monorepopo/tree/main/apps/starlight',
       },
       sidebar: [
         {
@@ -16,6 +16,7 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { label: 'Example Guide', slug: 'guides/example' },
+            { label: 'Horror Movie Guide', slug: 'guides/movies' },
           ],
         },
         {
