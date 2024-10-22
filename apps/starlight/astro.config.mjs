@@ -6,9 +6,10 @@ import starlight from '@astrojs/starlight';
 export default defineConfig({
   integrations: [
     starlight({
-      title: 'Mike\'s Docs',
+      title: "Mike's Docs",
       social: {
-        github: 'https://github.com/mconnor/mikeconnors-awesome-monorepopo/tree/main/apps/starlight',
+        github:
+          'https://github.com/mconnor/mikeconnors-awesome-monorepopo/tree/main/apps/starlight',
       },
       sidebar: [
         {

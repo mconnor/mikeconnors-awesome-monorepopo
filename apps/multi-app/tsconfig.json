@@ -16,6 +16,7 @@
     "jsx.d.ts",
     "*.config.mjs",
     "*.config.js",
+    ".prettierrc.mjs"
   ],
   "exclude": [
     "dist",

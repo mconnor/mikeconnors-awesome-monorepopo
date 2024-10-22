@@ -5,7 +5,7 @@ import astro from 'eslint-plugin-astro';
 
 export default tseslint.config({
   files: ['**/*.astro'],
-  extends: [tseslint.configs.disableTypeChecked,...astro.configs.recommended],
+  extends: [tseslint.configs.disableTypeChecked, ...astro.configs.recommended],
 
   languageOptions: {
     parser: astroParser,
