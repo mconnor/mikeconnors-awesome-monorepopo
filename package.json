@@ -24,16 +24,11 @@
     "dev": "turbo dev",
     "dev:demo": "turbo dev --filter=@app/astrodemo",
     "inspect": "turbo inspect",
-    "format:root": "prettier .",
-    "format:root:check": "prettier . --check",
     "check-types": "turbo run check-types",
     "all": "turbo run lint test build",
     "update:all": "turbo run update --filter=..."
   },
   "devDependencies": {
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "stylelint": "^16.10.0",
     "turbo": "^2.2.3"
   },
   "engines": {

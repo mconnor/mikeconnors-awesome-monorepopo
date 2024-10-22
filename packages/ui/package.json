@@ -23,6 +23,7 @@
   "license": "MIT",
   "scripts": {
     "inspect": "eslint . --inspect-config",
+    "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
   },
   "devDependencies": {
@@ -30,7 +31,6 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.13.0",
     "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.6.3",
     "vite": "^5.4.9"
   }
