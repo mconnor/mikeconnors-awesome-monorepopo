@@ -1,13 +1,14 @@
 packages:
-  - 'apps/astrodemo'
-  - 'apps/mike-blog'
-  - 'apps/multi-app'
-  - 'apps/starlight'
-  - 'apps/astro-icon-test'
+  - "apps/astrodemo"
+  - "apps/mike-blog"
+  - "apps/multi-app"
+  - "apps/starlight"
+  - "apps/astro-icon-test"
   # 'apps/pico-astro-theme'
-  - 'packages/**'
-  - '!packages/solid/**'
+  - "packages/**"
+  - "!packages/ui/**"
+  - "!packages/solid/**"
     # exclude packages that are inside test directories
-  - '!**/test/**'
+  - "!**/test/**"
     # Below excludes are only for Turbo because it doesn't respect gitignore like pnpm does
-  - '!**/.vercel/**'
+  - "!**/.vercel/**"
