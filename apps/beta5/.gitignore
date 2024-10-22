@@ -1,29 +1,17 @@
-.DS_Store
-node_modules
-.turbo
-*.log
+# build output
 dist/
-dist-ssr
-*.local
-.env
-.cache
-server/dist
-public/dist
-
-notes.txt
-
-cache-directory/
-.vercel/
+# generated types
 .astro/
 
-# playwright
-playwright-report/
+# dependencies
+node_modules/
 
 # logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
 
 # environment variables
 .env
