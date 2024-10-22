@@ -4,8 +4,8 @@ import astroParser from 'astro-eslint-parser';
 import astro from 'eslint-plugin-astro';
 
 export default tseslint.config({
-  files: ['*.astro'],
-  ...astro.configs.recommended,
+  files: ['**/*.astro'],
+  extends: [tseslint.configs.disableTypeChecked,...astro.configs.recommended],
 
   languageOptions: {
     parser: astroParser,
