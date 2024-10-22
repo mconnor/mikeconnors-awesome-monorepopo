@@ -117,6 +117,22 @@ importers:
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config-eslint
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/config-typescript
+      eslint:
+        specifier: ^9.13.0
+        version: 9.13.0(jiti@2.3.3)
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      vitest:
+        specifier: ^2.1.3
+        version: 2.1.3(@types/node@22.7.7)
 
   apps/mike-blog:
     dependencies:
