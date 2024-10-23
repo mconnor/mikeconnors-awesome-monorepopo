@@ -2,6 +2,10 @@
   "name": "@app/beta5",
   "type": "module",
   "version": "0.0.1",
+  "author": "Mike Connor",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "spell-check": "cspell --no-summary --no-progress --no-colors --config cspell.json \"**/*.{md,mts,ts,tsx}\"",
     "dev": "astro dev",
@@ -28,6 +32,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@types/eslint-config-prettier": "^6.11.3",
     "eslint": "^9.13.0",
     "prettier": "^3.3.3",
     "vitest": "^2.1.3"
