@@ -9,7 +9,6 @@
   ],
   "envMode": "strict",
   "tasks": {
-    "//#lint:root": {},
     "build": {
       "dependsOn": [
         "^build"

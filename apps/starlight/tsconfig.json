@@ -10,12 +10,14 @@
     "rootDir": "."
   },
   "include": [
-    "src",
-    "*.config.mjs"
+    "**.config.mjs",
+    "**/*.d.ts",
+    "src"
   ],
   "exclude": [
     "dist/",
     ".astro/",
-    ".turbo/"
+    ".turbo/",
+    ".vercel/"
   ]
 }
