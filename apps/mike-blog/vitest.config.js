@@ -1,7 +1,6 @@
 /// <reference types="vitest" />
 import { getViteConfig } from 'astro/config';
 // import { sentryVitePlugin } from '@sentry/vite-plugin';
-
 import stylelint from 'vite-plugin-stylelint';
 
 export default getViteConfig({

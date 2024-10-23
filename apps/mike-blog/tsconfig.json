@@ -11,14 +11,10 @@
   },
   "include": [
     "**.config.mjs",
+    "**.config.js",
     "**.config.mts",
     "**/*.d.ts",
     "src"
   ],
-  "exclude": [
-    "dist/",
-    ".astro/",
-    ".turbo/",
-    ".frontmatter/"
-  ]
+  "exclude": ["dist/", ".astro/", ".turbo/", ".frontmatter/"]
 }

@@ -1,4 +1,4 @@
-import { css,html, LitElement } from 'lit';
+import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
 // import { styleMap } from 'lit/directives/style-map.js';
