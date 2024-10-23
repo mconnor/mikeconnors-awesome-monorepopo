@@ -4,16 +4,6 @@
     "experimentalDecorators": true,
     "useDefineForClassFields": false
   },
-  "include": [
-    "src",
-    "**/*.d.ts",
-    "*.config.mjs"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".astro",
-    ".turbo",
-    "test"
-  ]
+  "include": ["src", "**/*.d.ts", "*.config.mjs"],
+  "exclude": ["node_modules", "dist", ".astro", ".turbo", "test"]
 }
