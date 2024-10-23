@@ -9,19 +9,15 @@
     "rootDir": "."
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.astro",
-    "src/**/*.vue",
-    "jsx.d.ts",
-    "*.config.mjs",
-    "*.config.js",
+    "**.config.mjs",
+    "**/*.d.ts",
+    "src",
     ".prettierrc.mjs"
   ],
   "exclude": [
     "dist",
     ".astro",
     ".turbo",
-    ".vercel"
+    ".vercel",
   ]
 }

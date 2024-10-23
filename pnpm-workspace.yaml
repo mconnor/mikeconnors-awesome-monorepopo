@@ -4,7 +4,6 @@ packages:
   - "apps/multi-app"
   - "apps/starlight"
   - "apps/beta5"
-  - "apps/astro-icon-test"
   # 'apps/pico-astro-theme'
   - "packages/**"
   - "!packages/ui/**"

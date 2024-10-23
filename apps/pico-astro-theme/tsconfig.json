@@ -10,12 +10,9 @@
     "rootDir": "."
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.astro",
-    "jsx.d.ts",
+    "src",
+    "**/*.d.ts",
     "*.config.mjs",
-    "*.config.js"
   ],
   "exclude": [
     "node_modules",
