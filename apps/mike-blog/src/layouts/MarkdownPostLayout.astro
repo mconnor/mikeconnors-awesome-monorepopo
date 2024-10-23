@@ -2,16 +2,16 @@
 // import { Debug } from 'astro:components';
 // import type { MarkdownLayoutProps } from 'astro';
 import '@repo/styles/css/markdown-style.css';
-import Layout from '#layouts/Layout.astro';
-import { format } from 'date-fns';
-import { getEntry } from 'astro:content';
-import type { BlogSchemaType } from '#schemas/index.js';
-import { Image } from 'astro:assets';
-
-import TagContainer from '#components/TagContainer.astro';
 
 import Box from '@repo/layout-webcomponents/Box';
 import Stack from '@repo/layout-webcomponents/Stack';
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+import { format } from 'date-fns';
+
+import TagContainer from '#components/TagContainer.astro';
+import Layout from '#layouts/Layout.astro';
+import type { BlogSchemaType } from '#schemas/index.js';
 
 interface Props {
   blogData: BlogSchemaType;
