@@ -1,6 +1,7 @@
 packages:
   - "apps/astrodemo"
-  - "apps/mike-blog"
+  - "apps/shop"
+  - "apps/simple-blog-beta5"
   - "apps/multi-app"
   - "apps/starlight"
   - "apps/beta5"

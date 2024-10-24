@@ -1,5 +1,5 @@
 {
-  "name": "@app/beta5",
+  "name": "@app/simple-blog-beta5",
   "type": "module",
   "version": "0.0.1",
   "author": "Mike Connor",
@@ -9,7 +9,6 @@
   "scripts": {
     "spell-check": "cspell --no-summary --no-progress --no-colors --config cspell.json \"**/*.{md,mts,ts,tsx}\"",
     "dev": "astro dev",
-    "astro-check": "astro check",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -19,6 +18,7 @@
     "inspect:json": "eslint . -c jsonLint.config.mjs --inspect-config",
     "inspect": "eslint . --inspect-config",
     "fix": "eslint . --fix",
+    "astro-check": "astro check",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
