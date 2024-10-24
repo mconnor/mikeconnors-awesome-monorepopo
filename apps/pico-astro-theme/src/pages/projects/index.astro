@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '#layouts/BaseLayout.astro';
 import NavWrapper from '#components/NavigationWrapper.astro';
 import ProjectCard from '#components/ProjectCard.astro';
+import BaseLayout from '#layouts/BaseLayout.astro';
 
 const allProjects = await Astro.glob('../projects/*.mdx');
 const orderedProjects = allProjects.sort(

@@ -3,10 +3,8 @@ import lit from '@astrojs/lit';
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel/static';
 import { defineConfig } from 'astro/config';
+import icon from 'astro-icon';
 
-// import icon from 'astro-icon';
-
-// https://astro.build/config
 export default defineConfig({
   compressHTML: true,
   trailingSlash: 'ignore',
@@ -33,6 +31,7 @@ export default defineConfig({
   scopedStyleStrategy: 'attribute',
 
   integrations: [
+    icon(),
     lit(),
     mdx({
       drafts: true,
