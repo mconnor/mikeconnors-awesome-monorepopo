@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/typescript-config/vite.json",
+  "extends": "@repo/typescript-config/astro-app.json",
   "compilerOptions": {
     "verbatimModuleSyntax": true,
     "jsx": "preserve",
@@ -8,16 +8,13 @@
     "outDir": "dist",
     "rootDir": "."
   },
+  "files": [
+    "eslint.config.mjs",
+    "astro.config.mjs"
+  ],
   "include": [
-    "**.config.mjs",
     "**/*.d.ts",
     "src",
     ".prettierrc.mjs"
   ],
-  "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".vercel",
-  ]
 }

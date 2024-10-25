@@ -1,0 +1,23 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "./base.json",
+    "compilerOptions": {
+        "useDefineForClassFields": true,
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "sourceMap": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitReturns": true,
+        "strictNullChecks": true
+    },
+    "exclude": [
+        "dist",
+        ".astro",
+        ".turbo",
+        ".vercel",
+        ".frontmatter/"
+    ]
+}

@@ -22,16 +22,16 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.13.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-svelte": "^3.2.7",
-    "svelte-check": "^4.0.5"
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-svelte": "catalog:",
+    "svelte-check": "catalog:"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "svelte": "^4.2.19"
+    "svelte": "catalog:"
   }
 }

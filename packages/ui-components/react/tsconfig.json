@@ -3,6 +3,10 @@
   "compilerOptions": {
     "rootDir": "."
   },
-  "include": ["src", "*.config.mjs", "*.config.js"],
-  "exclude": ["dist", ".turbo"]
+  "files": [
+    "eslint.config.js"
+  ],
+  "include": [
+    "src",
+  ]
 }

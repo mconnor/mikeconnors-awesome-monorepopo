@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/typescript-config/vite.json",
+  "extends": "@repo/typescript-config/astro-app.json",
   "compilerOptions": {
     "verbatimModuleSyntax": true,
     "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
@@ -9,6 +9,9 @@
     "outDir": "dist",
     "rootDir": "."
   },
-  "include": ["src", "*.config.mjs", "**/*.d.ts"],
-  "exclude": ["dist", ".astro", ".turbo"]
+  "include": [
+    "src",
+    "*.config.mjs",
+    "**/*.d.ts"
+  ],
 }

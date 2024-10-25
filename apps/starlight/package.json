@@ -8,6 +8,7 @@
     "starlight"
   ],
   "scripts": {
+    "updateAstro": "pnpm dlx @astrojs/upgrade",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -22,17 +23,17 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/starlight": "^0.28.3",
-    "astro": "^4.16.6",
-    "sharp": "^0.33.5"
+    "@astrojs/check": "catalog:",
+    "@astrojs/starlight": "catalog:",
+    "astro": "^4.16.7",
+    "sharp": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.13.0",
-    "prettier": "^3.3.3",
-    "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.6.3"
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "typescript": "catalog:"
   }
 }
