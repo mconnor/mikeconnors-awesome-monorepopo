@@ -10,7 +10,8 @@
   },
   "files": [
     "eslint.config.mjs",
-    "astro.config.mjs"
+    "astro.config.mjs",
+    "postcss.config.mjs",
   ],
   "include": [
     "**/*.d.ts",

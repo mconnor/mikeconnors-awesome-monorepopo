@@ -1,10 +1,5 @@
 packages:
-  - apps/astrodemo
-  - apps/shop
-  - apps/simple-blog-beta5
-  - apps/multi-app
-  - apps/starlight
-  - apps/beta5
+  - apps/*
   - packages/**
   - "!packages/ui/**"
   - "!packages/solid/**"
