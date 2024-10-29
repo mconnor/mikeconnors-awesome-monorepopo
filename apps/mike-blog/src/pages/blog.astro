@@ -6,14 +6,14 @@ import { getCollection } from 'astro:content';
 import BlogCard from '#components/BlogCard/index.astro';
 import Layout from '#layouts/Layout.astro';
 // import { blogSchema } from '#schemas/index.js';
-const pageTitle = 'Blog';
+
 
 const publishsedPosts = await getCollection('blog', ({ data }) =>
   import.meta.env.PROD ? data.draft !== true : true,
 );
 ---
 
-<Layout title={pageTitle}>
+<Layout title='Blog' description='Blog index'>
   <!-- The space (margin) between successive sibling elements -->
   <Stack space="var(--s1)">
     <!-- <Box borderWidth="0"><h2>{pageTitle}</h2></Box> -->

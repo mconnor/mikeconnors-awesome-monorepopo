@@ -55,7 +55,7 @@ const { success: tagCountSuccess, data: tagCountData } =
   tagCountTypeSchema.safeParse(tagCountsObject);
 ---
 
-<Layout title="Tag Index">
+<Layout title="Tag Index" description='Index of tags'>
   {
     zUniqueTagArray.success && tagCountSuccess ? (
       <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />

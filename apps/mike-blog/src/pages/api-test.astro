@@ -1,0 +1,15 @@
+---
+import { GET } from './api/hello.ts'
+
+import Layout from '#layouts/Layout.astro';
+
+let response = await GET(Astro)
+const data = await response.json()
+---
+
+
+
+
+<Layout title="hello" description='api test' maxW="80ch">
+    <h1>{data.greeting} world!</h1>
+</Layout>

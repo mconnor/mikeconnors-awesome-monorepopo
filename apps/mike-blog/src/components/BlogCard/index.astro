@@ -24,13 +24,13 @@ const { title, description, cover } = data;
 ---
 
 <a slot="left" href={`/posts/${slug}`}>
-  <Box padding="0" borderWidth="0">
+  <Box padding="0" borderWidth="var(--s000)">
     <!-- <Box padding='4px'> -->
 
     <!-- <Stack space="var(--s00)" splitAfter={4}> -->
     <!-- <Cluster></Cluster> -->
 
-    <Box invert padding="var(--s0)" borderWidth="0"><h1>{title}</h1></Box>
+    <Box  invert padding="var(--s0)" borderWidth="0"><h1>{title}</h1></Box>
 
     <!-- <Cluster justify="space-between" align="baseline">
       <Box padding="var(--s00)" borderWidth="0">{name}</Box>
@@ -44,7 +44,7 @@ const { title, description, cover } = data;
     >
 
     <Box padding="var(--s0)" borderWidth="0" invert
-      >description{description}</Box
+      >{description}</Box
     >
 
     <!-- </Box> -->

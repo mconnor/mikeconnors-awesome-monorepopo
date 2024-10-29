@@ -1,0 +1,42 @@
+---
+
+import Box from '@repo/layout-webcomponents/Box';
+
+import Stack from '@repo/layout-webcomponents/Stack';
+
+
+import Layout from '#layouts/Layout.astro';
+
+
+---
+
+<Layout maxW="80ch" title="Contact">
+  <Stack space="0">
+    <h1>Contact</h1>
+
+    <Box borderWidth="0" invert borderWidth="1px">
+
+        <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            action="/thanks"
+        >
+            <input type="hidden" name="form-name" value="contact" />
+            <label>
+            Your Name:
+            <input type="text" name="name" />
+            </label>
+            <label>
+            Your Email:
+            <input type="email" name="email" />
+            </label>
+            <label>
+            Message:
+            <textarea name="message"></textarea>
+            </label>
+            <button type="submit">Send</button>
+        </form>
+    </Box>
+  </Stack>
+</Layout>

@@ -34,7 +34,7 @@ const { tag } = Astro.params;
 const { postsWithThisTag } = Astro.props;
 ---
 
-<Layout title={tag}>
+<Layout title={tag} description=`post tagged with ${tag}`>
   {
     postsWithThisTag.map((post) => (
       <BlogCard
