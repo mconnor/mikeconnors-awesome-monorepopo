@@ -12,6 +12,7 @@
     "eslint.config.mjs",
     "astro.config.mjs",
     "postcss.config.mjs",
+    "svelte.config.mjs",
   ],
   "include": [
     "**/*.d.ts",
