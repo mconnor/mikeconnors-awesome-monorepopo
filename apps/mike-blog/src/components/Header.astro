@@ -8,6 +8,18 @@ import { MAIN_MENU } from '#config';
 
 // import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
 import HeaderLink from '#components/HeaderLink.astro';
+
+type navTypes = {
+    url: string;
+    title: string;
+  }
+
+interface Props {
+  navItems: navTypes[]
+  }
+
+  const { navItems = MAIN_MENU.items} = Astro.props;
+
 ---
 
 <Box invert padding="var(--s1)" borderWidth="0">
@@ -23,7 +35,7 @@ import HeaderLink from '#components/HeaderLink.astro';
       <Cluster align="baseline" justify="flex-end" space="var(--s1)">
 
        {
-       MAIN_MENU.items.map(({url, title}) => (
+       navItems.map(({url, title}) => (
           <HeaderLink href={url}>{title}</HeaderLink>
        ))
         }
