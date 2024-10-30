@@ -1,0 +1,56 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "1.0.4",
+  "private": true,
+  "imports": {
+    "#*": "./*"
+  },
+  "exports": {
+    "./astro": "./astroLintConfig.mjs",
+    "./json": "./jsonConfig.mjs",
+    "./markdown": "./markdown.mjs",
+    "./react": "./reactConfig.mjs",
+    "./preact": "./preactConfig.mjs",
+    "./ts-lint": "./tsLintConfig.mjs",
+    "./ts-lint-type-check": "./tsLintTypeCheckedConfig.mjs",
+    "./lit-config": "./tsLit.mjs",
+    "./type-disable": "./typeCheckingDisable.mjs",
+    "./regex": "./regexConfig.mjs",
+    "./svelte": "./svelteConfig.mjs",
+    "./solid": "./solidLintConfig.mjs",
+    "./prettier": "./eslintConfigPrettier.mjs"
+  },
+  "scripts": {
+    "update": "pnpm update",
+    "format": "prettier . --write"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@custom-elements-manifest/analyzer": "catalog:",
+    "@eslint/js": "catalog:",
+    "@eslint/json": "catalog:",
+    "@eslint/markdown": "catalog:",
+    "@types/eslint-config-prettier": "catalog:",
+    "@types/eslint__js": "catalog:",
+    "astro-eslint-parser": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-astro": "catalog:",
+    "eslint-plugin-lit": "catalog:",
+    "eslint-plugin-react": "catalog:",
+    "eslint-plugin-regexp": "catalog:",
+    "eslint-plugin-simple-import-sort": "catalog:",
+    "eslint-plugin-solid": "catalog:",
+    "eslint-plugin-svelte": "catalog:",
+    "eslint-plugin-wc": "catalog:",
+    "globals": "catalog:",
+    "typescript-eslint": "catalog:"
+  },
+  "peerDependencies": {
+    "eslint": ">= 9"
+  },
+  "devDependencies": {
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "public": true,
+  "author": "Mike Connor",
+  "name": "mikeconnors-awesome-monorepo",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mconnor/mikeconnors-awesome-monorepopo"
+  },
+  "keywords": [
+    "vite",
+    "eslint",
+    "astro"
+  ],
+  "scripts": {
+    "new": "turbo gen workspace --copy",
+    "syncpack": "syncpack list",
+    "syncpack-fix": "syncpack fix-mismatches",
+    "syncpack-format": "syncpack format",
+    "syncpack-update": "syncpack update",
+    "graph": "turbo run build --graph",
+    "build": "turbo build",
+    "preview": "turbo preview",
+    "dev": "turbo dev",
+    "dev:demo": "turbo dev --filter=@app/astrodemo",
+    "inspect": "turbo inspect",
+    "check-types": "turbo run check-types",
+    "all": "turbo run lint test build",
+    "update:all": "turbo run update --filter=..."
+  },
+  "devDependencies": {
+    "turbo": "catalog:"
+  },
+  "engines": {
+    "node": ">= 20.11.0 <21 || >= 22.9.0",
+    "pnpm": ">=9.1.2"
+  },
+  "packageManager": "pnpm@9.12.3"
+}
