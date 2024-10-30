@@ -1,7 +1,24 @@
+import svelteConfig from '@repo/eslint-config/svelte';
 import tsLint from '@repo/eslint-config/ts-lint';
 
-import svelteConfig from '@repo/eslint-config/svelte';
-// import reactConfig from '@repo/eslint-config/react';
-// import svelte from '@repo/eslint-config/svelte';
 
-export default [...tsLint, ...svelteConfig];
+export default [
+  {
+    ignores: [
+      'dist/',
+      '.vercel/',
+      'cache-directory/',
+      '.astro/',
+      'test/*.ts',
+      '**/*d.ts',
+      '.turbo/',
+      '*.svg/',
+      'pnpm-lock.yaml',
+      'package-lock.json',
+      '.prettierrc.mjs',
+      '.svelte-kit/',
+    ],
+  },
+  ...tsLint,
+  ...svelteConfig,
+];
