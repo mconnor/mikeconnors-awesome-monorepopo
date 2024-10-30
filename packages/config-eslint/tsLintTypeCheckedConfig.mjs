@@ -6,7 +6,7 @@ import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 import prettier from 'eslint-config-prettier';
 
-export default tseslint.config(
+const strictConfig = tseslint.config(
   {
     ...ignoresConfig,
   },
@@ -35,3 +35,5 @@ export default tseslint.config(
   },
   prettier,
 );
+
+export default strictConfig;

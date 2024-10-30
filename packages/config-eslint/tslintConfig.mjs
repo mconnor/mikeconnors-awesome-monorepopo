@@ -8,13 +8,13 @@ import prettier from 'eslint-config-prettier';
 
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
-export default tseslint.config(
+const basicConfig = tseslint.config(
   {
     ...ignoresConfig,
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  // ...tseslint.configs.stylistic,
+  ...tseslint.configs.stylistic,
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -40,3 +40,5 @@ export default tseslint.config(
   },
   prettier,
 );
+
+export default basicConfig;

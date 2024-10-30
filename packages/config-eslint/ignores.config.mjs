@@ -11,5 +11,6 @@ export default {
     'pnpm-lock.yaml',
     'package-lock.json',
     '.prettierrc.mjs',
+    '.svelte-kit/',
   ],
 };
