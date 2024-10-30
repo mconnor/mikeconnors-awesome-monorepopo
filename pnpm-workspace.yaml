@@ -8,6 +8,7 @@ packages:
 catalog:
   "@astrojs/check": ^0.9.4
   "@astrojs/lit": ^4.3.0
+  "@astrojs/mdx": ^3.1.8
   "@astrojs/preact": ^3.5.3
   "@astrojs/react": ^3.6.2
   "@astrojs/rss": ^4.0.9
@@ -64,6 +65,7 @@ catalog:
   react: ^18.3.1
   react-dom: ^18.3.1
   sharp: ^0.33.5
+  stylelint: ^16.10.0
   svelte: ^4.2.19
   svelte-check: ^4.0.5
   svelte-preprocess: ^6.0.3

@@ -7,16 +7,17 @@ import { styleMap } from 'lit/directives/style-map.js';
  * @module box-l
  * @description
  * A custom element for generic boxes/containers
- * @property {string} padding=var(--s1) A CSS `padding` value
- * @property {string} borderWidth=var(--border-thin) A CSS `border-width` value
- * @property {string} borderStyle
+ * @property {String} padding=var(--s1) A CSS `padding` value
+ * @property {String} borderWidth=var(--border-thin) A CSS `border-width` value
+ * @property {String} borderStyle
+ * @property {Boolean} invert
  */
 
 const mainColor = css`var(--theme-primary, blue)`;
 const bgColor = css`var(--theme-secondary, yellow)`;
 
 @customElement('box-l')
-export class BoxClass extends LitElement {
+export class Box extends LitElement {
   static styles = [
     css`
       :host {
@@ -75,6 +76,6 @@ export class BoxClass extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'box-l': BoxClass;
+    'box-l': Box;
   }
 }
