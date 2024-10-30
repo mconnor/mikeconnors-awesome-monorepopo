@@ -41,7 +41,7 @@ export const actions = {
     if (key === 'backspace') {
       game.guesses[i] = game.guesses[i].slice(0, -1);
     } else {
-      game.guesses[i] += key;
+      game.guesses[i] += String(key);
     }
 
     cookies.set('sverdle', game.toString(), { path: '/' });
