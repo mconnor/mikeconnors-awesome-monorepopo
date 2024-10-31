@@ -1,10 +1,14 @@
 ---
+export const prerender = true;
 import { getCollection } from 'astro:content';
 import FormattedDate from '#components/FormattedDate.astro';
 
 import Layout from '#layouts/Layout.astro';
 
-const posts = (await getCollection('blog')).sort(
+// const allPosts = Object.values(await import.meta.glob('./content/posts/*.md', { eager: true }));
+// const allPosts = Object.values(await import.meta.glob('./posts/*.md', { eager: true }));
+
+const allPosts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
@@ -14,7 +18,7 @@ const posts = (await getCollection('blog')).sort(
     <section>
       <ul>
         {
-          posts.map((post) => (
+          allPosts.map((post) => (
             <li>
               <a href={`/blog/${post.slug}/`}>
                 <img

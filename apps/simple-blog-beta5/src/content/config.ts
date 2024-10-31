@@ -1,5 +1,6 @@
 import { defineCollection } from 'astro:content';
-import { blogSchema } from '#schemas/index.ts';
+import { blogSchema } from '#schemas/index.js';
+
 const blog = defineCollection({
   type: 'content',
   // Type-check frontmatter using a schema
