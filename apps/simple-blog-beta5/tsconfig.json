@@ -1,21 +1,21 @@
 {
-  "extends": "@repo/typescript-config/astro-app.json",
+  "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
-    "verbatimModuleSyntax": true,
-    "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
-    "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
-    "declaration": true,
-    "declarationMap": true,
     "outDir": "dist",
-    "rootDir": "."
+    "strict": true
   },
   "files": [
-    "eslint.config.mjs",
-    "astro.config.mjs"
+    ".astro/types.d.ts",
   ],
   "include": [
-    ".astro/types.d.ts",
-    "**/*.d.ts",
-    "src"
-  ]
+    "src",
+    "types",
+    "*.config.mjs"
+  ],
+  "exclude": [
+    "dist",
+    ".turbo",
+    ".astro",
+    ".vscode"
+  ],
 }

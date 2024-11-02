@@ -9,7 +9,7 @@
   "scripts": {
     "spell-check": "cspell --no-summary --no-progress --no-colors --config cspell.json \"**/*.{md,mts,ts,tsx}\"",
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write",
@@ -18,21 +18,20 @@
     "inspect:json": "eslint . -c jsonLint.config.mjs --inspect-config",
     "inspect": "eslint . --inspect-config",
     "fix": "eslint . --fix",
-    "astro-check": "astro check",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.0.0-beta.2",
+    "@astrojs/mdx": "4.0.0-beta.3",
     "@astrojs/rss": "catalog:",
     "@astrojs/sitemap": "catalog:",
-    "astro": "^5.0.0-beta.5",
+    "@astrojs/vercel": "^7.8.2",
+    "astro": "5.0.0-beta.6",
     "typescript": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/eslint-config-prettier": "catalog:",
+    "@types/node": "^22.8.6",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",

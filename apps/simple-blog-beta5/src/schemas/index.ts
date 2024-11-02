@@ -8,11 +8,15 @@ const emailSchema = z.string().email();
 const emailSchemaOptional = emailSchema.optional();
 
 // const imageSrcSchema = z.object({ src: urlSchema, alt: strSC });
-
 // const refSchema = z.string(reference(['authors']));
 
 const datelike = z.union([z.number(), z.string(), z.date()]);
 const datelikeToDate = datelike.pipe(z.coerce.date());
+
+// const ResourceIdSchema = z.object({
+//   // kind: z.string(),
+//   videoId: z.string(),
+// });
 
 export const authorSchema = z.object({
   id: z.string(),
@@ -34,6 +38,19 @@ export const blogSchema = z.object({
   //   tags: z.array(strSC),
   //   cover: imageSrcSchema,
 });
+
+export const announcementsSchema = z
+  .object({
+    title: z.string(),
+  })
+  .strict();
+
+// Example type inference
+
+// Define the resource ID schema for video-specific information
+
+// defaultAudioLanguage: z.string().optional(),
+// });
 
 // relatedPosts: z.array(reference('blog')).optional(),
 

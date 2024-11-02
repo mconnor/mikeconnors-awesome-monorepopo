@@ -15,7 +15,3 @@ declare module '@repo/eslint-config/ts-lint-type-check' {
   const config: any;
   export default config;
 }
-declare module '@repo/eslint-config/regex' {
-  const config: any;
-  export default config;
-}
