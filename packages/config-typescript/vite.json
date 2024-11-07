@@ -13,11 +13,22 @@
     "noImplicitReturns": true,
     "strictNullChecks": true
   },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    ".astro/types.d.ts",
+    "**/*.d.ts",
+    "*.config.mjs",
+    "*.config.js",
+  ],
   "exclude": [
     "dist",
     ".astro",
     ".turbo",
     ".vercel",
-    ".frontmatter/"
+    ".frontmatter/",
+    "cache-directory"
   ]
 }

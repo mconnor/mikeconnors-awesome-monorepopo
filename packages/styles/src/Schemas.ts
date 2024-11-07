@@ -52,11 +52,11 @@ const CenterUnits = z.union([widthUnitUnion, myModularCSSvars]);
 const gapUnits = z.union([widthUnitUnion, flexGridUnits]);
 
 export {
-  mcUnits,
-  flexGridUnits,
-  widthUnitUnion,
-  gapUnits,
   CenterUnits,
+  flexGridUnits,
+  gapUnits,
   // screenWidthDims,
   heightUnitUnion,
+  mcUnits,
+  widthUnitUnion,
 };

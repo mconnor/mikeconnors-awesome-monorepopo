@@ -5,7 +5,6 @@ import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 import prettier from 'eslint-config-prettier';
-
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 export default tseslint.config(
@@ -14,7 +13,7 @@ export default tseslint.config(
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  // ...tseslint.configs.stylistic,
+  ...tseslint.configs.stylistic,
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -27,6 +26,12 @@ export default tseslint.config(
       globals: {
         ...globals.browser,
       },
+    },
+  },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
   {

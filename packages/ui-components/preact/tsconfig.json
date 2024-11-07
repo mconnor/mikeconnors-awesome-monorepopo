@@ -5,9 +5,18 @@
     "noEmit": true,
     "jsx": "preserve",
     "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment"
+    "jsxFragmentFactory": "Fragment",
+    "strict": true
   },
   "include": [
-    "src/**/*"
+    "src",
+    "types",
+    "*.config.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    ".astro",
+    "dist",
+    ".turbo",
   ]
 }

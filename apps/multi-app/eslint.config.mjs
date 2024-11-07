@@ -1,4 +1,5 @@
-// import tsLint from '@repo/eslint-config/ts-lint-type-check';
+// @ts-check
+
 import astroConfig from '@repo/eslint-config/astro';
 import tsLint from '@repo/eslint-config/ts-lint';
 // import reactConfig from '@repo/eslint-config/react';

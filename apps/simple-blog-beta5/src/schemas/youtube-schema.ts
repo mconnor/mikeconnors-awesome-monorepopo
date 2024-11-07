@@ -27,8 +27,10 @@ const SnippetSchema = z.object({
   resourcedId: z.object({
     videoId: z.string(),
   }),
-  publishedAt: z.coerce.date(),
+  // publishedAt: z.coerce.date(),
 });
+
+const stringSchema = z.string();
 
 export const videoSchema = z
   .object({
@@ -39,10 +41,10 @@ export const videoSchema = z
   })
   .transform((item) => ({
     title: item.snippet.title,
-    description: item.snippet.description,
+    description: stringSchema.parse(item.snippet.description),
     embedUrl: `https://www.youtube-nocookie.com/embed/${item.snippet.resourcedId.videoId}&list=${YOUTUBE_PLAYLIST_ID}`,
     youtubeUrl: `https://www.youtube.com/watch?v=${item.snippet.resourcedId.videoId}&list=${YOUTUBE_PLAYLIST_ID}`,
-    publishedAt: item.snippet.publishedAt,
+    publishedAt: item.contentDetails.videoPublishedAt,
     thumbNails: Object.entries(item.snippet.thumbnails)
       .filter((item) => Boolean(item))
       .map(([quality, thumbnail]) => ({
@@ -50,31 +52,24 @@ export const videoSchema = z
         url: thumbnail.url,
         width: thumbnail.width,
         height: thumbnail.height,
-      })),
+      }))
+      .filter((item): item is NonNullable<typeof item> => Boolean(item)),
   }));
 
-export const youtubeApiResponse = z
-  .object({
-    nextPageToken: z.string().optional(),
-    prePageToken: z.string().optional(),
-    items: z.array(
-      z
-        .object({
-          kind: z.string(),
-          etag: z.string(),
-          id: z.string(),
-          snippet: z
-            .object({
-              title: z.string(),
-              channelId: z.string(),
-              resourceId: z.object({
-                videoId: z.string(),
-                kind: z.string(),
-              }),
-            })
-            .passthrough(),
-        })
-        .passthrough(),
-    ),
-  })
-  .passthrough();
+export const youtubeApiResponse = z.object({
+  nextPageToken: z.string().optional(),
+  prePageToken: z.string().optional(),
+  items: z.array(
+    z
+      .object({
+        snippet: z
+          .object({
+            resourceId: z.object({
+              videoId: z.string(),
+            }),
+          })
+          .passthrough(),
+      })
+      .passthrough(),
+  ),
+});

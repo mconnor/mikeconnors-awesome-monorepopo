@@ -4,19 +4,22 @@ import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel/static';
 import { defineConfig } from 'astro/config';
 import icon from 'astro-icon';
+// import { loadEnv } from 'vite';
+
+// const { SENTRY_AUTH_TOKEN } = loadEnv(
+//   process.env.SENTRY_AUTH_TOKEN,
+//   process.cwd(),
+//   '',
+// );
 
 export default defineConfig({
+  outDir: 'dist',
   compressHTML: true,
   trailingSlash: 'ignore',
   cacheDir: './cache-directory',
-
   redirects: {
     '/index': '/about',
   },
-
-  // your configuration options here...
-  // https://docs.astro.build/en/reference/configuration-reference/
-  output: 'static',
 
   site: 'https://staging.mikeconnor.tech/',
 
@@ -31,8 +34,8 @@ export default defineConfig({
   scopedStyleStrategy: 'attribute',
 
   integrations: [
-    icon(),
     lit(),
+    icon(),
     mdx({
       drafts: true,
     }),
@@ -55,11 +58,7 @@ export default defineConfig({
     // }),
   ],
 
-  // cacheDir: './my-custom-cache-directory',
 
-  experimental: {
-    contentCollectionCache: true,
-  },
 
   adapter: vercel(),
 });

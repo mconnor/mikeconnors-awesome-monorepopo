@@ -13,7 +13,7 @@ if (video === undefined) {
   return Astro.rewrite('/404');
 }
 
-const {title} = video.data.snippet
+const { title } = video.data.snippet;
 
 const { Content } = await render(video);
 ---

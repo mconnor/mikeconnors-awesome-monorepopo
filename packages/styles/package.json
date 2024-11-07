@@ -35,11 +35,11 @@
     "typescript": "catalog:"
   },
   "dependencies": {
-    "astro": "^4.16.6",
     "open-props": "catalog:",
     "zod": "catalog:"
   },
   "peerDependencies": {
-    "open-props": "^1.7.6"
+    "open-props": "^1.7.6",
+    "astro": "^4"
   }
 }

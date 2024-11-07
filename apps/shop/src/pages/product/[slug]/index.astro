@@ -1,8 +1,9 @@
 ---
+import { Icon } from 'astro-icon/components'
+
+import ProductCard from "../../../components/ProductCard.astro";
 import { type Product, products } from "../../../data";
 import Layout from "../../../layouts/Layout.astro";
-import ProductCard from "../../../components/ProductCard.astro";
-import { Icon } from 'astro-icon/components'
 const { slug } = Astro.params;
 
 export function getStaticPaths() {

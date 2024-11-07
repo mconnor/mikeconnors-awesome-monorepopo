@@ -3,10 +3,7 @@
   "compilerOptions": {
     "rootDir": "."
   },
-  "files": [
-    "eslint.config.js"
-  ],
-  "include": [
-    "src",
-  ]
+  "files": ["eslint.config.js"],
+  "include": ["src", "*.config.mjs"],
+  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }

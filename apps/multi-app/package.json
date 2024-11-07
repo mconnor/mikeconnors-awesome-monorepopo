@@ -31,8 +31,6 @@
     "@repo/styles": "workspace:*",
     "@repo/svelte": "workspace:*",
     "@shoelace-style/shoelace": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
     "add": "catalog:",
     "astro": "^4.16.6",
     "open-props": "catalog:",

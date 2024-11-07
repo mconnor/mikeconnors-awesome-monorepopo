@@ -7,6 +7,7 @@ import Label from './Label.astro';
 // const { storedTheme = 'auto' } = Astro.props;
 ---
 
+<script src="./AstroThemeSwitcher"></script>
 <astro-theme-switcher>
   <form id="theme" data-select-theme class="appColors">
     <Label theme="auto" />
@@ -18,5 +19,3 @@ import Label from './Label.astro';
     <Label theme="choco" />
   </form>
 </astro-theme-switcher>
-
-<script src="./AstroThemeSwitcher.js"></script>

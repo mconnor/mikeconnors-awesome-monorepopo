@@ -5,7 +5,7 @@ import '../styles/global.css';
 
 import DevModeStyle from '@repo/styles/DevModeStyle.astro';
 import GlobalStyle from '@repo/styles/GlobalStyle.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
   description: string;
@@ -72,6 +72,6 @@ const isTest = process.env.NODE_ENV === 'test';
   });
 </script> -->
 
-<ViewTransitions />
+<ClientRouter />
 {(isDev || isTest) && <DevModeStyle />}
 <GlobalStyle />

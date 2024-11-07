@@ -25,14 +25,14 @@
   "dependencies": {
     "@astrojs/check": "catalog:",
     "@astrojs/lit": "catalog:",
-    "@astrojs/mdx": "^3.1.8",
+    "@astrojs/mdx": "4.0.0-beta.2",
     "@astrojs/rss": "catalog:",
     "@astrojs/vercel": "catalog:",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "^4.16.6",
+    "astro": "5.0.0-beta.5",
     "lit": "catalog:",
     "open-props": "catalog:"
   },

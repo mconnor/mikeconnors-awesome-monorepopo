@@ -1,19 +1,19 @@
 import type { Loader, LoaderContext } from 'astro/loaders';
 import { YOUTUBE_API_KEY, YOUTUBE_PLAYLIST_ID } from 'astro:env/server';
 
-import { youtubeApiResponse } from '#schemas/youtube-schema.js';
+import { videoSchema, youtubeApiResponse } from '#schemas/youtube-schema.js';
 
 export default function (): Loader {
   const url = new URL('https://www.googleapis.com/youtube/v3/playlistItems');
   url.searchParams.append('part', 'snippet');
-  url.searchParams.append('contentDetails', 'snippet');
+  url.searchParams.append('part', 'contentDetails');
   url.searchParams.append('playlistId', YOUTUBE_PLAYLIST_ID);
   url.searchParams.append('key', YOUTUBE_API_KEY);
-  url.searchParams.append('maxResults', '10');
+  url.searchParams.append('maxResults', '50');
 
   return {
     name: 'youtube-loader',
-    // schema: videoSchema,
+    schema: videoSchema,
     load: async ({ store, parseData }: LoaderContext) => {
       let nextPageToken: string | undefined;
       let pagesCollected = 0;
@@ -35,38 +35,24 @@ export default function (): Loader {
         // console.log(JSON.stringify(rawResponse));
 
         const result = youtubeApiResponse.safeParse(rawResponse);
-
-        // youtubeApiResponse.parse(rawResponse, {
-        //   errorMap,
-        // });
-
-        // console.log(JSON.stringify(data));
-        // console.log('result');
-        // console.log(result.data);
-
         if (!result.success) {
-          // console.error('Fail');
-          // console.error(
-          //   `Failed to parse YouTube API response: ${result.error.message}`,
-          // );
           throw new Error(
             `Failed to parse YouTube API response: ${result.error}`,
           );
         } else if (result.data) {
-          // console.log('SUCCESS');
           nextPageToken = result.data.nextPageToken;
 
           for (const item of result.data.items) {
             const id = item.snippet.resourceId.videoId;
             try {
-              const pData = await parseData({
+              const data = await parseData({
                 id,
                 data: item,
               });
               // a store can choose when to update
-              store.set({ id, data: pData });
+              store.set({ id, data });
             } catch (error) {
-              console.error(`Failed to parse video ${id}: ${error}`);
+              console.error(`skipped video ${id}: ${error}`);
             }
           }
           pagesCollected++;

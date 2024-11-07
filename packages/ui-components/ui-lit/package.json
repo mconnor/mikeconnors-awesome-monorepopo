@@ -25,7 +25,6 @@
     "@repo/typescript-config": "workspace:*",
     "@web/test-runner": "catalog:",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "^4.16.6",
     "eslint": "catalog:",
     "jest": "catalog:",
     "lit": "catalog:",
@@ -36,6 +35,9 @@
   },
   "dependencies": {
     "@repo/styles": "workspace:*"
+  },
+  "peerDependencies": {
+    "astro": "^4"
   },
   "keywords": [],
   "author": "",

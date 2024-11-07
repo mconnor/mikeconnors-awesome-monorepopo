@@ -1,7 +1,8 @@
-import { LitElement, html, css } from 'lit';
+import { css,html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
+
 /* playground-fold */
-import { play, pause, replay } from './icons.js';
+import { pause, play, replay } from './icons.js';
 /* playground-fold-end */
 
 @customElement('my-timer')

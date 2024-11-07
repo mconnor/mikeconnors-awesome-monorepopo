@@ -4,11 +4,6 @@
     "outDir": "dist",
     "rootDir": "."
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    ".astro",
-    ".turbo"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.astro", "*.config.mjs"],
+  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }
