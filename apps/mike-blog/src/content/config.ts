@@ -11,7 +11,7 @@ import { blogSchema } from '#schemas/index.ts';
 const blog = defineCollection({
   loader: glob({
     pattern: ['**/*.md', '**/*.mdx'],
-    base: './src/content/blog',
+    base: './src/data/blog',
   }),
   schema: blogSchema,
 });

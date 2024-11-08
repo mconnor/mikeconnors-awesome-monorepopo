@@ -47,12 +47,12 @@
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
-    "@sentry/astro": "^8.36.0",
-    "@sentry/browser": "^8.36.0",
-    "@sentry/cli": "^2.38.1",
+    "@sentry/astro": "^8.37.1",
+    "@sentry/browser": "^8.37.1",
+    "@sentry/cli": "^2.38.2",
     "@sentry/vite-plugin": "^2.22.6",
-    "astro": "5.0.0-beta.6",
-    "astro-icon": "^1.1.1",
+    "astro": "5.0.0-beta.7",
+    "astro-icon": "^1.1.2",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.5",
     "lit": "^3.2.1",
@@ -60,7 +60,6 @@
     "sanitize-html": "^2.13.1",
     "sharp": "^0.33.5",
     "toml": "^3.0.0",
-    "typescript": "^5.6.3",
     "vitest": "^2.1.4"
   },
   "devDependencies": {
@@ -81,6 +80,7 @@
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "stylelint": "^16.10.0",
+    "typescript": "^5.6.3",
     "vite": "^5.4.10",
     "vite-plugin-stylelint": "6.0.0-beta.1"
   }

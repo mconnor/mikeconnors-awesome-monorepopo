@@ -1,5 +1,5 @@
 // import sentry from '@sentry/astro';
-import lit from '@astrojs/lit';
+
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel/static';
 import { defineConfig } from 'astro/config';
@@ -34,7 +34,6 @@ export default defineConfig({
   scopedStyleStrategy: 'attribute',
 
   integrations: [
-    lit(),
     icon(),
     mdx({
       drafts: true,
