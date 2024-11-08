@@ -34,14 +34,10 @@
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@web/test-runner": "catalog:",
-    "@webcomponents/template-shadowroot": "catalog:",
     "eslint": "catalog:",
-    "jest": "catalog:",
-    "lit": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "typescript": "catalog:",
+    "typescript": "^5.6.3",
     "vitest": "catalog:"
   },
   "dependencies": {

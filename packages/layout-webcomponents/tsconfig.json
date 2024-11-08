@@ -2,16 +2,13 @@
   "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
     "experimentalDecorators": true,
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+
   },
   "files": [
-    "src/lit-wc/Box/Box.ts"
+    ".astro/types.d.ts",
   ],
-  "include": [
-    "src",
-    "types",
-    "*.config.mjs"
-  ],
+ 
   "exclude": [
     "node_modules",
     ".astro",
