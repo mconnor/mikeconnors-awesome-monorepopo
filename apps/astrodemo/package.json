@@ -25,14 +25,14 @@
   "dependencies": {
     "@astrojs/check": "catalog:",
     "@astrojs/lit": "catalog:",
-    "@astrojs/mdx": "4.0.0-beta.2",
+    "@astrojs/mdx": "4.0.0-beta.3",
     "@astrojs/rss": "catalog:",
-    "@astrojs/vercel": "catalog:",
+    "@astrojs/vercel": "8.0.0-beta.3",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "5.0.0-beta.5",
+    "astro": "5.0.0-beta.7",
     "lit": "catalog:",
     "open-props": "catalog:"
   },
@@ -50,7 +50,7 @@
     "postcss-pow": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:"
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
   }
 }

@@ -3,11 +3,12 @@
   "compilerOptions": {
     "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
     "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
-    "rootDir": "."
+    "rootDir": ".",
   },
   "files": [
     ".astro/types.d.ts",
     "jsx.d.ts",
+    "src/env.d.ts"
   ],
   "include": [
     "src/**/*.ts",

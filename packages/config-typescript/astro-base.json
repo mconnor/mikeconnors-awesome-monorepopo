@@ -15,8 +15,10 @@
     "allowJs": true,
     "jsx": "preserve",
     "strict": true,
+    "strictNullChecks": true,
     "outDir": "dist",
   },
+
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
@@ -24,7 +26,6 @@
     "src/**/*.mts",
     "src/**/*.jsx",
     "src/**/*.astro",
-    ".astro/types.d.ts",
     "**/*.d.ts",
     "*.config.mjs",
     "*.config.js",
