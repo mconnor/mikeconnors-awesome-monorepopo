@@ -9,6 +9,7 @@
   "exports": {
     "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
     "./Timer": "./src/Timer/index.astro"
+
   },
   "scripts": {
     "updateAstro": "pnpm dlx @astrojs/upgrade",
@@ -24,10 +25,10 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@web/test-runner": "catalog:",
-    "@webcomponents/template-shadowroot": "catalog:",
+
     "eslint": "catalog:",
     "jest": "catalog:",
-    "lit": "catalog:",
+ 
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "^5.6.3",
