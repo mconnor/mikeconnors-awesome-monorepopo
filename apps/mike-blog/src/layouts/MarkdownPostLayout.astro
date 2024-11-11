@@ -6,12 +6,12 @@ import '@repo/styles/css/markdown-style.css';
 import Box from '@repo/layout-webcomponents/Box';
 import Stack from '@repo/layout-webcomponents/Stack';
 import { Image } from 'astro:assets';
-import { getEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import { format } from 'date-fns';
 
 import TagContainer from '#components/TagContainer.astro';
 import Layout from '#layouts/Layout.astro';
-
+type Props = CollectionEntry<'blog'>['data'];
 // interface Props {
 //   blogData: BlogSchemaType;
 // }
@@ -24,12 +24,17 @@ import Layout from '#layouts/Layout.astro';
 // type Props = CollectionEntry<'blog'>['data'];
 // const { blogData } = Astro.props;
 
-const { blogData } = Astro.props;
+const {
+  title,
+  description,
+  pubDate,
+  cover,
+  //  author,
+  tags,
+} = Astro.props;
 
-const { title, description, pubDate, cover, author, tags } = blogData;
-
-const results = await getEntry('authors', author.id);
-const { name } = results.data;
+// const results = await getEntry('authors', author.id);
+// const { name } = results.data;
 ---
 
 <!-- TODO: fix the date format -->
@@ -44,7 +49,7 @@ const { name } = results.data;
     <Box borderWidth="1px"><h1>{title}</h1></Box>
 
     <Box borderWidth="1px">
-      Written by: {name},
+      <!-- Written by: {name}, -->
       {format(pubDate, 'd MMM, yyyy')}
     </Box>
 

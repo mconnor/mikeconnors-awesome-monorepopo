@@ -8,15 +8,12 @@
   "files": [
     ".astro/types.d.ts",
     "jsx.d.ts",
-    "src/env.d.ts"
+    "src/env.d.ts",
+    "src/config.ts"
   ],
   "include": [
-    "src/**/*.ts",
-    "src/**/*.js",
-    "src/**/*.mts",
-    "src/**/*.astro",
-    "src/**/*.md",
-    "*.config.mjs",
+    "src",
+    "*.config.mjs"
   ],
   "exclude": [
     "dist",

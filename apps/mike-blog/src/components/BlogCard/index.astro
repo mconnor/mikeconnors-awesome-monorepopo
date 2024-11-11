@@ -8,22 +8,23 @@ import type { CollectionEntry } from 'astro:content';
 interface Props {
   foregroundColor?: string;
   backgroundColor?: string;
-  post: CollectionEntry<'blog'>;
+  id: string;
+  postData: CollectionEntry<'blog'>['data'];
 }
 
 const {
   foregroundColor = 'var(--text-2)',
   backgroundColor = 'var(--surface-4)',
-  post,
+  postData,
+  id,
 } = Astro.props;
 
-const { slug, data } = post;
-const { title, description, cover } = data;
+const { title, description, cover } = postData;
 // const authObj = await getEntry('authors', author.id);
 // const { name } = authObj.data;
 ---
 
-<a slot="left" href={`/posts/${slug}`}>
+<a slot="left" href={`/posts/${id}`}>
   <Box padding="0" borderWidth="0">
     <!-- <Box padding='4px'> -->
 
