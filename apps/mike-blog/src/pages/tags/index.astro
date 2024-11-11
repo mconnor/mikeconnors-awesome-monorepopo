@@ -8,17 +8,15 @@ import { tagCountTypeSchema, zTags } from '#schemas/index.js';
 
 const allBlogPost = await getCollection('blog');
 
-const allBlogDataObjs = allBlogPost.map((post) => post);
+// const allBlogDataObjs = allBlogPost.map((post) => post);
 
 /// we only need a list of unique tags and their counts
-const slugTags = allBlogDataObjs
+const slugTags = allBlogPost
   .filter((post) => post.data.draft !== true)
-  .map((post) => {
-    return {
-      slug: post.slug,
-      tags: post.data.tags,
-    };
-  });
+  .map((post) => ({
+    id: post.id,
+    tags: post.data.tags,
+  }));
 
 // const { success, data: zslugTagsDataArray } = z
 //   .array(blogSchema)
@@ -53,6 +51,10 @@ const zUniqueTagArray = zTags.safeParse(uniqueTagArray);
 
 const { success: tagCountSuccess, data: tagCountData } =
   tagCountTypeSchema.safeParse(tagCountsObject);
+
+if (!tagCountSuccess) {
+  throw new Error('Invalid tag count data');
+}
 ---
 
 <Layout title="Tag Index">

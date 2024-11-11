@@ -8,11 +8,12 @@ import Layout from '#layouts/Layout.astro';
 // import { blogSchema } from '#schemas/index.js';
 const pageTitle = 'Blog';
 
+const allBlogPost = await getCollection('blog');
 // const publishsedPosts = await getCollection('blog', ({ data }) =>
 //   import.meta.env.PROD ? data.draft !== true : true,
 // );
 
-const publishsedPosts = (await getCollection('blog')).sort(
+const publishsedPosts = allBlogPost.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
