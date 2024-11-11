@@ -6,9 +6,9 @@ type Props = HTMLAttributes<'a'> & {
 };
 
 const { pathname } = Astro.url;
-const subpath = pathname.match(/[^/]+/g);
+const currentPage = pathname.match(/[^/]+$/)?.[0] || '';
 const { href, className, ...rest } = Astro.props;
-const isActive = href === pathname || href === '/' + subpath?.[0];
+const isActive = href === `/${currentPage}`;
 ---
 
 <!-- <Box padding='--sizes'><a href={href} class:list={[{ active: isActive }]}>

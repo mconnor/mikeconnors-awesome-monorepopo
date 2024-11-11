@@ -19,9 +19,7 @@ const publishsedPosts = allBlogPost.sort(
 ---
 
 <Layout title={pageTitle}>
-  <!-- The space (margin) between successive sibling elements -->
   <Stack space="var(--s1)">
-    <!-- <Box borderWidth="0"><h2>{pageTitle}</h2></Box> -->
     {
       publishsedPosts.map(({ id, data }) => (
         // <Box class='invert' borderWidth="4px">{data.title}</Box>
