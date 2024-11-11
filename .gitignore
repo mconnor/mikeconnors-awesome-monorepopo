@@ -35,3 +35,4 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 /apps/svelte-app/.svelte-kit
+/out
