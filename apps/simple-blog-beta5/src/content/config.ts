@@ -5,7 +5,10 @@ import YoutubeLoader from '#loaders/yt.js';
 import { announcementsSchema, blogSchema } from '#schemas/index.js';
 
 const blog = defineCollection({
-  type: 'content',
+  loader: glob({
+    base: './src/blog',
+    pattern: '**/*.md',
+  }),
   // Type-check frontmatter using a schema
   schema: blogSchema,
 });
