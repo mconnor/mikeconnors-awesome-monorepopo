@@ -7,7 +7,6 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./Box": "./src/lit-wc/Box/index.astro",
     "./Center": "./src/astro-wc/Center/index.astro",
     "./Reel": "./src/astro-wc/Reel/index.astro",
     "./Frame": "./src/astro-wc/Frame/index.astro",
@@ -34,12 +33,12 @@
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@repo/styles": "workspace:*",
     "@web/test-runner": "catalog:",
     "@webcomponents/template-shadowroot": "catalog:",
     "astro": "^4.16.6",
     "eslint": "catalog:",
     "jest": "catalog:",
-    "lit": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:",

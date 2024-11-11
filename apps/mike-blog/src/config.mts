@@ -8,8 +8,14 @@ export const SITE_DESCRIPTION =
 // export const GENERATE_SLUG_FROM_TITLE = true;
 // export const TRANSITION_API = true;
 
-export const MAIN_MENU = {
-  items: [
+export type MenuItemType = {
+
+  title: string;
+  url: string;
+
+}[];
+
+export const MAIN_MENU:MenuItemType = [
     {
       title: 'Home',
       url: '/',
@@ -34,5 +40,5 @@ export const MAIN_MENU = {
       title: 'Mdx Test',
       url: '/mdxtest',
     },
-  ],
-};
+  ]
+;

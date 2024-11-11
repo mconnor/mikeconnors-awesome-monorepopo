@@ -6,6 +6,7 @@ import type { RmUnitType } from '@repo/styles/Types';
 import Header from '#components/Header.astro';
 import Footer from '#components/Footer.astro';
 import BaseLayout from './BaseLayout.astro';
+import {MAIN_MENU} from '#config.mts'
 
 interface Props {
   image?: string;
@@ -20,7 +21,7 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 
 <BaseLayout {...rest}>
   <Cover centeredElement="center-l" space="0">
-    <Header transition:persist />
+    <Header navItems={MAIN_MENU}/>
     <Center max={maxW} transition:animate="slide"><slot /></Center>
  <Footer />
   </Cover>

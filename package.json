@@ -29,7 +29,7 @@
     "update:all": "turbo run update --filter=..."
   },
   "devDependencies": {
-    "turbo": "catalog:"
+    "turbo": "^2.2.3"
   },
   "engines": {
     "node": ">= 20.11.0 <21 || >= 22.9.0",

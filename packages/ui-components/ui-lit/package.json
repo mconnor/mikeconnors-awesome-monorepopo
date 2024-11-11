@@ -8,7 +8,8 @@
   },
   "exports": {
     "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
-    "./Timer": "./src/Timer/index.astro"
+    "./Timer": "./src/Timer/index.astro",
+    "./Box": "./src/Box/index.astro"
   },
   "scripts": {
     "updateAstro": "pnpm dlx @astrojs/upgrade",

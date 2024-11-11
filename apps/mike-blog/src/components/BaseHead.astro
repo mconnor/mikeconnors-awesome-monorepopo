@@ -8,7 +8,7 @@ import DevModeStyle from '@repo/styles/DevModeStyle.astro';
 import GlobalStyle from '@repo/styles/GlobalStyle.astro';
 import { ViewTransitions } from 'astro:transitions';
 interface Props {
-  ogTitle?;
+  ogTitle: string;
   ogDescription?: string;
   ogImage?: string;
 }
@@ -41,7 +41,7 @@ const isTest = process.env.NODE_ENV === 'test';
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+{image &&  <meta property="og:image" content={new URL(image, Astro.url)} />}
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
