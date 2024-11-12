@@ -1,6 +1,5 @@
 packages:
   - apps/*
-  - "!apps/multi-app/**"
   - "!apps/pico-astro-theme/**"
   - "!apps/starlight/**"
   - packages/**

@@ -22,7 +22,7 @@
   "scripts": {
     "updateAstro": "pnpm dlx @astrojs/upgrade",
     "astro-check": "astro check",
-    "test": "vitest",
+    "test": "echo 'no tests yet'",
     "format": "prettier . --write",
     "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
@@ -37,13 +37,12 @@
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "typescript": "catalog:",
-    "vitest": "catalog:"
-  },
-  "peerDependencies": {
-    "astro": "^4"
+    "typescript": "catalog:"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "tsup": "^8.3.5"
+  }
 }

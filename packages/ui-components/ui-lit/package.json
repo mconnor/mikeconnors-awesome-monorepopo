@@ -12,7 +12,6 @@
     "./Box": "./src/Box/index.astro"
   },
   "scripts": {
-    "build": "tsc && vite build",
     "updateAstro": "pnpm dlx @astrojs/upgrade",
     "test": "vitest",
     "format": "prettier . --write",

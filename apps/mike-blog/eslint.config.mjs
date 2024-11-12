@@ -1,6 +1,6 @@
 // @ts-check
 
-import astroConfig from '@repo/eslint-config/astro';
+import astro from '@repo/eslint-config/astro';
 import litConfig from '@repo/eslint-config/lit-config';
 import markdownConfig from '@repo/eslint-config/markdown';
 import tsLint from '@repo/eslint-config/ts-lint-type-check';
@@ -10,7 +10,7 @@ import tsLint from '@repo/eslint-config/ts-lint-type-check';
 
 export default [
   ...tsLint,
-  ...astroConfig,
+  ...astro,
   ...litConfig,
   ...markdownConfig,
   {
