@@ -1,11 +1,14 @@
 ---
-// import Hamburger from './Hamburger.astro';
+// import Hamburger from '/Hamburger.astro';
 import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
 import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
 
 // import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
 import HeaderLink from '#components/HeaderLink.astro';
+// const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const { pathname } = new URL(Astro.request.url)
+const currentPage = pathname.match(/[^/]+$/)?.[0] || '';
 ---
 
 <Box invert padding="var(--s1)" borderWidth="0">
@@ -14,7 +17,8 @@ import HeaderLink from '#components/HeaderLink.astro';
   <ThemeSwitcher />
   <Cluster align="baseline" justify="space-between" space="0">
     <HeaderLink href="/"><h1>Mike Connor - Tech</h1></HeaderLink>
-
+   
+    <p>{currentPage} </p>
     <!-- <AstroNavigateSelect /> -->
 
     <Box invert borderWidth="0" padding="0">
@@ -23,7 +27,7 @@ import HeaderLink from '#components/HeaderLink.astro';
 
         <HeaderLink href="/posts">Posts</HeaderLink>
         <HeaderLink href="/tags">Tags</HeaderLink>
-        <HeaderLink href="/interactive">interactive</HeaderLink>
+        <HeaderLink href="/interactive">Interactive</HeaderLink>
         <!-- <HeaderLink href="/authors/">Authors</HeaderLink>
 
         <HeaderLink href="/boxclass/">box class</HeaderLink>

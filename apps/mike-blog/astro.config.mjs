@@ -15,7 +15,7 @@ import icon from 'astro-icon';
 export default defineConfig({
   outDir: 'dist',
   compressHTML: true,
-  trailingSlash: 'ignore',
+  // trailingSlash: 'never',
   cacheDir: './cache-directory',
   redirects: {
     '/index': '/about',
@@ -56,6 +56,6 @@ export default defineConfig({
     //   },
     // }),
   ],
-
+ output: 'server',
   adapter: vercel(),
 });
