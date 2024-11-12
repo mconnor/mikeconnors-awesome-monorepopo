@@ -17,7 +17,11 @@ const pageTitle = 'About';
     >
 
     <Box borderWidth="0"
-      ><p>
+      >
+      <button onclick="throw new Error('This is a test error')">
+        Throw test error
+      </button>
+      <p>
         <strong>React, Next.js, React Native, Expo</strong>—you name it, I’ve
         probably worked with it. (Yes, I’ve even been around for <strong
           >Flash</strong
