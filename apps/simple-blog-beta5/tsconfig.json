@@ -8,18 +8,7 @@
     "baseUrl": ".",
     "rootDir": "src"
   },
-  "files": [
-    ".astro/types.d.ts"
-  ],
-  "include": [
-    "src",
-    "*.config.mjs"
-  ],
-  "exclude": [
-    "dist",
-    ".turbo",
-    ".astro",
-    ".vscode",
-    ".vercel"
-  ]
+  "files": [".astro/types.d.ts"],
+  "include": ["src", "*.config.mjs"],
+  "exclude": ["dist", ".turbo", ".astro", ".vscode", ".vercel"]
 }

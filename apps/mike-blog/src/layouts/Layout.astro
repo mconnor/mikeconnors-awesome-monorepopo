@@ -23,7 +23,7 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
   <Cover centeredElement="center-l" space="0">
     <Header transition:persist />
     <Center max={maxW} transition:animate="slide"><slot /></Center>
- <Footer />
+    <Footer />
   </Cover>
 
   <script is:inline>

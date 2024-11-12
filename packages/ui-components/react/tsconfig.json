@@ -4,19 +4,7 @@
     "rootDir": "src",
     "strict": true
   },
-  "files": [
-    "eslint.config.mjs",
-    "tsup.config.ts"
-  ],
-  "include": [
-    "src/**/*",
-    "*.config.mjs",
-    "*.config.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    ".astro",
-    "dist",
-    ".turbo"
-  ]
+  "files": ["eslint.config.mjs", "tsup.config.ts"],
+  "include": ["src/**/*", "*.config.mjs", "*.config.ts"],
+  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }

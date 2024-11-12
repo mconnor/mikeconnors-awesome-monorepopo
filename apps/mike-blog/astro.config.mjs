@@ -57,7 +57,5 @@ export default defineConfig({
     // }),
   ],
 
-
-
   adapter: vercel(),
 });
