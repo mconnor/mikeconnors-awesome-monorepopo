@@ -6,7 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '#config.mts';
 
 import DevModeStyle from '@repo/styles/DevModeStyle.astro';
 import GlobalStyle from '@repo/styles/GlobalStyle.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 interface Props {
   ogTitle: string;
   ogDescription?: string;
@@ -73,6 +73,6 @@ const isTest = process.env.NODE_ENV === 'test';
   });
 </script> -->
 
-<ViewTransitions />
+<ClientRouter />
 {(isDev || isTest) && <DevModeStyle />}
 <GlobalStyle />

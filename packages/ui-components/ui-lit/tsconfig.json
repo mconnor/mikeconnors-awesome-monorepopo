@@ -1,13 +1,10 @@
 {
-  "extends": "@repo/typescript-config/myAstro.json",
+  "extends": "@repo/typescript-config/lit.json",
   "compilerOptions": {
     "experimentalDecorators": true,
     "useDefineForClassFields": false
   },
-  "include": [
-    "src/**/*",
-    "*.config.js",
-    "jsx.d.ts",
-    "*.mjs"
-  ]
+  "files": ["jsx.d.ts"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }

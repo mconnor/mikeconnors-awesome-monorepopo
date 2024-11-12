@@ -1,0 +1,25 @@
+---
+import Box from '@repo/ui-lit/Box';
+import { getCollection } from 'astro:content';
+
+import Layout from '#layouts/Layout.astro';
+const youtube = await getCollection('youtube');
+---
+
+<Layout>
+  <main>
+    <Box>
+      <pre>{JSON.stringify(youtube, null, 2)}</pre>
+      <!-- <ul>
+      {
+        youtube.map(({ id, data }) => (
+          <li>
+            {id}
+            <a href={`/announcements/${id}`}>{data.title}</a>
+          </li>
+        ))
+      }
+    </ul> -->
+    </Box>
+  </main>
+</Layout>

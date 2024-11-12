@@ -35,9 +35,9 @@ type BorderStyle =
   | 'outset';
 
 export type {
-  Percentage,
-  RmUnitType,
-  JustifyContentTypes,
   AlignItemsTypes,
   BorderStyle,
+  JustifyContentTypes,
+  Percentage,
+  RmUnitType,
 };

@@ -5,7 +5,6 @@ import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 import prettier from 'eslint-config-prettier';
-
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 const basicConfig = tseslint.config(
@@ -27,6 +26,12 @@ const basicConfig = tseslint.config(
       globals: {
         ...globals.browser,
       },
+    },
+  },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
   {

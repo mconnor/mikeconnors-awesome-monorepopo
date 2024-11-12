@@ -1,9 +1,9 @@
 ---
 // import { Debug } from 'astro:components';
 
-import Box from '@repo/ui-lit/Box';
 import Cluster from '@repo/layout-webcomponents/Cluster';
 import Icon from '@repo/layout-webcomponents/Icon';
+import Box from '@repo/ui-lit/Box';
 interface Props {
   tags: string[];
   tagCounts?: Record<string, number>;
@@ -14,6 +14,7 @@ const { tags, tagCounts } = Astro.props;
 // const keys = Object.keys(tagCounts);
 ---
 
+<h2>Tags</h2>
 <Cluster space="var(--s0)">
   {
     tags

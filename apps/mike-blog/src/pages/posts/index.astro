@@ -1,0 +1,35 @@
+---
+// import { Debug } from 'astro:components';
+import Stack from '@repo/layout-webcomponents/Stack';
+import { getCollection } from 'astro:content';
+
+import BlogCard from '#components/BlogCard/index.astro';
+import Layout from '#layouts/Layout.astro';
+// import { blogSchema } from '#schemas/index.js';
+const pageTitle = 'Blog';
+
+const allBlogPost = await getCollection('blog');
+// const publishsedPosts = await getCollection('blog', ({ data }) =>
+//   import.meta.env.PROD ? data.draft !== true : true,
+// );
+
+const publishsedPosts = allBlogPost.sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Layout title={pageTitle}>
+  <Stack space="var(--s1)">
+    {
+      publishsedPosts.map(({ id, data }) => (
+        // <Box class='invert' borderWidth="4px">{data.title}</Box>
+        <BlogCard
+          backgroundColor="var(--surface-4)"
+          foregroundColor="var(--text-2)"
+          id={id}
+          postData={data}
+        />
+      ))
+    }
+  </Stack>
+</Layout>

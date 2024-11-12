@@ -2,6 +2,8 @@
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "prettier.documentSelectors": ["**/*.astro"],
+
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -59,6 +61,7 @@
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
     "**/.git": false,

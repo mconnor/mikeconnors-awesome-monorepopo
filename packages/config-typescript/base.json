@@ -15,7 +15,6 @@
     "skipLibCheck": true,
     "allowJs": true,
     "jsx": "preserve",
-
     "composite": false,
     "declaration": true,
     "declarationMap": true,
@@ -23,7 +22,13 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
-    "strict": false,
     "allowArbitraryExtensions": true
-  }
+  },
+  "exclude": [
+    "dist",
+    ".astro",
+    ".turbo",
+    ".vercel",
+    ".frontmatter/"
+  ]
 }

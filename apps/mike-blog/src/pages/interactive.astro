@@ -1,16 +1,21 @@
 ---
 import Box from '@repo/ui-lit/Box';
 
-import AstroHeart from '#astro-web-component/AstroHeart/index.astro';
+import AstroHeart from '#astro-web-component/HeartWebComponent.astro';
 import Layout from '#layouts/Layout.astro';
 import LitHeartButton from '#lit-web-components/HeartButton/index.astro';
-// import MyElement from '#lit-web-components/MyElement/index.astro';
+import MyElement from '#lit-web-components/MyElement/index.astro';
 ---
 
 <Layout>
   <Box>
     <Box borderStyle="double">Astro Web component</Box>
     <Box> <AstroHeart /></Box>
+    <p>
+      Astro components are HTML-only templating components with no client-side
+      runtime. But, you can use a <e>&lt;script&gt;</e> tag in your Astro component
+      template to send JavaScript to the browser that executes in the global scope.
+    </p>
   </Box>
 
   <Box>
@@ -24,6 +29,5 @@ import LitHeartButton from '#lit-web-components/HeartButton/index.astro';
     </Box>
   </Box>
 
-  <!--
-  <MyElement> this is my-element</MyElement> -->
+  <MyElement> this is my-element</MyElement>
 </Layout>

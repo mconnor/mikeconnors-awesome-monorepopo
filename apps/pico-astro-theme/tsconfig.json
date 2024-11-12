@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/typescript-config/astro-app.json",
+  "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
     "verbatimModuleSyntax": true,
     "strictNullChecks": true,

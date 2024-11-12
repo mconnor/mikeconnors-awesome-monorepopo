@@ -7,13 +7,17 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./counter": "./src/ReactCounter.tsx"
+    "./counter": {
+      "types": "./src/ReactCounter.tsx",
+      "import": "./dist/ReactCounter.js"
+    }
   },
   "scripts": {
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
-    "lint": "eslint . --max-warnings 0",
-    "fix": "eslint . --fix",
+    "lint": "eslint src --max-warnings 0",
+    "fix": "eslint src --fix",
     "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf dist"
@@ -21,22 +25,19 @@
   "keywords": [
     "react"
   ],
-  "author": "",
+  "author": "Michael Connor",
   "license": "ISC",
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@vanilla-extract/vite-plugin": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.5",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }

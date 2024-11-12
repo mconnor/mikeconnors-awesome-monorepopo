@@ -8,9 +8,9 @@
 //   height: number;
 //   format: string;
 // }
-import Box from '@repo/ui-lit/Box';
 import Frame from '@repo/layout-webcomponents/Frame';
 import Stack from '@repo/layout-webcomponents/Stack';
+import Box from '@repo/ui-lit/Box';
 import { Image } from 'astro:assets';
 
 // import Andy from '#assets/andyBushes.jpg';
@@ -22,7 +22,7 @@ import Layout from '#layouts/Layout.astro';
   <Stack space="0">
     <h2>This is my website</h2>
 
-    <Box borderWidth="0" invert borderWidth="1px">
+    <Box>
       <Frame ratio="16:9">
         <Image
           src={AndyMud}

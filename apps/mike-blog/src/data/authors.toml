@@ -1,0 +1,13 @@
+[[authors]]
+
+id = "bob-dobs"
+name = "Mike Connor"
+email = "mike@mikeconnor.tech"
+bio = "Mike is a software developer and writer based in Kansas City."
+
+[[authors]]
+
+id = "mike-connor"
+name = "Bob Dobbs"
+email = "bob@dobbs.com"
+bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."

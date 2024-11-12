@@ -23,20 +23,18 @@
   "devDependencies": {
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
+    "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@web/test-runner": "catalog:",
-    "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "^4.16.6",
     "eslint": "catalog:",
     "jest": "catalog:",
     "lit": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "typescript": "catalog:",
-    "vitest": "catalog:"
+    "typescript": "catalog:"
   },
-  "dependencies": {
-    "@repo/styles": "workspace:*"
+  "peerDependencies": {
+    "lit": "^3"
   },
   "keywords": [],
   "author": "",

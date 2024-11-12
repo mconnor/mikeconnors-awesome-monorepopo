@@ -1,22 +1,24 @@
 {
-  "extends": "@repo/typescript-config/astro-app.json",
+  "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
-    "verbatimModuleSyntax": true,
-    "jsx": "preserve",
-    "declaration": true,
-    "declarationMap": true,
+    "baseUrl": "./",
+    "strictNullChecks": true,
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": "src",
+    "jsx": "preserve" // Needed for TypeScript intellisense in the template inside Vue files
   },
   "files": [
-    "eslint.config.mjs",
-    "astro.config.mjs",
-    "postcss.config.mjs",
-    "svelte.config.mjs",
+    ".astro/types.d.ts",
+    "jsx.d.ts"
   ],
   "include": [
-    "**/*.d.ts",
-    "src",
-    ".prettierrc.mjs"
+    "src/**/*",
+    "*.config.mjs"
+  ],
+  "exclude": [
+    "dist",
+    ".turbo",
+    ".astro",
+    ".vscode"
   ],
 }

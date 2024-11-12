@@ -8,29 +8,30 @@ import type { CollectionEntry } from 'astro:content';
 interface Props {
   foregroundColor?: string;
   backgroundColor?: string;
-  post: CollectionEntry<'blog'>;
+  id: string;
+  postData: CollectionEntry<'blog'>['data'];
 }
 
 const {
   foregroundColor = 'var(--text-2)',
   backgroundColor = 'var(--surface-4)',
-  post,
+  postData,
+  id,
 } = Astro.props;
 
-const { slug, data } = post;
-const { title, description, cover } = data;
+const { title, description, cover } = postData;
 // const authObj = await getEntry('authors', author.id);
 // const { name } = authObj.data;
 ---
 
-<a slot="left" href={`/posts/${slug}`}>
-  <Box padding="0" borderWidth="var(--s000)">
+<a slot="left" href={`/posts/${id}`}>
+  <Box padding="0" borderWidth="0">
     <!-- <Box padding='4px'> -->
 
     <!-- <Stack space="var(--s00)" splitAfter={4}> -->
     <!-- <Cluster></Cluster> -->
 
-    <Box  invert padding="var(--s0)" borderWidth="0"><h1>{title}</h1></Box>
+    <Box invert padding="var(--s0)" borderWidth="0"><h1>{title}</h1></Box>
 
     <!-- <Cluster justify="space-between" align="baseline">
       <Box padding="var(--s00)" borderWidth="0">{name}</Box>
@@ -44,7 +45,7 @@ const { title, description, cover } = data;
     >
 
     <Box padding="var(--s0)" borderWidth="0" invert
-      >{description}</Box
+      >description{description}</Box
     >
 
     <!-- </Box> -->

@@ -1,31 +1,22 @@
 ---
 import type { BorderStyle, RmUnitType } from '@repo/styles/Types';
 
-import { Box } from './box-l';
-
 interface Props {
   padding?: RmUnitType;
   borderWidth?: RmUnitType;
-
+  highlight?: boolean;
   borderStyle?: BorderStyle;
   invert?: boolean;
+  children?: unknown;
 }
 const props = Astro.props;
 ---
 
+<script>
+  import './Box';
+</script>
 <div>
-  <Box {...props} client:visible>
+  <box-l {...props}>
     <slot />
-  </Box>
+  </box-l>
 </div>
-
-<style>
-  box-l {
-    --box-text-color: var(--theme-primary);
-    --box-background-color: var(--theme-secondary);
-    --box-font-family: var(--theme-font-family);
-  }
-  .warning {
-    --box-l-text-color: var(--theme-warning);
-  }
-</style>

@@ -1,13 +1,13 @@
 ---
-import Box from '@repo/ui-lit/Box';
 import Sidebar from '@repo/layout-webcomponents/Sidebar';
 import Stack from '@repo/layout-webcomponents/Stack';
+import Box from '@repo/ui-lit/Box';
 
 import Layout from '#layouts/Layout.astro';
 const pageTitle = 'box class';
 ---
 
-<Layout title={pageTitle} description='testing box class'>
+<Layout title={pageTitle}>
   <Sidebar contentMin="20%" noStretch={false} sideWidth="30ch">
     <Stack recursive splitAfter={2}>
       <Box>xxx</Box>

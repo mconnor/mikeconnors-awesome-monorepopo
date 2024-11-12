@@ -1,23 +1,12 @@
 {
-  "extends": "@repo/typescript-config/astro-app.json",
+  "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
-    "verbatimModuleSyntax": true,
     "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
     "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
-    "declaration": true,
-    "declarationMap": true,
-    "outDir": "dist",
-    "rootDir": "."
+    "rootDir": "src" //It would be an error to specify rootDir as core and include as * because it creates a file (helpers.ts) that would need to be emitted outside the outDir (i.e. ../helpers.js).
   },
-  "files": [
-    "postcss.config.mjs",
-    "eslint.config.mjs",
-    "astro.config.mjs"
-  ],
-  "include": [
-    "**/*.d.ts",
-    "src",
-  ],
+  "files": [".astro/types.d.ts", "jsx.d.ts"],
+  "include": ["src/**/*", "tests/**/*", "*.config.mjs"],
   "exclude": [
     "dist",
     ".astro",
@@ -25,5 +14,5 @@
     ".vercel",
     ".frontmatter/",
     "cache-directory"
-  ]
+  ] //exclude only changes which files are included as a result of the include setting.
 }

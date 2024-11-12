@@ -13,6 +13,27 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "allowJs": true,
-    "jsx": "preserve"
-  }
+    "jsx": "preserve",
+    "strict": true,
+    "outDir": "dist",
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.mts",
+    "src/**/*.jsx",
+    "src/**/*.astro",
+    "**/*.d.ts",
+    "*.config.mjs",
+    "*.config.js",
+  ],
+  "exclude": [
+    "dist",
+    ".astro",
+    ".turbo",
+    ".vercel",
+    ".frontmatter/",
+    "cache-directory"
+  ]
 }

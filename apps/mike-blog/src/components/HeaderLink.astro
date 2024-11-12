@@ -5,9 +5,10 @@ type Props = HTMLAttributes<'a'> & {
   className?: string;
 };
 
+
+const { href, className, ...rest } = Astro.props;
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
-const { href, className} = Astro.props;
 const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
@@ -20,7 +21,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
       <a
         href={href}
         class:list={[className, { active: isActive }]}
-
+        {...rest}
         aria-disabled={isActive}
       >
         <slot />
