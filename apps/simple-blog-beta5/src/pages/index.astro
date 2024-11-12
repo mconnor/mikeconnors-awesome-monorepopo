@@ -1,15 +1,16 @@
 ---
+import Box from '@repo/ui-lit/Box';
 import { getCollection } from 'astro:content';
 
 import Layout from '#layouts/Layout.astro';
-
 const youtube = await getCollection('youtube');
 ---
 
 <Layout>
   <main>
-    <pre>{JSON.stringify(youtube, null, 2)}</pre>
-    <!-- <ul>
+    <Box>
+      <pre>{JSON.stringify(youtube, null, 2)}</pre>
+      <!-- <ul>
       {
         youtube.map(({ id, data }) => (
           <li>
@@ -19,5 +20,6 @@ const youtube = await getCollection('youtube');
         ))
       }
     </ul> -->
+    </Box>
   </main>
 </Layout>

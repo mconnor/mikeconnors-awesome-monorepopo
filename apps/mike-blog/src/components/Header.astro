@@ -1,14 +1,14 @@
 ---
 // import Hamburger from './Hamburger.astro';
-import Box from '@repo/layout-webcomponents/Box';
 import Cluster from '@repo/layout-webcomponents/Cluster';
+import Box from '@repo/ui-lit/Box';
 import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
 
 // import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
 import HeaderLink from '#components/HeaderLink.astro';
 ---
 
-<Box invert padding="var(--s1)" borderWidth="0">
+<Box  invert padding="var(--s1)" borderWidth="0">
   <!-- <Hamburger /> -->
 
   <ThemeSwitcher />
@@ -17,7 +17,7 @@ import HeaderLink from '#components/HeaderLink.astro';
 
     <!-- <AstroNavigateSelect /> -->
 
-    <Box borderWidth="0" padding="0">
+    <Box  invert borderWidth="0" padding="0">
       <Cluster align="baseline" justify="flex-end" space="var(--s1)">
         <HeaderLink href="/about">About</HeaderLink>
 

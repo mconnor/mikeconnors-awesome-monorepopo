@@ -4,15 +4,15 @@
     "baseUrl": "./",
     "strictNullChecks": true,
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": "src",
+    "jsx": "preserve" // Needed for TypeScript intellisense in the template inside Vue files
   },
   "files": [
     ".astro/types.d.ts",
     "jsx.d.ts"
   ],
   "include": [
-    "src",
-    "types",
+    "src/**/*",
     "*.config.mjs"
   ],
   "exclude": [

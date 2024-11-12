@@ -3,17 +3,15 @@
   "compilerOptions": {
     "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
     "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
-    "rootDir": ".",
+    "rootDir": "src", //It would be an error to specify rootDir as core and include as * because it creates a file (helpers.ts) that would need to be emitted outside the outDir (i.e. ../helpers.js).
   },
   "files": [
     ".astro/types.d.ts",
     "jsx.d.ts",
-    "src/env.d.ts",
-    "src/config.ts"
   ],
   "include": [
-    "src",
-    "*.config.mjs"
+    "src/**/*",
+    "tests/**/*"
   ],
   "exclude": [
     "dist",
@@ -21,6 +19,6 @@
     ".turbo",
     ".vercel",
     ".frontmatter/",
-    "cache-directory"
-  ]
+    "cache-directory",
+  ] //exclude only changes which files are included as a result of the include setting.
 }

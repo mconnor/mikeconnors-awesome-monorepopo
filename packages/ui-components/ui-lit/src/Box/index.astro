@@ -1,0 +1,22 @@
+---
+import type { BorderStyle, RmUnitType } from '@repo/styles/Types';
+
+interface Props {
+  padding?: RmUnitType;
+  borderWidth?: RmUnitType;
+  highlight?: boolean;
+  borderStyle?: BorderStyle;
+  invert?: boolean;
+  children?: unknown;
+}
+const props = Astro.props;
+---
+
+<script>
+  import './Box';
+</script>
+<div>
+  <box-l {...props}>
+    <slot />
+  </box-l>
+</div>

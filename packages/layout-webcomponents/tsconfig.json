@@ -8,6 +8,11 @@
   "files": [
     ".astro/types.d.ts",
   ],
+  "include": [
+    "src/**/*.js",
+    "src/**/*.astro",
+    "*.config.mjs"
+  ],
  
   "exclude": [
     "node_modules",

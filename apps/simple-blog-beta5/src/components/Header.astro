@@ -1,10 +1,13 @@
 ---
+import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
+
 import { SITE_TITLE } from '#consts.ts';
 
 import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
+  <ThemeSwitcher />
   <nav>
     <h2><a href="/">{SITE_TITLE}</a></h2>
     <div class="internal-links">

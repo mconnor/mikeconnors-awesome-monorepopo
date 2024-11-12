@@ -6,7 +6,7 @@ import { announcementsSchema, blogSchema } from '#schemas/index.js';
 
 const blog = defineCollection({
   loader: glob({
-    base: './src/blog',
+    base: './src/markdown/blog',
     pattern: '**/*.md',
   }),
   // Type-check frontmatter using a schema
@@ -15,7 +15,7 @@ const blog = defineCollection({
 
 const announcements = defineCollection({
   loader: glob({
-    base: './src/announcements',
+    base: './src/markdown/announcements',
     pattern: '**/*.md',
   }),
   schema: announcementsSchema,

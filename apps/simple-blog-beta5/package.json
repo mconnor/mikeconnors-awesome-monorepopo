@@ -21,6 +21,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@repo/ui-lit": "workspace:*",
     "@astrojs/mdx": "4.0.0-beta.3",
     "@astrojs/rss": "catalog:",
     "@astrojs/sitemap": "catalog:",

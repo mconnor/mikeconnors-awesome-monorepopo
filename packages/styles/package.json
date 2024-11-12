@@ -30,16 +30,15 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
+    "open-props": "^1.7.7",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "open-props": "catalog:",
     "zod": "catalog:"
   },
   "peerDependencies": {
-    "astro": "^4",
     "open-props": "catalog:"
   }
 }

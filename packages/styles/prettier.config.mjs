@@ -1,7 +1,7 @@
-// .prettierrc.mjs
-/** @type {import("prettier").Config} */
+
+import astro from 'prettier-plugin-astro'
 export default {
-  plugins: ['prettier-plugin-astro'],
+  plugins: [astro],
   overrides: [
     {
       files: '*.astro',
@@ -14,3 +14,5 @@ export default {
   trailingComma: 'all',
   tabWidth: 2,
 };
+
+
