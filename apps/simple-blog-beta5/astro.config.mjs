@@ -1,7 +1,7 @@
 // @ts-check
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel';
 import { defineConfig, envField, passthroughImageService } from 'astro/config';
 
 // https://astro.build/config
