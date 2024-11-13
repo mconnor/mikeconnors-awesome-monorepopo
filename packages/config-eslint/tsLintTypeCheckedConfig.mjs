@@ -1,6 +1,7 @@
 // @ts-check
 
 import js from '@eslint/js';
+import wc from 'eslint-plugin-wc';
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
@@ -15,6 +16,7 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
+  wc.configs['flat/recommended'],
   // turboConfig,
   {
     languageOptions: {
