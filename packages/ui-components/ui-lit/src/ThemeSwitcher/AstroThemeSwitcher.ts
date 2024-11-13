@@ -40,8 +40,8 @@ export class AstroThemeSwitcher extends LitElement {
   }
 }
 
-declare global {
-  interface HTMLElementTagNameMap {
-    'astro-theme-switcher': AstroThemeSwitcher;
-  }
-}
+// declare global {
+//   interface HTMLElementTagNameMap {
+//     'astro-theme-switcher': AstroThemeSwitcher;
+//   }
+// }

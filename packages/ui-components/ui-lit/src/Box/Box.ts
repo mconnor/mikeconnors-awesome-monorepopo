@@ -74,8 +74,8 @@ export class Box extends LitElement {
   }
 }
 
-declare global {
-  interface HTMLElementTagNameMap {
-    'box-l': Box;
-  }
-}
+// declare global {
+//   interface HTMLElementTagNameMap {
+//     'box-l': Box;
+//   }
+// }
