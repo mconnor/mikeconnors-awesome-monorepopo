@@ -4,8 +4,7 @@
   "type": "module",
   "author": "Mike Connor",
   "imports": {
-    "#*": "./src/*",
-    "#config": "./src/config.mts"
+    "#*": "./src/*"
   },
   "keywords": [
     "astro",
