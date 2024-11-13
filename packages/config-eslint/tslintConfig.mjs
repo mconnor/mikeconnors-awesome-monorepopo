@@ -6,6 +6,7 @@ import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 import prettier from 'eslint-config-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import turboConfig from './turbo.config.mjs';
 
 export default tseslint.config(
   {
@@ -14,6 +15,7 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
+  turboConfig,
   {
     languageOptions: {
       ecmaVersion: 'latest',
