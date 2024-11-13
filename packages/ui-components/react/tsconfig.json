@@ -1,10 +1,10 @@
 {
   "extends": "@repo/typescript-config/react.json",
   "compilerOptions": {
-    "rootDir": "src",
+    "rootDir": ".",
     "strict": true
   },
-  "files": ["eslint.config.mjs", "tsup.config.ts"],
-  "include": ["src/**/*", "*.config.mjs", "*.config.ts"],
+  "files": ["eslint.config.mjs"],
+  "include": ["src/**/*", "*.config.*"],
   "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }

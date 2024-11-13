@@ -8,7 +8,6 @@ import postcssNesting from 'postcss-nesting';
 import postcssPow from 'postcss-pow';
 import process from 'process';
 const isDev = process.env.NODE_ENV === 'development';
-const isTest = process.env.NODE_ENV === 'test';
 
 const devConfig = {
   plugins: [postcssImport, postcssNesting, postcssPow],
@@ -25,6 +24,6 @@ const prodConfig = {
   ],
 };
 
-const config = isDev || isTest ? devConfig : prodConfig;
+const config = isDev ? devConfig : prodConfig;
 
 export default config;

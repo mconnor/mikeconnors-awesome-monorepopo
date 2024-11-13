@@ -4,7 +4,7 @@
     "baseUrl": "./",
     "strictNullChecks": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": ".",
     "jsx": "preserve" // Needed for TypeScript intellisense in the template inside Vue files
   },
   "files": [
