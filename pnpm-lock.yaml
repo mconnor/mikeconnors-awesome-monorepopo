@@ -214,7 +214,7 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       typescript:
-        specifier: ^5.6.3
+        specifier: 'catalog:'
         version: 5.6.3
 
   apps/mike-blog:
@@ -487,7 +487,7 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       typescript:
-        specifier: ^5.6.3
+        specifier: 'catalog:'
         version: 5.6.3
       vitest:
         specifier: 'catalog:'
@@ -645,7 +645,7 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       typescript:
-        specifier: ^5.6.3
+        specifier: 'catalog:'
         version: 5.6.3
 
   packages/ui-components/preact:
@@ -663,7 +663,7 @@ importers:
         specifier: 'catalog:'
         version: 3.3.3
       typescript:
-        specifier: ^5.6.3
+        specifier: 'catalog:'
         version: 5.6.3
 
   packages/ui-components/react:
@@ -721,7 +721,7 @@ importers:
         specifier: 'catalog:'
         version: 4.0.5(picomatch@4.0.2)(svelte@4.2.19)(typescript@5.6.3)
       typescript:
-        specifier: ^5.6.3
+        specifier: 'catalog:'
         version: 5.6.3
 
   packages/ui-components/ui-lit:

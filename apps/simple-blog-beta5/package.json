@@ -34,7 +34,7 @@
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "typescript": "^5.6.3",
+    "typescript": "catalog:",
     "vitest": "catalog:"
   }
 }

@@ -1,6 +1,4 @@
 {
-
-    "extends": ["//"],
-    "globalEnv": ["DEV","PROD"]
-  }
-  
+  "extends": ["//"],
+  "globalEnv": ["DEV", "PROD"]
+}
