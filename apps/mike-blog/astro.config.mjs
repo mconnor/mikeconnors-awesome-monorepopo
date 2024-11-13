@@ -3,14 +3,11 @@ import vercel from '@astrojs/vercel';
 import { defineConfig } from 'astro/config';
 import icon from 'astro-icon';
 
-
-
 export default defineConfig({
   outDir: 'dist',
   compressHTML: true,
   // trailingSlash: 'never',
   cacheDir: './cache-directory',
-
 
   // env: {
   //   schema: {
@@ -18,7 +15,7 @@ export default defineConfig({
   //     SENTRY_AUTH_TOKEN: envField.string({ context: "server", access: "private"}),
   //   }
   // }
-  
+
   site: 'https://staging.mikeconnor.tech/',
 
   image: {
@@ -37,6 +34,6 @@ export default defineConfig({
       drafts: true,
     }),
   ],
- output: 'server',
+  output: 'server',
   adapter: vercel(),
 });

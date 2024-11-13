@@ -5,7 +5,6 @@ type Props = HTMLAttributes<'a'> & {
   className?: string;
 };
 
-
 const { href, className, ...rest } = Astro.props;
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
