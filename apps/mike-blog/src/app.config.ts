@@ -10,5 +10,5 @@ export const SITE_DESCRIPTION =
 export enum Links {
   LINKEDIN = 'https://www.linkedin.com/in/michaelgconnor/',
   GITHUB = 'https://www.github.com/mconnor',
-  TWITTER = 'https://www.twitter.com/mikeconnor504'
+  TWITTER = 'https://www.twitter.com/mikeconnor504',
 }
