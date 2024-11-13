@@ -9,12 +9,24 @@ import Layout from '#layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <Box borderWidth="2px">
-    <Stack space="2rem">
-      <Box>
+
+    <Stack>
+      <Box >
         <MyTimer />
+       
+      </Box>
+      <Box >
         <MyTimer duration={20} />
+       
+      </Box>
+      <Box >
+        <MyTimer />
+       
+      </Box>
+      <Box >
+        <MyTimer duration={20} />
+       
       </Box>
     </Stack>
-  </Box>
+
 </Layout>
