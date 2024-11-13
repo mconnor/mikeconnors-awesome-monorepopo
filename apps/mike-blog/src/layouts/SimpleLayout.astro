@@ -1,16 +1,28 @@
 ---
 import BaseHead from '#components/BaseHead.astro';
 
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  // maxW?: RmUnitType;
+  children: unknown;
+}
 
 // const isProd = import.meta.env.PROD
 // const isDev = import.meta.env.DEV
 
-
+const {
+  title = 'Mike Connor',
+  description = 'my description',
+  image = '/favicon-32x32.png',
+  // maxW = 'var(--measure)',
+} = Astro.props;
 ---
 
 <html lang="en" transition:animate="none" data-theme="light">
   <head>
-    <BaseHead />
+    <BaseHead title={title} description={description} image={image} />
   </head>
 
   <body>
