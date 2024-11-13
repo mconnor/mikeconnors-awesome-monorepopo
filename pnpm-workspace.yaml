@@ -2,6 +2,7 @@ packages:
   - apps/*
   - "!apps/pico-astro-theme/**"
   - "!apps/starlight/**"
+  - "!apps/shop/**"
   - packages/**
   - "!packages/ui/**"
   - "!packages/solid/**"
