@@ -11,40 +11,41 @@
 export default class Cover extends HTMLElement {
   constructor() {
     super();
-    this.render = () => {
-      this.i = `Cover-${[this.centered, this.space, this.minHeight, this.noPad].join('')}`;
-      this.dataset.i = this.i;
-      if (!document.getElementById(this.i)) {
-        const styleEl = document.createElement('style');
-        styleEl.id = this.i;
-        styleEl.innerHTML = `
-          [data-i="${this.i}"] {
-            min-height: ${this.minHeight};
-            padding: ${!this.noPad ? this.space : '0'};
-          }
-
-          [data-i="${this.i}"] > * {
-            margin-block: ${this.space};
-          }
-
-          [data-i="${this.i}"] > :first-child:not(${this.centered}) {
-            margin-block-start: 0;
-          }
-
-          [data-i="${this.i}"] > :last-child:not(${this.centered}) {
-            margin-block-end: 0;
-          }
-
-          [data-i="${this.i}"] > ${this.centered} {
-            margin-block: auto;
-          }
-        `
-          .replace(/\s{2,}/g, ' ')
-          .trim();
-        document.head.appendChild(styleEl);
-      }
-    };
   }
+
+  render = () => {
+    this.i = `Cover-${[this.centered, this.space, this.minHeight, this.noPad].join('')}`;
+    this.dataset.i = this.i;
+    if (!document.getElementById(this.i)) {
+      const styleEl = document.createElement('style');
+      styleEl.id = this.i;
+      styleEl.innerHTML = `
+        [data-i="${this.i}"] {
+          min-height: ${this.minHeight};
+          padding: ${!this.noPad ? this.space : '0'};
+        }
+
+        [data-i="${this.i}"] > * {
+          margin-block: ${this.space};
+        }
+
+        [data-i="${this.i}"] > :first-child:not(${this.centered}) {
+          margin-block-start: 0;
+        }
+
+        [data-i="${this.i}"] > :last-child:not(${this.centered}) {
+          margin-block-end: 0;
+        }
+
+        [data-i="${this.i}"] > ${this.centered} {
+          margin-block: auto;
+        }
+      `
+        .replace(/\s{2,}/g, ' ')
+        .trim();
+      document.head.appendChild(styleEl);
+    }
+  };
 
   get centered() {
     return this.getAttribute('centered') || 'h1';
