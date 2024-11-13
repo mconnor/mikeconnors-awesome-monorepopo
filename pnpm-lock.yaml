@@ -225,9 +225,6 @@ importers:
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
-      vite:
-        specifier: ^5.4.10
-        version: 5.4.11(@types/node@22.9.0)
 
   apps/mike-blog:
     dependencies:
