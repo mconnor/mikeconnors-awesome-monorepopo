@@ -11,6 +11,7 @@
 export default class Cover extends HTMLElement {
   constructor() {
     super();
+    this.render = this.render.bind(this);
   }
 
   render = () => {
@@ -96,6 +97,6 @@ export default class Cover extends HTMLElement {
   }
 }
 
-if ('customElements' in window) {
+
   customElements.define('cover-l', Cover);
-}
+

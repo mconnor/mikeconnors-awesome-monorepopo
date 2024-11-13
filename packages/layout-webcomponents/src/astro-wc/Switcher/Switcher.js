@@ -8,6 +8,7 @@
 export default class Switcher extends HTMLElement {
   constructor() {
     super();
+    this.render = this.render.bind(this);
   }
 
   render = () => {
@@ -72,6 +73,6 @@ export default class Switcher extends HTMLElement {
   }
 }
 
-if ('customElements' in window) {
+
   customElements.define('switcher-l', Switcher);
-}
+

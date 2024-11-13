@@ -11,6 +11,7 @@
 export default class Center extends HTMLElement {
   constructor() {
     super();
+    this.render = this.render.bind(this);
   }
 
   render() {

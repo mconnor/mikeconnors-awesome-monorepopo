@@ -9,6 +9,7 @@
 export default class Imposter extends HTMLElement {
   constructor() {
     super();
+    this.render = this.render.bind(this);
   }
 
   render = () => {
@@ -87,6 +88,6 @@ export default class Imposter extends HTMLElement {
   }
 }
 
-if ('customElements' in window) {
+
   customElements.define('imposter-l', Imposter);
-}
+

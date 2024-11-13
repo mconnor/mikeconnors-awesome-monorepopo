@@ -10,6 +10,7 @@
 export default class Reel extends HTMLElement {
   constructor() {
     super();
+    this.render = this.render.bind(this);
   }
 
   render = () => {
@@ -125,6 +126,6 @@ export default class Reel extends HTMLElement {
   }
 }
 
-if ('customElements' in window) {
+
   customElements.define('reel-l', Reel);
-}
+

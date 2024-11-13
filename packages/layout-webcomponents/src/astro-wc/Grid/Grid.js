@@ -8,6 +8,7 @@
 export default class Grid extends HTMLElement {
   constructor() {
     super();
+    this.render = this.render.bind(this);
   }
   render = () => {
     this.i = `Grid-${[this.min, this.space].join('')}`;

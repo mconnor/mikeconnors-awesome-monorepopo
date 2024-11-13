@@ -7,6 +7,7 @@
 class Container extends HTMLElement {
   constructor() {
     super();
+    this.render = this.render.bind(this);
   }
 
   render = () => {
