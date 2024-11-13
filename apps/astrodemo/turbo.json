@@ -1,5 +1,4 @@
 {
-
   "extends": ["//"],
-  "globalEnv": ["DEV","PROD"]
+  "globalEnv": ["DEV", "PROD"]
 }

@@ -8,9 +8,9 @@ import Layout from '#layouts/Layout.astro';
 // import { blogSchema } from '#schemas/index.js';
 const pageTitle = 'Blog';
 
-// const allBlogPost = await getCollection('blog');
-const publishsedPosts = await getCollection('blog', ({ data }) =>
-data.draft !== true
+const publishsedPosts = await getCollection(
+  'blog',
+  ({ data }) => data.draft !== true,
 );
 
 const sortedPosts = publishsedPosts.sort(
