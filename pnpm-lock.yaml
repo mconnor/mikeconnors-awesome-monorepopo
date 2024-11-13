@@ -12,48 +12,12 @@ catalogs:
     '@astrojs/lit':
       specifier: ^4.3.0
       version: 4.3.0
-    '@astrojs/preact':
-      specifier: ^3.5.3
-      version: 3.5.3
-    '@astrojs/react':
-      specifier: ^3.6.2
-      version: 3.6.2
     '@astrojs/rss':
       specifier: ^4.0.9
       version: 4.0.9
-    '@astrojs/sitemap':
-      specifier: ^3.2.1
-      version: 3.2.1
-    '@astrojs/svelte':
-      specifier: ^5.7.2
-      version: 5.7.3
-    '@astrojs/tailwind':
-      specifier: ^5.1.2
-      version: 5.1.2
-    '@astrojs/vue':
-      specifier: ^4.5.2
-      version: 4.5.2
-    '@iconify-json/mdi':
-      specifier: ^1.2.1
-      version: 1.2.1
-    '@open-wc/testing':
-      specifier: ^4.0.0
-      version: 4.0.0
-    '@shoelace-style/shoelace':
-      specifier: ^2.17.1
-      version: 2.18.0
-    '@web/test-runner':
-      specifier: ^0.19.0
-      version: 0.19.0
     '@webcomponents/template-shadowroot':
       specifier: ^0.2.1
       version: 0.2.1
-    add:
-      specifier: ^2.0.6
-      version: 2.0.6
-    astro-icon:
-      specifier: ^1.1.2
-      version: 1.1.2
     autoprefixer:
       specifier: ^10.4.20
       version: 10.4.20
@@ -63,18 +27,12 @@ catalogs:
     eslint:
       specifier: ^9.14.0
       version: 9.13.0
-    jest:
-      specifier: ^29.7.0
-      version: 29.7.0
     lit:
       specifier: ^3.2.1
       version: 3.2.1
     open-props:
       specifier: ^1.7.7
       version: 1.7.7
-    postcss:
-      specifier: ^8.4.49
-      version: 8.4.49
     postcss-custom-media:
       specifier: ^11.0.5
       version: 11.0.5
@@ -93,51 +51,12 @@ catalogs:
     postcss-pow:
       specifier: ^1.0.1
       version: 1.0.1
-    preact:
-      specifier: ^10.24.3
-      version: 10.24.3
     prettier:
       specifier: ^3.3.3
       version: 3.3.3
     prettier-plugin-astro:
       specifier: ^0.14.1
       version: 0.14.1
-    prettier-plugin-svelte:
-      specifier: ^3.2.7
-      version: 3.2.7
-    react:
-      specifier: ^18.3.1
-      version: 18.3.1
-    react-dom:
-      specifier: ^18.3.1
-      version: 18.3.1
-    svelte:
-      specifier: ^4.2.19
-      version: 4.2.19
-    svelte-check:
-      specifier: ^4.0.5
-      version: 4.0.5
-    svelte-preprocess:
-      specifier: ^6.0.3
-      version: 6.0.3
-    tailwindcss:
-      specifier: ^3.4.3
-      version: 3.4.14
-    turbo:
-      specifier: ^2.2.3
-      version: 2.2.3
-    typescript:
-      specifier: ^5.6.3
-      version: 5.6.3
-    vitest:
-      specifier: ^2.1.4
-      version: 2.1.4
-    vue:
-      specifier: ^3.5.12
-      version: 3.5.12
-    zod:
-      specifier: ^3.23.8
-      version: 3.23.8
 
 importers:
 
@@ -228,9 +147,6 @@ importers:
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
-      vite:
-        specifier: ^5.4.10
-        version: 5.4.11(@types/node@22.9.0)
 
   apps/mike-blog:
     dependencies:
