@@ -1,5 +1,5 @@
 {
-  "name": "@app/starlight",
+  "name": "@docs/starlight",
   "type": "module",
   "version": "0.0.1",
   "author": "Mike Connor",
@@ -8,7 +8,6 @@
     "starlight"
   ],
   "scripts": {
-    "updateAstro": "pnpm dlx @astrojs/upgrade",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -25,7 +24,7 @@
   "dependencies": {
     "@astrojs/check": "catalog:",
     "@astrojs/starlight": "catalog:",
-    "astro": "^4.16.7",
+    "astro": "^4.16.12",
     "sharp": "catalog:"
   },
   "devDependencies": {

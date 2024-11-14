@@ -80,5 +80,8 @@
     "turbo.transitNodes": [
       "transit"
     ]
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/yamllint.json": "./pnpm-workspace.yaml"
   }
 }

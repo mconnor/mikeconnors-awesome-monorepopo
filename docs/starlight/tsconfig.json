@@ -5,13 +5,6 @@
     "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
     "strict": true
   },
-  "files": [
-    "eslint.config.mjs",
-    "astro.config.mjs",
-    ".astro/types.d.ts"
-  ],
-  "include": [
-    "**/*.d.ts",
-    "src"
-  ]
+  "files": ["eslint.config.mjs", "astro.config.mjs", ".astro/types.d.ts"],
+  "include": ["**/*.d.ts", "src"]
 }
