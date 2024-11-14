@@ -7,6 +7,7 @@
   },
   "exports": {
     "./astro": "./astroLintConfig.mjs",
+    "./vue": "./vue.config.mjs",
     "./turbo-config": "./turbo.config.mjs",
     "./json": "./jsonConfig.mjs",
     "./markdown": "./markdown.mjs",
@@ -50,6 +51,7 @@
     "eslint-plugin-solid": "^0.14.4",
     "eslint-plugin-svelte": "^2.46.0",
     "eslint-plugin-turbo": "^2.2.3",
+    "eslint-plugin-vue": "^9.31.0",
     "eslint-plugin-wc": "^2.2.0",
     "globals": "^15.12.0",
     "typescript-eslint": "^8.14.0"

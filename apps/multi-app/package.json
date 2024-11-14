@@ -30,6 +30,7 @@
     "@repo/react": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/svelte": "workspace:*",
+    "@repo/vue": "workspace:*",
     "@shoelace-style/shoelace": "catalog:",
     "add": "catalog:",
     "astro": "5.0.0-beta.7",

@@ -13,7 +13,7 @@
     constructor() {
       super();
 
-      const msg = this.getAttribute('data-message');
+      const msg = this.dataset.message;
 
       const btn = this.querySelector('button');
       btn?.addEventListener('click', async () => {
