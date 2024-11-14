@@ -1,14 +1,10 @@
----
-
----
-
 <hello-button data-message="Houston">
   <button>Get greeting</button>
 </hello-button>
 
 <script>
+  // import { actions } from 'astro:actions';
   import { actions } from 'astro:actions';
-
   class HelloButton extends HTMLElement {
     constructor() {
       super();
