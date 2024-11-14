@@ -10,7 +10,6 @@
       super();
 
       const msg = this.dataset.message;
-
       const btn = this.querySelector('button');
       btn?.addEventListener('click', async () => {
         // Show alert pop-up with greeting from action
@@ -26,5 +25,6 @@
       });
     }
   }
+
   customElements.define('hello-button', HelloButton);
 </script>
