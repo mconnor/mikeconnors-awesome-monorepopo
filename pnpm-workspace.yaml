@@ -1,4 +1,5 @@
 packages:
+  - docs/*
   - apps/*
   - "!apps/pico-astro-theme/**"
   - "!apps/starlight/**"
@@ -8,6 +9,7 @@ packages:
   - "!packages/solid/**"
   - "!**/test/**"
   - "!**/.vercel/**"
+  - "!**/cache-directory/**"
 catalog:
   "@astrojs/check": ^0.9.4
   "@astrojs/lit": ^4.3.0

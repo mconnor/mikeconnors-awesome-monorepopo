@@ -31,8 +31,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "svelte": "catalog:"
-  }
+  "license": "ISC"
 }

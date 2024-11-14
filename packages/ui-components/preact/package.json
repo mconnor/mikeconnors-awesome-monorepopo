@@ -25,8 +25,7 @@
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "preact": "catalog:",
     "prettier": "catalog:",
-      "typescript": "catalog:"
+    "typescript": "catalog:"
   }
 }

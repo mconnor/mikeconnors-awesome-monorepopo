@@ -25,16 +25,10 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@web/test-runner": "catalog:",
     "eslint": "catalog:",
-    "jest": "catalog:",
-    "lit": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
-  },
-  "peerDependencies": {
-    "lit": "^3"
   },
   "keywords": [],
   "author": "",
