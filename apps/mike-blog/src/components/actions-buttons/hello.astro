@@ -18,16 +18,17 @@
       const btn = this.querySelector('button');
       btn?.addEventListener('click', async () => {
         // Show alert pop-up with greeting from action
-        const { data, error } = await actions.getGreeting({ name: msg ?? 'Default'  });
+        const { data, error } = await actions.getGreeting({
+          name: msg ?? 'Default',
+        });
         if (!error) {
-            alert(data);
-            return;
-        } 
-      
-        throw new Error("ERRor" + error.message);
+          alert(data);
+          return;
+        }
+
+        throw new Error('ERRor' + error.message);
       });
     }
-   
   }
   customElements.define('hello-button', HelloButton);
 </script>

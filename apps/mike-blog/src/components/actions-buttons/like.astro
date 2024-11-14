@@ -3,38 +3,32 @@
 ---
 
 <like-button data-id="1">
-    <button>👍</button>
-  </like-button>
-  
-  <script>
-    import { actions } from 'astro:actions';
+  <button>👍</button>
+</like-button>
 
- 
-  
-    class LikeButton extends HTMLElement {
-      constructor() {
-        super();
-        const myId = this.dataset.id;
-        const btn = this.querySelector('button');
-        btn?.addEventListener('click', async () => {
-         
-          if (!myId) {
-            throw new Error("ERRor" + "No post id provided");
-          }
-         
-          const { data, error } = await actions.likePost({ postId: myId});
-          if (!error) {
-              alert("logged in and like added " + data);
-        
-          } else {
-            alert(error.message);
-          }
-         
-          return;
-        });
-      }
-     
+<script>
+  import { actions } from 'astro:actions';
+
+  class LikeButton extends HTMLElement {
+    constructor() {
+      super();
+      const myId = this.dataset.id;
+      const btn = this.querySelector('button');
+      btn?.addEventListener('click', async () => {
+        if (!myId) {
+          throw new Error('ERRor' + 'No post id provided');
+        }
+
+        const { data, error } = await actions.likePost({ postId: myId });
+        if (!error) {
+          alert('logged in and like added ' + data);
+        } else {
+          alert(error.message);
+        }
+
+        return;
+      });
     }
-    customElements.define('like-button', LikeButton);
-  </script>
-  
+  }
+  customElements.define('like-button', LikeButton);
+</script>
