@@ -43,10 +43,8 @@ export default class Center extends HTMLElement {
           .trim();
         document.head.appendChild(styleEl);
       }
-    }
+    };
   }
-
-  
 
   get max() {
     return this.getAttribute('max') || 'var(--measure)';

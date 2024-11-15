@@ -13,9 +13,10 @@
       const btn = this.querySelector('button');
       btn?.addEventListener('click', async () => {
         // Show alert pop-up with greeting from action
-        const greetingResponse = await actions.getGreeting.orThrow({name: 'Mike'});
+        const greetingResponse = await actions.getGreeting.orThrow({
+          name: 'Mike',
+        });
         alert(greetingResponse);
-     
       });
     }
   }

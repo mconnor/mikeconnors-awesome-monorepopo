@@ -15,9 +15,10 @@
         //   throw new Error('ERRor' + 'No post id provided');
         // }
 
-        const updatedLikes = await actions.likePost.orThrow({ postId: 'example' })
+        const updatedLikes = await actions.likePost.orThrow({
+          postId: 'example',
+        });
         //    ^ type: number
-      
 
         return;
       });

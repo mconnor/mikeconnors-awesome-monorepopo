@@ -28,7 +28,6 @@
   "author": "Michael Connor",
   "license": "ISC",
   "devDependencies": {
-
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
