@@ -22,16 +22,16 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/check": "catalog:",
-    "@astrojs/starlight": "catalog:",
-    "astro": "^4.16.12",
-    "sharp": "catalog:"
+    "@astrojs/check": "catalog:astro4",
+    "@astrojs/starlight": "catalog:astro4",
+    "astro": "catalog:astro4",
+    "sharp": "catalog:astro4"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "typescript": "^5.6.3"
+    "typescript": "catalog:"
   }
 }

@@ -24,7 +24,6 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-svelte": "catalog:",
     "svelte-check": "catalog:",
     "typescript": "catalog:"
   },
@@ -33,5 +32,8 @@
     "ui"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true
+  }
 }
