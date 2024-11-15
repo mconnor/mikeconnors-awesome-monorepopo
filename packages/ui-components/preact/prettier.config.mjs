@@ -1,3 +1,8 @@
-import config from '@repo/format';
+// @ts-check
+const config = {
+  singleQuote: true,
+  trailingComma: 'all',
+  tabWidth: 2,
+};
 
 export default config;

@@ -8,14 +8,6 @@
     "jsxFragmentFactory": "Fragment",
     "strict": true
   },
-  "include": [
-    "src",
-    "*.config.mjs"
-  ],
-  "exclude": [
-    "node_modules",
-    ".astro",
-    "dist",
-    ".turbo",
-  ]
+  "include": ["src", "*.config.mjs"],
+  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }
