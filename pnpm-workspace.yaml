@@ -55,11 +55,11 @@ catalog:
   react-dom: ^18.3.1
   sharp: ^0.33.5
   svelte: ^4.2.19
-  svelte-check: ^4.0.5
+  svelte-check: ^4.0.7
   svelte-preprocess: ^6.0.3
   tailwindcss: ^3.4.3
   typescript: ^5.6.3
   vite: ^5.4.11
-  vitest: ^2.1.4
+  vitest: ^2.1.5
   vue: ^3.5.12
   zod: ^3.23.8

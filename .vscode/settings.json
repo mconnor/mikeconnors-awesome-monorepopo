@@ -13,13 +13,26 @@
     "javascriptreact",
     "astro",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "svelte",
+    "vue",
+    "preact"
   ],
   "eslint.workingDirectories": [
     {
       "mode": "auto"
     }
   ],
+  "github.copilot.enable": {
+    "javascript": true,
+    "typescript": true,
+    "zod": true,
+    "astro": true,
+    "react": true,
+    "preact": true,
+    "svelte": true,
+    "vue": true,
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "never"
   },

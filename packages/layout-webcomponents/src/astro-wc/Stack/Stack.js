@@ -28,8 +28,8 @@ export default class Stack extends HTMLElement {
 
 
         ${
-          this.splitAfter
-            ? `
+          this.splitAfter ?
+            `
           [data-i="${this.i}"]:only-child {
             block-size: 100%;
           }
@@ -37,7 +37,7 @@ export default class Stack extends HTMLElement {
           [data-i="${this.i}"] > :nth-child(${this.splitAfter}) {
             margin-block-end: auto;
           }`
-            : ''
+          : ''
         }
       `
         .replace(/\s\s+/g, ' ')

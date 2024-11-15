@@ -43,8 +43,8 @@ export default class Reel extends HTMLElement {
         }
     
         ${
-          this.noBar
-            ? `
+          this.noBar ?
+            `
         [data-i="${this.i}"] {
           scrollbar-width: none;
         }
@@ -53,7 +53,7 @@ export default class Reel extends HTMLElement {
           display: none;
         }
         `
-            : ''
+          : ''
         }
       `
         .replace(/\s{2,}/g, ' ')

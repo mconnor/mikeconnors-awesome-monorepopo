@@ -46,7 +46,9 @@ export default function TodoList() {
                   todos.value = [...todos.value];
                 }}
               />
-              {todo.completed ? <s>{todo.text}</s> : todo.text}
+              {todo.completed ?
+                <s>{todo.text}</s>
+              : todo.text}
             </label>{' '}
             <button onClick={() => removeTodo(index)}>❌</button>
           </li>

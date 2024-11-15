@@ -13,8 +13,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "inspect": "eslint  --inspect-config",
-    "lint": "eslint . --max-warnings 0",
+    "lint": "prettier . --write eslint . --max-warnings 0",
     "fix": "eslint . --fix",
+    "format": "prettier . --write",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
@@ -56,8 +57,12 @@
     "postcss-nesting": "catalog:",
     "postcss-pow": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
     "svelte-preprocess": "catalog:",
     "typescript": "catalog:"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "experimentalTernaries": true,
+    "proseWrap": "always"
   }
 }

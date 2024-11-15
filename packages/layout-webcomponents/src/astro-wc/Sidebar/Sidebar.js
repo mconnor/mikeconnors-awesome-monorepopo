@@ -60,9 +60,9 @@ export default class Sidebar extends HTMLElement {
   }
 
   set sideWidth(val) {
-    val
-      ? this.setAttribute('sideWidth', val)
-      : this.removeAttribute('sideWidth');
+    val ?
+      this.setAttribute('sideWidth', val)
+    : this.removeAttribute('sideWidth');
   }
 
   get contentMin() {

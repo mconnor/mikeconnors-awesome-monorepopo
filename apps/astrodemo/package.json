@@ -18,8 +18,8 @@
     "astro": "astro",
     "lint:eslint-docs": "npm run update:eslint-docs -- --check",
     "inspect": "eslint  --inspect-config",
-    "format": "prettier . --write",
-    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write --plugin-search-dir=. .",
+    "lint": "prettier --check --plugin-search-dir=. . && eslint .",
     "fix": "eslint . --fix"
   },
   "dependencies": {
@@ -32,7 +32,7 @@
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "5.0.0-beta.7",
+    "astro": "5.0.0-beta.8",
     "lit": "catalog:",
     "open-props": "catalog:"
   },
@@ -49,7 +49,11 @@
     "postcss-nesting": "catalog:",
     "postcss-pow": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "experimentalTernaries": true,
+    "proseWrap": "always"
   }
 }

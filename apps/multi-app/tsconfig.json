@@ -6,18 +6,7 @@
     "rootDir": ".",
     "jsx": "preserve" // Needed for TypeScript intellisense in the template inside Vue files
   },
-  "files": [
-    ".astro/types.d.ts",
-    "jsx.d.ts"
-  ],
-  "include": [
-    "src/**/*",
-    "*.config.mjs"
-  ],
-  "exclude": [
-    "dist",
-    ".turbo",
-    ".astro",
-    ".vscode"
-  ],
+  "files": [".astro/types.d.ts", "jsx.d.ts"],
+  "include": ["src/**/*", "*.config.mjs"],
+  "exclude": ["dist", ".turbo", ".astro", ".vscode"]
 }

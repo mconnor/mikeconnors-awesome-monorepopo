@@ -87,9 +87,6 @@ catalogs:
     prettier:
       specifier: ^3.3.3
       version: 3.3.3
-    prettier-plugin-astro:
-      specifier: ^0.14.1
-      version: 0.14.1
     prettier-plugin-svelte:
       specifier: ^3.2.8
       version: 3.2.8
@@ -106,8 +103,8 @@ catalogs:
       specifier: ^4.2.19
       version: 4.2.19
     svelte-check:
-      specifier: ^4.0.5
-      version: 4.0.5
+      specifier: ^4.0.7
+      version: 4.0.8
     svelte-preprocess:
       specifier: ^6.0.3
       version: 6.0.3
@@ -115,8 +112,8 @@ catalogs:
       specifier: ^5.6.3
       version: 5.6.3
     vitest:
-      specifier: ^2.1.4
-      version: 2.1.4
+      specifier: ^2.1.5
+      version: 2.1.5
     vue:
       specifier: ^3.5.12
       version: 3.5.12
@@ -142,13 +139,13 @@ importers:
         version: 4.3.0(@webcomponents/template-shadowroot@0.2.1)(lit@3.2.1)
       '@astrojs/mdx':
         specifier: 4.0.0-beta.3
-        version: 4.0.0-beta.3(astro@5.0.0-beta.7(@types/node@22.9.0)(jiti@2.3.3)(rollup@4.27.1)(typescript@5.6.3)(yaml@2.6.0))
+        version: 4.0.0-beta.3(astro@5.0.0-beta.8(@types/node@22.9.0)(jiti@2.3.3)(rollup@4.27.1)(typescript@5.6.3)(yaml@2.6.0))
       '@astrojs/rss':
         specifier: 'catalog:'
         version: 4.0.9
       '@astrojs/vercel':
         specifier: 8.0.0-beta.3
-        version: 8.0.0-beta.3(astro@5.0.0-beta.7(@types/node@22.9.0)(jiti@2.3.3)(rollup@4.27.1)(typescript@5.6.3)(yaml@2.6.0))(react@18.3.1)(svelte@5.0.5)(vue@3.5.12(typescript@5.6.3))
+        version: 8.0.0-beta.3(astro@5.0.0-beta.8(@types/node@22.9.0)(jiti@2.3.3)(rollup@4.27.1)(typescript@5.6.3)(yaml@2.6.0))(react@18.3.1)(svelte@5.0.5)(vue@3.5.12(typescript@5.6.3))
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
@@ -162,8 +159,8 @@ importers:
         specifier: 'catalog:'
         version: 0.2.1
       astro:
-        specifier: 5.0.0-beta.7
-        version: 5.0.0-beta.7(@types/node@22.9.0)(jiti@2.3.3)(rollup@4.27.1)(typescript@5.6.3)(yaml@2.6.0)
+        specifier: 5.0.0-beta.8
+        version: 5.0.0-beta.8(@types/node@22.9.0)(jiti@2.3.3)(rollup@4.27.1)(typescript@5.6.3)(yaml@2.6.0)
       lit:
         specifier: 'catalog:'
         version: 3.2.1
@@ -207,9 +204,6 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       typescript:
         specifier: 'catalog:'
         version: 5.6.3
@@ -322,9 +316,6 @@ importers:
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: ^0.14.1
-        version: 0.14.1
       stylelint:
         specifier: ^16.10.0
         version: 16.10.0(typescript@5.6.3)
@@ -443,9 +434,6 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       svelte-preprocess:
         specifier: 'catalog:'
         version: 6.0.3(@babel/core@7.26.0)(postcss-load-config@6.0.1(jiti@2.3.3)(postcss@8.4.49)(yaml@2.6.0))(postcss@8.4.49)(svelte@4.2.19)(typescript@5.6.3)
@@ -460,7 +448,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.3)
       '@astrojs/preact':
         specifier: ^3.5.3
-        version: 3.5.3(@babel/core@7.26.0)(preact@10.24.3)(vite@6.0.0-beta.6(@types/node@22.9.0)(jiti@2.3.3)(yaml@2.6.0))
+        version: 3.5.3(@babel/core@7.26.0)(preact@10.24.3)(vite@5.4.11(@types/node@22.9.0))
       '@preact/signals':
         specifier: ^1.3.0
         version: 1.3.0(preact@10.24.3)
@@ -468,8 +456,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
       astro:
-        specifier: ^4.16.12
-        version: 4.16.12(@types/node@22.9.0)(rollup@4.27.1)(typescript@5.6.3)
+        specifier: ^4.16.13
+        version: 4.16.13(@types/node@22.9.0)(rollup@4.27.1)(typescript@5.6.3)
       preact:
         specifier: ^10.24.3
         version: 10.24.3
@@ -489,9 +477,6 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
 
   apps/simple-blog-beta5:
     dependencies:
@@ -526,15 +511,12 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       typescript:
         specifier: 'catalog:'
         version: 5.6.3
       vitest:
         specifier: 'catalog:'
-        version: 2.1.4(@types/node@22.9.0)
+        version: 2.1.5(@types/node@22.9.0)
 
   docs/starlight:
     dependencies:
@@ -563,9 +545,6 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       typescript:
         specifier: ^5.6.3
         version: 5.6.3
@@ -650,6 +629,10 @@ importers:
       typescript-eslint:
         specifier: ^8.14.0
         version: 8.14.0(eslint@9.14.0(jiti@2.3.3))(typescript@5.6.3)
+    devDependencies:
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
 
   packages/config-typescript:
     devDependencies:
@@ -681,9 +664,6 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       typescript:
         specifier: 'catalog:'
         version: 5.6.3
@@ -709,9 +689,6 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       typescript:
         specifier: 'catalog:'
         version: 5.6.3
@@ -773,15 +750,12 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       prettier-plugin-svelte:
         specifier: 'catalog:'
         version: 3.2.8(prettier@3.3.3)(svelte@5.0.5)
       svelte-check:
         specifier: 'catalog:'
-        version: 4.0.5(picomatch@4.0.2)(svelte@5.0.5)(typescript@5.6.3)
+        version: 4.0.8(picomatch@4.0.2)(svelte@5.0.5)(typescript@5.6.3)
       typescript:
         specifier: 'catalog:'
         version: 5.6.3
@@ -806,9 +780,6 @@ importers:
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       typescript:
         specifier: 'catalog:'
         version: 5.6.3
@@ -2766,11 +2737,11 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
 
-  '@vitest/expect@2.1.4':
-    resolution: {integrity: sha512-DOETT0Oh1avie/D/o2sgMHGrzYUFFo3zqESB2Hn70z6QB1HrS2IQ9z5DfyTqU8sg4Bpu13zZe9V4+UTNQlUeQA==}
+  '@vitest/expect@2.1.5':
+    resolution: {integrity: sha512-nZSBTW1XIdpZvEJyoP/Sy8fUg0b8od7ZpGDkTUcfJ7wz/VoZAFzFfLyxVxGFhUjJzhYqSbIpfMtl/+k/dpWa3Q==}
 
-  '@vitest/mocker@2.1.4':
-    resolution: {integrity: sha512-Ky/O1Lc0QBbutJdW0rqLeFNbuLEyS+mIPiNdlVlp2/yhJ0SbyYqObS5IHdhferJud8MbbwMnexg4jordE5cCoQ==}
+  '@vitest/mocker@2.1.5':
+    resolution: {integrity: sha512-XYW6l3UuBmitWqSUXTNXcVBUCRytDogBsWuNXQijc00dtnU/9OqpXWp4OJroVrad/gLIomAq9aW8yWDBtMthhQ==}
     peerDependencies:
       msw: ^2.4.9
       vite: ^5.0.0
@@ -2780,23 +2751,20 @@ packages:
       vite:
         optional: true
 
-  '@vitest/pretty-format@2.1.4':
-    resolution: {integrity: sha512-L95zIAkEuTDbUX1IsjRl+vyBSLh3PwLLgKpghl37aCK9Jvw0iP+wKwIFhfjdUtA2myLgjrG6VU6JCFLv8q/3Ww==}
-
   '@vitest/pretty-format@2.1.5':
     resolution: {integrity: sha512-4ZOwtk2bqG5Y6xRGHcveZVr+6txkH7M2e+nPFd6guSoN638v/1XQ0K06eOpi0ptVU/2tW/pIU4IoPotY/GZ9fw==}
 
-  '@vitest/runner@2.1.4':
-    resolution: {integrity: sha512-sKRautINI9XICAMl2bjxQM8VfCMTB0EbsBc/EDFA57V6UQevEKY/TOPOF5nzcvCALltiLfXWbq4MaAwWx/YxIA==}
+  '@vitest/runner@2.1.5':
+    resolution: {integrity: sha512-pKHKy3uaUdh7X6p1pxOkgkVAFW7r2I818vHDthYLvUyjRfkKOU6P45PztOch4DZarWQne+VOaIMwA/erSSpB9g==}
 
-  '@vitest/snapshot@2.1.4':
-    resolution: {integrity: sha512-3Kab14fn/5QZRog5BPj6Rs8dc4B+mim27XaKWFWHWA87R56AKjHTGcBFKpvZKDzC4u5Wd0w/qKsUIio3KzWW4Q==}
+  '@vitest/snapshot@2.1.5':
+    resolution: {integrity: sha512-zmYw47mhfdfnYbuhkQvkkzYroXUumrwWDGlMjpdUr4jBd3HZiV2w7CQHj+z7AAS4VOtWxI4Zt4bWt4/sKcoIjg==}
 
-  '@vitest/spy@2.1.4':
-    resolution: {integrity: sha512-4JOxa+UAizJgpZfaCPKK2smq9d8mmjZVPMt2kOsg/R8QkoRzydHH1qHxIYNvr1zlEaFj4SXiaaJWxq/LPLKaLg==}
+  '@vitest/spy@2.1.5':
+    resolution: {integrity: sha512-aWZF3P0r3w6DiYTVskOYuhBc7EMc3jvn1TkBg8ttylFFRqNN2XGD7V5a4aQdk6QiUzZQ4klNBSpCLJgWNdIiNw==}
 
-  '@vitest/utils@2.1.4':
-    resolution: {integrity: sha512-MXDnZn0Awl2S86PSNIim5PWXgIAx8CIkzu35mBdSApUip6RFOGXBCf3YFyeEu8n1IHk4bWD46DeYFu9mQlFIRg==}
+  '@vitest/utils@2.1.5':
+    resolution: {integrity: sha512-yfj6Yrp0Vesw2cwJbP+cl04OC+IHFsuQsrsJBL9pyGeQXE56v1UAOQco+SR55Vf1nQzfV0QJg1Qum7AaWUwwYg==}
 
   '@volar/kit@2.4.10':
     resolution: {integrity: sha512-ul+rLeO9RlFDgkY/FhPWMnpFqAsjvjkKz8VZeOY5YCJMwTblmmSBlNJtFNxSBx9t/k1q80nEthLyxiJ50ZbIAg==}
@@ -3078,6 +3046,11 @@ packages:
 
   astro@4.16.12:
     resolution: {integrity: sha512-NnFeIKhGW6MdXCQT2hRariUwfxqJUIRs6qKqaovaQkTojzxh2r1L8C49qanKc+huH9wK2C94VZB2T/tosyRl1A==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
+    hasBin: true
+
+  astro@4.16.13:
+    resolution: {integrity: sha512-Mtd76+BC0zLWqoXpf9xc731AhdH4MNh5JFHYdLRvSH0Nqn48hA64dPGh/cWsJvh/DZFmC0NTZusM1Qq2gyNaVg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -6448,8 +6421,8 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  svelte-check@4.0.5:
-    resolution: {integrity: sha512-icBTBZ3ibBaywbXUat3cK6hB5Du+Kq9Z8CRuyLmm64XIe2/r+lQcbuBx/IQgsbrC+kT2jQ0weVpZSSRIPwB6jQ==}
+  svelte-check@4.0.8:
+    resolution: {integrity: sha512-nYxbPa0GJySVLhrplvpdGGdwst/7r/H9N991PVYk3BtSIuWBw5ihItHCDJu7hE1S0bPSRJ6IJ2yTCQeDUk0ZDg==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
     peerDependencies:
@@ -6846,8 +6819,8 @@ packages:
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0
 
-  vite-node@2.1.4:
-    resolution: {integrity: sha512-kqa9v+oi4HwkG6g8ufRnb5AeplcRw8jUF6/7/Qz1qRQOXHImG8YnLbB+LLszENwFnoBl9xIf9nVdCFzNd7GQEg==}
+  vite-node@2.1.5:
+    resolution: {integrity: sha512-rd0QIgx74q4S1Rd56XIiL2cYEdyWn13cunYBIuqh9mpmQr7gGS0IxXoP8R6OaZtNQQLyXSWbd4rXKYUbhFpK5w==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
@@ -6959,15 +6932,15 @@ packages:
       vite:
         optional: true
 
-  vitest@2.1.4:
-    resolution: {integrity: sha512-eDjxbVAJw1UJJCHr5xr/xM86Zx+YxIEXGAR+bmnEID7z9qWfoxpHw0zdobz+TQAFOLT+nEXz3+gx6nUJ7RgmlQ==}
+  vitest@2.1.5:
+    resolution: {integrity: sha512-P4ljsdpuzRTPI/kbND2sDZ4VmieerR2c9szEZpjc+98Z9ebvnXmM5+0tHEKqYZumXqlvnmfWsjeFOjXVriDG7A==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@types/node': ^18.0.0 || >=20.0.0
-      '@vitest/browser': 2.1.4
-      '@vitest/ui': 2.1.4
+      '@vitest/browser': 2.1.5
+      '@vitest/ui': 2.1.5
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -7388,7 +7361,7 @@ snapshots:
       remark-parse: 11.0.0
       remark-rehype: 11.1.1
       remark-smartypants: 3.0.2
-      shiki: 1.22.2
+      shiki: 1.23.0
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -7478,6 +7451,20 @@ snapshots:
       vfile: 6.0.3
     transitivePeerDependencies:
       - supports-color
+
+  '@astrojs/preact@3.5.3(@babel/core@7.26.0)(preact@10.24.3)(vite@5.4.11(@types/node@22.9.0))':
+    dependencies:
+      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.0)
+      '@preact/preset-vite': 2.8.2(@babel/core@7.26.0)(preact@10.24.3)(vite@5.4.11(@types/node@22.9.0))
+      '@preact/signals': 1.3.0(preact@10.24.3)
+      babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.0)
+      preact: 10.24.3
+      preact-render-to-string: 6.5.11(preact@10.24.3)
+    transitivePeerDependencies:
+      - '@babel/core'
+      - supports-color
+      - vite
 
   '@astrojs/preact@3.5.3(@babel/core@7.26.0)(preact@10.24.3)(vite@6.0.0-beta.6(@types/node@22.9.0)(jiti@2.3.3)(yaml@2.6.0))':
     dependencies:
@@ -8807,6 +8794,26 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
+  '@preact/preset-vite@2.8.2(@babel/core@7.26.0)(preact@10.24.3)(vite@5.4.11(@types/node@22.9.0))':
+    dependencies:
+      '@babel/core': 7.26.0
+      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
+      '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.0)
+      '@prefresh/vite': 2.4.6(preact@10.24.3)(vite@5.4.11(@types/node@22.9.0))
+      '@rollup/pluginutils': 4.2.1
+      babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.0)
+      debug: 4.3.7
+      kolorist: 1.8.0
+      magic-string: 0.30.5
+      node-html-parser: 6.1.13
+      resolve: 1.22.8
+      source-map: 0.7.4
+      stack-trace: 1.0.0-pre2
+      vite: 5.4.11(@types/node@22.9.0)
+    transitivePeerDependencies:
+      - preact
+      - supports-color
+
   '@preact/preset-vite@2.8.2(@babel/core@7.26.0)(preact@10.24.3)(vite@6.0.0-beta.6(@types/node@22.9.0)(jiti@2.3.3)(yaml@2.6.0))':
     dependencies:
       '@babel/core': 7.26.0
@@ -8841,6 +8848,18 @@ snapshots:
       preact: 10.24.3
 
   '@prefresh/utils@1.2.0': {}
+
+  '@prefresh/vite@2.4.6(preact@10.24.3)(vite@5.4.11(@types/node@22.9.0))':
+    dependencies:
+      '@babel/core': 7.26.0
+      '@prefresh/babel-plugin': 0.5.1
+      '@prefresh/core': 1.5.2(preact@10.24.3)
+      '@prefresh/utils': 1.2.0
+      '@rollup/pluginutils': 4.2.1
+      preact: 10.24.3
+      vite: 5.4.11(@types/node@22.9.0)
+    transitivePeerDependencies:
+      - supports-color
 
   '@prefresh/vite@2.4.6(preact@10.24.3)(vite@6.0.0-beta.6(@types/node@22.9.0)(jiti@2.3.3)(yaml@2.6.0))':
     dependencies:
@@ -9657,47 +9676,43 @@ snapshots:
       vite: 6.0.0-beta.6(@types/node@22.9.0)(jiti@2.3.3)(yaml@2.6.0)
       vue: 3.5.12(typescript@5.6.3)
 
-  '@vitest/expect@2.1.4':
+  '@vitest/expect@2.1.5':
     dependencies:
-      '@vitest/spy': 2.1.4
-      '@vitest/utils': 2.1.4
+      '@vitest/spy': 2.1.5
+      '@vitest/utils': 2.1.5
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.4(vite@5.4.11(@types/node@22.9.0))':
+  '@vitest/mocker@2.1.5(vite@5.4.11(@types/node@22.9.0))':
     dependencies:
-      '@vitest/spy': 2.1.4
+      '@vitest/spy': 2.1.5
       estree-walker: 3.0.3
       magic-string: 0.30.12
     optionalDependencies:
       vite: 5.4.11(@types/node@22.9.0)
 
-  '@vitest/pretty-format@2.1.4':
-    dependencies:
-      tinyrainbow: 1.2.0
-
   '@vitest/pretty-format@2.1.5':
     dependencies:
       tinyrainbow: 1.2.0
 
-  '@vitest/runner@2.1.4':
+  '@vitest/runner@2.1.5':
     dependencies:
-      '@vitest/utils': 2.1.4
+      '@vitest/utils': 2.1.5
       pathe: 1.1.2
 
-  '@vitest/snapshot@2.1.4':
+  '@vitest/snapshot@2.1.5':
     dependencies:
-      '@vitest/pretty-format': 2.1.4
+      '@vitest/pretty-format': 2.1.5
       magic-string: 0.30.12
       pathe: 1.1.2
 
-  '@vitest/spy@2.1.4':
+  '@vitest/spy@2.1.5':
     dependencies:
       tinyspy: 3.0.2
 
-  '@vitest/utils@2.1.4':
+  '@vitest/utils@2.1.5':
     dependencies:
-      '@vitest/pretty-format': 2.1.4
+      '@vitest/pretty-format': 2.1.5
       loupe: 3.1.2
       tinyrainbow: 1.2.0
 
@@ -10215,6 +10230,85 @@ snapshots:
       - terser
       - typescript
 
+  astro@4.16.13(@types/node@22.9.0)(rollup@4.27.1)(typescript@5.6.3):
+    dependencies:
+      '@astrojs/compiler': 2.10.3
+      '@astrojs/internal-helpers': 0.4.1
+      '@astrojs/markdown-remark': 5.3.0
+      '@astrojs/telemetry': 3.1.0
+      '@babel/core': 7.26.0
+      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
+      '@babel/types': 7.26.0
+      '@oslojs/encoding': 1.1.0
+      '@rollup/pluginutils': 5.1.3(rollup@4.27.1)
+      '@types/babel__core': 7.20.5
+      '@types/cookie': 0.6.0
+      acorn: 8.14.0
+      aria-query: 5.3.2
+      axobject-query: 4.1.0
+      boxen: 8.0.1
+      ci-info: 4.1.0
+      clsx: 2.1.1
+      common-ancestor-path: 1.0.1
+      cookie: 0.7.2
+      cssesc: 3.0.0
+      debug: 4.3.7
+      deterministic-object-hash: 2.0.2
+      devalue: 5.1.1
+      diff: 5.2.0
+      dlv: 1.1.3
+      dset: 3.1.4
+      es-module-lexer: 1.5.4
+      esbuild: 0.21.5
+      estree-walker: 3.0.3
+      fast-glob: 3.3.2
+      flattie: 1.1.1
+      github-slugger: 2.0.0
+      gray-matter: 4.0.3
+      html-escaper: 3.0.3
+      http-cache-semantics: 4.1.1
+      js-yaml: 4.1.0
+      kleur: 4.1.5
+      magic-string: 0.30.12
+      magicast: 0.3.5
+      micromatch: 4.0.8
+      mrmime: 2.0.0
+      neotraverse: 0.6.18
+      ora: 8.1.1
+      p-limit: 6.1.0
+      p-queue: 8.0.1
+      preferred-pm: 4.0.0
+      prompts: 2.4.2
+      rehype: 13.0.2
+      semver: 7.6.3
+      shiki: 1.23.0
+      tinyexec: 0.3.1
+      tsconfck: 3.1.4(typescript@5.6.3)
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+      vite: 5.4.11(@types/node@22.9.0)
+      vitefu: 1.0.3(vite@5.4.11(@types/node@22.9.0))
+      which-pm: 3.0.0
+      xxhash-wasm: 1.0.2
+      yargs-parser: 21.1.1
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.5(zod@3.23.8)
+      zod-to-ts: 1.2.0(typescript@5.6.3)(zod@3.23.8)
+    optionalDependencies:
+      sharp: 0.33.5
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - lightningcss
+      - rollup
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - typescript
+
   astro@5.0.0-beta.7(@types/node@22.9.0)(jiti@2.3.3)(rollup@4.27.1)(typescript@5.6.3)(yaml@2.6.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
@@ -10337,7 +10431,7 @@ snapshots:
       prompts: 2.4.2
       rehype: 13.0.2
       semver: 7.6.3
-      shiki: 1.22.2
+      shiki: 1.23.0
       tinyexec: 0.3.1
       tsconfck: 3.1.4(typescript@5.6.3)
       unist-util-visit: 5.0.0
@@ -13772,6 +13866,7 @@ snapshots:
       '@astrojs/compiler': 2.10.3
       prettier: 3.3.3
       sass-formatter: 0.7.9
+    optional: true
 
   prettier-plugin-svelte@3.2.8(prettier@3.3.3)(svelte@5.0.5):
     dependencies:
@@ -14155,7 +14250,8 @@ snapshots:
     dependencies:
       queue-microtask: 1.2.3
 
-  s.color@0.0.15: {}
+  s.color@0.0.15:
+    optional: true
 
   sade@1.8.1:
     dependencies:
@@ -14190,6 +14286,7 @@ snapshots:
   sass-formatter@0.7.9:
     dependencies:
       suf-log: 2.5.3
+    optional: true
 
   sax@1.4.1: {}
 
@@ -14519,6 +14616,7 @@ snapshots:
   suf-log@2.5.3:
     dependencies:
       s.color: 0.0.15
+    optional: true
 
   superjson@2.2.1:
     dependencies:
@@ -14535,7 +14633,7 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@4.0.5(picomatch@4.0.2)(svelte@5.0.5)(typescript@5.6.3):
+  svelte-check@4.0.8(picomatch@4.0.2)(svelte@5.0.5)(typescript@5.6.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 4.0.1
@@ -14951,10 +15049,11 @@ snapshots:
     dependencies:
       vite: 6.0.0-beta.6(@types/node@22.9.0)(jiti@2.3.3)(yaml@2.6.0)
 
-  vite-node@2.1.4(@types/node@22.9.0):
+  vite-node@2.1.5(@types/node@22.9.0):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
+      es-module-lexer: 1.5.4
       pathe: 1.1.2
       vite: 5.4.11(@types/node@22.9.0)
     transitivePeerDependencies:
@@ -15047,15 +15146,15 @@ snapshots:
     optionalDependencies:
       vite: 6.0.0-beta.6(@types/node@22.9.0)(jiti@2.3.3)(yaml@2.6.0)
 
-  vitest@2.1.4(@types/node@22.9.0):
+  vitest@2.1.5(@types/node@22.9.0):
     dependencies:
-      '@vitest/expect': 2.1.4
-      '@vitest/mocker': 2.1.4(vite@5.4.11(@types/node@22.9.0))
+      '@vitest/expect': 2.1.5
+      '@vitest/mocker': 2.1.5(vite@5.4.11(@types/node@22.9.0))
       '@vitest/pretty-format': 2.1.5
-      '@vitest/runner': 2.1.4
-      '@vitest/snapshot': 2.1.4
-      '@vitest/spy': 2.1.4
-      '@vitest/utils': 2.1.4
+      '@vitest/runner': 2.1.5
+      '@vitest/snapshot': 2.1.5
+      '@vitest/spy': 2.1.5
+      '@vitest/utils': 2.1.5
       chai: 5.1.2
       debug: 4.3.7
       expect-type: 1.1.0
@@ -15067,7 +15166,7 @@ snapshots:
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
       vite: 5.4.11(@types/node@22.9.0)
-      vite-node: 2.1.4(@types/node@22.9.0)
+      vite-node: 2.1.5(@types/node@22.9.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.9.0

@@ -22,18 +22,18 @@ export default class Imposter extends HTMLElement {
       styleEl.innerHTML = `
         [data-i="${this.i}"] {
           ${
-            !this.breakout
-              ? `
+            !this.breakout ?
+              `
             max-inline-size: calc(100% - (${margin} * 2));
             max-block-size: calc(100% - (${margin} * 2));
             overflow: auto;`
-              : ''
+            : ''
           }
           ${
-            this.fixed
-              ? `
+            this.fixed ?
+              `
             position: fixed;`
-              : ''
+            : ''
           }
         }
       `

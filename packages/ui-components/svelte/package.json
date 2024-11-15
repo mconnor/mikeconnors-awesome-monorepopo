@@ -24,12 +24,14 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
     "prettier-plugin-svelte": "catalog:",
     "svelte-check": "catalog:",
     "typescript": "catalog:"
   },
-  "keywords": [],
+  "keywords": [
+    "svelte",
+    "ui"
+  ],
   "author": "",
   "license": "ISC"
 }
