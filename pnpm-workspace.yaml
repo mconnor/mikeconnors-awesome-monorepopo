@@ -32,7 +32,7 @@ catalog:
   "@web/test-runner": ^0.19.0
   "@webcomponents/template-shadowroot": ^0.2.1
   add: ^2.0.6
-  astro: 5.0.0-beta.7"
+  astro: 5.0.0-beta.8
   astro-icon: ^1.1.2
   autoprefixer: ^10.4.20
   cssnano: ^7.0.6
@@ -58,7 +58,6 @@ catalog:
   svelte-check: ^4.0.5
   svelte-preprocess: ^6.0.3
   tailwindcss: ^3.4.3
-  turbo: ^2.2.3
   typescript: ^5.6.3
   vite: ^5.4.11
   vitest: ^2.1.4

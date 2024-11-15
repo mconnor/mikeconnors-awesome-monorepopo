@@ -1,5 +1,6 @@
 import { ActionError, defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
+// import { user } from './user';
 
 export const server = {
   getGreeting: defineAction({
@@ -8,6 +9,13 @@ export const server = {
     }),
     handler: async (input) => {
       await Promise.resolve(); // Add await to fix lint error
+
+      if (!input.name) {
+        throw new ActionError({
+          code: 'NOT_FOUND',
+          message: 'no input',
+        });
+      }
       return `Hello, ${input.name}!`;
     },
   }),

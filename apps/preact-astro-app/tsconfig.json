@@ -1,0 +1,18 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "rootDir": ".",
+    "jsxImportSource": "preact"
+  },
+  "include": [
+    "src/**/*",
+    "*.config.mjs"
+  ],
+  "exclude": [
+    "dist",
+    ".turbo",
+    ".astro",
+    ".vscode"
+  ]
+}

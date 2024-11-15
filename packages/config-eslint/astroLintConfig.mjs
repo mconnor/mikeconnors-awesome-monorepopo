@@ -2,19 +2,23 @@
 import tseslint from 'typescript-eslint';
 
 import astroParser from 'astro-eslint-parser';
-import astro from 'eslint-plugin-astro';
+import astroPlugin from 'eslint-plugin-astro';
 
 export default tseslint.config({
-  files: ['**/*.astro'],
-  extends: [tseslint.configs.disableTypeChecked, ...astro.configs.recommended],
-
+  files: ['src/**/*.astro'],
+  extends: [ ...astroPlugin.configs.recommended],
+  // processor: astroPlugin.processors['client-side-ts'],
   languageOptions: {
     parser: astroParser,
     parserOptions: {
-      parser: tseslint.parser,
+      project: true,
+      // parser: tseslint.parser,
       ecmaFeatures: {
-        jsx: true,
+        globalReturn: false,
+        impliedStrict: false,
+        jsx: false,
       },
+      extraFileExtensions: [".astro"],
     },
   },
 });
