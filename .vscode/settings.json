@@ -2,14 +2,18 @@
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "prettier.documentSelectors": ["**/*.astro"],
-
+  "prettier.documentSelectors": [
+    "**/*.astro"
+  ],
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "astro", 
-    "typescript", 
-    "typescriptreact" 
+    "astro",
+    "typescript",
+    "typescriptreact"
   ],
   "eslint.workingDirectories": [
     {
@@ -58,10 +62,6 @@
     "tsx",
     "astro"
   ],
-  "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
     "**/.git": false,
@@ -83,5 +83,6 @@
   },
   "yaml.schemas": {
     "https://json.schemastore.org/yamllint.json": "./pnpm-workspace.yaml"
-  }
+  },
+  "editor.fontSize": 14
 }

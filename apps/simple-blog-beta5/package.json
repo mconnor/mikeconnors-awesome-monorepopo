@@ -21,11 +21,11 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui-lit": "workspace:*",
     "@astrojs/mdx": "4.0.0-beta.3",
     "@astrojs/rss": "catalog:",
     "@astrojs/sitemap": "catalog:",
     "@astrojs/vercel": "8.0.0-beta.3",
+    "@repo/ui-lit": "workspace:*",
     "astro": "5.0.0-beta.7"
   },
   "devDependencies": {
@@ -33,8 +33,12 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "experimentalTernaries": true,
+    "proseWrap": "always"
   }
 }
