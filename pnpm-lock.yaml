@@ -111,9 +111,6 @@ catalogs:
     svelte-preprocess:
       specifier: ^6.0.3
       version: 6.0.3
-    turbo:
-      specifier: ^2.2.3
-      version: 2.2.3
     typescript:
       specifier: ^5.6.3
       version: 5.6.3
@@ -132,7 +129,7 @@ importers:
   .:
     devDependencies:
       turbo:
-        specifier: 'catalog:'
+        specifier: ^2.2.3
         version: 2.2.3
 
   apps/astrodemo:
