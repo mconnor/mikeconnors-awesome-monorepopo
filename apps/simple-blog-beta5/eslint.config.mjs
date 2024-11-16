@@ -5,4 +5,5 @@ import astroConfig from '@repo/eslint-config/astro';
 // import regexConfig from '@repo/eslint-config/regex';
 import tsLint from '@repo/eslint-config/ts-lint';
 
+/** @type {import('eslint').Linter.Config[]} */
 export default [...tsLint, ...astroConfig];

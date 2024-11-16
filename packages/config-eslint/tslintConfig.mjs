@@ -32,6 +32,7 @@ const config = tseslint.config(
       },
     },
     rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
       'no-unused-expressions': 'off',
       '@typescript-eslint/no-unused-expressions': [
         'error',
@@ -65,21 +66,7 @@ const config = tseslint.config(
   //     '@typescript-eslint/no-empty-function': 'off',
   //   },
   // },
-  {
-    files: ['**/*.d.ts'],
-    rules: {
-      'no-unused-expressions': 'off',
-      '@typescript-eslint/no-unused-expressions': [
-        'error',
-        {
-          allowShortCircuit: true, // Allow short-circuit expressions like `a && a()`
-          allowTernary: true, // Allow ternary operations like `a ? b() : c()`
-          allowTaggedTemplates: true, // Allow tagged template literals like `taggedTemplate` (optional)
-        },
-      ],
-      '@typescript-eslint/triple-slash-reference': 'off',
-    },
-  },
+
   {
     plugins: {
       'simple-import-sort': simpleImportSort,

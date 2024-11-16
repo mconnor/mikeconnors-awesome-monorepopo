@@ -36,6 +36,7 @@ const config = tseslint.config(
   {
     files: ['**/*.d.ts'],
     rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
       'no-unused-expressions': 'off',
       '@typescript-eslint/no-unused-expressions': [
         'error',

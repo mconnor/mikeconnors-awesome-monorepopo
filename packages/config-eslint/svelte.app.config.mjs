@@ -6,26 +6,17 @@ import ts from 'typescript-eslint';
 import ignoresConfig from './ignores.config.mjs';
 
 export default ts.config(
-  { ...ignoresConfig },
-  js.configs.recommended,
-  ...ts.configs.recommended,
   ...svelte.configs['flat/recommended'],
-  prettier,
+
   ...svelte.configs['flat/prettier'],
-  {
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-    },
-  },
+
   {
     files: ['**/*.svelte'],
 
     languageOptions: {
       parserOptions: {
         parser: ts.parser,
+        extraFileExtensions: ['.svelte'],
       },
     },
   },
