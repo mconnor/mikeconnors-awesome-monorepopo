@@ -24,7 +24,7 @@
 		"@sveltejs/adapter-auto": "^3.3.1",
 		"@sveltejs/kit": "^2.8.1",
 		"@sveltejs/vite-plugin-svelte": "^4.0.1",
-		"eslint": "catalog:",
+		"eslint": "^9.15.0",
 		"prettier": "catalog:",
 		"prettier-plugin-svelte": "catalog:svelte5",
 		"svelte": "catalog:svelte5",

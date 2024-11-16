@@ -32,9 +32,9 @@
   "devDependencies": {
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
+    "eslint": "^9.15.0",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },

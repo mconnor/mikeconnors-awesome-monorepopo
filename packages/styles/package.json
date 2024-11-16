@@ -16,9 +16,8 @@
   "scripts": {
     "updateAstro": "pnpm dlx @astrojs/upgrade",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "inspect": "eslint  --inspect-config",
+    "inspect": "eslint . --inspect-config",
     "format": "prettier . --write",
-    "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit",
     "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
@@ -29,8 +28,8 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "catalog:",
     "open-props": "^1.7.7",
+    "eslint": "^9.15.0",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },

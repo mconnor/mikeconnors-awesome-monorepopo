@@ -3,8 +3,23 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": ".",
-    "strict": false
+    "types": [
+      "node",
+      "astro"
+    ]
   },
-  "include": ["."],
-  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
+  "files": [
+    "jsx.d.ts"
+  ],
+  "include": [
+    "src/*.ts",
+    "src/*.astro",
+    "*.config.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    ".astro",
+    "dist",
+    ".turbo"
+  ]
 }

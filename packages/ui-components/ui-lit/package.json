@@ -24,12 +24,19 @@
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/styles": "workspace:*",
+    "eslint": "^9.15.0",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },
+  "prettier": {
+    "singleQuote": true,
+    "experimentalTernaries": true
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "astro": "^4"
+  }
 }

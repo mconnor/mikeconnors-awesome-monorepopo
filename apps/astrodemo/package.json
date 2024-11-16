@@ -41,7 +41,7 @@
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "catalog:",
     "cssnano": "catalog:",
-    "eslint": "catalog:",
+    "eslint": "^9.15.0",
     "postcss-custom-media": "catalog:",
     "postcss-html": "catalog:",
     "postcss-import": "catalog:",

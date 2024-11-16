@@ -1,41 +1,69 @@
 // @ts-check
-
 import js from '@eslint/js';
-import wc from 'eslint-plugin-wc';
+// import wc from 'eslint-plugin-wc';
 import tseslint from 'typescript-eslint';
+
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 import prettier from 'eslint-config-prettier';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 // import turboConfig from './turbo.config.mjs';
 
-export default tseslint.config(
-  {
-    ...ignoresConfig,
-  },
+const config = tseslint.config(
+  { ...ignoresConfig },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
-  wc.configs['flat/recommended'],
-  // turboConfig,
   {
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
+        sourceType: 'module',
+        warnOnUnsupportedTypeScriptVersion: false,
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
       globals: {
         ...globals.browser,
-        ...globals.node,
+        ...globals.nodeBuiltin,
+        JSX: true,
+        // ...globals.node,
       },
     },
+    rules: {
+      'no-unused-expressions': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-empty-function': 'off',
+    },
   },
+
+  // {
+  //   languageOptions: {
+  //     ecmaVersion: 'latest',
+  //     sourceType: 'module',
+  //     parser: tseslint.parser,
+  //     parserOptions: {
+  //       projectService: true,
+  //       tsconfigRootDir: import.meta.dirname,
+  //     },
+  //     globals: {
+  //       ...globals.browser,
+  //       ...globals.node,
+  //     },
+  //   },
+  //   rules: {
+  //     'no-unused-expressions': 'off',
+  //     '@typescript-eslint/no-unused-expressions': 'off',
+  //     '@typescript-eslint/no-empty-function': 'off',
+  //   },
+  // },
   {
     files: ['**/*.d.ts'],
     rules: {
+      'no-unused-expressions': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
       '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
@@ -48,5 +76,8 @@ export default tseslint.config(
       'simple-import-sort/exports': 'error',
     },
   },
-  prettier,
+
+  prettier
 );
+
+export default config;

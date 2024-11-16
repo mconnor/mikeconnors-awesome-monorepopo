@@ -26,7 +26,8 @@
     "inspect": "turbo inspect",
     "check-types": "turbo run check-types",
     "all": "turbo run lint test build",
-    "update:all": "turbo run update --filter=..."
+    "update:all": "turbo run update --filter=...",
+    "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
     "turbo": "^2.3.0"

@@ -28,11 +28,14 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "catalog:",
     "prettier": "catalog:",
+    "eslint": "^9.15.0",
     "typescript": "catalog:"
   },
   "peerDependencies": {
     "preact": "^10.15.0"
+  },
+  "prettier": {
+    "singleQuote": true
   }
 }

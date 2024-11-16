@@ -22,7 +22,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "catalog:",
+    "eslint": "^9.15.0",
     "prettier": "catalog:",
     "svelte-check": "catalog:",
     "typescript": "catalog:"

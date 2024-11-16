@@ -1,6 +1,5 @@
 packages:
-  - docs/*
-  - apps/*
+  - apps/mike-blog
   - packages/**
   - "!**/test/**"
   - "!**/.vercel/**"
@@ -65,7 +64,7 @@ catalogs:
     astro: ^4.16.13
     sharp: ^0.33.5
   svelte5:
-    svelte: ^5.2.0
+    svelte: ^5.2.1
     prettier-plugin-svelte: ^3.2.8
 
 
