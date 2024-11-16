@@ -17,6 +17,7 @@
     "updateAstro": "pnpm dlx @astrojs/upgrade",
     "test": "echo \"Error: no test specified\" && exit 1",
     "inspect": "eslint . --inspect-config",
+    "lint": "eslint . ",
     "format": "prettier . --write",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit",

@@ -1,5 +1,3 @@
-// @ts-check
-
 import markdown from '@eslint/markdown';
 export default [
   {

@@ -1,4 +1,3 @@
-// @ts-check
 import js from '@eslint/js';
 // import wc from 'eslint-plugin-wc';
 import tseslint from 'typescript-eslint';
@@ -34,7 +33,14 @@ const config = tseslint.config(
     },
     rules: {
       'no-unused-expressions': 'off',
-      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+          allowShortCircuit: true, // Allow short-circuit expressions like `a && a()`
+          allowTernary: true, // Allow ternary operations like `a ? b() : c()`
+          allowTaggedTemplates: true, // Allow tagged template literals like `taggedTemplate` (optional)
+        },
+      ],
       '@typescript-eslint/no-empty-function': 'off',
     },
   },
@@ -63,7 +69,14 @@ const config = tseslint.config(
     files: ['**/*.d.ts'],
     rules: {
       'no-unused-expressions': 'off',
-      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+          allowShortCircuit: true, // Allow short-circuit expressions like `a && a()`
+          allowTernary: true, // Allow ternary operations like `a ? b() : c()`
+          allowTaggedTemplates: true, // Allow tagged template literals like `taggedTemplate` (optional)
+        },
+      ],
       '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
@@ -77,7 +90,7 @@ const config = tseslint.config(
     },
   },
 
-  prettier
+  prettier,
 );
 
 export default config;

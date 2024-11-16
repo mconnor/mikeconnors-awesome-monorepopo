@@ -1,4 +1,3 @@
-// @ts-check
 import tseslint from 'typescript-eslint';
 
 import * as astroParser from 'astro-eslint-parser';

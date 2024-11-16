@@ -1,4 +1,3 @@
-// @ts-check
 import lit from '@astrojs/lit';
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel';

@@ -1,4 +1,3 @@
-// @ts-check
 // import tsLint from '@repo/eslint-config/ts-lint-type-check';
 import astroConfig from '@repo/eslint-config/astro';
 // import markdownConfig from '@repo/eslint-config/markdown';

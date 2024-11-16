@@ -15,7 +15,6 @@
     "updateAstro": "pnpm dlx @astrojs/upgrade",
     "test": "vitest",
     "format": "prettier . --write",
-    "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
     "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit"

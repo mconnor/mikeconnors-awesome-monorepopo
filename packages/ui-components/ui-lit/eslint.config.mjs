@@ -7,9 +7,7 @@ import tsLint from '@repo/eslint-config/ts-lint-type-check';
 
 // import { Linter } from 'eslint';
 
-export default [
-  ...tsLint,
-  ...astroConfig,
-  ...typeCheckingDisable,
-  ...litConfig,
-];
+/** @type {import('eslint').Linter.Config[]} */
+const config = [...tsLint, ...astroConfig, ...litConfig];
+
+export default config;

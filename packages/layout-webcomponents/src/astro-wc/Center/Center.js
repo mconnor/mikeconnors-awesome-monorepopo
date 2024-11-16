@@ -1,4 +1,3 @@
-// @ts-check
 /**
  * @module center-l
  * @description

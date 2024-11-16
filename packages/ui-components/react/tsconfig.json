@@ -3,19 +3,9 @@
   "compilerOptions": {
     "rootDir": ".",
     "strict": true,
-    "esModuleInterop": false,
+    "esModuleInterop": false
   },
-  "files": [
-    "jsx.d.ts"
-  ],
-  "include": [
-    "src/**/*.tsx",
-    "*.config.mjs"
-  ],
-  "exclude": [
-    "node_modules",
-    ".astro",
-    "dist",
-    ".turbo"
-  ]
+  "files": ["jsx.d.ts"],
+  "include": ["src/**/*.tsx", "*.config.mjs"],
+  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }
