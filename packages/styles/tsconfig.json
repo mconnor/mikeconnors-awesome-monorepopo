@@ -2,8 +2,9 @@
   "extends": "@repo/typescript-config/vite.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "."
+    "rootDir": ".",
+    "strict": false
   },
-  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.astro", "*.config.mjs"],
+  "include": ["."],
   "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }
