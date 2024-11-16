@@ -19,6 +19,7 @@
     "./type-disable": "./typeCheckingDisable.mjs",
     "./regex": "./regexConfig.mjs",
     "./svelte": "./svelteConfig.mjs",
+    "./svelte-app": "./svelte.app.config.mjs",
     "./solid": "./solidLintConfig.mjs",
     "./prettier": "./eslintConfigPrettier.mjs"
   },
@@ -29,7 +30,7 @@
   "type": "module",
   "dependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.3",
-    "@eslint/js": "^9.14.0",
+    "@eslint/js": "^9.15.0",
     "@eslint/json": "^0.6.0",
     "@eslint/markdown": "^6.2.1",
     "@types/eslint-config-prettier": "^6.11.3",
