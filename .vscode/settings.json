@@ -2,6 +2,7 @@
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
+  "pnpmCatalogLens.enabled": true,
   "prettier.documentSelectors": [
     "**/*.astro"
   ],
