@@ -8,5 +8,15 @@
     "astro.config.mjs",
     "tailwind.config.js",
   ],
-  "include": ["src"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "dist",
+    ".astro",
+    ".turbo",
+    ".vercel",
+    ".frontmatter/",
+    "cache-directory"
+  ]
 }
