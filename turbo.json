@@ -1,7 +1,13 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalEnv": [
-     "NODE_ENV","MODE", "PROCUCTION", "DEV","PROD","import.meta.env.PROD","import.meta.env.DEV"
+    "NODE_ENV",
+    "MODE",
+    "PROCUCTION",
+    "DEV",
+    "PROD",
+    "import.meta.env.PROD",
+    "import.meta.env.DEV"
   ],
   "globalPassThroughEnv": [
     "AWS_SECRET_KEY",
@@ -37,11 +43,7 @@
     },
     "format:check": {},
     "//#format:root": {},
-    "inspect": {
-      "dependsOn": [
-        "^inspect"
-      ]
-    },
+    "inspect": {},
     "fix": {
       "dependsOn": [
         "^fix"

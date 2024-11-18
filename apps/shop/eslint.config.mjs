@@ -1,5 +1,5 @@
-import astroConfig from '@repo/eslint-config/astro';
-import tsLint from '@repo/eslint-config/ts-lint-type-check';
+import astroConfig from '@repo/eslint-config/astro.lint.config';
+import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
 
 export default [
   ...tsLint,

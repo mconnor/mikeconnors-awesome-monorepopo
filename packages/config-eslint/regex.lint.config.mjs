@@ -1,4 +1,3 @@
-// eslint.config.js
 import * as regexpPlugin from 'eslint-plugin-regexp';
 
 export default [

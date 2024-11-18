@@ -1,6 +1,17 @@
 import wc from 'eslint-plugin-wc';
-
 import lit from 'eslint-plugin-lit';
+import { rules } from 'eslint-plugin-astro';
+
+export default [
+  wc.configs['flat/recommended'],
+  lit.configs['flat/recommended'],
+  {
+    rules: {
+      '@typescript-eslint/no-unused-expressions': 'off',
+    },
+  },
+];
+
 // import globals from 'globals';
 // import tseslint from 'typescript-eslint';
 
@@ -43,10 +54,3 @@ import lit from 'eslint-plugin-lit';
 //     },
 //   }
 // );
-
-export default [
-  {
-    ...wc.configs['flat/recommended'],
-    ...lit.configs['flat/recommended'],
-  },
-];

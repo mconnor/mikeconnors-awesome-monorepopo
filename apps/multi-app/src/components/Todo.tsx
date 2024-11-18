@@ -1,5 +1,5 @@
 // import { render } from 'preact';
-import { signal, computed } from '@preact/signals';
+import { computed, signal } from '@preact/signals';
 import type { JSX } from 'preact/jsx-runtime';
 
 const todos = signal([

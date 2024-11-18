@@ -1,6 +1,6 @@
-// import tsLint from '@repo/eslint-config/ts-lint-type-check';
-import astroConfig from '@repo/eslint-config/astro';
-import reactConfig from '@repo/eslint-config/react';
-import tsLint from '@repo/eslint-config/ts-lint';
+// import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
+import astroConfig from '@repo/eslint-config/astro.lint.config';
+import reactConfig from '@repo/eslint-config/react.lint.config';
+import tsLint from '@repo/eslint-config/ts.lint.config';
 
 export default [...tsLint, ...astroConfig, ...reactConfig];

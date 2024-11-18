@@ -1,6 +1,22 @@
 {
   "extends": "@repo/typescript-config/lit.json",
-  "files": ["jsx.d.ts", "eslint.config.mjs"],
-  "include": ["src"],
-  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
+  "compilerOptions": {
+    "rootDir": ".",
+    "strict": true,
+    "esModuleInterop": false
+  },
+  "files": [
+    "jsx.d.ts",
+    ".astro/types.d.ts"
+  ],
+  "include": [
+    "src",
+    "*.config.mjs"
+  ],
+  "exclude": [
+    "node_modules",
+    ".astro",
+    "dist",
+    ".turbo"
+  ]
 }

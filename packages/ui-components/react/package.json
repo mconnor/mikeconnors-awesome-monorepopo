@@ -16,8 +16,8 @@
     "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
-    "lint": "eslint src --max-warnings 0",
-    "fix": "eslint src --fix",
+    "lint": "eslint . --max-warnings 0",
+    "fix": "eslint . --fix",
     "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf dist"
@@ -33,6 +33,8 @@
     "@repo/typescript-config": "workspace:*",
     "prettier": "catalog:",
     "tsup": "^8.3.5",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   }
 }

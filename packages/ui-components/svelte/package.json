@@ -25,15 +25,13 @@
     "eslint": "^9.15.0",
     "prettier": "catalog:",
     "svelte-check": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "prettier-plugin-svelte": "catalog:svelte5"
   },
   "keywords": [
     "svelte",
     "ui"
   ],
   "author": "",
-  "license": "ISC",
-  "prettier": {
-    "singleQuote": true
-  }
+  "license": "ISC"
 }

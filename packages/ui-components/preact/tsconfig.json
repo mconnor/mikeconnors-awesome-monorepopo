@@ -1,13 +1,5 @@
 {
   "extends": "@repo/typescript-config/preact.json",
-  "compilerOptions": {
-    "rootDir": ".",
-    "noEmit": true,
-    "jsx": "preserve",
-    "jsxFactory": "h",
-    "jsxFragmentFactory": "Fragment",
-    "strict": true
-  },
-  "include": ["src/**/*.tsx", "*.config.mjs"],
-  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
+
+  "include": ["."]
 }

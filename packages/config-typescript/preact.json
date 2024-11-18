@@ -2,11 +2,16 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./vite.json",
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react/jsx-runtime": ["./node_modules/preact/jsx-runtime"],
+      "react-dom": ["./node_modules/preact/compat/"],
+      "react-dom/*": ["./node_modules/preact/compat/*"]
+    },
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
-    "types": [
-      "preact"
-    ]
-  }
+    "jsxImportSource": "preact"
+  },
+  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }

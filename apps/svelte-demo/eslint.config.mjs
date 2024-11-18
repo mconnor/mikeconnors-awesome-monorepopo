@@ -1,6 +1,6 @@
-import svelteConfig from '@repo/eslint-config/svelte-app';
-import tsLint from '@repo/eslint-config/ts-lint';
+import svLint from '@repo/eslint-config/svelte.lint.config';
+// import tsLint from '@repo/eslint-config/ts-lint-type-check';
 
-const config = [...tsLint, ...svelteConfig];
+// const config = [...svLint];
 
-export default config;
+export default svLint;

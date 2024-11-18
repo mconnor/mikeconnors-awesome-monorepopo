@@ -1,10 +1,20 @@
 ---
-import HelloBtn from '#components/actions-buttons/HelloBtn.astro';
-import LikeBtn from '#components/actions-buttons/LikeBtn.astro';
+import Stack from '@repo/layout-webcomponents/Stack';
+import Box from '@repo/ui-lit/Box';
+
+import GreetingBtn from '#components/actions-buttons/GreetingBtn.astro';
+import LikeBtnPreact from '#components/actions-buttons/LikeBtnPreact.tsx';
+// import LikeBtn from '#components/actions-buttons/LikeBtn.astro';
 import Layout from '#layouts/Layout.astro';
 ---
 
-<Layout>
-  <HelloBtn>Houston</HelloBtn>
-  <LikeBtn />
+<Layout><Stack>
+  <Box borderWidth="0">
+  <GreetingBtn>Houston</GreetingBtn>
+</Box>
+
+
+  <Box invert borderWidth="0"><LikeBtnPreact postId='hello'/></Box>
+
+  <Stack>
 </Layout>

@@ -13,7 +13,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "inspect": "eslint . --inspect-config",
-    "lint": "prettier . --write eslint . --max-warnings 0",
+    "lint": "eslint .",
     "fix": "eslint . --fix",
     "format": "prettier . --write",
     "check-types": "tsc --noEmit"

@@ -4,12 +4,12 @@ import tseslint from 'typescript-eslint';
 
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
-import prettier from 'eslint-config-prettier';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
-// import turboConfig from './turbo.config.mjs';
+// import prettier from 'eslint-config-prettier';
+import prettier from 'eslint-plugin-prettier/recommended';
+import simpleImportSort from './simple.imports.config.mjs';
 
 const config = tseslint.config(
-  { ...ignoresConfig },
+  ignoresConfig,
   js.configs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
@@ -19,9 +19,7 @@ const config = tseslint.config(
       sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
-        sourceType: 'module',
-        warnOnUnsupportedTypeScriptVersion: false,
-        projectService: true,
+        projectService: true, //indicates to ask TypeScript's type checking service for each source file's type
         tsconfigRootDir: import.meta.dirname,
       },
       globals: {
@@ -36,7 +34,6 @@ const config = tseslint.config(
   {
     files: ['**/*.d.ts'],
     rules: {
-      '@typescript-eslint/triple-slash-reference': 'off',
       'no-unused-expressions': 'off',
       '@typescript-eslint/no-unused-expressions': [
         'error',
@@ -49,16 +46,7 @@ const config = tseslint.config(
       '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
-  {
-    plugins: {
-      'simple-import-sort': simpleImportSort,
-    },
-    rules: {
-      'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error',
-    },
-  },
-
+  ...simpleImportSort,
   prettier,
 );
 

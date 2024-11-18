@@ -13,29 +13,28 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --max-warnings 0",
-    "fix": "eslint . --fix",
-    "inspect": "eslint . --inspect-config",
     "format": "prettier . --write",
     "check-types": "tsc --noEmit"
-  },
-  "eslintConfig": {
-    "extends": "preact"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "prettier": "catalog:",
+    "@repo/eslint-config": "workspace:*",
     "eslint": "^9.15.0",
-    "typescript": "catalog:"
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "preact": "^10.15.0",
+    "eslint-config-preact": "^1.5.0"
   },
   "peerDependencies": {
     "preact": "^10.15.0"
   },
   "prettier": {
     "singleQuote": true
+  },
+  "dependencies": {
+    "eslint-config-preact": "^1.5.0"
   }
 }

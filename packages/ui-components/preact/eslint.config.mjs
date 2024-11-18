@@ -1,6 +1,6 @@
-import tsLint from '@repo/eslint-config/ts-lint';
+import preact from 'eslint-config-preact';
+import ignores from '@repo/eslint-config/ignores';
 // import tsLint from '@repo/eslint-config/ts-lint-type-check';
 // import reactConfig from '@repo/eslint-config/react';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default tsLint;
+export default [...preact, ...ignores];

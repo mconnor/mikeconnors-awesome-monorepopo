@@ -1,6 +1,7 @@
 ---
 import Stack from '@repo/layout-webcomponents/Stack';
 import { PreactCounter as PCount } from '@repo/preact/counter';
+import { LikeBtn as LikePreact} from '@repo/preact/LikeBtn';
 import { Counter as ReactKounter } from '@repo/react/counter';
 import CounterSvelte from '@repo/svelte/counter';
 import Box from '@repo/ui-lit/Box';
@@ -12,6 +13,7 @@ import Layout from '#layouts/Layout.astro';
 
 <Layout>
   <Stack>
+    <LikePreact client:visible />
     <Box borderWidth="4px" borderStyle='double'>
       <Box invert borderWidth="4px">
       <ReactKounter client:only="react" klass="counter">

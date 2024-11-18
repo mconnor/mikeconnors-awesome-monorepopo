@@ -6,6 +6,6 @@
     "esModuleInterop": false
   },
   "files": ["jsx.d.ts"],
-  "include": ["src/**/*.tsx", "*.config.mjs"],
+  "include": ["src/**/*.tsx", "*.config.*"],
   "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }

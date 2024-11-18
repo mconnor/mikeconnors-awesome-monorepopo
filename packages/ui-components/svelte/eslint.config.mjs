@@ -1,12 +1,6 @@
-import eslintConfigPrettier from '@repo/eslint-config/prettier';
+import svLint from '@repo/eslint-config/svelteLint';
 // import tsLint from '@repo/eslint-config/ts-lint-type-check';
-import svelte from '@repo/eslint-config/svelte';
-// import tsLint from "@repo/eslint-config/ts-lint";
-// import jsonConfig from '@repo/eslint-config/json';
 
-export default [
-  // ...tsLint,
-  ...svelte,
-  // ...jsonConfig,
-  eslintConfigPrettier,
-];
+// const config = [...svLint];
+
+export default svLint;

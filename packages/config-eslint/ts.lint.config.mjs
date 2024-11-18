@@ -4,12 +4,13 @@ import tseslint from 'typescript-eslint';
 
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
-import prettier from 'eslint-config-prettier';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
-// import turboConfig from './turbo.config.mjs';
+// import prettier from 'eslint-config-prettier';
+import prettierConfig from 'eslint-plugin-prettier/recommended';
+
+import simpleImportSort from './simple.imports.config.mjs';
 
 const config = tseslint.config(
-  { ...ignoresConfig },
+  ignoresConfig,
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
@@ -19,7 +20,6 @@ const config = tseslint.config(
       sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
-        sourceType: 'module',
         warnOnUnsupportedTypeScriptVersion: false,
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
@@ -46,38 +46,8 @@ const config = tseslint.config(
     },
   },
 
-  // {
-  //   languageOptions: {
-  //     ecmaVersion: 'latest',
-  //     sourceType: 'module',
-  //     parser: tseslint.parser,
-  //     parserOptions: {
-  //       projectService: true,
-  //       tsconfigRootDir: import.meta.dirname,
-  //     },
-  //     globals: {
-  //       ...globals.browser,
-  //       ...globals.node,
-  //     },
-  //   },
-  //   rules: {
-  //     'no-unused-expressions': 'off',
-  //     '@typescript-eslint/no-unused-expressions': 'off',
-  //     '@typescript-eslint/no-empty-function': 'off',
-  //   },
-  // },
-
-  {
-    plugins: {
-      'simple-import-sort': simpleImportSort,
-    },
-    rules: {
-      'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error',
-    },
-  },
-
-  prettier,
+  ...simpleImportSort,
+  prettierConfig,
 );
 
 export default config;

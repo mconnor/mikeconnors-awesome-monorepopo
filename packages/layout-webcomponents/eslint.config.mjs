@@ -1,9 +1,8 @@
-import astro from '@repo/eslint-config/astro';
-// import tsLint from '@repo/eslint-config/ts-lint-type-check';
-import tsLint from '@repo/eslint-config/ts-lint';
+import astroConfig from '@repo/eslint-config/astro.lint.config';
+// import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
+import tsLint from '@repo/eslint-config/ts.lint.config';
 import typeCheckingDisable from '@repo/eslint-config/type-disable';
 
-/** @type {import('eslint').Linter.Config[]} */
-const config = [...tsLint, ...astro, ...typeCheckingDisable];
+const config = [...tsLint, ...astroConfig, ...typeCheckingDisable];
 
 export default config;

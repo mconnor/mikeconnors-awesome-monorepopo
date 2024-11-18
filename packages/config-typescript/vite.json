@@ -15,6 +15,7 @@
   },
   "include": [
     "src/**/*.ts",
+    "src/**/*.astro",
     "src/**/*.tsx",
     "src/**/*.js",
     "src/**/*.jsx",

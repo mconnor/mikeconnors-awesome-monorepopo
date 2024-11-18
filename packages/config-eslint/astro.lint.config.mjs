@@ -11,8 +11,6 @@ export default tseslint.config({
   ],
   processor: astroPlugin.processors['client-side-ts'],
   languageOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
     parser: astroParser,
     parserOptions: {
       parser: tseslint.parser,
