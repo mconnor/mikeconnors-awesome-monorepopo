@@ -3,9 +3,7 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "pnpmCatalogLens.enabled": true,
-  "prettier.documentSelectors": [
-    "**/*.astro"
-  ],
+  "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -32,20 +30,13 @@
     "react": true,
     "preact": true,
     "svelte": true,
-    "vue": true,
+    "vue": true
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "never"
   },
   "breadcrumbs.filePath": "on",
-  "cssvar.themes": [
-    "dark",
-    "light",
-    "dim",
-    "choco",
-    "toucan",
-    "grape"
-  ],
+  "cssvar.themes": ["dark", "light", "dim", "choco", "toucan", "grape"],
   "cssvar.enable": true,
   // Since we want to scan css files inside `node_modules as well
   // we need to set cssvar.ignore property to empty array
@@ -69,13 +60,7 @@
     // you can add it in this array of files
     // "assets/styles/variables.css"
   ],
-  "cssvar.extensions": [
-    "css",
-    "postcss",
-    "jsx",
-    "tsx",
-    "astro"
-  ],
+  "cssvar.extensions": ["css", "postcss", "jsx", "tsx", "astro"],
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
     "**/.git": false,
@@ -91,12 +76,14 @@
   "explorerExclude.backup": {},
   "explorer.excludeGitIgnore": false,
   "Vercel.turbo-vsc": {
-    "turbo.transitNodes": [
-      "transit"
-    ]
+    "turbo.transitNodes": ["transit"]
   },
   "yaml.schemas": {
     "https://json.schemastore.org/yamllint.json": "./pnpm-workspace.yaml"
   },
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "turbo.useLocalTurbo": true,
+  "editor.formatOnSave": true,
+  "explorer.autoOpenDroppedFile": false,
+  "explorer.autoReveal": false
 }
