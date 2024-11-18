@@ -1,8 +1,6 @@
 {
   "extends": "@repo/typescript-config/svelte.json",
-  "files": [
-    "eslint.config.mjs"
-  ],
+  "files": ["eslint.config.mjs"],
   "exclude": [
     "./node_modules/**",
     "./src/service-worker.js",

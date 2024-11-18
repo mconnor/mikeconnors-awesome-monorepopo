@@ -5,18 +5,7 @@
     "strict": true,
     "esModuleInterop": false
   },
-  "files": [
-    "jsx.d.ts",
-    ".astro/types.d.ts"
-  ],
-  "include": [
-    "src",
-    "*.config.mjs"
-  ],
-  "exclude": [
-    "node_modules",
-    ".astro",
-    "dist",
-    ".turbo"
-  ]
+  "files": ["jsx.d.ts", ".astro/types.d.ts"],
+  "include": ["src", "*.config.mjs"],
+  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }
