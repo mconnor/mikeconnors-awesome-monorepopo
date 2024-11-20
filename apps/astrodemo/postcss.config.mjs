@@ -1,6 +1,7 @@
 import autoprefixer from 'autoprefixer';
 import nano from 'cssnano';
 import OpenProps from 'open-props';
+import postcssCustomMedia from 'postcss-custom-media';
 import postcssImport from 'postcss-import';
 import postcssJitProps from 'postcss-jit-props';
 import postcssNesting from 'postcss-nesting';
@@ -9,12 +10,13 @@ import process from 'process';
 const isDev = process.env.NODE_ENV === 'development';
 
 const devConfig = {
-  plugins: [postcssImport, postcssNesting, postcssPow],
+  plugins: [postcssImport, postcssNesting, postcssPow, postcssCustomMedia],
 };
 
 const prodConfig = {
   plugins: [
     postcssImport,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     postcssJitProps(OpenProps),
     postcssNesting,
     postcssPow,
