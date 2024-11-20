@@ -16,7 +16,6 @@
     "format": "prettier . --write",
     "lint": "eslint . --max-warnings 0",
     "lint:json": "eslint . -c jsonLint.config.mjs",
-    "inspect:json": "eslint . -c jsonLint.config.mjs --inspect-config",
     "inspect": "eslint . --inspect-config",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
