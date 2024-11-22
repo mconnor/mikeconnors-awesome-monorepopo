@@ -21,7 +21,7 @@
     "graph": "turbo run build --graph",
     "build": "turbo build",
     "preview": "turbo preview",
-    "dev": "turbo dev",
+    "dev": "turbo --filter='@app/blog' dev",
     "dev:demo": "turbo dev --filter=@app/astrodemo",
     "inspect": "turbo inspect",
     "check-types": "turbo run check-types",
@@ -30,11 +30,11 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
-    "turbo": "^2.3.0"
+    "turbo": "^2.3.1"
   },
   "engines": {
     "node": ">= 22.9.0",
     "pnpm": ">=9.1.2"
   },
-  "packageManager": "pnpm@9.14.1"
+  "packageManager": "pnpm@9.14.2"
 }

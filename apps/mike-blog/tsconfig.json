@@ -1,13 +1,22 @@
 {
-  "extends": "@repo/typescript-config/astro-base.json",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "experimentalDecorators": true, // default is false for TypeScript 5.0 and up
-    "useDefineForClassFields": false, // default is true when "target" is "ES2022" or higher
-    "rootDir": ".", //It would be an error to specify rootDir as core and include as * because it creates a file (helpers.ts) that would need to be emitted outside the outDir (i.e. ../helpers.js).
-    "jsx": "preserve"
+    "rootDir": ".",
+    "outDir": "dist",
+    //It would be an error to specify rootDir as core and include as * because it creates a file (helpers.ts) that would need to be emitted outside the outDir (i.e. ../helpers.js).
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "strictNullChecks": true,
+    // "jsx": "preserve",
+    // "strictNullChecks": true
   },
-  "files": [".astro/types.d.ts", "jsx.d.ts"],
-  "include": ["src/**/*", "*.config.mjs"],
+  "include": [
+    ".astro/types.d.ts",
+    "src",
+    "*.config.mjs"
+  ],
   "exclude": [
     "dist",
     ".astro",
