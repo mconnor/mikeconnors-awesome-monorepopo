@@ -19,8 +19,9 @@ export const blogSchema = z.object({
   title: strSC,
   pubDate: dateLikeToDate,
   description: strSC,
+  author: strSC,
   // author: reference('authors'),
-  draft: z.boolean().default(false),
+  draft: z.boolean().optional().default(false),
   tags: z.array(strSC),
   cover: imageSrcSchema,
 });
