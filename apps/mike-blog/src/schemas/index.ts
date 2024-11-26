@@ -1,11 +1,11 @@
-import { z } from 'astro:content';
+import { reference, z } from 'astro:content';
 
 const urlSchema = z.string().url();
-// const urlSchemaOptional = urlSchema.optional();
+const urlSchemaOptional = urlSchema.optional();
 const strSC = z.string();
-// const strSCOptional = strSC.optional();
-// const emailSchema = z.string().email();
-// const emailSchemaOptional = emailSchema.optional();
+const strSCOptional = strSC.optional();
+const emailSchema = z.string().email();
+const emailSchemaOptional = emailSchema.optional();
 
 const imageSrcSchema = z.object({ src: urlSchema, alt: strSC });
 
@@ -13,6 +13,14 @@ const imageSrcSchema = z.object({ src: urlSchema, alt: strSC });
 
 const dateLike = z.union([z.number(), z.string(), z.date()]);
 const dateLikeToDate = dateLike.pipe(z.coerce.date());
+
+export const authorSchema = z.object({
+  id: z.string(),
+  name: strSC.default('Anonymous'),
+  email: emailSchemaOptional,
+  portfolio: urlSchemaOptional,
+  bio: strSCOptional,
+});
 
 // relatedPosts: z.array(reference('blog')).optional(),
 export const blogSchema = z.object({

@@ -1,16 +1,31 @@
+import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
-import { blogSchema } from './schemas';
+// import { data } from 'autoprefixer';
+import { parse as parseToml } from 'toml';
+
+import { authorSchema, blogSchema } from './schemas';
 
 const blog = defineCollection({
   // type: 'content',
   loader: glob({
     pattern: ['**/*.md', '**/*.mdx'],
-    base: './src/data/blog',
+    base: 'src/data/blog',
   }),
-
   schema: blogSchema,
 });
+
+const authors = defineCollection({
+  loader: file('src/data/authors.toml', {
+    parser: (text) => parseToml(text).authors,
+  }),
+
+  schema: authorSchema,
+});
+
+// const dogs = defineCollection({
+//   loader: file("src/data/authors.toml", { parser: (text) => parseToml(text).dogs }),
+//   schema: /* ... */
+// })
 
 // const countries = defineCollection({
 // 	loader: async () => {
@@ -26,4 +41,4 @@ const blog = defineCollection({
 // 	schema: /* ... */
 //   });
 
-export const collections = { blog };
+export const collections = { blog, authors };

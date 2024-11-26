@@ -1,6 +1,8 @@
 ---
+import Cluster from '@repo/layout-webcomponents/Cluster';
 import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
+import  { type CollectionEntry, getEntry } from 'astro:content';
+import {format} from 'date-fns/format';
 
 import Box from '#wc-lit/Box/index.astro';
 
@@ -20,8 +22,8 @@ const {
   id,
 } = Astro.props;
 
-const { title, description, cover } = postData;
-// const authObj = await getEntry('authors', author.id);
+const { title, description, cover , pubDate} = postData;
+// const authObj = await getEntry('authors', id);
 // const { name } = authObj.data;
 ---
 
@@ -34,12 +36,12 @@ const { title, description, cover } = postData;
 
     <Box invert padding="var(--s0)" borderWidth="0"><h1>{title}</h1></Box>
 
-    <!-- <Cluster justify="space-between" align="baseline">
-      <Box padding="var(--s00)" borderWidth="0">{name}</Box>
+    <Cluster justify="space-between" align="baseline">
+      <!-- <Box padding="var(--s00)" borderWidth="0">{name}</Box> -->
       <Box padding="var(--s00)" borderWidth="0">
         <p>{format(pubDate, 'MMMM dd, yyyy')}</p></Box
       >
-    </Cluster> -->
+    </Cluster>
 
     <Box padding="0" borderWidth="0">
       <Image src={cover.src} alt={cover.alt} width="600" height="300" /></Box

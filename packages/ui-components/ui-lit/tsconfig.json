@@ -2,8 +2,7 @@
   "extends": "@repo/typescript-config/lit.json",
   "compilerOptions": {
     "rootDir": ".",
-    "strict": true,
-    "esModuleInterop": false
+    "strict": false
   },
   "files": ["jsx.d.ts", ".astro/types.d.ts"],
   "include": ["src", "*.config.mjs"],

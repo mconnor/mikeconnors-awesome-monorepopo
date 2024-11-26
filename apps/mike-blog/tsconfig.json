@@ -9,13 +9,13 @@
     "experimentalDecorators": true,
     "useDefineForClassFields": false,
     "strictNullChecks": true,
+    "allowJs": true
     // "jsx": "preserve",
     // "strictNullChecks": true
   },
   "include": [
     ".astro/types.d.ts",
-    "src",
-    "*.config.mjs"
+    "**/*"
   ],
   "exclude": [
     "dist",

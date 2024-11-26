@@ -6,10 +6,9 @@
   "imports": {
     "#*": "./src/*"
   },
-  "exports": {
-    "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
-    "./Timer": "./src/Timer/index.astro",
-    "./Box": "./src/Box/index.astro"
+  "./button": {
+    "types": "./src/Box/Box.ts",
+    "default": "./dist/Box.js"
   },
   "scripts": {
     "test": "vitest",
@@ -17,7 +16,8 @@
     "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
     "inspect": "eslint . --inspect-config",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "build": "tsc ./src/Box/Box.ts --outDir ./dist"
   },
   "devDependencies": {
     "@open-wc/testing": "catalog:",
@@ -36,7 +36,6 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "astro": "^4",
-    "lit": "^3.2"
+    "lit": "^3.2.1"
   }
 }

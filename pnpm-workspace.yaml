@@ -26,7 +26,7 @@ catalog:
   "@webcomponents/template-shadowroot": ^0.2.1
   add: ^2.0.6
   astro: 5.0.0-beta.10
-  astro-icon: ^1.1.2
+  astro-icon: ^1.1.4
   autoprefixer: ^10.4.20
   cssnano: ^7.0.6
   eslint: ^9.15.0
@@ -40,7 +40,7 @@ catalog:
   postcss-jit-props: ^1.0.14
   postcss-nesting: ^13.0.1
   postcss-pow: ^1.0.1
-  preact: ^10.24.3
+  preact: ^10.25.0
   prettier: ^3.3.3
   prettier-plugin-astro: ^0.14.1
   react: ^18.3.1
@@ -50,7 +50,7 @@ catalog:
   svelte-check: ^4.0.7
   svelte-preprocess: ^6.0.3
   tailwindcss: ^3.4.3
-  typescript: ^5.6.3
+  typescript: ^5.7.2
   vite: ^5.4.11
   vitest: ^2.1.5
   vue: ^3.5.13
