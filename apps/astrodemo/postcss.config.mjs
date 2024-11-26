@@ -7,7 +7,10 @@ import postcssJitProps from 'postcss-jit-props';
 import postcssNesting from 'postcss-nesting';
 import postcssPow from 'postcss-pow';
 import process from 'process';
+
+// const isProd = import.meta.env.PROD;
 const isDev = process.env.NODE_ENV === 'development';
+const isTest = process.env.NODE_ENV === 'test';
 
 const devConfig = {
   plugins: [postcssImport, postcssNesting, postcssPow, postcssCustomMedia],
@@ -16,7 +19,6 @@ const devConfig = {
 const prodConfig = {
   plugins: [
     postcssImport,
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     postcssJitProps(OpenProps),
     postcssNesting,
     postcssPow,
@@ -25,6 +27,6 @@ const prodConfig = {
   ],
 };
 
-const config = isDev ? devConfig : prodConfig;
+const config = isDev || isTest ? devConfig : prodConfig;
 
 export default config;

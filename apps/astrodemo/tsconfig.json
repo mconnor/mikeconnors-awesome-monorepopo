@@ -1,12 +1,14 @@
 {
-  "extends": "@repo/typescript-config/lit.json",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "verbatimModuleSyntax": true,
-    "declaration": true,
-    "declarationMap": true,
+    "rootDir": ".",
     "outDir": "dist",
-    "rootDir": "."
+    //It would be an error to specify rootDir as core and include as * because it creates a file (helpers.ts) that would need to be emitted outside the outDir (i.e. ../helpers.js).
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false
   },
-  "include": ["src", "**/*.d.ts", "*.config.mjs"],
-  "exclude": ["dist", ".astro", ".turbo", ".vercel", ".frontmatter/"]
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", ".astro", ".turbo", ".vercel"] //exclude only changes which files are included as a result of the include setting.
 }
