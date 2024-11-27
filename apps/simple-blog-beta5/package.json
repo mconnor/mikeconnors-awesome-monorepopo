@@ -19,17 +19,18 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/mdx": "4.0.0-beta.3",
+    "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
     "@astrojs/sitemap": "catalog:",
-    "@astrojs/vercel": "8.0.0-beta.3",
-    "@repo/ui-lit": "workspace:*",
-    "astro": "5.0.0-beta.7"
+    "@astrojs/vercel": "catalog:",
+    "@repo/styles": "workspace:*",
+    "astro": "catalog:",
+    "lit": "^3.2.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.15.0",
+    "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
