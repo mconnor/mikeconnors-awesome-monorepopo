@@ -13,7 +13,6 @@ interface Props {
 }
 
 const {
-  image = '/placeholder-social.jpg',
   title = SITE_TITLE,
   description = SITE_DESCRIPTION,
 } = Astro.props;
@@ -22,7 +21,7 @@ const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 
 <html lang="en" data-theme="toucan">
   <head>
-    <BaseHead title={title} description={description} image={image} />
+    <BaseHead title={title} description={description} />
   </head>
 
   <body>
