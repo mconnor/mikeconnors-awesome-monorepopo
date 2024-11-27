@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @module frame-l
  * @description

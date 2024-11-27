@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @module imposter-l
  * @description

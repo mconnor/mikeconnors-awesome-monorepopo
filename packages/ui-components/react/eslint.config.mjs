@@ -1,6 +1,6 @@
 // // import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
 import reactConfig from '@repo/eslint-config/react.lint.config';
-import tsLint from '@repo/eslint-config/ts.lint.config';
+import tsLint from '@repo/eslint-config/ts-lint';
 // import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
 
 // import { Linter } from 'eslint';

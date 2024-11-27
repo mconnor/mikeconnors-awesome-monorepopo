@@ -3,7 +3,9 @@
   "compilerOptions": {
     "rootDir": ".",
     "strict": true,
-    "esModuleInterop": false
+    "esModuleInterop": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "files": ["jsx.d.ts"],
   "include": ["src/**/*.tsx", "*.config.*"],

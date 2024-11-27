@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @module sidebar-l
  * @description
@@ -30,11 +32,11 @@ export default class Sidebar extends HTMLElement {
           gap: ${this.space};
           ${this.noStretch ? 'align-items: flex-start;' : ''}
         }
-    
+
         [data-i="${this.i}"] > * {
           ${this.sideWidth ? `flex-basis: ${this.sideWidth};` : ''}
         }
-    
+
         [data-i="${this.i}"] > ${this.side !== 'left' ? `:first-child` : `:last-child`} {
           flex-basis: 0;
           flex-grow: 999;

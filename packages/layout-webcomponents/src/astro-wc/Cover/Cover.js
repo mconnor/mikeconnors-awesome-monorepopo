@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @module cover-l
  * @description
