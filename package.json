@@ -30,7 +30,7 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
-    "turbo": "^2.3.2"
+    "turbo": "^2.3.3"
   },
   "engines": {
     "node": ">= 22.9.0",
