@@ -95,9 +95,4 @@ function padHun(val: number) {
   return String(val).padStart(2, '0');
 }
 
-declare global {
-  interface HTMLElementTagNameMap {
-    'my-timer': Timer;
-  }
-}
 /* playground-fold-end */

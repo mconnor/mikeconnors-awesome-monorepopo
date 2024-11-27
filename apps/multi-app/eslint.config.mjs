@@ -1,13 +1,24 @@
-import astroConfig from '@repo/eslint-config/astro.lint.config';
-// import reactConfig from '@repo/eslint-config/react.lint.config';
-// import svelte from '@repo/eslint-config/svelteApp.lint.config';
-import tsLint from '@repo/eslint-config/ts.lint.config';
-// import vueConfig from '@repo/eslint-config/vue.lint.config';
+import astro from '@repo/eslint-config/astroLint';
+import litConfig from '@repo/eslint-config/lit-config';
+import tsLint from '@repo/eslint-config/ts-lint-type-check';
+// import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
 
-export default [
+// import turboConfig from '@repo/eslint-config/turbo-config'
+
+// import jsonConfig from '@repo/eslint-config/json';
+// import regexConfig from '@repo/eslint-config/regex';
+
+/** @type {import('eslint').Linter.Config[]} */
+const config = [
   ...tsLint,
-  ...astroConfig,
-  // ...reactConfig,
-  // ...svelte,
-  // ...vueConfig,
+  ...astro,
+  ...litConfig,
+
+  {
+    rules: {
+      'no-useless-escape': 'warn',
+    },
+  },
 ];
+
+export default config;

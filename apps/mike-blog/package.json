@@ -47,7 +47,7 @@
     "@repo/styles": "workspace:*",
     "@sentry/astro": "^8.40.0",
     "@sentry/browser": "^8.40.0",
-    "@sentry/cli": "^2.39.0",
+    "@sentry/cli": "^2.39.1",
     "@sentry/vite-plugin": "^2.22.6",
     "astro": "5.0.0-beta.10",
     "astro-icon": "^1.1.4",
@@ -76,7 +76,7 @@
     "postcss-jit-props": "^1.0.14",
     "postcss-nesting": "^13.0.1",
     "postcss-pow": "^1.0.1",
-    "prettier": "^3.3.3",
+    "prettier": "^3.4.1",
     "stylelint": "^16.10.0",
     "typescript": "^5.7.2"
   },

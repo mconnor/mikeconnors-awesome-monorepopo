@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import {  type CollectionEntry,getCollection } from 'astro:content';
 
 import BlogCard from '#components/BlogCard/index.astro';
 import Layout from '#layouts/Layout.astro';
@@ -30,8 +30,10 @@ export async function getStaticPaths() {
   }));
 }
 
+type Props = CollectionEntry<'blog'>;
+
 const { id } = Astro.params;
-const { postsWithThisTag } = Astro.props;
+const { postsWithThisTag } = Astro.props as Props
 ---
 
 <Layout title={id}>

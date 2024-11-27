@@ -1,6 +1,11 @@
 {
   "extends": "@repo/typescript-config/vue.json",
-  "files": ["eslint.config.mjs"],
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "include": [
+    "**/*"
+  ],
+  "exclude": [
+    "dist",
+    "build",
+    "node_modules"
+  ]
 }

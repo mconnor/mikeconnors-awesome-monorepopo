@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/base",
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "dist",
@@ -7,22 +7,8 @@
     "skipLibCheck": true,
     "esModuleInterop": false,
     "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-    "strictNullChecks": true,
-    "allowJs": true
-    // "jsx": "preserve",
-    // "strictNullChecks": true
+    "useDefineForClassFields": false
   },
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
-  ],
-  "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".vercel",
-    ".frontmatter/",
-    "cache-directory"
-  ] //exclude only changes which files are included as a result of the include setting.
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", ".astro", ".turbo", ".vercel"] //exclude only changes which files are included as a result of the include setting.
 }

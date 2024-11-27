@@ -4,6 +4,7 @@
     "strictNullChecks": true,
     "outDir": "dist",
     "rootDir": ".",
+    "types": ["vite/client"],
     "jsx": "preserve" // Needed for TypeScript intellisense in the template inside Vue files
   },
   "files": [".astro/types.d.ts", "jsx.d.ts"],

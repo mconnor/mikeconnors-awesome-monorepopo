@@ -1,3 +1,3 @@
-import eslintConfigPrettier from 'eslint-config-prettier';
+import * as eslintConfigPrettier from 'eslint-config-prettier';
 
 export default eslintConfigPrettier;

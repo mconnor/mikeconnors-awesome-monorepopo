@@ -8,6 +8,7 @@ export default [
   {
     rules: {
       '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/unbound-method': 'off',
     },
   },
 ];
