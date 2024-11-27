@@ -234,7 +234,7 @@ importers:
         version: 4.0.9
       '@astrojs/vercel':
         specifier: 8.0.0-beta.3
-        version: 8.0.0-beta.3(@sveltejs/kit@2.8.4(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(astro@5.0.0-beta.10(@types/node@22.10.0)(jiti@2.3.3)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
+        version: 8.0.0-beta.3(@sveltejs/kit@2.8.4(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.7)(vite@6.0.0-beta.6(@types/node@22.10.0)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.0-beta.6(@types/node@22.10.0)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.0-beta.10(@types/node@22.10.0)(jiti@2.3.3)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
@@ -380,9 +380,6 @@ importers:
       '@repo/svelte':
         specifier: workspace:*
         version: link:../../packages/ui-components/svelte
-      '@repo/ui-lit':
-        specifier: workspace:*
-        version: link:../../packages/ui-components/ui-lit
       '@repo/vue':
         specifier: workspace:*
         version: link:../../packages/ui-components/vue
@@ -395,6 +392,9 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 5.0.0-beta.10(@types/node@22.10.0)(jiti@2.3.3)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1)
+      lit:
+        specifier: ^3.2.1
+        version: 3.2.1
       open-props:
         specifier: 'catalog:'
         version: 1.7.7
@@ -7750,26 +7750,6 @@ snapshots:
       - vue
       - vue-router
 
-  '@astrojs/vercel@8.0.0-beta.3(@sveltejs/kit@2.8.4(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(astro@5.0.0-beta.10(@types/node@22.10.0)(jiti@2.3.3)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
-    dependencies:
-      '@astrojs/internal-helpers': 0.4.1
-      '@vercel/analytics': 1.4.1(@sveltejs/kit@2.8.4(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
-      '@vercel/edge': 1.1.2
-      '@vercel/nft': 0.27.6
-      astro: 5.0.0-beta.10(@types/node@22.10.0)(jiti@2.3.3)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1)
-      esbuild: 0.24.0
-      fast-glob: 3.3.2
-    transitivePeerDependencies:
-      - '@remix-run/react'
-      - '@sveltejs/kit'
-      - encoding
-      - next
-      - react
-      - supports-color
-      - svelte
-      - vue
-      - vue-router
-
   '@astrojs/vercel@8.0.0-beta.3(@sveltejs/kit@2.8.4(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.7)(vite@6.0.0-beta.6(@types/node@22.10.0)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.0-beta.6(@types/node@22.10.0)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.0-beta.10(@types/node@22.10.0)(jiti@2.3.3)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.1
@@ -9820,13 +9800,6 @@ snapshots:
       '@sveltejs/kit': 2.8.4(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@6.0.0-beta.6(@types/node@22.10.0)(jiti@2.3.3)(yaml@2.6.1)))(svelte@4.2.19)(vite@6.0.0-beta.6(@types/node@22.10.0)(jiti@2.3.3)(yaml@2.6.1))
       react: 18.3.1
       svelte: 4.2.19
-      vue: 3.5.13(typescript@5.7.2)
-
-  '@vercel/analytics@1.4.1(@sveltejs/kit@2.8.4(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
-    optionalDependencies:
-      '@sveltejs/kit': 2.8.4(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.0))
-      react: 18.3.1
-      svelte: 5.2.7
       vue: 3.5.13(typescript@5.7.2)
 
   '@vercel/analytics@1.4.1(@sveltejs/kit@2.8.4(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.7)(vite@6.0.0-beta.6(@types/node@22.10.0)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.0-beta.6(@types/node@22.10.0)(jiti@2.3.3)(yaml@2.6.1)))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
