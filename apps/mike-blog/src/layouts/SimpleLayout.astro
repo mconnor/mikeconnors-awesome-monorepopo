@@ -4,7 +4,7 @@ import BaseHead from '#components/BaseHead.astro';
 interface Props {
   title?: string;
   description?: string;
-  image?: string;
+
   // maxW?: RmUnitType;
   children: unknown;
 }
@@ -19,7 +19,7 @@ const {
 
 <html lang="en" transition:animate="none" data-theme="light">
   <head>
-    <BaseHead title={title} description={description} image={image} />
+    <BaseHead title={title} description={description} />
   </head>
 
   <body>
