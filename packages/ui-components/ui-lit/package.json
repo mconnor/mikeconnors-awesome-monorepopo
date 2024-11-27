@@ -1,14 +1,14 @@
 {
   "name": "@repo/ui-lit",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "type": "module",
   "imports": {
     "#*": "./src/*"
   },
-  "./button": {
-    "types": "./src/Box/Box.ts",
-    "default": "./dist/Box.js"
+  "exports": {
+    "./Box": "./src/Box/index.astro",
+    "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro"
   },
   "scripts": {
     "test": "vitest",
@@ -16,8 +16,7 @@
     "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
     "inspect": "eslint . --inspect-config",
-    "check-types": "tsc --noEmit",
-    "build": "tsc ./src/Box/Box.ts --outDir ./dist"
+    "check-types": "tsc --noEmit"
   },
   "devDependencies": {
     "@open-wc/testing": "catalog:",
