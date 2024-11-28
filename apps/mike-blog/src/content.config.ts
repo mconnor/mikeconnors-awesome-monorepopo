@@ -1,9 +1,17 @@
+import { parse as parseToml } from '@std/toml/parse';
 import { file, glob } from 'astro/loaders';
-import { defineCollection } from 'astro:content';
-// import { data } from 'autoprefixer';
-import { parse as parseToml } from 'toml';
+import { defineCollection, reference, z } from 'astro:content';
+import blogSchema from './schemas/blog.ts';
+import authorSchema from './schemas/authors.ts';
 
-import { authorSchema, blogSchema } from './schemas';
+const authors = defineCollection({
+  loader: file('src/data/authors.toml', {
+    parser: (text) => parseToml(text).authors,
+  }),
+  schema: authorSchema,
+});
+
+// relatedPosts: z.array(reference('blog')).optional(),
 
 const blog = defineCollection({
   // type: 'content',
@@ -12,14 +20,6 @@ const blog = defineCollection({
     base: 'src/data/blog',
   }),
   schema: blogSchema,
-});
-
-const authors = defineCollection({
-  loader: file('src/data/authors.toml', {
-    parser: (text) => parseToml(text).authors,
-  }),
-
-  schema: authorSchema,
 });
 
 // const dogs = defineCollection({

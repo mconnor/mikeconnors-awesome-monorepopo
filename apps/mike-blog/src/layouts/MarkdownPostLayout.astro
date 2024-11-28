@@ -6,6 +6,7 @@ import '@repo/styles/css/markdown-style.css';
 import Stack from '@repo/layout-webcomponents/Stack';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
+import  {  getEntry } from 'astro:content';
 import { format } from 'date-fns';
 
 import TagContainer from '#components/TagContainer.astro';
@@ -29,12 +30,12 @@ const {
   description,
   pubDate,
   cover,
-  //  author,
+   author,
   tags,
-} = Astro.props as Props;
+} = Astro.props
 
-// const results = await getEntry('authors', author.id);
-// const { name } = results.data;
+const results = await getEntry('authors', author.id);
+const { name } = results.data;
 ---
 
 <!-- TODO: fix the date format -->
@@ -49,7 +50,7 @@ const {
     <Box borderWidth="1px"><h1>{title}</h1></Box>
 
     <Box borderWidth="1px">
-      <!-- Written by: {name}, -->
+      Written by: {name},
       {format(pubDate, 'd MMM, yyyy')}
     </Box>
 

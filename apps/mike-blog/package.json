@@ -49,6 +49,7 @@
     "@sentry/browser": "^8.40.0",
     "@sentry/cli": "^2.39.1",
     "@sentry/vite-plugin": "^2.22.6",
+    "@std/toml": "npm:@jsr/std__toml@^1.0.2",
     "astro": "5.0.0-beta.10",
     "astro-icon": "^1.1.4",
     "date-fns": "^4.1.0",
@@ -58,7 +59,6 @@
     "preact": "^10.25.0",
     "sanitize-html": "^2.13.1",
     "sharp": "^0.33.5",
-    "toml": "^3.0.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
