@@ -16,6 +16,13 @@ export default defineConfig({
   //     SENTRY_AUTH_TOKEN: envField.string({ context: "server", access: "private"}),
   //   }
   // }
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'viewport',
+  },
+  // experimental: {
+  //   clientPrerender: true,
+  // },
 
   site: 'https://staging.mikeconnor.tech/',
 
