@@ -19,6 +19,7 @@ const devConfig = {
 const prodConfig = {
   plugins: [
     postcssImport,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     postcssJitProps(OpenProps),
     postcssNesting,
     postcssPow,
