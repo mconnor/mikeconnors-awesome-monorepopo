@@ -30,7 +30,7 @@
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "5.0.0-beta.10",
+    "astro": "catalog:",
     "lit": "catalog:",
     "open-props": "catalog:"
   },
@@ -39,7 +39,7 @@
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "catalog:",
     "cssnano": "catalog:",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "postcss-custom-media": "catalog:",
     "postcss-html": "catalog:",
     "postcss-import": "catalog:",

@@ -27,7 +27,7 @@
   "dependencies": {
     "@astrojs/check": "catalog:",
     "@astrojs/tailwind": "catalog:",
-    "astro": "5.0.0-beta.8",
+    "astro": "catalog:",
     "astro-icon": "catalog:",
     "tailwindcss": "catalog:"
   },
@@ -35,7 +35,8 @@
     "@iconify-json/mdi": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.15.0",
+    "eslint": "catalog:",
+    "postcss": "^8.4.49",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },

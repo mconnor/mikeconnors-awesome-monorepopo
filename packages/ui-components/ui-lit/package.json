@@ -21,9 +21,9 @@
   "devDependencies": {
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
     "@repo/styles": "workspace:*",
-    "eslint": "^9.15.0",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^9.16.0",
     "prettier": "catalog:",
     "typescript": "catalog:"
   },

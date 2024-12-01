@@ -25,11 +25,12 @@
     "@astrojs/vercel": "catalog:",
     "@repo/styles": "workspace:*",
     "astro": "catalog:",
-    "lit": "^3.2.1"
+    "lit": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@repo/postcss-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "typescript": "catalog:",

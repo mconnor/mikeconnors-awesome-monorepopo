@@ -41,8 +41,8 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.15.0",
-    "typescript": "catalog:",
-    "prettier": "catalog:"
+    "eslint": "^9.16.0",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
   }
 }

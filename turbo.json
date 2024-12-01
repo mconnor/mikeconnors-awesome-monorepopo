@@ -36,12 +36,12 @@
         "dummy"
       ]
     },
-    "format": {
+    "format": {},
+    "sync": {
       "dependsOn": [
-        "^format"
+        "^sync"
       ]
     },
-    "format:check": {},
     "//#format:root": {},
     "inspect": {},
     "fix": {
