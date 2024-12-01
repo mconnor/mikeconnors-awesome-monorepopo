@@ -14,7 +14,6 @@
     "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
     "format": "prettier --write .",
-    "format:check": "prettier --write .",
     "inspect": "eslint --inspect-config",
     "check-types": "svelte-check",
     "svelte-check": "svelte-check"
@@ -22,11 +21,11 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "prettier": "catalog:",
+    "prettier-plugin-svelte": "catalog:svelte5",
     "svelte-check": "catalog:",
-    "typescript": "catalog:",
-    "prettier-plugin-svelte": "catalog:svelte5"
+    "typescript": "catalog:"
   },
   "keywords": [
     "svelte",
