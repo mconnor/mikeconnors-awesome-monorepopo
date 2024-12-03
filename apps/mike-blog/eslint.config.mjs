@@ -2,7 +2,7 @@ import astro from '@repo/eslint-config/astroLint';
 import litConfig from '@repo/eslint-config/lit-config';
 import markdownConfig from '@repo/eslint-config/markdown';
 import tsLint from '@repo/eslint-config/ts-lint-type-check';
-// import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
+// import tsLint from '@repo/eslint-config/ts-lint-type-check';
 
 // import turboConfig from '@repo/eslint-config/turbo-config'
 
@@ -16,11 +16,12 @@ const config = [
   ...litConfig,
   ...markdownConfig,
   // turboConfig,
-  {
-    rules: {
-      'no-useless-escape': 'warn',
-    },
-  },
+  // {
+  //   rules: {
+  //     'no-useless-escape': 'warn',
+  //     '@typescript-eslint/no-unsafe-assignment': 'warn',
+  //   },
+  // },
 ];
 
 export default config;

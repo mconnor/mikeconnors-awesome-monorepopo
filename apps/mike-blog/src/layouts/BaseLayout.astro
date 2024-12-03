@@ -1,7 +1,7 @@
 ---
 import type { RmUnitType } from '@repo/styles/Types';
 
-import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.ts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
 import BaseHead from '#components/BaseHead.astro';
 
 interface Props {
@@ -12,10 +12,7 @@ interface Props {
   description?: string;
 }
 
-const {
-  title = SITE_TITLE,
-  description = SITE_DESCRIPTION,
-} = Astro.props;
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 ---
 

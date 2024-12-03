@@ -1,32 +1,37 @@
 ---
 import AstroHeart from '#astro-web-component/HeartWebComponent.astro';
+import Warning from '#components/Warning.astro';
 import Layout from '#layouts/Layout.astro';
 import Box from '#wc-lit/Box/index.astro';
-import LitHeartButton from '#wc-lit/HeartButton/index.astro';
+import HeartButton from '#wc-lit/HeartButton/index.astro';
 import MyElement from '#wc-lit/MyElement/index.astro';
+
+const WARNING = `This Astro integration to enable server-side rendering and client-side hydration for your Lit custom elements was deprecated in Astro 5.0.`;
 ---
 
 <Layout>
   <Box>
-    <Box borderStyle="double">Astro Web component</Box>
-    <Box> <AstroHeart /></Box>
-    <p>
-      Astro components are HTML-only templating components with no client-side
-      runtime. But, you can use a <e>&lt;script&gt;</e> tag in your Astro component
-      template to send JavaScript to the browser that executes in the global scope.
-    </p>
-  </Box>
-
-  <Box>
     <Box>
-      <Box>Lit Web component</Box>
-      <Box> <LitHeartButton>CLICK ME</LitHeartButton></Box>
+      <h4>Web</h4>
+      <AstroHeart /></Box
+    >
+    <Box><HeartButton /></Box>
+
+    <Box>
+      <h4>This uses <a href="https://lit.dev/">lit</a></h4>
+
+      <HeartButton />
+
+      <Warning copy={WARNING} />
     </Box>
     <Box>
-      <Box invert>Lit Web component again</Box>
-      <Box> <LitHeartButton>CLICK ME</LitHeartButton></Box>
+      <p>
+        Astro components are HTML-only templating components with no client-side
+        runtime. But, you can use a <e>&lt;script&gt;</e> tag in your Astro component
+        template to send JavaScript to the browser that executes in the global scope.
+      </p>
     </Box>
-  </Box>
 
-  <MyElement> this is my-element</MyElement>
+    <MyElement>this is my-element</MyElement>
+  </Box>
 </Layout>

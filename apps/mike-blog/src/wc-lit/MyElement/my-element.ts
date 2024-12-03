@@ -17,6 +17,7 @@ import { styleMap } from 'lit/directives/style-map.js';
  */
 
 const mainColor = css`var(--text-1)`;
+
 @customElement('my-element')
 export class MyElement extends LitElement {
   static override styles = css`
@@ -81,8 +82,8 @@ export class MyElement extends LitElement {
   }
 }
 
-// declare global {
-//   interface HTMLElementTagNameMap {
-//     'my-element': MyElement;
-//   }
-// }
+declare global {
+  interface HTMLElementTagNameMap {
+    'my-element': MyElement;
+  }
+}

@@ -4,7 +4,7 @@ import { z } from 'astro:content';
 
 import TagContainer from '#components/TagContainer.astro';
 import Layout from '#layouts/Layout.astro';
-import { tagCountTypeSchema, zTags } from '#schemas/index.ts';
+import { tagCountTypeSchema, zTags } from '#schemas/index.js';
 
 const allBlogPost = await getCollection('blog');
 
@@ -59,10 +59,8 @@ if (!tagCountSuccess) {
 
 <Layout title="Tag Index">
   {
-    zUniqueTagArray.success && tagCountSuccess ? (
+    zUniqueTagArray.success && tagCountSuccess ?
       <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />
-    ) : (
-      <p>No tags</p>
-    )
+    : <p>No tags</p>
   }
 </Layout>

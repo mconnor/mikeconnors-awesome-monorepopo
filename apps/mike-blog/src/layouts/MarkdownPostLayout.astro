@@ -6,7 +6,7 @@ import '@repo/styles/css/markdown-style.css';
 import Stack from '@repo/layout-webcomponents/Stack';
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import  {  getEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
 import { format } from 'date-fns';
 
 import TagContainer from '#components/TagContainer.astro';
@@ -25,17 +25,14 @@ type Props = CollectionEntry<'blog'>['data'];
 // type Props = CollectionEntry<'blog'>['data'];
 // const { blogData } = Astro.props;
 
-const {
-  title,
-  description,
-  pubDate,
-  cover,
-   author,
-  tags,
-} = Astro.props
+const { title, description, pubDate, cover, author, tags } = Astro.props;
 
-const results = await getEntry('authors', author.id);
-const { name } = results.data;
+const authorResults = await getEntry('authors', author.id);
+const { name } = authorResults.data;
+
+// const { data :  relatedPostData} = getEntries('blog', authorResults.data.relatedPosts);
+
+
 ---
 
 <!-- TODO: fix the date format -->
@@ -47,12 +44,16 @@ const { name } = results.data;
       <Image width="600" height="300" src={cover.src} alt={cover.alt} />
     </Box>
 
-    <Box borderWidth="1px"><h1>{title}</h1></Box>
+    <Box invert borderWidth="1px"><h1>{title}</h1></Box>
 
     <Box borderWidth="1px">
       Written by: {name},
       {format(pubDate, 'd MMM, yyyy')}
     </Box>
+
+
+
+
 
     {
       tags && (

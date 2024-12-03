@@ -1,0 +1,32 @@
+---
+import Box from '#wc-lit/Box/index.astro';
+
+import MyIcon from './MyIcon.astro';
+
+interface Props {
+  headline?: string;
+  copy: string;
+}
+
+const { copy, headline = 'Warning' } = Astro.props;
+---
+
+<Box invert>
+  <div>
+    <MyIcon name="mdi:warning-octagram-outline" size={40} title={headline} />
+    <h4>{headline}</h4>
+  </div>
+
+  <p>{copy}</p>
+</Box>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  p {
+    margin-left: 1rem;
+  }
+</style>

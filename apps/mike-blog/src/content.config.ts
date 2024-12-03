@@ -1,12 +1,18 @@
 import { parse as parseToml } from '@std/toml/parse';
 import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
-import blogSchema from './schemas/blog.ts';
-import authorSchema from './schemas/authors.ts';
+
+import announcementsSchema from './schemas/announcements';
+import authorSchema from './schemas/authors';
+import blogSchema from './schemas/blog';
+
+type ParserReturnType =
+  | Record<string, Record<string, unknown>>
+  | Record<string, unknown>[];
 
 const authors = defineCollection({
   loader: file('src/data/authors.toml', {
-    parser: (text) => parseToml(text).authors,
+    parser: (text) => parseToml(text).authors as ParserReturnType,
   }),
   schema: authorSchema,
 });
@@ -22,6 +28,13 @@ const blog = defineCollection({
   schema: blogSchema,
 });
 
+const announcements = defineCollection({
+  loader: glob({
+    base: './src/announcements',
+    pattern: '**/*.md',
+  }),
+  schema: announcementsSchema,
+});
 // const dogs = defineCollection({
 //   loader: file("src/data/authors.toml", { parser: (text) => parseToml(text).dogs }),
 //   schema: /* ... */
@@ -41,4 +54,4 @@ const blog = defineCollection({
 // 	schema: /* ... */
 //   });
 
-export const collections = { blog, authors };
+export const collections = { blog, authors, announcements };

@@ -2,7 +2,7 @@ import { css, html, LitElement } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 
 /* playground-fold */
-import { pause, play, replay } from './icons.ts';
+import { pause, play, replay } from './icons';
 /* playground-fold-end */
 
 @customElement('my-timer')
@@ -97,7 +97,7 @@ function padHun(val: number) {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'my-timer': Timer;
+    'my-timer': MyTimer;
   }
 }
 /* playground-fold-end */

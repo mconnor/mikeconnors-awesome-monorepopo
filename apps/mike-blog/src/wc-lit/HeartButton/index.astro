@@ -1,13 +1,23 @@
+---
+
+---
+
+<h2>A Web Component rendering client side</h2>
+
+<heart-button>
+  <slot />
+</heart-button>
+
 <script>
   import { css, html, LitElement } from 'lit';
   import { customElement, property } from 'lit/decorators.js';
 
   // import { styleMap } from 'lit/directives/style-map.js';
   // import { classMap } from 'lit/directives/class-map.js';
-  import { wcStyles } from '../wcStyles/wc-styles.ts';
+  import { wcStyles } from '../wcStyles/wc-styles';
 
   @customElement('heart-button')
-  export class HeartButton extends LitElement {
+  export class LitHeartButton extends LitElement {
     static styles = [
       wcStyles,
       css`
@@ -45,17 +55,9 @@
     }
   }
 
-  // declare global {
-  //   interface HTMLElementTagNameMap {
-  //     'heart-button': HeartButton;
-  //   }
-  // }
+  declare global {
+    interface HTMLElementTagNameMap {
+      'heart-button': LitHeartButton;
+    }
+  }
 </script>
-
-<h2>A Web Component rendering client side</h2>
-<heart-button>
-  <slot />
-</heart-button>
-
-<!-- Astro components do not render in the client and should not have a hydration directive.
- Please use a framework component for client rendering. -->

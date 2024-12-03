@@ -9,7 +9,6 @@ import Header from '#components/Header.astro';
 import BaseLayout from './BaseLayout.astro';
 
 interface Props {
-
   maxW?: RmUnitType;
   children: unknown;
   title?: string;
@@ -25,5 +24,4 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
     <Center max={maxW} transition:animate="slide"><slot /></Center>
     <Footer />
   </Cover>
-
 </BaseLayout>
