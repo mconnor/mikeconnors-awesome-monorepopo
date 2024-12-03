@@ -11,7 +11,7 @@ type ParserReturnType =
   | Record<string, unknown>[];
 
 const authors = defineCollection({
-  loader: file('src/data/authors.toml', {
+  loader: file('./src/content/authors.toml', {
     parser: (text) => parseToml(text).authors as ParserReturnType,
   }),
   schema: authorSchema,
@@ -23,14 +23,14 @@ const blog = defineCollection({
   // type: 'content',
   loader: glob({
     pattern: ['**/*.md', '**/*.mdx'],
-    base: 'src/data/blog',
+    base: './src/content/blog',
   }),
   schema: blogSchema,
 });
 
 const announcements = defineCollection({
   loader: glob({
-    base: './src/announcements',
+    base: './src/content/announcements',
     pattern: '**/*.md',
   }),
   schema: announcementsSchema,
