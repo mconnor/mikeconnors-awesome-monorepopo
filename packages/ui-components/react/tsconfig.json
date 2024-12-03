@@ -8,6 +8,6 @@
     "jsxImportSource": "react"
   },
   "files": ["jsx.d.ts"],
-  "include": ["src/**/*.tsx", "*.config.*"],
+  "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }

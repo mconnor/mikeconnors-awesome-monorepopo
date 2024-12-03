@@ -31,8 +31,6 @@ const authorResults = await getEntry('authors', author.id);
 const { name } = authorResults.data;
 
 // const { data :  relatedPostData} = getEntries('blog', authorResults.data.relatedPosts);
-
-
 ---
 
 <!-- TODO: fix the date format -->
@@ -50,10 +48,6 @@ const { name } = authorResults.data;
       Written by: {name},
       {format(pubDate, 'd MMM, yyyy')}
     </Box>
-
-
-
-
 
     {
       tags && (

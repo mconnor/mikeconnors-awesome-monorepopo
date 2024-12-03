@@ -30,7 +30,7 @@ catalog:
   astro-icon: ^1.1.4
   autoprefixer: ^10.4.20
   cssnano: ^7.0.6
-  eslint: ^9.15.0
+  eslint: ^9.16.0
   jest: ^29.7.0
   lit: ^3.2.1
   open-props: ^1.7.7

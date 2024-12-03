@@ -1,12 +1,10 @@
+import type { ReactNode } from 'react';
+
 interface IProps {
   mathFunc: () => void;
-  children: JSX.Element;
+  children: ReactNode;
 }
 
 export function Button({ mathFunc, children }: IProps) {
-  return (
-    <>
-      <button onClick={mathFunc}>{children}</button>
-    </>
-  );
+  return <button onClick={mathFunc}>{children}</button>;
 }

@@ -1,6 +1,5 @@
 import wc from 'eslint-plugin-wc';
 import lit from 'eslint-plugin-lit';
-import { rules } from 'eslint-plugin-astro';
 
 export default [
   wc.configs['flat/recommended'],

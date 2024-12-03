@@ -3,7 +3,7 @@
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 
-import { Button } from '#components/Button.tsx';
+import { Button } from './components/Button';
 
 interface Props {
   children?: ReactNode;

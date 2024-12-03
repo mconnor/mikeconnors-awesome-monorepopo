@@ -12,7 +12,7 @@ export const prerender = true;
 
 export async function getStaticPaths() {
   // const posts = await getCollection('blog', ({ data }) => data.draft !== true);
-  const posts = await getCollection('blog')
+  const posts = await getCollection('blog');
 
   return posts.map((post) => ({
     params: { id: post.id },
@@ -20,13 +20,13 @@ export async function getStaticPaths() {
   }));
 }
 // satisfies GetStaticPaths;
-type Props = CollectionEntry<'blog'>
+type Props = CollectionEntry<'blog'>;
 // type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const blogPost = Astro.props
+const blogPost = Astro.props;
 
 const { data } = blogPost;
-const { Content } =  await render(blogPost);
+const { Content } = await render(blogPost);
 ---
 
 <Layout {...data}>

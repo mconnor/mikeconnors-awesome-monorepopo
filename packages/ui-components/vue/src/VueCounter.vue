@@ -6,13 +6,9 @@
 		You can read more about this issue here: https://github.com/johnsoncodehk/volar/discussions/592
 	-->
   <div class="counter">
-    <button @click="subtract()">
-      -
-    </button>
+    <button @click="subtract()">-</button>
     <pre>{{ count }}</pre>
-    <button @click="add()">
-      +
-    </button>
+    <button @click="add()">+</button>
   </div>
   <div class="counter-message">
     <slot />

@@ -3,11 +3,9 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "pnpmCatalogLens.enabled": true,
-  "prettier.documentSelectors": [
-    "**/*.astro"
-  ],
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "eslint.validate": [
     "javascript",

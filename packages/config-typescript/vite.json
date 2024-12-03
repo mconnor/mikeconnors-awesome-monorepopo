@@ -23,13 +23,5 @@
     "**/*.d.ts",
     "*.config.mjs",
     "*.config.js",
-  ],
-  "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".vercel",
-    ".frontmatter/",
-    "cache-directory"
   ]
 }

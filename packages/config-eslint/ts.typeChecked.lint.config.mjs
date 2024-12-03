@@ -4,8 +4,8 @@ import tseslint from 'typescript-eslint';
 
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
-// import prettier from 'eslint-config-prettier';
-import prettier from 'eslint-plugin-prettier/recommended';
+import prettier from 'eslint-config-prettier';
+
 import simpleImportSort from './simple.imports.config.mjs';
 
 const config = tseslint.config(

@@ -1,5 +1,5 @@
 ---
-import {  getCollection } from 'astro:content';
+import { getCollection } from 'astro:content';
 
 import BlogCard from '#components/BlogCard/index.astro';
 import Layout from '#layouts/Layout.astro';
@@ -23,9 +23,7 @@ export async function getStaticPaths() {
   return uniqueTags.map((tag) => ({
     params: { id: tag },
     props: {
-      posts: publishsedPosts.filter(({ data }) =>
-        data.tags.includes(tag),
-      ),
+      posts: publishsedPosts.filter(({ data }) => data.tags.includes(tag)),
     },
   }));
 }
@@ -33,7 +31,7 @@ export async function getStaticPaths() {
 // type Props = CollectionEntry<'blog'>;
 
 const { id } = Astro.params;
-const {posts} = Astro.props
+const { posts } = Astro.props;
 ---
 
 <Layout title={id}>
