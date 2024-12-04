@@ -35,7 +35,7 @@
     "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
-    "vitest": "catalog:"
+    "vitest": "^2.1.8"
   },
   "prettier": {
     "singleQuote": true,

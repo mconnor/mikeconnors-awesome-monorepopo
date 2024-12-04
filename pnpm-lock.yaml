@@ -13,8 +13,8 @@ catalogs:
       specifier: 4.0.1
       version: 4.0.1
     '@astrojs/preact':
-      specifier: ^3.5.4
-      version: 3.5.4
+      specifier: ^4.0.0
+      version: 4.0.0
     '@astrojs/react':
       specifier: ^3.6.3
       version: 3.6.3
@@ -28,11 +28,11 @@ catalogs:
       specifier: ^5.7.2
       version: 5.7.3
     '@astrojs/tailwind':
-      specifier: ^5.1.2
-      version: 5.1.2
+      specifier: ^5.1.3
+      version: 5.1.3
     '@astrojs/vercel':
-      specifier: 8.0.0-beta.3
-      version: 8.0.0-beta.3
+      specifier: 8.0.0
+      version: 8.0.0
     '@astrojs/vue':
       specifier: ^4.5.2
       version: 4.5.2
@@ -42,6 +42,9 @@ catalogs:
     '@open-wc/testing':
       specifier: ^4.0.0
       version: 4.0.0
+    '@preact/signals':
+      specifier: ^1.3.1
+      version: 1.3.1
     '@shoelace-style/shoelace':
       specifier: ^2.17.1
       version: 2.18.0
@@ -99,6 +102,9 @@ catalogs:
     prettier:
       specifier: ^3.4.1
       version: 3.4.1
+    prettier-plugin-astro:
+      specifier: ^0.14.1
+      version: 0.14.1
     react:
       specifier: ^18.3.1
       version: 18.3.1
@@ -115,14 +121,11 @@ catalogs:
       specifier: ^6.0.3
       version: 6.0.3
     tailwindcss:
-      specifier: ^3.4.3
-      version: 3.4.15
+      specifier: ^3.4.16
+      version: 3.4.16
     typescript:
       specifier: ^5.7.2
       version: 5.7.2
-    vitest:
-      specifier: ^2.1.5
-      version: 2.1.5
     vue:
       specifier: ^3.5.13
       version: 3.5.13
@@ -131,8 +134,8 @@ catalogs:
       version: 3.23.8
   svelte5:
     prettier-plugin-svelte:
-      specifier: ^3.2.8
-      version: 3.2.8
+      specifier: ^3.3.2
+      version: 3.3.2
 
 importers:
 
@@ -155,7 +158,7 @@ importers:
         version: 4.0.9
       '@astrojs/vercel':
         specifier: 'catalog:'
-        version: 8.0.0-beta.3(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
+        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
@@ -352,7 +355,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
       '@astrojs/preact':
         specifier: 'catalog:'
-        version: 3.5.4(@babel/core@7.26.0)(@types/node@22.10.1)(preact@10.25.1)
+        version: 4.0.0(@babel/core@7.26.0)(@types/node@22.10.1)(jiti@2.3.3)(preact@10.25.1)(yaml@2.6.1)
       '@astrojs/react':
         specifier: 'catalog:'
         version: 3.6.3(@types/node@22.10.1)(@types/react-dom@18.3.1)(@types/react@18.3.12)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -361,7 +364,7 @@ importers:
         version: 5.7.3(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(svelte@4.2.19)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.1))
       '@astrojs/vercel':
         specifier: 'catalog:'
-        version: 8.0.0-beta.3(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@4.2.19)(vue@3.5.13(typescript@5.7.2))
+        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@4.2.19)(vue@3.5.13(typescript@5.7.2))
       '@astrojs/vue':
         specifier: 'catalog:'
         version: 4.5.2(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(rollup@4.28.0)(vite@5.4.11(@types/node@22.10.1))(vue@3.5.13(typescript@5.7.2))
@@ -469,13 +472,13 @@ importers:
   apps/preact-astro-app:
     dependencies:
       '@astrojs/check':
-        specifier: ^0.9.4
+        specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
       '@astrojs/preact':
-        specifier: ^4.0.0
+        specifier: 'catalog:'
         version: 4.0.0(@babel/core@7.26.0)(@types/node@22.10.1)(jiti@2.3.3)(preact@10.25.1)(yaml@2.6.1)
       '@preact/signals':
-        specifier: ^1.3.1
+        specifier: 'catalog:'
         version: 1.3.1(preact@10.25.1)
       '@repo/layout-webcomponents':
         specifier: workspace:*
@@ -484,7 +487,7 @@ importers:
         specifier: ^5.0.2
         version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       preact:
-        specifier: ^10.25.1
+        specifier: 'catalog:'
         version: 10.25.1
       typescript:
         specifier: 'catalog:'
@@ -497,13 +500,13 @@ importers:
         specifier: workspace:*
         version: link:../../packages/config-typescript
       eslint:
-        specifier: ^9.16.0
+        specifier: 'catalog:'
         version: 9.16.0(jiti@2.3.3)
       prettier:
         specifier: 'catalog:'
         version: 3.4.1
       prettier-plugin-astro:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1
 
   apps/releaseBlog:
@@ -544,7 +547,7 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
       '@astrojs/tailwind':
         specifier: 'catalog:'
-        version: 5.1.2(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.15)
+        version: 5.1.3(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.16)
       astro:
         specifier: 'catalog:'
         version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
@@ -553,7 +556,7 @@ importers:
         version: 1.1.4
       tailwindcss:
         specifier: 'catalog:'
-        version: 3.4.15
+        version: 3.4.16
     devDependencies:
       '@iconify-json/mdi':
         specifier: 'catalog:'
@@ -593,7 +596,7 @@ importers:
         version: 3.2.1
       '@astrojs/vercel':
         specifier: 'catalog:'
-        version: 8.0.0-beta.3(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
+        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
       '@repo/styles':
         specifier: workspace:*
         version: link:../../packages/styles
@@ -626,8 +629,8 @@ importers:
         specifier: 'catalog:'
         version: 5.7.2
       vitest:
-        specifier: 'catalog:'
-        version: 2.1.5(@types/node@22.10.1)
+        specifier: ^2.1.8
+        version: 2.1.8(@types/node@22.10.1)
 
   packages/config-eslint:
     dependencies:
@@ -763,11 +766,8 @@ importers:
   packages/config-typescript:
     devDependencies:
       '@vue/tsconfig':
-        specifier: ^0.6.0
-        version: 0.6.0(typescript@5.7.2)(vue@3.5.13(typescript@5.7.2))
-      prettier-plugin-astro:
-        specifier: ^0.14.1
-        version: 0.14.1
+        specifier: ^0.7.0
+        version: 0.7.0(typescript@5.7.2)(vue@3.5.13(typescript@5.7.2))
 
   packages/layout-webcomponents:
     dependencies:
@@ -911,7 +911,7 @@ importers:
         version: 0.14.1
       prettier-plugin-svelte:
         specifier: catalog:svelte5
-        version: 3.2.8(prettier@3.4.1)(svelte@5.2.7)
+        version: 3.3.2(prettier@3.4.1)(svelte@5.2.7)
       svelte-check:
         specifier: 'catalog:'
         version: 4.1.0(picomatch@4.0.2)(svelte@5.2.7)(typescript@5.7.2)
@@ -1032,12 +1032,6 @@ packages:
     peerDependencies:
       astro: ^5.0.0
 
-  '@astrojs/preact@3.5.4':
-    resolution: {integrity: sha512-NCS88C3JV/ZaFlBLLzYGvAvSrHsO2kaBgxMNDf9c0/OSywyY9D2NOBHWmwmiMP8tBtDbW5f8sfyL0XrjhguKgw==}
-    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
-    peerDependencies:
-      preact: ^10.6.5
-
   '@astrojs/preact@4.0.0':
     resolution: {integrity: sha512-B5Lo0wQPLUpVto7JQphBXlF0EZ3ocx8wFjXSH9DcXeh9jQRHifbYOKSi75lrvcgaxFzlhNYNZ5VWCCSFY624zw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
@@ -1075,10 +1069,10 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.190
       typescript: ^5.3.3
 
-  '@astrojs/tailwind@5.1.2':
-    resolution: {integrity: sha512-IvOF0W/dtHElcXvhrPR35nHmhyV3cfz1EzPitMGtU7sYy9Hci3BNK1To6FWmVuuNKPxza1IgCGetSynJZL7fOg==}
+  '@astrojs/tailwind@5.1.3':
+    resolution: {integrity: sha512-XF7WhXRhqEHGvADqc0kDtF7Yv/g4wAWTaj91jBBTBaYnc4+MQLH94duFfFa4NlTkRG40VQd012eF3MhO3Kk+bg==}
     peerDependencies:
-      astro: ^3.0.0 || ^4.0.0 || ^5.0.0-beta.0
+      astro: ^3.0.0 || ^4.0.0 || ^5.0.0
       tailwindcss: ^3.0.24
 
   '@astrojs/telemetry@3.1.0':
@@ -1093,11 +1087,6 @@ packages:
     resolution: {integrity: sha512-JEVt/J9NJ0unMCLh2fCOvr9M6Mugph3SoNSzaRLR88hA6ckakHabSAMyd8fTFy4pogPH/puyQkiKak7nsHyM6g==}
     peerDependencies:
       astro: ^5.0.0
-
-  '@astrojs/vercel@8.0.0-beta.3':
-    resolution: {integrity: sha512-QawKiUFR6BTZGCjICyC58U7p/OAlumIsuXDT5MNOc7a6/psKPu0TUHc4aQ/TEUvCuZX0qhaAOg7NhixLNmn6KA==}
-    peerDependencies:
-      astro: ^5.0.0-alpha.8
 
   '@astrojs/vue@4.5.2':
     resolution: {integrity: sha512-gUu7J643LpuzQM5nrjWoYh6KeAy/CzS4OmeVZtRSJgV8UGfce2r4Q9P3+m37rQBdI/Dhrwn2lGVnmDwj1UbsPQ==}
@@ -2883,11 +2872,11 @@ packages:
       vite: ^5.0.0
       vue: ^3.2.25
 
-  '@vitest/expect@2.1.5':
-    resolution: {integrity: sha512-nZSBTW1XIdpZvEJyoP/Sy8fUg0b8od7ZpGDkTUcfJ7wz/VoZAFzFfLyxVxGFhUjJzhYqSbIpfMtl/+k/dpWa3Q==}
+  '@vitest/expect@2.1.8':
+    resolution: {integrity: sha512-8ytZ/fFHq2g4PJVAtDX57mayemKgDR6X3Oa2Foro+EygiOJHUXhCqBAAKQYYajZpFoIfvBCF1j6R6IYRSIUFuw==}
 
-  '@vitest/mocker@2.1.5':
-    resolution: {integrity: sha512-XYW6l3UuBmitWqSUXTNXcVBUCRytDogBsWuNXQijc00dtnU/9OqpXWp4OJroVrad/gLIomAq9aW8yWDBtMthhQ==}
+  '@vitest/mocker@2.1.8':
+    resolution: {integrity: sha512-7guJ/47I6uqfttp33mgo6ga5Gr1VnL58rcqYKyShoRK9ebu8T5Rs6HN3s1NABiBeVTdWNrwUMcHH54uXZBN4zA==}
     peerDependencies:
       msw: ^2.4.9
       vite: ^5.0.0
@@ -2897,23 +2886,20 @@ packages:
       vite:
         optional: true
 
-  '@vitest/pretty-format@2.1.5':
-    resolution: {integrity: sha512-4ZOwtk2bqG5Y6xRGHcveZVr+6txkH7M2e+nPFd6guSoN638v/1XQ0K06eOpi0ptVU/2tW/pIU4IoPotY/GZ9fw==}
-
   '@vitest/pretty-format@2.1.8':
     resolution: {integrity: sha512-9HiSZ9zpqNLKlbIDRWOnAWqgcA7xu+8YxXSekhr0Ykab7PAYFkhkwoqVArPOtJhPmYeE2YHgKZlj3CP36z2AJQ==}
 
-  '@vitest/runner@2.1.5':
-    resolution: {integrity: sha512-pKHKy3uaUdh7X6p1pxOkgkVAFW7r2I818vHDthYLvUyjRfkKOU6P45PztOch4DZarWQne+VOaIMwA/erSSpB9g==}
+  '@vitest/runner@2.1.8':
+    resolution: {integrity: sha512-17ub8vQstRnRlIU5k50bG+QOMLHRhYPAna5tw8tYbj+jzjcspnwnwtPtiOlkuKC4+ixDPTuLZiqiWWQ2PSXHVg==}
 
-  '@vitest/snapshot@2.1.5':
-    resolution: {integrity: sha512-zmYw47mhfdfnYbuhkQvkkzYroXUumrwWDGlMjpdUr4jBd3HZiV2w7CQHj+z7AAS4VOtWxI4Zt4bWt4/sKcoIjg==}
+  '@vitest/snapshot@2.1.8':
+    resolution: {integrity: sha512-20T7xRFbmnkfcmgVEz+z3AU/3b0cEzZOt/zmnvZEctg64/QZbSDJEVm9fLnnlSi74KibmRsO9/Qabi+t0vCRPg==}
 
-  '@vitest/spy@2.1.5':
-    resolution: {integrity: sha512-aWZF3P0r3w6DiYTVskOYuhBc7EMc3jvn1TkBg8ttylFFRqNN2XGD7V5a4aQdk6QiUzZQ4klNBSpCLJgWNdIiNw==}
+  '@vitest/spy@2.1.8':
+    resolution: {integrity: sha512-5swjf2q95gXeYPevtW0BLk6H8+bPlMb4Vw/9Em4hFxDcaOxS+e0LOX4yqNxoHzMR2akEB2xfpnWUzkZokmgWDg==}
 
-  '@vitest/utils@2.1.5':
-    resolution: {integrity: sha512-yfj6Yrp0Vesw2cwJbP+cl04OC+IHFsuQsrsJBL9pyGeQXE56v1UAOQco+SR55Vf1nQzfV0QJg1Qum7AaWUwwYg==}
+  '@vitest/utils@2.1.8':
+    resolution: {integrity: sha512-dwSoui6djdwbfFmIgbIjX2ZhIoG7Ex/+xpxyiEgIGzjliY8xGkcpITKTlp6B4MgtGkF2ilvm97cPM96XZaAgcA==}
 
   '@volar/kit@2.4.10':
     resolution: {integrity: sha512-ul+rLeO9RlFDgkY/FhPWMnpFqAsjvjkKz8VZeOY5YCJMwTblmmSBlNJtFNxSBx9t/k1q80nEthLyxiJ50ZbIAg==}
@@ -2997,11 +2983,11 @@ packages:
   '@vue/shared@3.5.13':
     resolution: {integrity: sha512-/hnE/qP5ZoGpol0a5mDi45bOd7t3tjYJBjsgCsivow7D48cJeV5l05RD82lPqi7gRiphZM37rnhW1l6ZoCNNnQ==}
 
-  '@vue/tsconfig@0.6.0':
-    resolution: {integrity: sha512-MHXNd6lzugsEHvuA6l1GqrF5jROqUon8sP/HInLPnthJiYvB0VvpHMywg7em1dBZfFZNBSkR68qH37zOdRHmCw==}
+  '@vue/tsconfig@0.7.0':
+    resolution: {integrity: sha512-ku2uNz5MaZ9IerPPUyOHzyjhXoX2kVJaVf7hL315DC17vS6IiZRmmCPfggNbU16QTvM80+uYYy3eYJB59WCtvg==}
     peerDependencies:
       typescript: 5.x
-      vue: ^3.3.0
+      vue: ^3.4.0
     peerDependenciesMeta:
       typescript:
         optional: true
@@ -6006,8 +5992,8 @@ packages:
     resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
     engines: {node: ^14.15.0 || >=16.0.0}
 
-  prettier-plugin-svelte@3.2.8:
-    resolution: {integrity: sha512-PAHmmU5cGZdnhW4mWhmvxuG2PVbbHIxUuPOdUKvfE+d4Qt2d29iU5VWrPdsaW5YqVEE0nqhlvN4eoKmVMpIF3Q==}
+  prettier-plugin-svelte@3.3.2:
+    resolution: {integrity: sha512-kRPjH8wSj2iu+dO+XaUv4vD8qr5mdDmlak3IT/7AOgGIMRG86z/EHOLauFcClKEnOUf4A4nOA7sre5KrJD4Raw==}
     peerDependencies:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
@@ -6635,8 +6621,8 @@ packages:
     resolution: {integrity: sha512-w2sfv80nrAh2VCbqR5AK27wswXhqcck2AhfnNW76beQXskGZ1V12GwS//yYVa3d3fcvAip2OUnbDAjW2k3v9fA==}
     engines: {node: '>=10.0.0'}
 
-  tailwindcss@3.4.15:
-    resolution: {integrity: sha512-r4MeXnfBmSOuKUWmXe6h2CcyfzJCEk4F0pptO5jlnYSIViUkVmsawj80N5h2lO3gwcmSb4n3PuN+e+GC1Guylw==}
+  tailwindcss@3.4.16:
+    resolution: {integrity: sha512-TI4Cyx7gDiZ6r44ewaJmt0o6BrMCT5aK5e0rmJ/G9Xq3w7CX/5VXl/zIPEJZFUK5VEqwByyhqNPycPlvcK4ZNw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -6939,8 +6925,8 @@ packages:
     peerDependencies:
       vite: ^2.6.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-0
 
-  vite-node@2.1.5:
-    resolution: {integrity: sha512-rd0QIgx74q4S1Rd56XIiL2cYEdyWn13cunYBIuqh9mpmQr7gGS0IxXoP8R6OaZtNQQLyXSWbd4rXKYUbhFpK5w==}
+  vite-node@2.1.8:
+    resolution: {integrity: sha512-uPAwSr57kYjAUux+8E2j0q0Fxpn8M9VoyfGiRI8Kfktz9NcYMCenwY5RnZxnF1WTu3TGiYipirIzacLL3VVGFg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
@@ -7052,15 +7038,15 @@ packages:
       vite:
         optional: true
 
-  vitest@2.1.5:
-    resolution: {integrity: sha512-P4ljsdpuzRTPI/kbND2sDZ4VmieerR2c9szEZpjc+98Z9ebvnXmM5+0tHEKqYZumXqlvnmfWsjeFOjXVriDG7A==}
+  vitest@2.1.8:
+    resolution: {integrity: sha512-1vBKTZskHw/aosXqQUlVWWlGUxSJR8YtiyZDJAFeW2kPAeX6S3Sool0mjspO+kXLuxVWlEDDowBAeqeAQefqLQ==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@edge-runtime/vm': '*'
       '@types/node': ^18.0.0 || >=20.0.0
-      '@vitest/browser': 2.1.5
-      '@vitest/ui': 2.1.5
+      '@vitest/browser': 2.1.8
+      '@vitest/ui': 2.1.8
       happy-dom: '*'
       jsdom: '*'
     peerDependenciesMeta:
@@ -7525,28 +7511,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/preact@3.5.4(@babel/core@7.26.0)(@types/node@22.10.1)(preact@10.25.1)':
-    dependencies:
-      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
-      '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.0)
-      '@preact/preset-vite': 2.8.2(@babel/core@7.26.0)(preact@10.25.1)(vite@5.4.11(@types/node@22.10.1))
-      '@preact/signals': 1.3.1(preact@10.25.1)
-      babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.0)
-      preact: 10.25.1
-      preact-render-to-string: 6.5.11(preact@10.25.1)
-      vite: 5.4.11(@types/node@22.10.1)
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@types/node'
-      - less
-      - lightningcss
-      - sass
-      - sass-embedded
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-
   '@astrojs/preact@4.0.0(@babel/core@7.26.0)(@types/node@22.10.1)(jiti@2.3.3)(preact@10.25.1)(yaml@2.6.1)':
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
@@ -7622,13 +7586,13 @@ snapshots:
       - supports-color
       - vite
 
-  '@astrojs/tailwind@5.1.2(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.15)':
+  '@astrojs/tailwind@5.1.3(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.16)':
     dependencies:
       astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       autoprefixer: 10.4.20(postcss@8.4.49)
       postcss: 8.4.49
       postcss-load-config: 4.0.2(postcss@8.4.49)
-      tailwindcss: 3.4.15
+      tailwindcss: 3.4.16
     transitivePeerDependencies:
       - ts-node
 
@@ -7656,30 +7620,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vercel@8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
+  '@astrojs/vercel@8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@4.2.19)(vue@3.5.13(typescript@5.7.2))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.2
-      '@vercel/analytics': 1.4.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
-      '@vercel/edge': 1.1.2
-      '@vercel/nft': 0.27.7(rollup@4.28.0)
-      astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
-      esbuild: 0.24.0
-      fast-glob: 3.3.2
-    transitivePeerDependencies:
-      - '@remix-run/react'
-      - '@sveltejs/kit'
-      - encoding
-      - next
-      - react
-      - rollup
-      - supports-color
-      - svelte
-      - vue
-      - vue-router
-
-  '@astrojs/vercel@8.0.0-beta.3(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@4.2.19)(vue@3.5.13(typescript@5.7.2))':
-    dependencies:
-      '@astrojs/internal-helpers': 0.4.1
       '@vercel/analytics': 1.4.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(svelte@4.2.19)(vite@5.4.11(@types/node@22.10.1)))(react@18.3.1)(svelte@4.2.19)(vue@3.5.13(typescript@5.7.2))
       '@vercel/edge': 1.1.2
       '@vercel/nft': 0.27.7(rollup@4.28.0)
@@ -7698,9 +7641,9 @@ snapshots:
       - vue
       - vue-router
 
-  '@astrojs/vercel@8.0.0-beta.3(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
+  '@astrojs/vercel@8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
     dependencies:
-      '@astrojs/internal-helpers': 0.4.1
+      '@astrojs/internal-helpers': 0.4.2
       '@vercel/analytics': 1.4.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.2.7)(vite@5.4.11(@types/node@22.10.1)))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
       '@vercel/edge': 1.1.2
       '@vercel/nft': 0.27.7(rollup@4.28.0)
@@ -7719,9 +7662,9 @@ snapshots:
       - vue
       - vue-router
 
-  '@astrojs/vercel@8.0.0-beta.3(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
+  '@astrojs/vercel@8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))':
     dependencies:
-      '@astrojs/internal-helpers': 0.4.1
+      '@astrojs/internal-helpers': 0.4.2
       '@vercel/analytics': 1.4.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.2.7)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(react@18.3.1)(svelte@5.2.7)(vue@3.5.13(typescript@5.7.2))
       '@vercel/edge': 1.1.2
       '@vercel/nft': 0.27.7(rollup@4.28.0)
@@ -8842,26 +8785,6 @@ snapshots:
 
   '@polka/url@1.0.0-next.28': {}
 
-  '@preact/preset-vite@2.8.2(@babel/core@7.26.0)(preact@10.25.1)(vite@5.4.11(@types/node@22.10.1))':
-    dependencies:
-      '@babel/core': 7.26.0
-      '@babel/plugin-transform-react-jsx': 7.25.9(@babel/core@7.26.0)
-      '@babel/plugin-transform-react-jsx-development': 7.25.9(@babel/core@7.26.0)
-      '@prefresh/vite': 2.4.6(preact@10.25.1)(vite@5.4.11(@types/node@22.10.1))
-      '@rollup/pluginutils': 4.2.1
-      babel-plugin-transform-hook-names: 1.0.2(@babel/core@7.26.0)
-      debug: 4.3.7
-      kolorist: 1.8.0
-      magic-string: 0.30.5
-      node-html-parser: 6.1.13
-      resolve: 1.22.8
-      source-map: 0.7.4
-      stack-trace: 1.0.0-pre2
-      vite: 5.4.11(@types/node@22.10.1)
-    transitivePeerDependencies:
-      - preact
-      - supports-color
-
   '@preact/preset-vite@2.8.2(@babel/core@7.26.0)(preact@10.25.1)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1))':
     dependencies:
       '@babel/core': 7.26.0
@@ -8896,18 +8819,6 @@ snapshots:
       preact: 10.25.1
 
   '@prefresh/utils@1.2.0': {}
-
-  '@prefresh/vite@2.4.6(preact@10.25.1)(vite@5.4.11(@types/node@22.10.1))':
-    dependencies:
-      '@babel/core': 7.26.0
-      '@prefresh/babel-plugin': 0.5.1
-      '@prefresh/core': 1.5.3(preact@10.25.1)
-      '@prefresh/utils': 1.2.0
-      '@rollup/pluginutils': 4.2.1
-      preact: 10.25.1
-      vite: 5.4.11(@types/node@22.10.1)
-    transitivePeerDependencies:
-      - supports-color
 
   '@prefresh/vite@2.4.6(preact@10.25.1)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1))':
     dependencies:
@@ -9788,47 +9699,43 @@ snapshots:
       vite: 5.4.11(@types/node@22.10.1)
       vue: 3.5.13(typescript@5.7.2)
 
-  '@vitest/expect@2.1.5':
+  '@vitest/expect@2.1.8':
     dependencies:
-      '@vitest/spy': 2.1.5
-      '@vitest/utils': 2.1.5
+      '@vitest/spy': 2.1.8
+      '@vitest/utils': 2.1.8
       chai: 5.1.2
       tinyrainbow: 1.2.0
 
-  '@vitest/mocker@2.1.5(vite@5.4.11(@types/node@22.10.1))':
+  '@vitest/mocker@2.1.8(vite@5.4.11(@types/node@22.10.1))':
     dependencies:
-      '@vitest/spy': 2.1.5
+      '@vitest/spy': 2.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.14
     optionalDependencies:
       vite: 5.4.11(@types/node@22.10.1)
 
-  '@vitest/pretty-format@2.1.5':
-    dependencies:
-      tinyrainbow: 1.2.0
-
   '@vitest/pretty-format@2.1.8':
     dependencies:
       tinyrainbow: 1.2.0
 
-  '@vitest/runner@2.1.5':
+  '@vitest/runner@2.1.8':
     dependencies:
-      '@vitest/utils': 2.1.5
+      '@vitest/utils': 2.1.8
       pathe: 1.1.2
 
-  '@vitest/snapshot@2.1.5':
+  '@vitest/snapshot@2.1.8':
     dependencies:
-      '@vitest/pretty-format': 2.1.5
+      '@vitest/pretty-format': 2.1.8
       magic-string: 0.30.14
       pathe: 1.1.2
 
-  '@vitest/spy@2.1.5':
+  '@vitest/spy@2.1.8':
     dependencies:
       tinyspy: 3.0.2
 
-  '@vitest/utils@2.1.5':
+  '@vitest/utils@2.1.8':
     dependencies:
-      '@vitest/pretty-format': 2.1.5
+      '@vitest/pretty-format': 2.1.8
       loupe: 3.1.2
       tinyrainbow: 1.2.0
 
@@ -9992,7 +9899,7 @@ snapshots:
 
   '@vue/shared@3.5.13': {}
 
-  '@vue/tsconfig@0.6.0(typescript@5.7.2)(vue@3.5.13(typescript@5.7.2))':
+  '@vue/tsconfig@0.7.0(typescript@5.7.2)(vue@3.5.13(typescript@5.7.2))':
     optionalDependencies:
       typescript: 5.7.2
       vue: 3.5.13(typescript@5.7.2)
@@ -13719,7 +13626,7 @@ snapshots:
       prettier: 3.4.1
       sass-formatter: 0.7.9
 
-  prettier-plugin-svelte@3.2.8(prettier@3.4.1)(svelte@5.2.7):
+  prettier-plugin-svelte@3.3.2(prettier@3.4.1)(svelte@5.2.7):
     dependencies:
       prettier: 3.4.1
       svelte: 5.2.7
@@ -14553,7 +14460,7 @@ snapshots:
       string-width: 4.2.3
       strip-ansi: 6.0.1
 
-  tailwindcss@3.4.15:
+  tailwindcss@3.4.16:
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -14564,7 +14471,7 @@ snapshots:
       glob-parent: 6.0.2
       is-glob: 4.0.3
       jiti: 1.21.6
-      lilconfig: 2.1.0
+      lilconfig: 3.1.3
       micromatch: 4.0.8
       normalize-path: 3.0.0
       object-hash: 3.0.0
@@ -14891,7 +14798,7 @@ snapshots:
     dependencies:
       vite: 5.4.11(@types/node@22.10.1)
 
-  vite-node@2.1.5(@types/node@22.10.1):
+  vite-node@2.1.8(@types/node@22.10.1):
     dependencies:
       cac: 6.7.14
       debug: 4.3.7
@@ -14988,15 +14895,15 @@ snapshots:
     optionalDependencies:
       vite: 6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)
 
-  vitest@2.1.5(@types/node@22.10.1):
+  vitest@2.1.8(@types/node@22.10.1):
     dependencies:
-      '@vitest/expect': 2.1.5
-      '@vitest/mocker': 2.1.5(vite@5.4.11(@types/node@22.10.1))
+      '@vitest/expect': 2.1.8
+      '@vitest/mocker': 2.1.8(vite@5.4.11(@types/node@22.10.1))
       '@vitest/pretty-format': 2.1.8
-      '@vitest/runner': 2.1.5
-      '@vitest/snapshot': 2.1.5
-      '@vitest/spy': 2.1.5
-      '@vitest/utils': 2.1.5
+      '@vitest/runner': 2.1.8
+      '@vitest/snapshot': 2.1.8
+      '@vitest/spy': 2.1.8
+      '@vitest/utils': 2.1.8
       chai: 5.1.2
       debug: 4.3.7
       expect-type: 1.1.0
@@ -15008,7 +14915,7 @@ snapshots:
       tinypool: 1.0.2
       tinyrainbow: 1.2.0
       vite: 5.4.11(@types/node@22.10.1)
-      vite-node: 2.1.5(@types/node@22.10.1)
+      vite-node: 2.1.8(@types/node@22.10.1)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 22.10.1
