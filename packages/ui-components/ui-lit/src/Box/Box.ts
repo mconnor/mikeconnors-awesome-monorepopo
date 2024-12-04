@@ -25,6 +25,7 @@ export class Box extends LitElement {
         display: block;
         outline: 0.125rem solid transparent;
         outline-offset: -0.125rem;
+        background-color: inherit;
       }
 
       ::slotted {

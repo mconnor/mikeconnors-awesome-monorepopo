@@ -1,6 +1,8 @@
+// @ts-check
+
 import autoprefixer from 'autoprefixer';
 import nano from 'cssnano';
-import OpenProps from 'open-props';
+import * as OpenProps from 'open-props';
 import postcssCustomMedia from 'postcss-custom-media';
 import postcssImport from 'postcss-import';
 import postcssJitProps from 'postcss-jit-props';

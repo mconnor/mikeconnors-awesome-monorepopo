@@ -1,34 +1,8 @@
 import { z } from 'astro:content';
 
-const urlSchema = z.string().url();
-// const urlSchemaOptional = urlSchema.optional();
-const strSC = z.string();
-// const strSCOptional = strSC.optional();
-// const emailSchema = z.string().email();
-// const emailSchemaOptional = emailSchema.optional();
-
-const imageSrcSchema = z.object({ src: urlSchema, alt: strSC });
-
-// const refSchema = z.string(reference(['authors']));
-
-const dateLike = z.union([z.number(), z.string(), z.date()]);
-const dateLikeToDate = dateLike.pipe(z.coerce.date());
-
 // relatedPosts: z.array(reference('blog')).optional(),
-export const blogSchema = z.object({
-  title: strSC,
-  pubDate: dateLikeToDate,
-  description: strSC,
-  // author: reference('authors'),
-  draft: z.boolean().default(false),
-  tags: z.array(strSC),
-  cover: imageSrcSchema,
-});
 
-// export type AurthorSchemaType = z.infer<typeof authorSchema>;
-// export type BlogSchemaType = z.infer<typeof blogSchema>;
-
-export const zTags = z.array(strSC).nonempty();
+export const zTags = z.array(z.string()).nonempty();
 
 // Record<string, number>;
 

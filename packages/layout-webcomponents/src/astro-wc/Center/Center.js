@@ -1,3 +1,4 @@
+// @ts-check
 /**
  * @module center-l
  * @description
@@ -21,20 +22,20 @@ export default class Center extends HTMLElement {
           [data-i="${this.i}"] {
             max-width: ${this.max};
             ${
-              this.gutters
-                ? `
+              this.gutters ?
+                `
             padding-inline-start: ${this.gutters};
             padding-inline-end: ${this.gutters};`
-                : ''
+              : ''
             }
             ${this.andText ? `text-align: center;` : ''}
             ${
-              this.intrinsic
-                ? `
+              this.intrinsic ?
+                `
             display: flex;
             flex-direction: column;
             align-items: center;`
-                : ''
+              : ''
             }
           }
         `
@@ -98,6 +99,4 @@ export default class Center extends HTMLElement {
   }
 }
 
-if ('customElements' in window) {
-  customElements.define('center-l', Center);
-}
+customElements.define('center-l', Center);

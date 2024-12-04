@@ -1,24 +1,13 @@
 {
   "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
-    "baseUrl": "./",
     "strictNullChecks": true,
     "outDir": "dist",
-    "rootDir": "src",
+    "rootDir": ".",
+    "types": ["vite/client"],
     "jsx": "preserve" // Needed for TypeScript intellisense in the template inside Vue files
   },
-  "files": [
-    ".astro/types.d.ts",
-    "jsx.d.ts"
-  ],
-  "include": [
-    "src/**/*",
-    "*.config.mjs"
-  ],
-  "exclude": [
-    "dist",
-    ".turbo",
-    ".astro",
-    ".vscode"
-  ],
+  "files": [".astro/types.d.ts", "jsx.d.ts"],
+  "include": ["src/**/*", "*.config.mjs"],
+  "exclude": ["dist", ".turbo", ".astro", ".vscode"]
 }

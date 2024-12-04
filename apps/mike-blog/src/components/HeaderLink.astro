@@ -1,6 +1,7 @@
 ---
-import Box from '@repo/ui-lit/Box';
 import type { HTMLAttributes } from 'astro/types';
+
+import Box from '#wc-lit/Box/index.astro';
 type Props = HTMLAttributes<'a'> & {
   className?: string;
 };
@@ -16,7 +17,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 </a></Box> -->
 <Box borderWidth="0" padding="0">
   {
-    !isActive ? (
+    !isActive ?
       <a
         href={href}
         class:list={[className, { active: isActive }]}
@@ -25,11 +26,9 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
       >
         <slot />
       </a>
-    ) : (
-      <span class="nonLink">
+    : <span class="nonLink">
         <slot />
       </span>
-    )
   }
 </Box>
 

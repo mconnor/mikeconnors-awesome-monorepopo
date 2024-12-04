@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @module sidebar-l
  * @description
@@ -11,39 +13,41 @@
 export default class Sidebar extends HTMLElement {
   constructor() {
     super();
-    this.render = () => {
-      if (!this.contentMin.includes('%')) {
-        console.warn(
-          'The value for each <sidebar-l> `contentMin` property should be a percentage. Otherwise overflow is likely to occur',
-        );
-      }
-      this.i = `Sidebar-${[this.side, this.sideWidth, this.contentMin, this.space].join('')}`;
-      this.dataset.i = this.i;
-      if (!document.getElementById(this.i)) {
-        const styleEl = document.createElement('style');
-        styleEl.id = this.i;
-        styleEl.innerHTML = `
-          [data-i="${this.i}"] {
-            gap: ${this.space};
-            ${this.noStretch ? 'align-items: flex-start;' : ''}
-          }
-      
-          [data-i="${this.i}"] > * {
-            ${this.sideWidth ? `flex-basis: ${this.sideWidth};` : ''}
-          }
-      
-          [data-i="${this.i}"] > ${this.side !== 'left' ? `:first-child` : `:last-child`} {
-            flex-basis: 0;
-            flex-grow: 999;
-            min-inline-size: ${this.contentMin};
-          }
-        `
-          .replace(/\s{2,}/g, ' ')
-          .trim();
-        document.head.appendChild(styleEl);
-      }
-    };
+    this.render = this.render.bind(this);
   }
+
+  render = () => {
+    if (!this.contentMin.includes('%')) {
+      console.warn(
+        'The value for each <sidebar-l> `contentMin` property should be a percentage. Otherwise overflow is likely to occur',
+      );
+    }
+    this.i = `Sidebar-${[this.side, this.sideWidth, this.contentMin, this.space].join('')}`;
+    this.dataset.i = this.i;
+    if (!document.getElementById(this.i)) {
+      const styleEl = document.createElement('style');
+      styleEl.id = this.i;
+      styleEl.innerHTML = `
+        [data-i="${this.i}"] {
+          gap: ${this.space};
+          ${this.noStretch ? 'align-items: flex-start;' : ''}
+        }
+
+        [data-i="${this.i}"] > * {
+          ${this.sideWidth ? `flex-basis: ${this.sideWidth};` : ''}
+        }
+
+        [data-i="${this.i}"] > ${this.side !== 'left' ? `:first-child` : `:last-child`} {
+          flex-basis: 0;
+          flex-grow: 999;
+          min-inline-size: ${this.contentMin};
+        }
+      `
+        .replace(/\s{2,}/g, ' ')
+        .trim();
+      document.head.appendChild(styleEl);
+    }
+  };
 
   get side() {
     return this.getAttribute('side') || 'left';
@@ -58,9 +62,9 @@ export default class Sidebar extends HTMLElement {
   }
 
   set sideWidth(val) {
-    val
-      ? this.setAttribute('sideWidth', val)
-      : this.removeAttribute('sideWidth');
+    val ?
+      this.setAttribute('sideWidth', val)
+    : this.removeAttribute('sideWidth');
   }
 
   get contentMin() {
@@ -104,6 +108,4 @@ export default class Sidebar extends HTMLElement {
   }
 }
 
-if ('customElements' in window) {
-  customElements.define('sidebar-l', Sidebar);
-}
+customElements.define('sidebar-l', Sidebar);

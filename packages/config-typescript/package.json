@@ -6,5 +6,9 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "devDependencies": {
+    "@vue/tsconfig": "^0.6.0",
+    "prettier-plugin-astro": "^0.14.1"
   }
 }

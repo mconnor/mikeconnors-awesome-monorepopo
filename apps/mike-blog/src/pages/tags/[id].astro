@@ -23,20 +23,20 @@ export async function getStaticPaths() {
   return uniqueTags.map((tag) => ({
     params: { id: tag },
     props: {
-      postsWithThisTag: publishsedPosts.filter(({ data }) =>
-        data.tags.includes(tag),
-      ),
+      posts: publishsedPosts.filter(({ data }) => data.tags.includes(tag)),
     },
   }));
 }
 
+// type Props = CollectionEntry<'blog'>;
+
 const { id } = Astro.params;
-const { postsWithThisTag } = Astro.props;
+const { posts } = Astro.props;
 ---
 
 <Layout title={id}>
   {
-    postsWithThisTag.map((postWTag) => (
+    posts.map((postWTag) => (
       <BlogCard
         backgroundColor="var(--surface-4)"
         foregroundColor="var(--text-2)"

@@ -5,15 +5,17 @@ import { getCollection } from 'astro:content';
 
 import BlogCard from '#components/BlogCard/index.astro';
 import Layout from '#layouts/Layout.astro';
-// import { blogSchema } from '#schemas/index.js';
+
+export const prerender = false;
+
 const pageTitle = 'Blog';
 
-const allBlogPost = await getCollection('blog');
-// const publishsedPosts = await getCollection('blog', ({ data }) =>
-//   import.meta.env.PROD ? data.draft !== true : true,
-// );
+const publishsedPosts = await getCollection(
+  'blog',
+  ({ data }) => data.draft !== true,
+);
 
-const publishsedPosts = allBlogPost.sort(
+const sortedPosts = publishsedPosts.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
@@ -21,7 +23,7 @@ const publishsedPosts = allBlogPost.sort(
 <Layout title={pageTitle}>
   <Stack space="var(--s1)">
     {
-      publishsedPosts.map(({ id, data }) => (
+      sortedPosts.map(({ id, data }) => (
         // <Box class='invert' borderWidth="4px">{data.title}</Box>
         <BlogCard
           backgroundColor="var(--surface-4)"

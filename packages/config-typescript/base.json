@@ -11,7 +11,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "skipLibCheck": true,
     "allowJs": true,
     "jsx": "preserve",
@@ -24,11 +24,14 @@
     "preserveWatchOutput": true,
     "allowArbitraryExtensions": true
   },
+  "include": [
+    "${configDir}/**/*"
+  ],
   "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".vercel",
-    ".frontmatter/"
+    "${configDir}/node_modules",
+    "${configDir}/.astro",
+    "${configDir}/dist",
+    "${configDir}/.turbo",
+    "${configDir}/.vercel"
   ]
 }

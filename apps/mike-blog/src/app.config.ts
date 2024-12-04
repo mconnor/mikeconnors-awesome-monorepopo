@@ -12,3 +12,5 @@ export enum Links {
   GITHUB = 'https://www.github.com/mconnor',
   TWITTER = 'https://www.twitter.com/mikeconnor504',
 }
+
+// see font setting in global.css

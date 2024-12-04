@@ -2,20 +2,36 @@
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "prettier.documentSelectors": ["**/*.astro"],
-
+  "pnpmCatalogLens.enabled": true,
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "astro", // Enable .astro
-    "typescript", // Enable .ts
-    "typescriptreact" // Enable .tsx
+    "astro",
+    "typescript",
+    "typescriptreact",
+    "svelte",
+    "vue",
+    "preact"
   ],
   "eslint.workingDirectories": [
     {
       "mode": "auto"
     }
   ],
+  "github.copilot.enable": {
+    "javascript": true,
+    "typescript": true,
+    "zod": true,
+    "astro": true,
+    "react": true,
+    "preact": true,
+    "svelte": true,
+    "vue": true
+  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "never"
   },
@@ -58,10 +74,6 @@
     "tsx",
     "astro"
   ],
-  "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-
   "typescript.tsdk": "node_modules/typescript/lib",
   "files.exclude": {
     "**/.git": false,
@@ -74,11 +86,13 @@
   "search.exclude": {
     "**/.git": true
   },
-  "explorerExclude.backup": {},
   "explorer.excludeGitIgnore": false,
-  "Vercel.turbo-vsc": {
-    "turbo.transitNodes": [
-      "transit"
-    ]
-  }
+  "yaml.schemas": {
+    "https://json.schemastore.org/yamllint.json": "./pnpm-workspace.yaml"
+  },
+  "editor.fontSize": 14,
+  "turbo.useLocalTurbo": true,
+  "editor.formatOnSave": true,
+  "explorer.autoOpenDroppedFile": false,
+  "explorer.autoReveal": false
 }

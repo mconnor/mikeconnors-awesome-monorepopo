@@ -1,0 +1,34 @@
+<hello-button data-message="enter your name here">
+  <button>Get greeting</button>
+  <p>enter your name below</p>
+  <input id="first-name" /></hello-button
+>
+
+<script>
+  import { z } from 'zod';
+
+  const DEFAULT_VAL = 'enter your name here';
+  const nameSchema = z.string().min(2).max(40);
+
+  import { actions } from 'astro:actions';
+
+  class GreetingBtn extends HTMLElement {
+    constructor() {
+      super();
+
+      // const stringLiteralSchema = z.literal(this.dataset.message);
+      const input = this.querySelector('input');
+
+      const btn = this.querySelector('button');
+      btn?.addEventListener('click', async () => {
+        // Show alert pop-up with greeting from action
+        const greetingResponse = await actions.getGreeting.orThrow({
+          name: nameSchema.parse(input?.value) || 'bob',
+        });
+        alert(greetingResponse);
+      });
+    }
+  }
+
+  customElements.define('hello-button', GreetingBtn);
+</script>

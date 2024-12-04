@@ -1,7 +1,13 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": [
-    "tsconfig.json"
+  "globalEnv": [
+    "NODE_ENV",
+    "MODE",
+    "PROCUCTION",
+    "DEV",
+    "PROD",
+    "import.meta.env.PROD",
+    "import.meta.env.DEV"
   ],
   "globalPassThroughEnv": [
     "AWS_SECRET_KEY",
@@ -30,18 +36,14 @@
         "dummy"
       ]
     },
-    "format": {
+    "format": {},
+    "sync": {
       "dependsOn": [
-        "^format"
+        "^sync"
       ]
     },
-    "format:check": {},
     "//#format:root": {},
-    "inspect": {
-      "dependsOn": [
-        "^inspect"
-      ]
-    },
+    "inspect": {},
     "fix": {
       "dependsOn": [
         "^fix"

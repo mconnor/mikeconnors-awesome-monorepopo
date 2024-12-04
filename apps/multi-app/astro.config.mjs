@@ -1,4 +1,3 @@
-
 import preact from '@astrojs/preact';
 import react from '@astrojs/react';
 // import solid from '@astrojs/solid-js';
@@ -18,10 +17,8 @@ export default defineConfig({
     // }),
     react({ include: ['@repo/react/*'] }),
     svelte(),
-    vue()
+    vue(),
   ],
-
-  
 
   output: 'server',
   adapter: vercel(),

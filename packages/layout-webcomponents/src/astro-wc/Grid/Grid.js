@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @module grid-l
  * @description
@@ -8,29 +10,30 @@
 export default class Grid extends HTMLElement {
   constructor() {
     super();
-    this.render = () => {
-      this.i = `Grid-${[this.min, this.space].join('')}`;
-      this.dataset.i = this.i;
-      if (!document.getElementById(this.i)) {
-        const styleEl = document.createElement('style');
-        styleEl.id = this.i;
-        styleEl.innerHTML = `
-          [data-i="${this.i}"] {
-            grid-gap: ${this.space};
-          }
-
-          @supports (width: min(${this.min}, 100%)) {
-            [data-i="${this.i}"] {
-              grid-template-columns: repeat(auto-fill, minmax(min(${this.min}, 100%), 1fr));
-            }
-          }
-        `
-          .replace(/\s{2,}/g, ' ')
-          .trim();
-        document.head.appendChild(styleEl);
-      }
-    };
+    this.render = this.render.bind(this);
   }
+  render = () => {
+    this.i = `Grid-${[this.min, this.space].join('')}`;
+    this.dataset.i = this.i;
+    if (!document.getElementById(this.i)) {
+      const styleEl = document.createElement('style');
+      styleEl.id = this.i;
+      styleEl.innerHTML = `
+        [data-i="${this.i}"] {
+          grid-gap: ${this.space};
+        }
+
+        @supports (width: min(${this.min}, 100%)) {
+          [data-i="${this.i}"] {
+            grid-template-columns: repeat(auto-fill, minmax(min(${this.min}, 100%), 1fr));
+          }
+        }
+      `
+        .replace(/\s{2,}/g, ' ')
+        .trim();
+      document.head.appendChild(styleEl);
+    }
+  };
 
   get min() {
     return this.getAttribute('min') || '250px';
@@ -61,6 +64,4 @@ export default class Grid extends HTMLElement {
   }
 }
 
-if ('customElements' in window) {
-  customElements.define('grid-l', Grid);
-}
+customElements.define('grid-l', Grid);

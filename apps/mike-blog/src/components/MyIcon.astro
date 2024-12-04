@@ -13,8 +13,8 @@ interface Props extends HTMLAttributes<'svg'> {
   height?: number;
 }
 
-const { name, size = 50, ...rest } = Astro.props;
+const { name, size = 50, title = 'Warning', ...rest } = Astro.props;
 ---
 
 <!-- Loads the SVG in `/src/icons/filename.svg` -->
-<Icon name={name} size={size} {...rest} />
+<Icon name={name} size={size} title={title} {...rest} />

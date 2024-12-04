@@ -9,6 +9,9 @@
         "unifiedjs.vscode-mdx",
         "stylelint.vscode-stylelint",
         "runem.lit-plugin",
-        "Vercel.turbo-vsc"
+        "Vercel.turbo-vsc",
+        "JamesBirtles.svelte-vscode",
+        "vercel.turbo-vsc",
+        "pnpmCatalogLens.pnpm-catalog-lens",
     ]
 }

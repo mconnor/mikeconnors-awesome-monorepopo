@@ -20,13 +20,12 @@
     "./Cover": "./src/astro-wc/Cover/index.astro"
   },
   "scripts": {
-    "updateAstro": "pnpm dlx @astrojs/upgrade",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
     "lint": "eslint . --max-warnings 0",
     "fix": "eslint . --fix",
-    "inspect": "eslint --inspect-config",
+    "inspect": "eslint . --inspect-config",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
@@ -34,9 +33,9 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "catalog:",
+    "eslint": "^9.16.0",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   },
   "keywords": [],
@@ -44,5 +43,10 @@
   "license": "ISC",
   "dependencies": {
     "tsup": "^8.3.5"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "experimentalTernaries": true,
+    "proseWrap": "always"
   }
 }

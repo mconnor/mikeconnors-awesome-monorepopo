@@ -3,10 +3,16 @@
   "compilerOptions": {
     "strictNullChecks": true,
   },
-  "files": [
-    "eslint.config.mjs",
-    "astro.config.mjs",
-    "tailwind.config.js",
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
   ],
-  "include": ["src"]
+  "exclude": [
+    "dist",
+    ".astro",
+    ".turbo",
+    ".vercel",
+    ".frontmatter/",
+    "cache-directory"
+  ]
 }

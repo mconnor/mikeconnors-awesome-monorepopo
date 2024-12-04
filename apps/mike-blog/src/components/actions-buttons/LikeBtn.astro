@@ -1,0 +1,29 @@
+<like-button data-id="1">
+  <button>👍</button>
+</like-button>
+
+<script>
+  import { actions } from 'astro:actions';
+
+  class LikeButton extends HTMLElement {
+    constructor() {
+      super();
+      const postId = this.dataset.id;
+      const btn = this.querySelector('button');
+      btn?.addEventListener('click', async () => {
+        // if (!postId) {
+        //   throw new Error('ERRor' + 'No post id provided');
+        // }
+
+        const updatedLikes = await actions.likePost.orThrow({
+          postId: 'example',
+        });
+        //    ^ type: number
+
+        return;
+      });
+    }
+  }
+  customElements.define('like-button', LikeButton);
+</script>
+<!-- const updatedLikes = await actions.likePost.orThrow({ postId: 'example' }); -->

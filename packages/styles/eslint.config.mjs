@@ -1,5 +1,8 @@
-//import tsLint from '@repo/eslint-config/ts-lint';
-import astro from '@repo/eslint-config/astro';
-import tsLint from '@repo/eslint-config/ts-lint-type-check';
+import astro from '@repo/eslint-config/astro.lint.config';
+import tsLint from '@repo/eslint-config/ts-lint';
+// import tsLint from '@repo/eslint-config/ts-lint-type-check';
 
-export default [...tsLint, ...astro];
+/** @type {import('eslint').Linter.Config[]} */
+const config = [...tsLint, ...astro];
+
+export default config;

@@ -10,7 +10,6 @@ export default {
     '*.svg/',
     'pnpm-lock.yaml',
     'package-lock.json',
-    '.prettierrc.mjs',
     '.svelte-kit/',
   ],
 };

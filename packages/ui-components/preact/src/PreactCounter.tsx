@@ -1,7 +1,7 @@
 /** @jsxImportSource preact */
 
-import { useState } from 'preact/hooks';
 import type { ComponentChildren } from 'preact';
+import { useState } from 'preact/hooks';
 
 interface Props {
   children?: ComponentChildren;

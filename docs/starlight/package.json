@@ -1,0 +1,36 @@
+{
+  "name": "@docs/starlight",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Mike Connor",
+  "keywords": [
+    "astro",
+    "starlight"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier . --write",
+    "lint": "eslint . --max-warnings 0",
+    "lint:json": "eslint . -c jsonLint.config.mjs",
+    "inspect": "eslint . --inspect-config",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:astro4",
+    "@astrojs/starlight": "catalog:astro4",
+    "astro": "catalog:astro4",
+    "sharp": "catalog:astro4"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^9.15.0",
+    "prettier": "catalog:",
+    "typescript": "catalog:"
+  }
+}

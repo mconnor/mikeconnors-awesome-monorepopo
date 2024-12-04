@@ -1,8 +1,9 @@
 /** @jsxImportSource react */
 
-import { type ReactNode, useState } from 'react';
+import type { ReactNode } from 'react';
+import { useState } from 'react';
 
-import { Button } from '#components/Button.jsx';
+import { Button } from './components/Button';
 
 interface Props {
   children?: ReactNode;

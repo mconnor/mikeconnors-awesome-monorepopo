@@ -1,17 +1,19 @@
 ---
 import Stack from '@repo/layout-webcomponents/Stack';
 import { PreactCounter as PCount } from '@repo/preact/counter';
+// import { LikeBtn as LikePreact} from '@repo/preact/LikeBtn';
 import { Counter as ReactKounter } from '@repo/react/counter';
 import CounterSvelte from '@repo/svelte/counter';
-import Box from '@repo/ui-lit/Box';
-
 // import { SolidCounter as SolidC } from '@repo/solid/counter';
-import VueCounter from '#components/vue/VueCounter.vue';
+import VueCounter from '@repo/vue/counter';
+
 import Layout from '#layouts/Layout.astro';
+import Box from '#wc-lit/Box/index.astro';
 ---
 
 <Layout>
   <Stack>
+    <!-- <LikePreact client:visible /> -->
     <Box borderWidth="4px" borderStyle='double'>
       <Box invert borderWidth="4px">
       <ReactKounter client:only="react" klass="counter">

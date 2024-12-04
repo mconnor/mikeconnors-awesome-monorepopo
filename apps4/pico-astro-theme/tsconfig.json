@@ -1,0 +1,13 @@
+{
+  "extends": "@repo/typescript-config/astro-base.json",
+  "compilerOptions": {
+    "verbatimModuleSyntax": true,
+    "strictNullChecks": true,
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "outDir": "dist",
+    "rootDir": "."
+  },
+  "include": ["src", "**/*.d.ts", "*.config.mjs"]
+}

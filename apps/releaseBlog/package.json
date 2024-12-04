@@ -1,0 +1,38 @@
+{
+  "name": "@app/releaseblog",
+  "type": "module",
+  "version": "0.0.1",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "astro-check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier . --write",
+    "lint": "eslint . --max-warnings 0",
+    "inspect": "eslint . --inspect-config",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit",
+    "toolBarOn": "astro preferences disable devToolbar",
+    "toolBarOff": "astro preferences enable devToolbar",
+    "sync": "astro sync",
+    "host": "astro dev --host",
+    "force": " astro build -- --force"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.0.1",
+    "@astrojs/rss": "^4.0.9",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^5.0.2"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}

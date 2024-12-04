@@ -1,22 +1,20 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import '#styles/global.css';
+import '../styles/global.css';
 
 import DevModeStyle from '@repo/styles/DevModeStyle.astro';
 import GlobalStyle from '@repo/styles/GlobalStyle.astro';
 import { ClientRouter } from 'astro:transitions';
-
-import { SITE_DESCRIPTION,SITE_TITLE } from '#app-config.mts';
 interface Props {
-  ogTitle: string;
-  ogDescription?: string;
-  ogImage?: string;
+  title: string;
+  description: string;
+  image?: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { ogTitle: title = SITE_TITLE, ogDescription: description=SITE_DESCRIPTION, ogImage: image } = Astro.props;
+const { title, description, image = 'andy-og.jpeg' } = Astro.props;
 
 const isDev = process.env.NODE_ENV === 'development';
 const isTest = process.env.NODE_ENV === 'test';
@@ -42,7 +40,7 @@ const isTest = process.env.NODE_ENV === 'test';
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-{image &&  <meta property="og:image" content={new URL(image, Astro.url)} />}
+<meta property="og:image" content={new URL(image, Astro.url)} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />

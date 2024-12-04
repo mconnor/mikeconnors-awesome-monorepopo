@@ -1,11 +1,12 @@
 {
-  "extends": "@repo/typescript-config/lit.json",
+  "extends": "@repo/typescript-config/astro-base",
   "compilerOptions": {
-    "verbatimModuleSyntax": true,
-    "declaration": true,
-    "declarationMap": true,
+    "strict": true,
+    "rootDir": ".",
     "outDir": "dist",
-    "rootDir": "."
-  },
-  "include": ["src", "*.config.mjs", "**/*.d.ts"]
+    //It would be an error to specify rootDir as core and include as * because it creates a file (helpers.ts) that would need to be emitted outside the outDir (i.e. ../helpers.js).
+    "esModuleInterop": false,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false
+  }
 }

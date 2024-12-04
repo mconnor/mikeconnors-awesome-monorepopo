@@ -6,9 +6,8 @@
     "strictNullChecks": true,
     "allowJs": true,
     "baseUrl": ".",
-    "rootDir": "src"
+    "rootDir": "."
   },
-  "files": [".astro/types.d.ts"],
-  "include": ["src", "*.config.mjs"],
+  "include": [".astro/types.d.ts", "**/*"],
   "exclude": ["dist", ".turbo", ".astro", ".vscode", ".vercel"]
 }

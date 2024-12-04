@@ -1,8 +1,8 @@
-import { type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 interface IProps {
-  children?: ReactNode;
   mathFunc: () => void;
+  children: ReactNode;
 }
 
 export function Button({ mathFunc, children }: IProps) {

@@ -1,0 +1,9 @@
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "strictNullChecks": true,
+    "strict": true
+  },
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist", ".astro", ".turbo", ".vercel"]
+}

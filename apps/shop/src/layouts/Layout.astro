@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 import { Icon } from 'astro-icon/components'
 interface Props {
   title: string;
@@ -38,7 +38,7 @@ const imageUrl = import.meta.env.PUBLIC_URL
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title} - Astro Transitions Shop</title>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
     <nav class="absolute top-0 right-0 p-6 lg:p-2">
