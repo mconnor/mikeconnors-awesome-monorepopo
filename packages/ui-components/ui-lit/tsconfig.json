@@ -2,9 +2,7 @@
   "extends": "@repo/typescript-config/lit.json",
   "compilerOptions": {
     "rootDir": ".",
-    "strict": false
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false
   },
-  "files": ["jsx.d.ts", ".astro/types.d.ts"],
-  "include": ["src", "*.config.mjs"],
-  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
 }

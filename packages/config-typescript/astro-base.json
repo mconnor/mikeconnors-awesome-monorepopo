@@ -14,7 +14,8 @@
     "skipLibCheck": true,
     "allowJs": true,
     "jsx": "preserve",
-    "outDir": "${configDir}/dist"
+    "outDir": "${configDir}/dist",
+    "rootDir": "${configDir}/",
   },
   "exclude": [
     "${configDir}/node_modules",
@@ -25,6 +26,8 @@
   ],
   "include": [
     "${configDir}/.astro/types.d.ts",
-    "${configDir}/**/*"
+    "${configDir}/src/**/*",
+    "${configDir}/**/*.ts",
+    "${configDir}/**/*.mjs"
   ]
 }

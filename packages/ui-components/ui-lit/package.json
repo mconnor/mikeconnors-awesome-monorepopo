@@ -37,6 +37,6 @@
   "license": "ISC",
   "peerDependencies": {
     "lit": "^3.2.1",
-    "astro": "^4"
+    "astro": "^5"
   }
 }
