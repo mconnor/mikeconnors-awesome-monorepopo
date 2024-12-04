@@ -3,7 +3,6 @@ import Center from '@repo/layout-webcomponents/Center';
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/styles/Types';
 
-import {MAIN_MENU} from '#app-config.mts'
 import Footer from '#components/Footer.astro';
 import Header from '#components/Header.astro';
 
@@ -21,7 +20,7 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 
 <BaseLayout {...rest}>
   <Cover centeredElement="center-l" space="0">
-    <Header navItems={MAIN_MENU}/>
+    <Header transition:persist />
     <Center max={maxW} transition:animate="slide"><slot /></Center>
     <Footer />
   </Cover>
