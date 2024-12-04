@@ -1,5 +1,5 @@
 import mdx from '@astrojs/mdx';
-import preact from '@astrojs/preact';
+
 import vercel from '@astrojs/vercel';
 import { defineConfig } from 'astro/config';
 import icon from 'astro-icon';
@@ -37,7 +37,6 @@ export default defineConfig({
   scopedStyleStrategy: 'attribute',
 
   integrations: [
-    preact(),
     icon(),
     mdx({
       drafts: true,
