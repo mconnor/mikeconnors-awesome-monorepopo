@@ -1,4 +1,4 @@
-import astroConfig from '@repo/eslint-config/astro.lint.config';
+import astroConfig from '@repo/eslint-config/astroLint';
 import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
 
 export default [

@@ -1,7 +1,7 @@
 // .prettierrc.mjs
 /** @type {import("prettier").Config} */
 export default {
-  plugins: ['prettier-plugin-svelte'],
+  plugins: ['prettier-plugin-astro'],
   overrides: [
     {
       files: '*.svelte',

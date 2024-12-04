@@ -3,9 +3,6 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": ".",
-    "types": [
-      "node",
-      "astro"
-    ]
-  },
+    "types": ["node", "astro"]
+  }
 }

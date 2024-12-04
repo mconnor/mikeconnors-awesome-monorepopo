@@ -57,7 +57,7 @@ if (!tagCountSuccess) {
 }
 ---
 
-<Layout title="Tag Index" description='Index of tags'>
+<Layout title="Tag Index" description="Index of tags">
   {
     zUniqueTagArray.success && tagCountSuccess ?
       <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />

@@ -706,9 +706,6 @@ importers:
       globals:
         specifier: ^15.13.0
         version: 15.13.0
-      typescript:
-        specifier: 'catalog:'
-        version: 5.7.2
       typescript-eslint:
         specifier: ^8.17.0
         version: 8.17.0(eslint@9.16.0(jiti@2.3.3))(typescript@5.7.2)
@@ -772,6 +769,9 @@ importers:
         specifier: ^8.3.5
         version: 8.3.5(jiti@2.3.3)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.6.1)
     devDependencies:
+      '@astrojs/check':
+        specifier: ^0.9.4
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
       '@open-wc/testing':
         specifier: 'catalog:'
         version: 4.0.0
@@ -784,6 +784,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
+      astro:
+        specifier: ^5.0.2
+        version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       eslint:
         specifier: ^9.16.0
         version: 9.16.0(jiti@2.3.3)

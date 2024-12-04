@@ -4,5 +4,5 @@
     "rootDir": ".",
     "experimentalDecorators": true,
     "useDefineForClassFields": false
-  },
+  }
 }

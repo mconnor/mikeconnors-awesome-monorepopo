@@ -29,10 +29,12 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.4",
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "astro": "^5.0.2",
     "eslint": "^9.16.0",
     "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",

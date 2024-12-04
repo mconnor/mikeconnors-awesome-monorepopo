@@ -1,5 +1,4 @@
 import mdx from '@astrojs/mdx';
-
 import vercel from '@astrojs/vercel';
 import { defineConfig } from 'astro/config';
 import icon from 'astro-icon';
