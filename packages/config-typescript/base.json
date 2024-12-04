@@ -25,10 +25,10 @@
     "allowArbitraryExtensions": true
   },
   "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".vercel",
-    ".frontmatter/"
+    "${configDir}/node_modules",
+    "${configDir}/.astro",
+    "${configDir}/dist",
+    "${configDir}/.turbo",
+    "${configDir}/.vercel"
   ]
 }

@@ -10,30 +10,21 @@
     "isolatedModules": true,
     "noEmit": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "skipLibCheck": true,
     "allowJs": true,
     "jsx": "preserve",
-    "strict": true,
-    "outDir": "dist",
+    "outDir": "${configDir}/dist"
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.js",
-    "src/**/*.mts",
-    "src/**/*.jsx",
-    "src/**/*.astro",
-    "**/*.d.ts",
-    "*.config.mjs",
-    "*.config.js",
-  ],
   "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".vercel",
-    ".frontmatter/",
-    "cache-directory"
+    "${configDir}/node_modules",
+    "${configDir}/.astro",
+    "${configDir}/dist",
+    "${configDir}/.turbo",
+    "${configDir}/cache-directory"
+  ],
+  "include": [
+    "${configDir}/.astro/types.d.ts",
+    "${configDir}/**/*"
   ]
 }

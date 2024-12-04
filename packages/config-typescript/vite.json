@@ -14,14 +14,12 @@
     "strictNullChecks": true
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.astro",
-    "src/**/*.tsx",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    ".astro/types.d.ts",
-    "**/*.d.ts",
-    "*.config.mjs",
-    "*.config.js",
+    "${configDir}/**/*"
+  ],
+  "exclude": [
+    "${configDir}/node_modules",
+    "${configDir}/.astro",
+    "${configDir}/dist",
+    "${configDir}/.turbo"
   ]
 }
