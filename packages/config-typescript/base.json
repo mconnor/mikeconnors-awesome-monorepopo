@@ -24,6 +24,9 @@
     "preserveWatchOutput": true,
     "allowArbitraryExtensions": true
   },
+  "include": [
+    "${configDir}/**/*"
+  ],
   "exclude": [
     "${configDir}/node_modules",
     "${configDir}/.astro",

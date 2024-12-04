@@ -12,14 +12,5 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "strictNullChecks": true
-  },
-  "include": [
-    "${configDir}/**/*"
-  ],
-  "exclude": [
-    "${configDir}/node_modules",
-    "${configDir}/.astro",
-    "${configDir}/dist",
-    "${configDir}/.turbo"
-  ]
+  }
 }

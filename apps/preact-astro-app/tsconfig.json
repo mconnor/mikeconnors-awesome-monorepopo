@@ -1,18 +1,7 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "rootDir": ".",
     "jsxImportSource": "preact"
   },
-  "include": [
-    "src/**/*",
-    "*.config.mjs"
-  ],
-  "exclude": [
-    "dist",
-    ".turbo",
-    ".astro",
-    ".vscode"
-  ]
 }
