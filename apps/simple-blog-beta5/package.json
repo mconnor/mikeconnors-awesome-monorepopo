@@ -29,10 +29,11 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
     "@repo/postcss-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },

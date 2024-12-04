@@ -1,15 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
+// import { getCollection } from 'astro:content';
 
 import Layout from '#layouts/Layout.astro';
 import Box from '#wc-lit/Box/index.astro';
-const youtube = await getCollection('youtube');
+// const youtube = await getCollection('youtube');
 ---
 
 <Layout>
   <main>
     <Box>
-      <pre>{JSON.stringify(youtube, null, 2)}</pre>
+      <!-- <pre>{JSON.stringify(youtube, null, 2)}</pre> -->
+       <h1>Home</h1>
       <!-- <ul>
       {
         youtube.map(({ id, data }) => (

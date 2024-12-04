@@ -14,10 +14,6 @@
   ],
   "scripts": {
     "new": "turbo gen workspace --copy",
-    "syncpack": "syncpack list",
-    "syncpack-fix": "syncpack fix-mismatches",
-    "syncpack-format": "syncpack format",
-    "syncpack-update": "syncpack update",
     "graph": "turbo run build --graph",
     "build": "turbo build",
     "preview": "turbo preview",

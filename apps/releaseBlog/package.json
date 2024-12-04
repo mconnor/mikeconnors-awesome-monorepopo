@@ -2,6 +2,9 @@
   "name": "@app/releaseblog",
   "type": "module",
   "version": "0.0.1",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "dev": "astro dev",
     "astro-check": "astro check",
@@ -23,7 +26,7 @@
     "@astrojs/mdx": "^4.0.1",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.0.1"
+    "astro": "^5.0.2"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

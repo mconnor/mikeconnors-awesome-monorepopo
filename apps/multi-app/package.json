@@ -48,7 +48,7 @@
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "catalog:",
     "cssnano": "catalog:",
-    "eslint": "^9.15.0",
+    "eslint": "^9.16.0",
     "postcss": "catalog:",
     "postcss-custom-media": "catalog:",
     "postcss-html": "catalog:",
@@ -57,6 +57,7 @@
     "postcss-nesting": "catalog:",
     "postcss-pow": "catalog:",
     "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "svelte-preprocess": "catalog:",
     "typescript": "catalog:"
   },

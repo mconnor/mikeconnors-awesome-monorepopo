@@ -3,13 +3,9 @@
   "compilerOptions": {
     "strictNullChecks": true,
   },
-  "files": [
-    "eslint.config.mjs",
-    "astro.config.mjs",
-    "tailwind.config.js",
-  ],
   "include": [
-    "src"
+    ".astro/types.d.ts",
+    "**/*"
   ],
   "exclude": [
     "dist",

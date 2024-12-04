@@ -47,6 +47,7 @@
     "postcss-nesting": "catalog:",
     "postcss-pow": "catalog:",
     "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   },
   "prettier": {

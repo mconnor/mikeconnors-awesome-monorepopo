@@ -43,6 +43,7 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.16.0",
     "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   }
 }

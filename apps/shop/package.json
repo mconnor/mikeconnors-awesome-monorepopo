@@ -38,6 +38,7 @@
     "eslint": "catalog:",
     "postcss": "^8.4.49",
     "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   },
   "prettier": {

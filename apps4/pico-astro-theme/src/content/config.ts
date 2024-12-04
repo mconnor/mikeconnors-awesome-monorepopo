@@ -1,7 +1,7 @@
 // Import utilities from `astro:content`
 import { defineCollection } from 'astro:content';
 
-import { postSchema } from '#schemas/index.ts';
+import { postSchema } from '#schemas/index.js';
 // Define a `type` and `schema` for each collection
 
 const postsCollection = defineCollection({

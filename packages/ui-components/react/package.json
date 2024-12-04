@@ -34,6 +34,7 @@
     "@types/react-dom": "^18.3.1",
     "eslint": "^9.16.0",
     "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "react": "catalog:",
     "react-dom": "catalog:",
     "tsup": "^8.3.5",

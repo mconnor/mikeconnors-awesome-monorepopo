@@ -25,6 +25,7 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.16.0",
     "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   },
   "prettier": {
@@ -35,6 +36,7 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "lit": "^3.2.1"
+    "lit": "^3.2.1",
+    "astro": "^4"
   }
 }
