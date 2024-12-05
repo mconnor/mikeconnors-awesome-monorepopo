@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+
+import Stack from '@repo/layout-webcomponents/Stack';
+
+import Layout from '#layouts/Layout.astro';
+import Box from '#wc-lit/Box/index.astro';
+
+const countries = await getCollection('countries');
+console.log(countries[0]);
+---
+
+<Layout maxW="80ch">
+  <Stack space="0">
+    <h2>This is my website</h2>
+    <Box>
+      <p>{countries.length} countires returned</p>
+    </Box>
+
+    {
+      countries &&
+        countries.map(({ id, data }) => (
+          <Box padding="var(--s0)" borderWidth="0">
+            <h3>{data.name.common}</h3>
+          </Box>
+        ))
+    }
+  </Stack>
+</Layout>

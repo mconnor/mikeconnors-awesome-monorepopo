@@ -4,10 +4,5 @@
     "outDir": "dist",
     "strict": true,
     "strictNullChecks": true,
-    "allowJs": true,
-    "baseUrl": ".",
-    "rootDir": "."
   },
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist", ".turbo", ".astro", ".vscode", ".vercel"]
 }

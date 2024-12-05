@@ -32,7 +32,7 @@
     "eslint": "^9.16.0",
     "open-props": "^1.7.7",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
   },
   "dependencies": {

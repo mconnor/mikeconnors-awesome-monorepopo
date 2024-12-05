@@ -1,17 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": [
-    "./vite.json"
-  ],
-  "compilerOptions": {
-    "lib": [
-      "DOM.Iterable"
-    ],
-    "types": [],
-    "moduleDetection": "force",
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
-    "noImplicitThis": true,
-    "strict": true,
-  }
+    "./base.json",
+    "@vue/tsconfig/tsconfig.dom.json"
+  ]
 }

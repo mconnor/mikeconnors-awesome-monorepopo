@@ -1,0 +1,3 @@
+{
+  "vueExcludeBlocks": ["style", "template"]
+}

@@ -19,7 +19,7 @@
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
-    "open-props": "^1.7.7",
+    "open-props": "catalog:",
     "postcss": "^8.4.49",
     "postcss-custom-media": "^11.0.5",
     "postcss-html": "^1.7.0",

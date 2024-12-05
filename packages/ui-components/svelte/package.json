@@ -21,10 +21,11 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.16.0",
+    "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-astro": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
+    "svelte": "catalog:svelte5",
     "svelte-check": "catalog:",
     "typescript": "catalog:"
   },

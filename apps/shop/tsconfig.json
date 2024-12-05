@@ -1,18 +1,3 @@
 {
   "extends": "@repo/typescript-config/astro-base.json",
-  "compilerOptions": {
-    "strictNullChecks": true,
-  },
-  "include": [
-    ".astro/types.d.ts",
-    "**/*"
-  ],
-  "exclude": [
-    "dist",
-    ".astro",
-    ".turbo",
-    ".vercel",
-    ".frontmatter/",
-    "cache-directory"
-  ]
 }

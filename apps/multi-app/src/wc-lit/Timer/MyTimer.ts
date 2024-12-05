@@ -66,7 +66,7 @@ export class MyTimer extends LitElement {
 
   tick() {
     if (this.running) {
-      this.remaining = Math.max(0, this.end! - Date.now());
+      this.remaining = Math.max(0, this.end - Date.now());
       requestAnimationFrame(() => this.tick());
     }
   }
