@@ -5,7 +5,7 @@
 >
 
 <script>
-import { z } from 'astro:schema';
+  import { z } from 'astro:schema';
 
   const DEFAULT_VAL = 'enter your name here';
   const nameSchema = z.string().min(2).max(40);

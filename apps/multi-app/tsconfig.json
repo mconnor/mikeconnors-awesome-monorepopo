@@ -5,5 +5,5 @@
     "strictNullChecks": true,
     "rootDir": ".",
     "jsx": "preserve" // Needed for TypeScript intellisense in the template inside Vue files
-  },
+  }
 }

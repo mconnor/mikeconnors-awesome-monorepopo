@@ -6,7 +6,6 @@ import Layout from '#layouts/Layout.astro';
 import Box from '#wc-lit/Box/index.astro';
 export const prerender = false;
 const countries = await getCollection('countries');
-
 ---
 
 <Layout maxW="80ch">
@@ -17,23 +16,15 @@ const countries = await getCollection('countries');
     </Box>
 
     {
-      countries &&
-
-      <Box>
-
-        {countries.map(({ id, data }) => (
-          <Box>
-            <h3>{data.name.common}</h3>
-
-          </Box>
-        ))}
-      </Box>
-
-
-
-
+      countries && (
+        <Box>
+          {countries.map(({ id, data }) => (
+            <Box>
+              <h3>{data.name.common}</h3>
+            </Box>
+          ))}
+        </Box>
+      )
     }
-
-
   </Stack>
 </Layout>
