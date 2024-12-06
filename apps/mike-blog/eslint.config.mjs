@@ -1,8 +1,8 @@
 import astro from '@repo/eslint-config/astroLint';
 import litConfig from '@repo/eslint-config/lit-config';
 import markdownConfig from '@repo/eslint-config/markdown';
-import tsLint from '@repo/eslint-config/ts-lint-type-check';
 // import tsLint from '@repo/eslint-config/ts-lint-type-check';
+import tsLint from '@repo/eslint-config/ts-lint';
 
 // import turboConfig from '@repo/eslint-config/turbo-config'
 
