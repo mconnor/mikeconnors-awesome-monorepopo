@@ -14,7 +14,7 @@ export default function (): Loader {
   return {
     name: 'youtube-loader',
     schema: videoSchema,
-    load: async ({ store, parseData }: LoaderContext) => {
+    load: async ({ store, parseData }: LoaderContext): Promise<void> => {
       let nextPageToken: string | undefined;
       let pagesCollected = 0;
       await fetchVideos();

@@ -29,15 +29,17 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "astro": "^5.0.2",
-    "eslint": "^9.16.0",
+    "astro": "^5.0.3",
+    "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-astro": "catalog:",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint__js": "^8.42.3",
     "typescript": "catalog:"
   },
   "keywords": [],

@@ -16,8 +16,8 @@ catalogs:
       specifier: ^3.6.3
       version: 3.6.3
     '@astrojs/rss':
-      specifier: ^4.0.9
-      version: 4.0.9
+      specifier: ^4.0.10
+      version: 4.0.10
     '@astrojs/sitemap':
       specifier: ^3.2.1
       version: 3.2.1
@@ -52,8 +52,8 @@ catalogs:
       specifier: ^2.0.6
       version: 2.0.6
     astro:
-      specifier: ^5.0.2
-      version: 5.0.2
+      specifier: ^5.0.3
+      version: 5.0.3
     astro-icon:
       specifier: ^1.1.4
       version: 1.1.4
@@ -123,9 +123,6 @@ catalogs:
     vue:
       specifier: ^3.5.13
       version: 3.5.13
-    zod:
-      specifier: ^3.23.8
-      version: 3.23.8
   svelte5:
     '@astrojs/svelte':
       specifier: ^7.0.1
@@ -152,13 +149,13 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
       '@astrojs/mdx':
         specifier: 'catalog:'
-        version: 4.0.1(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
+        version: 4.0.1(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
       '@astrojs/rss':
         specifier: 'catalog:'
-        version: 4.0.9
+        version: 4.0.10
       '@astrojs/vercel':
         specifier: 'catalog:'
-        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
+        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
@@ -170,7 +167,7 @@ importers:
         version: 0.2.1
       astro:
         specifier: 'catalog:'
-        version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+        version: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       lit:
         specifier: 'catalog:'
         version: 3.2.1
@@ -225,19 +222,19 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: ^0.9.4
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
       '@astrojs/mdx':
         specifier: 4.0.1
-        version: 4.0.1(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
+        version: 4.0.1(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
       '@astrojs/preact':
         specifier: ^4.0.0
         version: 4.0.0(@babel/core@7.26.0)(@types/node@22.10.1)(jiti@2.3.3)(preact@10.25.1)(yaml@2.6.1)
       '@astrojs/rss':
-        specifier: ^4.0.9
-        version: 4.0.9
+        specifier: ^4.0.10
+        version: 4.0.10
       '@astrojs/vercel':
         specifier: 8.0.0
-        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
+        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
@@ -246,7 +243,7 @@ importers:
         version: link:../../packages/styles
       '@sentry/astro':
         specifier: ^8.41.0
-        version: 8.42.0(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
+        version: 8.42.0(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
       '@sentry/browser':
         specifier: ^8.41.0
         version: 8.42.0
@@ -260,8 +257,8 @@ importers:
         specifier: npm:@jsr/std__toml@^1.0.2
         version: '@jsr/std__toml@1.0.2'
       astro:
-        specifier: 5.0.2
-        version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+        specifier: 5.0.3
+        version: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       astro-icon:
         specifier: ^1.1.4
         version: 1.1.4
@@ -299,6 +296,15 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config-typescript
+      '@types/eslint-config-prettier':
+        specifier: ^6.11.3
+        version: 6.11.3
+      '@types/eslint__js':
+        specifier: ^8.42.3
+        version: 8.42.3
+      '@types/node':
+        specifier: ^22.10.1
+        version: 22.10.1
       '@webcomponents/template-shadowroot':
         specifier: ^0.2.1
         version: 0.2.1
@@ -333,8 +339,8 @@ importers:
         specifier: ^1.0.1
         version: 1.0.1
       prettier:
-        specifier: ^3.4.1
-        version: 3.4.1
+        specifier: ^3.4.2
+        version: 3.4.2
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
@@ -358,13 +364,13 @@ importers:
         version: 3.6.3(@types/node@22.10.1)(@types/react-dom@18.3.1)(@types/react@18.3.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@astrojs/svelte':
         specifier: catalog:svelte5
-        version: 7.0.1(@types/node@22.10.1)(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(svelte@5.7.0)(typescript@5.7.2)(yaml@2.6.1)
+        version: 7.0.1(@types/node@22.10.1)(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(svelte@5.7.0)(typescript@5.7.2)(yaml@2.6.1)
       '@astrojs/vercel':
         specifier: 'catalog:'
-        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
+        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
       '@astrojs/vue':
         specifier: 'catalog:'
-        version: 5.0.1(@types/node@22.10.1)(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(rollup@4.28.0)(vue@3.5.13(typescript@5.7.2))(yaml@2.6.1)
+        version: 5.0.1(@types/node@22.10.1)(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(rollup@4.28.0)(vue@3.5.13(typescript@5.7.2))(yaml@2.6.1)
       '@preact/signals':
         specifier: ^1.3.1
         version: 1.3.1(preact@10.25.1)
@@ -394,7 +400,7 @@ importers:
         version: 2.0.6
       astro:
         specifier: 'catalog:'
-        version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+        version: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       lit:
         specifier: ^3.2.1
         version: 3.2.1
@@ -498,16 +504,16 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^4.0.1
-        version: 4.0.1(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
+        version: 4.0.1(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
       '@astrojs/rss':
-        specifier: ^4.0.9
-        version: 4.0.9
+        specifier: ^4.0.10
+        version: 4.0.10
       '@astrojs/sitemap':
         specifier: ^3.2.1
         version: 3.2.1
       astro:
-        specifier: ^5.0.2
-        version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+        specifier: ^5.0.3
+        version: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -524,6 +530,9 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
+      typescript:
+        specifier: 'catalog:'
+        version: 5.7.2
 
   apps/shop:
     dependencies:
@@ -532,10 +541,10 @@ importers:
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
       '@astrojs/tailwind':
         specifier: 'catalog:'
-        version: 5.1.3(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.15)
+        version: 5.1.3(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.15)
       astro:
         specifier: 'catalog:'
-        version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+        version: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       astro-icon:
         specifier: 'catalog:'
         version: 1.1.4
@@ -572,22 +581,22 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: 'catalog:'
-        version: 4.0.1(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
+        version: 4.0.1(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))
       '@astrojs/rss':
         specifier: 'catalog:'
-        version: 4.0.9
+        version: 4.0.10
       '@astrojs/sitemap':
         specifier: 'catalog:'
         version: 3.2.1
       '@astrojs/vercel':
         specifier: 'catalog:'
-        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
+        version: 8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
       '@repo/styles':
         specifier: workspace:*
         version: link:../../packages/styles
       astro:
         specifier: 'catalog:'
-        version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+        version: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       lit:
         specifier: 'catalog:'
         version: 3.2.1
@@ -631,6 +640,15 @@ importers:
       '@eslint/markdown':
         specifier: ^6.2.1
         version: 6.2.1
+      '@types/eslint-config-prettier':
+        specifier: ^6.11.3
+        version: 6.11.3
+      '@types/eslint-plugin-markdown':
+        specifier: ^2.0.2
+        version: 2.0.2
+      '@types/eslint__js':
+        specifier: ^8.42.3
+        version: 8.42.3
       astro-eslint-parser:
         specifier: ^1.1.0
         version: 1.1.0(typescript@5.7.2)
@@ -648,7 +666,7 @@ importers:
         version: 1.15.0(eslint@9.16.0(jiti@2.3.3))
       eslint-plugin-prettier:
         specifier: ^5.2.1
-        version: 5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.16.0(jiti@2.3.3)))(eslint@9.16.0(jiti@2.3.3))(prettier@3.4.1)
+        version: 5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.16.0(jiti@2.3.3)))(eslint@9.16.0(jiti@2.3.3))(prettier@3.4.2)
       eslint-plugin-react:
         specifier: ^7.37.2
         version: 7.37.2(eslint@9.16.0(jiti@2.3.3))
@@ -740,7 +758,7 @@ importers:
         version: 8.3.5(jiti@2.3.3)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.6.1)
     devDependencies:
       '@astrojs/check':
-        specifier: ^0.9.4
+        specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.1)(typescript@5.7.2)
       '@open-wc/testing':
         specifier: 'catalog:'
@@ -754,27 +772,29 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
+      '@types/eslint-config-prettier':
+        specifier: ^6.11.3
+        version: 6.11.3
+      '@types/eslint__js':
+        specifier: ^8.42.3
+        version: 8.42.3
       astro:
-        specifier: ^5.0.2
-        version: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+        specifier: ^5.0.3
+        version: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       eslint:
-        specifier: ^9.16.0
+        specifier: 'catalog:'
         version: 9.16.0(jiti@2.3.3)
       prettier:
         specifier: 'catalog:'
         version: 3.4.1
       prettier-plugin-astro:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1
       typescript:
         specifier: 'catalog:'
         version: 5.7.2
 
   packages/styles:
-    dependencies:
-      zod:
-        specifier: 'catalog:'
-        version: 3.23.8
     devDependencies:
       '@repo/eslint-config':
         specifier: workspace:*
@@ -782,6 +802,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../config-typescript
+      astro:
+        specifier: ^5.0.3
+        version: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       eslint:
         specifier: ^9.16.0
         version: 9.16.0(jiti@2.3.3)
@@ -1022,8 +1045,8 @@ packages:
       react: ^17.0.2 || ^18.0.0 || ^19.0.0-beta
       react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0-beta
 
-  '@astrojs/rss@4.0.9':
-    resolution: {integrity: sha512-W1qeLc/WP1vMS5xXa+BnaLU0paeSeGjN8RJVAoBaOIkQuKXjIUA9hvPno89heo73in5i67g40gy70oeeHMqp6A==}
+  '@astrojs/rss@4.0.10':
+    resolution: {integrity: sha512-2gFdHM763uUAySkdwPYrpi6dppOBJr9ddg5VbkKXctWze8d1JHgIBBY78zWIYs7KBJT58zxadsObVAVt55RDaw==}
 
   '@astrojs/sitemap@3.2.1':
     resolution: {integrity: sha512-uxMfO8f7pALq0ADL6Lk68UV6dNYjJ2xGUzyjjVj60JLBs5a6smtlkBYv3tQ0DzoqwS7c9n4FUx5lgv0yPo/fgA==}
@@ -2554,8 +2577,17 @@ packages:
   '@types/deep-eql@4.0.2':
     resolution: {integrity: sha512-c9h9dVVMigMPc4bwTvC5dxqtqJZwQPePsWjPlpSOnojbor6pGqdk541lfA7AqFQr5pB1BRdq0juY9db81BwyFw==}
 
+  '@types/eslint-config-prettier@6.11.3':
+    resolution: {integrity: sha512-3wXCiM8croUnhg9LdtZUJQwNcQYGWxxdOWDjPe1ykCqJFPVpzAKfs/2dgSoCtAvdPeaponcWPI7mPcGGp9dkKQ==}
+
+  '@types/eslint-plugin-markdown@2.0.2':
+    resolution: {integrity: sha512-ImmEw5xBVb9vCaFfQ+5kUcVatUO4XPpTvryAmhpKzalUKhDb3EZmeuHvIUO6E1/WDOTw+/b9qlWsZhxULhZdfQ==}
+
   '@types/eslint@9.6.1':
     resolution: {integrity: sha512-FXx2pKgId/WyYo2jXw63kk7/+TY7u7AziEJxJAnSFzHlqTAS3Ync6SvgYAN/k4/PQpnnVuzoMuVnByKK2qp0ag==}
+
+  '@types/eslint__js@8.42.3':
+    resolution: {integrity: sha512-alfG737uhmPdnvkrLdZLcEKJ/B8s9Y4hrZ+YAdzUeoArBlSUERA2E87ROfOaS4jd/C45fzOoZzidLc1IPwLqOw==}
 
   '@types/estree-jsx@1.0.5':
     resolution: {integrity: sha512-52CcUVNFyfb1A2ALocQw/Dd1BQFNmSdkuC3BkZ6iqhdMfQz7JWOFRuJFloOzjk+6WijU56m9oKXFAXc7o3Towg==}
@@ -3115,6 +3147,11 @@ packages:
 
   astro@5.0.2:
     resolution: {integrity: sha512-MKf82vUiTZ2aK+c/8EDnLYIsToBdVVk4PuhhGdE8F/PcuUyS+oIcuCPf30iVf8WCQwXOfnYGnv1JbRjzkqUc3w==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
+    hasBin: true
+
+  astro@5.0.3:
+    resolution: {integrity: sha512-qpeN+POmmfAQu/XDXaI2CxkUgQFwH9uMUVaA1reV9rybzIbOVYc3E3BU5SkiP/W4BMUFPdJtyw6+/n/0AUv6rw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -5888,6 +5925,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  prettier@3.4.2:
+    resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   prismjs@1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
@@ -7259,6 +7301,17 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
+  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)':
+    dependencies:
+      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
+      chokidar: 4.0.1
+      kleur: 4.1.5
+      typescript: 5.7.2
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+
   '@astrojs/compiler@2.10.3': {}
 
   '@astrojs/internal-helpers@0.4.2': {}
@@ -7289,6 +7342,32 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
+  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)':
+    dependencies:
+      '@astrojs/compiler': 2.10.3
+      '@astrojs/yaml2ts': 0.2.2
+      '@jridgewell/sourcemap-codec': 1.5.0
+      '@volar/kit': 2.4.10(typescript@5.7.2)
+      '@volar/language-core': 2.4.10
+      '@volar/language-server': 2.4.10
+      '@volar/language-service': 2.4.10
+      fast-glob: 3.3.2
+      muggle-string: 0.4.1
+      volar-service-css: 0.0.62(@volar/language-service@2.4.10)
+      volar-service-emmet: 0.0.62(@volar/language-service@2.4.10)
+      volar-service-html: 0.0.62(@volar/language-service@2.4.10)
+      volar-service-prettier: 0.0.62(@volar/language-service@2.4.10)(prettier@3.4.2)
+      volar-service-typescript: 0.0.62(@volar/language-service@2.4.10)
+      volar-service-typescript-twoslash-queries: 0.0.62(@volar/language-service@2.4.10)
+      volar-service-yaml: 0.0.62(@volar/language-service@2.4.10)
+      vscode-html-languageservice: 5.3.1
+      vscode-uri: 3.0.8
+    optionalDependencies:
+      prettier: 3.4.2
+      prettier-plugin-astro: 0.14.1
+    transitivePeerDependencies:
+      - typescript
+
   '@astrojs/markdown-remark@6.0.0':
     dependencies:
       '@astrojs/prism': 3.2.0
@@ -7313,12 +7392,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.1(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))':
+  '@astrojs/mdx@4.0.1(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.0.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.3
@@ -7381,7 +7460,7 @@ snapshots:
       - supports-color
       - terser
 
-  '@astrojs/rss@4.0.9':
+  '@astrojs/rss@4.0.10':
     dependencies:
       fast-xml-parser: 4.5.0
       kleur: 4.1.5
@@ -7392,10 +7471,10 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/svelte@7.0.1(@types/node@22.10.1)(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(svelte@5.7.0)(typescript@5.7.2)(yaml@2.6.1)':
+  '@astrojs/svelte@7.0.1(@types/node@22.10.1)(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(svelte@5.7.0)(typescript@5.7.2)(yaml@2.6.1)':
     dependencies:
       '@sveltejs/vite-plugin-svelte': 5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1))
-      astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       svelte: 5.7.0
       svelte2tsx: 0.7.26(svelte@5.7.0)(typescript@5.7.2)
       typescript: 5.7.2
@@ -7414,9 +7493,9 @@ snapshots:
       - tsx
       - yaml
 
-  '@astrojs/tailwind@5.1.3(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.15)':
+  '@astrojs/tailwind@5.1.3(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.15)':
     dependencies:
-      astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       autoprefixer: 10.4.20(postcss@8.4.49)
       postcss: 8.4.49
       postcss-load-config: 4.0.2(postcss@8.4.49)
@@ -7436,13 +7515,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/vercel@8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))':
+  '@astrojs/vercel@8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.2
       '@vercel/analytics': 1.4.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(svelte@5.7.0)(vite@5.4.11(@types/node@22.10.1)))(react@18.3.1)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
       '@vercel/edge': 1.1.2
       '@vercel/nft': 0.27.7(rollup@4.28.0)
-      astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       esbuild: 0.24.0
       fast-glob: 3.3.2
     transitivePeerDependencies:
@@ -7457,13 +7536,13 @@ snapshots:
       - vue
       - vue-router
 
-  '@astrojs/vercel@8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))':
+  '@astrojs/vercel@8.0.0(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(react@18.3.1)(rollup@4.28.0)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.2
       '@vercel/analytics': 1.4.1(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@5.0.1(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(svelte@5.7.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)))(react@18.3.1)(svelte@5.7.0)(vue@3.5.13(typescript@5.7.2))
       '@vercel/edge': 1.1.2
       '@vercel/nft': 0.27.7(rollup@4.28.0)
-      astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       esbuild: 0.24.0
       fast-glob: 3.3.2
     transitivePeerDependencies:
@@ -7478,12 +7557,12 @@ snapshots:
       - vue
       - vue-router
 
-  '@astrojs/vue@5.0.1(@types/node@22.10.1)(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(rollup@4.28.0)(vue@3.5.13(typescript@5.7.2))(yaml@2.6.1)':
+  '@astrojs/vue@5.0.1(@types/node@22.10.1)(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(rollup@4.28.0)(vue@3.5.13(typescript@5.7.2))(yaml@2.6.1)':
     dependencies:
       '@vitejs/plugin-vue': 5.2.1(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))
       '@vitejs/plugin-vue-jsx': 4.1.0(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))
       '@vue/compiler-sfc': 3.5.13
-      astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
       vite: 6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)
       vite-plugin-vue-devtools: 7.6.4(rollup@4.28.0)(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))
       vue: 3.5.13(typescript@5.7.2)
@@ -8785,13 +8864,13 @@ snapshots:
       '@sentry-internal/browser-utils': 8.42.0
       '@sentry/core': 8.42.0
 
-  '@sentry/astro@8.42.0(astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))':
+  '@sentry/astro@8.42.0(astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1))':
     dependencies:
       '@sentry/browser': 8.42.0
       '@sentry/core': 8.42.0
       '@sentry/node': 8.42.0
       '@sentry/vite-plugin': 2.22.6
-      astro: 5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1)
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -9129,11 +9208,21 @@ snapshots:
 
   '@types/deep-eql@4.0.2': {}
 
+  '@types/eslint-config-prettier@6.11.3': {}
+
+  '@types/eslint-plugin-markdown@2.0.2':
+    dependencies:
+      '@types/eslint': 9.6.1
+      '@types/unist': 3.0.3
+
   '@types/eslint@9.6.1':
     dependencies:
       '@types/estree': 1.0.6
       '@types/json-schema': 7.0.15
-    optional: true
+
+  '@types/eslint__js@8.42.3':
+    dependencies:
+      '@types/eslint': 9.6.1
 
   '@types/estree-jsx@1.0.5':
     dependencies:
@@ -9915,6 +10004,84 @@ snapshots:
       - supports-color
 
   astro@5.0.2(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1):
+    dependencies:
+      '@astrojs/compiler': 2.10.3
+      '@astrojs/internal-helpers': 0.4.2
+      '@astrojs/markdown-remark': 6.0.0
+      '@astrojs/telemetry': 3.2.0
+      '@oslojs/encoding': 1.1.0
+      '@rollup/pluginutils': 5.1.3(rollup@4.28.0)
+      '@types/cookie': 0.6.0
+      acorn: 8.14.0
+      aria-query: 5.3.2
+      axobject-query: 4.1.0
+      boxen: 8.0.1
+      ci-info: 4.1.0
+      clsx: 2.1.1
+      common-ancestor-path: 1.0.1
+      cookie: 0.7.2
+      cssesc: 3.0.0
+      debug: 4.3.7
+      deterministic-object-hash: 2.0.2
+      devalue: 5.1.1
+      diff: 5.2.0
+      dlv: 1.1.3
+      dset: 3.1.4
+      es-module-lexer: 1.5.4
+      esbuild: 0.21.5
+      estree-walker: 3.0.3
+      fast-glob: 3.3.2
+      flattie: 1.1.1
+      github-slugger: 2.0.0
+      html-escaper: 3.0.3
+      http-cache-semantics: 4.1.1
+      js-yaml: 4.1.0
+      kleur: 4.1.5
+      magic-string: 0.30.14
+      magicast: 0.3.5
+      micromatch: 4.0.8
+      mrmime: 2.0.0
+      neotraverse: 0.6.18
+      p-limit: 6.1.0
+      p-queue: 8.0.1
+      preferred-pm: 4.0.0
+      prompts: 2.4.2
+      rehype: 13.0.2
+      semver: 7.6.3
+      shiki: 1.24.0
+      tinyexec: 0.3.1
+      tsconfck: 3.1.4(typescript@5.7.2)
+      ultrahtml: 1.5.3
+      unist-util-visit: 5.0.0
+      vfile: 6.0.3
+      vite: 6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1)
+      vitefu: 1.0.4(vite@6.0.2(@types/node@22.10.1)(jiti@2.3.3)(yaml@2.6.1))
+      which-pm: 3.0.0
+      xxhash-wasm: 1.1.0
+      yargs-parser: 21.1.1
+      yocto-spinner: 0.1.1
+      zod: 3.23.8
+      zod-to-json-schema: 3.23.5(zod@3.23.8)
+      zod-to-ts: 1.2.0(typescript@5.7.2)(zod@3.23.8)
+    optionalDependencies:
+      sharp: 0.33.5
+    transitivePeerDependencies:
+      - '@types/node'
+      - jiti
+      - less
+      - lightningcss
+      - rollup
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+      - tsx
+      - typescript
+      - yaml
+
+  astro@5.0.3(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.0)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -10825,10 +10992,10 @@ snapshots:
       parse5-htmlparser2-tree-adapter: 6.0.1
       requireindex: 1.2.0
 
-  eslint-plugin-prettier@5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.16.0(jiti@2.3.3)))(eslint@9.16.0(jiti@2.3.3))(prettier@3.4.1):
+  eslint-plugin-prettier@5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.16.0(jiti@2.3.3)))(eslint@9.16.0(jiti@2.3.3))(prettier@3.4.2):
     dependencies:
       eslint: 9.16.0(jiti@2.3.3)
-      prettier: 3.4.1
+      prettier: 3.4.2
       prettier-linter-helpers: 1.0.0
       synckit: 0.9.2
     optionalDependencies:
@@ -13239,6 +13406,8 @@ snapshots:
 
   prettier@3.4.1: {}
 
+  prettier@3.4.2: {}
+
   prismjs@1.29.0: {}
 
   process@0.11.10: {}
@@ -14526,6 +14695,13 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.10
       prettier: 3.4.1
+
+  volar-service-prettier@0.0.62(@volar/language-service@2.4.10)(prettier@3.4.2):
+    dependencies:
+      vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 2.4.10
+      prettier: 3.4.2
 
   volar-service-typescript-twoslash-queries@0.0.62(@volar/language-service@2.4.10):
     dependencies:
