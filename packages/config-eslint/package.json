@@ -31,7 +31,7 @@
   },
   "license": "MIT",
   "type": "module",
-  "dependencies": {
+  "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.3",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-markdown": "^2.0.2",
@@ -54,12 +54,10 @@
     "eslint-plugin-vue": "^9.32.0",
     "eslint-plugin-wc": "^2.2.0",
     "globals": "^15.13.0",
-    "typescript-eslint": "^8.17.0"
+    "typescript-eslint": "^8.17.0",
+    "prettier-plugin-astro": "^0.14.1"
   },
   "prettier": {
     "singleQuote": true
-  },
-  "devDependencies": {
-    "prettier-plugin-astro": "^0.14.1"
   }
 }
