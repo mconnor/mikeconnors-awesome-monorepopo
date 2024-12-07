@@ -20,7 +20,7 @@ const countries = await getCollection('countries');
         <Box>
           {countries.map(({ id, data }) => (
             <Box>
-              <h3>{data.name.common}</h3>
+              <h3>{id}-{data.name.common}</h3>
             </Box>
           ))}
         </Box>

@@ -15,7 +15,6 @@ export const server = {
           code: 'NOT_FOUND',
           message: 'no input',
         });
-        alert('i need your name');
       }
       return `Hello, ${input.name}!`;
     },

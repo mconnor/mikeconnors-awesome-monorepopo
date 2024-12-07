@@ -22,10 +22,17 @@
       const btn = this.querySelector('button');
       btn?.addEventListener('click', async () => {
         // Show alert pop-up with greeting from action
-        const greetingResponse = await actions.getGreeting.orThrow({
-          name: nameSchema.parse(input?.value) || 'bob',
-        });
-        alert(greetingResponse);
+        const { data, success } = nameSchema.safeParse(input?.value);
+
+        /// handle errors on this particule use of action
+        if (success) {
+          const greetingResponse = await actions.getGreeting.orThrow({
+            name: data,
+          });
+          alert(greetingResponse);
+        } else {
+          alert('nope');
+        }
       });
     }
   }
