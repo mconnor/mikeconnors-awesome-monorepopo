@@ -23,7 +23,6 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
     "svelte": "catalog:svelte5",
     "svelte-check": "catalog:",

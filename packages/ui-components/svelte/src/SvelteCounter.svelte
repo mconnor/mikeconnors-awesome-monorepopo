@@ -2,8 +2,10 @@
 A counter written with Svelte
 -->
 <script lang="ts">
-  export let klass;
-  let count = 0;
+  import type { Snippet } from 'svelte';
+
+  let { children, klass = 'counter' }: Props = $props();
+  let count = $state(0);
 
   function add() {
     count += 1;
@@ -15,10 +17,10 @@ A counter written with Svelte
 </script>
 
 <div class={klass}>
-  <button on:click={subtract}>-</button>
+  <button onclick={subtract}>-</button>
   <pre>{count}</pre>
-  <button on:click={add}>+</button>
+  <button onclick={add}>+</button>
 </div>
 <div class="counter-message">
-  <slot />
+  {@render children?.()}
 </div>
