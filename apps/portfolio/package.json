@@ -1,0 +1,34 @@
+{
+  "name": "@app/portfolio",
+  "type": "module",
+  "author": "Mike Connor",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro-check": "astro check",
+    "astro": "astro",
+    "format": "prettier . --write",
+    "lint": "eslint . --max-warnings 0",
+    "inspect": "eslint . --inspect-config",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@repo/layout-webcomponents": "workspace:*",
+    "astro": "^5.0.3"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "^9.16.0",
+    "prettier": "^3.4.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.7.2"
+  }
+}
