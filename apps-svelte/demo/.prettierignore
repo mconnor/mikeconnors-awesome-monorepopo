@@ -2,3 +2,17 @@
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+.svelte-kit
+.turbo/
+vercel/
+.DS_Store
+# Files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+node_modules/
+cache-directory/
+dist/
