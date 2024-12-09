@@ -1,6 +1,6 @@
 packages:
   - apps/*
-  - app/svelte/*
+  - apps-svelte/*
   - packages/*
   - packages/ui-components/*
   - "!**/test/**"
@@ -8,7 +8,8 @@ packages:
   - "!**/cache-directory/**"
 catalog:
   "@astrojs/check": ^0.9.4
-  "@astrojs/preact": ^3.5.4
+  "@astrojs/preact": ^4.0.0
+  "@preact/signals": ^1.3.1
   "@astrojs/react": ^4.0.0
   "@astrojs/mdx": ^4.0.1
   "@astrojs/rss": ^4.0.10
