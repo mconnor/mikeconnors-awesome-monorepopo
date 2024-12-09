@@ -1,3 +1,5 @@
+// @ts-check
+
 import sveltePlugin from 'eslint-plugin-svelte';
 
 // import js from '@eslint/js';

@@ -48,7 +48,7 @@ const config = tseslint.config(
   },
 
   ...simpleImportSort,
-  prettierConfig
+  prettierConfig,
 );
 
 export default config;

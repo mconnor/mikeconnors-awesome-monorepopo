@@ -35,10 +35,5 @@
     "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "experimentalTernaries": true,
-    "proseWrap": "always"
   }
 }

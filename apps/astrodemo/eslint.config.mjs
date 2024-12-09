@@ -8,6 +8,7 @@ import tsLint from '@repo/eslint-config/ts-lint';
 // import jsonConfig from '@repo/eslint-config/json';
 // import regexConfig from '@repo/eslint-config/regex';
 
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 /** @type {import('eslint').Linter.Config[]} */
 const config = [
   ...tsLint,

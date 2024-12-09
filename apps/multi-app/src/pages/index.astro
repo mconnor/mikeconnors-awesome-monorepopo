@@ -13,24 +13,21 @@ import Box from '#wc-lit/Box/index.astro';
 
 <Layout>
   <Stack>
-    <!-- <LikePreact client:visible /> -->
+
     <Box borderWidth="4px" borderStyle='double'>
       <Box invert borderWidth="4px">
       <ReactKounter client:only="react" klass="counter">
         <h1>Hello from React!</h1>
       </ReactKounter>
     </Box>
+
     <Box>
     <PCount client:visible klass="counter">
       <h1>Hello from Preact!</h1>
     </PCount></Box
   >
 
-  <!-- <Box>
-    <SolidC client:visible>
-      <h1>Hello from Solid!</h1>
-    </SolidC></Box
-  > -->
+
 
   <Box>
     <VueCounter client:visible>
@@ -41,7 +38,10 @@ import Box from '#wc-lit/Box/index.astro';
   <Box>
     <CounterSvelte client:visible klass="counter">
       <h1>Hello from Svelte!</h1>
-    </CounterSvelte></Box
-  ></Box
-  ></Stack>
+    </CounterSvelte></Box>
+
+    </Box>
+
+
+    </Stack>
 </Layout>
