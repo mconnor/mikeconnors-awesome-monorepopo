@@ -3,7 +3,8 @@
   "type": "module",
   "author": "Mike Connor",
   "imports": {
-    "#*": "./src/*"
+    "#*": "./src/*",
+    "#C": "./src/components/*"
   },
   "version": "0.0.1",
   "scripts": {

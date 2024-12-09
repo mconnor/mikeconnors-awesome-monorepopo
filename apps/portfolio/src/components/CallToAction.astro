@@ -1,8 +1,5 @@
 ---
-interface Props {
-  href: string;
-}
-
+type Props = HTMLAttributes<'a'>;
 const { href } = Astro.props;
 ---
 
@@ -20,6 +17,7 @@ const { href } = Astro.props;
     text-decoration: none;
     line-height: 1.1;
     border-radius: 999rem;
+    border: 2px solid black;
     overflow: hidden;
     background: var(--gradient-accent-orange);
     box-shadow: var(--shadow-md);
