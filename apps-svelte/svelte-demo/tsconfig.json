@@ -1,4 +1,0 @@
-{
-  "extends": "./.svelte-kit/tsconfig.json",
-  "files": ["eslint.config.mjs", "svelte.config.js", "vite.config.ts"]
-}

@@ -1,9 +1,9 @@
 ---
 import Stack from '@repo/layout-webcomponents/Stack';
+import Box from '@repo/ui-lit/Box';
 import { getCollection } from 'astro:content';
 
 import Layout from '#layouts/Layout.astro';
-import Box from '#wc-lit/Box/index.astro';
 export const prerender = false;
 const countries = await getCollection('countries');
 ---
@@ -20,7 +20,9 @@ const countries = await getCollection('countries');
         <Box>
           {countries.map(({ id, data }) => (
             <Box>
-              <h3>{id}-{data.name.common}</h3>
+              <h3>
+                {id}-{data.name.common}
+              </h3>
             </Box>
           ))}
         </Box>

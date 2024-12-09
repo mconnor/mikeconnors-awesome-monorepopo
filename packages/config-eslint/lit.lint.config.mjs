@@ -1,3 +1,5 @@
+// @ts-check
+
 import wc from 'eslint-plugin-wc';
 import lit from 'eslint-plugin-lit';
 

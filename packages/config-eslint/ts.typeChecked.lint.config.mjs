@@ -1,3 +1,4 @@
+// @ts-check
 import js from '@eslint/js';
 // import wc from 'eslint-plugin-wc';
 import tseslint from 'typescript-eslint';
@@ -47,7 +48,7 @@ const config = tseslint.config(
     },
   },
   ...simpleImportSort,
-  prettier,
+  prettier
 );
 
 export default config;

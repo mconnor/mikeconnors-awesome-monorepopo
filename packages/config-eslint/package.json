@@ -23,6 +23,7 @@
     "./svelteLint": "./svelte.lint.config.mjs",
     "./svelteAppLint": "./svelteApp.lint.config.mjs",
     "./svelte-app": "./svelte.app.config.mjs",
+    "./svelte5-app": "./svelte5.lint.config.mjs",
     "./solid": "./sold.lint.config.mjs",
     "./prettier": "./lint.prettier.config.mjs"
   },
@@ -33,12 +34,12 @@
   "type": "module",
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.3",
-    "@types/eslint-config-prettier": "^6.11.3",
-    "@types/eslint-plugin-markdown": "^2.0.2",
-    "@types/eslint__js": "^8.42.3",
     "@eslint/js": "^9.16.0",
     "@eslint/json": "^0.8.0",
     "@eslint/markdown": "^6.2.1",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint-plugin-markdown": "^2.0.2",
+    "@types/eslint__js": "^8.42.3",
     "astro-eslint-parser": "^1.1.0",
     "eslint-config-preact": "^1.5.0",
     "eslint-config-prettier": "^9.1.0",
@@ -54,8 +55,8 @@
     "eslint-plugin-vue": "^9.32.0",
     "eslint-plugin-wc": "^2.2.0",
     "globals": "^15.13.0",
-    "typescript-eslint": "^8.17.0",
-    "prettier-plugin-astro": "^0.14.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript-eslint": "^8.18.0"
   },
   "prettier": {
     "singleQuote": true

@@ -42,6 +42,7 @@
     "@astrojs/rss": "^4.0.10",
     "@astrojs/vercel": "8.0.0",
     "@repo/layout-webcomponents": "workspace:*",
+    "@repo/ui-lit": "workspace:*",
     "@repo/styles": "workspace:*",
     "@sentry/astro": "^8.41.0",
     "@sentry/browser": "^8.41.0",

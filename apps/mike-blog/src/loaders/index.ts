@@ -23,7 +23,7 @@ const countryLoader = (): Loader => {
         const rawResponse = await fetch(url.href)
           .then((res) => res.json())
           .catch((error) => {
-            logger.error('Fetch failed:', error);
+            logger.error('Fetch failed: ' + error);
           });
 
         const result = countriesSchema.safeParse(rawResponse);

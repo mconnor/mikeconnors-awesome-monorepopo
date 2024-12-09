@@ -1,3 +1,5 @@
+// @ts-check
+
 import * as regexpPlugin from 'eslint-plugin-regexp';
 
 export default [

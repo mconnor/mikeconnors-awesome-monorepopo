@@ -1,3 +1,5 @@
+// @ts-check
+
 import json from '@eslint/json';
 
 export default [
