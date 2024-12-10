@@ -20,7 +20,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint .",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
   },

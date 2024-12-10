@@ -14,7 +14,11 @@ export default function (): Loader {
   return {
     name: 'youtube-loader',
     schema: videoSchema,
-    load: async ({ store, parseData }: LoaderContext): Promise<void> => {
+    load: async ({
+      store,
+      parseData,
+      logger,
+    }: LoaderContext): Promise<void> => {
       let nextPageToken: string | undefined;
       let pagesCollected = 0;
       await fetchVideos();
@@ -24,7 +28,7 @@ export default function (): Loader {
 
       async function fetchVideos() {
         if (pagesCollected >= 100) {
-          console.warn('Reached maximum number of pages to fetch');
+          logger.warn('Reached maximum number of pages to fetch');
           return;
         }
         if (nextPageToken) {
@@ -52,7 +56,7 @@ export default function (): Loader {
               // a store can choose when to update
               store.set({ id, data });
             } catch (error) {
-              console.error(`skipped video ${id}: ${error}`);
+              logger.error(`skipped video ${id}: ${error}`);
             }
           }
           pagesCollected++;

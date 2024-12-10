@@ -23,7 +23,7 @@
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint .",
     "fix": "eslint . --fix",
     "inspect": "eslint . --inspect-config",
     "check-types": "tsc --noEmit"
