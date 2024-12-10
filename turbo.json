@@ -32,9 +32,7 @@
       "dependsOn": [
         "^lint"
       ],
-      "outputs": [
-        "dummy"
-      ]
+      "outputs": []
     },
     "format": {},
     "sync": {

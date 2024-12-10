@@ -28,6 +28,7 @@
     "${configDir}/.astro/types.d.ts",
     "${configDir}/src/**/*",
     "${configDir}/**/*.ts",
+    "${configDir}/**/*.js",
     "${configDir}/**/*.mjs"
   ]
 }
