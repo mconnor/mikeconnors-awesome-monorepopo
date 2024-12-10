@@ -2,14 +2,30 @@
   "name": "@app/hackernews",
   "type": "module",
   "version": "0.0.1",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "dev": "astro dev",
+    "astro-check": "astro check",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "inspect": "eslint . --inspect-config",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@astrojs/node": "^9.0.0",
     "astro": "^5.0.4"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "catalog:"
   }
 }
