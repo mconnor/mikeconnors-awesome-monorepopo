@@ -278,6 +278,31 @@ importers:
         specifier: 'catalog:'
         version: 5.7.2
 
+  apps/hackernews:
+    dependencies:
+      '@astrojs/node':
+        specifier: ^9.0.0
+        version: 9.0.0(astro@5.0.4(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
+      astro:
+        specifier: ^5.0.4
+        version: 5.0.4(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/config-eslint
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../../packages/config-typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.16.0(jiti@2.3.3)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.4.2
+      prettier-plugin-astro:
+        specifier: 'catalog:'
+        version: 0.14.1
+
   apps/mike-blog:
     dependencies:
       '@astrojs/check':
@@ -1120,6 +1145,11 @@ packages:
   '@astrojs/mdx@4.0.2':
     resolution: {integrity: sha512-uBoXNSSAUqhf2dVtJWFbSapwNkcnCzbISW98EcybFXvNgYt9g8yPJ7+lYnf+sH5pv0c/JEW8HlBvPSi81AVRlw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
+    peerDependencies:
+      astro: ^5.0.0
+
+  '@astrojs/node@9.0.0':
+    resolution: {integrity: sha512-3h/5kFZvpuo+chYAjj75YhtRUxfquxEJrpZRRC7TdiMGp2WhLp2us4VXm2mjezJp/zHKotW2L3qgp0P2ujQ0xw==}
     peerDependencies:
       astro: ^5.0.0
 
@@ -3778,6 +3808,10 @@ packages:
     resolution: {integrity: sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==}
     engines: {node: '>= 0.8'}
 
+  encodeurl@2.0.0:
+    resolution: {integrity: sha512-Q0n9HRi4m6JuGIV1eFlmvJB7ZEVxu93IrMyiMsGC0lrMJMWzRgx6WGquyfQgZVb31vhGgXnfmPNNXmxnOkRBrg==}
+    engines: {node: '>= 0.8'}
+
   encoding-sniffer@0.2.0:
     resolution: {integrity: sha512-ju7Wq1kg04I3HtiYIOrUrdfdDvkyO9s5XM8QAj/bN61Yo/Vb4vgJxy5vi4Yxk01gWHbrofpPtpxM8bKger9jhg==}
 
@@ -6108,6 +6142,10 @@ packages:
   ramda@0.27.2:
     resolution: {integrity: sha512-SbiLPU40JuJniHexQSAgad32hfwd+DRUdwF2PlVuI5RZD0/vahUco7R8vD86J/tcEKKF9vZrUVwgtmGCqlCKyA==}
 
+  range-parser@1.2.1:
+    resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
+    engines: {node: '>= 0.6'}
+
   raw-body@2.5.2:
     resolution: {integrity: sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==}
     engines: {node: '>= 0.8'}
@@ -6341,6 +6379,13 @@ packages:
     resolution: {integrity: sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==}
     engines: {node: '>=10'}
     hasBin: true
+
+  send@1.1.0:
+    resolution: {integrity: sha512-v67WcEouB5GxbTWL/4NeToqcZiAWEq90N888fczVArY8A79J0L4FD7vj5hm3eUMua5EpoQ59wa/oovY6TLvRUA==}
+    engines: {node: '>= 18'}
+
+  server-destroy@1.0.1:
+    resolution: {integrity: sha512-rb+9B5YBIEzYcD6x2VKidaa+cqYBJQKnU4oe4E3ANwRRN56yk/ua1YCJT1n21NTS8w6CcOclAKNP3PhdCXKYtQ==}
 
   set-cookie-parser@2.7.1:
     resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
@@ -7511,6 +7556,14 @@ snapshots:
       source-map: 0.7.4
       unist-util-visit: 5.0.0
       vfile: 6.0.3
+    transitivePeerDependencies:
+      - supports-color
+
+  '@astrojs/node@9.0.0(astro@5.0.4(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))':
+    dependencies:
+      astro: 5.0.4(@types/node@22.10.1)(jiti@2.3.3)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
+      send: 1.1.0
+      server-destroy: 1.0.1
     transitivePeerDependencies:
       - supports-color
 
@@ -10683,6 +10736,8 @@ snapshots:
 
   encodeurl@1.0.2: {}
 
+  encodeurl@2.0.0: {}
+
   encoding-sniffer@0.2.0:
     dependencies:
       iconv-lite: 0.6.3
@@ -13457,6 +13512,8 @@ snapshots:
 
   ramda@0.27.2: {}
 
+  range-parser@1.2.1: {}
+
   raw-body@2.5.2:
     dependencies:
       bytes: 3.1.2
@@ -13799,6 +13856,25 @@ snapshots:
       lru-cache: 6.0.0
 
   semver@7.6.3: {}
+
+  send@1.1.0:
+    dependencies:
+      debug: 4.4.0
+      destroy: 1.2.0
+      encodeurl: 2.0.0
+      escape-html: 1.0.3
+      etag: 1.8.1
+      fresh: 0.5.2
+      http-errors: 2.0.0
+      mime-types: 2.1.35
+      ms: 2.1.3
+      on-finished: 2.4.1
+      range-parser: 1.2.1
+      statuses: 2.0.1
+    transitivePeerDependencies:
+      - supports-color
+
+  server-destroy@1.0.1: {}
 
   set-cookie-parser@2.7.1: {}
 
