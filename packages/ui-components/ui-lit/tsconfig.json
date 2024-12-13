@@ -2,7 +2,5 @@
   "extends": "@repo/typescript-config/lit.json",
   "compilerOptions": {
     "rootDir": ".",
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false
   }
 }

@@ -1,12 +1,12 @@
 ---
-import Show from '../../components/Show.astro';
-import Layout from '../../layouts/Layout.astro';
-import fetchAPI from '../../lib/api';
-import type { IUser } from '../../types.js';
+import Show from '#components/Show.astro';
+import Layout from '#layouts/Layout.astro';
+import fetchAPI from '#lib/api.ts';
+import type { IUser } from '#types.js';
 
 const { id } = Astro.params as { id: string };
 
-const user = (await fetchAPI(`user/${id}`)) as IUser;
+const user = (await fetchAPI(`user/${id}`)) as uknown as  IUser;
 ---
 
 <Layout>

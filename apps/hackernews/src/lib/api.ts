@@ -1,4 +1,7 @@
+import { z } from 'astro:content';
+
 const story = (path: string) => `https://node-hnapi.herokuapp.com/${path}`;
+
 const user = (path: string) =>
   `https://hacker-news.firebaseio.com/v0/${path}.json`;
 
@@ -13,7 +16,7 @@ export default async function fetchAPI(path: string) {
       if (text === null) {
         return { error: 'Not found' };
       }
-      return JSON.parse(text);
+      return JSON.parse(text) as Record<string, unknown>;
     } catch (e) {
       console.error(`Received from API: ${text}`);
       console.error(e);

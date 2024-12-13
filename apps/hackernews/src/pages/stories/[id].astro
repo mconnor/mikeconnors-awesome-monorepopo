@@ -1,14 +1,14 @@
 ---
-import Comment from '../../components/Comment.astro';
-import For from '../../components/For.astro';
-import Show from '../../components/Show.astro';
-import Layout from '../../layouts/Layout.astro';
-import fetchAPI from '../../lib/api';
-import type { IComment, IStory } from '../../types.js';
+import Comment from '#components/Comment.astro';
+import For from '#components/For.astro';
+import Show from '#components/Show.astro';
+import Layout from '#layouts/Layout.astro';
+import fetchAPI from '#lib/api.ts';
+import type { IComment, IStory } from '#types.ts';
 
 const { id } = Astro.params as { id: string };
 
-const story = (await fetchAPI(`item/${id}`)) as IStory;
+const story = (await fetchAPI(`item/${id}`)) as unknown as IStory;
 ---
 
 <Layout>

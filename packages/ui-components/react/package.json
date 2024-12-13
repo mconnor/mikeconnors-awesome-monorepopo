@@ -30,8 +30,8 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/react": "^18.3.14",
-    "@types/react-dom": "^18.3.3",
+    "@types/react": "^18.3.16",
+    "@types/react-dom": "^18.3.5",
     "eslint": "^9.16.0",
     "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
@@ -39,5 +39,9 @@
     "react-dom": "catalog:",
     "tsup": "^8.3.5",
     "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
   }
 }

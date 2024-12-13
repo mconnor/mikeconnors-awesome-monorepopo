@@ -1,10 +1,10 @@
 ---
-import For from '../components/For.astro';
-import Show from '../components/Show.astro';
-import Story from '../components/Story.astro';
-import Layout from '../layouts/Layout.astro';
-import fetchAPI from '../lib/api';
-import type { IStory } from '../types.js';
+import For from '#components/For.astro';
+import Show from '#components/Show.astro';
+import Story from '#components/Story.astro';
+import Layout from '#layouts/Layout.astro';
+import fetchAPI from '#lib/api.ts';
+import type { IStory } from '#types.ts';
 
 const mapStories = {
   top: 'news',
@@ -22,7 +22,9 @@ function safeParseInt(value: any, fallback: number) {
   }
 }
 
+// Note: This feature works in web workers
 const page = safeParseInt(Astro.url.searchParams.get('page'), 1);
+
 const type =
   Astro.params.stories && Astro.params.stories in mapStories ?
     (Astro.params.stories.toString() as keyof typeof mapStories)
@@ -30,7 +32,8 @@ const type =
 
 const stories = (await fetchAPI(
   `${mapStories[type]}?page=${page}`,
-)) as IStory[];
+))
+// as IStory[];
 ---
 
 <Layout>

@@ -16,18 +16,19 @@ import { Image } from 'astro:assets';
 // import Andy from '#assets/andyBushes.jpg';
 import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
+import SomeComponent from "@repo/puffy"
 ---
 
 <Layout maxW="80ch">
   <Stack space="0">
     <h2>This is my website</h2>
-
+<Box>
+  <SomeComponent />
+</Box>
     <Box>
       <Frame ratio="16:9">
         <Image
           src={AndyMud}
-          widths={[240, 540, 720, AndyMud.width]}
-          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${AndyMud.width}px`}
           alt="A description of my image."
         />
       </Frame>

@@ -33,7 +33,7 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "^0.10.3",
+    "@custom-elements-manifest/analyzer": "^0.10.4",
     "@eslint/js": "^9.16.0",
     "@eslint/json": "^0.8.0",
     "@eslint/markdown": "^6.2.1",
@@ -50,7 +50,7 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-solid": "^0.14.4",
+    "eslint-plugin-solid": "^0.14.5",
     "eslint-plugin-svelte": "^2.46.1",
     "eslint-plugin-turbo": "^2.3.3",
     "eslint-plugin-vue": "^9.32.0",
