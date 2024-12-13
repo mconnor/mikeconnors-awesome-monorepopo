@@ -42,7 +42,6 @@
     "@astrojs/rss": "^4.0.10",
     "@astrojs/vercel": "8.0.0",
     "@repo/layout-webcomponents": "workspace:*",
-    "@repo/puffy": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@sentry/astro": "^8.44.0",
