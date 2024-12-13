@@ -34,7 +34,9 @@
     "singleQuote": true,
     "experimentalTernaries": true
   },
-  "keywords": [],
+  "keywords": [
+    "lit"
+  ],
   "author": "",
   "license": "ISC",
   "peerDependencies": {
