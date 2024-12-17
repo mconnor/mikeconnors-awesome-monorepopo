@@ -12,7 +12,7 @@ export default defineConfig({
   },
   vite: {
     ssr: {
-      noExternal: ['@repo/eslint-config', '@repo/ui-lit'],
+      noExternal: ['@repo/eslint-config'],
     },
   },
   env: {
