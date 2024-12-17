@@ -3,7 +3,8 @@
 import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
 // import ThemeSwitcher from '#wc-lit/ThemeSwitcher/index.astro';
-import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
+// import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
+import ThemeToggle from '@repo/ui-lit/ThemeToggle';
 
 // import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
 import HeaderLink from '#components/HeaderLink.astro';
@@ -15,7 +16,7 @@ const currentPage = pathname.match(/[^/]+$/)?.[0] || '';
 <Box invert padding="var(--s1)" borderWidth="0">
   <!-- <Hamburger /> -->
 
-  <ThemeSwitcher />
+  <ThemeToggle />
   <Cluster align="baseline" justify="space-between" space="0">
     <HeaderLink href="/"><h1>Mike Connor - Tech</h1></HeaderLink>
 
@@ -38,3 +39,11 @@ const currentPage = pathname.match(/[^/]+$/)?.[0] || '';
     </Box>
   </Cluster>
 </Box>
+
+<style>
+  h1 {
+    background: var(--gradient-1) fixed;
+    background-clip: text;
+    color: transparent;
+  }
+</style>

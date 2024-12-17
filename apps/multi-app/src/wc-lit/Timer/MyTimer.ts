@@ -27,9 +27,11 @@ export class MyTimer extends LitElement {
   @property({ type: Number })
   duration = 60;
 
-  @state() private end: number | null = null;
+  @state()
+  private end: number | null = null;
 
-  @state() private remaining = 0;
+  @state()
+  private remaining = 0;
 
   render() {
     const { remaining, running } = this;

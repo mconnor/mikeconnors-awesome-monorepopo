@@ -15,8 +15,9 @@
     "fix": "eslint . --fix",
     "format": "prettier --write .",
     "inspect": "eslint --inspect-config",
-    "check-types": "svelte-check",
-    "svelte-check": "svelte-check"
+    "check-types": "check",
+    "svelte-check": "svelte-check",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

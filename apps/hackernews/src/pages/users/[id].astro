@@ -6,7 +6,7 @@ import type { IUser } from '#types.js';
 
 const { id } = Astro.params as { id: string };
 
-const user = (await fetchAPI(`user/${id}`)) as uknown as  IUser;
+const user = (await fetchAPI(`user/${id}`)) as unknown as  IUser;
 ---
 
 <Layout>

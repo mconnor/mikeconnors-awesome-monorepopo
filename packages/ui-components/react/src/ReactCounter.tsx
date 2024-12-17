@@ -1,5 +1,3 @@
-/** @jsxImportSource react */
-
 import type { ReactNode } from 'react';
 import { useState } from 'react';
 

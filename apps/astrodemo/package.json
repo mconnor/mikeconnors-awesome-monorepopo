@@ -39,7 +39,7 @@
     "@repo/typescript-config": "workspace:*",
     "autoprefixer": "catalog:",
     "cssnano": "catalog:",
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "postcss-custom-media": "catalog:",
     "postcss-html": "catalog:",
     "postcss-import": "catalog:",
@@ -49,10 +49,5 @@
     "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "experimentalTernaries": true,
-    "proseWrap": "always"
   }
 }

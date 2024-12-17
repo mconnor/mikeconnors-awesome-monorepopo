@@ -14,7 +14,7 @@ const mapStories = {
   job: 'jobs',
 };
 
-function safeParseInt(value: any, fallback: number) {
+function safeParseInt(value?: string, fallback: number):number {
   try {
     return parseInt(value) || fallback;
   } catch {

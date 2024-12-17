@@ -18,8 +18,9 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/node": "^9.0.0",
-    "astro": "^5.0.5"
+    "astro": "^5.0.9"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

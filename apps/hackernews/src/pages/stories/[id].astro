@@ -1,10 +1,12 @@
 ---
+
 import Comment from '#components/Comment.astro';
 import For from '#components/For.astro';
 import Show from '#components/Show.astro';
 import Layout from '#layouts/Layout.astro';
 import fetchAPI from '#lib/api.ts';
-import type { IComment, IStory } from '#types.ts';
+import type { IComment } from '#types.ts';
+import type {  IStory } from '#types.ts';
 
 const { id } = Astro.params as { id: string };
 
