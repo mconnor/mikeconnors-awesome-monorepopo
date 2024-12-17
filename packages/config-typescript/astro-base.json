@@ -16,7 +16,11 @@
     "jsx": "preserve",
     "outDir": "${configDir}/dist",
     "rootDir": "${configDir}/",
+    "strictNullChecks": true
   },
+  "files": [
+    "${configDir}/.astro/types.d.ts",
+  ],
   "exclude": [
     "${configDir}/node_modules",
     "${configDir}/.astro",
@@ -25,10 +29,10 @@
     "${configDir}/cache-directory"
   ],
   "include": [
-    "${configDir}/.astro/types.d.ts",
     "${configDir}/src/**/*",
     "${configDir}/**/*.ts",
     "${configDir}/**/*.js",
-    "${configDir}/**/*.mjs"
+    "${configDir}/**/*.mjs",
+    "${configDir}/**/*.mts"
   ]
 }
