@@ -457,8 +457,8 @@ importers:
         specifier: 'catalog:'
         version: 5.0.2(@types/node@22.10.2)(astro@5.0.9(@types/node@22.10.2)(jiti@2.3.3)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))(jiti@2.3.3)(rollup@4.28.1)(vue@3.5.13(typescript@5.7.2))(yaml@2.6.1)
       '@preact/signals':
-        specifier: ^1.3.1
-        version: 1.3.1(preact@10.25.2)
+        specifier: ^2.0.0
+        version: 2.0.0(preact@10.25.2)
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
@@ -490,7 +490,7 @@ importers:
         specifier: 'catalog:'
         version: 5.0.9(@types/node@22.10.2)(jiti@2.3.3)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
       lit:
-        specifier: ^3.2.1
+        specifier: 'catalog:'
         version: 3.2.1
       open-props:
         specifier: 'catalog:'
@@ -2278,6 +2278,11 @@ packages:
 
   '@preact/signals@1.3.1':
     resolution: {integrity: sha512-nNvSF2O7RDzxp1Rm7SkA5QhN1a2kN8pGE8J5o6UjgDof0F0Vlg6d6HUUVxxqZ1uJrN9xnH2DpL6rpII3Es0SsQ==}
+    peerDependencies:
+      preact: 10.x
+
+  '@preact/signals@2.0.0':
+    resolution: {integrity: sha512-wzx6YEXw2a+vKdE+p+XlIGsmH2bDjJzzevirtshT9ixoNIV2WJg83kG+QErPHs/ZkeR+MsqgRIFB6x22fDVRlg==}
     peerDependencies:
       preact: 10.x
 
@@ -9011,6 +9016,11 @@ snapshots:
   '@preact/signals-core@1.8.0': {}
 
   '@preact/signals@1.3.1(preact@10.25.2)':
+    dependencies:
+      '@preact/signals-core': 1.8.0
+      preact: 10.25.2
+
+  '@preact/signals@2.0.0(preact@10.25.2)':
     dependencies:
       '@preact/signals-core': 1.8.0
       preact: 10.25.2
