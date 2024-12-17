@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "astro-check": "astro check",
     "build": "astro build",
+    "sync": "astro sync",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write",
