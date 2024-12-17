@@ -25,6 +25,8 @@
     "./svelte-app": "./svelte.app.config.mjs",
     "./svelte5-app": "./svelte5.lint.config.mjs",
     "./solid": "./sold.lint.config.mjs",
+    "./next-config": "./next.lint.config.mjs",
+    "./simple-imports-sort": "./simple-imports-sort.lint.config.mjs",
     "./prettier": "./lint.prettier.config.mjs"
   },
   "scripts": {
@@ -34,9 +36,11 @@
   "type": "module",
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.4",
-    "@eslint/js": "^9.16.0",
-    "@eslint/json": "^0.8.0",
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.17.0",
+    "@eslint/json": "^0.9.0",
     "@eslint/markdown": "^6.2.1",
+    "@next/eslint-plugin-next": "^15.1.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-markdown": "^2.0.2",
     "@types/eslint__js": "^8.42.3",
@@ -57,7 +61,7 @@
     "eslint-plugin-wc": "^2.2.0",
     "globals": "^15.13.0",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript-eslint": "^8.18.0"
+    "typescript-eslint": "^8.18.1"
   },
   "peerDependencies": {
     "eslint": ">= 9"

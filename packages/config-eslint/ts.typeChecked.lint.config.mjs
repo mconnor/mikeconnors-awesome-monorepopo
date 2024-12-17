@@ -7,8 +7,6 @@ import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 import prettier from 'eslint-config-prettier';
 
-import simpleImportSort from './simple.imports.config.mjs';
-
 const config = tseslint.config(
   ignoresConfig,
   js.configs.recommended,
@@ -47,8 +45,8 @@ const config = tseslint.config(
       '@typescript-eslint/triple-slash-reference': 'off',
     },
   },
-  ...simpleImportSort,
-  prettier,
+
+  prettier
 );
 
 export default config;

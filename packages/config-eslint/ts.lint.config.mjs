@@ -8,8 +8,6 @@ import ignoresConfig from './ignores.config.mjs';
 // import prettier from 'eslint-config-prettier';
 import prettierConfig from 'eslint-plugin-prettier/recommended';
 
-import simpleImportSort from './simple.imports.config.mjs';
-
 const config = tseslint.config(
   ignoresConfig,
   js.configs.recommended,
@@ -21,13 +19,13 @@ const config = tseslint.config(
       sourceType: 'module',
       parser: tseslint.parser,
       parserOptions: {
-        warnOnUnsupportedTypeScriptVersion: false,
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
       globals: {
         ...globals.browser,
         ...globals.nodeBuiltin,
+        ...globals.worker,
         JSX: true,
         // ...globals.node,
       },
@@ -47,8 +45,7 @@ const config = tseslint.config(
     },
   },
 
-  ...simpleImportSort,
-  prettierConfig,
+  prettierConfig
 );
 
 export default config;

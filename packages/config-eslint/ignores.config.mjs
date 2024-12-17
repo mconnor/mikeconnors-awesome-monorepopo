@@ -6,6 +6,7 @@ export default {
     '.wrangler/',
     'cache-directory/',
     '.svelte-kit/',
+    '.next/',
     '/build/',
     '.env.*',
     '.DS_Store',
