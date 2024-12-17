@@ -15,6 +15,11 @@
   ],
   "envMode": "strict",
   "tasks": {
+    "transit": {
+      "dependsOn": [
+        "^transit"
+      ]
+    },
     "build": {
       "dependsOn": [
         "^build"
@@ -30,9 +35,8 @@
     },
     "lint": {
       "dependsOn": [
-        "^lint"
-      ],
-      "outputs": []
+        "^transit"
+      ]
     },
     "format": {},
     "sync": {
@@ -55,24 +59,20 @@
       "cache": true,
       "persistent": true
     },
-    "transit": {
+    "check-types": {
+      "inputs": [
+        "**/*.{ts,tsx,js,jsx}"
+      ],
+      "cache": true,
       "dependsOn": [
         "^transit"
       ]
     },
-    "check-types": {
-      "inputs": [
-        "**/*.{ts,tsx}"
-      ],
-      "dependsOn": [
-        "transit"
-      ],
-      "outputs": []
-    },
     "astro-check": {
       "inputs": [
-        "**/*.{astro}"
+        "**/*.{astro,ts,tsx,js,jsx}"
       ],
+      "cache": true,
       "dependsOn": [
         "^transit"
       ]
