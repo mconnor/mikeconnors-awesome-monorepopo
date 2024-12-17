@@ -40,3 +40,4 @@ pnpm-debug.log*
 **/vite.config.ts.timestamp-*
 **/.svelte-kit
 /tree.txt
+/apps-next/blog-starter-app/.gitignore
