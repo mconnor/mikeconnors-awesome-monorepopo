@@ -8,14 +8,16 @@
   },
   "exports": {
     "./Box": "./src/Box/index.astro",
-    "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro"
+    "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
+    "./ThemeToggle": "./src/ThemeToggle/index.astro"
   },
   "scripts": {
-    "test": "vitest",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "inspect": "eslint . --inspect-config",
+    "astro-check": "astro check",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
@@ -25,9 +27,9 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.16.0",
+    "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
   },
   "prettier": {
