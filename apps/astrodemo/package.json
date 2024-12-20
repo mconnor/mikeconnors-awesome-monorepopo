@@ -7,8 +7,6 @@
     "#*": "./src/*"
   },
   "scripts": {
-    "updateAstro": "pnpm dlx @astrojs/upgrade",
-    "dev": "astro dev",
     "astro-check": "astro check",
     "check-types": "tsc --noEmit",
     "build": "astro build",

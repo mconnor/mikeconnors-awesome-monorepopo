@@ -24,7 +24,7 @@
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
     "eslint-config-preact": "^1.5.0",
-    "preact": "^10.25.2",
+    "preact": "^10.25.3",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"

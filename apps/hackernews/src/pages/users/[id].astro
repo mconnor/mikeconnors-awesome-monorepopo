@@ -4,6 +4,8 @@ import Layout from '#layouts/Layout.astro';
 import fetchAPI from '#lib/api.ts';
 import type { IUser } from '#types.js';
 
+export const prerender = false;
+
 const { id } = Astro.params as { id: string };
 
 const user = (await fetchAPI(`user/${id}`)) as unknown as  IUser;
@@ -11,6 +13,8 @@ const user = (await fetchAPI(`user/${id}`)) as unknown as  IUser;
 
 <Layout>
   <main>
+    <h6>USER</h6>
+    <pre>{JSON.stringify(user, null, 2)}</pre>
     <Show when={user}>
       <Show when={!user.error}>
         <h1 slot="fallback">User not found.</h1>

@@ -8,9 +8,10 @@ import fetchAPI from '#lib/api.ts';
 import type { IComment } from '#types.ts';
 import type {  IStory } from '#types.ts';
 
+export const prerender = false;
 const { id } = Astro.params as { id: string };
 
-const story = (await fetchAPI(`item/${id}`)) as unknown as IStory;
+const story = (await fetchAPI(`item/${id}`))
 ---
 
 <Layout>
@@ -31,6 +32,9 @@ const story = (await fetchAPI(`item/${id}`)) as unknown as IStory;
       </p>
     </header>
     <main>
+      <h6>story</h6>
+
+      <pre>{JSON.stringify(story, null, 2)}</pre>
       <p>
         {
           story.comments_count ?

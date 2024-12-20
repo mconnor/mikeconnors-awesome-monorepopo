@@ -1,4 +1,7 @@
 {
+  "turbo.transitNodes": [
+    "transit"
+  ],
   "[dotenv]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
@@ -91,12 +94,6 @@
     "https://json.schemastore.org/yamllint.json": "./pnpm-workspace.yaml"
   },
   "editor.fontSize": 14,
-  "turbo": {
-    "useLocalTurbo": true,
-    "transitNodes": [
-      "transit"
-    ]
-  },
   "editor.formatOnSave": true,
   "explorer.autoOpenDroppedFile": false,
   "explorer.autoReveal": false

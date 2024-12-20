@@ -6,6 +6,8 @@ import Layout from '#layouts/Layout.astro';
 import fetchAPI from '#lib/api.ts';
 import type { IStory } from '#types.ts';
 
+export const prerender = false;
+
 const mapStories = {
   top: 'news',
   new: 'newest',
@@ -37,7 +39,10 @@ const stories = (await fetchAPI(
 ---
 
 <Layout>
+
   <section>
+    <h6>STORIES</h6>
+  <pre>{JSON.stringify(stories, null, 2)}</pre>
     <nav aria-labelledby="current-page">
       <Show when={page > 1}>
         <a href={`/${type}?page=${page - 1}`} aria-label="Previous Page">

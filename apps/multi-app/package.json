@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/preact": "^4.0.0",
+    "@astrojs/preact": "^4.0.1",
     "@astrojs/react": "catalog:",
     "@astrojs/svelte": "catalog:svelte5",
     "@astrojs/vercel": "catalog:",

@@ -6,11 +6,12 @@
 
 <script>
   import { z } from 'astro:schema';
+  import { actions } from 'astro:actions';
 
   const DEFAULT_VAL = 'enter your name here';
   const nameSchema = z.string().min(2).max(40);
 
-  import { actions } from 'astro:actions';
+
 
   class GreetingBtn extends HTMLElement {
     constructor() {

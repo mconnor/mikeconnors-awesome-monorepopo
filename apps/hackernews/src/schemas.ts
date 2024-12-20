@@ -1,10 +1,24 @@
 import { z, reference } from 'astro:content';
 
-const user = z.object({
-  id: z.string(),
+const zUser = z.string().min(2).max(20);
+const zTime = z.string().time({ message: 'Invalid time' });
+const zHttp = z
+  .string()
+  .startsWith('https://', { message: 'Must provide secure URL' });
+
+// "about": "jeremy at etherized dot com<p>Makes web. Mostly Rails. Not too much.",
+// "created": 1363922656,
+// "id": "JeremyNT",
+// "karma": 5099,
+// "submitted": [
+//   42443456,
+
+const userJsonSchema = z.object({
+  id: z.string().uuid({ message: 'Invalid UUID' }),
   created: z.date(),
   karma: z.number(),
   about: z.string(),
+  submitted: z.array(z.number()),
 });
 
 const baseComment = z.object({
@@ -14,22 +28,33 @@ const baseComment = z.object({
 });
 
 const comment = z.object({
-  user: z.string().min(2).max(20),
-  time_ago: z.string().time(),
+  user: zUser,
+  time_ago: z.string(),
   content: z.string(),
   customElements: z.array(baseComment),
 });
 
-const story = z.object({
-  id: z.string(),
-  points: z.string(),
-  url: z.string(),
+const comments = z.object({
+  id: z.string().uuid({ message: 'Invalid UUID' }),
+  level: z.number({ message: 'Invalid number' }),
+  user: zUser,
+  time: z.string().time({ message: 'Invalid time' }),
+  time_ago: z.string(),
+  content: z.string(),
+  comments: z.array(z.string()).optional(),
+});
+
+const storyJsonSchema = z.object({
+  id: z.string().uuid({ message: 'Invalid UUID' }),
   title: z.string(),
-  domain: z.string(),
-  type: z.string(),
-  time_ago: z.string().time(),
-  user: z.string(),
-  comments_count: z.number(),
+  points: z.number({ message: 'Invalid number' }),
+  user: z.string().min(2).max(20),
+  url: zHttp,
+  domain: z.string().url(),
+  type: z.union([z.literal('link'), z.literal('ask'), z.literal('job')]),
+  time_ago: zTime,
+
+  comments_count: z.number({ message: 'Invalid number' }),
   comments: z.array(baseComment),
 });
 
@@ -41,4 +66,4 @@ const jsonSchema: z.ZodType<Json> = z.lazy(() =>
   z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)]),
 );
 
-export { comment, story, user, jsonSchema };
+export { comment, storyJsonSchema, userJsonSchema, jsonSchema };
