@@ -30,9 +30,6 @@
     "svelte-check": "catalog:",
     "typescript": "catalog:"
   },
-  "peerDependencies": {
-    "svelte": "^4"
-  },
   "keywords": [
     "svelte",
     "ui"

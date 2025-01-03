@@ -9,7 +9,10 @@
   "exports": {
     "./Box": "./src/Box/index.astro",
     "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
-    "./ThemeToggle": "./src/ThemeToggle/index.astro"
+    "./Hello": "./src/Hello/index.astro",
+    "./ThemeToggle": "./src/ThemeToggle/index.astro",
+    "./HeartLitBtn": "./src/HeartBtn/index.astro",
+    "./Timer": "./src/Timer/index.astro"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

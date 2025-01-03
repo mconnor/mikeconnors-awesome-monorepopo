@@ -1,11 +1,12 @@
 ---
 import Box from '@repo/ui-lit/Box';
 
-import AstroHeart from '#astro-web-component/HeartWebComponent.astro';
+import HeartBtn from '@repo/astro-wc/HeartBtn';
+import LitWCbtn from '@repo/ui-lit/HeartLitBtn';
 import Warning from '#components/Warning.astro';
 import Layout from '#layouts/Layout.astro';
-import HeartButton from '#wc-lit/HeartButton/index.astro';
-import MyElement from '#wc-lit/MyElement/index.astro';
+
+import Hello from '@repo/ui-lit/Hello';
 
 const WARNING = `This Astro integration to enable server-side rendering and client-side hydration for your Lit custom elements was deprecated in Astro 5.0.`;
 ---
@@ -13,15 +14,16 @@ const WARNING = `This Astro integration to enable server-side rendering and clie
 <Layout>
   <Box>
     <Box>
-      <h4>Web</h4>
-      <AstroHeart /></Box
+      <h4>An Astro Web Component</h4>
+      <HeartBtn /></Box
     >
-    <Box><HeartButton /></Box>
+    <Box>
+      <h4>A <a href="https://lit.dev/">lit</a> Web Component (client-side)</h4><LitWCbtn />
+    </Box>
 
     <Box>
-      <h4>This uses <a href="https://lit.dev/">lit</a></h4>
+      <h4>A <a href="https://lit.dev/">lit</a> Web Component (client-side)</h4><LitWCbtn />
 
-      <HeartButton />
 
       <Warning copy={WARNING} />
     </Box>
@@ -33,6 +35,6 @@ const WARNING = `This Astro integration to enable server-side rendering and clie
       </p>
     </Box>
 
-    <MyElement>this is my-element</MyElement>
+    <Hello>this is lit</Hello>
   </Box>
 </Layout>
