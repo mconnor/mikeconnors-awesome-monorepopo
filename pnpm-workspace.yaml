@@ -1,11 +1,12 @@
 packages:
   - apps/*
-  - apps/svelte/*
+  - apps-svelte/*
   - packages/*
   - packages/ui-components/*
   - "!**/test/**"
   - "!**/.vercel/**"
   - "!**/cache-directory/**"
+
 catalog:
   "@astrojs/check": ^0.9.4
   "@astrojs/preact": ^4.0.0
