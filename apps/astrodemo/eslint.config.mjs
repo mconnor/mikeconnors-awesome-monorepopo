@@ -2,6 +2,7 @@ import astro from '@repo/eslint-config/astroLint';
 import litConfig from '@repo/eslint-config/lit-config';
 import markdownConfig from '@repo/eslint-config/md.lint.config';
 import tsLint from '@repo/eslint-config/ts-lint';
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
 // import tsLint from '@repo/eslint-config/ts-lint-type-check';
 // import turboConfig from '@repo/eslint-config/turbo-config'
 
@@ -21,6 +22,7 @@ const config = [
       'no-useless-escape': 'warn',
     },
   },
+  eslintConfigPrettier,
 ];
 
 export default config;

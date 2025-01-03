@@ -1,6 +1,7 @@
 // @ts-check
 import markdown from '@eslint/markdown';
-export default [
+
+const config = [
   {
     // Apply the Markdown processor to all .md files
     files: ['**/*.md'],
@@ -21,3 +22,5 @@ export default [
     },
   },
 ];
+
+export default config;

@@ -29,10 +29,6 @@
     "${configDir}/cache-directory"
   ],
   "include": [
-    "${configDir}/src/**/*",
-    "${configDir}/**/*.ts",
-    "${configDir}/**/*.js",
-    "${configDir}/**/*.mjs",
-    "${configDir}/**/*.mts"
+    "${configDir}/**/*"
   ]
 }

@@ -2,7 +2,7 @@ import astro from '@repo/eslint-config/astroLint';
 import litConfig from '@repo/eslint-config/lit-config';
 import tsLint from '@repo/eslint-config/ts-lint';
 
-/** @type {import('eslint').Linter.Config} */
-const config = [...tsLint, ...astro, ...litConfig];
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
 
-export default config;
+/** @type {import('eslint').Linter.Config} */
+export default [...tsLint, ...astro, ...litConfig, eslintConfigPrettier];

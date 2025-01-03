@@ -2,6 +2,7 @@
 
 import * as regexpPlugin from 'eslint-plugin-regexp';
 
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 export default [
   {
     ...regexpPlugin.configs['flat/recommended'],

@@ -41,3 +41,4 @@ pnpm-debug.log*
 **/.svelte-kit
 /tree.txt
 /apps-next/blog-starter-app/.gitignore
+/apps-next/blog-starter-app/.next

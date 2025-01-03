@@ -16,7 +16,7 @@ const mapStories = {
   job: 'jobs',
 };
 
-function safeParseInt(value?: string, fallback: number):number {
+function safeParseInt(value?: string, fallback: number): number {
   try {
     return parseInt(value) || fallback;
   } catch {
@@ -32,17 +32,14 @@ const type =
     (Astro.params.stories.toString() as keyof typeof mapStories)
   : 'top';
 
-const stories = (await fetchAPI(
-  `${mapStories[type]}?page=${page}`,
-))
+const stories = await fetchAPI(`${mapStories[type]}?page=${page}`);
 // as IStory[];
 ---
 
 <Layout>
-
   <section>
     <h6>STORIES</h6>
-  <pre>{JSON.stringify(stories, null, 2)}</pre>
+    <pre>{JSON.stringify(stories, null, 2)}</pre>
     <nav aria-labelledby="current-page">
       <Show when={page > 1}>
         <a href={`/${type}?page=${page - 1}`} aria-label="Previous Page">

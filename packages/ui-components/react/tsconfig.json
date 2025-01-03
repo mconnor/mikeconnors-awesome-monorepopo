@@ -2,12 +2,9 @@
   "extends": "@repo/typescript-config/react.json",
   "compilerOptions": {
     "rootDir": ".",
+    "outDir": "dist",
     "strict": true,
-    "esModuleInterop": false,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "esModuleInterop": true
   },
-  "files": ["jsx.d.ts"],
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
+  "files": ["jsx.d.ts"]
 }

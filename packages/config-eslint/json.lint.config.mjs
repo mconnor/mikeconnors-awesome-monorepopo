@@ -2,6 +2,7 @@
 
 import json from '@eslint/json';
 
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 export default [
   // lint JSON files
   {

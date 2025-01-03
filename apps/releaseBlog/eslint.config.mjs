@@ -3,8 +3,9 @@ import astro from '@repo/eslint-config/astroLint';
 // import litConfig from '@repo/eslint-config/lit-config';
 import markdownConfig from '@repo/eslint-config/markdown';
 import tsLint from '@repo/eslint-config/ts-lint-type-check';
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
 
-const config = [
+export default [
   ...tsLint,
   ...astro,
   // ...litConfig,
@@ -19,6 +20,5 @@ const config = [
       '@typescript-eslint/no-unsafe-argument': 'off',
     },
   },
+  eslintConfigPrettier,
 ];
-
-export default config;

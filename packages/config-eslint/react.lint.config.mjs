@@ -3,6 +3,7 @@ import react from 'eslint-plugin-react';
 // import tseslint from 'typescript-eslint';
 // import disableTypeChecking from './typeCheckingDisable.mjs';
 
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 export default [
   {
     files: ['**/*.{jsx,tsx}'],

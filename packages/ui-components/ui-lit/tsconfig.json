@@ -1,15 +1,8 @@
 {
   "extends": "@repo/typescript-config/lit.json",
   "compilerOptions": {
-    "rootDir": ".",
+    "rootDir": "."
   },
-  "files": [
-    "jsx.d.ts",
-    ".astro/types.d.ts",
-  ],
-  "include": [
-    "**/.astro",
-    "**/*.ts",
-    "**/*.mjs"
-  ]
+  "files": ["jsx.d.ts", ".astro/types.d.ts"],
+  "include": ["**/.astro", "**/*.ts", "**/*.mjs"]
 }

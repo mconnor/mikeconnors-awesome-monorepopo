@@ -7,7 +7,8 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./counter": "./src/SvelteCounter.svelte"
+    "./counter": "./src/SvelteCounter.svelte",
+    "./card": "./src/Card.svelte"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +16,7 @@
     "fix": "eslint . --fix",
     "format": "prettier --write .",
     "inspect": "eslint --inspect-config",
-    "check-types": "check",
+    "check-types": "echo \"Error: no check-types specified\" && exit 1",
     "svelte-check": "svelte-check",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },

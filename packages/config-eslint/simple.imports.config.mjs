@@ -2,6 +2,7 @@
 
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
+/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
 export default [
   {
     plugins: {

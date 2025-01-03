@@ -1,10 +1,10 @@
-import type { ReactNode } from 'react';
+'use client';
 
 interface IProps {
   mathFunc: () => void;
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
-export function Button({ mathFunc, children }: IProps) {
+export function MyButton({ mathFunc, children }: IProps) {
   return <button onClick={mathFunc}>{children}</button>;
 }

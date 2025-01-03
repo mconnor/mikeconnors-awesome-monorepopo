@@ -3,7 +3,6 @@
   --font-headlines: 'Patrick Hand SC', cursive;
 } */
 
-
 :root {
   --theme-secondary: var(--surface-4);
   --theme-primary: var(--text-2);
@@ -18,8 +17,3 @@ body {
   color: var(--theme-primary);
   background-color: var(--theme-secondary);
 }
-
-
-
-
-

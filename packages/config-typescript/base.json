@@ -32,6 +32,7 @@
     "${configDir}/.astro",
     "${configDir}/dist",
     "${configDir}/.turbo",
-    "${configDir}/.vercel"
+    "${configDir}/.vercel",
+    "${configDir}/.next"
   ]
 }

@@ -16,7 +16,6 @@ import { Image } from 'astro:assets';
 // import Andy from '#assets/andyBushes.jpg';
 import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
-
 ---
 
 <Layout maxW="80ch">
@@ -25,10 +24,7 @@ import Layout from '#layouts/Layout.astro';
 
     <Box>
       <Frame ratio="16:9">
-        <Image
-          src={AndyMud}
-          alt="A description of my image."
-        />
+        <Image src={AndyMud} alt="A description of my image." />
       </Frame>
       <h3>This is my dog</h3>
     </Box>

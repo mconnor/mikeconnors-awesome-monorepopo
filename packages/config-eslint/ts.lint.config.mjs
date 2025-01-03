@@ -1,18 +1,28 @@
 // @ts-check
+
 import js from '@eslint/js';
 // import wc from 'eslint-plugin-wc';
 import tseslint from 'typescript-eslint';
-
+// import turboPlugin from 'eslint-plugin-turbo';
+// import onlyWarn from 'eslint-plugin-only-warn';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
-// import prettier from 'eslint-config-prettier';
-import prettierConfig from 'eslint-plugin-prettier/recommended';
 
-const config = tseslint.config(
+export default tseslint.config(
   ignoresConfig,
   js.configs.recommended,
+
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
+  // {
+  //   plugins: {
+  //     turbo: turboPlugin,
+  //   },
+  //   rules: {
+  //     'turbo/no-undeclared-env-vars': 'warn',
+  //   },
+  // },
+
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -44,8 +54,4 @@ const config = tseslint.config(
       '@typescript-eslint/no-empty-function': 'off',
     },
   },
-
-  prettierConfig
 );
-
-export default config;

@@ -1,6 +1,7 @@
 import astro from '@repo/eslint-config/astroLint';
-import litConfig from '@repo/eslint-config/lit-config';
+
 import tsLint from '@repo/eslint-config/ts-lint-type-check';
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
 // import tsLint from '@repo/eslint-config/ts-lint-type-check';
 
 // import turboConfig from '@repo/eslint-config/turbo-config'
@@ -9,16 +10,14 @@ import tsLint from '@repo/eslint-config/ts-lint-type-check';
 // import regexConfig from '@repo/eslint-config/regex';
 
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
+export default [
   ...tsLint,
   ...astro,
-  ...litConfig,
 
   {
     rules: {
       'no-useless-escape': 'warn',
     },
   },
+  eslintConfigPrettier,
 ];
-
-export default config;

@@ -1,7 +1,8 @@
 import astroConfig from '@repo/eslint-config/astroLint';
 import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
 
-export default [
+const config = [
   ...tsLint,
   ...astroConfig,
 
@@ -10,4 +11,7 @@ export default [
       'no-useless-escape': 'warn',
     },
   },
+  eslintConfigPrettier,
 ];
+
+export default config;

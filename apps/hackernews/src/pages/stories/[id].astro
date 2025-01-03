@@ -1,17 +1,17 @@
 ---
-
 import Comment from '#components/Comment.astro';
 import For from '#components/For.astro';
 import Show from '#components/Show.astro';
 import Layout from '#layouts/Layout.astro';
 import fetchAPI from '#lib/api.ts';
 import type { IComment } from '#types.ts';
-import type {  IStory } from '#types.ts';
+import type { IStory } from '#types.ts';
+import Story from '#components/Story.astro';
 
 export const prerender = false;
 const { id } = Astro.params as { id: string };
 
-const story = (await fetchAPI(`item/${id}`))
+const story = await fetchAPI(`item/${id}`);
 ---
 
 <Layout>

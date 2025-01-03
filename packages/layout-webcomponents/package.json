@@ -50,10 +50,5 @@
   "license": "ISC",
   "dependencies": {
     "tsup": "^8.3.5"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "experimentalTernaries": true,
-    "proseWrap": "always"
   }
 }

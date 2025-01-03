@@ -1,27 +1,26 @@
-import type { ReactNode } from 'react';
-import { useState } from 'react';
+import { type JSX, useState } from 'react';
 
-import { Button } from './components/Button';
+import { MyButton } from './components/Button';
 
 interface Props {
-  children?: ReactNode;
+  children: React.ReactNode;
   klass: string;
 }
 
-export function Counter({ children, klass }: Props) {
+export function Counter({ children, klass }: Props): JSX.Element {
   const [count, setCount] = useState(0);
   const add = () => setCount((i) => i + 1);
   const subtract = () => setCount((i) => i - 1);
 
   return (
-    <>
+    <div>
       <div className={klass}>
-        <Button mathFunc={subtract}>-</Button>
+        <MyButton mathFunc={subtract}>-</MyButton>
         <pre>{count}</pre>
 
-        <Button mathFunc={add}>+</Button>
+        <MyButton mathFunc={add}>+</MyButton>
       </div>
       <div>{children}</div>
-    </>
+    </div>
   );
 }

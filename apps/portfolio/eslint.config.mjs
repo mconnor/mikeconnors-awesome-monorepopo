@@ -3,9 +3,10 @@ import markdownConfig from '@repo/eslint-config/markdown';
 // import litConfig from '@repo/eslint-config/lit-config';
 // import tsLint from '@repo/eslint-config/ts-lint-type-check';
 import tsLint from '@repo/eslint-config/ts-lint';
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
 
 /** @type {import('eslint').Linter.Config[]} */
-const config = [
+export default [
   ...tsLint,
   ...astro,
   ...markdownConfig,
@@ -16,6 +17,5 @@ const config = [
       'no-useless-escape': 'warn',
     },
   },
+  eslintConfigPrettier,
 ];
-
-export default config;

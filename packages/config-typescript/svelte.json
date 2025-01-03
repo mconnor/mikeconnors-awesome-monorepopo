@@ -1,5 +1,4 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
     "extends": [
         "./vite.json"
     ],
@@ -11,11 +10,7 @@
         "sourceMap": true
     },
     "include": [
-        "ambient.d.ts",
-        "non-ambient.d.ts",
         "${configDir}/types/**/$types.d.ts",
-        "${configDir}/vite.config.js",
-        "${configDir}/vite.config.ts",
         "${configDir}/src/**/*.js",
         "${configDir}/src/**/*.ts",
         "${configDir}/src/**/*.svelte",

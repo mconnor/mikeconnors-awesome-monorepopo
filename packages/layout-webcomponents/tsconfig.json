@@ -3,9 +3,5 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "useDefineForClassFields": false
-  },
-  "files": [".astro/types.d.ts"],
-  "include": ["src", "*.config.mjs"],
-
-  "exclude": ["node_modules", ".astro", "dist", ".turbo"]
+  }
 }

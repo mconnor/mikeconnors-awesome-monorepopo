@@ -4,13 +4,18 @@ import ts from 'typescript-eslint';
 import tsLintConfig from './ts.lint.config.mjs';
 // import disable from 'eslint-disable';
 
+/**
+ * A shared ESLint configuration for the repository.
+ *
+ * @type {import("eslint").Linter.Config}
+ * */
+
 export default ts.config(
   ...tsLintConfig,
 
   {
     files: ['**/*.svelte'],
-    ...eslintPluginSvelte.configs['flat/recommended'],
-    // ...eslintPluginSvelte.configs['flat/prettier'],
+
     languageOptions: {
       parserOptions: {
         parser: ts.parser,
@@ -19,9 +24,3 @@ export default ts.config(
     },
   },
 );
-
-// export default [
-//   ...ts,
-//   ...svelte.configs['flat/recommended'],
-//   ...svelte.configs['flat/prettier'],
-// ];

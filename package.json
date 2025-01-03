@@ -26,11 +26,12 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
-    "turbo": "^2.3.3"
+    "turbo": "^2.3.3",
+    "typescript": "catalog:"
   },
   "engines": {
     "node": ">= 22.9.0",
     "pnpm": ">=9.1.2"
   },
-  "packageManager": "pnpm@9.15.0"
+  "packageManager": "pnpm@9.15.2"
 }
