@@ -18,7 +18,8 @@
     "typescriptreact",
     "svelte",
     "vue",
-    "preact"
+    "preact",
+    "toml"
   ],
   "eslint.workingDirectories": [
     {
