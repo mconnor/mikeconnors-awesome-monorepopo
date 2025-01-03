@@ -23,7 +23,6 @@ catalog:
   "@eslint/compat": ^1.2.4
   "@iconify-json/mdi": ^1.2.2
   "@open-wc/testing": ^4.0.0
-  "@shoelace-style/shoelace": ^2.19.1
   "@types/react": ^19.0.2
   "@types/react-dom": ^19.0.2
   "@vanilla-extract/vite-plugin": ^4.0.16
