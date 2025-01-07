@@ -33,6 +33,7 @@
     "${configDir}/dist",
     "${configDir}/.turbo",
     "${configDir}/.vercel",
-    "${configDir}/.next"
+    "${configDir}/.next",
+    "${configDir}/cache-directory"
   ]
 }

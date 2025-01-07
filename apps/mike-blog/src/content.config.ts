@@ -3,7 +3,11 @@ import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
 
 import CountryLoader from './loaders/index.ts';
-import * as Schemas from './schemas/index.ts';
+import {
+  blogSchema,
+  authorsSchema,
+  announcementsSchema,
+} from './schemas/index';
 
 type ParserReturnType =
   | Record<string, Record<string, unknown>>
@@ -14,7 +18,7 @@ const authors = defineCollection({
     parser: (text) => parseToml(text).authors as ParserReturnType,
   }),
 
-  schema: Schemas.authorsSchema,
+  schema: authorsSchema,
 });
 
 // relatedPosts: z.array(reference('blog')).optional(),
@@ -25,7 +29,7 @@ const blog = defineCollection({
     pattern: ['**/*.md', '**/*.mdx'],
     base: './src/content/blog',
   }),
-  schema: Schemas.blogSchema,
+  schema: blogSchema,
 });
 
 const announcements = defineCollection({
@@ -33,7 +37,7 @@ const announcements = defineCollection({
     base: './src/content/announcements',
     pattern: '**/*.md',
   }),
-  schema: Schemas.announcementsSchema,
+  schema: announcementsSchema,
 });
 
 const countries = defineCollection({

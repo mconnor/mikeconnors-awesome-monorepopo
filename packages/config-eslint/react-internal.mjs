@@ -8,6 +8,7 @@ import { config as baseConfig } from './base.mjs';
 
 /**
  * A custom ESLint configuration for libraries that use React.
+ * Use this and only this script to lint react packages
  *
  * @type {import("eslint").Linter.Config} */
 export const config = [

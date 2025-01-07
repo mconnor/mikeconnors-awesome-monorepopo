@@ -31,7 +31,7 @@
     "@webcomponents/template-shadowroot": "catalog:",
     "astro": "catalog:",
     "lit": "catalog:",
-    "open-props": "catalog:"
+    "open-props": "^1.7.10"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

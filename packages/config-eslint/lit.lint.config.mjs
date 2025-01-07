@@ -3,8 +3,7 @@
 import wc from 'eslint-plugin-wc';
 import lit from 'eslint-plugin-lit';
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
-export default [
+const config = [
   wc.configs['flat/recommended'],
   lit.configs['flat/recommended'],
   {
@@ -15,6 +14,7 @@ export default [
   },
 ];
 
+export default config;
 // import globals from 'globals';
 // import tseslint from 'typescript-eslint';
 

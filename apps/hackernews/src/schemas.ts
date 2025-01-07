@@ -1,4 +1,4 @@
-import { z, reference } from 'astro:content';
+import { z } from 'astro:content';
 
 const zUser = z.string().min(2).max(20);
 const zTime = z.string().time({ message: 'Invalid time' });
@@ -66,4 +66,4 @@ const jsonSchema: z.ZodType<Json> = z.lazy(() =>
   z.union([literalSchema, z.array(jsonSchema), z.record(jsonSchema)]),
 );
 
-export { comment, storyJsonSchema, userJsonSchema, jsonSchema };
+export { comment, comments, storyJsonSchema, userJsonSchema, jsonSchema };

@@ -13,9 +13,10 @@ export default tseslint.config({
   ],
   processor: astroPlugin.processors['client-side-ts'],
   languageOptions: {
-    parser: astroParser,
+    // parser: astroParser,
     parserOptions: {
-      parser: tseslint.parser,
+      projectService: true,
+      tsconfigRootDir: import.meta.dirname,
       ecmaFeatures: {
         jsx: true,
       },

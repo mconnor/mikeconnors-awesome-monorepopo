@@ -1,5 +1,4 @@
-import { z } from 'astro:schema';
-
+import { z } from 'zod';
 const zero = z.literal('0');
 // const mcUnitsLiteral = z.literal('px|rem|ch|em|%');
 // const communUnits =

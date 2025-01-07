@@ -2,7 +2,11 @@
 A counter written with Svelte
 -->
 <script lang="ts">
-  import type { Snippet } from 'svelte';
+  // import type { Snippet } from 'svelte';
+  type Props = {
+    children?: () => any;
+    klass?: string;
+  };
 
   let { children, klass = 'counter' }: Props = $props();
   let count = $state(0);

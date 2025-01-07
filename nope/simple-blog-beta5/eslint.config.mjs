@@ -1,4 +1,4 @@
-// import tsLint from '@repo/eslint-config/ts-lint-type-check';
+// import tsLint from '@repo/eslint-config/ts-lint';
 import astLint from '@repo/eslint-config/astro.lint.config';
 // import markdownConfig from '@repo/eslint-config/md.lint.config';
 // import jsonConfig from '@repo/eslint-config/json';

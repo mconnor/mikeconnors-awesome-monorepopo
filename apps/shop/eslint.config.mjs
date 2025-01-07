@@ -1,17 +1,9 @@
-import astroConfig from '@repo/eslint-config/astroLint';
-import tsLint from '@repo/eslint-config/ts.typeChecked.lint.config';
+import astro from '@repo/eslint-config/astroLint';
+
+import tsLint from '@repo/eslint-config/ts-lint';
 import eslintConfigPrettier from '@repo/eslint-config/prettier';
 
-const config = [
-  ...tsLint,
-  ...astroConfig,
-
-  {
-    rules: {
-      'no-useless-escape': 'warn',
-    },
-  },
-  eslintConfigPrettier,
-];
+/** @type {import('eslint').Linter.Config[]} */
+const config = [...tsLint, ...astro, eslintConfigPrettier];
 
 export default config;

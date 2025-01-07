@@ -21,18 +21,22 @@ const countryLoader = (): Loader => {
 
       async function fetchCountries() {
         const rawResponse = await fetch(url.href)
-          .then((res) => res.json())
+          .then((res) => res.json() as unknown)
           .catch((error) => {
             logger.error('Fetch failed: ' + error);
           });
 
-        const result = countriesSchema.safeParse(rawResponse);
-        if (!result.success) {
+        const {
+          data: countryData,
+          success,
+          error: parseError,
+        } = countriesSchema.safeParse(rawResponse);
+        if (!success) {
           throw new Error(
-            `Failed to parse countries API response: ${result.error}`,
+            `Failed to parse countries API response: ${parseError.message}`,
           );
-        } else if (result.data) {
-          for (const country of result.data) {
+        } else if (countryData) {
+          for (const country of countryData) {
             const id = country.cca3;
             try {
               const data = await parseData({

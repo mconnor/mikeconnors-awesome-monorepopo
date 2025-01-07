@@ -6,12 +6,4 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react",
   },
-  "exclude": [
-    "${configDir}/node_modules",
-    "${configDir}/dist",
-    "${configDir}/.turbo",
-  ],
-  "include": [
-    "${configDir}/**/*"
-  ]
 }

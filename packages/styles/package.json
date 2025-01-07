@@ -14,7 +14,7 @@
     "./DevModeStyle.astro": "./src/DevModeStyle.astro"
   },
   "scripts": {
-    "updateAstro": "pnpm dlx @astrojs/upgrade",
+    "astro-check": "astro check",
     "test": "echo \"Error: no test specified\" && exit 1",
     "inspect": "eslint . --inspect-config",
     "lint": "eslint . ",
@@ -27,17 +27,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@astrojs/check": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "astro": "catalog:",
     "eslint": "catalog:",
-    "open-props": "catalog:",
+    "open-props": "^1.7.10",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "zod": "catalog:"
   },
   "peerDependencies": {
-    "open-props": "^1.7",
-    "astro": "^4.0.0 || ^5.0.0"
+    "astro": "^5.0.0",
+    "open-props": "^1.7"
   }
 }

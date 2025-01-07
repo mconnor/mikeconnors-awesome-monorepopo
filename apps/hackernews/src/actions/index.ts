@@ -1,3 +1,4 @@
+//Actions are defined in a server object
 import { defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 

@@ -1,3 +1,6 @@
 {
-  "extends": "@repo/typescript-config/svelte.json"
+  "extends": "@repo/typescript-config/svelte.json",
+  "files": [
+    "./eslint.config.mjs"
+  ]
 }

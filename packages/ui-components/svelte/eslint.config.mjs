@@ -1,6 +1,4 @@
-import svLint from '@repo/eslint-config/svelteLint';
-// import tsLint from '@repo/eslint-config/ts-lint-type-check';
+import svelte from '@repo/eslint-config/svelte5-app';
 // import eslintConfigPrettier from '@repo/eslint-config/prettier';
-// const config = [...svLint];
 
-export default svLint;
+export default svelte;

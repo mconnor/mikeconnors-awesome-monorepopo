@@ -43,12 +43,9 @@
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "astro": "^4.0.0 || ^5.0.0"
+    "astro": "^5.0.0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "tsup": "^8.3.5"
-  }
+  "license": "ISC"
 }

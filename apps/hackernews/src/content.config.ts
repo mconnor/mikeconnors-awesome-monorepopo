@@ -1,5 +1,5 @@
 import { defineCollection } from 'astro:content';
-import { storyJsonSchema, userJsonSchema, comment } from './schemas.ts';
+import { storyJsonSchema, userJsonSchema, comment } from './schemas';
 
 const usersCollection = defineCollection({
   schema: userJsonSchema,

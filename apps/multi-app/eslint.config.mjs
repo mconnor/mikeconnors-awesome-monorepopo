@@ -1,8 +1,8 @@
 import astro from '@repo/eslint-config/astroLint';
 
-import tsLint from '@repo/eslint-config/ts-lint-type-check';
+import tsLint from '@repo/eslint-config/ts-lint';
 import eslintConfigPrettier from '@repo/eslint-config/prettier';
-// import tsLint from '@repo/eslint-config/ts-lint-type-check';
+// import tsLint from '@repo/eslint-config/ts-lint';
 
 // import turboConfig from '@repo/eslint-config/turbo-config'
 
@@ -10,7 +10,7 @@ import eslintConfigPrettier from '@repo/eslint-config/prettier';
 // import regexConfig from '@repo/eslint-config/regex';
 
 /** @type {import('eslint').Linter.Config[]} */
-export default [
+const config = [
   ...tsLint,
   ...astro,
 
@@ -21,3 +21,5 @@ export default [
   },
   eslintConfigPrettier,
 ];
+
+export default config;
