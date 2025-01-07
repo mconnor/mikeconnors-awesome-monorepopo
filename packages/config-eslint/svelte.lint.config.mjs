@@ -4,7 +4,6 @@ import sveltePlugin from 'eslint-plugin-svelte';
 
 // import js from '@eslint/js';
 import ts from 'typescript-eslint';
-// import preactLintConfig from '#preact.lint.config.mjs';
 
 export default [
   // add more generic rule sets here, such as:

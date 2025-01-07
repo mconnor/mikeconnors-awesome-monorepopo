@@ -15,7 +15,6 @@
     "./jsonLint": "./json.lint.config.mjs",
     "./markdown": "./md.lint.config.mjs",
     "./react-internal": "./react-internal.mjs",
-    "./preact": "./preact.lint.config.mjs",
     "./ts-lint": "./ts.lint.config.mjs",
     "./lit-config": "./lit.lint.config.mjs",
     "./type-disable": "./tscheck.disable.config.mjs",
