@@ -4,14 +4,14 @@ import Avatar from "./avatar";
 import CoverImage from "./cover-image";
 import DateFormatter from "./date-formatter";
 
-type Props = {
+interface Props {
   title: string;
   coverImage: string;
   date: string;
   excerpt: string;
   author: Author;
   slug: string;
-};
+}
 
 export function PostPreview({
   title,

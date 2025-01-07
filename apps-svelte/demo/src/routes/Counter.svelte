@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { spring } from 'svelte/motion';
+	import { Spring } from 'svelte/motion';
 
 	let count = $state(0);
 
 	// svelte-ignore state_referenced_locally
-	const displayedCount = spring(count);
+	const displayedCount = new Spring(count);
 
 	$effect(() => {
 		displayedCount.set(count);

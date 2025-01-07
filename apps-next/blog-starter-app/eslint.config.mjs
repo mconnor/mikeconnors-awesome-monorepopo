@@ -1,8 +1,5 @@
-import nextConfig from "@repo/eslint-config/next-config";
+// @ts-check
 
-import tsLint from "@repo/eslint-config/ts-lint-type-check";
+import nextConfig from "@repo/eslint-config/next-lint";
 
-/** @type {import('eslint').Linter.Config[]} */
-const config = [...tsLint, ...nextConfig];
-
-export default config;
+export default nextConfig;

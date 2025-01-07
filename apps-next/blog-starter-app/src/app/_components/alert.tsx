@@ -2,9 +2,9 @@ import Container from "@/app/_components/container";
 import { EXAMPLE_PATH } from "@/lib/constants";
 import cn from "classnames";
 
-type Props = {
+interface Props {
   preview?: boolean;
-};
+}
 
 const Alert = ({ preview }: Props) => {
   return (

@@ -6,9 +6,11 @@
         "./src/*"
       ]
     },
+    "strict": false,
+    "esModuleInterop": true
   },
   "files": [
-    "next-env.d.ts"
+    "postcss.config.cjs"
   ],
   "include": [
     "next-env.d.ts",
@@ -18,8 +20,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-    ".turbo",
-    ".next"
+    "node_modules"
   ]
 }

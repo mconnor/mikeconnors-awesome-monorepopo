@@ -1,7 +1,15 @@
-import astroConfig from '@repo/eslint-config/astroLint';
-import tsLint from '@repo/eslint-config/ts-lint';
-// import reactConfig from '@repo/eslint-config/react.lint.config';
-// import svelte from '@repo/eslint-config/svelte';
-import eslintConfigPrettier from '@repo/eslint-config/prettier';
+import astro from '@repo/eslint-config/astroLint';
 
-export default [...tsLint, ...astroConfig, eslintConfigPrettier];
+import tsLint from '@repo/eslint-config/ts-lint';
+import eslintConfigPrettier from '@repo/eslint-config/prettier';
+// import tsLint from '@repo/eslint-config/ts-lint';
+// import markdownConfig from '@repo/eslint-config/markdown';
+// import turboConfig from '@repo/eslint-config/turbo-config'
+
+// import jsonConfig from '@repo/eslint-config/json';
+// import regexConfig from '@repo/eslint-config/regex';
+
+/** @type {import('eslint').Linter.Config[]} */
+const config = [...tsLint, ...astro, eslintConfigPrettier];
+
+export default config;

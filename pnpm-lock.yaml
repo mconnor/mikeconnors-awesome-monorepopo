@@ -20,7 +20,7 @@ catalogs:
       version: 4.1.2
     '@astrojs/rss':
       specifier: ^4.0.11
-      version: 4.0.10
+      version: 4.0.11
     '@astrojs/tailwind':
       specifier: ^5.1.4
       version: 5.1.4
@@ -123,7 +123,7 @@ catalogs:
       version: 3.3.2
     svelte:
       specifier: ^5.16.2
-      version: 5.16.2
+      version: 5.16.3
 
 importers:
 
@@ -206,7 +206,7 @@ importers:
         version: 4.0.3(astro@5.1.3(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.30.0)(typescript@5.7.2)(yaml@2.7.0))
       '@astrojs/rss':
         specifier: 'catalog:'
-        version: 4.0.10
+        version: 4.0.11
       '@astrojs/vercel':
         specifier: 'catalog:'
         version: 8.0.1(@sveltejs/kit@2.15.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.16.3)(vite@6.0.7(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.7.0)))(svelte@5.16.3)(vite@6.0.7(@types/node@22.10.5)(jiti@2.4.2)(yaml@2.7.0)))(astro@5.1.3(@types/node@22.10.5)(jiti@2.4.2)(rollup@4.30.0)(typescript@5.7.2)(yaml@2.7.0))(next@15.1.3(@babel/core@7.26.0)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(rollup@4.30.0)(svelte@5.16.3)(vue@3.5.13(typescript@5.7.2))
@@ -514,9 +514,6 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/config-eslint
-      '@repo/postcss-config':
-        specifier: workspace:*
-        version: link:../../packages/config-postcss
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/config-typescript
@@ -535,6 +532,27 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.17.0(jiti@2.4.2)
+      postcss:
+        specifier: ^8.4.49
+        version: 8.4.49
+      postcss-custom-media:
+        specifier: ^11.0.5
+        version: 11.0.5(postcss@8.4.49)
+      postcss-html:
+        specifier: ^1.7.0
+        version: 1.7.0
+      postcss-import:
+        specifier: ^16.1.0
+        version: 16.1.0(postcss@8.4.49)
+      postcss-jit-props:
+        specifier: ^1.0.15
+        version: 1.0.15(postcss@8.4.49)
+      postcss-nesting:
+        specifier: ^13.0.1
+        version: 13.0.1(postcss@8.4.49)
+      postcss-pow:
+        specifier: ^1.0.1
+        version: 1.0.1
       prettier:
         specifier: 'catalog:'
         version: 3.4.2
@@ -826,6 +844,15 @@ importers:
         specifier: ^0.11.10
         version: 0.11.10
     devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../config-eslint
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../config-typescript
+      eslint:
+        specifier: 'catalog:'
+        version: 9.17.0(jiti@2.4.2)
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
@@ -837,10 +864,6 @@ importers:
         version: 0.7.0(typescript@5.7.2)(vue@3.5.13(typescript@5.7.2))
 
   packages/layout-webcomponents:
-    dependencies:
-      tsup:
-        specifier: ^8.3.5
-        version: 8.3.5(jiti@2.4.2)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.7.0)
     devDependencies:
       '@astrojs/check':
         specifier: 'catalog:'
@@ -881,6 +904,9 @@ importers:
 
   packages/styles:
     devDependencies:
+      '@astrojs/check':
+        specifier: 'catalog:'
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.4.2)(typescript@5.7.2)
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../config-eslint
@@ -910,10 +936,6 @@ importers:
         version: 3.24.1
 
   packages/ui-components/astro-wc:
-    dependencies:
-      tsup:
-        specifier: ^8.3.5
-        version: 8.3.5(jiti@2.4.2)(postcss@8.4.49)(typescript@5.7.2)(yaml@2.7.0)
     devDependencies:
       '@astrojs/check':
         specifier: 'catalog:'
@@ -1033,13 +1055,13 @@ importers:
         version: 3.4.2
       prettier-plugin-svelte:
         specifier: catalog:svelte5
-        version: 3.3.2(prettier@3.4.2)(svelte@5.16.2)
+        version: 3.3.2(prettier@3.4.2)(svelte@5.16.3)
       svelte:
         specifier: catalog:svelte5
-        version: 5.16.2
+        version: 5.16.3
       svelte-check:
         specifier: 'catalog:'
-        version: 4.1.1(picomatch@4.0.2)(svelte@5.16.2)(typescript@5.7.2)
+        version: 4.1.1(picomatch@4.0.2)(svelte@5.16.3)(typescript@5.7.2)
       typescript:
         specifier: 'catalog:'
         version: 5.7.2
@@ -1177,9 +1199,6 @@ packages:
       '@types/react-dom': ^17.0.17 || ^18.0.6 || ^19.0.0
       react: ^17.0.2 || ^18.0.0 || ^19.0.0
       react-dom: ^17.0.2 || ^18.0.0 || ^19.0.0
-
-  '@astrojs/rss@4.0.10':
-    resolution: {integrity: sha512-2gFdHM763uUAySkdwPYrpi6dppOBJr9ddg5VbkKXctWze8d1JHgIBBY78zWIYs7KBJT58zxadsObVAVt55RDaw==}
 
   '@astrojs/rss@4.0.11':
     resolution: {integrity: sha512-3e3H8i6kc97KGnn9iaZBJpIkdoQi8MmR5zH5R+dWsfCM44lLTszOqy1OBfGGxDt56mpQkYVtZJWoxMyWuUZBfw==}
@@ -6876,10 +6895,6 @@ packages:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
       typescript: ^4.9.4 || ^5.0.0
 
-  svelte@5.16.2:
-    resolution: {integrity: sha512-S4mKWbjv53ik1NtGuO95TC7kBA8GYBIeT9fM6y2wHdLNqdCmPXJSWLVuO7vlJZ7TUksp+6qnvqCCtWnVXeTCyw==}
-    engines: {node: '>=18'}
-
   svelte@5.16.3:
     resolution: {integrity: sha512-6OiiZIS1tBOi3yNGf90nMorGQKlRF88lzLf4ZkU/wwrSlyKcmCwI9Ky0Kz8L3t09vTtgfqJlj1DkAr5mo9f/gw==}
     engines: {node: '>=18'}
@@ -7897,11 +7912,6 @@ snapshots:
       - terser
       - tsx
       - yaml
-
-  '@astrojs/rss@4.0.10':
-    dependencies:
-      fast-xml-parser: 4.5.1
-      kleur: 4.1.5
 
   '@astrojs/rss@4.0.11':
     dependencies:
@@ -13926,11 +13936,6 @@ snapshots:
       prettier: 3.4.2
       sass-formatter: 0.7.9
 
-  prettier-plugin-svelte@3.3.2(prettier@3.4.2)(svelte@5.16.2):
-    dependencies:
-      prettier: 3.4.2
-      svelte: 5.16.2
-
   prettier-plugin-svelte@3.3.2(prettier@3.4.2)(svelte@5.16.3):
     dependencies:
       prettier: 3.4.2
@@ -14705,18 +14710,6 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@4.1.1(picomatch@4.0.2)(svelte@5.16.2)(typescript@5.7.2):
-    dependencies:
-      '@jridgewell/trace-mapping': 0.3.25
-      chokidar: 4.0.3
-      fdir: 6.4.2(picomatch@4.0.2)
-      picocolors: 1.1.1
-      sade: 1.8.1
-      svelte: 5.16.2
-      typescript: 5.7.2
-    transitivePeerDependencies:
-      - picomatch
-
   svelte-check@4.1.1(picomatch@4.0.2)(svelte@5.16.3)(typescript@5.7.2):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
@@ -14754,23 +14747,6 @@ snapshots:
       pascal-case: 3.1.2
       svelte: 5.16.3
       typescript: 5.7.2
-
-  svelte@5.16.2:
-    dependencies:
-      '@ampproject/remapping': 2.3.0
-      '@jridgewell/sourcemap-codec': 1.5.0
-      '@types/estree': 1.0.6
-      acorn: 8.14.0
-      acorn-typescript: 1.4.13(acorn@8.14.0)
-      aria-query: 5.3.2
-      axobject-query: 4.1.0
-      clsx: 2.1.1
-      esm-env: 1.2.1
-      esrap: 1.3.2
-      is-reference: 3.0.3
-      locate-character: 3.0.0
-      magic-string: 0.30.17
-      zimmerframe: 1.1.2
 
   svelte@5.16.3:
     dependencies:

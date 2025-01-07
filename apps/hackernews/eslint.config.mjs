@@ -1,4 +1,3 @@
-// @ts-check
 import astro from '@repo/eslint-config/astroLint';
 import litConfig from '@repo/eslint-config/lit-config';
 import markdownConfig from '@repo/eslint-config/md.lint.config';

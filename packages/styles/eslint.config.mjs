@@ -1,4 +1,4 @@
-import astro from '@repo/eslint-config/astroLint';
+// import astro from '@repo/eslint-config/astroLint';
 
 import tsLint from '@repo/eslint-config/ts-lint';
 import eslintConfigPrettier from '@repo/eslint-config/prettier';
@@ -9,6 +9,6 @@ import eslintConfigPrettier from '@repo/eslint-config/prettier';
 // import regexConfig from '@repo/eslint-config/regex';
 
 /** @type {import('eslint').Linter.Config[]} */
-const config = [...tsLint, ...astro, eslintConfigPrettier];
+const config = [...tsLint, eslintConfigPrettier];
 
 export default config;

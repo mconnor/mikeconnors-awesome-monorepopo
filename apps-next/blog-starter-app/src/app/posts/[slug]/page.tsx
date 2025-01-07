@@ -38,11 +38,11 @@ export default async function Post(props: Params) {
   );
 }
 
-type Params = {
+interface Params {
   params: Promise<{
     slug: string;
   }>;
-};
+}
 
 export async function generateMetadata(props: Params): Promise<Metadata> {
   const params = await props.params;
@@ -64,6 +64,7 @@ export async function generateMetadata(props: Params): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
+  await Promise.resolve();
   const posts = getAllPosts();
 
   return posts.map((post) => ({
