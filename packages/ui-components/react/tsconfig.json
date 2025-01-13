@@ -1,7 +1,6 @@
 {
   "extends": "@repo/typescript-config/react.json",
   "compilerOptions": {
-    "rootDir": ".",
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true

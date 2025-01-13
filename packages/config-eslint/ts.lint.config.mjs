@@ -50,7 +50,7 @@ export default tseslint.config(
       },
     },
     rules: {
-      'no-unused-expressions': 'warn',
+      'no-unused-expressions': 'off',
       '@typescript-eslint/triple-slash-reference': 'warn',
       '@typescript-eslint/array-type': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',

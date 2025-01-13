@@ -7,7 +7,7 @@ export const server = {
     input: z.object({
       path: z.string(),
     }),
-    handler: async (input, ctx) => {
+    handler: async (input) => {
       const { path } = input;
       const story = (path: string) =>
         `https://node-hnapi.herokuapp.com/${path}`;

@@ -6,7 +6,7 @@
   "compilerOptions": {
     "esModuleInterop": true,
     "outDir": "${configDir}/dist",
-    "rootDir": "${configDir}/",
+    "strictNullChecks": true
   },
   "files": [
     "${configDir}/.astro/types.d.ts",

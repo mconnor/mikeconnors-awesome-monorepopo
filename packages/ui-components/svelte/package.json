@@ -27,7 +27,7 @@
     "prettier": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
     "svelte": "catalog:svelte5",
-    "svelte-check": "catalog:",
+    "svelte-check": "catalog:svelte5",
     "typescript": "catalog:"
   },
   "keywords": [

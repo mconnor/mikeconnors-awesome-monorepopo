@@ -1,14 +1,11 @@
-<!-- @component
-A counter written with Svelte
--->
 <script lang="ts">
   // import type { Snippet } from 'svelte';
-  type Props = {
-    children?: () => any;
-    klass?: string;
-  };
+  // type Props = {
+  //   children?: () => Snippet<[]>;
+  //   klass?: string;
+  // };
 
-  let { children, klass = 'counter' }: Props = $props();
+  let { children, klass = 'counter' } = $props();
   let count = $state(0);
 
   function add() {

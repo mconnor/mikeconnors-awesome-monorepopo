@@ -1,4 +1,4 @@
-import vue from "@repo/eslint-config/vue";
-import eslintConfigPrettier from "@repo/eslint-config/prettier";
+// @ts-check
+import vue from "@repo/eslint-config/vue-config";
 
-export default [...vue, eslintConfigPrettier];
+export default vue;
