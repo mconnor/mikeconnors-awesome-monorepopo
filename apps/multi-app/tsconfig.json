@@ -1,9 +1,8 @@
 {
-  "extends": "@repo/typescript-config/astro-base.json",
+  "extends": "@repo/typescript-config/astro-base",
   "compilerOptions": {
     "outDir": "dist",
     "strictNullChecks": true,
-    "rootDir": ".",
-    "jsx": "preserve" // Needed for TypeScript intellisense in the template inside Vue files
+    "jsx": "preserve"
   }
 }

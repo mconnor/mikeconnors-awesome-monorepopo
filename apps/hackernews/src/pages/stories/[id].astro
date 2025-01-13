@@ -5,13 +5,15 @@ import Show from '#components/Show.astro';
 import Layout from '#layouts/Layout.astro';
 import fetchAPI from '#lib/api.ts';
 import type { IComment } from '#types.ts';
-import type { IStory } from '#types.ts';
-import Story from '#components/Story.astro';
+// import type { IStory } from '#types.ts';
+// import Story from '#components/Story.astro';
 
+import * as Schemas from '#schemas.ts';
 export const prerender = false;
 const { id } = Astro.params as { id: string };
 
-const story = await fetchAPI(`item/${id}`);
+const storyData = await fetchAPI(`item/${id}`);
+const story = Schemas.storyJsonSchema.parse(storyData);
 ---
 
 <Layout>

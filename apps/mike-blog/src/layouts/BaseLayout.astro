@@ -30,12 +30,12 @@ const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
       document.addEventListener('astro:page-load', () => {
         const storedTheme = localStorage.getItem('theme');
         const doc = document.documentElement;
-        // if (storedTheme) {
-        //   doc.setAttribute('data-theme', storedTheme);
-        //   // $currTheme.set(storedTheme);
-        // } else {
-        //   doc.setAttribute('data-theme', 'light');
-        // }
+        if (storedTheme) {
+          doc.setAttribute('data-theme', storedTheme);
+          // $currTheme.set(storedTheme);
+        } else {
+          doc.setAttribute('data-theme', 'light');
+        }
 
         doc.setAttribute('data-theme', 'light');
       });

@@ -2,7 +2,6 @@
   "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
     "strict": true,
-    "rootDir": ".",
     //It would be an error to specify rootDir as core and include as * because it creates a file (helpers.ts) that would need to be emitted outside the outDir (i.e. ../helpers.js).
     "experimentalDecorators": true,
     "useDefineForClassFields": false //true if target is ES2022 or higher, including ESNext; false otherwise.

@@ -40,7 +40,7 @@
     "preact": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "svelte": "^5.16.3",
+    "svelte": "^5.17.3",
     "vue": "catalog:"
   },
   "devDependencies": {
@@ -60,7 +60,7 @@
     "postcss-pow": "^1.0.1",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "svelte-preprocess": "catalog:",
+    "svelte-preprocess": "catalog:svelte5",
     "typescript": "catalog:"
   },
   "prettier": {
