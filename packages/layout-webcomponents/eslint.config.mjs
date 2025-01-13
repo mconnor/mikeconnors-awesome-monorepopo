@@ -1,24 +1,6 @@
-import astro from '@repo/eslint-config/astroLint';
+// @ts-check
 
-import tsLint from '@repo/eslint-config/ts-lint';
-import eslintConfigPrettier from '@repo/eslint-config/prettier';
-// import tsLint from '@repo/eslint-config/ts-lint';
-// import turboConfig from '@repo/eslint-config/turbo-config'
-
-// import jsonConfig from '@repo/eslint-config/json';
-// import regexConfig from '@repo/eslint-config/regex';
-
-/** @type {import('eslint').Linter.Config[]} */
-const config = [
-  ...tsLint,
-  ...astro,
-
-  {
-    rules: {
-      'no-useless-escape': 'warn',
-    },
-  },
-  eslintConfigPrettier,
-];
+// import astroConfig from '@repo/eslint-config/astro-simple';
+import config from '@repo/eslint-config/ts-lint';
 
 export default config;

@@ -7,6 +7,8 @@ import globals from 'globals';
 
 import tseslint from 'typescript-eslint';
 import ignoresConfig from './ignores.config.mjs';
+import extraFileExtensionsSinglton from './fileExtensions.mjs';
+const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
 
 export default tseslint.config(
   ignoresConfig,
@@ -18,9 +20,9 @@ export default tseslint.config(
   {
     languageOptions: {
       parserOptions: {
-        extraFileExtensions: ['.svelte'],
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
+        extraFileExtensions,
       },
       globals: {
         ...globals.browser,

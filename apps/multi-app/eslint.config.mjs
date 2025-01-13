@@ -1,9 +1,8 @@
-import astroConfig from '@repo/eslint-config/astroLint';
-
+import litConfig from '@repo/eslint-config/lit-config';
+import markdownConfig from '@repo/eslint-config/md-config';
 import tsLint from '@repo/eslint-config/ts-lint';
-import eslintConfigPrettier from '@repo/eslint-config/prettier';
 
-/** @type {import('eslint').Linter.Config[]} */
-const config = [...tsLint, ...astroConfig, eslintConfigPrettier];
+/** @type {import("eslint").Linter.Config} */
+const config = [...tsLint, ...litConfig, ...markdownConfig];
 
 export default config;

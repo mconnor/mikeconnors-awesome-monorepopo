@@ -6,6 +6,10 @@ import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
 import { config as baseConfig } from './base.mjs';
 
+import extraFileExtensionsSinglton from './fileExtensions.mjs';
+
+const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
+
 /**
  * A custom ESLint configuration for libraries that use React.
  * Use this and only this script to lint react packages
@@ -23,6 +27,10 @@ export const config = [
       globals: {
         ...globals.serviceworker,
         ...globals.browser,
+      },
+      parserOptions: {
+        projectService: true,
+        extraFileExtensions,
       },
     },
   },

@@ -1,31 +1,44 @@
 // @ts-check
-
+import eslint from '@eslint/js';
+import eslintPluginAstro from 'eslint-plugin-astro';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
+import ignoresConfig from './ignores.config.mjs';
 
-import * as astroParser from 'astro-eslint-parser';
-import astroPlugin from 'eslint-plugin-astro';
+export default tseslint.config(
+  ignoresConfig,
 
-export default tseslint.config({
-  files: ['**/*.astro'],
-  extends: [
-    ...astroPlugin.configs['flat/recommended'],
-    tseslint.configs.disableTypeChecked,
-  ],
-  processor: astroPlugin.processors['client-side-ts'],
-  languageOptions: {
-    parser: astroParser,
-    parserOptions: {
-      extraFileExtensions: ['.astro'],
-      parser: tseslint.parser,
-      impliedStrict: false,
-      jsx: false,
+  // Global config
+  // JavaScript
+  eslint.configs.recommended,
+  // TypeScript
+  ...tseslint.configs.recommended,
+  {
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
-  rules: {
-    '@typescript-eslint/no-unsafe-assignment': 'off',
-    '@typescript-eslint/no-unsafe-call': 'off',
-    '@typescript-eslint/no-unsafe-member-access': 'off',
-    '@typescript-eslint/no-unsafe-return': 'off',
-    '@typescript-eslint/no-unsafe-argument': 'off',
+  // Allow triple-slash references in `*.d.ts` files.
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
+    },
   },
-});
+
+  // Astro
+  ...eslintPluginAstro.configs.recommended,
+
+  // Set globals for Node scripts.
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        // ...globals.nodeBuiltin,
+        // ...globals.worker,
+        // JSX: true,
+        // ...globals.node,
+      },
+    },
+  },
+);
