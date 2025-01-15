@@ -36,9 +36,7 @@
     "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "tsup": "^8.3.5",
-    "typescript": "catalog:"
-  },
-  "dependencies": {
+    "typescript": "catalog:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

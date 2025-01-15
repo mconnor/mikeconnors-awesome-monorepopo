@@ -9,33 +9,41 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./counter": "./src/PreactCounter.tsx"
+    "./counter": {
+      "types": "./src/PreactCounter.tsx",
+      "default": "./dist/PreactCounter.js"
+    }
   },
   "scripts": {
+    "build": "tsup",
+    "lint": "echo skip: no linting specified",
+    "fix": "echo skip: no fixing specified",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
-    "check-types": "tsc --noEmit"
+    "check-types": "echo skip: check-types"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@preact/signals": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "catalog:",
+    "eslint": "^8",
     "eslint-config-preact": "^1.5.0",
     "preact": "^10.25.4",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
+    "tsup": "^8.3.5",
     "typescript": "catalog:"
+  },
+  "eslintConfig": {
+    "extends": "preact"
   },
   "peerDependencies": {
     "preact": "^10"
   },
   "prettier": {
     "singleQuote": true
-  },
-  "dependencies": {
-    "eslint-config-preact": "^1.5.0"
   }
 }

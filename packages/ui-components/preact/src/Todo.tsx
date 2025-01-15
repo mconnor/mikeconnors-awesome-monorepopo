@@ -1,4 +1,5 @@
 // import { render } from 'preact';
+/** @jsxImportSource preact */
 import { computed, signal } from '@preact/signals';
 import type { JSX } from 'preact/jsx-runtime';
 
