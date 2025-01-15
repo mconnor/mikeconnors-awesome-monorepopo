@@ -5,6 +5,7 @@
   ],
   "compilerOptions": {
     "esModuleInterop": true,
+    "rootDir": "${configDir}",
     "outDir": "${configDir}/dist",
     "strictNullChecks": true
   },

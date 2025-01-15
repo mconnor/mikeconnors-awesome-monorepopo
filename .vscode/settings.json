@@ -21,11 +21,6 @@
     "preact",
     "toml"
   ],
-  "eslint.workingDirectories": [
-    {
-      "mode": "auto"
-    }
-  ],
   "github.copilot.enable": {
     "javascript": true,
     "typescript": true,

@@ -1,5 +1,3 @@
-/// <reference types="astro/client" />
-/// <reference path="../.astro/types.d.ts" />
 interface ImportMetaEnv {
   readonly SENTRY_DSN: string;
   readonly SENTRY_AUTH_TOKEN: string;

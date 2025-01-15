@@ -65,7 +65,7 @@
       ],
       "cache": true,
       "dependsOn": [
-        "^transit"
+        "transit"
       ]
     },
     "astro-check": {
@@ -74,7 +74,7 @@
       ],
       "cache": true,
       "dependsOn": [
-        "^transit"
+        "transit"
       ]
     },
     "test": {

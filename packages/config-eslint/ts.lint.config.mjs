@@ -51,7 +51,6 @@ export default tseslint.config(
     },
     rules: {
       'no-unused-expressions': 'off',
-      '@typescript-eslint/triple-slash-reference': 'warn',
       '@typescript-eslint/array-type': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/no-unused-expressions': [
@@ -99,6 +98,18 @@ export default tseslint.config(
         projectService: false,
         tsconfigRootDir: import.meta.dirname,
       },
+    },
+  },
+  {
+    files: ['**/*.d.ts'],
+    rules: {
+      '@typescript-eslint/triple-slash-reference': 'off',
+    },
+  },
+  {
+    files: ['**/actions/*.ts'],
+    rules: {
+      '@typescript-eslint/no-misused-promises': 'off',
     },
   },
 
