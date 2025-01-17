@@ -44,7 +44,7 @@ const countryLoader = (): Loader => {
                 data: country,
               });
               store.set({ id, data });
-            } catch (error) {
+            } catch (_error) {
               logger.error(`skipped country '${id}:'`);
             }
           }
