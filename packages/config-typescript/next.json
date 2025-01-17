@@ -2,7 +2,6 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "extends": "./vite.json",
     "compilerOptions": {
-        "incremental": true,
         "plugins": [
             {
                 "name": "next"
@@ -10,7 +9,8 @@
         ]
     },
     "files": [
-        "${configDir}/next-env.d.ts"
+        "${configDir}/next-env.d.ts",
+        "${configDir}/next.config.js"
     ],
     "include": [
         "**/*.ts",

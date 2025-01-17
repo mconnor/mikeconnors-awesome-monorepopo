@@ -41,3 +41,13 @@ This Turborepo has some additional tools already setup for you:
 - [recommended](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts)
 
 - [stylistic-type-checked](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/stylistic-type-checked.ts)
+
+#### Use ${configDir} in tsconfig
+
+This is allowed on all the
+
+- isFilePath options
+- paths
+- files
+- include
+- exclude

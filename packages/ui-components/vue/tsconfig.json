@@ -1,7 +1,6 @@
 {
   "extends": "@repo/typescript-config/vue.json",
-  "compilerOptions": {},
   "include": [
-    "**/*"
-  ]
+    "src"
+  ],
 }
