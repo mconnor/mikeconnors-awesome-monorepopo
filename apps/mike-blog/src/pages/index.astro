@@ -1,6 +1,6 @@
 ---
 // export const prerender = true;
-// import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
+
 // import { fade } from 'astro:transitions';
 // interface ImageMetadata {
 //   src: string;
@@ -24,7 +24,14 @@ import Layout from '#layouts/Layout.astro';
 
     <Box>
       <Frame ratio="16:9">
-        <Image src={AndyMud} alt="A description of my image." />
+        <Image
+          src={AndyMud}
+          layout="responsive"
+          width={800}
+          height={600}
+          priority
+          alt="A description of my image."
+        />
       </Frame>
       <h3>This is my dog</h3>
     </Box>
