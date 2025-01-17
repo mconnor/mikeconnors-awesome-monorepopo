@@ -53,6 +53,18 @@ export default tseslint.config(
       'no-unused-expressions': 'off',
       '@typescript-eslint/array-type': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true,
+        },
+      ],
       '@typescript-eslint/no-unused-expressions': [
         'error',
         {
@@ -104,6 +116,7 @@ export default tseslint.config(
     files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
   {

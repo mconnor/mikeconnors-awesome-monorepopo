@@ -8,10 +8,11 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
+const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx', 'vue'];
 
-import extraFileExtensionsSinglton from './fileExtensions.mjs';
+// import extraFileExtensionsSinglton from './fileExtensions.mjs';
 
-const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
+// const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
 
 export default tseslint.config(
   ignoresConfig,
@@ -21,7 +22,7 @@ export default tseslint.config(
       //   ...typescriptEslint.configs.recommended,
       ...pluginVue.configs['flat/recommended'],
     ],
-    files: ['**/*.{vue}'],
+    files: ['**/*.vue'],
     languageOptions: {
       //   ecmaVersion: 'latest',
       //   sourceType: 'module',
@@ -32,9 +33,6 @@ export default tseslint.config(
         // JSX: false,
         // ...globals.node,
       },
-      //   globals: {
-      //     JSX: false,
-      //   },
 
       parser: vueParser,
       parserOptions: {

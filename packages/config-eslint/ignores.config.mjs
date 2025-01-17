@@ -2,6 +2,7 @@
 export default {
   ignores: [
     '**/dist',
+    '**/eslint.config.*',
     '**/.vercel',
     '**/.wrangler',
     '**/cache-directory',
