@@ -28,7 +28,7 @@
     "@astrojs/vercel": "catalog:",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
-    "@sentry/astro": "^8.48.0",
+    "@sentry/astro": "^8.50.0",
     "@webcomponents/template-shadowroot": "catalog:",
     "astro": "catalog:",
     "lit": "catalog:",

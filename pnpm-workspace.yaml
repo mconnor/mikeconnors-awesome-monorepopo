@@ -30,7 +30,7 @@ catalog:
   "@webcomponents/template-shadowroot": ^0.2.1
   "@types/node": ^22.10.2
   add: ^2.0.6
-  astro: ^5.1.6
+  astro: ^5.1.7
   astro-icon: ^1.1.5
   autoprefixer: ^10.4.20
   cssnano: ^7.0.6

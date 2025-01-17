@@ -29,7 +29,7 @@
     "@preact/signals": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-preact": "^1.5.0",
     "preact": "^10.25.4",
     "prettier": "catalog:",
