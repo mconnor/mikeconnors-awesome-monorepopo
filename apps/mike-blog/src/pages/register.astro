@@ -1,0 +1,32 @@
+---
+
+import Stack from '@repo/layout-webcomponents/Stack';
+import Box from '@repo/ui-lit/Box';
+
+import Layout from '#layouts/Layout.astro';
+---
+
+<Layout maxW="80ch">
+  <Stack space="0">
+    <h1>Register</h1>
+
+    <Box>
+
+        <form>
+            <label>
+              Username:
+              <input type="text" name="username" required />
+            </label>
+            <label>
+              Email:
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              Password:
+              <input type="password" name="password" required minlength="6" />
+            </label>
+            <button>Submit</button>
+          </form>
+    </Box>
+  </Stack>
+</Layout>
