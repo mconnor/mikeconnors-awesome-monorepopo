@@ -7,7 +7,8 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./HeartBtn": "./src/HeartWC/index.astro"
+    "./HeartBtn": "./src/HeartWC/index.astro",
+    "./api/feedback": "./src/api/feedback.ts"
   },
   "scripts": {
     "astro-check": "astro check",

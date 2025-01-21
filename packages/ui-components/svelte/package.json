@@ -8,7 +8,8 @@
   },
   "exports": {
     "./counter": "./src/SvelteCounter.svelte",
-    "./card": "./src/Card.svelte"
+    "./card": "./src/Card.svelte",
+    "./feedback-form": "./src/FeedbackFrom.svelte"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

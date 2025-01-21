@@ -37,8 +37,8 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/mdx": "^4.0.6",
-    "@astrojs/preact": "^4.0.2",
+    "@astrojs/mdx": "^4.0.7",
+    "@astrojs/preact": "^4.0.3",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/vercel": "^8.0.2",
     "@repo/astro-wc": "workspace:*",
@@ -47,7 +47,7 @@
     "@repo/ui-lit": "workspace:*",
     "@sentry/astro": "^8.50.0",
     "@sentry/browser": "^8.50.0",
-    "@sentry/cli": "^2.40.0",
+    "@sentry/cli": "^2.41.1",
     "@sentry/vite-plugin": "^2.23.0",
     "@std/toml": "npm:@jsr/std__toml@^1.0.2",
     "astro": "catalog:",
@@ -61,7 +61,7 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.2.2",
+    "@iconify-json/mdi": "^1.2.3",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/eslint-config-prettier": "^6.11.3",
