@@ -22,9 +22,9 @@
     "@astrojs/check": "catalog:",
     "@astrojs/preact": "catalog:",
     "@astrojs/react": "catalog:",
-    "@astrojs/svelte": "7.0.3",
+    "@astrojs/svelte": "7.0.4",
     "@astrojs/vercel": "catalog:",
-    "@astrojs/vue": "^5.0.5",
+    "@astrojs/vue": "^5.0.6",
     "@preact/signals": "catalog:",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/preact": "workspace:*",
@@ -40,7 +40,7 @@
     "preact": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "svelte": "^5.18.0",
+    "svelte": "^5.19.1",
     "vue": "catalog:"
   },
   "devDependencies": {

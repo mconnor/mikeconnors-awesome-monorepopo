@@ -50,6 +50,6 @@
     "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
-    "vite": "^6.0.7"
+    "vite": "^6.0.11"
   }
 }
