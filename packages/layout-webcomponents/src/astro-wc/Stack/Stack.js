@@ -61,7 +61,9 @@ export default class Stack extends HTMLElement {
   }
 
   set recursive(val) {
-    this.setAttribute(val ? 'recursive' : '');
+    val ?
+      this.setAttribute('recursive', '')
+    : this.removeAttribute('recursive');
   }
 
   get splitAfter() {
@@ -69,7 +71,9 @@ export default class Stack extends HTMLElement {
   }
 
   set splitAfter(val) {
-    this.setAttribute('splitAfter', val);
+    val ?
+      this.setAttribute('splitAfter', '')
+    : this.removeAttribute('splitAfter');
   }
 
   static get observedAttributes() {
