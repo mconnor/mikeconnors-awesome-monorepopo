@@ -35,7 +35,7 @@
     },
     "lint": {
       "dependsOn": [
-        "transit"
+        "^lint"
       ]
     },
     "format": {},
@@ -65,7 +65,7 @@
       ],
       "cache": true,
       "dependsOn": [
-        "transit"
+        "^check-types"
       ]
     },
     "astro-check": {
@@ -74,7 +74,7 @@
       ],
       "cache": true,
       "dependsOn": [
-        "transit"
+        "^astro-check"
       ]
     },
     "test": {

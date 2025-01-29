@@ -22,7 +22,7 @@
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
-    "astro": "^5.1.9",
+    "astro": "^5.1.10",
     "lit": "catalog:"
   },
   "devDependencies": {

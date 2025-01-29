@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/node": "^9.0.1",
+    "@astrojs/node": "^9.0.2",
     "astro": "catalog:"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 // @ts-check
-
+import prettier from 'eslint-config-prettier';
 import js from '@eslint/js';
 
 import svelte from 'eslint-plugin-svelte';
@@ -15,7 +15,7 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   ...svelte.configs['flat/recommended'],
-
+  prettier,
   ...svelte.configs['flat/prettier'],
   {
     languageOptions: {

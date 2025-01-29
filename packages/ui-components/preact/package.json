@@ -34,7 +34,7 @@
     "preact": "^10.25.4",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "tsup": "^8.3.5",
+    "tsup": "^8.3.6",
     "typescript": "catalog:"
   },
   "eslintConfig": {

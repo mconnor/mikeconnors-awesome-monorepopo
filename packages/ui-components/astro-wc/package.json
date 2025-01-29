@@ -8,7 +8,8 @@
   },
   "exports": {
     "./HeartBtn": "./src/HeartWC/index.astro",
-    "./api/feedback": "./src/api/feedback.ts"
+    "./api/feedback": "./src/api/feedback.ts",
+    "./ThemeMenu": "./src/ThemeMenu/index.astro"
   },
   "scripts": {
     "astro-check": "astro check",

@@ -26,7 +26,7 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
-    "turbo": "^2.3.3",
+    "turbo": "^2.3.4",
     "typescript": "catalog:"
   },
   "engines": {
