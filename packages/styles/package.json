@@ -10,8 +10,8 @@
     "./Types": "./src/Types.ts",
     "./schemas": "./src/Schemas.ts",
     "./css/*": "./src/css/*",
-    "./GlobalStyle.astro": "./src/GlobalStyle.astro",
-    "./DevModeStyle.astro": "./src/DevModeStyle.astro"
+    "./GlobalStyle": "./src/GlobalStyle.astro",
+    "./DevModeStyle": "./src/DevModeStyle.astro"
   },
   "scripts": {
     "astro-check": "astro check",

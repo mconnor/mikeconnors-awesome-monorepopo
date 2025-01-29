@@ -1,9 +1,7 @@
-/* @import "../props.media.css"; */
-
-@import './theme.light.props.css';
+@import './theme.light.css';
 @import './theme.light.switch.css';
 
-@import './theme.dark.props.css';
+@import './theme.dark.css';
 @import './theme.dark.switch.css';
 
 @import './theme.grape.props.css';
