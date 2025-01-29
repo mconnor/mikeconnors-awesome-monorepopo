@@ -3,6 +3,7 @@ import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
 
 import CountryLoader from './loaders/index.ts';
+
 import {
   blogSchema,
   authorsSchema,

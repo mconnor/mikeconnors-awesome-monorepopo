@@ -4,7 +4,7 @@ import { countriesSchema, countrySchema } from '#schemas/index.ts';
 
 const countryLoader = (): Loader => {
   //https://restcountries.com/v3.1/subregion/Northern Europe
-  const url = new URL('v3.1/region/africa', 'https://restcountries.com');
+  const url = new URL('/v3.1/region/africa/', 'https://restcountries.com/');
 
   return {
     name: 'countries-loader',
@@ -17,14 +17,14 @@ const countryLoader = (): Loader => {
       logger.info('Loading countries ' + url.href);
       store.clear();
 
-      await fetchCountries();
-
-      async function fetchCountries() {
+      const fetchCountries = async () => {
         const rawResponse = await fetch(url.href)
           .then((res) => res.json() as unknown)
           .catch((error) => {
             logger.error('Fetch failed: ' + error);
           });
+
+        console.log(rawResponse);
 
         const {
           data: countryData,
@@ -49,7 +49,8 @@ const countryLoader = (): Loader => {
             }
           }
         }
-      }
+      };
+      await fetchCountries();
     },
   };
 };

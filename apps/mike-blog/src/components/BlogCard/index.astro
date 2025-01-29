@@ -12,6 +12,7 @@ interface Props {
   backgroundColor?: string;
   id: string;
   postData: CollectionEntry<'blog'>['data'];
+  ssr?: boolean;
 }
 
 const {
@@ -19,14 +20,17 @@ const {
   backgroundColor = 'var(--surface-4)',
   postData,
   id,
+  ssr = false,
 } = Astro.props;
 
 const { title, description, cover, pubDate } = postData;
+
+const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
 // const authObj = await getEntry('authors', id);
 // const { name } = authObj.data;
 ---
 
-<a slot="left" href={`/posts/${id}`}>
+<a slot="left" href={link}>
   <Box invert padding="0" borderWidth="0">
     <!-- <Box padding='4px'> -->
 
