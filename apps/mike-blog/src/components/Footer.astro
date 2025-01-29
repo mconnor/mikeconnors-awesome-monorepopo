@@ -4,8 +4,9 @@
 import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
 
-import { Links } from '#app.config.js';
-import MyIcon from '#components/MyIcon.astro';
+import { Links } from '#app.config.ts';
+import { Icon } from 'astro-icon/components';
+
 const ICONSIZE = 24;
 ---
 
@@ -13,18 +14,18 @@ const ICONSIZE = 24;
   <Cluster justify="space-around" align="flex-start">
     <Box borderWidth="0" padding="var(--s0)">
       <a href={Links.LINKEDIN}>
-        <MyIcon name="mdi:linkedin" size={ICONSIZE} />
+        <Icon name="mdi:linkedin" size={ICONSIZE} />
       </a>
     </Box>
 
     <Box borderWidth="0" padding="var(--s0)">
       <a href={Links.GITHUB}>
-        <MyIcon name="mdi:github" size={ICONSIZE} />
+        <Icon name="mdi:github" size={ICONSIZE} />
       </a>
     </Box>
     <Box borderWidth="0" padding="var(--s0)">
       <a href={Links.TWITTER}>
-        <MyIcon name="mdi:twitter" size={ICONSIZE} />
+        <Icon name="mdi:twitter" size={ICONSIZE} />
       </a>
     </Box>
 
