@@ -11,7 +11,7 @@ export class MyTimer extends LitElement {
     /* playground-fold */
 
     :host {
-      display: inline-block;
+      display: block;
       min-width: 4em;
       text-align: center;
       padding: 0.2em;
@@ -38,11 +38,12 @@ export class MyTimer extends LitElement {
     const hun = padHun(Math.floor((remaining % 1000) / 10));
 
     return html`
-      ${min ? `${min}:${sec}` : `${sec}.${hun}`}
+      <h1>${min ? `${min}:${sec}` : `${sec}.${hun}`}</h1>
       <footer>
         ${remaining === 0 ? ''
         : running ? html`<span @click=${this.pause}>${pause}</span>`
         : html`<span @click=${this.start}>${play}</span>`}
+
         <span @click=${this.reset}>${replay}</span>
       </footer>
     `;

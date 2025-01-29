@@ -154,66 +154,6 @@ importers:
         specifier: workspace:*
         version: link:../../packages/config-typescript
       '@sveltejs/adapter-auto':
-        specifier: ^3.3.1
-        version: 3.3.1(@sveltejs/kit@2.16.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))
-      '@sveltejs/kit':
-        specifier: ^2.16.1
-        version: 2.16.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0))
-      '@sveltejs/vite-plugin-svelte':
-        specifier: ^5.0.3
-        version: 5.0.3(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0))
-      autoprefixer:
-        specifier: ^10.4.20
-        version: 10.4.20(postcss@8.5.1)
-      globals:
-        specifier: ^15.14.0
-        version: 15.14.0
-      prettier:
-        specifier: ^3.4.2
-        version: 3.4.2
-      prettier-plugin-svelte:
-        specifier: ^3.3.3
-        version: 3.3.3(prettier@3.4.2)(svelte@5.19.5)
-      prettier-plugin-tailwindcss:
-        specifier: ^0.6.11
-        version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.4.2)(svelte@5.19.5))(prettier@3.4.2)
-      svelte:
-        specifier: ^5.19.5
-        version: 5.19.5
-      svelte-check:
-        specifier: ^4.1.4
-        version: 4.1.4(picomatch@4.0.2)(svelte@5.19.5)(typescript@5.7.3)
-      tailwindcss:
-        specifier: ^3.4.17
-        version: 3.4.17
-      typescript:
-        specifier: ^5.7.3
-        version: 5.7.3
-      typescript-eslint:
-        specifier: ^8.22.0
-        version: 8.22.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
-      vite:
-        specifier: ^6.0.11
-        version: 6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)
-      vitest:
-        specifier: ^3.0.4
-        version: 3.0.4(@types/debug@4.1.12)(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)
-
-  apps-svelte/svelte-demo:
-    devDependencies:
-      '@fontsource/fira-mono':
-        specifier: ^5.1.1
-        version: 5.1.1
-      '@neoconfetti/svelte':
-        specifier: ^2.2.1
-        version: 2.2.1
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../../packages/config-eslint
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/config-typescript
-      '@sveltejs/adapter-auto':
         specifier: ^4.0.0
         version: 4.0.0(@sveltejs/kit@2.16.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))
       '@sveltejs/kit':
@@ -2693,11 +2633,6 @@ packages:
   '@sindresorhus/merge-streams@4.0.0':
     resolution: {integrity: sha512-tlqY9xq5ukxTUZBmoOp+m61cqwQD5pHJtFY3Mn8CA8ps6yghLH/Hw8UPdqg4OLmFW3IFlcXnQNmo/dh8HzXYIQ==}
     engines: {node: '>=18'}
-
-  '@sveltejs/adapter-auto@3.3.1':
-    resolution: {integrity: sha512-5Sc7WAxYdL6q9j/+D0jJKjGREGlfIevDyHSQ2eNETHcB1TKlQWHcAo8AS8H1QdjNvSXpvOwNjykDUHPEAyGgdQ==}
-    peerDependencies:
-      '@sveltejs/kit': ^2.0.0
 
   '@sveltejs/adapter-auto@4.0.0':
     resolution: {integrity: sha512-kmuYSQdD2AwThymQF0haQhM8rE5rhutQXG4LNbnbShwhMO4qQGnKaaTy+88DuNSuoQDi58+thpq8XpHc1+oEKQ==}
@@ -6253,61 +6188,6 @@ packages:
       prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0 || ^5.0.0-next.0
 
-  prettier-plugin-tailwindcss@0.6.11:
-    resolution: {integrity: sha512-YxaYSIvZPAqhrrEpRtonnrXdghZg1irNg4qrjboCXrpybLWVs55cW2N3juhspVJiO0JBvYJT8SYsJpc8OQSnsA==}
-    engines: {node: '>=14.21.3'}
-    peerDependencies:
-      '@ianvs/prettier-plugin-sort-imports': '*'
-      '@prettier/plugin-pug': '*'
-      '@shopify/prettier-plugin-liquid': '*'
-      '@trivago/prettier-plugin-sort-imports': '*'
-      '@zackad/prettier-plugin-twig': '*'
-      prettier: ^3.0
-      prettier-plugin-astro: '*'
-      prettier-plugin-css-order: '*'
-      prettier-plugin-import-sort: '*'
-      prettier-plugin-jsdoc: '*'
-      prettier-plugin-marko: '*'
-      prettier-plugin-multiline-arrays: '*'
-      prettier-plugin-organize-attributes: '*'
-      prettier-plugin-organize-imports: '*'
-      prettier-plugin-sort-imports: '*'
-      prettier-plugin-style-order: '*'
-      prettier-plugin-svelte: '*'
-    peerDependenciesMeta:
-      '@ianvs/prettier-plugin-sort-imports':
-        optional: true
-      '@prettier/plugin-pug':
-        optional: true
-      '@shopify/prettier-plugin-liquid':
-        optional: true
-      '@trivago/prettier-plugin-sort-imports':
-        optional: true
-      '@zackad/prettier-plugin-twig':
-        optional: true
-      prettier-plugin-astro:
-        optional: true
-      prettier-plugin-css-order:
-        optional: true
-      prettier-plugin-import-sort:
-        optional: true
-      prettier-plugin-jsdoc:
-        optional: true
-      prettier-plugin-marko:
-        optional: true
-      prettier-plugin-multiline-arrays:
-        optional: true
-      prettier-plugin-organize-attributes:
-        optional: true
-      prettier-plugin-organize-imports:
-        optional: true
-      prettier-plugin-sort-imports:
-        optional: true
-      prettier-plugin-style-order:
-        optional: true
-      prettier-plugin-svelte:
-        optional: true
-
   prettier-plugin-vue@1.1.6:
     resolution: {integrity: sha512-trQ/oY+6hSsGe2zPIFThXMIM0TbxMEbk2VOrKjwHWuSz7OEo0rnumbz9a47OxVPCaAnGY9vZG8qDTiTmk9bq0A==}
 
@@ -9530,11 +9410,6 @@ snapshots:
   '@shikijs/vscode-textmate@10.0.1': {}
 
   '@sindresorhus/merge-streams@4.0.0': {}
-
-  '@sveltejs/adapter-auto@3.3.1(@sveltejs/kit@2.16.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))':
-    dependencies:
-      '@sveltejs/kit': 2.16.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0))
-      import-meta-resolve: 4.1.0
 
   '@sveltejs/adapter-auto@4.0.0(@sveltejs/kit@2.16.1(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))(svelte@5.19.5)(vite@6.0.11(@types/node@22.12.0)(jiti@2.4.2)(yaml@2.7.0)))':
     dependencies:
@@ -14361,13 +14236,6 @@ snapshots:
     dependencies:
       prettier: 3.4.2
       svelte: 5.19.5
-
-  prettier-plugin-tailwindcss@0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.4.2)(svelte@5.19.5))(prettier@3.4.2):
-    dependencies:
-      prettier: 3.4.2
-    optionalDependencies:
-      prettier-plugin-astro: 0.14.1
-      prettier-plugin-svelte: 3.3.3(prettier@3.4.2)(svelte@5.19.5)
 
   prettier-plugin-vue@1.1.6:
     dependencies:
