@@ -40,13 +40,13 @@
     "@astrojs/mdx": "^4.0.7",
     "@astrojs/preact": "^4.0.3",
     "@astrojs/rss": "^4.0.11",
-    "@astrojs/vercel": "^8.0.2",
+    "@astrojs/vercel": "^8.0.4",
     "@repo/astro-wc": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
-    "@sentry/astro": "^8.50.0",
-    "@sentry/browser": "^8.50.0",
+    "@sentry/astro": "^8.52.0",
+    "@sentry/browser": "^8.52.0",
     "@sentry/cli": "^2.41.1",
     "@sentry/vite-plugin": "^2.23.0",
     "@std/toml": "npm:@jsr/std__toml@^1.0.2",
@@ -79,7 +79,7 @@
     "postcss-pow": "^1.0.1",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
-    "stylelint": "^16.13.2",
+    "stylelint": "^16.14.1",
     "typescript": "^5.7.3"
   }
 }

@@ -2,13 +2,13 @@
 import Cluster from '@repo/layout-webcomponents/Cluster';
 
 import Box from '@repo/ui-lit/Box';
-import ThemeSwitcher from '#wc-lit/ThemeSwitcher/index.astro';
+import ThemeMenu from '@repo/astro-wc/ThemeMenu';
 
 import MainNav from './MainNav.astro';
 ---
 
 <Box invert padding="var(--s1)" borderWidth="0">
-  <ThemeSwitcher />
+  <ThemeMenu />
 
   <Cluster align="baseline" justify="space-between" space="0">
     <a href="/"><h1>Astro Demo</h1></a>

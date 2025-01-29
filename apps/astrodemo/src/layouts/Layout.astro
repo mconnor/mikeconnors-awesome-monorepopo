@@ -2,7 +2,7 @@
 import Center from '@repo/layout-webcomponents/Center';
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/styles/Types';
-
+import Box from '@repo/ui-lit/Box';
 import Footer from '#components/Footer.astro';
 import Header from '#components/Header.astro';
 import BaseLayout from '#layouts/BaseLayout.astro';
@@ -21,7 +21,14 @@ const { centerWidth = '60ch', title = 'mike connor' } = Astro.props;
     <Header desc={title} />
 
     <main>
+      <!-- <Box borderWidth='0'>
       <Center max={centerWidth}><slot /></Center>
+    </Box> -->
+      <Center max={centerWidth}>
+        <Box>
+          <slot />
+        </Box>
+      </Center>
     </main>
 
     <Footer />

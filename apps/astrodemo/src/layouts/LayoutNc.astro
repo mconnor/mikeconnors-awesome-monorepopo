@@ -4,8 +4,8 @@ import Cover from '@repo/layout-webcomponents/Cover';
 import Sidebar from '@repo/layout-webcomponents/Sidebar';
 
 import Header from '#components/Header.astro';
-import Footer from '#components/Header.astro';
-import Layout from '#layouts/BaseLayout.astro';
+import Footer from '#components/Footer.astro';
+import BaseLayout from '#layouts/BaseLayout.astro';
 
 interface Props {
   title?: string;
@@ -15,16 +15,17 @@ interface Props {
 const { title = 'mike connor', description = 'my website' } = Astro.props;
 ---
 
-<Layout title={title} description={description}>
-  <Cover centeredElement="center-l" noPad>
+<BaseLayout title={title} description={description}>
+  <Cover centeredElement="main" noPad>
     <Header desc={title} />
-    <Center>
-      <Sidebar sideWidth="30%">
-        <slot name="left" />
-        <slot name="right" />
-      </Sidebar>
-    </Center>
-  </Cover>
-
-  <Footer />
-</Layout>
+    <main>
+      <Center max="100ch">
+        <Sidebar sideWidth="30%">
+          <slot />
+        </Sidebar>
+        <Center />
+        <Footer />
+      </Center>
+    </main>
+  </Cover></BaseLayout
+>

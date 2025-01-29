@@ -34,6 +34,13 @@ export const server = {
       // Otherwise, like the post
     },
   }),
+  getAuthors: defineAction({
+    input: z.object({ authorID: z.string() }),
+    handler: async () => {
+      await Promise.resolve(); // Add await to fix lint error
+      return ['Sarah', 'Chris', 'Yan', 'Elian'];
+    },
+  }),
 };
 
 // export const user = {

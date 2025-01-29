@@ -1,5 +1,3 @@
-import { z } from 'astro:schema';
-
 class AstroForm extends HTMLElement {
   private form: HTMLFormElement | null = null;
   constructor() {

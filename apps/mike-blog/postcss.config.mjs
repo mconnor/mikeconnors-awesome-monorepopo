@@ -19,10 +19,12 @@ const devConfig = {
 const prodConfig = {
   plugins: [
     postcssImport,
-
     postcssJitProps(OpenProps),
-    postcssNesting,
+    postcssNesting({
+      edition: '2024-02',
+    }),
     postcssPow,
+    postcssCustomMedia,
     nano,
     autoprefixer({ overrideBrowserslist: ['last 2 versions'] }),
   ],
