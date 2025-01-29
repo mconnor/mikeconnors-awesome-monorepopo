@@ -1,0 +1,23 @@
+---
+import { getEntry } from 'astro:content';
+import Layout from '#layouts/Layout.astro';
+
+const { id } = Astro.params;
+
+if (id === undefined) Astro.redirect('/404');
+
+// type Props = CollectionEntry<'authors'>;
+
+const author = await getEntry('authors', id);
+if (author === undefined) {
+  return Astro.redirect('/404');
+}
+
+const { name, bio } = author.content;
+// const { Content } = await render(author);
+---
+
+<Layout title="author" maxW="60ch">
+  <h1>{name}</h1>
+  <p>{bio}</p>
+</Layout>

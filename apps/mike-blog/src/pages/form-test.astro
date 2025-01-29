@@ -1,0 +1,39 @@
+---
+
+---
+
+<form class="input-validation-required">
+  <wa-input name="name" label="Name" required></wa-input>
+  <br />
+  <wa-select label="Favorite Animal" clearable required>
+    <wa-option value="birds">Birds</wa-option>
+    <wa-option value="cats">Cats</wa-option>
+    <wa-option value="dogs">Dogs</wa-option>
+    <wa-option value="other">Other</wa-option>
+  </wa-select>
+  <br />
+  <wa-textarea name="comment" label="Comment" required></wa-textarea>
+  <br />
+  <wa-checkbox required>Check me before submitting</wa-checkbox>
+  <br /><br />
+  <wa-button type="submit" variant="brand">Submit</wa-button>
+</form>
+
+<script type="module">
+  const form = document.querySelector('.input-validation-required');
+
+  // Wait for controls to be defined before attaching form listeners
+  await Promise.all([
+    customElements.whenDefined('wa-button'),
+    customElements.whenDefined('wa-checkbox'),
+    customElements.whenDefined('wa-input'),
+    customElements.whenDefined('wa-option'),
+    customElements.whenDefined('wa-select'),
+    customElements.whenDefined('wa-textarea'),
+  ]).then(() => {
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('All fields are valid!');
+    });
+  });
+</script>
