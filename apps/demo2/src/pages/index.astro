@@ -1,0 +1,50 @@
+---
+// import DatePicker from '#components/DatePicker.astro';
+// import Card from '@/components/Card.astro';
+import Stack from '@repo/layout-webcomponents/Stack';
+import WaCheckbox from '#components/WaCheckbox.astro';
+import Layout from '#layouts/Layout.astro';
+import Box from '@repo/ui-lit/Box';
+---
+
+<Layout title="Welcome to Astro.">
+  <Box borderWidth="2px">
+    <Stack space="2rem">
+      <Box padding="var(--s0)">
+        <h1>
+          Welcome to my long overdue public-professoinal-personal shingle.
+        </h1>
+        <p>
+          This is a WIP. Standby for sizzling oringnal and nurtious content.
+        </p>
+      </Box>
+      <Box
+        ><h4>Learn how Astro works and explore the official API docs.</h4>
+        <!-- <DatePicker /> -->
+      </Box>
+
+      <Box invert>
+        <div style={{ maxWidth: '30px' }}><button>click me</button></div>
+        <WaCheckbox />
+
+        <Box invert>
+          <h4>Learn how Astro works and explore the official API docs.</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            molestias quo ullam alias sit, nisi iure enim debitis numquam
+            laudantium! Quia distinctio consectetur optio, explicabo vero illo
+            unde dolores earum.Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Atque molestias quo ullam alias sit, nisi iure
+            enim debitis numquam laudantium! Quia distinctio consectetur optio,
+            explicabo vero illo unde dolores earum.
+          </p></Box
+        >
+      </Box>
+      <Box
+        ><h4>Learn how Astro works and explore the official API docs.</h4></Box
+      >
+      <!-- <Box><h4>Learn how Astro works and explore the official API docs.</h4></Box>
+     -->
+    </Stack>
+  </Box>
+</Layout>

@@ -1,0 +1,58 @@
+{
+  "name": "@app/demo2",
+  "private": true,
+  "version": "0.0.2",
+  "type": "module",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "astro-check": "astro check",
+    "check-types": "tsc --noEmit",
+    "build": "astro build",
+    "toolBarOn": "astro preferences disable devToolbar",
+    "toolBarOff": "astro preferences enable devToolbar",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint:eslint-docs": "npm run update:eslint-docs -- --check",
+    "inspect": "eslint  --inspect-config",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:",
+    "@astrojs/mdx": "catalog:",
+    "@astrojs/rss": "catalog:",
+    "@astrojs/vercel": "catalog:",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/layout-webcomponents": "workspace:*",
+    "@repo/styles": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@repo/ui-lit": "workspace:*",
+    "@sentry/astro": "^8.52.0",
+    "@webcomponents/template-shadowroot": "catalog:",
+    "astro": "catalog:",
+    "lit": "catalog:",
+    "open-props": "^1.7.10"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "autoprefixer": "catalog:",
+    "cssnano": "catalog:",
+    "eslint": "catalog:",
+    "postcss-custom-media": "catalog:",
+    "postcss-html": "catalog:",
+    "postcss-import": "catalog:",
+    "postcss-jit-props": "catalog:",
+    "postcss-nesting": "catalog:",
+    "postcss-pow": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "catalog:",
+    "vite": "^6.0.11"
+  }
+}

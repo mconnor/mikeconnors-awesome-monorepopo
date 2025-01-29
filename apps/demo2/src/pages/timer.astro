@@ -1,0 +1,26 @@
+---
+// import DatePicker from '#components/DatePicker.astro';
+// import Card from '@/components/Card.astro';
+import Stack from '@repo/layout-webcomponents/Stack';
+
+import Layout from '#layouts/Layout.astro';
+import Box from '@repo/ui-lit/Box';
+import MyTimer from '@repo/ui-lit/Timer';
+---
+
+<Layout title="Welcome to Astro.">
+  <Stack>
+    <Box>
+      <MyTimer />
+    </Box>
+    <Box>
+      <MyTimer duration={20} />
+    </Box>
+    <Box>
+      <MyTimer />
+    </Box>
+    <Box>
+      <MyTimer duration={20} />
+    </Box>
+  </Stack>
+</Layout>

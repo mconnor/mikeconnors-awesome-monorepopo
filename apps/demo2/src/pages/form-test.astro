@@ -1,0 +1,17 @@
+---
+import Form from '#components/Form/index.astro';
+import Stack from '@repo/layout-webcomponents/Stack';
+
+import Layout from '#layouts/Layout.astro';
+import Box from '@repo/ui-lit/Box';
+---
+
+<Layout title="Welcome to Astro.">
+  <Box borderWidth="2px">
+    <Stack space="2rem">
+      <Box padding="var(--s0)">
+        <Form />
+      </Box>
+    </Stack>
+  </Box>
+</Layout>
