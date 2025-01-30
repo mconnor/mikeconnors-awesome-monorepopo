@@ -1,92 +1,30 @@
-{
-  "turbo.transitNodes": [
-    "transit"
-  ],
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
-  "pnpmCatalogLens.enabled": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "astro",
-    "typescript",
-    "typescriptreact",
-    "svelte",
-    "vue",
-    "preact",
-    "toml"
-  ],
-  "github.copilot.enable": {
-    "javascript": true,
-    "typescript": true,
-    "zod": true,
-    "astro": true,
-    "react": true,
-    "preact": true,
-    "svelte": true,
-    "vue": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "never"
-  },
-  "breadcrumbs.filePath": "on",
-  "cssvar.themes": [
-    "dark",
-    "light",
-    "dim",
-    "choco",
-    "toucan",
-    "grape"
-  ],
-  "cssvar.enable": true,
-  // Since we want to scan css files inside `node_modules as well
-  // we need to set cssvar.ignore property to empty array
-  "cssvar.ignore": [],
-  "cssvar.excludeThemedVariables": true,
-  // add support for autocomplete in JS or JS like files
-  /**
-   * This setting controls whether inlay hints are enabled in the editor.
-   * Inlay hints are small pieces of information displayed inline with the code,
-   * providing additional context or details about the code.
-   *
-   * Possible values:
-   * - "off": Inlay hints are disabled.
-   * - "on": Inlay hints are enabled.
-   * - "off": Inlay hints are disabled.
-   */
-  "cssvar.files": [
-    "./packages/styles/src/css/**/*css",
-    "./packages/styles/node_modules/open-props/open-props.min.css"
-    // if you have an alternative path to where your styles are located
-    // you can add it in this array of files
-    // "assets/styles/variables.css"
-  ],
-  "cssvar.extensions": [
-    "css",
-    "postcss",
-    "jsx",
-    "tsx",
-    "astro"
-  ],
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "files.exclude": {
-    "**/.git": false,
-    "**/.svn": false,
-    "**/.hg": false,
-    "**/CVS": false,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": false
-  },
-  "search.exclude": {
-    "**/.git": true
-  },
-  "explorer.excludeGitIgnore": false,
-  "yaml.schemas": {
-    "https://json.schemastore.org/yamllint.json": "./pnpm-workspace.yaml"
-  },
-  "editor.fontSize": 14,
-  "editor.formatOnSave": true,
-  "explorer.autoOpenDroppedFile": false,
-  "explorer.autoReveal": false
-}
+I'll review these VS Code settings. Here are the key points and suggestions:
+
+1. Editor Behavior:
+- Good settings for limiting open editors (8 per group)
+- Appropriate auto-save configuration (1 second delay)
+- Sensible formatting settings with Prettier as default formatter
+
+2. Code Quality:
+- ESLint validation is well configured for multiple frameworks
+- Import organization is set to "explicit" which is good for maintaining clean code
+- Appropriate search exclusions for common build/cache directories
+
+3. Language Support:
+- Comprehensive Emmet support for multiple frameworks
+- Good GitHub Copilot configuration for major frameworks
+- CSS variable support is well configured
+
+4. Visual Aids:
+- Good use of bracket pair colorization
+- Helpful ruler markers at 80, 100, and 120 characters
+- Sticky scroll and linked editing enabled
+- File nesting enabled for better organization
+
+Suggestions for improvement:
+1. Consider adding `"eslint.format.enable": true` if you want ESLint to handle formatting
+2. You might want to add `"*.log"` to search exclusions
+3. There's a trailing comma in the `search.exclude` object that should be removed
+4. Consider adding `"editor.tabSize"` setting if you have specific indentation requirements
+
+Overall, these are well-thought-out settings that should provide a good development experience.
