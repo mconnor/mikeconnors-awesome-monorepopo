@@ -49,7 +49,14 @@ const isTest = process.env.NODE_ENV === 'test';
 <meta property="twitter:description" content={description} />
 {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 <meta name="color-scheme" content="dark light dim grape choco toucan" />
-
+<link
+  rel="stylesheet"
+  href="https://early.webawesome.com/webawesome@3.0.0-alpha.9/dist/styles/themes/default.css"
+/>
+<script
+  type="module"
+  src="https://early.webawesome.com/webawesome@3.0.0-alpha.9/dist/webawesome.loader.js"
+></script>
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
 
 <!-- <script>
