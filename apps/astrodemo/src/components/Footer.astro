@@ -1,27 +1,25 @@
 ---
-import Box from '@repo/ui-lit/Box';
-import Cluster from '@repo/layout-webcomponents/Cluster';
 import { Links } from '#app.config.ts';
+import Cluster from '@repo/layout-webcomponents/Cluster';
+import Box from '@repo/ui-lit/Box';
 ---
 
 <Box invert>
-  <div class="icon-button-color">
-    <Cluster align="flex-end" justify="space-around">
-      <wa-icon-button family="brands" name="github" href={Links.GITHUB}
-      ></wa-icon-button>
-      <wa-icon-button family="brands" name="twitter" href={Links.TWITTER}
-      ></wa-icon-button>
-      <wa-icon-button family="brands" name="linkedin" href={Links.LINKEDIN}
-      ></wa-icon-button>
-    </Cluster>
-  </div>
+  <Cluster align="flex-end" justify="space-around">
+    <wa-icon-button family="brands" name="github" href={Links.GITHUB}
+    ></wa-icon-button>
+    <wa-icon-button family="brands" name="twitter" href={Links.TWITTER}
+    ></wa-icon-button>
+    <wa-icon-button family="brands" name="linkedin" href={Links.LINKEDIN}
+    ></wa-icon-button>
+  </Cluster>
 </Box>
 
 <style>
-  .icon-button-color {
+  wa-icon-button {
     font-size: var(--s2);
   }
-  ,
+
   .icon-button-color wa-icon-button::part(base) {
     color: #b00091;
   }
