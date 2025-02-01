@@ -30,7 +30,6 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "^9.15.0",
-    "prettier": "catalog:",
     "typescript": "catalog:"
   }
 }

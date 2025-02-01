@@ -1,6 +1,6 @@
 // .prettierrc.mjs
 /** @type {import("prettier").Config} */
-const config = {
+export default {
   plugins: ['prettier-plugin-astro'],
   overrides: [
     {
@@ -13,5 +13,3 @@ const config = {
   singleQuote: true,
   experimentalTernaries: true,
 };
-
-export default config;

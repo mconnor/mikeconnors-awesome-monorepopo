@@ -22,14 +22,13 @@
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
-    "astro": "^5.1.10",
+    "astro": "^5.2.1",
     "lit": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
   }

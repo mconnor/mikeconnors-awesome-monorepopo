@@ -1,17 +1,15 @@
 // .prettierrc.mjs
 /** @type {import("prettier").Config} */
-const config = {
-  plugins: ['prettier-plugin-astro'],
+export default {
+  plugins: ["prettier-plugin-astro"],
   overrides: [
     {
-      files: '*.astro',
+      files: "*.astro",
       options: {
-        parser: 'astro',
+        parser: "astro",
       },
     },
   ],
   singleQuote: true,
   experimentalTernaries: true,
 };
-
-export default config;

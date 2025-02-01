@@ -1,16 +1,15 @@
 ---
 // import { Debug } from 'astro:components';
 // import type { MarkdownLayoutProps } from 'astro';
+import ImageWrapper from '#components/ImageWrapper.astro';
 import '@repo/styles/css/markdown-style.css';
 
-import Stack from '@repo/layout-webcomponents/Stack';
 import Box from '@repo/ui-lit/Box';
-import { Image } from 'astro:assets';
+
 import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
 import { format } from 'date-fns';
 
-import TagContainer from '#components/TagContainer.astro';
 import Layout from '#layouts/Layout.astro';
 type Props = CollectionEntry<'blog'>['data'];
 // interface Props {
@@ -40,11 +39,21 @@ const { name } = authorResults.data;
 
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description}>
-  <!-- <Debug {author} /> -->
+  <div class="wa-flank">
+    <div class="wa-frame" style="max-inline-size: 20rem;">
+      <ImageWrapper url={cover.src} alt={cover.alt} />
+    </div>
 
-  <Stack space="var(--s0)">
+    <Box borderWidth="1px">
+      Written by: {name},
+      {format(pubDate, 'd MMM, yyyy')}
+    </Box>
+  </div>
+
+  <!-- <Stack space="var(--s0)">
     <Box borderWidth="1px" padding="0">
-      <Image width="600" height="300" src={cover.src} alt={cover.alt} />
+      <ImageWrapper  url={cover.src} alt={cover.alt} />
+
     </Box>
 
     <Box invert borderWidth="1px"><h1>{title}</h1></Box>
@@ -64,5 +73,5 @@ const { name } = authorResults.data;
     <Box padding="var(--s00)" borderWidth="1px">
       <slot />
     </Box>
-  </Stack>
+  </Stack> -->
 </Layout>

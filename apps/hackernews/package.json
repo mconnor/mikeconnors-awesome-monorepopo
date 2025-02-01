@@ -21,13 +21,12 @@
   "dependencies": {
     "@astrojs/check": "catalog:",
     "@astrojs/node": "^9.0.2",
-    "astro": "catalog:"
+    "astro": "^5.2.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
   }

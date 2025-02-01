@@ -3,11 +3,10 @@ import Icon from './Icon.astro';
 ---
 
 <theme-toggle>
-  <button>
-    <span class="sr-only">Dark theme</span>
-    <span class="icon light"><Icon icon="sun" /></span>
-    <span class="icon dark"><Icon icon="moon-stars" /></span>
-  </button>
+  <form id="theme" data-select-theme class="appColors">
+    <Label theme="light" />
+    <Label theme="dark" />
+  </form>
 </theme-toggle>
 
 <style>
@@ -75,18 +74,19 @@ import Icon from './Icon.astro';
       const button = this.querySelector('button')!;
 
       /** Set the theme to dark/light mode. */
-      const setTheme = (dark: boolean) => {
-        document.documentElement.classList[dark ? 'add' : 'remove'](
-          'theme-dark',
-        );
-        button.setAttribute('aria-pressed', String(dark));
-      };
+      this.setTheme.bind(this);
 
       // Toggle the theme when a user clicks the button.
-      button.addEventListener('click', () => setTheme(!this.isDark()));
+      button.addEventListener('click', () => this.setTheme(!this.isDark()));
 
       // Initialize button state to reflect current theme.
-      setTheme(this.isDark());
+      this.setTheme(this.isDark());
+    }
+
+    setTheme(dark: boolean) {
+      document.documentElement.classList[dark ? 'add' : 'remove']('theme-dark');
+      const button = this.querySelector('button')!;
+      button.setAttribute('aria-pressed', String(dark));
     }
 
     isDark() {

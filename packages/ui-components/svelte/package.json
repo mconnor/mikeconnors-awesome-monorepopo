@@ -25,7 +25,6 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
     "svelte": "catalog:svelte5",
     "svelte-check": "catalog:svelte5",

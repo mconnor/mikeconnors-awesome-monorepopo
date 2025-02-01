@@ -63,8 +63,7 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "peerDependencies": {
-    "eslint": ">= 9",
-    "prettier": ">= 3"
+    "eslint": ">= 9"
   },
   "prettier": {
     "singleQuote": true

@@ -1,0 +1,18 @@
+{
+  "name": "@repo/config-format",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+    "exports": {
+      "astro-format": "./astro-format.mjs"
+    },
+  "dependencies": {
+    "prettier-plugin-astro": "catalog:"
+  }
+}

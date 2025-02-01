@@ -34,13 +34,13 @@
     "@repo/ui-lit": "workspace:*",
     "@repo/vue": "workspace:*",
     "add": "catalog:",
-    "astro": "catalog:",
+    "astro": "^5.2.1",
     "lit": "catalog:",
-    "open-props": "^1.7.10",
+    "open-props": "^1.7.12",
     "preact": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "svelte": "^5.19.5",
+    "svelte": "^5.19.6",
     "vue": "catalog:"
   },
   "devDependencies": {
@@ -58,14 +58,8 @@
     "postcss-jit-props": "^1.0.15",
     "postcss-nesting": "^13.0.1",
     "postcss-pow": "^1.0.1",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "svelte-preprocess": "catalog:svelte5",
     "typescript": "catalog:"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "experimentalTernaries": true,
-    "proseWrap": "always"
   }
 }

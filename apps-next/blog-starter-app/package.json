@@ -34,7 +34,6 @@
     "autoprefixer": "catalog:",
     "eslint": "catalog:",
     "postcss": "catalog:",
-    "prettier": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
   }

@@ -22,13 +22,12 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@repo/layout-webcomponents": "workspace:*",
-    "astro": "^5.1.10"
+    "astro": "^5.2.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.7.3"
   }

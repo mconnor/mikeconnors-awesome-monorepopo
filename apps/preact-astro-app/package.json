@@ -19,7 +19,7 @@
     "@astrojs/preact": "^4.0.3",
     "@preact/signals": "^2.0.1",
     "@repo/layout-webcomponents": "workspace:*",
-    "astro": "catalog:",
+    "astro": "^5.2.1",
     "preact": "^10.25.4",
     "typescript": "catalog:"
   },
@@ -27,7 +27,6 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1"
   }
 }

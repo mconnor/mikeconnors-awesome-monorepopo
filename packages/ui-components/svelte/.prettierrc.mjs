@@ -1,12 +1,13 @@
 // .prettierrc.mjs
 /** @type {import("prettier").Config} */
 const config = {
-  plugins: ['prettier-plugin-astro'],
+  plugins: ['prettier-plugin-svelte'],
   overrides: [
     {
-      files: '*.astro',
+      files: '*.svelte',
       options: {
-        parser: 'astro',
+        parser: 'svelte',
+        bracketSameLine: false,
       },
     },
   ],

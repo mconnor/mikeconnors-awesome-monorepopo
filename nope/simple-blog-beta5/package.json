@@ -24,14 +24,13 @@
     "@astrojs/sitemap": "catalog:",
     "@astrojs/vercel": "catalog:",
     "@repo/styles": "workspace:*",
-    "astro": "catalog:",
+  "astro": "^5.1.9",
     "lit": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
     "vitest": "catalog:"

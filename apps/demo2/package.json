@@ -31,11 +31,11 @@
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@repo/ui-lit": "workspace:*",
-    "@sentry/astro": "^8.52.0",
+    "@sentry/astro": "^8.52.1",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "catalog:",
+    "astro": "^5.2.1",
     "lit": "catalog:",
-    "open-props": "^1.7.10"
+    "open-props": "^1.7.12"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -50,7 +50,6 @@
     "postcss-jit-props": "catalog:",
     "postcss-nesting": "catalog:",
     "postcss-pow": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
     "vite": "^6.0.11"

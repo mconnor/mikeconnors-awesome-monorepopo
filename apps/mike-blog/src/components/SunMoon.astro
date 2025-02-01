@@ -3,30 +3,25 @@
 ---
 
 <wa-button-group label="Alignment">
-    <wa-icon-button name="sun" label="light"></wa-icon-button>
-    <wa-icon-button name="moon" label="dark"></wa-icon-button>
+  <wa-icon-button name="sun" label="light"></wa-icon-button>
+  <wa-icon-button name="moon" label="dark"></wa-icon-button>
 </wa-button-group>
 
 <script type="module">
-    // await Promise.allSettled([
-    // customElements.whenDefined('wa-button-group'),
-    //   customElements.whenDefined('wa-icon-button'),
-    // ]);
+  // await Promise.allSettled([
+  // customElements.whenDefined('wa-button-group'),
+  //   customElements.whenDefined('wa-icon-button'),
+  // ]);
 
+  document.addEventListener('astro:page-load', () => {
+    document
+      .querySelector('wa-button-group')
+      .addEventListener('click', (event) => {
+        const button = event.target.closest('wa-icon-button');
+        if (!button) return;
 
-    document.addEventListener('astro:page-load', () => {
-
-        document.querySelector('wa-button-group').addEventListener('click', (event) => {
-  const button = event.target.closest('wa-icon-button');
-  if (!button) return;
-
-  const theme = button.getAttribute('label');
-  document.documentElement.setAttribute('data-theme', theme);
-});
-
-    })
-
-
-
-
-  </script>
+        const theme = button.getAttribute('label');
+        document.documentElement.setAttribute('data-theme', theme);
+      });
+  });
+</script>
