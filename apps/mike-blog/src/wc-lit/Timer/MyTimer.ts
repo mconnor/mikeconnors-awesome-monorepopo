@@ -83,7 +83,7 @@ export class MyTimer extends LitElement {
 /* playground-fold */
 
 function pad(pad: number, val: number) {
-  console.log('pad', pad, val);
+  // console.log('pad', pad, val);
   if (pad) {
     return String(val).padStart(2, '0');
   }

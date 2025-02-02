@@ -2,8 +2,9 @@
 // import { Debug } from 'astro:components';
 // import type { MarkdownLayoutProps } from 'astro';
 import ImageWrapper from '#components/ImageWrapper.astro';
+import TagContainer from '#components/TagContainer.astro';
+import Stack from '@repo/layout-webcomponents/Stack';
 import '@repo/styles/css/markdown-style.css';
-
 import Box from '@repo/ui-lit/Box';
 
 import type { CollectionEntry } from 'astro:content';
@@ -39,7 +40,7 @@ const { name } = authorResults.data;
 
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description}>
-  <div class="wa-flank">
+  <!-- <div class="wa-flank">
     <div class="wa-frame" style="max-inline-size: 20rem;">
       <ImageWrapper url={cover.src} alt={cover.alt} />
     </div>
@@ -48,15 +49,13 @@ const { name } = authorResults.data;
       Written by: {name},
       {format(pubDate, 'd MMM, yyyy')}
     </Box>
-  </div>
+  </div> -->
 
-  <!-- <Stack space="var(--s0)">
-    <Box borderWidth="1px" padding="0">
-      <ImageWrapper  url={cover.src} alt={cover.alt} />
-
-    </Box>
-
+  <Stack space="var(--s0)">
     <Box invert borderWidth="1px"><h1>{title}</h1></Box>
+    <Box borderWidth="1px" padding="0">
+      <ImageWrapper url={cover.src} alt={cover.alt} />
+    </Box>
 
     <Box borderWidth="1px">
       Written by: {name},
@@ -73,5 +72,5 @@ const { name } = authorResults.data;
     <Box padding="var(--s00)" borderWidth="1px">
       <slot />
     </Box>
-  </Stack> -->
+  </Stack>
 </Layout>

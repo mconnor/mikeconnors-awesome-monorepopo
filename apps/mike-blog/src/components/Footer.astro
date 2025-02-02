@@ -1,48 +1,35 @@
 ---
-// import mdi from '@iconify-json/mdi';
-// import HeaderFooterWrapper from '#components/header-footer.astro';
+import { Links } from '#app.config.ts';
 import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
-
-import { Links } from '#app.config.ts';
-import { Icon } from 'astro-icon/components';
-
-const ICONSIZE = 24;
 ---
 
-<Box invert transition:persist>
-  <Cluster justify="space-around" align="flex-start">
-    <Box borderWidth="0" padding="var(--s0)">
-      <a href={Links.LINKEDIN}>
-        <Icon name="mdi:linkedin" size={ICONSIZE} />
-      </a>
-    </Box>
-
-    <Box borderWidth="0" padding="var(--s0)">
-      <a href={Links.GITHUB}>
-        <Icon name="mdi:github" size={ICONSIZE} />
-      </a>
-    </Box>
-    <Box borderWidth="0" padding="var(--s0)">
-      <a href={Links.TWITTER}>
-        <Icon name="mdi:twitter" size={ICONSIZE} />
-      </a>
-    </Box>
-
-    <!-- <Icon name="mdi:account" /> -->
-    <!-- <Social name="mdi:account" href="./" size={ICONSIZE} /> -->
+<Box invert>
+  <Cluster align="flex-end" justify="space-around">
+    <wa-icon-button family="brands" name="github" href={Links.GITHUB}
+    ></wa-icon-button>
+    <wa-icon-button family="brands" name="twitter" href={Links.TWITTER}
+    ></wa-icon-button>
+    <wa-icon-button family="brands" name="linkedin" href={Links.LINKEDIN}
+    ></wa-icon-button>
   </Cluster>
 </Box>
 
 <style>
-  a {
-    color: var(--accent);
-    background-color: var();
-    &:hover {
-      color: var(--accent-hover);
-    }
-    &:visited {
-      color: var(--accent-visited);
-    }
+  wa-icon-button {
+    font-size: var(--s2);
+  }
+
+  .icon-button-color wa-icon-button::part(base) {
+    color: #b00091;
+  }
+
+  .icon-button-color wa-icon-button::part(base):hover,
+  .icon-button-color wa-icon-button::part(base):focus {
+    color: #c913aa;
+  }
+
+  .icon-button-color wa-icon-button::part(base):active {
+    color: #960077;
   }
 </style>

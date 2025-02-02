@@ -1,13 +1,14 @@
 import { parse as parseToml } from '@std/toml/parse';
+// build-in loaders
 import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
 
-import CountryLoader from './loaders/index.ts';
+import { countryLoader } from './loaders/index.ts';
 
 import {
-  blogSchema,
-  authorsSchema,
   announcementsSchema,
+  authorsSchema,
+  blogSchema,
 } from './schemas/index';
 
 type ParserReturnType =
@@ -42,7 +43,8 @@ const announcements = defineCollection({
 });
 
 const countries = defineCollection({
-  loader: CountryLoader(),
+  loader: countryLoader(),
+  //  schema:
 });
 
 // const dogs = defineCollection({

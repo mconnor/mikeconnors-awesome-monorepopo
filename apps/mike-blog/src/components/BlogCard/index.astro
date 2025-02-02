@@ -1,7 +1,7 @@
 ---
+import Image from 'astro/components/Image.astro';
 import { type CollectionEntry } from 'astro:content';
 // interface Props extends HTMLAttributes<'a'> extends CollectionEntry<'blog'>.data;
-import ImageWrapper from '#components/ImageWrapper.astro';
 interface Props {
   foregroundColor?: string;
   backgroundColor?: string;
@@ -26,8 +26,8 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
 ---
 
 <article>
-  <!-- <a slot="left" href={link}> -->
-  <!-- <Box invert padding="0" borderWidth="0">
+  <a slot="left" href={link}>
+    <!-- <Box invert padding="0" borderWidth="0">
 
     <Box padding="var(--s0)" borderWidth="0"><h1>{title}</h1></Box>
 
@@ -49,20 +49,21 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
 
 
   </Box> -->
-  <div class="wa-flank" style="--flank-size: 8rem;">
-    <div class="wa-frame wa-border-radius-m">
-      <ImageWrapper url={cover.src} alt={cover.alt} />
-    </div>
-    <div class="wa-flank:end" style="--content-percentage: 70%">
-      <div class="wa-stack wa-gap-xs">
-        <h3>The Lord of the Rings: The Fellowship of the Ring</h3>
-        <span>J.R.R. Tolkien</span>
+    <div class="wa-flank" style="--flank-size: 8rem;">
+      <div class="wa-frame wa-border-radius-m">
+        <Image src={cover.src} alt={cover.alt} width={200} height={150} />
       </div>
-      <wa-icon-button id="options-menu" name="ellipsis"></wa-icon-button>
-      <wa-tooltip for="options-menu">Options</wa-tooltip>
+      <div class="wa-flank:end" style="--content-percentage: 70%">
+        <div class="wa-stack wa-gap-xs">
+          <h3>BC - {title}</h3>
+          <!-- <span>{name}</span> -->
+        </div>
+        <wa-icon-button id="options-menu" name="ellipsis"></wa-icon-button>
+
+        <wa-tooltip for="options-menu">Options</wa-tooltip>
+      </div>
     </div>
-  </div>
-  <!-- </a> -->
+  </a>
 </article>
 <style define:vars={{ foregroundColor, backgroundColor }}>
   .colors {
