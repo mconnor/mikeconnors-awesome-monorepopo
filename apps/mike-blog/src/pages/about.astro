@@ -1,14 +1,56 @@
 ---
+import Layout from '#layouts/Layout.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
 import Box from '@repo/ui-lit/Box';
-
-import Layout from '#layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import aboutImg from '../assets/markdown-cartoon.png';
 
 const pageTitle = 'About';
+
+export const prerender = true;
 ---
 
 <Layout title={pageTitle} maxW="60ch">
   <Stack space="var(--s000)">
+    <Image src={aboutImg} alt="cartoon." />
+    <wa-button-group label="Alignment" variant="brand">
+  <wa-button>Left</wa-button>
+  <wa-button>Center</wa-button>
+  <wa-button>Right</wa-button>
+</wa-button-group>
+
+<br /><br />
+
+<wa-button-group label="Alignment" variant="success">
+  <wa-button>Left</wa-button>
+  <wa-button>Center</wa-button>
+  <wa-button>Right</wa-button>
+</wa-button-group>
+
+<br /><br />
+
+<wa-button-group label="Alignment">
+  <wa-button>Left</wa-button>
+  <wa-button>Center</wa-button>
+  <wa-button>Right</wa-button>
+</wa-button-group>
+
+<br /><br />
+
+<wa-button-group label="Alignment" variant="warning">
+  <wa-button>Left</wa-button>
+  <wa-button>Center</wa-button>
+  <wa-button>Right</wa-button>
+</wa-button-group>
+
+<br /><br />
+
+<wa-button-group label="Alignment" variant="danger">
+  <wa-button>Left</wa-button>
+  <wa-button>Center</wa-button>
+  <wa-button>Right</wa-button>
+</wa-button-group>
+
     <Box borderWidth="0"
       ><p>
         I'm a software developer who's done a little of everything for a long
@@ -17,9 +59,6 @@ const pageTitle = 'About';
     >
 
     <Box borderWidth="0">
-      <button onclick="throw new Error('This is a test error')">
-        Throw test error
-      </button>
       <p>
         <strong>React, Next.js, React Native, Expo</strong>—you name it, I’ve
         probably worked with it. (Yes, I’ve even been around for <strong

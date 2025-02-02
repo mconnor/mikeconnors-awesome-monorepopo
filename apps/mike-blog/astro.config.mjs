@@ -1,7 +1,7 @@
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel';
-import { defineConfig } from 'astro/config';
 import icon from 'astro-icon';
+import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   outDir: 'dist',
@@ -40,12 +40,7 @@ export default defineConfig({
 
   scopedStyleStrategy: 'attribute',
 
-  integrations: [
-    icon(),
-    mdx({
-      drafts: true,
-    }),
-  ],
+  integrations: [icon(), mdx()],
   output: 'server',
   adapter: vercel({
     imageService: true,

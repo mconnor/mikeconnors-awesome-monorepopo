@@ -30,7 +30,7 @@
     "@astrojs/check": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "astro": "^5.2.1",
+    "astro": "^5.2.3",
     "eslint": "catalog:",
     "open-props": "^1.7.12",
     "prettier-plugin-astro": "catalog:",

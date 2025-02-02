@@ -1,15 +1,13 @@
-import js from '@eslint/js';
-import eslintConfigPrettier from 'eslint-config-prettier';
-import tseslint from 'typescript-eslint';
-import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginReact from 'eslint-plugin-react';
+import pluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
-import { config as baseConfig } from './base.mjs';
 
-import extraFileExtensionsSinglton from './fileExtensions.mjs';
+import { config as baseConfig } from './nextBase.mjs';
 
-const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
+// import extraFileExtensionsSinglton from './fileExtensions.mjs';
 
+// const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
+const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx', 'vue'];
 /**
  * A custom ESLint configuration for libraries that use React.
  * Use this and only this script to lint react packages
@@ -17,9 +15,7 @@ const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
  * @type {import("eslint").Linter.Config} */
 export const config = [
   ...baseConfig,
-  js.configs.recommended,
-  eslintConfigPrettier,
-  ...tseslint.configs.recommended,
+
   pluginReact.configs.flat.recommended,
   {
     languageOptions: {

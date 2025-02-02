@@ -1,6 +1,7 @@
 ---
 import Image from 'astro/components/Image.astro';
 import { type CollectionEntry } from 'astro:content';
+import { format } from 'date-fns';
 // interface Props extends HTMLAttributes<'a'> extends CollectionEntry<'blog'>.data;
 interface Props {
   foregroundColor?: string;
@@ -56,6 +57,8 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
       <div class="wa-flank:end" style="--content-percentage: 70%">
         <div class="wa-stack wa-gap-xs">
           <h3>BC - {title}</h3>
+          <p>{description}</p>
+          <p>{format(pubDate, 'MMMM dd, yyyy')}</p>
           <!-- <span>{name}</span> -->
         </div>
         <wa-icon-button id="options-menu" name="ellipsis"></wa-icon-button>

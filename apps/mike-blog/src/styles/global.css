@@ -9,6 +9,7 @@
   --theme-primary: var(--text-2);
   --theme-warning: red;
   --theme-font-family: var(--font-slab-serif);
+  --wa-fouce-fade: 200ms;
 }
 .warning {
   --my-element-text-color: var(--theme-warning);

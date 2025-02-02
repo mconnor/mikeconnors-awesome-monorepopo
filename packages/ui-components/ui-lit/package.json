@@ -10,7 +10,6 @@
     "./Box": "./src/Box/index.astro",
     "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
     "./Hello": "./src/Hello/index.astro",
-    "./ThemeToggle": "./src/ThemeToggle/index.astro",
     "./HeartLitBtn": "./src/HeartBtn/index.astro",
     "./Timer": "./src/Timer/index.astro"
   },
@@ -28,7 +27,7 @@
     "@repo/eslint-config": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "astro": "^5.2.1",
+    "astro": "^5.2.3",
     "eslint": "catalog:",
     "lit": "catalog:",
     "prettier-plugin-astro": "catalog:",

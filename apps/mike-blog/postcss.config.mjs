@@ -33,5 +33,3 @@ const prodConfig = {
 const config = isDev || isTest ? devConfig : prodConfig;
 
 export default config;
-
-

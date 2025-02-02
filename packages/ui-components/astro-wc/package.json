@@ -9,7 +9,8 @@
   "exports": {
     "./HeartBtn": "./src/HeartWC/index.astro",
     "./api/feedback": "./src/api/feedback.ts",
-    "./ThemeMenu": "./src/ThemeMenu/index.astro"
+    "./ThemeMenu": "./src/ThemeMenu/index.astro",
+    "./SunMoon": "./src/SunMoon.astro"
   },
   "scripts": {
     "astro-check": "astro check",
@@ -28,7 +29,7 @@
     "@repo/typescript-config": "workspace:*",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
-    "astro": "^5.2.1",
+    "astro": "^5.2.3",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"

@@ -28,7 +28,7 @@ const authors = defineCollection({
 const blog = defineCollection({
   // type: 'content',
   loader: glob({
-    pattern: ['**/*.md', '**/*.mdx'],
+    pattern: '**/*.{md,mdx}',
     base: './src/content/blog',
   }),
   schema: blogSchema,

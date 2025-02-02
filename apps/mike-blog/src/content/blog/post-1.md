@@ -11,7 +11,7 @@ tags: ['astro', 'blogging', 'learning-in-public']
 
 # Hello, world!
 
-<div className="note">
+<div>
   > Some notable things in a block quote!
 </div>
 

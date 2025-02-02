@@ -22,12 +22,15 @@ export default tseslint.config(ignoresConfig, {
     ...eslintPluginAstro.configs.recommended,
   ],
 
-  // languageOptions: {
-  //   parser: eslintPluginAstro.parser,
-  //   parserOptions: {
-  //     project: false,
-  //     tsconfigRootDir: import.meta.dirname,
-  //     extraFileExtensions,
-  //   },
-  // },
+  languageOptions: {
+    parser: eslintPluginAstro.parser,
+    parserOptions: {
+      project: false,
+      tsconfigRootDir: import.meta.dirname,
+      extraFileExtensions,
+      ecmaFeatures: {
+        jsx: false,
+      },
+    },
+  },
 });

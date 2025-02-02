@@ -2,12 +2,12 @@
 import { Image, inferRemoteSize } from 'astro:assets';
 
 interface Props {
-  url: string;
+  src: string;
   alt: string;
 }
-const { url, alt } = Astro.props;
+const { src, alt } = Astro.props;
 
-const { width, height } = await inferRemoteSize(url);
+const { width, height } = await inferRemoteSize(src);
 ---
 
-<Image width={width} height={height} src={url} alt={alt} />
+<Image slot="image" width={width} height={height} src={src} alt={alt} />
