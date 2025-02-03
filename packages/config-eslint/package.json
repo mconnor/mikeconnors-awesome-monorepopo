@@ -1,6 +1,6 @@
 {
   "name": "@repo/eslint-config",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "private": true,
   "imports": {
     "#*": "./*"
@@ -20,7 +20,8 @@
     "./svelte5-app": "./svelte5.lint.config.mjs",
     "./solid": "./sold.lint.config.mjs",
     "./next-config": "./next.mjs",
-    "./simple-imports-sort": "./simple-imports-sort.lint.config.mjs"
+    "./simple-imports-sort": "./simple-imports-sort.lint.config.mjs",
+    "./turbo.lint.config": "./turbo.lint.config.mjs"
   },
   "scripts": {
     "format": "prettier . --write",
@@ -28,14 +29,14 @@
   },
   "license": "MIT",
   "type": "module",
-  "devDependencies": {
+  "dependencies": {
     "@custom-elements-manifest/analyzer": "^0.10.4",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.19.0",
     "@eslint/json": "^0.10.0",
     "@eslint/markdown": "^6.2.2",
     "@next/eslint-plugin-next": "^15.1.6",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/typescript-config": "workspace:^2.0.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-markdown": "^2.0.2",
     "@types/eslint__js": "^8.42.3",
@@ -63,7 +64,7 @@
     "vue-eslint-parser": "^9.4.3"
   },
   "peerDependencies": {
-    "eslint": ">= 9"
+    "eslint": ">= 9.19.0"
   },
   "prettier": {
     "singleQuote": true

@@ -1,20 +1,13 @@
 {
-    "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": "./vite.json",
-    "compilerOptions": {
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ]
-    },
-    "files": [
-        "${configDir}/next-env.d.ts",
-        "${configDir}/next.config.js"
-    ],
-    "include": [
-        "**/*.ts",
-        "**/*.tsx",
-        "${configDir}/.next/types/**/*.ts"
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "plugins": [
+      {
+        "name": "next"
+      }
     ]
+  },
+  "files": ["${configDir}/next-env.d.ts", "${configDir}/next.config.js"],
+  "include": ["**/*.ts", "**/*.tsx", "${configDir}/.next/types/**/*.ts"]
 }

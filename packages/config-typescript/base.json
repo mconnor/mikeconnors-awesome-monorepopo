@@ -2,6 +2,8 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
   "compilerOptions": {
+    "useDefineForClassFields": true,
+    "lib": ["ESNext", "DOM"],
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -21,12 +23,12 @@
     "inlineSources": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "noImplicitReturns": false,
     "preserveWatchOutput": true,
-    "allowArbitraryExtensions": true
+    "allowArbitraryExtensions": true,
+    "strictNullChecks": true
   },
-  "include": [
-    "${configDir}/**/*"
-  ],
+  "include": ["${configDir}/**/*"],
   "exclude": [
     "${configDir}/node_modules",
     "${configDir}/.astro",
@@ -34,7 +36,6 @@
     "${configDir}/.turbo",
     "${configDir}/.vercel",
     "${configDir}/.next",
-    "${configDir}/cache-directory",
-    "${configDir}/eslint.config.mjs"
+    "${configDir}/cache-directory"
   ]
 }
