@@ -39,9 +39,9 @@
     "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.16.0",
+    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^2.0.0",
+    "eslint": "^9.19.0",
     "prettier-plugin-astro": "^0.14.1",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",

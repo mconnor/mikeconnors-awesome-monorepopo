@@ -36,7 +36,7 @@
     "@eslint/json": "^0.10.0",
     "@eslint/markdown": "^6.2.2",
     "@next/eslint-plugin-next": "^15.1.6",
-    "@repo/typescript-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^2.0.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint-plugin-markdown": "^2.0.2",
     "@types/eslint__js": "^8.42.3",

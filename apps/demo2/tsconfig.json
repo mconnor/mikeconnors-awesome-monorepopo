@@ -3,6 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "experimentalDecorators": true,
-    "useDefineForClassFields": false
-  }
+    "useDefineForClassFields": false,
+    "outDir": "dist"
+  },
+  "include": ["./**/*"]
 }

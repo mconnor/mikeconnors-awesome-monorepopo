@@ -26,8 +26,8 @@
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^2.0.0",
     "@types/node": "^22.10.4",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",

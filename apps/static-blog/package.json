@@ -1,5 +1,5 @@
 {
-  "name": "@app/hackernews",
+  "name": "@app/static-blog",
   "type": "module",
   "version": "0.0.1",
   "imports": {
@@ -8,26 +8,32 @@
   "scripts": {
     "dev": "astro dev",
     "astro-check": "astro check",
-    "build": "astro build",
-    "sync": "astro sync",
+    "build": "astro build --verbose",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write",
     "lint": "eslint .",
     "inspect": "eslint . --inspect-config",
     "fix": "eslint . --fix",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "toolBarOn": "astro preferences disable devToolbar",
+    "toolBarOff": "astro preferences enable devToolbar",
+    "sync": "astro sync",
+    "host": "astro dev --host",
+    "force": " astro build -- --force"
   },
   "dependencies": {
-    "@astrojs/check": "catalog:",
-    "@astrojs/node": "^9.0.2",
+    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/vercel": "catalog:",
     "astro": "^5.2.5"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^2.0.0",
     "@repo/typescript-config": "workspace:^2.0.0",
     "eslint": "catalog:",
-    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   }
 }

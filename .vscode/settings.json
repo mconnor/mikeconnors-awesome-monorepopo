@@ -9,7 +9,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "never",
-    "source.organizeImports": "explicit"
+    "source.organizeImports": "never"
   },
   "emmet.includeLanguages": {
     "astro": "html",
@@ -94,5 +94,8 @@
   "workbench.tree.renderIndentGuides": "always",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  "terminal.integrated.scrollback": 10000
+  "terminal.integrated.scrollback": 10000,
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }

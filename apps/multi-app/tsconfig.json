@@ -4,5 +4,6 @@
     "outDir": "dist",
     "strictNullChecks": true,
     "jsx": "preserve"
-  }
+  },
+  "files": ["svelte.config.mjs"]
 }

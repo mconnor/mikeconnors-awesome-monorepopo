@@ -24,12 +24,12 @@
     "@astrojs/sitemap": "catalog:",
     "@astrojs/vercel": "catalog:",
     "@repo/styles": "workspace:*",
-  "astro": "^5.1.9",
+    "astro": "^5.1.9",
     "lit": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^2.0.0",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",

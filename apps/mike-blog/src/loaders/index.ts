@@ -1,25 +1,26 @@
 import { countriesSchema, countrySchema } from '#schemas/index.ts';
 
 import type { Loader, LoaderContext } from 'astro/loaders';
-
+const COUNTRY_URL = new URL(
+  '/v3.1/region/africa/',
+  'https://restcountries.com/',
+);
 // An inline loader is an async function that returns an array or object containing entries.
-const countryLoader = (): Loader => {
+function countryLoader(): Loader {
   //https://restcountries.com/v3.1/subregion/Northern Europe
-  const url = new URL('/v3.1/region/africa/', 'https://restcountries.com/');
 
   return {
     name: 'countries-loader',
     schema: countrySchema,
-    load: async ({
-      store,
-      parseData,
-      logger,
-    }: LoaderContext): Promise<void> => {
-      logger.info('Loading countries ' + url.href);
-      store.clear();
+    load: async (loaderContext: LoaderContext) => {
+      loaderContext.logger.info('Loading countries ' + COUNTRY_URL.href);
+      loaderContext.store.clear();
 
-      const fetchCountries = async () => {
-        const countryJson = await fetch(url.href)
+      const fetchCountries = async (_loaderCtx: LoaderContext) => {
+        const { store, logger } = _loaderCtx;
+        const parseData = _loaderCtx.parseData.bind(_loaderCtx);
+
+        const countryJson = await fetch(COUNTRY_URL.href)
           .then((res) => res.json() as unknown)
           .catch((error) => {
             logger.error('Fetch failed: ' + error);
@@ -54,9 +55,9 @@ const countryLoader = (): Loader => {
           }
         }
       };
-      await fetchCountries();
+      await fetchCountries(loaderContext);
     },
   };
-};
+}
 
 export { countryLoader };

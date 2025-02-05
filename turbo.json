@@ -9,47 +9,24 @@
     "import.meta.env.PROD",
     "import.meta.env.DEV"
   ],
-  "globalPassThroughEnv": [
-    "AWS_SECRET_KEY",
-    "GITHUB_TOKEN"
-  ],
+  "globalPassThroughEnv": ["AWS_SECRET_KEY", "GITHUB_TOKEN"],
   "envMode": "strict",
   "tasks": {
-    "transit": {
-      "dependsOn": [
-        "^transit"
-      ]
-    },
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "$TURBO_DEFAULT$",
-        "!README.md",
-        ".env*"
-      ],
-      "outputs": [
-        "dist/**"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md", ".env*"],
+      "outputs": ["dist/**"]
     },
     "lint": {
-      "dependsOn": [
-        "^lint"
-      ]
+      "dependsOn": ["^lint"]
     },
     "format": {},
     "sync": {
-      "dependsOn": [
-        "^sync"
-      ]
+      "dependsOn": ["^sync"]
     },
-    "//#format:root": {},
     "inspect": {},
     "fix": {
-      "dependsOn": [
-        "^fix"
-      ]
+      "dependsOn": ["^fix"]
     },
     "dev": {
       "cache": false,
@@ -60,34 +37,20 @@
       "persistent": true
     },
     "check-types": {
-      "inputs": [
-        "**/*.{ts,tsx}"
-      ],
+      "inputs": ["**/*.{ts,tsx}"],
       "cache": true,
-      "dependsOn": [
-        "^check-types"
-      ]
+      "dependsOn": ["^check-types"]
     },
     "astro-check": {
-      "inputs": [
-        "**/*.{astro,ts,tsx,js,jsx}"
-      ],
+      "inputs": ["**/*.{astro,ts,tsx,js,jsx}"],
       "cache": true,
-      "dependsOn": [
-        "^astro-check"
-      ]
+      "dependsOn": ["^astro-check"]
     },
     "test": {
-      "dependsOn": [
-        "^lint",
-        "^build"
-      ]
+      "dependsOn": ["^lint", "^build"]
     },
     "spell-check": {
-      "inputs": [
-        "**/*.md",
-        "**/*.mdx"
-      ]
+      "inputs": ["**/*.md", "**/*.mdx"]
     }
   }
 }
