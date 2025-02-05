@@ -32,7 +32,7 @@
   </label>
   <label>
     Message
-    <textarea id="message" name="message" required />
+    <textarea id="message" name="message" required></textarea>
   </label>
   <button>Send</button>
   {#if responseMessage}

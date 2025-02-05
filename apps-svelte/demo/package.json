@@ -18,8 +18,8 @@
 	"devDependencies": {
 		"@fontsource/fira-mono": "^5.1.1",
 		"@neoconfetti/svelte": "^2.2.1",
-		"@repo/eslint-config": "workspace:^2.0.0",
-		"@repo/typescript-config": "workspace:^2.0.0",
+		"@repo/eslint-config": "workspace:^",
+		"@repo/typescript-config": "workspace:^",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.17.1",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
@@ -29,7 +29,7 @@
 		"svelte-check": "^4.1.4",
 		"typescript": "^5.7.3",
 		"typescript-eslint": "^8.23.0",
-		"vite": "^6.0.11",
+		"vite": "^6.1.0",
 		"vitest": "^3.0.5"
 	}
 }

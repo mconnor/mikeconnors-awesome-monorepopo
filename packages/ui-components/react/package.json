@@ -32,8 +32,8 @@
   "author": "Michael Connor",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^2.0.0",
-    "@repo/typescript-config": "workspace:^2.0.0",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "eslint": "^9.19.0",

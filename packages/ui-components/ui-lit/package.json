@@ -24,9 +24,9 @@
   },
   "devDependencies": {
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/eslint-config": "workspace:^",
     "@repo/styles": "workspace:*",
-    "@repo/typescript-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^",
     "astro": "^5.2.5",
     "eslint": "catalog:",
     "lit": "catalog:",

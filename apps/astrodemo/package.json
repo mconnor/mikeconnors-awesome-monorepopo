@@ -36,10 +36,9 @@
     "open-props": "^1.7.12"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/eslint-config": "workspace:^",
     "@repo/styles": "workspace:*",
-    "@repo/typescript-config": "workspace:^2.0.0",
-    "@types/node": "catalog:",
+    "@repo/typescript-config": "workspace:^",
     "autoprefixer": "catalog:",
     "browserslist": "^4.24.4",
     "cssnano": "catalog:",
@@ -47,6 +46,6 @@
     "lightningcss": "^1.29.1",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
-    "vite": "^6.0.11"
+    "vite": "^6.1.0"
   }
 }

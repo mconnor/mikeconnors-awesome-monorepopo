@@ -34,8 +34,8 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",
-    "@repo/eslint-config": "workspace:^2.0.0",
-    "@repo/typescript-config": "workspace:^2.0.0",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
     "postcss": "^8.5.1",
     "prettier-plugin-astro": "^0.14.1",

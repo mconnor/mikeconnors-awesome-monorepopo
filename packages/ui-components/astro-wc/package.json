@@ -24,9 +24,9 @@
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/eslint-config": "workspace:^",
     "@repo/styles": "workspace:*",
-    "@repo/typescript-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
     "astro": "^5.2.5",

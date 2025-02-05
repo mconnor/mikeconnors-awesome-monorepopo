@@ -25,8 +25,8 @@
     "astro": "^5.2.5"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^2.0.0",
-    "@repo/typescript-config": "workspace:^2.0.0",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.7.3"

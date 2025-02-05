@@ -5,8 +5,6 @@ import Stack from '@repo/layout-webcomponents/Stack';
 // import { Code } from 'astro:components';
 import Layout from '#layouts/Layout.astro';
 import Box from '@repo/ui-lit/Box';
-
-const ICON_LIBRARY = 'tabler';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -35,6 +33,7 @@ const ICON_LIBRARY = 'tabler';
 
 <script type="module">
   import { registerIconLibrary } from 'https://early.webawesome.com/webawesome@3.0.0-alpha.10/dist/webawesome.js';
+  const ICON_LIBRARY = 'tabler';
 
   registerIconLibrary('tabler', {
     resolver: (name) =>
