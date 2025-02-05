@@ -5,6 +5,7 @@ import eslintPluginAstro from 'eslint-plugin-astro';
 import tseslint from 'typescript-eslint';
 // import onlyWarn from 'eslint-plugin-only-warn';
 import astroParser from 'astro-eslint-parser';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 const extraFileExtensions = ['.astro'];
@@ -16,8 +17,8 @@ export default tseslint.config(
   js.configs.recommended,
 
   // TypeScript
-  ...tseslint.configs.recommended,
-  ...tseslint.configs.stylistic,
+  ...tseslint.configs.recommendedTypeChecked,
+  ...tseslint.configs.stylisticTypeChecked,
 
   // Astro
 
@@ -88,12 +89,9 @@ export default tseslint.config(
       parser: astroParser,
       parserOptions: {
         parser: tsParser,
-        // projectService: {
-        //   allowDefaultProject: ['*.astro', '*.js'],
-        // },
-        project: false,
+        allowDefaultProject: ['*.astro'],
         JSX: false,
-        tsconfigRootDir: import.meta.dirname,
+        // tsconfigRootDir: import.meta.dirname,
         extraFileExtensions,
       },
     },
@@ -102,7 +100,7 @@ export default tseslint.config(
     files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
   {
@@ -138,4 +136,5 @@ export default tseslint.config(
   //     '@typescript-eslint/no-empty-function': 'warn',
   //   },
   // }
+  eslintConfigPrettier,
 );

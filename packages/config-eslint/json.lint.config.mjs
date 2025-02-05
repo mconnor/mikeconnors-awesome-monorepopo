@@ -1,8 +1,10 @@
-// @ts-check
-
 import json from '@eslint/json';
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
+/**
+ * A custom ESLint configuration for libraries that use Next.js.
+ *
+ * @type {import("eslint").Linter.Config}
+ * */
 export default [
   // lint JSON files
   {

@@ -62,8 +62,8 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.3",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^2.0.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
     "@webcomponents/template-shadowroot": "^0.2.1",

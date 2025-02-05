@@ -1,5 +1,10 @@
-// @ts-check
 import tseslint from 'typescript-eslint';
+
+/**
+ * A custom ESLint configuration for libraries that use Next.js.
+ *
+ * @type {import("eslint").Linter.Config}
+ * */
 
 export default tseslint.config({
   files: ['**/*.js', '**/*.mjs', '**/*.jsx'],
