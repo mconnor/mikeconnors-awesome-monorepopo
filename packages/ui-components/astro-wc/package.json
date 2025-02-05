@@ -29,7 +29,7 @@
     "@repo/typescript-config": "workspace:^2.0.0",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
-    "astro": "^5.2.3",
+    "astro": "^5.2.5",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"

@@ -12,18 +12,16 @@
     "./feedback-form": "./src/FeedbackFrom.svelte"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "format": "prettier --write .",
     "inspect": "eslint --inspect-config",
-    "check-types": "echo \"Error: no check-types specified\" && exit 1",
     "svelte-check": "svelte-check",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^2.0.0",
     "eslint": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
     "svelte": "catalog:svelte5",

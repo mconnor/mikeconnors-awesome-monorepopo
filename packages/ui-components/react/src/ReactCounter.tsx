@@ -1,6 +1,6 @@
 import { type JSX, useState } from 'react';
 
-import { MyButton } from './components/Button';
+import { MyButton } from '#components/Button.jsx';
 
 interface Props {
   children: React.ReactNode;

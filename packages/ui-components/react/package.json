@@ -8,19 +8,23 @@
   },
   "exports": {
     "./counter": {
-      "types": "./src/ReactCounter.tsx",
+      "types": "./dist/ReactCounter.js",
       "import": "./dist/ReactCounter.js"
     }
   },
   "scripts": {
     "build": "tsup",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsup --watch",
+    "test": "jest",
     "format": "prettier . --write",
-    "lint": "eslint .",
+    "lint": "eslint src/",
     "fix": "eslint . --fix",
     "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf dist"
+  },
+  "jest": {
+    "preset": "@repo/jest-presets/browser"
   },
   "keywords": [
     "react"
@@ -28,8 +32,8 @@
   "author": "Michael Connor",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^2.0.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "eslint": "^9.19.0",

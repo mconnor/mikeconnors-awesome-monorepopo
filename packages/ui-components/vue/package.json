@@ -15,7 +15,6 @@
     "inspect": "eslint . --inspect-config",
     "fix": "eslint . --fix",
     "format": "prettier src --write",
-    "check-types": "tsc --noEmit",
     "clean": "rm -rf dist"
   },
   "keywords": [
@@ -24,9 +23,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.19.0",
+    "@repo/eslint-config": "workspace:^2.0.0",
+    "@repo/typescript-config": "workspace:^2.0.0",
+    "eslint": "catalog:",
     "tsup": "^8.3.6",
     "vue": "^3.5.13"
   },
