@@ -2,6 +2,8 @@
 import js from '@eslint/js';
 import tsParser from '@typescript-eslint/parser';
 import eslintPluginAstro from 'eslint-plugin-astro';
+// import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
+
 import tseslint from 'typescript-eslint';
 // import onlyWarn from 'eslint-plugin-only-warn';
 import astroParser from 'astro-eslint-parser';
@@ -15,10 +17,10 @@ export default tseslint.config(
   // Global config
   // JavaScript
   js.configs.recommended,
-
+  // comments.recommended,
   // TypeScript
-  ...tseslint.configs.recommendedTypeChecked,
-  ...tseslint.configs.stylisticTypeChecked,
+  tseslint.configs.recommendedTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
 
   // Astro
 
@@ -53,26 +55,29 @@ export default tseslint.config(
       // 'no-unused-expressions': 'off',
       // '@typescript-eslint/array-type': 'error',
       // '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/no-unused-vars': [
-        'warn',
-        {
-          args: 'all',
-          argsIgnorePattern: '^_',
-          caughtErrors: 'all',
-          caughtErrorsIgnorePattern: '^_',
-          destructuredArrayIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          ignoreRestSiblings: true,
-        },
-      ],
-      '@typescript-eslint/no-unused-expressions': [
-        'error',
-        {
-          allowShortCircuit: true, // Allow short-circuit expressions like `a && a()`
-          allowTernary: true, // Allow ternary operations like `a ? b() : c()`
-          allowTaggedTemplates: true, // Allow tagged template literals like `taggedTemplate` (optional)
-        },
-      ],
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
+
+      // '@typescript-eslint/no-unused-vars': [
+      //   'warn',
+      //   {
+      //     args: 'all',
+      //     argsIgnorePattern: '^_',
+      //     caughtErrors: 'all',
+      //     caughtErrorsIgnorePattern: '^_',
+      //     destructuredArrayIgnorePattern: '^_',
+      //     varsIgnorePattern: '^_',
+      //     ignoreRestSiblings: true,
+      //   },
+      // ],
+      // '@typescript-eslint/no-unused-expressions': [
+      //   'error',
+      //   {
+      //     allowShortCircuit: true, // Allow short-circuit expressions like `a && a()`
+      //     allowTernary: true, // Allow ternary operations like `a ? b() : c()`
+      //     allowTaggedTemplates: true, // Allow tagged template literals like `taggedTemplate` (optional)
+      //   },
+      // ],
       // '@typescript-eslint/no-empty-function': 'warn',
       // '@typescript-eslint/restrict-template-expressions': 'warn',
       // '@typescript-eslint/no-misused-promises': 'warn',

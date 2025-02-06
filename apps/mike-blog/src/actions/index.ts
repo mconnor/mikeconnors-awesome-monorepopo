@@ -1,5 +1,7 @@
-import { ActionError, defineAction } from 'astro:actions';
+import { ActionError, defineAction, type ActionErrorCode } from 'astro:actions';
 import { z } from 'astro:schema';
+
+const notFound: ActionErrorCode = 'NOT_FOUND';
 // import { user } from './user';
 
 export const server = {
@@ -12,7 +14,7 @@ export const server = {
 
       if (!input.name) {
         throw new ActionError({
-          code: 'NOT_FOUND',
+          code: notFound,
           message: 'no input',
         });
       }

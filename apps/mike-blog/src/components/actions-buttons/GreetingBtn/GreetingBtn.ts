@@ -1,7 +1,9 @@
 import { actions } from 'astro:actions';
 import { z } from 'astro:schema';
+// helps with zod error messages
+import { fromError } from 'zod-validation-error';
 
-const nameSchema = z.string().min(2).max(40);
+const nameSchema = z.string().min(4).max(40);
 
 class GreetingButton extends HTMLElement {
   constructor() {
@@ -15,11 +17,30 @@ class GreetingButton extends HTMLElement {
     // eslint-disable-next-line @typescript-eslint/no-misused-promises
     btn?.addEventListener('click', async () => {
       // Show alert pop-up with greeting from action
-      const result = nameSchema.parse(input?.value);
-      const greetingResponse = await actions.getGreeting.orThrow({
-        name: result,
+      const enteredNamedParsed = nameSchema.safeParse(input?.value);
+
+      const {
+        success: clientSideSuccess,
+        error: clientSideError,
+        data: clientSideData,
+      } = enteredNamedParsed;
+
+      if (clientSideError) {
+        alert(fromError(clientSideError).toString());
+        return;
+      } else {
+        console.error('passed clientside validation');
+      }
+
+      const { data, error } = await actions.getGreeting({
+        name: clientSideData,
       });
-      alert(greetingResponse);
+
+      if (error?.code === 'UNAUTHORIZED') {
+        alert('show log in page');
+        return;
+      }
+      alert(data);
       return;
     });
   }

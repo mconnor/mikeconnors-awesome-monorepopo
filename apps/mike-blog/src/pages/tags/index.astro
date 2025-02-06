@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { z } from 'astro:content';
-
+import Box from '@repo/ui-lit/Box';
 import TagContainer from '#components/TagContainer.astro';
 import Layout from '#layouts/Layout.astro';
 import { tagCountTypeSchema, zTags } from '#schemas/index.js';
@@ -58,9 +58,11 @@ if (!tagCountSuccess) {
 ---
 
 <Layout title="Tag Index" description="Index of tags">
-  {
-    zUniqueTagArray.success && tagCountSuccess ?
-      <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />
-    : <p>No tags</p>
-  }
+  <Box padding="2rem">
+    {
+      zUniqueTagArray.success && tagCountSuccess ?
+        <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />
+      : <p>No tags</p>
+    }
+  </Box>
 </Layout>

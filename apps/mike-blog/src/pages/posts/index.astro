@@ -2,7 +2,7 @@
 // import { Debug } from 'astro:components';
 import Stack from '@repo/layout-webcomponents/Stack';
 import { getCollection } from 'astro:content';
-
+import Box from '@repo/ui-lit/Box';
 import BlogCard from '#components/BlogCard/index.astro';
 import Layout from '#layouts/Layout.astro';
 
@@ -21,17 +21,19 @@ const sortedPosts = publishsedPosts.sort(
 ---
 
 <Layout title={pageTitle}>
-  <Stack space="var(--s1)">
-    {
-      sortedPosts.map(({ id, data }) => (
-        // <Box class='invert' borderWidth="4px">{data.title}</Box>
-        <BlogCard
-          backgroundColor="var(--surface-4)"
-          foregroundColor="var(--text-2)"
-          id={id}
-          postData={data}
-        />
-      ))
-    }
-  </Stack>
+  <Box>
+    <Stack space="var(--s1)">
+      {
+        sortedPosts.map(({ id, data }) => (
+          // <Box class='invert' borderWidth="4px">{data.title}</Box>
+          <BlogCard
+            backgroundColor="var(--surface-4)"
+            foregroundColor="var(--text-2)"
+            id={id}
+            postData={data}
+          />
+        ))
+      }
+    </Stack>
+  </Box>
 </Layout>

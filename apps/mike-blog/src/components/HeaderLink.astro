@@ -6,6 +6,7 @@ type Props = HTMLAttributes<'a'> & {
 };
 
 const { href, className, ...rest } = Astro.props;
+
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
 const isActive = href === pathname || href === '/' + subpath?.[0];
@@ -17,21 +18,16 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 <Box borderWidth="0" padding="0">
   {
     !isActive ?
-      <a
-        href={href}
-        class:list={[className, { active: isActive }]}
-        {...rest}
-        aria-disabled={isActive}
-      >
+      <wa-button size="small" href={href} disabled={isActive}>
         <slot />
-      </a>
+      </wa-button>
     : <span class="nonLink">
         <slot />
       </span>
   }
 </Box>
 
-<style>
+<!-- <style>
   a {
     display: inline-block;
     text-decoration: none;
@@ -41,4 +37,4 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
     text-decoration: underline wavy;
     text-underline-offset: var(--s0);
   }
-</style>
+</style> -->

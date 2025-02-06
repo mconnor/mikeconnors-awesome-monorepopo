@@ -37,6 +37,7 @@ const blogSchema = z.object({
   cover: z.object({ src: z.string().url(), alt: z.string() }),
 });
 
+// from Zod website
 const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
 type Literal = z.infer<typeof literalSchema>;
 type Json = Literal | { [key: string]: Json } | Json[];
