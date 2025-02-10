@@ -6,6 +6,5 @@
     "strict": true,
     "esModuleInterop": true,
     "rootDirs": ["src"]
-  },
-  "files": ["jsx.d.ts", "tsup.config.ts"]
+  }
 }

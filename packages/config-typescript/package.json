@@ -6,8 +6,5 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "@vue/tsconfig": "^0.7.0"
   }
 }

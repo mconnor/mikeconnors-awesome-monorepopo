@@ -10,7 +10,8 @@ import astroParser from 'astro-eslint-parser';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
-const extraFileExtensions = ['.astro'];
+
+const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx'];
 
 export default tseslint.config(
   ignoresConfig,
@@ -96,7 +97,12 @@ export default tseslint.config(
         parser: tsParser,
         allowDefaultProject: ['*.astro'],
         JSX: false,
-        // tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: import.meta.dirname,
+        // project: [
+        //   '../apps/*/tsconfig.json',
+        //   '../packages/*/tsconfig.json',
+        //   '../packages/ui-components/*tsconfig.json',
+        // ],
         extraFileExtensions,
       },
     },

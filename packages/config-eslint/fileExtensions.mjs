@@ -30,5 +30,5 @@ class ExtraFileExtensions {
 }
 
 // Create a single shared instance
-const instance = new ExtraFileExtensions();
-export default instance;
+const extensionInstance = new ExtraFileExtensions();
+export { extensionInstanceObj };

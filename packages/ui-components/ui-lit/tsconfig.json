@@ -1,5 +1,4 @@
 {
   "extends": "@repo/typescript-config/lit.json",
-  "compilerOptions": {},
-  "files": ["jsx.d.ts", ".astro/types.d.ts"]
+  "compilerOptions": { "strict": true }
 }

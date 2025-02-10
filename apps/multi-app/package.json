@@ -40,7 +40,7 @@
     "preact": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "svelte": "^5.19.7",
+    "svelte": "^5.19.9",
     "vue": "catalog:"
   },
   "devDependencies": {

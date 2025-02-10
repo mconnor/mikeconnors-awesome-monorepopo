@@ -18,7 +18,8 @@ const countryLoader = (): Loader => {
       loaderContext.logger.info('Loading countries ' + COUNTRY_URL.href);
       loaderContext.store.clear();
       const fetchCountries = async (_loaderCtx: LoaderContext) => {
-        const { store, logger, parseData } = _loaderCtx;
+        const { store, logger } = _loaderCtx;
+        const parseData = _loaderCtx.parseData.bind(_loaderCtx);
 
         const unknownObj = await fetch(COUNTRY_URL.href)
           .then((res) => res.json() as unknown)

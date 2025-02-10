@@ -2,8 +2,6 @@
   "extends": "@repo/typescript-config/astro-base",
   "compilerOptions": {
     "outDir": "dist",
-    "strictNullChecks": true,
-    "jsx": "preserve"
-  },
-  "files": ["svelte.config.mjs"]
+    "strict": true
+  }
 }

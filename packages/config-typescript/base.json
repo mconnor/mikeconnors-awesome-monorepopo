@@ -26,13 +26,12 @@
     "noImplicitReturns": false,
     "preserveWatchOutput": true,
     "allowArbitraryExtensions": true,
-    "strictNullChecks": true
+    "strictNullChecks": true // this is new
   },
   "include": ["${configDir}/**/*"],
   "exclude": [
     "${configDir}/node_modules",
     "${configDir}/.astro",
-    "${configDir}/**/*.astro",
     "${configDir}/dist",
     "${configDir}/.turbo",
     "${configDir}/.vercel",

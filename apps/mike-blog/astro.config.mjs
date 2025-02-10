@@ -1,13 +1,28 @@
+// @ts-check
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   outDir: 'dist',
   compressHTML: true,
   // trailingSlash: 'never',
   cacheDir: './cache-directory',
+  vite: {
+    // ssr: {
+    //   noExternal: true,
+    // },
+    plugins: [
+      visualizer({
+        emitFile: true,
+        filename: 'stats.html',
+        template: 'sunburst',
+        open: true,
+      }),
+    ],
+  },
 
   // env: {
   //   schema: {
@@ -45,5 +60,6 @@ export default defineConfig({
   adapter: vercel({
     imageService: true,
     devImageService: 'sharp',
+    excludeFiles: ['./src/assets/markdown-cartoon.png'],
   }),
 });

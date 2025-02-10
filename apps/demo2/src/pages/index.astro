@@ -2,7 +2,7 @@
 // import DatePicker from '#components/DatePicker.astro';
 // import Card from '@/components/Card.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
-import WaCheckbox from '#components/WaCheckbox.astro';
+import AstroForm from '#components/AstroForm/index.astro';
 import Layout from '#layouts/Layout.astro';
 import Box from '@repo/ui-lit/Box';
 ---
@@ -11,21 +11,11 @@ import Box from '@repo/ui-lit/Box';
   <Box borderWidth="2px">
     <Stack space="2rem">
       <Box padding="var(--s0)">
-        <h1>
-          Welcome to my long overdue public-professoinal-personal shingle.
-        </h1>
-        <p>
-          This is a WIP. Standby for sizzling oringnal and nurtious content.
-        </p>
-      </Box>
-      <Box
-        ><h4>Learn how Astro works and explore the official API docs.</h4>
-        <!-- <DatePicker /> -->
+        <AstroForm />
       </Box>
 
       <Box invert>
         <div style={{ maxWidth: '30px' }}><button>click me</button></div>
-        <WaCheckbox />
 
         <Box invert>
           <h4>Learn how Astro works and explore the official API docs.</h4>
