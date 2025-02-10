@@ -58,7 +58,7 @@ catalogs:
       specifier: ^7.0.6
       version: 7.0.6
     eslint:
-      specifier: ^9.19.0
+      specifier: ^9.20.0
       version: 9.20.0
     lit:
       specifier: ^3.2.1
@@ -838,7 +838,7 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       eslint:
-        specifier: '>= 9.19.0'
+        specifier: '>= 9.20.0'
         version: 9.20.0(jiti@2.4.2)
       eslint-config-preact:
         specifier: ^1.5.0
@@ -888,6 +888,9 @@ importers:
       prettier-plugin-astro:
         specifier: 'catalog:'
         version: 0.14.1
+      svelte-eslint-parser:
+        specifier: ^0.43.0
+        version: 0.43.0(svelte@5.19.9)
       typescript-eslint:
         specifier: ^8.24.0
         version: 8.24.0(eslint@9.20.0(jiti@2.4.2))(typescript@5.7.3)

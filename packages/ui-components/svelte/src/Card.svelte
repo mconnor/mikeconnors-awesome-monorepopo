@@ -90,7 +90,8 @@
     height: 100%;
     background-color: var(--bg-2);
     /* pattern from https://projects.verou.me/css3patterns/#marrakesh */
-    background-image: radial-gradient(var(--bg-3) 0.9em, transparent 1em),
+    background-image:
+      radial-gradient(var(--bg-3) 0.9em, transparent 1em),
       repeating-radial-gradient(
         var(--bg-3) 0,
         var(--bg-3) 0.4em,

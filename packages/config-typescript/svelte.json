@@ -5,15 +5,7 @@
     "lib": ["DOM.Iterable"],
     "sourceMap": true
   },
-  "include": [
-    "${configDir}/types/**/$types.d.ts",
-    "${configDir}/src/**/*.js",
-    "${configDir}/src/**/*.ts",
-    "${configDir}/src/**/*.svelte",
-    "${configDir}/tests/**/*.js",
-    "${configDir}/tests/**/*.ts",
-    "${configDir}/tests/**/*.svelte"
-  ],
+  "include": ["${configDir}/**/*"],
   "exclude": [
     "${configDir}/node_modules/**",
     "${configDir}/src/service-worker.js",

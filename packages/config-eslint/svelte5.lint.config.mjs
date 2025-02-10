@@ -7,8 +7,7 @@ import globals from 'globals';
 
 import tseslint from 'typescript-eslint';
 import ignoresConfig from './ignores.config.mjs';
-import extraFileExtensionsSinglton from './fileExtensions.mjs';
-const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
+const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx'];
 
 export default tseslint.config(
   ignoresConfig,
