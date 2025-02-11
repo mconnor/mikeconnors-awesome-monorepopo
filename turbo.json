@@ -18,7 +18,10 @@
       "outputs": ["dist/**"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["transit"]
+    },
+    "transit": {
+      "dependsOn": ["^transit"]
     },
     "format": {},
     "sync": {
@@ -39,7 +42,7 @@
     "check-types": {
       "inputs": ["**/*.{ts,tsx}"],
       "cache": true,
-      "dependsOn": ["^check-types"]
+      "dependsOn": ["transit"]
     },
     "astro-check": {
       "inputs": ["**/*.{astro,ts,tsx,js,jsx}"],

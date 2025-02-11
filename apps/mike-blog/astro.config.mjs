@@ -49,10 +49,6 @@ export default defineConfig({
     responsiveImages: true,
   },
 
-  markdown: {
-    drafts: true,
-  },
-
   scopedStyleStrategy: 'attribute',
 
   integrations: [icon(), mdx()],
