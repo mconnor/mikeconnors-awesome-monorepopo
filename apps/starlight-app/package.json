@@ -1,0 +1,33 @@
+{
+  "name": "@app/starlight-app",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "astro-check": "astro check",
+    "check-types": "tsc --noEmit",
+    "inspect": "eslint . --inspect-config",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:",
+    "@astrojs/markdoc": "^0.12.9",
+    "@astrojs/starlight": "^0.31.1",
+    "@astrojs/starlight-markdoc": "^0.2.0",
+    "astro": "^5.2.5",
+    "sharp": "^0.33.5",
+    "typescript": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@repo/styles": "workspace:*",
+    "@repo/typescript-config": "workspace:^",
+    "eslint": "catalog:"
+  }
+}
