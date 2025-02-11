@@ -10,7 +10,8 @@
     "./HeartBtn": "./src/HeartWC/index.astro",
     "./api/feedback": "./src/api/feedback.ts",
     "./ThemeMenu": "./src/ThemeMenu/index.astro",
-    "./SunMoon": "./src/SunMoon.astro"
+    "./SunMoon": "./src/SunMoon.astro",
+    "./AstroForm": "./src/AstroForm/index.astro"
   },
   "scripts": {
     "astro-check": "astro check",
