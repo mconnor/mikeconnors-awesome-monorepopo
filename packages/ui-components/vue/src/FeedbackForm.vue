@@ -2,11 +2,11 @@
   <form>
     <label>
       Name
-      <input type="text" id="name" name="name" required />
+      <input id="name" type="text" name="name" required />
     </label>
     <label>
       Email
-      <input type="email" id="email" name="email" required />
+      <input id="email" type="email" name="email" required />
     </label>
     <label>
       Message
