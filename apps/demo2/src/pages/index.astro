@@ -2,7 +2,7 @@
 // import DatePicker from '#components/DatePicker.astro';
 // import Card from '@/components/Card.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
-import AstroForm from '#components/AstroForm/index.astro';
+import Form from '@repo/astro-wc/AstroForm';
 import Layout from '#layouts/Layout.astro';
 import Box from '@repo/ui-lit/Box';
 ---
@@ -10,10 +10,7 @@ import Box from '@repo/ui-lit/Box';
 <Layout title="Welcome to Astro.">
   <Box borderWidth="2px">
     <Stack space="2rem">
-      <Box padding="var(--s0)">
-        <AstroForm />
-      </Box>
-
+      <Form />
       <Box invert>
         <div style={{ maxWidth: '30px' }}><button>click me</button></div>
 

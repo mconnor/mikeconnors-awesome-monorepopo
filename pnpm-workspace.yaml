@@ -1,6 +1,6 @@
 packages:
   - apps/*
-  - apps-svelte/*
+  - "!apps-svelte/*"
   - "!apps/hackernews/*"
   - packages/*
   - packages/ui-components/*
