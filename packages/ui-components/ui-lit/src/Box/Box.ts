@@ -14,8 +14,8 @@ import { styleMap } from 'lit/directives/style-map.js';
  * @property {Boolean} invert
  */
 
-const mainColor = css`var(--theme-primary, blue)`;
-const bgColor = css`var(--theme-secondary, yellow)`;
+const mainColor = css`var(--text-1, blue)`;
+const bgColor = css`var(--surface-1, yellow)`;
 
 @customElement('box-l')
 export class Box extends LitElement {
@@ -29,8 +29,7 @@ export class Box extends LitElement {
       }
 
       ::slotted {
-        color: ${mainColor};
-        background-color: ${bgColor};
+        background-color: inherit;
       }
       ::slotted(*) {
         color: inherit;
