@@ -1,0 +1,42 @@
+---
+interface Props {
+  checked?: boolean;
+  delay?: string;
+  size?: 'small' | 'medium' | 'large';
+}
+const { size = 'large', delay = '480ms' } = Astro.props;
+---
+
+<wa-checkbox checked size={size} class:list={'feature-checkbox bouncy'}
+  ><slot /></wa-checkbox
+>
+
+<style define:vars={{ delay }}>
+  .feature-checkbox::part(label) {
+    color: var(--text-1);
+  }
+
+  .bouncy {
+    animation: slide-in-up 3s var(--ease-bounce-2);
+    animation-delay: var(--delay);
+  }
+
+  .shake-in {
+    animation:
+      var(--delay) var(--animation-shake-y),
+      var(--animation-fade-in),
+      var(--animation-slide-in-right);
+  }
+
+  .my-anim {
+    transition:
+      transform 1s var(--ease-spring-3) 0.5s,
+      opacity 1s ease 0.5s;
+
+    @starting-style {
+      opacity: 0;
+      transform: scale(0);
+      delay: var(--delay);
+    }
+  }
+</style>

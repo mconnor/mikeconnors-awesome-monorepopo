@@ -22,7 +22,7 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@repo/layout-webcomponents": "workspace:*",
-    "astro": "^5.2.5"
+    "astro": "^5.3.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",

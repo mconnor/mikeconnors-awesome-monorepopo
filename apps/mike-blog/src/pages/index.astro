@@ -16,25 +16,28 @@ import { Image } from 'astro:assets';
 // import Andy from '#assets/andyBushes.jpg';
 import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
+import Hero from '#components/Hero.astro';
 ---
 
 <Layout maxW="80ch">
   <Stack space="0">
-    <h2>This is my website</h2>
+    <Hero />
 
-    <Box>
-      <Frame ratio="16:9">
-        <Image
-          src={AndyMud}
-          layout="responsive"
-          width={800}
-          height={600}
-          priority
-          alt="A description of my image."
-        />
-      </Frame>
-      <h3>This is my dog</h3>
-    </Box>
+    <div style="background: var(--surface-4)">
+      <Box>
+        <Frame ratio="16:9">
+          <Image
+            src={AndyMud}
+            layout="responsive"
+            width={800}
+            height={600}
+            priority
+            alt="A description of my image."
+          />
+        </Frame>
+        <h3>This is my dog</h3></Box
+      >
+    </div>
   </Stack>
 </Layout>
 

@@ -30,7 +30,7 @@
     "@astrojs/check": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "astro": "^5.2.5",
+    "astro": "^5.3.0",
     "eslint": "catalog:",
     "open-props": "^1.7.12",
     "prettier-plugin-astro": "catalog:",
@@ -38,7 +38,7 @@
     "zod": "catalog:"
   },
   "peerDependencies": {
-    "astro": "^5.0.0",
-    "open-props": "^1.7"
+    "astro": ">=5",
+    "open-props": "*"
   }
 }

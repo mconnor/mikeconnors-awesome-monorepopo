@@ -30,7 +30,7 @@
     "@preact/signals": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "eslint": "^9.20.0",
+    "eslint": "^9.20.1",
     "eslint-config-preact": "^1.5.0",
     "preact": "^10.25.4",
     "prettier-plugin-astro": "catalog:",
@@ -41,7 +41,7 @@
     "extends": "preact"
   },
   "peerDependencies": {
-    "preact": "^10"
+    "preact": ">=10"
   },
   "prettier": {
     "singleQuote": true

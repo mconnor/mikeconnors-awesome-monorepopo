@@ -80,5 +80,13 @@ const isTest = process.env.NODE_ENV === 'test';
 </script> -->
 
 <ClientRouter />
-{(isDev || isTest) && <DevModeStyle />}
-<GlobalStyle />
+
+<!-- {(isDev || isTest) && <DevModeStyle />}
+<GlobalStyle /> -->
+<DevModeStyle />
+
+<style>
+  :where(html) {
+    --brand: var(--brand-telegram);
+  }
+</style>

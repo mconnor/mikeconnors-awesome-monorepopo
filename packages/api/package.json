@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "eslint": "catalog:",
+    "typescript": "catalog:"
+  }
 }

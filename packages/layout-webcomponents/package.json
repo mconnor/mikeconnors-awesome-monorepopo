@@ -7,6 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
+    "./Box": "./src/astro-wc/Box/index.astro",
     "./Center": "./src/astro-wc/Center/index.astro",
     "./Reel": "./src/astro-wc/Reel/index.astro",
     "./Frame": "./src/astro-wc/Frame/index.astro",
@@ -36,13 +37,13 @@
     "@repo/typescript-config": "workspace:^",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
-    "astro": "^5.2.5",
+    "astro": "^5.3.0",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "astro": "^5.0.0"
+    "astro": ">=5"
   },
   "keywords": [],
   "author": "",

@@ -11,9 +11,9 @@ export default defineConfig({
   // trailingSlash: 'never',
   cacheDir: './cache-directory',
   vite: {
-    // ssr: {
-    //   noExternal: true,
-    // },
+    ssr: {
+      noExternal: ['open-props'],
+    },
     plugins: [
       visualizer({
         emitFile: true,

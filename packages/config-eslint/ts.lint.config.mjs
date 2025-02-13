@@ -1,9 +1,9 @@
 // @ts-check
 import js from '@eslint/js';
-import tsParser from '@typescript-eslint/parser';
+
 import eslintPluginAstro from 'eslint-plugin-astro';
 // import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
-
+// import turboPlugin from 'eslint-plugin-turbo';
 import tseslint from 'typescript-eslint';
 // import onlyWarn from 'eslint-plugin-only-warn';
 import astroParser from 'astro-eslint-parser';
@@ -15,6 +15,8 @@ const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx'];
 
 export default tseslint.config(
   ignoresConfig,
+  // ...turboConfig['flat/recommended'],
+  // ...turboConfig,
   // Global config
   // JavaScript
   js.configs.recommended,
@@ -36,7 +38,7 @@ export default tseslint.config(
 
   {
     languageOptions: {
-      parser: tsParser,
+      parser: tseslint.parser,
       parserOptions: {
         sourceType: 'module',
         projectService: true,
@@ -53,6 +55,7 @@ export default tseslint.config(
     },
     rules: {
       'capitalized-comments': 'off',
+      '@typescript-eslint/no-unsafe-call': 'warn',
       // 'no-unused-expressions': 'off',
       // '@typescript-eslint/array-type': 'error',
       // '@typescript-eslint/consistent-type-imports': 'error',
@@ -94,7 +97,7 @@ export default tseslint.config(
     languageOptions: {
       parser: astroParser,
       parserOptions: {
-        parser: tsParser,
+        parser: tseslint.parser,
         allowDefaultProject: ['*.astro'],
         JSX: false,
         tsconfigRootDir: import.meta.dirname,
@@ -147,5 +150,29 @@ export default tseslint.config(
   //     '@typescript-eslint/no-empty-function': 'warn',
   //   },
   // }
+  // {
+  //   plugins: {
+  //     turboPlugin,
+  //   },
+  //   rules: {
+  //     'turbo/no-undeclared-env-vars': 'error',
+  //   },
+  // },
   eslintConfigPrettier,
 );
+
+// export default [
+//   turboConfig['flat/recommended'],
+//   ...tsConfig,
+//   // Other configuration
+//   {
+//     rules: {
+//       'turbo/no-undeclared-env-vars': [
+//         'error',
+//         {
+//           allowList: ['^ENV_[A-Z]+$'],
+//         },
+//       ],
+//     },
+//   },
+// ];

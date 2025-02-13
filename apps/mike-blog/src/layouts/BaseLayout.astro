@@ -42,11 +42,20 @@ const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
     </script>
   </body>
 </html>
-<style>
+<style is:global>
   .mode {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1000;
+  }
+
+  .warning {
+    --my-element-text-color: var(--theme-warning);
+  }
+
+  :root {
+    --theme-secondary: var(--surface-2);
+    --theme-primary: var(--text-1);
   }
 </style>

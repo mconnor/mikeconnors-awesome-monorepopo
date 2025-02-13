@@ -17,19 +17,19 @@ const { centerWidth = '60ch', title = 'mike connor' } = Astro.props;
 ---
 
 <BaseLayout title={title}>
-  <Cover centeredElement="main" noPad>
+  <Cover centeredElement="center-l" noPad>
     <Header desc={title} />
 
-    <main>
-      <!-- <Box borderWidth='0'>
+    <!-- <Box borderWidth='0'>
       <Center max={centerWidth}><slot /></Center>
     </Box> -->
-      <Center max={centerWidth}>
-        <Box>
-          <slot />
-        </Box>
-      </Center>
-    </main>
+
+    <Center max={centerWidth}>
+      <!-- <Box> -->
+      <slot />
+      <!-- </Box> -->
+      <!-- </Center> -->
+    </Center>
 
     <Footer />
   </Cover>

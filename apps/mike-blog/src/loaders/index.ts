@@ -44,9 +44,12 @@ const countryLoader = (): Loader => {
         // or an object with IDs as keys and entries as values
 
         if (!success) {
-          throw new Error(
+          logger.error(
             `Failed to parse countries API response: ${parseError.message}`,
           );
+          // throw new Error(
+          //   `Failed to parse countries API response: ${parseError.message}`,
+          // );
         } else if (countryData) {
           for (const country of countryData) {
             const id = country.cca3;

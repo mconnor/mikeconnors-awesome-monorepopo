@@ -102,8 +102,8 @@
 	action="?/enter"
 	use:enhance={() => {
 		// prevent default callback from resetting the form
-		return ({ update }) => {
-			update({ reset: false });
+		return async ({ update }) => {
+			await update({ reset: false });
 		};
 	}}
 >

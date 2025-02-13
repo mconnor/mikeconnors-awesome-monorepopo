@@ -1,7 +1,7 @@
 // @ts-check
 import prettier from 'eslint-config-prettier';
 import js from '@eslint/js';
-
+import * as svelteParser from 'svelte-eslint-parser';
 import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 
@@ -9,33 +9,18 @@ import tseslint from 'typescript-eslint';
 import ignoresConfig from './ignores.config.mjs';
 const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx'];
 
-export default tseslint.config(
-  ignoresConfig,
-  js.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...svelte.configs['flat/recommended'],
-  prettier,
-  ...svelte.configs['flat/prettier'],
-  {
-    languageOptions: {
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
-        extraFileExtensions,
-      },
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-    },
-  },
-  {
-    files: ['**/*.svelte'],
+export default tseslint.config({
+  extends: [
+    ...svelte.configs['flat/recommended'],
+    ...svelte.configs['flat/prettier'],
+  ],
+  files: ['**/*.svelte'],
 
-    languageOptions: {
-      parserOptions: {
-        parser: tseslint.parser,
-      },
+  languageOptions: {
+    parser: svelteParser,
+    parserOptions: {
+      parser: tseslint.parser,
+      extraFileExtensions,
     },
   },
-);
+});

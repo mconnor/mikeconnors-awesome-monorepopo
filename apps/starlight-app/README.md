@@ -2,6 +2,8 @@
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
+> Markdoc allows you to enhance your Markdown with Astro components. If you have existing content authored in Markdoc, this integration allows you to bring those files to your Astro project using content collections.
+
 ```
 npm create astro@latest -- --template starlight/markdoc
 ```

@@ -2,7 +2,7 @@ const errorMessage = `Don't forget to check me!`;
 
 class AstroForm extends HTMLElement {
   private form: HTMLFormElement | null = null;
-  private checkBox: IntrinsicElements['wa-checkbox'];
+  // private checkBox: HTMLFormElement | null = null;
 
   constructor() {
     super();
@@ -18,7 +18,7 @@ class AstroForm extends HTMLElement {
         customElements.whenDefined('wa-select'),
         customElements.whenDefined('wa-textarea'),
       ]).then(() => {
-        this.checkBox = this.form.querySelector('wa-checkbox');
+        //  this.checkBox = this.form!.querySelector('wa-checkbox');
         this.form?.addEventListener('submit', (event) => {
           event.preventDefault();
           alert('All fields are valid!');

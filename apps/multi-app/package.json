@@ -23,7 +23,7 @@
     "@astrojs/preact": "catalog:",
     "@astrojs/react": "catalog:",
     "@astrojs/svelte": "7.0.4",
-    "@astrojs/vercel": "catalog:",
+    "@astrojs/vercel": "^8.0.7",
     "@astrojs/vue": "^5.0.6",
     "@preact/signals": "catalog:",
     "@repo/layout-webcomponents": "workspace:*",
@@ -34,14 +34,10 @@
     "@repo/ui-lit": "workspace:*",
     "@repo/vue": "workspace:*",
     "add": "catalog:",
-    "astro": "^5.2.5",
+    "astro": "^5.3.0",
     "lit": "catalog:",
     "open-props": "^1.7.12",
-    "preact": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:",
-    "svelte": "^5.19.9",
-    "vue": "catalog:"
+    "preact": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
@@ -59,6 +55,7 @@
     "postcss-nesting": "^13.0.1",
     "postcss-pow": "^1.0.1",
     "prettier-plugin-astro": "catalog:",
+    "svelte": "catalog:svelte5",
     "svelte-preprocess": "catalog:svelte5",
     "typescript": "catalog:"
   }

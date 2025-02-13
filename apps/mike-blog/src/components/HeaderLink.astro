@@ -15,17 +15,9 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 <!-- <Box padding='--sizes'><a href={href} class:list={[{ active: isActive }]}>
     <slot />
 </a></Box> -->
-<Box borderWidth="0" padding="0">
-  {
-    !isActive ?
-      <wa-button size="small" href={href} disabled={isActive}>
-        <slot />
-      </wa-button>
-    : <span class="nonLink">
-        <slot />
-      </span>
-  }
-</Box>
+<wa-button size="small" href={href} disabled={isActive}>
+  <slot />
+</wa-button>
 
 <!-- <style>
   a {

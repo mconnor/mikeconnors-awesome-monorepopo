@@ -7,6 +7,6 @@ declare namespace astroHTML.JSX {
 
   // Add a CSS custom property to the style object
   interface CSSProperties {
-    '--theme-color'?: 'black' | 'white';
+    '--theme-color'?: 'black' | 'white' | 'toucan' | 'choco' | 'grape' | 'dim';
   }
 }

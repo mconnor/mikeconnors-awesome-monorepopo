@@ -22,7 +22,7 @@
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
     "@astrojs/sitemap": "catalog:",
-    "@astrojs/vercel": "catalog:",
+    "@astrojs/vercel": "^8.0.7",
     "@repo/styles": "workspace:*",
     "astro": "^5.1.9",
     "lit": "catalog:"

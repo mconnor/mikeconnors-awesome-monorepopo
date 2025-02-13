@@ -28,6 +28,9 @@
     "svelte-check": "catalog:svelte5",
     "typescript": "catalog:"
   },
+  "peerDependencies": {
+    "svelte": ">=5"
+  },
   "keywords": [
     "svelte",
     "ui"

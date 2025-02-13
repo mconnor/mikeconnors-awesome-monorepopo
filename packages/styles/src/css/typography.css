@@ -4,8 +4,9 @@
 } */
 
 :root {
-  --theme-secondary: var(--surface-4);
-  --theme-primary: var(--text-2);
+  --theme-secondary: var(--surface-2);
+  --theme-primary: var(--text-1);
+
   --theme-warning: red;
   --theme-font-family: var(--font-system-ui);
 }
@@ -13,7 +14,7 @@
   --my-element-text-color: var(--theme-warning);
 }
 
-body {
+/* body {
   color: var(--theme-primary);
   background-color: var(--theme-secondary);
-}
+} */
