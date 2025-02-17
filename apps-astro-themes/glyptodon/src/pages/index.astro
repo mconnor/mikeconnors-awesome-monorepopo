@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { CONFIG } from '../config';
+import Layout from '#layouts/Layout.astro';
+import { CONFIG } from '#config.ts';
 import { getCollection } from 'astro:content';
-import LinkCard from '../components/LinkCard.astro';
-import PostCard from '../components/PostCard.astro';
+import LinkCard from '#components/LinkCard.astro';
+import PostCard from '#components/PostCard.astro';
 
 const posts = (
   await getCollection('posts', ({ data }) => {

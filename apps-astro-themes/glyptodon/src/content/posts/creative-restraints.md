@@ -1,6 +1,5 @@
 ---
 title: 'Why Designers Should Embrace Creative Constraints'
-slug: 'creative-restraints'
 description: 'Demonstrating how design limitations can spark creativity, using a nonprofit logo project to illustrate how restrictions can lead to more innovative and meaningful design solutions.'
 publicationDate: 2025-01-02
 category: life

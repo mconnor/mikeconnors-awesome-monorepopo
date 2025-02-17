@@ -1,27 +1,32 @@
 ---
+import { type CollectionEntry } from 'astro:content';
+import { format } from 'date-fns';
+
 interface Props {
-  title: string;
-  description: string;
-  publicationDate: Date;
-  category: string;
-  slug: string;
+  id: string;
+  postData: CollectionEntry<'posts'>['data'];
+  ssr?: boolean;
 }
 
-const { title, description, publicationDate, category, slug } = Astro.props;
+const {
+  // foregroundColor = 'var(--text-2)',
+  // backgroundColor = 'var(--surface-4)',
+  postData,
+  id,
+  ssr = false,
+} = Astro.props;
 
-const date = new Date(publicationDate);
-const formattedDate = date.toLocaleDateString('en-UK', {
-  year: 'numeric',
-  month: 'short',
-  day: 'numeric',
-});
+const { title, category, description, publicationDate } = postData;
+
+const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
 ---
 
 <article class="post-card">
-  <a href={`/posts/${slug}`}>
+  <a href={link}>
     <div class="post-meta">
       <span class="category">{category}</span>
-      <time datetime={date.toISOString()}>{formattedDate}</time>
+      <!-- <time datetime={date.toISOString()}>{formattedDate}</time> -->
+      <p>{format(publicationDate, 'MMMM dd, yyyy')}</p>
     </div>
     <h3 class="post-title">
       {title}

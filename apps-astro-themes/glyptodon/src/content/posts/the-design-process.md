@@ -1,6 +1,5 @@
 ---
 title: 'The Design Process No One Talks About'
-slug: 'the-design-process'
 description: 'An honest look behind the scenes of design work, revealing the messy, iterative journey from initial sketches to polished final designs, and why imperfection is crucial to the creative process.'
 publicationDate: 2025-01-01
 category: design

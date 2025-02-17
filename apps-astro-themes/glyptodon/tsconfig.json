@@ -1,14 +1,8 @@
 {
   "extends": "@repo/typescript-config/astro-base",
   "compilerOptions": {
-    "baseUrl": "src",
-    "paths": {
-      "@content/*": ["content/*"],
-      "@layouts/*": ["layouts/*"],
-      "@components/*": ["components/*"],
-      "@scripts/*": ["scripts/*"],
-      "@styles/*": ["styles/*"]
-    },
+
+
     "jsx": "preserve"
   }
 }

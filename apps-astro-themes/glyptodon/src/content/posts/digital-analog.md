@@ -1,6 +1,5 @@
 ---
 title: 'Digital vs. Analog - My Hybrid Design Approach'
-slug: 'digital-analog'
 description: 'Exploring the balance between traditional hand-sketching and digital design tools, and how combining both approaches creates more authentic, thoughtful design work.'
 publicationDate: 2025-01-03
 category: design

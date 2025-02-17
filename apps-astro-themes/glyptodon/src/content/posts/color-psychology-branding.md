@@ -1,6 +1,5 @@
 ---
 title: 'Color Psychology in Branding - More Than Just Pretty Palettes'
-slug: 'color-psychology-branding'
 description: 'A tale of miscommunication, mime, and dental hygiene in Paris'
 publicationDate: 2025-01-04
 category: 'design'

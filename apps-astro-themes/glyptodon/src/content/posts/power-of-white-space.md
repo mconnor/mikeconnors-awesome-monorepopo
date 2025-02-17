@@ -1,6 +1,5 @@
 ---
 title: 'The Unexpected Power of White Space'
-slug: 'power-of-white-space'
 description: 'Exploring how strategic use of empty space can transform design, increase user engagement, and communicate more effectively than cluttered layouts.'
 publicationDate: 2025-01-05
 category: design

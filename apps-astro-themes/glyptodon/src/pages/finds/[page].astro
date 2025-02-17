@@ -1,10 +1,10 @@
 ---
 import { getCollection } from 'astro:content';
 import type { GetStaticPathsOptions } from 'astro';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
-import Layout from '@layouts/Layout.astro';
-import LinkCard from '@components/LinkCard.astro';
-import Pagination from '@components/Pagination.astro';
+import Breadcrumbs from '#components/Breadcrumbs.astro';
+import Layout from '#layouts/Layout.astro';
+import LinkCard from '#components/LinkCard.astro';
+import Pagination from '#components/Pagination.astro';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allFinds = await getCollection('finds');

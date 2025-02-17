@@ -1,9 +1,15 @@
 ---
-import HeadContent from '@components/HeadContent.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
+import HeadContent from '#components/HeadContent.astro';
+import Header from '#components/Header.astro';
+import Footer from '#components/Footer.astro';
 import { CONFIG } from '../config';
 
+
+type Props ={
+  title? : string;
+  description? : string;
+  image? : string;
+}
 const {
   title = CONFIG.site_title,
   description = CONFIG.description,

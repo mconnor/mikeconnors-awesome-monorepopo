@@ -1,8 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
-import Breadcrumbs from '@components/Breadcrumbs.astro';
-import Layout from '@layouts/Layout.astro';
-import { formatDate } from '../../utils/date';
+import Breadcrumbs from '#components/Breadcrumbs.astro';
+import Layout from '#layouts/Layout.astro';
+import { formatDate } from '#utils/date.ts';
 import { render } from 'astro:content';
 
 export async function getStaticPaths() {
