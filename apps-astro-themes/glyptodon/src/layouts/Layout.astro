@@ -1,0 +1,26 @@
+---
+import HeadContent from '@components/HeadContent.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import { CONFIG } from '../config';
+
+const {
+  title = CONFIG.site_title,
+  description = CONFIG.description,
+  image = '/og-default.jpg',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <HeadContent title={title} description={description} image={image} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,79 @@
+---
+import { getCollection } from 'astro:content';
+import Breadcrumbs from '@components/Breadcrumbs.astro';
+import Layout from '@layouts/Layout.astro';
+import { formatDate } from '../../utils/date';
+import { render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  return posts.map((post) => ({
+    params: { slug: post.data.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title} description={post.data.description}>
+  <Breadcrumbs path={['posts', post.data.title]} />
+  <article class="page-content">
+    <header class="post-header">
+      <h1>{post.data.title}</h1>
+      <hr />
+      <div class="post-meta">
+        <time datetime={post.data.publicationDate.toISOString()}>
+          {formatDate(post.data.publicationDate)}
+        </time>
+        {
+          post.data.category && (
+            <span class="category">{post.data.category}</span>
+          )
+        }
+        By {post.data.author}
+      </div>
+    </header>
+
+    <Content />
+  </article>
+</Layout>
+
+<style>
+  .post {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: var(--step-4);
+    margin: 0 0 1rem;
+    color: var(--color-text-base);
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    color: var(--color-text-base);
+    font-size: var(--step--1);
+    align-items: center;
+  }
+
+  .category {
+    padding: 0.5em;
+    text-transform: capitalize;
+    background: var(--color-card);
+  }
+
+  .page-content :global(p:first-of-type) {
+    font-size: var(--step-1);
+    color: var(--color-text-muted);
+  }
+</style>
