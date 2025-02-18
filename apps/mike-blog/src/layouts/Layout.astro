@@ -21,7 +21,7 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 <BaseLayout {...rest}>
   <Cover centeredElement="center-l" space="0">
     <Header transition:persist />
-
+    <slot name="hero" />
     <Center max={maxW} transition:animate="slide"><slot /></Center>
 
     <Footer />
