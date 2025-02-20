@@ -28,20 +28,20 @@ export async function getStaticPaths() {
   }));
 }
 
-// type Props = CollectionEntry<'blog'>;
-
+// id is tag
 const { id } = Astro.params;
+//post with at last one tags
 const { posts } = Astro.props;
 ---
 
 <Layout title={id}>
   {
-    posts.map((postWTag) => (
+    posts.map(({ data, id }) => (
       <BlogCard
         backgroundColor="var(--surface-4)"
         foregroundColor="var(--text-2)"
-        id={postWTag.id}
-        postData={postWTag.data}
+        id={id}
+        postData={data}
       />
     ))
   }

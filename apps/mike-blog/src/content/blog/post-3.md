@@ -4,7 +4,7 @@ pubDate: 2024-01-02
 author: mike-connor
 description: The Future of Dynamic Web Content
 cover:
-  src: 'https://picsum.photos/600/300?random=3'
+  src: 'https://picsum.photos/400/300?random=3'
   alt: 'lorem'
 tags: ['coding', 'successes', 'learning-in-public']
 ---

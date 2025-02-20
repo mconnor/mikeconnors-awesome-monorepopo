@@ -20,45 +20,46 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
 // const { name } = authObj.data;
 ---
 
-<article>
-  <h2>{title}</h2>
-  <a slot="left" href={link}>
-    <!-- <Box invert padding="0" borderWidth="0">
+<!-- <div class="wa-stack wa-gap-s">
+  <div class="wa-frame wa-border-radius-l">
+    <Image src={cover.src} alt={cover.alt} width={200} height={200} />
+  </div>
+  <h3 class="wa-heading-s">Tulip</h3>
+  <em>{title}</em>
+</div> -->
+<a href={`./posts/${id}`}>
+  <wa-card with-image with-footer class="card-overview">
+    <!-- <img slot="image" src={cover.src} alt={cover.alt} width={200} height={200} /> -->
+    <img
+      slot="image"
+      src={cover.src}
+      alt={cover.alt}
+      width={400}
+      height={300}
+    />
 
-    <Box padding="var(--s0)" borderWidth="0"><h1>{title}</h1></Box>
+    <strong>{title}</strong><br />
 
-    <Cluster justify="space-between" align="baseline">
-
-      <Box padding="var(--s00)" borderWidth="0">
-        <p>{format(pubDate, 'MMMM dd, yyyy')}</p></Box
-      >
-    </Cluster>
-    <Box padding="0" borderWidth="0">
-
-      <ImageWrapper  url={cover.src} alt={cover.alt} />
-      </Box
-    >
-
-    <Box padding="var(--s0)" borderWidth="0" invert
-      >description{description}</Box
-    >
-
-
-  </Box> -->
-    <div class="wa-flank" style="--flank-size: 8rem;">
-      <div class="wa-frame wa-border-radius-m">
-        <Image src={cover.src} alt={cover.alt} width={200} height={150} />
-      </div>
-      <div class="wa-flank:end" style="--content-percentage: 70%">
-        <div class="wa-stack wa-gap-xs">
-          <p>{description}</p>
-          <p>{format(pubDate, 'MMMM dd, yyyy')}</p>
-          <!-- <span>{name}</span> -->
-        </div>
-        <wa-icon-button id="options-menu" name="ellipsis"></wa-icon-button>
-
-        <wa-tooltip for="options-menu">Options</wa-tooltip>
-      </div>
+    <div slot="footer" class="description">
+      {pubDate}
     </div>
-  </a>
-</article>
+  </wa-card>
+</a>
+<style>
+  .card-overview {
+  }
+
+  .card-overview small {
+    color: var(--wa-color-text-quiet);
+  }
+
+  .description {
+    color: var(--wa-color-text-quiet);
+    font-size: small;
+  }
+  .card-overview [slot='footer'] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
