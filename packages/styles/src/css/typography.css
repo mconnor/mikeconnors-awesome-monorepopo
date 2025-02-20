@@ -18,3 +18,19 @@
   color: var(--theme-primary);
   background-color: var(--theme-secondary);
 } */
+
+h1,
+h2,
+h3,
+h4,
+p,
+dt {
+  color: var(--text-1);
+}
+
+h5,
+h6,
+small,
+dd {
+  color: var(--text-2);
+}

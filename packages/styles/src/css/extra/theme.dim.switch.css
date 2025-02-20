@@ -1,6 +1,6 @@
 :where([data-theme='dim'], .dim, .dim-theme) {
   color-scheme: dim;
-
+  --brand: var(--brand-dim);
   --link: var(--indigo-3);
   --link-visited: var(--link-visited-dim);
 

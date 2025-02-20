@@ -1,29 +1,31 @@
 ---
 import Layout from '#layouts/LayoutNc.astro';
 import Box from '@repo/ui-lit/Box';
+import Stack from '@repo/layout-webcomponents/Stack';
 ---
 
 <Layout>
-  <div slot="left">
-    <Box invert>
-      <p>
-        <em>flex-basis:</em> 20rem is more nuanced. It tells the browser to consider
-        20rem as an ideal or “target” width. It is then free to calculate just how
-        closely the 20rem target can be resembled given the content and available
-        space. You empower the browser to make the right decision for the content,
-        and the user, reading that content, given their circumstances.
-      </p>
-    </Box>
-  </div>
-  <div slot="right">
-    <Box>
-      <p>
-        <em>flex-basis:</em> 20rem is more nuanced. It tells the browser to consider
-        20rem as an ideal or “target” width. It is then free to calculate just how
-        closely the 20rem target can be resembled given the content and available
-        space. You empower the browser to make the right decision for the content,
-        and the user, reading that content, given their circumstances.
-      </p>
-    </Box>
-  </div>
+  <Stack splitAfter={2} slot="left">
+    <Box invert>Lorem ipsum dolor</Box>
+    <Box>Lorem ipsum dolor</Box>
+
+    <Box>Lorem ipsum dolor</Box>
+  </Stack>
+
+  <Box slot="right">
+    <p>
+      <em>flex-basis:</em> 20rem is more nuanced. It tells the browser to consider
+      20rem as an ideal or “target” width. It is then free to calculate just how
+      closely the 20rem target can be resembled given the content and available space.
+      You empower the browser to make the right decision for the content, and the
+      user, reading that content, given their circumstances.
+    </p>
+    <p>
+      <em>flex-basis:</em> 20rem is more nuanced. It tells the browser to consider
+      20rem as an ideal or “target” width. It is then free to calculate just how
+      closely the 20rem target can be resembled given the content and available space.
+      You empower the browser to make the right decision for the content, and the
+      user, reading that content, given their circumstances.
+    </p>
+  </Box>
 </Layout>

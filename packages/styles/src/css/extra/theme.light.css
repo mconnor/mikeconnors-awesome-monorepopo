@@ -1,8 +1,9 @@
 :where(html) {
   color-scheme: light;
-  --brand: var(--indigo-7);
-  --link: var(--indigo-7);
-  --link-visited: var(--purple-7);
+
+  --brand-dark: var(--orange-7);
+  --link-dark: var(--orange-7);
+  --link-visited-dark: var(--orange-2);
 
   --text-1-light: var(--gray-12);
   --text-2-light: var(--gray-7);

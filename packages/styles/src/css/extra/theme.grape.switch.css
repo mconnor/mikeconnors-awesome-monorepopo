@@ -1,6 +1,6 @@
 :where([data-theme='grape'], .grape, .grape-theme) {
   color-scheme: grape;
-
+  --brand: var(--brand-grape);
   --link: var(--indigo-3);
   --link-visited: var(--purple-3);
 

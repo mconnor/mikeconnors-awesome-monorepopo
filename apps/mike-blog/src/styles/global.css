@@ -1,0 +1,25 @@
+/* @media (prefers-color-scheme: dark) {
+  :where([data-theme='dark'], .dark, .dark-theme) {
+    color-scheme: dark;
+
+    --brand: var(--brand-dark);
+    --link: var(--link-dark);
+    --link-visited: var(--link-visited-dark);
+
+    --text-1: var(--text-1-dark);
+    --text-2: var(--text-2-dark);
+
+    --surface-1: var(--surface-1-dark);
+    --surface-2: var(--surface-2-dark);
+    --surface-3: var(--surface-3-dark);
+    --surface-4: var(--surface-4-dark);
+
+    --border-color: var(--brand-dark);
+  }
+} */
+
+:where(html) {
+  /* set brand colors; */
+  --brand-dark: var(--pink-2);
+  --brand-light: var(--pink-7);
+}

@@ -10,7 +10,9 @@
 // }
 import Frame from '@repo/layout-webcomponents/Frame';
 import Stack from '@repo/layout-webcomponents/Stack';
+import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
+import Clock from '@repo/ui-lit/Clock';
 import { Image } from 'astro:assets';
 
 // import Andy from '#assets/andyBushes.jpg';
@@ -19,11 +21,12 @@ import Layout from '#layouts/Layout.astro';
 import Hero from '#components/Hero.astro';
 ---
 
-<Layout maxW="80ch">
-  <Stack space="0">
-    <Hero />
+<Layout maxW="100%">
+  <Box invert padding="0" slot="hero"><Hero /></Box>
 
+  <Stack space="0">
     <div style="background: var(--surface-4)">
+      <Clock />
       <Box>
         <Frame ratio="16:9">
           <Image
@@ -45,5 +48,18 @@ import Hero from '#components/Hero.astro';
   h2,
   h3 {
     font-family: var(--font-antique);
+  }
+  .hero {
+    background: var(--gradient-1);
+    color: var(--text-1);
+    font-size: var(--font-size-6);
+
+    /* text-align: center; */
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      flex-grow: 1;
+      flex-basis: calc((30rem - 100%) * 999);
+    }
   }
 </style>

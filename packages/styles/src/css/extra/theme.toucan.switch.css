@@ -1,6 +1,7 @@
 :where([data-theme='toucan'], .toucan, .toucan-theme) {
   color-scheme: toucan;
 
+  --brand: var(--brand-toucan);
   --accent: var(--accent-toucan);
   --accent-hover: var(--accent-hover-toucan);
   --accent-visited: var(--accent-visited-toucan);

@@ -12,4 +12,12 @@ export const wcStyles = css`
     color: green;
     background-color: var(--green-1);
   }
+  .cluster {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--space, var(--size-2));
+    column-gap: var(--space, var(--size-fluid-5));
+    justify-content: space-between;
+    align-items: center;
+  }
 `;

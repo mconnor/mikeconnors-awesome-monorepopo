@@ -2,14 +2,12 @@
 import FeatureCheckBox from './FeatureCheckBox.astro';
 ---
 
-<section class="hero block-wrap">
-  <header>
-    <div class="subhead">
-      <h1><div class="dark">Mike Connor</div></h1>
-      <h1><span>Tech</span> <span>Ops</span></h1>
-    </div>
+<section class="hero">
+  <div class="subhead">
+    <h1><div class="dark">MikeConnor.tech</div></h1>
+  </div>
 
-    <!-- <div>
+  <!-- <div>
       <FeatureCheckBox delay="880ms"
         >Expertly crafted web design tokens</FeatureCheckBox
       >
@@ -20,36 +18,25 @@ import FeatureCheckBox from './FeatureCheckBox.astro';
       <br />
       <FeatureCheckBox>Expertly crafted web design tokens</FeatureCheckBox>
     </div> -->
-  </header>
 </section>
 
 <style>
   .hero .subhead > h1 {
     overflow: clip;
-    font-size: var(--font-size-5);
-
-    @media (--xs-n-above) {
-      font-size: var(--font-size-6);
-    }
-    @media (--sm-n-above) {
-      font-size: var(--font-size-7);
-    }
-    @media (--md-n-above) {
-      font-size: var(--font-size-fluid-3);
-    }
+    font-size: var(--s4);
 
     & > * {
       background: var(--gradient-1) fixed;
-      background-size: var(--size-relative-13) var(--size-relative-11);
+      /* background-size: var(--size-relative-13) var(--size-relative-11);
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      -webkit-text-fill-color: transparent; */
 
-      > [data-theme='dark'] & {
+      /* > [data-theme='dark'] & {
         background: var(--gradient-4) fixed;
         background-size: var(--size-relative-13) var(--size-relative-11);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-      }
+      } */
     }
 
     @media (--motionOK) {

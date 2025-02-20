@@ -63,7 +63,7 @@ const { title = 'title', description = 'description', image } = Astro.props;
   lucide.createIcons();
 </script> -->
 
-<script is:inline>
+<!-- <script is:inline>
   import * as Sentry from '@sentry/browser';
 
   Sentry.init({
@@ -77,20 +77,10 @@ const { title = 'title', description = 'description', image } = Astro.props;
     replaysOnErrorSampleRate: 1.0,
     integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   });
-</script>
+</script> -->
 
 <script is:inline>
-  // on page, get the last theme from the cookie and set it
-  document.addEventListener('astro:page-load', () => {
-    const storedTheme = localStorage.getItem('theme');
-    const doc = document.documentElement;
-    if (storedTheme) {
-      doc.setAttribute('data-theme', storedTheme);
-      // $currTheme.set(storedTheme);
-    } else {
-      doc.setAttribute('data-theme', 'light');
-    }
-  });
+  import '@repo/scripts/get-theme';
 </script>
 
 <ClientRouter />

@@ -1,14 +1,24 @@
 ---
 import Stack from '@repo/layout-webcomponents/Stack';
 import Box from '@repo/ui-lit/Box';
-
+import AppDrawer from '@repo/astro-wc/AppDrawer';
+import FancyButton from '@repo/astro-wc/FancyButton';
 import Layout from '#layouts/Layout.astro';
+import PopOver from '#components/PopOver/index.astro';
 ---
 
 <Layout maxW="80ch">
   <Stack space="0">
-    <h2>This is my website</h2>
-
-    <Box />
+    <PopOver />
+    <FancyButton />
+    <AppDrawer />
+    <!-- <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </AppDrawer> -->
   </Stack>
 </Layout>

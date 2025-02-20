@@ -11,13 +11,7 @@ interface Props {
   ssr?: boolean;
 }
 
-const {
-  foregroundColor = 'var(--text-2)',
-  backgroundColor = 'var(--surface-4)',
-  postData,
-  id,
-  ssr = false,
-} = Astro.props;
+const { postData, id, ssr = false } = Astro.props;
 
 const { title, description, cover, pubDate } = postData;
 
@@ -27,6 +21,7 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
 ---
 
 <article>
+  <h2>{title}</h2>
   <a slot="left" href={link}>
     <!-- <Box invert padding="0" borderWidth="0">
 
@@ -56,7 +51,6 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
       </div>
       <div class="wa-flank:end" style="--content-percentage: 70%">
         <div class="wa-stack wa-gap-xs">
-          <h3>BC - {title}</h3>
           <p>{description}</p>
           <p>{format(pubDate, 'MMMM dd, yyyy')}</p>
           <!-- <span>{name}</span> -->
@@ -68,10 +62,3 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
     </div>
   </a>
 </article>
-<style define:vars={{ foregroundColor, backgroundColor }}>
-  .colors {
-    color: var(--foregroundColor);
-    background-color: var(--backgroundColor);
-    border-width: var(--border-thin);
-  }
-</style>

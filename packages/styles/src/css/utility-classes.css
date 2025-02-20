@@ -87,3 +87,17 @@
     line-height: 1;
   }
 }
+
+.adaptive-glass {
+  --glass-lightness: 100%;
+  background: hsl(0 0% var(--glass-lightness) / 50%);
+  backdrop-filter: blur(40px);
+
+  > [data-theme='dark'] & {
+    --glass-lightness: 0%;
+  }
+
+  @supports not (backdrop-filter: blur(1px)) {
+    background: hsl(0 0% var(--glass-lightness) / 90%);
+  }
+}

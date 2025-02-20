@@ -8,64 +8,35 @@ import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
 import SunMoon from '@repo/astro-wc/SunMoon';
 // import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
 import HeaderLink from '#components/HeaderLink.astro';
+import { navLinks } from '#app.config.ts';
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 // const { pathname } = new URL(Astro.request.url);
 // const currentPage = (pathname.match(/[^/]+$/)?.[0]) || '';
 ---
 
-<header>
-  <Box invert>
-    <ThemeSwitcher />
+<Box padding="var(--s0)" borderWidth="0">
+  <ThemeSwitcher />
 
-    <Cluster align="baseline" justify="space-between" space="0">
-      <Box borderWidth="0">
-        <div class="headline"><h1>Mike Connor - Tech</h1></div>
-      </Box>
+  <Cluster align="baseline" justify="space-between" space="0">
+    <wa-avatar initials="MC" label="Avatar with initials: SL"></wa-avatar>
 
-      <!-- <p>{currentPage}</p> -->
-      <!-- <AstroNavigateSelect /> -->
-
-      <Box borderWidth="0" padding="0">
-        <Cluster align="baseline" justify="flex-end" space="var(--s1)">
-          <HeaderLink href="/register">register</HeaderLink>
+    <Box borderWidth="0" padding="0">
+      <Cluster align="baseline" justify="flex-end" space="var(--s1)">
+        <!-- <HeaderLink href="/register">register</HeaderLink>
           <HeaderLink href="/about">About</HeaderLink>
 
           <HeaderLink href="/posts">Posts</HeaderLink>
           <HeaderLink href="/tags">Tags</HeaderLink>
           <HeaderLink href="/interactive">Interactive</HeaderLink>
           <HeaderLink href="/hello">Actions</HeaderLink>
-          <HeaderLink href="/hello">Countries</HeaderLink>
-          <SunMoon />
-          <!-- {
-          topLevelPages.length > 0 ? (
-
-              topLevelPages.map((page) => (
-                  <HeaderLink href={page.url}>{page.url?.slice(1)}</HeaderLink>
-                ))
-
-          ) : (
-            <p>no pages found</p>
-          )
-        } -->
-        </Cluster>
-      </Box>
-    </Cluster>
-  </Box>
-</header>
-<style>
-  .headline {
-    background: var(--gradient-1) fixed;
-    background-clip: text;
-    color: transparent;
-    h1 {
-      font-size: var(--font-size-fluid-2);
-      font-weight: 900;
-      margin: 0;
-    }
-  }
-
-  header {
-    border-color: var(--surface-4);
-    background-color: var(--text-2);
-  }
-</style>
+          <HeaderLink href="/hello">Countries</HeaderLink> -->
+        <!-- <SunMoon /> -->
+        {
+          navLinks.map(({ href, label }) => (
+            <HeaderLink href={href}>{label}</HeaderLink>
+          ))
+        }
+      </Cluster>
+    </Box>
+  </Cluster>
+</Box>

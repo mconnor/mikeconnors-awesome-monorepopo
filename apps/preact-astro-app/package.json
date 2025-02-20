@@ -20,7 +20,7 @@
     "@preact/signals": "^2.0.1",
     "@repo/layout-webcomponents": "workspace:*",
     "astro": "^5.3.0",
-    "preact": "^10.25.4",
+    "preact": "^10.26.2",
     "typescript": "catalog:"
   },
   "devDependencies": {

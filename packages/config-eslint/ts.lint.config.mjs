@@ -61,7 +61,7 @@ export default tseslint.config(
       // '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
-
+      '@typescript-eslint/consistent-type-definitions': 'warn',
       // '@typescript-eslint/no-unused-vars': [
       //   'warn',
       //   {
@@ -115,6 +115,7 @@ export default tseslint.config(
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
       '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/consistent-type-definitions': 'warn',
     },
   },
   {

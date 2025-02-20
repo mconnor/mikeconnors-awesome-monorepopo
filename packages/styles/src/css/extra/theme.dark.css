@@ -2,16 +2,8 @@
   color-scheme: dark;
 
   --brand-dark: var(--orange-7);
-  --link-dark:  var(--orange-7);
+  --link-dark: var(--orange-7);
   --link-visited-dark: var(--orange-2);
-
-  /* --text-1-dark: var(--red-1);
-  --text-2-dark: var(--gray-1);
-
-  --surface-1-dark: var(--gray-12);
-  --surface-2-dark: var(--gray-11);
-  --surface-3-dark: var(--gray-10);
-  --surface-4-dark: var(--gray-9); */
 
   --text-1-dark: var(--gray-0);
   --text-2-dark: var(--gray-4);

@@ -1,0 +1,29 @@
+---
+import Center from '@repo/layout-webcomponents/Center';
+import Cover from '@repo/layout-webcomponents/Cover';
+import type { RmUnitType } from '@repo/styles/Types';
+
+import Footer from '#components/Footer.astro';
+import Header from '#components/Header.astro';
+
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  maxW?: RmUnitType;
+  children: unknown;
+  title?: string;
+  description?: string;
+}
+
+const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
+---
+
+<BaseLayout {...rest}>
+  <Cover centeredElement="center-l" space="0">
+    <Header transition:persist />
+
+    <Center max={maxW} transition:animate="slide"><slot /></Center>
+
+    <Footer />
+  </Cover>
+</BaseLayout>

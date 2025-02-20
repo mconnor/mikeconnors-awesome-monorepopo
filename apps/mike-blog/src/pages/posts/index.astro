@@ -21,19 +21,54 @@ const sortedPosts = publishsedPosts.sort(
 ---
 
 <Layout title={pageTitle}>
-  <Box>
-    <Stack space="var(--s1)">
+  <div class="my-colors">
+    <Stack space="var(--s1)" splitAfter={2}>
       {
         sortedPosts.map(({ id, data }) => (
           // <Box class='invert' borderWidth="4px">{data.title}</Box>
-          <BlogCard
-            backgroundColor="var(--surface-4)"
-            foregroundColor="var(--text-2)"
-            id={id}
-            postData={data}
-          />
+          // <BlogCard
+          //   backgroundColor="var(--surface-4)"
+          //   foregroundColor="var(--text-2)"
+          //   id={id}
+          //   postData={data}
+          // />
+
+          <wa-card with-header class="card-style">
+            <div slot="header">
+              {data.title}
+
+              <wa-icon-button name="gear" variant="solid" label="Settings" />
+            </div>
+            {data.description}
+          </wa-card>
         ))
       }
     </Stack>
-  </Box>
+  </div>
 </Layout>
+
+<style>
+  .my-colors {
+    --fore: var(--text-2);
+    --back: var(--surface-4);
+  }
+  .card-style {
+    color: var(--fore);
+    background-color: var(--back);
+    > [slot='header'] {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .card-style:nth-child(odd) {
+    background-color: var(--fore);
+    color: var(--back);
+  }
+
+  .details:nth-child(odd) {
+    background-color: var(--fore);
+    color: var(--back);
+  }
+</style>

@@ -1,0 +1,80 @@
+---
+import Stack from '@repo/layout-webcomponents/Stack';
+import Box from '@repo/ui-lit/Box';
+import Grid from '@repo/layout-webcomponents/Grid';
+---
+
+<Stack>
+  <Box invert>
+    <h2>Popover API</h2>
+    <p>
+      The Popover API provides a built-in way to create various types of popover
+      used in web applications. Previously, these required you to use
+      JavaScript, and take great care to implement them in an accessible manner.
+      The API brings all of this to the browser, and a simple popover can be
+      created declaratively in HTML.
+    </p>
+  </Box>
+  <Box borderWidth="0">
+    <button popovertarget="my-popover"> Open Popover </button>
+
+    <div id="my-popover" popover>
+      <p>
+        I am a popover with more information. Hit <kbd>esc</kbd> or click away to
+        close me.
+      </p>
+    </div>
+  </Box>
+</Stack>
+<style>
+  button {
+    font-size: 100%;
+    padding: 0.75rem;
+    background: white;
+    transition-duration: 0.5s;
+    border: 4px solid plum;
+    background: lavenderblush;
+    border-radius: 1rem;
+
+    &:hover,
+    &:focus {
+      background: plum;
+      color: white;
+    }
+  }
+
+  [popover] {
+    background: black;
+    color: white;
+    font-weight: 400;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    max-width: 20ch;
+    line-height: 1.4;
+    top: 2rem;
+    margin: 0 auto;
+  }
+
+  /* Animating the popover in */
+
+  /*   IS-OPEN STATE   */
+  [popover]:popover-open {
+    translate: 0 0;
+  }
+
+  /*   EXIT STATE   */
+  [popover] {
+    transition:
+      translate 0.7s ease-out,
+      display 0.7s ease-out allow-discrete,
+      overlay 0.7s ease-out allow-discrete;
+    translate: 0 -22rem;
+  }
+
+  /*   0. BEFORE-OPEN STATE   */
+  @starting-style {
+    [popover]:popover-open {
+      translate: 0 -12rem;
+    }
+  }
+</style>
