@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { Highlightable } from './highlightable.js';
+import { Highlightable } from './highlightable';
 
 const HighlightableLitElement = Highlightable(LitElement);
 

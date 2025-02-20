@@ -9,7 +9,7 @@
   "exports": {
     "./AppDrawer": "./src/AppDrawer/index.astro",
     "./FancyButton": "./src/FancyButton/index.astro",
-    "./HeartBtn": "./src/HeartWC/index.axxstro",
+    "./HeartBtn": "./src/HeartWC/index.astro",
     "./api/feedback": "./src/api/feedback.ts",
     "./ThemeMenu": "./src/ThemeMenu/index.astro",
     "./SunMoon": "./src/SunMoon/index.astro",
