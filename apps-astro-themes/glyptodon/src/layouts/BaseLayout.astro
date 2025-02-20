@@ -1,7 +1,6 @@
 ---
 import HeadContent from '#components/HeadContent.astro';
-import Header from '#components/Header.astro';
-import Footer from '#components/Footer.astro';
+
 import { CONFIG } from '../config';
 
 type Props = {
@@ -22,10 +21,6 @@ const {
     <HeadContent title={title} description={description} image={image} />
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <slot />
   </body>
 </html>

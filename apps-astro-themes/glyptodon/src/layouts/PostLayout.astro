@@ -1,0 +1,93 @@
+---
+import HeadContent from '#components/HeadContent.astro';
+import Header from '#components/Header.astro';
+import Footer from '#components/Footer.astro';
+import Breadcrumbs from '#components/Breadcrumbs.astro';
+import { CONFIG } from '../config';
+import { formatDate } from '#utils/date.ts';
+import Layout from './BaseLayout.astro';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+// type Props = {
+//   title?: string;
+//   description?: string;
+//   image?: string;
+//   post:
+// };
+// const {
+//   title = CONFIG.site_title,
+//   description = CONFIG.description,
+
+//   image = '/og-default.jpg',
+// } = Astro.props;
+
+const { post } = Astro.props;
+const { title, description, id } = post.data;
+---
+
+<Layout title={title} description={description}>
+  <Header />
+  <main>
+    <Breadcrumbs path={['posts', post.id]} />
+    <article class="page-content">
+      <header class="post-header">
+        <h1>{post.data.title}</h1>
+        <hr />
+        <div class="post-meta">
+          <time datetime={post.data.publicationDate.toISOString()}>
+            {formatDate(post.data.publicationDate)}
+          </time>
+          {
+            post.data.category && (
+              <span class="category">{post.data.category}</span>
+            )
+          }
+          By {post.data.author}
+        </div>
+      </header>
+
+      <slot />
+    </article>
+  </main>
+  <Footer />
+
+  <Layout />
+</Layout>
+
+<style>
+  .post {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .post-header {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: var(--step-4);
+    margin: 0 0 1rem;
+    color: var(--color-text-base);
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    color: var(--color-text-base);
+    font-size: var(--step--1);
+    align-items: center;
+  }
+
+  .category {
+    padding: 0.5em;
+    text-transform: capitalize;
+    background: var(--color-card);
+  }
+
+  .page-content :global(p:first-of-type) {
+    font-size: var(--step-1);
+    color: var(--color-text-muted);
+  }
+</style>

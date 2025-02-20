@@ -5,7 +5,7 @@ const PATHS = {
   posts: '/posts',
   finds: '/finds',
   error404: '/404',
-}
+};
 
 const CONFIG = {
   site_title: 'Jane Doe | Graphic Designer',
@@ -15,4 +15,4 @@ const CONFIG = {
   description: 'Welcome to my blog!',
 } as const;
 
-export { CONFIG, PATHS}
+export { CONFIG, PATHS };

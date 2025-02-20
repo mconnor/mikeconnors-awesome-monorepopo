@@ -14,5 +14,5 @@ export default defineConfig({
       theme: 'material-theme-darker',
       langs: [],
     },
-  }
+  },
 });
