@@ -3,11 +3,11 @@ import HeadContent from '#components/HeadContent.astro';
 
 import { CONFIG } from '../config';
 
-type Props = {
+interface Props {
   title?: string;
   description?: string;
   image?: string;
-};
+}
 const {
   title = CONFIG.site_title,
   description = CONFIG.description,

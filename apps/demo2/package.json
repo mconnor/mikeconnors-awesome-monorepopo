@@ -42,6 +42,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^2.0.0",
     "@repo/typescript-config": "workspace:^2.0.0",
+    "@types/node": "catalog:",
     "autoprefixer": "catalog:",
     "cssnano": "catalog:",
     "eslint": "catalog:",

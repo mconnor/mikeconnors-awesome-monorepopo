@@ -24,6 +24,7 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/node": "catalog:",
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/styles": "workspace:*",

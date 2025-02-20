@@ -67,6 +67,7 @@
     "@repo/typescript-config": "workspace:^",
     "@types/eslint-config-prettier": "^6.11.3",
     "@types/eslint__js": "^8.42.3",
+    "@types/node": "catalog:",
     "@webcomponents/template-shadowroot": "^0.2.1",
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",

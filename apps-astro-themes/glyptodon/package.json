@@ -33,6 +33,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"

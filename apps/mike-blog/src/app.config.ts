@@ -13,7 +13,11 @@ export enum Links {
   TWITTER = 'https://www.twitter.com/mikeconnor504',
 }
 
-export type navLinkType = { label: string; href: string; icon: string };
+export interface navLinkType {
+  label: string;
+  href: string;
+  icon: string;
+}
 export const navLinks: navLinkType[] = [
   { label: 'Home', href: '/', icon: 'home' },
   { label: 'Now', href: '/now', icon: 'home' },
