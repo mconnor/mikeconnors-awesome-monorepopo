@@ -80,7 +80,6 @@
     "postcss-nesting": "^13.0.1",
     "postcss-pow": "^1.0.1",
     "prettier-plugin-astro": "^0.14.1",
-    "rollup-plugin-visualizer": "^5.14.0",
     "stylelint": "^16.14.1",
     "stylelint-config-html": "^1.1.0",
     "typescript": "^5.7.3",

@@ -3,7 +3,6 @@ import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   outDir: 'dist',
@@ -14,14 +13,6 @@ export default defineConfig({
     ssr: {
       noExternal: ['open-props'],
     },
-    plugins: [
-      visualizer({
-        emitFile: true,
-        filename: 'stats.html',
-        template: 'sunburst',
-        open: true,
-      }),
-    ],
   },
 
   // env: {
