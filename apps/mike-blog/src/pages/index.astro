@@ -10,11 +10,11 @@ export const prerender = true;
 // }
 import Frame from '@repo/layout-webcomponents/Frame';
 import Stack from '@repo/layout-webcomponents/Stack';
-import Cluster from '@repo/layout-webcomponents/Cluster';
+// import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
 import Clock from '@repo/ui-lit/Clock';
 import { Image } from 'astro:assets';
-
+import Andy from '#assets/andy-og.webp';
 // import Andy from '#assets/andyBushes.jpg';
 import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
@@ -30,12 +30,10 @@ import Hero from '#components/Hero.astro';
       <Box>
         <Frame ratio="16:9">
           <Image
-            src="/images/andy-og.jpg"
+            src={Andy}
             layout="responsive"
             priority
             alt="A description of my image."
-            width={1200}
-            height={630}
           />
         </Frame>
         <h3>This is my dog</h3></Box
