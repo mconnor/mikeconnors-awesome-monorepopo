@@ -116,10 +116,16 @@
 
       if (target?.matches('.image')) {
         const index = [...thumbnails].indexOf(target);
-        carousel.goToSlide(index);
+        carousel!.goToSlide(index);
       }
     });
 
+
+
+
+
+
+    
     carousel?.addEventListener('wa-slide-change', (e) => {
       const slideIndex = e.detail.index;
 

@@ -32,13 +32,13 @@ import Box from '@repo/ui-lit/Box';
 </Layout>
 
 <script>
-  import { registerIconLibrary } from 'https://early.webawesome.com/webawesome@3.0.0-alpha.10/dist/webawesome.js';
+  import { registerIconLibrary } from '/dist/webawesome.js';
   const ICON_LIBRARY = 'tabler';
 
   registerIconLibrary('tabler', {
-    resolver: (name) =>
+    resolver: (name: string) =>
       `https://cdn.jsdelivr.net/npm/@${ICON_LIBRARY}/icons@1.68.0/icons/${name}.svg`,
-    mutator: (svg) => {
+    mutator: (svg: SVGElement) => {
       svg.style.fill = 'none';
       svg.setAttribute('stroke', 'currentColor');
     },

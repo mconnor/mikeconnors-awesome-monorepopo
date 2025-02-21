@@ -1,5 +1,5 @@
 ---
-// export const prerender = true;
+export const prerender = true;
 
 // import { fade } from 'astro:transitions';
 // interface ImageMetadata {
@@ -30,12 +30,12 @@ import Hero from '#components/Hero.astro';
       <Box>
         <Frame ratio="16:9">
           <Image
-            src={AndyMud}
+            src="/images/andy-og.jpg"
             layout="responsive"
-            width={800}
-            height={600}
             priority
             alt="A description of my image."
+            width={1200}
+            height={630}
           />
         </Frame>
         <h3>This is my dog</h3></Box

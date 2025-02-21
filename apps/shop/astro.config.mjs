@@ -11,10 +11,6 @@ export default defineConfig({
   integrations: [icon()],
   env: {
     schema: {
-      ESLINT_USE_FLAT_CONFIG: envField.string({
-        context: 'client',
-        access: 'public',
-      }),
       ENABLE_EXPERIMENTAL_COREPACK: envField.string({
         context: 'server',
         access: 'public',
