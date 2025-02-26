@@ -102,5 +102,6 @@
   "terminal.integrated.scrollback": 10000,
   "[properties]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  }
+  },
+  "cSpell.words": ["choco"]
 }
