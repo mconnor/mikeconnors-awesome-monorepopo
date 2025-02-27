@@ -1,0 +1,16 @@
+---
+import Button from '../components/Button.astro';
+
+import Layout from '../layouts/Layout.astro';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
+---
+
+<Layout title="Tailwind Blog">
+  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <Button>Tailwind Button in Astro!</Button>
+  <a href="/markdown-page" class="p-4 underline"
+    >Markdown is also supported...</a
+  >
+</Layout>
