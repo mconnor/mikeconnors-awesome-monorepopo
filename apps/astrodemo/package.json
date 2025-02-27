@@ -25,16 +25,16 @@
     "@astrojs/check": "catalog:",
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
-    "@astrojs/vercel": "^8.0.7",
+    "@astrojs/vercel": "^8.1.0",
     "@repo/astro-wc": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/scripts": "workspace:^",
     "@repo/styles": "workspace:*",
     "@sentry/astro": "^8.55.0",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "^5.3.0",
+    "astro": "^5.4.0",
     "lit": "catalog:",
-    "open-props": "^1.7.12"
+    "open-props": "^1.7.13"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
@@ -47,6 +47,6 @@
     "lightningcss": "^1.29.1",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
-    "vite": "^6.1.1"
+    "vite": "^6.2.0"
   }
 }

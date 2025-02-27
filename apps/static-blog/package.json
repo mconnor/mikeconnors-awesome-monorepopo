@@ -23,15 +23,19 @@
     "force": " astro build -- --force"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.0.8",
+    "@astrojs/mdx": "^4.1.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/vercel": "^8.0.7",
-    "astro": "^5.3.0"
+    "@astrojs/vercel": "^8.1.0",
+    "@tailwindcss/vite": "^4.0.9",
+    "astro": "^5.4.0",
+    "open-props": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",

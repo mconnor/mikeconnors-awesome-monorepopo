@@ -24,12 +24,12 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@types/node": "catalog:",
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:^",
-    "astro": "^5.3.0",
+    "@types/node": "catalog:",
+    "astro": "^5.4.0",
     "eslint": "catalog:",
     "lit": "catalog:",
     "prettier-plugin-astro": "catalog:",

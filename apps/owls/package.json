@@ -18,11 +18,11 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/vercel": "^8.0.7",
+    "@astrojs/vercel": "^8.1.0",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
-    "astro": "^5.3.0",
+    "astro": "^5.4.0",
     "lit": "catalog:"
   },
   "devDependencies": {

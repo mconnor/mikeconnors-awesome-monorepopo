@@ -37,7 +37,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
-    "tsup": "^8.3.6",
+    "tsup": "^8.4.0",
     "typescript": "catalog:"
   },
   "peerDependencies": {
