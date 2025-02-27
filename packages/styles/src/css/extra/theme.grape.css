@@ -1,0 +1,19 @@
+:where(html) {
+  --brand-grape: var(--purple-5);
+
+  --link-grape: var(--purple-12);
+  --link-visited-grape: var(--purple-12);
+
+  --text-1-grape: var(--purple-9);
+  --text-2-grape: var(--purple-7);
+
+  --surface-1-grape: var(--purple-0);
+  --surface-2-grape: var(--purple-1);
+  --surface-3-grape: var(--purple-2);
+  --surface-4-grape: var(--purple-3);
+
+  --scrollthumb-color: var(--purple-6);
+
+  --surface-shadow-grape: var(--purple-12-hsl);
+  --shadow-strength-grape: 2%;
+}

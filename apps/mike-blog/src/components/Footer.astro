@@ -4,7 +4,7 @@ import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
 ---
 
-<Box invert>
+<footer>
   <Cluster align="flex-end" justify="space-around">
     <wa-icon-button family="brands" name="github" href={Links.GITHUB}
     ></wa-icon-button>
@@ -13,9 +13,13 @@ import Box from '@repo/ui-lit/Box';
     <wa-icon-button family="brands" name="linkedin" href={Links.LINKEDIN}
     ></wa-icon-button>
   </Cluster>
-</Box>
+</footer>
 
 <style>
+  footer {
+    padding: 10px;
+    background-color: var(--surface-4);
+  }
   wa-icon-button {
     font-size: var(--s2);
   }

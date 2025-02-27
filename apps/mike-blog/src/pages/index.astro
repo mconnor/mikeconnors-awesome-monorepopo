@@ -22,23 +22,20 @@ import Hero from '#components/Hero.astro';
 ---
 
 <Layout maxW="100%">
-  <Box invert padding="0" slot="hero"><Hero /></Box>
-
-  <Stack space="0">
-    <div style="background: var(--surface-4)">
-      <Clock />
-      <Box>
-        <Frame ratio="16:9">
-          <Image
-            src={Andy}
-            layout="responsive"
-            priority
-            alt="A description of my image."
-          />
-        </Frame>
-        <h3>This is my dog</h3></Box
-      >
-    </div>
+  <Stack space="0" splitAfter={2}>
+    <Box invert padding="0"><Hero /></Box>
+    <!-- <Clock /> -->
+    <Box borderWidth="0" padding="0">
+      <Frame ratio="16:9">
+        <Image
+          src={Andy}
+          layout="responsive"
+          priority
+          alt="A description of my image."
+        />
+      </Frame>
+      <h3>This is my dog</h3></Box
+    >
   </Stack>
 </Layout>
 

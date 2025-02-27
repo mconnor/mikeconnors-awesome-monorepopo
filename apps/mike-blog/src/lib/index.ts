@@ -1,4 +1,4 @@
-export const generateRandomString = (len = 8) => {
+const generateRandomString = (len = 8) => {
   // Math.floor(Math.random() * 13) + 3 // Generate a random length between 3 and 15
   let result = '';
   const characters =
@@ -9,13 +9,21 @@ export const generateRandomString = (len = 8) => {
   return result;
 };
 
-export const generateSlug = (title: string) => {
+const generateSlug = (title: string) => {
   return title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)+/g, '');
 };
 
-export const capitalize = (str: string) => {
+const capitalize = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
+
+const getPaths = (url: string) => {
+  return url === '/' ?
+      'Home'.toUpperCase()
+    : url.match(/[^/]+/g)?.[0].toUpperCase();
+};
+
+export { getPaths, capitalize, generateSlug, generateRandomString };

@@ -49,13 +49,13 @@ const isTest = process.env.NODE_ENV === 'test';
 <meta property="twitter:description" content={description} />
 {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 <meta name="color-scheme" content="dark light dim grape choco toucan" />
-<link
+<!-- <link
   rel="stylesheet"
-  href="https://early.webawesome.com/webawesome@3.0.0-alpha.10/dist/styles/themes/default.css"
-/>
+  href="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/styles/themes/default.css"
+/> -->
 <script
   type="module"
-  src="https://early.webawesome.com/webawesome@3.0.0-alpha.10/dist/webawesome.loader.js"
+  src="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/webawesome.loader.js"
 ></script>
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
 
@@ -84,27 +84,3 @@ const isTest = process.env.NODE_ENV === 'test';
 <!-- {(isDev || isTest) && <DevModeStyle />}
 <GlobalStyle /> -->
 <DevModeStyle />
-
-<!-- <style>
-  :where(html) {
-    --brand: var(--brand-telegram);
-  }
-  --brand-bg-gradient: linear-gradient(
-    to bottom,
-    var(--purple-3),
-    var(--violet-3),
-    var(--indigo-3),
-    var(--cyan-3)
-  );
-</style> -->
-
-<!-- --max-inline-body: calc(100vw - (var(--size-8) * 2));
-  --brand-bg-gradient: linear-gradient(to bottom, var(--purple-3), var(--violet-3), var(--indigo-3), var(--cyan-3));
-
-  @media (--md-n-below) {
-    --max-inline-body: calc(100vw - (var(--size-3) * 2));
-  }
-
-  @nest [data-theme="light"] & {
-    --brand-bg-gradient: linear-gradient(to bottom, var(--purple-6), var(--violet-6), var(--indigo-6), var(--cyan-6));
-  } -->

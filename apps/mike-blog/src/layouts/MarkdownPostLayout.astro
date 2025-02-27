@@ -46,67 +46,7 @@ const { name } = authorResults.data;
       {format(pubDate, 'd MMM, yyyy')}
     </Box>
   </div> -->
-
-  <wa-card with-image with-footer class="card-overview" class="card-overview">
-    <ImageWrapper slot="image" src={cover.src} alt={cover.alt} />
-    <wa-button-group label="Alignment" variant="brand">
-      <wa-button>Left</wa-button>
-      <wa-button>Center</wa-button>
-      <wa-button>Right</wa-button>
-    </wa-button-group>
-
-    <br /><br />
-
-    <wa-button-group label="Alignment" variant="success">
-      <wa-button>Left</wa-button>
-      <wa-button>Center</wa-button>
-      <wa-button>Right</wa-button>
-    </wa-button-group>
-
-    <br /><br />
-
-    <wa-button-group label="Alignment">
-      <wa-button>Left</wa-button>
-      <wa-button>Center</wa-button>
-      <wa-button>Right</wa-button>
-    </wa-button-group>
-
-    <br /><br />
-
-    <wa-button-group label="Alignment" variant="warning">
-      <wa-button>Left</wa-button>
-      <wa-button>Center</wa-button>
-      <wa-button>Right</wa-button>
-    </wa-button-group>
-
-    <br /><br />
-
-    <wa-button-group label="Alignment" variant="danger">
-      <wa-button>Left</wa-button>
-      <wa-button>Center</wa-button>
-      <wa-button>Right</wa-button>
-    </wa-button-group>
-
-    <!-- <img
-      slot="image"
-      src="https://images.unsplash.com/photo-1547191783-94d5f8f6d8b1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
-      alt="A kitten walks towards camera on top of pallet."
-    /> -->
-    <!-- <ImageWrapper url={cover.src} alt={cover.alt} /> -->
-
-    <!-- <img slot="image" src={cover.src} } alt={cover.alt} } /> -->
-    <h3>{title}</h3>
-    <small>
-      Written by: {name},
-      {format(pubDate, 'd MMM, yyyy')}
-    </small>
-    <slot />
-
-    <div slot="footer">
-      {tags && <TagContainer tags={tags} />}
-      <wa-rating></wa-rating>
-    </div>
-  </wa-card>
+  <slot />
 </Layout>
 <style>
   .card-overview {

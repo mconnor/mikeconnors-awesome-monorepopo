@@ -1,7 +1,10 @@
 :where(html) {
   --brand-choco: var(--choco-5);
 
-  --text-1-choco: var(--choco-0);
+  --link-choco: var(--link-choco);
+  --link-visited-choco: var(--link-visited-choco);
+
+  --text-1-choco: var(--choco-1);
   --text-2-choco: var(--choco-2);
 
   --surface-1-choco: var(--choco-12);

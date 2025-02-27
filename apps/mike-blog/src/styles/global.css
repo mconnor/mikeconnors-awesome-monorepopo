@@ -17,9 +17,3 @@
     --border-color: var(--brand-dark);
   }
 } */
-
-:where(html) {
-  /* set brand colors; */
-  --brand-dark: var(--pink-2);
-  --brand-light: var(--pink-7);
-}

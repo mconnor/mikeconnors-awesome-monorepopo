@@ -1,12 +1,12 @@
 :where([data-theme='toucan'], .toucan, .toucan-theme) {
-  color-scheme: toucan;
+  color-scheme: light;
 
   --brand: var(--brand-toucan);
-  --accent: var(--accent-toucan);
+  /* --accent: var(--accent-toucan);
   --accent-hover: var(--accent-hover-toucan);
-  --accent-visited: var(--accent-visited-toucan);
+  --accent-visited: var(--accent-visited-toucan); */
 
-  --brand: var(--brand-toucan);
+  --link: var(--link-toucan);
 
   --link-visited: var(--link-visited-toucan);
 
@@ -18,5 +18,6 @@
   --surface-3: var(--surface-3-toucan);
   --surface-4: var(--surface-4-toucan);
 
-  --border-color: var(--brand-toucan);
+  --surface-shadow: var(--surface-shadow-toucan);
+  --shadow-strength: var(--shadow-strength-toucan);
 }

@@ -1,7 +1,7 @@
 :where([data-theme='choco'], .choco, .choco-theme) {
-  color-scheme: choco;
+  color-scheme: light;
 
-  --link: var(--indigo-3);
+  --link: var(--link-choco);
   --link-visited: var(--link-visited-choco);
 
   --text-1: var(--text-1-choco);
