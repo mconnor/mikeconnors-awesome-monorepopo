@@ -1,0 +1,55 @@
+---
+import Andy from '#assets/andy-og.webp';
+import Image from 'astro/components/Image.astro';
+
+import { link } from 'fs';
+
+interface Props {
+  href: string;
+  label: string;
+  imagePath: string;
+}
+
+const { href, label, imagePath } = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '../assets/*.{jpeg,jpg,png,gif,webp}',
+);
+console.log(images);
+
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif,webp}"`,
+  );
+---
+
+<div
+  class="mx-auto max-w-md overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md md:max-w-2xl"
+>
+  <div class="md:flex">
+    <div class="md:shrink-0">
+      <Image
+        slot="image"
+        class="h-48 w-full object-cover md:h-full md:w-48 p-2"
+        src={images[imagePath]()}
+        alt="Modern building architecture"
+      />
+    </div>
+    <div class="p-8">
+      <div
+        class="text-sm font-semibold tracking-wide text-indigo-500 uppercase dark:text-white"
+      >
+        <slot name="headline" />
+      </div>
+      <a
+        href={href}
+        class="mt-1 block text-lg leading-tight font-medium text-red-400 dark:text-red-100 hover:underline"
+      >
+        {label}
+      </a>
+      <p class="mt-2 text-gray-500">
+        <slot name="description" />
+      </p>
+    </div>
+  </div>
+</div>

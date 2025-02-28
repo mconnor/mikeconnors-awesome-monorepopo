@@ -14,7 +14,11 @@
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
   },
+  "imports": {
+    "#*": "./src/*"
+  },
   "dependencies": {
+    "@repo/astro-wc": "workspace:^",
     "@astrojs/check": "catalog:",
     "@astrojs/mdx": "^4.1.0",
     "@tailwindcss/vite": "^4.0.9",
@@ -29,6 +33,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "catalog:"
   }
 }

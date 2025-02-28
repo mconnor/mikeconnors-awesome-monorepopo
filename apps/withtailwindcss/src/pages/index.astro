@@ -1,27 +1,82 @@
 ---
 import '../styles/global.css';
+import Card from '#components/Card.astro';
 // Component Imports
-import Button from '../components/Button.astro';
+// import Button from '#components/Button.astro';
+
+import Layout from '#layouts/Layout.astro';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro + TailwindCSS</title>
-  </head>
-
-  <body>
-    <div class="grid place-items-center h-screen content-center">
-      <Button>Tailwind Button in Astro!</Button>
-      <a href="/markdown-page" class="p-4 underline"
-        >Markdown is also supported...</a
-      >
-    </div>
-  </body>
-</html>
+<Layout>
+  <div class="flex flex-wrap justify-center">
+    <Card
+      href="#"
+      label="Incredible accommodation for your team"
+      imagePath="../assets/andy-og.webp"
+    >
+      <Fragment slot="headline">Company retreats</Fragment>
+      <Fragment slot="description">
+        Looking to take your team away on a retreat to enjoy awesome food and
+        take in some sunshine? We have a list of places to do just that.
+      </Fragment>
+    </Card>
+    <Card
+      href="#"
+      label="Incredible accommodation for your team"
+      imagePath="../assets/andy-og.webp"
+    >
+      <Fragment slot="headline">Company retreats</Fragment>
+      <Fragment slot="description">
+        Looking to take your team away on a retreat to enjoy awesome food and
+        take in some sunshine? We have a list of places to do just that.
+      </Fragment>
+    </Card>
+    <Card
+      href="#"
+      label="Incredible accommodation for your team"
+      imagePath="../assets/andy-og.webp"
+    >
+      <Fragment slot="headline">Company retreats</Fragment>
+      <Fragment slot="description">
+        Looking to take your team away on a retreat to enjoy awesome food and
+        take in some sunshine? We have a list of places to do just that.
+      </Fragment>
+    </Card>
+    <Card
+      href="#"
+      label="Incredible accommodation for your team"
+      imagePath="../assets/andy-og.webp"
+    >
+      <Fragment slot="headline">Company retreats</Fragment>
+      <Fragment slot="description">
+        Looking to take your team away on a retreat to enjoy awesome food and
+        take in some sunshine? We have a list of places to do just that.
+      </Fragment>
+    </Card>
+    <Card
+      href="#"
+      label="Incredible accommodation for your team"
+      imagePath="../assets/andy-og.webp"
+    >
+      <Fragment slot="headline">Company retreats</Fragment>
+      <Fragment slot="description">
+        Looking to take your team away on a retreat to enjoy awesome food and
+        take in some sunshine? We have a list of places to do just that.
+      </Fragment>
+    </Card>
+    <Card
+      href="#"
+      label="Incredible accommodation for your team"
+      imagePath="../assets/andy-og.webp"
+    >
+      <Fragment slot="headline">Company retreats</Fragment>
+      <Fragment slot="description">
+        Looking to take your team away on a retreat to enjoy awesome food and
+        take in some sunshine? We have a list of places to do just that.
+      </Fragment>
+    </Card>
+  </div>
+</Layout>
