@@ -1,0 +1,34 @@
+{
+  "name": "@app/withtailwindcss",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "astro-check": "astro check",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "inspect": "eslint . --inspect-config",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:",
+    "@astrojs/mdx": "^4.1.0",
+    "@tailwindcss/vite": "^4.0.9",
+    "@types/canvas-confetti": "^1.9.0",
+    "astro": "^5.4.0",
+    "canvas-confetti": "^1.9.3",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "catalog:"
+  }
+}
