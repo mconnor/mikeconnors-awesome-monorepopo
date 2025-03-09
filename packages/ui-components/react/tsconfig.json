@@ -3,8 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": ".",
-    "strict": true,
-    "esModuleInterop": true,
-    "rootDirs": ["src"]
-  }
+    "strict": true
+  },
+  "include": ["**/*"]
 }

@@ -45,6 +45,9 @@ catalogs:
     add:
       specifier: ^2.0.6
       version: 2.0.6
+    astro:
+      specifier: ^5.4.2
+      version: 5.4.2
     astro-icon:
       specifier: ^1.1.5
       version: 1.1.5
@@ -142,7 +145,7 @@ importers:
         specifier: ^0.1.7
         version: 0.1.7(@types/node@22.13.10)(jiti@2.4.2)(rollup@4.35.0)(typescript@5.8.2)(yaml@2.7.0)
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       astro-embed:
         specifier: ^0.9.0
@@ -206,7 +209,7 @@ importers:
         specifier: 'catalog:'
         version: 0.2.1
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       lit:
         specifier: 'catalog:'
@@ -291,7 +294,7 @@ importers:
         specifier: 'catalog:'
         version: 0.2.1
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       lit:
         specifier: 'catalog:'
@@ -349,7 +352,7 @@ importers:
         specifier: ^9.1.2
         version: 9.1.2(astro@5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0))
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
     devDependencies:
       '@repo/eslint-config':
@@ -416,7 +419,7 @@ importers:
         specifier: npm:@jsr/std__toml@^1.0.2
         version: '@jsr/std__toml@1.0.2'
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       astro-icon:
         specifier: ^1.1.5
@@ -552,7 +555,7 @@ importers:
         specifier: 'catalog:'
         version: 2.0.6
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       lit:
         specifier: 'catalog:'
@@ -640,7 +643,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui-components/ui-lit
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       lit:
         specifier: 'catalog:'
@@ -671,7 +674,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
     devDependencies:
       '@repo/eslint-config':
@@ -708,7 +711,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       preact:
         specifier: ^10.26.4
@@ -742,7 +745,7 @@ importers:
         specifier: ^4.0.12
         version: 4.0.12(vite@6.2.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.37.0)(yaml@2.7.0))
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       astro-icon:
         specifier: 'catalog:'
@@ -794,7 +797,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/styles
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       sharp:
         specifier: 'catalog:'
@@ -840,7 +843,7 @@ importers:
         specifier: ^4.0.12
         version: 4.0.12(vite@6.2.1(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(terser@5.37.0)(yaml@2.7.0))
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       open-props:
         specifier: 'catalog:'
@@ -883,7 +886,7 @@ importers:
         specifier: ^1.9.0
         version: 1.9.0
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       canvas-confetti:
         specifier: ^1.9.3
@@ -932,7 +935,7 @@ importers:
         specifier: ^1.9.0
         version: 1.9.0
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       canvas-confetti:
         specifier: ^1.9.3
@@ -1101,7 +1104,7 @@ importers:
         specifier: ^6.11.3
         version: 6.11.3
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       eslint:
         specifier: 'catalog:'
@@ -1134,7 +1137,7 @@ importers:
         specifier: workspace:^
         version: link:../config-typescript
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       eslint:
         specifier: 'catalog:'
@@ -1170,7 +1173,7 @@ importers:
         specifier: ^6.11.3
         version: 6.11.3
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       eslint:
         specifier: 'catalog:'
@@ -1295,7 +1298,7 @@ importers:
         specifier: 'catalog:'
         version: 22.13.10
       astro:
-        specifier: ^5.4.2
+        specifier: 'catalog:'
         version: 5.4.2(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.2)(rollup@4.35.0)(terser@5.37.0)(typescript@5.8.2)(yaml@2.7.0)
       eslint:
         specifier: 'catalog:'

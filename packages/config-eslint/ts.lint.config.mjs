@@ -3,7 +3,7 @@ import js from '@eslint/js';
 
 import eslintPluginAstro from 'eslint-plugin-astro';
 // import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
-// import turboPlugin from 'eslint-plugin-turbo';
+
 // import onlyWarn from 'eslint-plugin-only-warn';
 import tseslint from 'typescript-eslint';
 
@@ -25,6 +25,7 @@ export default tseslint.config(
       },
     },
   },
+
   // ...turboPlugin['flat/recommended'],
   // ...turboConfig,
   // Global config
@@ -103,6 +104,7 @@ export default tseslint.config(
     files: ['**/*.js'],
     extends: [tseslint.configs.disableTypeChecked],
   },
+
   // ,
   // {
   //   files: ['**/*.ts'],
@@ -125,14 +127,7 @@ export default tseslint.config(
   //     '@typescript-eslint/no-empty-function': 'warn',
   //   },
   // }
-  // {
-  //   plugins: {
-  //     turboPlugin,
-  //   },
-  //   rules: {
-  //     'turbo/no-undeclared-env-vars': 'error',
-  //   },
-  // },
+
   eslintConfigPrettier,
 );
 
