@@ -19,10 +19,10 @@
     "@astrojs/check": "catalog:",
     "@astrojs/markdoc": "^0.12.10",
     "@astrojs/starlight": "^0.32.2",
-    "@astrojs/starlight-markdoc": "^0.2.0",
+    "@astrojs/starlight-markdoc": "^0.3.0",
     "@repo/styles": "workspace:*",
-    "astro": "^5.4.0",
-    "sharp": "^0.33.5"
+    "astro": "catalog:",
+    "sharp": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",

@@ -36,7 +36,7 @@
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:^",
     "@types/eslint-config-prettier": "^6.11.3",
-    "astro": "^5.4.0",
+    "astro": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"

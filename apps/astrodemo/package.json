@@ -25,14 +25,14 @@
     "@astrojs/check": "catalog:",
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
-    "@astrojs/vercel": "^8.1.0",
+    "@astrojs/vercel": "^8.1.1",
     "@repo/astro-wc": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/scripts": "workspace:^",
     "@repo/styles": "workspace:*",
     "@sentry/astro": "^8.55.0",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "^5.4.0",
+    "astro": "catalog:",
     "lit": "catalog:",
     "open-props": "^1.7.13"
   },
@@ -44,9 +44,9 @@
     "browserslist": "^4.24.4",
     "cssnano": "catalog:",
     "eslint": "catalog:",
-    "lightningcss": "^1.29.1",
+    "lightningcss": "^1.29.2",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
-    "vite": "^6.2.0"
+    "vite": "^6.2.1"
   }
 }

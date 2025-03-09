@@ -18,13 +18,14 @@
     "#*": "./src/*"
   },
   "dependencies": {
-    "@repo/astro-wc": "workspace:^",
     "@astrojs/check": "catalog:",
     "@astrojs/mdx": "^4.1.0",
-    "@tailwindcss/vite": "^4.0.9",
+    "@repo/astro-wc": "workspace:^",
+    "@tailwindcss/vite": "^4.0.12",
     "@types/canvas-confetti": "^1.9.0",
-    "astro": "^5.4.0",
+    "astro": "catalog:",
     "canvas-confetti": "^1.9.3",
+    "open-props": "catalog:",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {

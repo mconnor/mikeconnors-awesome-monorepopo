@@ -31,7 +31,7 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
-    "eslint": "^9.21.0",
+    "eslint": "^9.22.0",
     "eslint-config-preact": "^1.5.0",
     "prettier-plugin-astro": "catalog:",
     "tsup": "^8.4.0",

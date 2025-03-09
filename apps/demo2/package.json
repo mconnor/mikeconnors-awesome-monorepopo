@@ -25,7 +25,7 @@
     "@astrojs/check": "catalog:",
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
-    "@astrojs/vercel": "^8.1.0",
+    "@astrojs/vercel": "^8.1.1",
     "@repo/astro-wc": "workspace:*",
     "@repo/eslint-config": "workspace:^",
     "@repo/layout-webcomponents": "workspace:*",
@@ -35,7 +35,7 @@
     "@repo/ui-lit": "workspace:*",
     "@sentry/astro": "^8.55.0",
     "@webcomponents/template-shadowroot": "catalog:",
-    "astro": "^5.4.0",
+    "astro": "catalog:",
     "lit": "catalog:",
     "open-props": "^1.7.13"
   },
@@ -54,6 +54,6 @@
     "postcss-pow": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
-    "vite": "^6.2.0"
+    "vite": "^6.2.1"
   }
 }

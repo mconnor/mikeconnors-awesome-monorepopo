@@ -29,7 +29,7 @@
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
-    "astro": "^5.4.0",
+    "astro": "catalog:",
     "eslint": "catalog:",
     "lit": "catalog:",
     "prettier-plugin-astro": "catalog:",

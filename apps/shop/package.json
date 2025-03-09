@@ -26,8 +26,8 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@tailwindcss/vite": "^4.0.9",
-    "astro": "^5.4.0",
+    "@tailwindcss/vite": "^4.0.12",
+    "astro": "catalog:",
     "astro-icon": "catalog:",
     "tailwindcss": "catalog:"
   },
