@@ -19,7 +19,7 @@
     "@astrojs/preact": "^4.0.5",
     "@preact/signals": "^2.0.1",
     "@repo/layout-webcomponents": "workspace:*",
-    "astro": "^5.4.2",
+    "astro": "catalog:",
     "preact": "^10.26.4",
     "typescript": "catalog:"
   },
