@@ -1,9 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "./base.json",
+  "extends": "./next-base.json",
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
+    "jsx": "react-jsx"
   }
 }

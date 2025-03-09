@@ -42,6 +42,7 @@
     "${configDir}/node_modules",
     "${configDir}/.astro",
     "${configDir}/dist",
+    "${configDir}/build",
     "${configDir}/.turbo",
     "${configDir}/.vercel",
     "${configDir}/.next",
