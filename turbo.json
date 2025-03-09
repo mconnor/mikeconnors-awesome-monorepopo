@@ -3,7 +3,7 @@
   "globalEnv": [
     "NODE_ENV",
     "MODE",
-    "PROCUCTION",
+    "PRODUCTION",
     "DEV",
     "PROD",
     "import.meta.env.PROD",
@@ -18,7 +18,7 @@
       "outputs": ["dist/**"]
     },
     "lint": {
-      "dependsOn": ["transit"]
+      "dependsOn": ["^lint"]
     },
     "transit": {
       "dependsOn": ["^transit"]
