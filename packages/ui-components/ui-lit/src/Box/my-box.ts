@@ -14,21 +14,19 @@ import { styleMap } from 'lit/directives/style-map.js';
  * @property {Boolean} invert
  */
 
-const mainColor = css`var(--text-1, blue)`;
-const bgColor = css`var(--surface-1, yellow)`;
+const mainColor = css`var(--text-1, --blue-6)`;
+const bgColor = css`var(--surface-2,--orange-6)`;
 
 const styles = css`
   :host {
     display: block;
     outline: 0.125rem solid transparent;
     outline-offset: -0.125rem;
+    color: inherit;
     background-color: inherit;
   }
 
   ::slotted {
-    background-color: inherit;
-  }
-  ::slotted(*) {
     color: inherit;
     background-color: inherit;
   }

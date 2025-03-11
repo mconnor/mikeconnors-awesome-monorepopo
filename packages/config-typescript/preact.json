@@ -4,13 +4,8 @@
   "compilerOptions": {
     "skipLibCheck": true,
     "baseUrl": "${configDir}/",
-    "paths": {
-      "react": ["${configDir}/node_modules/preact/compat/"],
-      "react/jsx-runtime": ["${configDir}/node_modules/preact/jsx-runtime"],
-      "react-dom": ["${configDir}/node_modules/preact/compat/"],
-      "react-dom/*": ["${configDir}/node_modules/preact/compat/*"]
-    },
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
-  }
+  },
+  "include": ["${configDir}/src/**/ts", "${configDir}/src/**/tsx"]
 }

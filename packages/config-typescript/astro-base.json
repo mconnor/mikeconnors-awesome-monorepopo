@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "outDir": "${configDir}/dist",
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
     "module": "ESNext",
@@ -30,13 +31,13 @@
     "strictNullChecks": true
   },
   "include": [
-    "${configDir}/**/*.astro",
-    "${configDir}/**/*.ts",
+    "${configDir}/src/**/*.astro",
+    "${configDir}/src/**/*.ts",
     "${configDir}/*.d.ts",
-    "${configDir}/**/*.tsx",
-    "${configDir}/**/*.js",
-    "${configDir}/*.d.ts",
-    "${configDir}/*.config.*"
+    "${configDir}/src/**/*.tsx",
+    "${configDir}/src/**/*.js",
+    "${configDir}/*.config.ts",
+    "${configDir}/*.config.mjs"
   ],
   "exclude": [
     "${configDir}/node_modules",
@@ -45,8 +46,11 @@
     "${configDir}/build",
     "${configDir}/.turbo",
     "${configDir}/.vercel",
-    "${configDir}/.next",
     "${configDir}/cache-directory"
   ],
-  "files": ["${configDir}/.astro/types.d.ts", "${configDir}/eslint.config.mjs"]
+  "files": [
+    "${configDir}/.astro/types.d.ts",
+    "${configDir}/astro.config.mjs",
+    "${configDir}/eslint.config.mjs"
+  ]
 }

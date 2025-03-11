@@ -1,7 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
-  "compilerOptions": {
+  "compilerOptions": {,
+        "outDir": "${configDir}/dist",
     "useDefineForClassFields": true,
     "lib": ["ESNext", "DOM"],
     "target": "ESNext",
@@ -28,7 +29,8 @@
     "allowArbitraryExtensions": true,
     "strictNullChecks": true // this is new
   },
-  "include": ["${configDir}/**/*"],
+  "files":[ "${configDir}/eslint.config.mjs"],
+  "include": ["${configDir}/src/**/*"],
   "exclude": [
     "${configDir}/node_modules",
     "${configDir}/.astro",
