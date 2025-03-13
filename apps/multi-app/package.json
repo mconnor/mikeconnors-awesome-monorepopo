@@ -23,7 +23,7 @@
     "@astrojs/preact": "catalog:",
     "@astrojs/react": "catalog:",
     "@astrojs/svelte": "7.0.5",
-    "@astrojs/vercel": "^8.1.1",
+    "@astrojs/vercel": "^8.1.2",
     "@astrojs/vue": "^5.0.7",
     "@preact/signals": "catalog:",
     "@repo/layout-webcomponents": "workspace:*",
@@ -37,7 +37,9 @@
     "astro": "catalog:",
     "lit": "catalog:",
     "open-props": "^1.7.13",
-    "preact": "catalog:"
+    "preact": "catalog:",
+    "svelte": "catalog:svelte5",
+    "vue": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",

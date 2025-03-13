@@ -25,7 +25,7 @@
     "@astrojs/check": "catalog:",
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
-    "@astrojs/vercel": "^8.1.1",
+    "@astrojs/vercel": "^8.1.2",
     "@repo/astro-wc": "workspace:*",
     "@repo/eslint-config": "workspace:^",
     "@repo/layout-webcomponents": "workspace:*",

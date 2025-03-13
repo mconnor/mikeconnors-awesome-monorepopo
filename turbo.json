@@ -33,7 +33,8 @@
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "dependsOn": ["^build"]
     },
     "preview": {
       "cache": true,
@@ -54,6 +55,7 @@
     },
     "spell-check": {
       "inputs": ["**/*.md", "**/*.mdx"]
-    }
+    },
+    "clean": {}
   }
 }

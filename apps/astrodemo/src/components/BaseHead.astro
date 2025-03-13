@@ -1,6 +1,5 @@
 ---
 import DevModeStyle from '@repo/styles/DevModeStyle';
-import GlobalStyle from '@repo/styles/GlobalStyle';
 
 import { ClientRouter } from 'astro:transitions';
 
@@ -104,8 +103,8 @@ const isDev = import.meta.env.DEV;
 </script>
 
 <ClientRouter />
-{isDev && <DevModeStyle />}
-<GlobalStyle />
+
+<DevModeStyle />
 
 <style is:global>
   :not(:defined) {

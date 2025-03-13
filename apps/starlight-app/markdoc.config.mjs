@@ -17,3 +17,4 @@ export default defineMarkdocConfig({
     },
   ],
 });
+import markdoc from '@astrojs/markdoc';

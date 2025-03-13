@@ -2,14 +2,18 @@
   "name": "@repo/react",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "imports": {
     "#*": "./src/*"
   },
+  "type": "module",
   "exports": {
     "./counter": {
-      "types": "./dist/ReactCounter.js",
-      "import": "./dist/ReactCounter.js"
+      "types": "./src/Counter.tsx",
+      "default": "./dist/Counter.js"
+    },
+    "./form": {
+      "types": "./src/FeedbackForm.tsx",
+      "default": "./dist/FeedbackForm.js"
     }
   },
   "scripts": {

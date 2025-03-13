@@ -10,6 +10,7 @@
     "allowImportingTsExtensions": true,
     "moduleDetection": "force",
     "module": "ESNext",
+    "noEmit": true,
     "moduleResolution": "Bundler",
     "noUncheckedIndexedAccess": true,
     "resolveJsonModule": true,

@@ -27,8 +27,7 @@
     "./turbo.lint.config": "./turbo.lint.config.mjs"
   },
   "scripts": {
-    "format": "prettier . --write",
-    "types": "tsc"
+    "format": "prettier . --write"
   },
   "license": "MIT",
   "type": "module",
@@ -44,9 +43,9 @@
     "@eslint/js": "^9.22.0",
     "@eslint/json": "^0.10.0",
     "@eslint/markdown": "^6.3.0",
-    "@next/eslint-plugin-next": "^15.2.1",
+    "@next/eslint-plugin-next": "^15.2.2",
     "@repo/typescript-config": "workspace:^",
-    "@typescript-eslint/utils": "^8.26.0",
+    "@typescript-eslint/utils": "^8.26.1",
     "astro-eslint-parser": "^1.2.1",
     "eslint-config-preact": "^1.5.0",
     "eslint-config-prettier": "^10.1.1",
@@ -58,14 +57,14 @@
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-solid": "^0.14.5",
-    "eslint-plugin-svelte": "^3.0.3",
+    "eslint-plugin-svelte": "^3.1.0",
     "eslint-plugin-turbo": "^2.4.4",
     "eslint-plugin-vue": "^10.0.0",
     "eslint-plugin-wc": "^2.2.1",
     "globals": "^16.0.0",
     "prettier-plugin-astro": "catalog:",
     "svelte-eslint-parser": "^1.0.1",
-    "typescript-eslint": "^8.26.0",
+    "typescript-eslint": "^8.26.1",
     "vue-eslint-parser": "^10.1.1"
   }
 }

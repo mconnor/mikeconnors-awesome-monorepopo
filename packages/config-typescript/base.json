@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
-  "compilerOptions": {,
-        "outDir": "${configDir}/dist",
+  "compilerOptions": {
+    "outDir": "${configDir}/dist",
     "useDefineForClassFields": true,
     "lib": ["ESNext", "DOM"],
     "target": "ESNext",
@@ -29,7 +29,7 @@
     "allowArbitraryExtensions": true,
     "strictNullChecks": true // this is new
   },
-  "files":[ "${configDir}/eslint.config.mjs"],
+  "files": ["${configDir}/eslint.config.mjs"],
   "include": ["${configDir}/src/**/*"],
   "exclude": [
     "${configDir}/node_modules",

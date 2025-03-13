@@ -1,7 +1,9 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['./src/PreactCounter.tsx'],
+  entry: {
+    Counter: 'src/PreactCounter.tsx',
+  },
   format: ['esm'],
   external: ['preact'],
   banner: {
