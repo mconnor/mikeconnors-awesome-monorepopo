@@ -58,7 +58,6 @@
     "postcss-nesting": "^13.0.1",
     "postcss-pow": "^1.0.1",
     "prettier-plugin-astro": "catalog:",
-    "svelte": "catalog:svelte5",
     "svelte-preprocess": "catalog:svelte5",
     "typescript": "catalog:"
   }

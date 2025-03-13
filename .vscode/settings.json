@@ -11,6 +11,9 @@
     "source.fixAll.eslint": "never",
     "source.organizeImports": "never"
   },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "emmet.includeLanguages": {
     "astro": "html",
     "postcss": "css",
@@ -59,16 +62,6 @@
     "preact",
     "toml"
   ],
-  "github.copilot.enable": {
-    "javascript": true,
-    "typescript": true,
-    "zod": true,
-    "astro": true,
-    "react": true,
-    "preact": true,
-    "svelte": true,
-    "vue": true
-  },
   "breadcrumbs.filePath": "on",
   "cssvar.themes": ["dark", "light", "dim", "choco", "toucan", "grape"],
   "cssvar.enable": true,
