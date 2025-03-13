@@ -1,8 +1,8 @@
 // @ts-check
 export default {
+  name: '[*] ignored files',
   ignores: [
     '**/dist',
-    '**/eslint.config.mjs',
     '**/.vercel',
     '**/.wrangler',
     '**/cache-directory',

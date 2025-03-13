@@ -1,8 +1,11 @@
-// @ts-check
-
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
-/** @type {import('@typescript-eslint/utils').TSESLint.FlatConfig.ConfigFile} */
+/**
+ * A custom ESLint configuration for libraries that use Next.js.
+ *
+ * @type {import("eslint").Linter.Config}
+ * */
+
 export default [
   {
     plugins: {

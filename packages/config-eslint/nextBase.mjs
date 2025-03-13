@@ -1,8 +1,9 @@
 import js from '@eslint/js';
 
 // import turboPlugin from 'eslint-plugin-turbo';
-import tseslint from 'typescript-eslint';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import onlyWarn from 'eslint-plugin-only-warn';
+import tseslint from 'typescript-eslint';
 import ignoresConfig from './ignores.config.mjs';
 /**
  * A shared ESLint configuration for the repository.
@@ -27,4 +28,5 @@ export const config = [
       onlyWarn,
     },
   },
+  eslintConfigPrettier,
 ];

@@ -1,122 +1,95 @@
 // @ts-check
-
 import js from '@eslint/js';
-import eslintPluginAstro from 'eslint-plugin-astro';
-// import wc from 'eslint-plugin-wc';
-import tseslint from 'typescript-eslint';
-import tsParser from '@typescript-eslint/parser';
 
-// import turboPlugin from 'eslint-plugin-turbo';
+import eslintPluginAstro from 'eslint-plugin-astro';
+// import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
+
 // import onlyWarn from 'eslint-plugin-only-warn';
+import tseslint from 'typescript-eslint';
+
+import astroParser from 'astro-eslint-parser';
+import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
-// import extraFileExtensionsSinglton from './fileExtensions.mjs';
 
-const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx', 'vue'];
+const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx'];
 
 export default tseslint.config(
   ignoresConfig,
+  {
+    name: '[*] global language options',
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+  },
+
+  // ...turboPlugin['flat/recommended'],
+  // ...turboConfig,
+  // Global config
+  // JavaScript
   js.configs.recommended,
+  // comments.recommended,
+  // TypeScript
   tseslint.configs.recommendedTypeChecked,
   tseslint.configs.stylisticTypeChecked,
-  eslintPluginAstro.configs.recommended,
-
-  // Astro
-
-  // {
-  //   plugins: {
-  //     turbo: turboPlugin,
-  //   },
-  //   rules: {
-  //     'turbo/no-undeclared-env-vars': 'warn',
-  //   },
-  // },
 
   {
+    name: '[*] TS Rules',
     languageOptions: {
+      parser: tseslint.parser,
       parserOptions: {
         sourceType: 'module',
-        parser: tsParser,
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
         extraFileExtensions,
       },
       globals: {
         ...globals.browser,
-        // ...globals.nodeBuiltin,
-        // ...globals.worker,
-        // JSX: true,
-        // ...globals.node,
+        ...globals.node,
       },
     },
     rules: {
-      'no-unused-expressions': 'off',
-      '@typescript-eslint/array-type': 'error',
-      '@typescript-eslint/consistent-type-imports': 'error',
-      '@typescript-eslint/no-unused-vars': [
-        'error',
-        {
-          args: 'all',
-          argsIgnorePattern: '^_',
-          caughtErrors: 'all',
-          caughtErrorsIgnorePattern: '^_',
-          destructuredArrayIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-          ignoreRestSiblings: true,
-        },
-      ],
-      '@typescript-eslint/no-unused-expressions': [
-        'error',
-        {
-          allowShortCircuit: true, // Allow short-circuit expressions like `a && a()`
-          allowTernary: true, // Allow ternary operations like `a ? b() : c()`
-          allowTaggedTemplates: true, // Allow tagged template literals like `taggedTemplate` (optional)
-        },
-      ],
-      '@typescript-eslint/no-empty-function': 'warn',
-      '@typescript-eslint/restrict-template-expressions': 'warn',
-      '@typescript-eslint/no-misused-promises': 'warn',
+      'capitalized-comments': 'off',
+      '@typescript-eslint/no-unsafe-call': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-expressions': 'off',
+      '@typescript-eslint/consistent-type-definitions': 'warn',
     },
   },
 
-  // {
-  //   files: ['**/*.astro'],
-  //   extends: [tseslint.configs.disableTypeChecked],
-
-  //   languageOptions: {
-  //     parser: eslintPluginAstro.parser,
-  //     parserOptions: {
-  //       project: false,
-  //       tsconfigRootDir: import.meta.dirname,
-  //       extraFileExtensions,
-  //     },
-  //   },
-  // },
-  // {
-  //   files: ['**/*.astro'],
-  //   extends: [
-  //     tseslint.configs.disableTypeChecked,
-  //     ...eslintPluginAstro.configs.recommended,
-  //   ],
-  // },
-
   {
+    name: '[*] tseslint: disabled files',
     files: ['**/*.astro'],
-    extends: [tseslint.configs.disableTypeChecked],
-
+    extends: [
+      eslintPluginAstro.configs.recommended,
+      tseslint.configs.disableTypeChecked,
+    ],
     languageOptions: {
+      parser: astroParser,
       parserOptions: {
+        parser: tseslint.parser,
+        allowDefaultProject: ['*.astro'],
+        JSX: false,
+        // tsconfigRootDir: import.meta.dirname,
+        // project: [
+        //   '../apps/*/tsconfig.json',
+        //   '../packages/*/tsconfig.json',
+        //   '../packages/ui-components/*tsconfig.json',
+        // ],
         extraFileExtensions,
-        projectService: false,
-        tsconfigRootDir: import.meta.dirname,
       },
     },
   },
   {
+    name: '[*] .d.ts files',
     files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/triple-slash-reference': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/consistent-type-definitions': 'warn',
     },
   },
   {
@@ -127,9 +100,11 @@ export default tseslint.config(
   },
 
   {
+    name: '[*] js files',
     files: ['**/*.js'],
     extends: [tseslint.configs.disableTypeChecked],
   },
+
   // ,
   // {
   //   files: ['**/*.ts'],
@@ -152,4 +127,22 @@ export default tseslint.config(
   //     '@typescript-eslint/no-empty-function': 'warn',
   //   },
   // }
+
+  eslintConfigPrettier,
 );
+
+// export default [
+//   turboConfig['flat/recommended'],
+//   ...tsConfig,
+//   // Other configuration
+//   {
+//     rules: {
+//       'turbo/no-undeclared-env-vars': [
+//         'error',
+//         {
+//           allowList: ['^ENV_[A-Z]+$'],
+//         },
+//       ],
+//     },
+//   },
+// ];
