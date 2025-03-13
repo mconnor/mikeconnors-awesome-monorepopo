@@ -1,93 +1,61 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "./node_modules/turbo/schema.json",
   "globalEnv": [
     "NODE_ENV",
     "MODE",
-    "PROCUCTION",
+    "PRODUCTION",
     "DEV",
     "PROD",
     "import.meta.env.PROD",
     "import.meta.env.DEV"
   ],
-  "globalPassThroughEnv": [
-    "AWS_SECRET_KEY",
-    "GITHUB_TOKEN"
-  ],
+  "globalPassThroughEnv": ["AWS_SECRET_KEY", "GITHUB_TOKEN"],
   "envMode": "strict",
   "tasks": {
-    "transit": {
-      "dependsOn": [
-        "^transit"
-      ]
-    },
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "$TURBO_DEFAULT$",
-        "!README.md",
-        ".env*"
-      ],
-      "outputs": [
-        "dist/**"
-      ]
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md", ".env*"],
+      "outputs": ["dist/**"]
     },
     "lint": {
-      "dependsOn": [
-        "transit"
-      ]
+      "dependsOn": ["^lint"]
+    },
+    "transit": {
+      "dependsOn": ["^transit"]
     },
     "format": {},
     "sync": {
-      "dependsOn": [
-        "^sync"
-      ]
+      "dependsOn": ["^sync"]
     },
-    "//#format:root": {},
     "inspect": {},
     "fix": {
-      "dependsOn": [
-        "^fix"
-      ]
+      "dependsOn": ["^fix"]
     },
     "dev": {
       "cache": false,
-      "persistent": true
+      "persistent": true,
+      "dependsOn": ["^build"]
     },
     "preview": {
       "cache": true,
       "persistent": true
     },
     "check-types": {
-      "inputs": [
-        "**/*.{ts,tsx}"
-      ],
+      "inputs": ["**/*.{ts,tsx}"],
       "cache": true,
-      "dependsOn": [
-        "transit"
-      ]
+      "dependsOn": ["transit"]
     },
     "astro-check": {
-      "inputs": [
-        "**/*.{astro,ts,tsx,js,jsx}"
-      ],
+      "inputs": ["**/*.{astro,ts,tsx,js,jsx}"],
       "cache": true,
-      "dependsOn": [
-        "transit"
-      ]
+      "dependsOn": ["^astro-check"]
     },
     "test": {
-      "dependsOn": [
-        "^lint",
-        "^build"
-      ]
+      "dependsOn": ["^lint", "^build"]
     },
     "spell-check": {
-      "inputs": [
-        "**/*.md",
-        "**/*.mdx"
-      ]
-    }
+      "inputs": ["**/*.md", "**/*.mdx"]
+    },
+    "clean": {}
   }
 }
