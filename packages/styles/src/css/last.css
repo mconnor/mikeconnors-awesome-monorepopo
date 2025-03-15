@@ -6,10 +6,10 @@
 :root {
   --theme-secondary: var(--surface-2);
   --theme-primary: var(--text-1);
-
   --theme-warning: red;
   --theme-font-family: var(--font-system-ui);
 }
+
 .warning {
   --my-element-text-color: var(--theme-warning);
 }

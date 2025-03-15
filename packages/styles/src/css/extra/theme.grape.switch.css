@@ -1,19 +1,16 @@
 :where([data-theme='grape'], .grape, .grape-theme) {
   color-scheme: light;
+
   --brand: var(--brand-grape);
   --link: var(--link-grape);
   --link-visited: --link-grape-visited);
-
   --text-1: var(--text-1-grape);
   --text-2: var(--text-2-grape);
-
   --surface-1: var(--surface-1-grape);
   --surface-2: var(--surface-2-grape);
   --surface-3: var(--surface-3-grape);
   --surface-4: var(--surface-4-grape);
-
   --scrollthumb-color: var(--purple-6);
-
   --surface-shadow: var(--surface-shadow-grape);
   --shadow-strength: var(--shadow-strength-grape);
 }

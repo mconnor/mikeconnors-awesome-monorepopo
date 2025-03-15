@@ -23,6 +23,7 @@
 .text1 {
   color: var(--text-1);
 }
+
 /* p.text1 {
   font-weight: var(--font-weight-2);
 } */
@@ -79,7 +80,7 @@
   display: grid;
   place-content: center;
   color: black;
-  text-shadow: 0 0 1px hsl(0 0% 0% / 40%);
+  text-shadow: 0 0 1px hsl(0deg 0% 0% / 40%);
 
   &::before {
     opacity: 0;
@@ -90,7 +91,8 @@
 
 .adaptive-glass {
   --glass-lightness: 100%;
-  background: hsl(0 0% var(--glass-lightness) / 50%);
+
+  background: hsl(0deg 0% var(--glass-lightness) / 50%);
   backdrop-filter: blur(40px);
 
   > [data-theme='dark'] & {
@@ -98,6 +100,6 @@
   }
 
   @supports not (backdrop-filter: blur(1px)) {
-    background: hsl(0 0% var(--glass-lightness) / 90%);
+    background: hsl(0deg 0% var(--glass-lightness) / 90%);
   }
 }

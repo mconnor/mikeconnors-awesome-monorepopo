@@ -14,6 +14,7 @@
     "./DevModeStyle": "./src/DevModeStyle.astro"
   },
   "scripts": {
+    "stylelint": "stylelint src/*css",
     "astro-check": "astro check",
     "test": "echo \"Error: no test specified\" && exit 1",
     "inspect": "eslint . --inspect-config",
@@ -34,6 +35,9 @@
     "eslint": "catalog:",
     "open-props": "^1.7.13",
     "prettier-plugin-astro": "catalog:",
+    "stylelint": "^16.15.0",
+    "stylelint-config-standard": "^37.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
     "typescript": "catalog:",
     "zod": "catalog:"
   },

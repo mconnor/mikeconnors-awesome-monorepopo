@@ -7,7 +7,7 @@
 @property --ratio {
   syntax: '<length-percentage>';
   inherits: false;
-  initial-value: 1.61803398875;
+  initial-value: 1.618;
 }
 
 @property --font-size-base {
@@ -141,6 +141,7 @@
   inherits: false;
   initial-value: var(--s2);
 }
+
 /*
 :root {
   --s0: var(--font-size-base);

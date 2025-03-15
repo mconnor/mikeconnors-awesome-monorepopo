@@ -2,10 +2,9 @@
   display: grid;
   grid-gap: 1rem;
   border-radius: var(--radius-2);
-
   box-shadow: var(--shadow-2);
   padding: var(--size-fluid-1);
-  margin: 0 0 1rem 0;
+  margin: 0 0 1rem;
 }
 
 [data-columns] > div {
