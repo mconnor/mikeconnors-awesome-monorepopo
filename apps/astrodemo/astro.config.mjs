@@ -10,17 +10,7 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
   site: 'https://example.com',
-  vite: {
-    css: {
-      transformer: 'lightningcss',
-      lightningcss: {
-        targets: browserslistToTargets(browserslist('>= 0.25%')),
-        drafts: {
-          customMedia: true,
-        },
-      },
-    },
-  },
+  vite: {},
 
   integrations: [mdx()],
 });
