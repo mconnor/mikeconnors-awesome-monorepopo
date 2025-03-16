@@ -42,7 +42,7 @@
     "vue": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^",
+    "@repo/eslint-config": "link:../../packages/config-eslint",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "@types/react": "catalog:",

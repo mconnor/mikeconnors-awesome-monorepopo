@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/markdoc": "^0.12.11",
+    "@astrojs/markdoc": "^0.13.0",
     "@astrojs/starlight": "^0.32.2",
     "@astrojs/starlight-markdoc": "^0.3.0",
     "@repo/styles": "workspace:*",
@@ -25,7 +25,7 @@
     "sharp": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^",
+    "@repo/eslint-config": "link:../../packages/config-eslint",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",

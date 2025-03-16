@@ -27,11 +27,11 @@
     "@astrojs/rss": "catalog:",
     "@astrojs/vercel": "^8.1.2",
     "@repo/astro-wc": "workspace:*",
-    "@repo/eslint-config": "workspace:^",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:^",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/scripts": "workspace:^",
     "@repo/styles": "workspace:*",
-    "@repo/typescript-config": "workspace:^",
     "@repo/ui-lit": "workspace:*",
     "@sentry/astro": "^8.55.0",
     "@webcomponents/template-shadowroot": "catalog:",
@@ -54,6 +54,6 @@
     "postcss-pow": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
-    "vite": "^6.2.1"
+    "vite": "^6.2.2"
   }
 }

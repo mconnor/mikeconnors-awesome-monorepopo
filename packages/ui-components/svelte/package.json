@@ -20,7 +20,7 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^",
+    "@repo/eslint-config": "link:../../config-eslint",
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",

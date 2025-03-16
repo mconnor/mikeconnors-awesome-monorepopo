@@ -32,7 +32,7 @@
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "workspace:^",
+    "@repo/eslint-config": "link:../config-eslint",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:^",
     "@types/eslint-config-prettier": "^6.11.3",

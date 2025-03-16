@@ -28,7 +28,7 @@
   "license": "ISC",
   "devDependencies": {
     "@preact/signals": "catalog:",
-    "@repo/eslint-config": "workspace:^",
+    "@repo/eslint-config": "link:../../config-eslint",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "^9.22.0",

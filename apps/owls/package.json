@@ -26,7 +26,7 @@
     "lit": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^",
+    "@repo/eslint-config": "link:../../packages/config-eslint",
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
