@@ -2,6 +2,9 @@
   "name": "@app/blog-tailwind",
   "type": "module",
   "version": "0.0.1",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -21,9 +24,11 @@
     "@astrojs/mdx": "^4.2.0",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
+    "@std/toml": "npm:@jsr/std__toml@^1.0.2",
     "@astrojs/vercel": "catalog:",
     "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.5.2",
+    "date-fns": "^4.1.0",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {

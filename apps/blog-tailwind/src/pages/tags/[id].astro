@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+
+import BlogCard from '#components/BlogCard/index.astro';
+import Layout from '#layouts/Layout.astro';
+
+export const prerender = true;
+
+// interface Props {
+//   posts: CollectionEntry<'blog'>[];
+// }
+
+export async function getStaticPaths() {
+  const publishsedPosts = await getCollection(
+    'blog',
+    ({ data }) => data.draft !== true,
+  );
+
+  const uniqueTags = [
+    ...new Set(publishsedPosts.map(({ data }) => data.tags ?? []).flat()),
+  ];
+
+  return uniqueTags.map((tag) => ({
+    params: { id: tag },
+    props: {
+      posts: publishsedPosts.filter(({ data }) => data.tags.includes(tag)),
+    },
+  }));
+}
+
+// id is tag
+const { id } = Astro.params;
+//post with at last one tags
+const { posts } = Astro.props;
+---
+
+<Layout title={id}>
+  {
+    posts.map(({ data, id }) => (
+      <BlogCard
+        backgroundColor="var(--surface-4)"
+        foregroundColor="var(--text-2)"
+        id={id}
+        postData={data}
+      />
+    ))
+  }
+</Layout>
