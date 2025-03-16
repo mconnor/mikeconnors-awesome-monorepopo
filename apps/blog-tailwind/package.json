@@ -1,0 +1,36 @@
+{
+  "name": "@app/blog-tailwind",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "sync": "astro sync",
+    "clean": "rm -rf dist && echo 'Done.'",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "help": "astro -- --help",
+    "inspect": "eslint . --inspect-config",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:",
+    "@astrojs/mdx": "^4.2.0",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.2.1",
+    "@astrojs/vercel": "catalog:",
+    "@tailwindcss/vite": "^4.0.14",
+    "astro": "^5.5.2",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:^",
+    "eslint": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "typescript": "catalog:"
+  }
+}
