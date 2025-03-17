@@ -2,21 +2,41 @@
 import Cluster from '@repo/layout-webcomponents/Cluster';
 
 import Box from '@repo/ui-lit/Box';
-import ThemeSwitcher from '#wc-lit/ThemeSwitcher/index.astro';
-
-import MainNav from './MainNav.astro';
+import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
+import MainNav from '#components/MainNav.astro';
 ---
 
 <Box invert padding="var(--s1)" borderWidth="0">
   <ThemeSwitcher />
 
   <Cluster align="baseline" justify="space-between" space="0">
-    <a href="/"><h1>Astro Demo</h1></a>
+    <Box>
+      <span class="headline">Astro Demo <a href="/">link</a></span></Box
+    ></Cluster
+  >
 
-    <!-- <AstroNavigateSelect /> -->
+  <Box borderWidth="0" padding="0">
+    <MainNav />
 
-    <Box borderWidth="0" padding="0">
-      <MainNav />
-    </Box>
-  </Cluster>
+    <!-- <wa-tab-group>
+      <wa-tab panel="general">General</wa-tab>
+      <wa-tab panel="custom">Custom</wa-tab>
+      <wa-tab panel="advanced">Advanced</wa-tab>
+      <wa-tab panel="disabled" disabled>Disabled</wa-tab>
+
+      <wa-tab-panel name="general">This is the general tab panel.</wa-tab-panel>
+      <wa-tab-panel name="custom">This is the custom tab panel.</wa-tab-panel>
+      <wa-tab-panel name="advanced"
+        >This is the advanced tab panel.</wa-tab-panel
+      >
+      <wa-tab-panel name="disabled">This is a disabled tab panel.</wa-tab-panel>
+    </wa-tab-group> -->
+  </Box>
 </Box>
+
+<style>
+  .headline {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+</style>

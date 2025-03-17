@@ -1,13 +1,19 @@
+// @ts-check
 import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel';
-import { defineConfig } from 'astro/config';
 import icon from 'astro-icon';
+import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   outDir: 'dist',
   compressHTML: true,
   // trailingSlash: 'never',
   cacheDir: './cache-directory',
+  vite: {
+    ssr: {
+      noExternal: ['open-props'],
+    },
+  },
 
   // env: {
   //   schema: {
@@ -34,21 +40,13 @@ export default defineConfig({
     responsiveImages: true,
   },
 
-  markdown: {
-    drafts: true,
-  },
-
   scopedStyleStrategy: 'attribute',
 
-  integrations: [
-    icon(),
-    mdx({
-      drafts: true,
-    }),
-  ],
+  integrations: [icon(), mdx()],
   output: 'server',
   adapter: vercel({
     imageService: true,
     devImageService: 'sharp',
+    excludeFiles: ['./src/assets/markdown-cartoon.png'],
   }),
 });

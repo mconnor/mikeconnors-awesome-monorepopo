@@ -1,5 +1,4 @@
-const config = {
+export default {
   singleQuote: true,
+  experimentalTernaries: true,
 };
-
-export default config;

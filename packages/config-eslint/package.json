@@ -1,6 +1,7 @@
 {
   "name": "@repo/eslint-config",
   "version": "2.0.0",
+  "private": true,
   "imports": {
     "#*": "./*"
   },
@@ -22,8 +23,7 @@
     "./svelte5-app": "./svelte5.lint.config.mjs",
     "./solid": "./sold.lint.config.mjs",
     "./next-config": "./next.mjs",
-    "./simple-imports-sort": "./simple-imports-sort.lint.config.mjs",
-    "./turbo.lint.config": "./turbo.lint.config.mjs"
+    "./simple-imports-sort": "./simple-imports-sort.lint.config.mjs"
   },
   "scripts": {
     "format": "prettier . --write"
@@ -40,10 +40,9 @@
     "@custom-elements-manifest/analyzer": "^0.10.4",
     "@eslint/eslintrc": "^3.3.0",
     "@eslint/js": "^9.22.0",
-    "@eslint/json": "^0.10.0",
+    "@eslint/json": "^0.11.0",
     "@eslint/markdown": "^6.3.0",
     "@next/eslint-plugin-next": "^15.2.2",
-    "@repo/typescript-config": "workspace:^",
     "@typescript-eslint/utils": "^8.26.1",
     "astro-eslint-parser": "^1.2.1",
     "eslint-config-preact": "^1.5.0",

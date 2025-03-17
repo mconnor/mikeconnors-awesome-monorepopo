@@ -3,8 +3,7 @@
   "type": "module",
   "author": "Mike Connor",
   "imports": {
-    "#*": "./src/*",
-    "#C": "./src/components/*"
+    "#*": "./src/*"
   },
   "version": "0.0.1",
   "scripts": {
@@ -22,14 +21,14 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@repo/layout-webcomponents": "workspace:*",
-    "astro": "^5.1.7"
+    "astro": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
-    "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.2"
   }
 }

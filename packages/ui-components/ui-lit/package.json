@@ -7,10 +7,10 @@
     "#*": "./src/*"
   },
   "exports": {
+    "./Clock": "./src/Clock/index.astro",
     "./Box": "./src/Box/index.astro",
     "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
     "./Hello": "./src/Hello/index.astro",
-    "./ThemeToggle": "./src/ThemeToggle/index.astro",
     "./HeartLitBtn": "./src/HeartBtn/index.astro",
     "./Timer": "./src/Timer/index.astro"
   },
@@ -24,20 +24,16 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "lit": "catalog:",
-    "astro": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "link:../../config-eslint",
     "@repo/styles": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "catalog:",
+    "astro": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
+    "lit": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "experimentalTernaries": true
   },
   "keywords": [
     "lit"
@@ -45,7 +41,7 @@
   "author": "",
   "license": "ISC",
   "peerDependencies": {
-    "lit": "^3.2.0",
-    "astro": "^4.0.0 || ^5.0.0"
+    "astro": ">=5.3.0",
+    "lit": ">=3.2.1"
   }
 }

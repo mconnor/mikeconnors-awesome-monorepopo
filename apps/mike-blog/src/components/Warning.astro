@@ -1,7 +1,7 @@
 ---
 import Box from '@repo/ui-lit/Box';
 
-import MyIcon from './MyIcon.astro';
+import { Icon } from 'astro-icon/components';
 
 interface Props {
   headline?: string;
@@ -13,7 +13,7 @@ const { copy, headline = 'Warning' } = Astro.props;
 
 <Box invert>
   <div>
-    <MyIcon name="mdi:warning-octagram-outline" size={40} title={headline} />
+    <Icon name="mdi:warning-octagram-outline" size={40} title={headline} />
     <h4>{headline}</h4>
   </div>
 

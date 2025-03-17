@@ -1,0 +1,93 @@
+---
+import { type CollectionEntry } from 'astro:content';
+import { format } from 'date-fns';
+
+interface Props {
+  id: string;
+  postData: CollectionEntry<'posts'>['data'];
+
+  ssr?: boolean;
+}
+
+const {
+  // foregroundColor = 'var(--text-2)',
+  // backgroundColor = 'var(--surface-4)',
+  postData,
+  id,
+  ssr = false,
+} = Astro.props;
+
+const { title, category, description, publicationDate } = postData;
+
+const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
+---
+
+<article class="post-card">
+  <a href={link}>
+    <div class="post-meta">
+      <span class="category">{category}</span>
+      <!-- <time datetime={date.toISOString()}>{formattedDate}</time> -->
+      <p>{format(publicationDate, 'MMMM dd, yyyy')}</p>
+    </div>
+    <h3 class="post-title">
+      {title}
+    </h3>
+    <p class="post-description">{description}</p>
+  </a>
+</article>
+
+<style>
+  .post-card {
+    padding: 1.5rem;
+    border: 0;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .post-card:hover {
+    border: 1px solid var(--color-text-base);
+  }
+
+  .post-card a:hover {
+    text-decoration: none;
+  }
+
+  .post-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+  }
+
+  .category {
+    text-transform: capitalize;
+    color: var(--color-text-base);
+    font-weight: 500;
+  }
+
+  .post-title {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .post-title a {
+    color: var(--color-text-base);
+    text-decoration: none;
+    padding: 0;
+  }
+
+  .post-title a:hover {
+    color: var(--color-text-link);
+  }
+
+  .post-card:hover a {
+    color: var(--color-link);
+  }
+
+  .post-description {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+</style>

@@ -1,0 +1,88 @@
+---
+// import DevModeStyle from '@repo/styles/DevModeStyle.astro';
+import GlobalStyle from '@repo/styles/GlobalStyle';
+import { ClientRouter } from 'astro:transitions';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// const isProd = import.meta.env.PROD
+
+const { title = 'title', description = 'description', image } = Astro.props;
+// const isDev = import.meta.env.DEV;
+
+// const isDev = process.env.NODE_ENV === 'development';
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+<meta name="robots" content="noindex, nofollow" />
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+{image && <meta property="og:image" content={new URL(image, Astro.url)} />}
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+{image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
+<meta name="color-scheme" content="dark light" />
+<link
+  rel="stylesheet"
+  href="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/styles/themes/default.css"
+/>
+<script
+  type="module"
+  src="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/webawesome.loader.js"
+></script>
+
+<!-- <script src="https://unpkg.com/lucide@latest"></script> -->
+
+<!-- <script>
+  lucide.createIcons();
+</script> -->
+
+<!-- <script is:inline>
+  import * as Sentry from '@sentry/browser';
+
+  Sentry.init({
+    dsn: import.meta.env.SENTRY_DSN,
+    tracesSampleRate: 1.0,
+    // This sets the sample rate to be 10%. You may want this to be 100% while
+    // in development and sample at a lower rate in production
+    replaysSessionSampleRate: 0.1,
+    // If the entire session is not sampled, use the below sample rate to sample
+    // sessions when an error occurs.
+    replaysOnErrorSampleRate: 1.0,
+    integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
+  });
+</script> -->
+
+<script is:inline>
+  import '@repo/scripts/get-theme';
+</script>
+
+<ClientRouter />
+<!-- {isDev && <DevModeStyle />} -->
+<GlobalStyle />

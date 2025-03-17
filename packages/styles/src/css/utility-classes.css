@@ -23,6 +23,7 @@
 .text1 {
   color: var(--text-1);
 }
+
 /* p.text1 {
   font-weight: var(--font-weight-2);
 } */
@@ -68,4 +69,37 @@
 
 .font-size\:big {
   font-size: var(--font-size-big) !important;
+}
+
+.color-swatch {
+  padding-inline: 0;
+  border-radius: var(--radius-round);
+  box-shadow: var(--inner-shadow-0);
+  inline-size: 100%;
+  block-size: var(--size);
+  display: grid;
+  place-content: center;
+  color: black;
+  text-shadow: 0 0 1px hsl(0deg 0% 0% / 40%);
+
+  &::before {
+    opacity: 0;
+    transition: opacity 0.4s var(--ease-out-3);
+    line-height: 1;
+  }
+}
+
+.adaptive-glass {
+  --glass-lightness: 100%;
+
+  background: hsl(0deg 0% var(--glass-lightness) / 50%);
+  backdrop-filter: blur(40px);
+
+  > [data-theme='dark'] & {
+    --glass-lightness: 0%;
+  }
+
+  @supports not (backdrop-filter: blur(1px)) {
+    background: hsl(0deg 0% var(--glass-lightness) / 90%);
+  }
 }

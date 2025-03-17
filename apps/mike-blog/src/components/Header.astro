@@ -2,48 +2,60 @@
 // import Hamburger from '/Hamburger.astro';
 import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
+import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
+import DropDownNav from '#components/DropDownNav/index.astro';
 // import ThemeSwitcher from '#wc-lit/ThemeSwitcher/index.astro';
 // import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
-import ThemeToggle from '@repo/ui-lit/ThemeToggle';
-
+import SunMoon from '@repo/astro-wc/SunMoon';
 // import AstroNavigateSelect from '#components/AstroNavigateSelect.astro';
 import HeaderLink from '#components/HeaderLink.astro';
+import { navLinks } from '#app.config.ts';
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const { pathname } = new URL(Astro.request.url);
-const currentPage = pathname.match(/[^/]+$/)?.[0] || '';
+// const { pathname } = new URL(Astro.request.url);
+// const currentPage = (pathname.match(/[^/]+$/)?.[0]) || '';
+import { getPaths } from '#lib/index.ts';
+
+// TODO: Move to a helper function
+
+const subpath = getPaths(Astro.url.pathname);
+//  pathname.match(/[^/]+/g);
 ---
 
-<Box invert padding="var(--s1)" borderWidth="0">
-  <!-- <Hamburger /> -->
+<header class="header-colors">
+  <Box><ThemeSwitcher /></Box>
 
-  <ThemeToggle />
-  <Cluster align="baseline" justify="space-between" space="0">
-    <HeaderLink href="/"><h1>Mike Connor - Tech</h1></HeaderLink>
+  <Cluster align="baseline" justify="space-around" space="0">
+    <Box padding="0"
+      ><a href="/" style="text-decoration: none;">
+        <wa-avatar
+          shape="circle"
+          initials="MC"
+          href="./"
+          label="Avatar with initials: SL"></wa-avatar></a
+      ></Box
+    >
 
-    <p>{currentPage}</p>
-    <!-- <AstroNavigateSelect /> -->
-
-    <Box invert borderWidth="0" padding="0">
+    <div class="box">{subpath}</div>
+    <div class="box">
       <Cluster align="baseline" justify="flex-end" space="var(--s1)">
-        <HeaderLink href="/about">About</HeaderLink>
+        <!-- <DropDownNav /> -->
+        <!-- <SunMoon /> -->
 
-        <HeaderLink href="/posts">Posts</HeaderLink>
-        <HeaderLink href="/tags">Tags</HeaderLink>
-        <HeaderLink href="/interactive">Interactive</HeaderLink>
-        <HeaderLink href="/hello">Actions</HeaderLink>
-        <!-- <HeaderLink href="/authors/">Authors</HeaderLink>
-
-        <HeaderLink href="/boxclass/">box class</HeaderLink>
-        <HeaderLink href="/boxtest/">box test</HeaderLink> -->
+        {
+          navLinks.map(({ href, label }) => (
+            <Box>
+              <HeaderLink href={href}>{label}</HeaderLink>
+            </Box>
+          ))
+        }
       </Cluster>
-    </Box>
+    </div>
   </Cluster>
-</Box>
+</header>
 
 <style>
-  h1 {
-    background: var(--gradient-1) fixed;
-    background-clip: text;
-    color: transparent;
+  .header-colors {
+    color: var(--text-1);
+    background-color: var(--surface-4);
   }
 </style>

@@ -1,6 +1,6 @@
 ---
-import DevModeStyle from '@repo/styles/DevModeStyle.astro';
-import GlobalStyle from '@repo/styles/GlobalStyle.astro';
+import DevModeStyle from '@repo/styles/DevModeStyle';
+
 import { ClientRouter } from 'astro:transitions';
 
 interface Props {
@@ -47,7 +47,21 @@ const isDev = import.meta.env.DEV;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
-<meta name="color-scheme" content="dark light" />
+<meta name="color-scheme" content="dark light toucan dim choco grape" />
+
+<link
+  rel="stylesheet"
+  href="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/styles/webawesome.css"
+/>
+
+<link
+  rel="stylesheet"
+  href="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/styles/themes/default.css"
+/>
+<script
+  type="module"
+  src="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/webawesome.loader.js"
+></script>
 
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
 
@@ -55,7 +69,7 @@ const isDev = import.meta.env.DEV;
   lucide.createIcons();
 </script> -->
 
-<script is:inline>
+<!-- <script is:inline>
   import * as Sentry from '@sentry/browser';
 
   Sentry.init({
@@ -69,22 +83,31 @@ const isDev = import.meta.env.DEV;
     replaysOnErrorSampleRate: 1.0,
     integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   });
-</script>
+</script> -->
 
-<script is:inline>
+<!-- <script is:inline>
   // on page, get the last theme from the cookie and set it
-  document.addEventListener('astro:page-load', () => {
-    const storedTheme = localStorage.getItem('theme');
-    const doc = document.documentElement;
-    if (storedTheme) {
-      doc.setAttribute('data-theme', storedTheme);
-      // $currTheme.set(storedTheme);
-    } else {
-      doc.setAttribute('data-theme', 'light');
-    }
-  });
+  // document.addEventListener('astro:page-load', () => {
+  const storedTheme = localStorage.getItem('theme');
+  const doc = document.documentElement;
+  if (storedTheme) {
+    doc.setAttribute('data-theme', storedTheme);
+    // $currTheme.set(storedTheme);
+  } else {
+    doc.setAttribute('data-theme', 'light');
+  }
+  // });
+</script> -->
+<script>
+  import '@repo/scripts/get-theme';
 </script>
 
 <ClientRouter />
-{isDev && <DevModeStyle />}
-<GlobalStyle />
+
+<DevModeStyle />
+
+<style is:global>
+  :not(:defined) {
+    visibility: hidden;
+  }
+</style>

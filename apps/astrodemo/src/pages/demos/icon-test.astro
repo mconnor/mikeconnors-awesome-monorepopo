@@ -1,0 +1,46 @@
+---
+// import DatePicker from '#components/DatePicker.astro';
+// import Card from '@/components/Card.astro';
+import Stack from '@repo/layout-webcomponents/Stack';
+// import { Code } from 'astro:components';
+import Layout from '#layouts/Layout.astro';
+import Box from '@repo/ui-lit/Box';
+---
+
+<Layout title="Welcome to Astro.">
+  <Box borderWidth="2px">
+    <Stack space="2rem">
+      <div style="font-size: 24px;">
+        <wa-icon library="tabler" name="alert-triangle"></wa-icon>
+        <wa-icon library="tabler" name="arrow-back"></wa-icon>
+        <wa-icon library="tabler" name="at"></wa-icon>
+        <wa-icon library="tabler" name="ball-baseball"></wa-icon>
+        <wa-icon library="tabler" name="cake"></wa-icon>
+        <wa-icon library="tabler" name="files"></wa-icon>
+        <br />
+        <wa-icon library="tabler" name="keyboard"></wa-icon>
+        <wa-icon library="tabler" name="moon"></wa-icon>
+        <wa-icon library="tabler" name="pig"></wa-icon>
+        <wa-icon library="tabler" name="printer"></wa-icon>
+        <wa-icon library="tabler" name="ship"></wa-icon>
+        <wa-icon library="tabler" name="toilet-paper"></wa-icon>
+        <wa-icon library="tabler" name="brand-linkedin"></wa-icon>
+        <wa-icon library="tabler" name="brand-x"></wa-icon>
+      </div>
+    </Stack>
+  </Box>
+</Layout>
+
+<script>
+  import { registerIconLibrary } from '/dist/webawesome.js';
+  const ICON_LIBRARY = 'tabler';
+
+  registerIconLibrary('tabler', {
+    resolver: (name: string) =>
+      `https://cdn.jsdelivr.net/npm/@${ICON_LIBRARY}/icons@1.68.0/icons/${name}.svg`,
+    mutator: (svg: SVGElement) => {
+      svg.style.fill = 'none';
+      svg.setAttribute('stroke', 'currentColor');
+    },
+  });
+</script>

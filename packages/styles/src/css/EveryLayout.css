@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
   /* top and bottom margins in horizontal-tb writing mode */
   margin-block: 0;
 }
@@ -12,7 +13,9 @@
   > * + * {
     margin-block-start: var(--size-5);
   }
+
   /* p elements after the second element towards the bottom of the space. */
+
   /* > :nth-child(2) {
         margin-block-end: auto;
     } */
@@ -33,9 +36,12 @@
   box-sizing: content-box;
   margin-inline: auto;
   max-inline-size: var(--measure);
+
   /* text align center */
+
   /* text-align: center;
         max-inline-size: var(--measure); */
+
   /* Intrinsic centering?
         Whether to center and child elements narrower than the max value */
 
@@ -47,8 +53,7 @@
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  row-gap: var(--space, var(--size-2));
-  column-gap: var(--space, var(--size-fluid-5));
+  gap: var(--space, var(--size-2)) var(--space, var(--size-fluid-5));
   justify-content: space-between;
   align-items: center;
 }
@@ -59,6 +64,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-5);
+
   --threshold: var(--size-15);
 
   > * {
@@ -89,6 +95,7 @@
   position: var(--positioning, absolute);
   inset-block-start: 50%;
   inset-inline-start: 50%;
+
   /* ↓ Reposition so the center of the element
   is the center of the positioning container */
   transform: translate(-50%, -50%);

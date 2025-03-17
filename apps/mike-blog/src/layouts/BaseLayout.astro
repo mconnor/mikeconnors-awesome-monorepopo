@@ -1,6 +1,6 @@
 ---
 import type { RmUnitType } from '@repo/styles/Types';
-
+import '../styles/global.css';
 import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
 import BaseHead from '#components/BaseHead.astro';
 
@@ -16,7 +16,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 ---
 
-<html lang="en" data-theme="toucan">
+<html lang="en" data-theme="auto">
   <head>
     <BaseHead title={title} description={description} />
   </head>
@@ -24,29 +24,32 @@ const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
   <body>
     <code class="mode">{mode}</code>
     <slot />
-
-    <script is:inline>
-      // on page, get the last theme from the cookie and set it
-      document.addEventListener('astro:page-load', () => {
-        const storedTheme = localStorage.getItem('theme');
-        const doc = document.documentElement;
-        if (storedTheme) {
-          doc.setAttribute('data-theme', storedTheme);
-          // $currTheme.set(storedTheme);
-        } else {
-          doc.setAttribute('data-theme', 'light');
-        }
-
-        doc.setAttribute('data-theme', 'light');
-      });
-    </script>
   </body>
 </html>
-<style>
+
+<script>
+  // on page, get the last theme from the cookie and set it
+  document.addEventListener('astro:page-load', () => {
+    console.log('astro:page-load');
+    const storedTheme = localStorage.getItem('theme');
+    const doc = document.documentElement;
+    if (storedTheme) {
+      doc.setAttribute('data-theme', storedTheme);
+      // $currTheme.set(storedTheme);
+    } else {
+      doc.setAttribute('data-theme', 'light');
+    }
+  });
+</script>
+<style is:global>
   .mode {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1000;
+  }
+
+  .warning {
+    --my-element-text-color: var(--theme-warning);
   }
 </style>

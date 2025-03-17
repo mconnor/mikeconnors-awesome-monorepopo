@@ -1,17 +1,16 @@
 {
-    "recommendations": [
-        "astro-build.astro-vscode",
-        "vercel.turbo-vsc",
-        "mikestead.dotenv",
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "phoenisx.cssvar",
-        "unifiedjs.vscode-mdx",
-        "stylelint.vscode-stylelint",
-        "runem.lit-plugin",
-        "Vercel.turbo-vsc",
-        "JamesBirtles.svelte-vscode",
-        "vercel.turbo-vsc",
-        "pnpmCatalogLens.pnpm-catalog-lens",
-    ]
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "phoenisx.cssvar",
+    "unifiedjs.vscode-mdx",
+    "stylelint.vscode-stylelint",
+    "runem.lit-plugin",
+    "Vercel.turbo-vsc",
+    "JamesBirtles.svelte-vscode",
+    "vercel.turbo-vsc",
+    "pnpmCatalogLens.pnpm-catalog-lens"
+  ]
 }

@@ -6,39 +6,51 @@ type Props = HTMLAttributes<'a'> & {
 };
 
 const { href, className, ...rest } = Astro.props;
+
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
 const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
-<!-- <Box padding='--sizes'><a href={href} class:list={[{ active: isActive }]}>
+{
+  isActive ?
     <slot />
-</a></Box> -->
-<Box borderWidth="0" padding="0">
-  {
-    !isActive ?
-      <a
-        href={href}
-        class:list={[className, { active: isActive }]}
-        {...rest}
-        aria-disabled={isActive}
-      >
-        <slot />
-      </a>
-    : <span class="nonLink">
-        <slot />
-      </span>
-  }
-</Box>
+  : <a href={href} class="my-button">
+      <slot />
+    </a>
+}
 
 <style>
   a {
-    display: inline-block;
-    text-decoration: none;
+    color: var(--link);
+
+    font-size: 1.125rem;
+
+    transition: all var(--wa-transition-slow) var(--wa-transition-easing);
+  }
+  a:active {
+    /* border-top-color: #ad005c;
+    border-right-color: #ff7ac1;
+    border-bottom-color: #ff7ac1;
+    border-left-color: #ad005c; */
+    transform: translateY(5px);
   }
 
-  .nonLink {
-    text-decoration: underline wavy;
-    text-underline-offset: var(--s0);
+  a:hover {
+    transform: scale(1.1);
+    text-decoration: underline;
   }
+
+  /* wa-button.pink::part(base):active {
+    border-top-color: #ad005c;
+    border-right-color: #ff7ac1;
+    border-bottom-color: #ff7ac1;
+    border-left-color: #ad005c;
+    transform: translateY(5px);
+  }
+
+  wa-button.pink::part(base):focus-visible {
+    outline: dashed 2px deeppink;
+    outline-offset: 4px;
+  } */
 </style>

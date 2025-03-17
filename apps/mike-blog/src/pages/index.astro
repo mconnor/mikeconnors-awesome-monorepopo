@@ -1,5 +1,5 @@
 ---
-// export const prerender = true;
+export const prerender = true;
 
 // import { fade } from 'astro:transitions';
 // interface ImageMetadata {
@@ -10,31 +10,32 @@
 // }
 import Frame from '@repo/layout-webcomponents/Frame';
 import Stack from '@repo/layout-webcomponents/Stack';
+// import Cluster from '@repo/layout-webcomponents/Cluster';
 import Box from '@repo/ui-lit/Box';
+import Clock from '@repo/ui-lit/Clock';
 import { Image } from 'astro:assets';
-
+import Andy from '#assets/andy-og.webp';
 // import Andy from '#assets/andyBushes.jpg';
 import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
+import Hero from '#components/Hero.astro';
 ---
 
-<Layout maxW="80ch">
-  <Stack space="0">
-    <h2>This is my website</h2>
-
-    <Box>
+<Layout maxW="100%">
+  <Stack space="0" splitAfter={2}>
+    <Box invert padding="0"><Hero /></Box>
+    <!-- <Clock /> -->
+    <Box borderWidth="0" padding="0">
       <Frame ratio="16:9">
         <Image
-          src={AndyMud}
+          src={Andy}
           layout="responsive"
-          width={800}
-          height={600}
           priority
           alt="A description of my image."
         />
       </Frame>
-      <h3>This is my dog</h3>
-    </Box>
+      <h3>This is my dog</h3></Box
+    >
   </Stack>
 </Layout>
 
@@ -42,5 +43,18 @@ import Layout from '#layouts/Layout.astro';
   h2,
   h3 {
     font-family: var(--font-antique);
+  }
+  .hero {
+    background: var(--gradient-1);
+    color: var(--text-1);
+    font-size: var(--font-size-6);
+
+    /* text-align: center; */
+    display: flex;
+    flex-wrap: wrap;
+    > * {
+      flex-grow: 1;
+      flex-basis: calc((30rem - 100%) * 999);
+    }
   }
 </style>

@@ -1,8 +1,10 @@
 ---
 // import { Debug } from 'astro:components';
 import Stack from '@repo/layout-webcomponents/Stack';
-import { getCollection } from 'astro:content';
 
+import Grid from '@repo/layout-webcomponents/Grid';
+import { getCollection } from 'astro:content';
+import Box from '@repo/ui-lit/Box';
 import BlogCard from '#components/BlogCard/index.astro';
 import Layout from '#layouts/Layout.astro';
 
@@ -20,18 +22,56 @@ const sortedPosts = publishsedPosts.sort(
 );
 ---
 
-<Layout title={pageTitle}>
-  <Stack space="var(--s1)">
-    {
-      sortedPosts.map(({ id, data }) => (
-        // <Box class='invert' borderWidth="4px">{data.title}</Box>
-        <BlogCard
-          backgroundColor="var(--surface-4)"
-          foregroundColor="var(--text-2)"
-          id={id}
-          postData={data}
-        />
-      ))
-    }
-  </Stack>
+<Layout title={pageTitle} maxW="100%">
+  <Box>
+    <div class="my-colors">
+      <Grid>
+        {
+          sortedPosts.map(({ id, data }) => (
+            <BlogCard
+              backgroundColor="var(--surface-4)"
+              foregroundColor="var(--text-2)"
+              id={id}
+              postData={data}
+            />
+
+            // <wa-card with-header class="card-style">
+            //   <div slot="header">
+            //     <a href=`./${id}`>{data.title}</a>
+
+            //     <wa-icon-button name="gear" variant="solid" label="Settings" />
+            //   </div>
+            //   {data.description}
+            // </wa-card>
+          ))
+        }
+      </Grid>
+    </div>
+  </Box>
 </Layout>
+
+<style>
+  .my-colors {
+    --fore: var(--text-2);
+    --back: var(--surface-4);
+  }
+  /* .card-style {
+    color: var(--fore);
+    background-color: var(--back);
+    > [slot='header'] {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .card-style:nth-child(odd) {
+    background-color: var(--fore);
+    color: var(--back);
+  }
+
+  .details:nth-child(odd) {
+    background-color: var(--fore);
+    color: var(--back);
+  } */
+</style>

@@ -1,11 +1,11 @@
 ---
-import Center from '@repo/layout-webcomponents/Center';
-import Cover from '@repo/layout-webcomponents/Cover';
-import type { RmUnitType } from '@repo/styles/Types';
-
 import Footer from '#components/Footer.astro';
 import Header from '#components/Header.astro';
 import BaseLayout from '#layouts/BaseLayout.astro';
+import Center from '@repo/layout-webcomponents/Center';
+import Cover from '@repo/layout-webcomponents/Cover';
+import type { RmUnitType } from '@repo/styles/Types';
+// import Box from '@repo/ui-lit/Box';
 
 interface Props {
   title?: string;
@@ -17,12 +17,19 @@ const { centerWidth = '60ch', title = 'mike connor' } = Astro.props;
 ---
 
 <BaseLayout title={title}>
-  <Cover centeredElement="main" noPad>
+  <Cover centeredElement="center-l" noPad>
     <Header desc={title} />
 
-    <main>
+    <!-- <Box borderWidth='0'>
       <Center max={centerWidth}><slot /></Center>
-    </main>
+    </Box> -->
+
+    <Center max={centerWidth}>
+      <!-- <Box> -->
+      <slot />
+      <!-- </Box> -->
+      <!-- </Center> -->
+    </Center>
 
     <Footer />
   </Cover>

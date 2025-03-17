@@ -1,8 +1,8 @@
-import Container from "#app/_components/container.tsx";
-import { HeroPost } from "#app/_components/hero-post.tsx";
-import { Intro } from "#app/_components/intro.tsx";
-import { MoreStories } from "#app/_components/more-stories.tsx";
-import { getAllPosts } from "#lib/api.ts";
+import Container from "#app/_components/container.jsx";
+import { HeroPost } from "#app/_components/hero-post.jsx";
+import { Intro } from "#app/_components/intro.jsx";
+import { MoreStories } from "#app/_components/more-stories.jsx";
+import { getAllPosts } from "#lib/api.js";
 
 export default function Index() {
   const allPosts = getAllPosts();

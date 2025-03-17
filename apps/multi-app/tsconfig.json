@@ -1,8 +1,6 @@
 {
   "extends": "@repo/typescript-config/astro-base",
   "compilerOptions": {
-    "outDir": "dist",
-    "strictNullChecks": true,
-    "jsx": "preserve"
+    "strict": true
   }
 }

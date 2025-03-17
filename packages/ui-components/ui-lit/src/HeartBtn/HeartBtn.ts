@@ -20,11 +20,32 @@ export class LitHeartButton extends LitElement {
     `,
   ];
 
-  @property({ type: Number, reflect: true })
-  count = 0;
+  @property() hostName = '';
+  @property() shadowName = '';
 
-  @property({ attribute: false })
-  borderW = '1px';
+  @property({ type: Number, reflect: true }) count = 0;
+
+  @property({ attribute: false }) borderW = '1px';
+
+  constructor() {
+    super();
+
+    // event listner added to to HOST element
+    this.addEventListener(
+      'click',
+      (e: Event) => (this.hostName = (e.target as Element).localName),
+    );
+  }
+
+  protected createRenderRoot() {
+    const root = super.createRenderRoot();
+    root.addEventListener('click', (e: Event) => {
+      this.shadowName = (e.target as Element).localName;
+      this.click();
+    });
+
+    return root;
+  }
 
   click = () => {
     this.count++;
@@ -33,17 +54,26 @@ export class LitHeartButton extends LitElement {
   protected render() {
     /* const styles = wcStyles; */
     return html`
-      <div class="surface1">
-        <button class="btn" @click=${this.click} aria-label="Heart">💜</button>
-        <slot></slot>
-        <span>${this.count}</span>
+      <div class="surface1 cluster">
+        <button class="btn blue-button" aria-label="Heart">💜</button>
+
+        <h4>
+          Component target:
+          <span style="font-style: italic">${this.hostName}</span>
+        </h4>
+        <h4>
+          Shadow target:
+          <span style="font-style: italic">${this.shadowName}</span>
+        </h4>
+        <div><slot></slot></div>
+        <h4>count: ${this.count}</h4>
       </div>
     `;
   }
 }
 
-declare global {
-  interface HTMLElementTagNameMap {
-    'heart-button': LitHeartButton;
-  }
-}
+// declare global {
+//   interface HTMLElementTagNameMap {
+//     'heart-button': LitHeartButton;
+//   }
+// }

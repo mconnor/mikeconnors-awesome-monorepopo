@@ -1,0 +1,192 @@
+---
+import Layout from '#layouts/Layout.astro';
+
+import { getCollection } from 'astro:content';
+import LinkCard from '#components/LinkCard.astro';
+import PostCard from '#components/PostCard.astro';
+import Hero from '#components/Hero.astro';
+
+const posts = (
+  await getCollection('posts', ({ data }) => {
+    return data.public !== false;
+  })
+)
+  .sort(
+    (a, b) =>
+      b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf(),
+  )
+  .slice(0, 5);
+
+const finds = (
+  await getCollection('finds', ({ data }) => {
+    return data.public !== false;
+  })
+)
+  .sort(
+    (a, b) =>
+      b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf(),
+  )
+  .slice(0, 10);
+---
+
+<Layout title="Home">
+  <section id="hero">
+    <Hero />
+  </section>
+
+  <hr />
+
+  <section id="skills">
+    <h2 class="solway-regular">Skills</h2>
+    <ul class="pill-list">
+      <li>Photoshop</li>
+      <li>Figma</li>
+      <li>etc.</li>
+    </ul>
+  </section>
+
+  <hr />
+
+  <section id="recent-posts" class="posts-section">
+    <h2 class="solway-regular">Latest Posts</h2>
+    <div class="posts-grid">
+      {posts.map((post) => <PostCard postData={post.data} id={post.id} />)}
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <a href="/posts" class="button-primary">View all posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="finds">
+    <h2 class="solway-regular">Today I Found...</h2>
+    <div class="finds-box">
+      {
+        finds.map((entry) => (
+          <LinkCard
+            type={entry.data.type}
+            title={entry.data.title}
+            publicationDate={entry.data.publicationDate}
+            description={entry.data.description}
+            link={entry.data.link}
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <style>
+    /* .card {
+      padding: 1rem;
+      background: var(--color-card);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(var(--color-border), 0.33);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .card h3 {
+      margin: 0;
+    }
+    .card:hover h3 {
+      color: var(--color-link);
+    }
+    .card p {
+      margin: 0.5rem 0 0;
+    } */
+
+    .finds-box {
+      padding: 1em;
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    /* ===== Hero Section ===== */
+    #hero {
+      padding-bottom: 1.5rem;
+      padding-top: 2rem;
+    }
+    #hero .subtitle {
+      margin: 0.5rem;
+      font-size: var(--step-1);
+      line-height: 1.25rem;
+    }
+    #hero-title {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    #hero h1 {
+      display: inline-block;
+      margin: 0;
+      font-size: var(--step-4);
+      line-height: 2.25rem;
+      font-weight: 700;
+    }
+    #hero img {
+      border-radius: 9999px;
+      border: 4px solid var(--color-button-border);
+      width: 8rem;
+      height: 8rem;
+    }
+
+    #hero p {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    #action-links {
+      display: flex;
+      margin: 0.25rem;
+      flex-wrap: wrap;
+      list-style-type: none;
+    }
+
+    #action-links li a {
+      display: block;
+      padding: 0.25rem;
+      margin-right: 0.5rem;
+      font-weight: 700;
+      border-color: var(--color-border);
+    }
+
+    .pill-list {
+      display: flex;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      list-style-type: none;
+    }
+
+    .pill-list li {
+      padding: 0.25rem;
+      margin: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid var(--color-button-border);
+      font-size: var(--step--1);
+      line-height: 1.25rem;
+    }
+
+    /* ===== Featured & Recent Posts Sections ===== */
+    section {
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+    }
+
+    section h2 {
+      font-size: var(--step-2);
+      line-height: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.025em;
+    }
+    .all-posts-btn-wrapper {
+      text-align: center;
+    }
+  </style>
+</Layout>

@@ -71,7 +71,12 @@ export default class Center extends HTMLElement {
   }
 
   set gutters(val) {
-    this.setAttribute('gutters', val);
+    if (val) {
+      this.setAttribute('gutters', val);
+    } else {
+      this.removeAttribute('gutters');
+    }
+    // this.setAttribute('gutters', val);
   }
 
   get intrinsic() {

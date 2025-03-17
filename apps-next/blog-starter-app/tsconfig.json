@@ -1,25 +1,15 @@
 {
   "extends": "@repo/typescript-config/next.json",
   "compilerOptions": {
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
     "strict": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "incremental": true
   },
-  "files": [
-    "postcss.config.cjs"
-  ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.mjs",
     ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }

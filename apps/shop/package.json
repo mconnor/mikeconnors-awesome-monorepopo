@@ -26,18 +26,18 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/tailwind": "catalog:",
+    "@tailwindcss/vite": "^4.0.14",
     "astro": "catalog:",
     "astro-icon": "catalog:",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
-    "postcss": "^8.5.1",
-    "prettier": "catalog:",
+    "postcss": "^8.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   },

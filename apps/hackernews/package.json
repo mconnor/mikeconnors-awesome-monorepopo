@@ -20,14 +20,14 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/node": "^9.0.1",
+    "@astrojs/node": "^9.1.3",
     "astro": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
   }

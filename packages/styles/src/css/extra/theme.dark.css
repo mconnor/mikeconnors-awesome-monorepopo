@@ -1,0 +1,41 @@
+@property --brand-dark {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--orange-3);
+}
+
+@property --text-1-dark {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--gray-3);
+}
+
+@property --text-2-dark {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--gray-5);
+}
+
+@property --surface-1-dark {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--gray-12);
+}
+
+@property --surface-2-dark {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--gray-11);
+}
+
+@property --surface-3-dark {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--gray-10);
+}
+
+@property --surface-4-dark {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: var(--gray-9);
+}

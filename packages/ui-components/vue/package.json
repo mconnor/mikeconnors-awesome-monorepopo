@@ -15,7 +15,6 @@
     "inspect": "eslint . --inspect-config",
     "fix": "eslint . --fix",
     "format": "prettier src --write",
-    "check-types": "tsc --noEmit",
     "clean": "rm -rf dist"
   },
   "keywords": [
@@ -24,14 +23,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.18.0",
-    "prettier": "catalog:",
-    "tsup": "^8.3.5",
+    "@repo/eslint-config": "link:../../config-eslint",
+    "@repo/typescript-config": "workspace:^",
+    "eslint": "catalog:",
+    "prettier-plugin-vue": "^1.1.6",
+    "tsup": "^8.4.0",
     "vue": "^3.5.13"
   },
-  "dependencies": {
-    "prettier-plugin-vue": "^1.1.6"
+  "peerDependencies": {
+    "vue": ">=3.5"
   }
 }

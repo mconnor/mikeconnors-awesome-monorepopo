@@ -1,8 +1,4 @@
 {
   "extends": "@repo/typescript-config/astro-base.json",
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-    "strictNullChecks": true
-  }
+  "compilerOptions": {}
 }

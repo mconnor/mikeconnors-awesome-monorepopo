@@ -16,18 +16,18 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/preact": "^4.0.2",
+    "@astrojs/preact": "^4.0.5",
     "@preact/signals": "^2.0.1",
     "@repo/layout-webcomponents": "workspace:*",
     "astro": "catalog:",
-    "preact": "^10.25.4",
+    "preact": "^10.26.4",
     "typescript": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "^0.14.1"
   }
 }

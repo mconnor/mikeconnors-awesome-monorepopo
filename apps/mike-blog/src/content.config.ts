@@ -1,13 +1,11 @@
 import { parse as parseToml } from '@std/toml/parse';
+// build-in loaders
 import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
 
-import CountryLoader from './loaders/index.ts';
-import {
-  blogSchema,
-  authorsSchema,
-  announcementsSchema,
-} from './schemas/index';
+import { countryLoader } from './loaders/index.ts';
+
+import { announcementsSchema, authorsSchema, blogSchema } from './schemas';
 
 type ParserReturnType =
   | Record<string, Record<string, unknown>>
@@ -26,7 +24,7 @@ const authors = defineCollection({
 const blog = defineCollection({
   // type: 'content',
   loader: glob({
-    pattern: ['**/*.md', '**/*.mdx'],
+    pattern: '**/*.{md,mdx}',
     base: './src/content/blog',
   }),
   schema: blogSchema,
@@ -41,7 +39,8 @@ const announcements = defineCollection({
 });
 
 const countries = defineCollection({
-  loader: CountryLoader(),
+  loader: countryLoader(),
+  //  schema:
 });
 
 // const dogs = defineCollection({

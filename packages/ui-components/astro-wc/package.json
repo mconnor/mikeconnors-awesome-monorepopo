@@ -7,7 +7,14 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./HeartBtn": "./src/HeartWC/index.astro"
+    "./AstroDropMenu": "./src/AstroDropMenu/index.astro",
+    "./AppDrawer": "./src/AppDrawer/index.astro",
+    "./FancyButton": "./src/FancyButton/index.astro",
+    "./HeartBtn": "./src/HeartWC/index.astro",
+    "./api/feedback": "./src/api/feedback.ts",
+    "./ThemeMenu": "./src/ThemeMenu/index.astro",
+    "./SunMoon": "./src/SunMoon/index.astro",
+    "./AstroForm": "./src/AstroForm/index.astro"
   },
   "scripts": {
     "astro-check": "astro check",
@@ -16,24 +23,22 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "inspect": "eslint . --inspect-config",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "@repo/styles": "workspace:*"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "workspace:*",
-    "@repo/styles": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@repo/eslint-config": "link:../../config-eslint",
+    "@repo/typescript-config": "workspace:^",
     "@types/eslint-config-prettier": "^6.11.3",
-    "@types/eslint__js": "^8.42.3",
     "astro": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "astro": "^5.0.0"
+    "astro": ">=5"
   },
   "keywords": [],
   "author": "",

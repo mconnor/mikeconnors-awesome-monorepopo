@@ -1,0 +1,35 @@
+{
+  "name": "@apps/owls",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "inspect": "eslint . --inspect-config",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "format": "prettier . --write",
+    "check-types": "tsc --noEmit"
+  },
+  "imports": {
+    "#*": "./src/*"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:",
+    "@astrojs/vercel": "^8.1.2",
+    "@repo/layout-webcomponents": "workspace:*",
+    "@repo/styles": "workspace:*",
+    "@repo/ui-lit": "workspace:*",
+    "astro": "catalog:",
+    "lit": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/typescript-config": "workspace:^",
+    "eslint": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "typescript": "catalog:"
+  }
+}

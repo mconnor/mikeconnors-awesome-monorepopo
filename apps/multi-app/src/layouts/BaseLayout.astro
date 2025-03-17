@@ -1,5 +1,7 @@
 ---
-import GlobalStyle from '#styles/GlobalStyle.astro';
+import DevModeStyle from '@repo/styles/DevModeStyle';
+// import DevModeStyle from '@repo/styles/DevModeStyle.astro';
+// import GlobalStyle from '@repo/styles/GlobalStyle.astro';
 ---
 
 <html lang="en">
@@ -8,7 +10,7 @@ import GlobalStyle from '#styles/GlobalStyle.astro';
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <GlobalStyle />
+    <DevModeStyle />
   </head>
   <body>
     <slot />

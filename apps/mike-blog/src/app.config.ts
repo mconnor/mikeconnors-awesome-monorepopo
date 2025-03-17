@@ -13,6 +13,20 @@ export enum Links {
   TWITTER = 'https://www.twitter.com/mikeconnor504',
 }
 
+export interface navLinkType {
+  label: string;
+  href: string;
+  icon: string;
+}
+export const navLinks: navLinkType[] = [
+  { label: 'Home', href: '/', icon: 'home' },
+  { label: 'Now', href: '/now', icon: 'home' },
+  { label: 'Blog', href: '/posts', icon: 'blog' },
+  { label: 'About', href: '/about', icon: 'projects' },
+  // { label: 'CV', href: '/cv', icon: 'cv' },
+  // { label: 'Store', href: '/store', icon: 'store' },
+];
+
 /*
 These rad font-families from Dan Klammer's modern font stacks provide great typefaces that are entirely local. With these font stacks you won't have to worry about slowing down your page load or layout shift from external fonts!
 --font-system-ui: system-ui, sans-serif;

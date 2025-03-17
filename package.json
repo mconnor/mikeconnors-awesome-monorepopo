@@ -26,12 +26,23 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
-    "turbo": "^2.3.3",
-    "typescript": "catalog:"
+    "prettier": "~3.5.3",
+    "turbo": "^2.4.4"
   },
   "engines": {
     "node": ">= 22.9.0",
     "pnpm": ">=9.1.2"
   },
-  "packageManager": "pnpm@10.0.0-rc.2"
+  "packageManager": "pnpm@10.6.3",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "svelte-preprocess"
+    ],
+    "overrides": {
+      "@repo/eslint-config": "link:packages/config-eslint"
+    }
+  },
+  "dependencies": {
+    "@repo/eslint-config": "link:packages/config-eslint"
+  }
 }

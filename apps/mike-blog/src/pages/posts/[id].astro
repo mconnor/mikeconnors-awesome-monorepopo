@@ -2,7 +2,7 @@
 // import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
-
+import BlogCard from '#components/BlogCard/index.astro';
 import Layout from '#layouts/MarkdownPostLayout.astro';
 
 export const prerender = true;
@@ -23,10 +23,10 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'blog'>;
 // type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const blogPost = Astro.props;
+const props = Astro.props;
 
-const { data } = blogPost;
-const { Content } = await render(blogPost);
+const { data } = props;
+const { Content } = await render(props);
 ---
 
 <Layout {...data}>

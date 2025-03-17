@@ -64,6 +64,6 @@ export const actions = {
 	},
 
 	restart: async ({ cookies }) => {
-		cookies.delete('sverdle', { path: '/' });
+		await cookies.delete('sverdle', { path: '/' });
 	}
 } satisfies Actions;

@@ -8,10 +8,8 @@ import { pause, play, replay } from './icons';
 @customElement('my-timer')
 export class MyTimer extends LitElement {
   static styles = css`
-    /* playground-fold */
-
     :host {
-      display: inline-block;
+      display: block;
       min-width: 4em;
       text-align: center;
       padding: 0.2em;
@@ -21,14 +19,12 @@ export class MyTimer extends LitElement {
       user-select: none;
       font-size: 0.6em;
     }
-    /* playground-fold-end */
   `;
 
   @property({ type: Number })
   duration = 60;
 
   @state() private end: number | null = null;
-
   @state() private remaining = 0;
 
   render() {
@@ -38,16 +34,20 @@ export class MyTimer extends LitElement {
     const hun = padHun(Math.floor((remaining % 1000) / 10));
 
     return html`
-      ${min ? `${min}:${sec}` : `${sec}.${hun}`}
+      <h1>${min ? `${min}:${sec}` : `${sec}.${hun}`}</h1>
       <footer>
         ${remaining === 0 ? ''
         : running ? html`<span @click=${this.pause}>${pause}</span>`
         : html`<span @click=${this.start}>${play}</span>`}
+
         <span @click=${this.reset}>${replay}</span>
       </footer>
     `;
   }
-  /* playground-fold */
+
+  constructor() {
+    super();
+  }
 
   start() {
     this.end = Date.now() + this.remaining;
@@ -78,12 +78,14 @@ export class MyTimer extends LitElement {
   connectedCallback() {
     super.connectedCallback();
     this.reset();
-  } /* playground-fold-end */
+  }
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    this.end = null; // Stop the animation frame loop
+  }
 }
-/* playground-fold */
 
 function pad(pad: number, val: number) {
-  console.log('pad', pad, val);
   if (pad) {
     return String(val).padStart(2, '0');
   }
@@ -94,5 +96,3 @@ function pad(pad: number, val: number) {
 function padHun(val: number) {
   return String(val).padStart(2, '0');
 }
-
-/* playground-fold-end */

@@ -1,5 +1,7 @@
-import { ActionError, defineAction } from 'astro:actions';
+import { ActionError, defineAction, type ActionErrorCode } from 'astro:actions';
 import { z } from 'astro:schema';
+
+const notFound: ActionErrorCode = 'NOT_FOUND';
 // import { user } from './user';
 
 export const server = {
@@ -12,7 +14,7 @@ export const server = {
 
       if (!input.name) {
         throw new ActionError({
-          code: 'NOT_FOUND',
+          code: notFound,
           message: 'no input',
         });
       }
@@ -32,6 +34,13 @@ export const server = {
       }
       return `postId ${input.postId} was liked`;
       // Otherwise, like the post
+    },
+  }),
+  getAuthors: defineAction({
+    input: z.object({ authorID: z.string() }),
+    handler: async () => {
+      await Promise.resolve(); // Add await to fix lint error
+      return ['Sarah', 'Chris', 'Yan', 'Elian'];
     },
   }),
 };

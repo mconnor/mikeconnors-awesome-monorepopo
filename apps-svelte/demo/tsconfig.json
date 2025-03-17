@@ -14,10 +14,9 @@
 	"files": [
 		"./.svelte-kit/ambient.d.ts",
 		"./.svelte-kit/non-ambient.d.ts",
-		"./vite.config.mts",
+		"./vite.config.ts",
 		"./eslint.config.mjs",
-		"./postcss.config.mjs",
-		"svelte.config.mjs"
+		"./svelte.config.js"
 	]
 	// Path aliases are handled by https://svelte.dev/docs/kit/configuration#alias
 	// except $lib which is handled by https://svelte.dev/docs/kit/configuration#files

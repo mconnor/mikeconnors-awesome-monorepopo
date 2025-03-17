@@ -6,9 +6,9 @@
   Flip the card
   <button
     class={['card', { flipped }]}
-    style="transform: {flipped
-      ? 'rotateY(0)'
-      : ''}; --bg-1: palegoldenrod; --bg-2: black; --bg-3: goldenrod"
+    style="transform: {flipped ? 'rotateY(0)' : (
+      ''
+    )}; --bg-1: palegoldenrod; --bg-2: black; --bg-3: goldenrod"
     onclick={() => (flipped = !flipped)}
   >
     <div class="front">
@@ -90,7 +90,8 @@
     height: 100%;
     background-color: var(--bg-2);
     /* pattern from https://projects.verou.me/css3patterns/#marrakesh */
-    background-image: radial-gradient(var(--bg-3) 0.9em, transparent 1em),
+    background-image:
+      radial-gradient(var(--bg-3) 0.9em, transparent 1em),
       repeating-radial-gradient(
         var(--bg-3) 0,
         var(--bg-3) 0.4em,

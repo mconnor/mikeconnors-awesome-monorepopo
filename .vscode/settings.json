@@ -1,14 +1,55 @@
 {
-  "turbo.transitNodes": [
-    "transit"
-  ],
-  "[dotenv]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 8,
+  "workbench.editor.limit.perEditorGroup": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "never",
+    "source.organizeImports": "never"
   },
-  "pnpmCatalogLens.enabled": true,
-  "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "emmet.includeLanguages": {
+    "astro": "html",
+    "postcss": "css",
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "vue-html": "html",
+    "svelte": "html",
+    "preact": "html",
+    "lit": "html"
+  },
+  "javascript.preferences.importModuleSpecifier": "shortest",
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "search.exclude": {
+    "**/dist/**": true,
+    "**/.next/**": true,
+    "**/.astro/**": true,
+    "**/.turbo/**": true,
+    "**/.vercel/**": true,
+    "**/coverage/**": true,
+    "./pnpm-lock.yaml": true,
+    "**/.svelte-kit/**": true
+  },
+  "[svelte]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true
+  },
+  "[vue]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true
+  },
+  "[css]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true
   },
   "eslint.validate": [
     "javascript",
@@ -21,44 +62,12 @@
     "preact",
     "toml"
   ],
-  "github.copilot.enable": {
-    "javascript": true,
-    "typescript": true,
-    "zod": true,
-    "astro": true,
-    "react": true,
-    "preact": true,
-    "svelte": true,
-    "vue": true
-  },
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "never"
-  },
   "breadcrumbs.filePath": "on",
-  "cssvar.themes": [
-    "dark",
-    "light",
-    "dim",
-    "choco",
-    "toucan",
-    "grape"
-  ],
+  "cssvar.themes": ["dark", "light", "dim", "choco", "toucan", "grape"],
   "cssvar.enable": true,
-  // Since we want to scan css files inside `node_modules as well
-  // we need to set cssvar.ignore property to empty array
   "cssvar.ignore": [],
   "cssvar.excludeThemedVariables": true,
-  // add support for autocomplete in JS or JS like files
-  /**
-   * This setting controls whether inlay hints are enabled in the editor.
-   * Inlay hints are small pieces of information displayed inline with the code,
-   * providing additional context or details about the code.
-   *
-   * Possible values:
-   * - "off": Inlay hints are disabled.
-   * - "on": Inlay hints are enabled.
-   * - "off": Inlay hints are disabled.
-   */
+  "editor.inlayHints.enabled": "on",
   "cssvar.files": [
     "./packages/styles/src/css/**/*css",
     "./packages/styles/node_modules/open-props/open-props.min.css"
@@ -66,31 +75,76 @@
     // you can add it in this array of files
     // "assets/styles/variables.css"
   ],
-  "cssvar.extensions": [
-    "css",
-    "postcss",
-    "jsx",
-    "tsx",
-    "astro"
-  ],
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "files.exclude": {
-    "**/.git": false,
-    "**/.svn": false,
-    "**/.hg": false,
-    "**/CVS": false,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": false
+  "cssvar.extensions": ["css", "postcss", "jsx", "tsx", "astro"],
+  "editor.renderWhitespace": "boundary",
+  // "editor.rulers": [
+  //     80,
+  //     100,
+  //     120
+  // ],
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.linkedEditing": true,
+  "explorer.compactFolders": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "terminal.integrated.scrollback": 10000,
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
   },
-  "search.exclude": {
-    "**/.git": true
-  },
-  "explorer.excludeGitIgnore": false,
-  "yaml.schemas": {
-    "https://json.schemastore.org/yamllint.json": "./pnpm-workspace.yaml"
-  },
-  "editor.fontSize": 14,
-  "editor.formatOnSave": true,
-  "explorer.autoOpenDroppedFile": false,
-  "explorer.autoReveal": false
+  "cSpell.words": ["choco"],
+  "astroGenerator.enable": true, // Enable or disable the extension
+  "astroGenerator.files.include": ["astro"], // The file extensions to watch for changes. Example: "json", "jsonc"
+  "astroGenerator.files.exclude": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/out/**",
+    "**/build/**",
+    "**/.*/**"
+  ], // The files to exclude from watching. Example: "**/node_modules/**", "**/dist/**", "**/out/**", "**/build/**", "**/.*/**"
+  "astroGenerator.files.showPath": true, // Show the path of the file in the file name. Example: "home.component.tsx (pages/home)"
+  "astroGenerator.files.skipFolderConfirmation": false, // Skip the folder confirmation when creating a new file
+  "astroGenerator.formatting.headerCommentTemplate": [
+    "/*",
+    " * This file was generated by Astro File Generator",
+    " */"
+  ], // The template to use for the header comment
+  "astroGenerator.formatting.insertFinalNewline": true, // Insert a final newline at the end of the file
+  "astroGenerator.templates.customComponents": [
+    {
+      "name": "React Page",
+      "description": "Create a new page",
+      "extension": ".jsx",
+      "template": [
+        "export const meta = { title: 'Page Title' };",
+        "export default function Page() {",
+        "  return <h1>Hello, World!</h1>;",
+        "}"
+      ]
+    },
+    {
+      "name": "React Layout",
+      "description": "Create a new layout",
+      "extension": ".jsx",
+      "template": [
+        "export default function Layout({ children }) {",
+        "  return <div>{children}</div>;",
+        "}"
+      ]
+    },
+    {
+      "name": "React Component",
+      "description": "Create a new component",
+      "extension": ".jsx",
+      "template": [
+        "export default function {{ComponentName}}() {",
+        "  return <div>Hello, World!</div>;",
+        "}"
+      ]
+    }
+  ]
 }
