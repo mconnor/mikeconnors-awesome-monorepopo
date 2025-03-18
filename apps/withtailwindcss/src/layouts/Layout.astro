@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import Header from '#components/Header.astro';
+import Cover from '@repo/layout-webcomponents/Cover';
+import Center from '@repo/layout-webcomponents/Center';
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
@@ -15,7 +17,12 @@ import Header from '#components/Header.astro';
   </head>
 
   <body>
-    <Header />
-    <slot />
+    <Cover centeredElement="main" minHeight="100vh">
+      <Header />
+      <Center max="60ch">
+        <main><slot /></main>
+      </Center>
+      <Header />
+    </Cover>
   </body>
 </html>

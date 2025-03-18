@@ -8,9 +8,11 @@ interface Props {
   href: string;
   label: string;
   imagePath: string;
+  alt: string;
+  bool?: boolean;
 }
 
-const { href, label, imagePath } = Astro.props;
+const { href, label, imagePath, alt, bool } = Astro.props;
 
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '../assets/*.{jpeg,jpg,png,gif,webp}',
@@ -24,32 +26,38 @@ if (!images[imagePath])
 ---
 
 <div
-  class="mx-auto max-w-md overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-md md:max-w-2xl"
+  class="relative isolate mt-3 flex flex-col items-start rounded-2xl px-6 py-4 hover:shadow-lg"
 >
-  <div class="md:flex">
-    <div class="md:shrink-0">
-      <Image
-        slot="image"
-        class="h-48 w-full object-cover md:h-full md:w-48 p-2"
-        src={images[imagePath]()}
-        alt="Modern building architecture"
-      />
-    </div>
-    <div class="p-8">
-      <div
-        class="text-sm font-semibold tracking-wide text-indigo-500 uppercase dark:text-white"
-      >
-        <slot name="headline" />
-      </div>
-      <a
-        href={href}
-        class="mt-1 block text-lg leading-tight font-medium text-red-400 dark:text-red-100 hover:underline"
-      >
-        {label}
-      </a>
-      <p class="mt-2 text-gray-500">
-        <slot name="description" />
-      </p>
-    </div>
+  <Image slot="image" class="w-full" src={images[imagePath]()} alt={alt} />
+  <h2 class="text-xl font-bold text-zinc-800">
+    <a href={href}>
+      <span class:list={['absolute inset-0 z-10', { 'bg-pink-600/25': bool }]}
+      ></span>
+      <slot name="headline" /></a
+    >
+  </h2>
+
+  <!-- <span class:list={['absolute inset-0', { 'bg-pink-600/25': bool }]}></span> -->
+  <!-- <span class="absolute inset-0 bg-pink-600/25"></span> -->
+
+  <time class="relative order-first text-sm text-gray-600" datetime="2021-08-01"
+    >August 1, 2021</time
+  >
+  <p class="text-base text-gray-700">
+    <slot name="description" />
+  </p>
+  <div class="px-6 pt-4 pb-2">
+    <span
+      class="mr-2 mb-2 inline-block rounded-full bg-blue-200 px-3 py-1 text-sm font-semibold text-blue-700"
+      >Tag1</span
+    >
+    <span
+      class="mr-2 mb-2 inline-block rounded-full bg-blue-200 px-3 py-1 text-sm font-semibold text-blue-700"
+      >Tag2</span
+    >
+    <span
+      class="mr-2 mb-2 inline-block rounded-full bg-blue-200 px-3 py-1 text-sm font-semibold text-blue-700"
+      >Tag3</span
+    >
   </div>
 </div>

@@ -1,0 +1,143 @@
+@property --measure {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 60ch;
+  }
+
+  @property --ratio {
+    syntax: '<length-percentage>';
+    inherits: false;
+    initial-value: 1.618;
+  }
+
+  @property --font-size-base {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 1rem;
+  }
+
+  @property --s0 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: var(--font-size-base);
+  }
+
+  @property --s000 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), -3));
+  }
+
+  @property --s00 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), -2));
+  }
+
+  @property --s1 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), 1));
+  }
+
+  @property --s2 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), 2));
+  }
+
+  @property --s3 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), 3));
+  }
+
+  @property --s4 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), 4));
+  }
+
+  @property --s5 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), 5));
+  }
+
+  @property --s6 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), 6));
+  }
+
+  @property --s7 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), 7));
+  }
+
+  @property --s8 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(var(--s0) * pow(var(--ratio), 8));
+  }
+
+  @property --h0 {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 10;
+  }
+
+  @property --h1 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(80vh / var(--h0) * pow(var(--ratio), 1));
+  }
+
+  @property --h2 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(80vh / var(--h0) * pow(var(--ratio), 2));
+  }
+
+  @property --h3 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(80vh / var(--h0) * pow(var(--ratio), 3));
+  }
+
+  @property --h4 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(80vh / var(--h0) * pow(var(--ratio), 4));
+  }
+
+  @property --h5 {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: calc(80vh / var(--h0) * pow(var(--ratio), 5));
+  }
+
+  @property --line-height {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: var(--ratio);
+  }
+
+  @property --border-thin {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: var(--border-size-1);
+  }
+
+  @property --font-size-biggish {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: var(--s1);
+  }
+
+  @property --font-size-big {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: var(--s2);
+  }

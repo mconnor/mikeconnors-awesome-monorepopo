@@ -2,6 +2,9 @@
   "name": "@app/withtailwindcss",
   "type": "module",
   "version": "0.0.1",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -14,14 +17,11 @@
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
   },
-  "imports": {
-    "#*": "./src/*"
-  },
   "dependencies": {
     "@astrojs/check": "catalog:",
     "@astrojs/mdx": "^4.2.0",
     "@repo/astro-wc": "workspace:^",
-    "@repo/styles": "workspace:^",
+    "@repo/layout-webcomponents": "workspace:^",
     "@tailwindcss/vite": "^4.0.14",
     "@types/canvas-confetti": "^1.9.0",
     "astro": "catalog:",
