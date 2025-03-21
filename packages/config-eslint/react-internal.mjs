@@ -19,7 +19,6 @@ export const config = [
   pluginReact.configs.flat.recommended,
   {
     languageOptions: {
-      ...pluginReact.configs.flat.recommended.languageOptions,
       globals: {
         ...globals.serviceworker,
         ...globals.browser,
@@ -27,6 +26,9 @@ export const config = [
       parserOptions: {
         projectService: true,
         extraFileExtensions,
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
   },

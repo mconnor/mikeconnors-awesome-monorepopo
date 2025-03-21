@@ -1,5 +1,5 @@
-import lit from 'eslint-plugin-lit';
-import wc from 'eslint-plugin-wc';
+import { configs as lit } from 'eslint-plugin-lit';
+import { configs as wc } from 'eslint-plugin-wc';
 
 // const config = tseslint.config(
 //   ...wc.configs['flat/recommended'],
@@ -15,8 +15,8 @@ import wc from 'eslint-plugin-wc';
 
 /** @type {import("eslint").Linter.Config} */
 const config = [
-  wc.configs['flat/recommended'],
-  lit.configs['flat/recommended'],
+  lit['flat/recommended'],
+  wc['flat/recommended'],
   {
     rules: {
       '@typescript-eslint/no-unused-expressions': 'off',
