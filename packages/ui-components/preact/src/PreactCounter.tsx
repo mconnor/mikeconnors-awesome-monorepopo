@@ -9,7 +9,7 @@ interface Props {
 }
 
 /** A counter written with Preact */
-export function PreactCounter({ children, klass }: Props) {
+export default function PreactCounter({ children, klass }: Props) {
   const [count, setCount] = useState(0);
   const add = () => setCount((i) => i + 1);
   const subtract = () => setCount((i) => i - 1);
