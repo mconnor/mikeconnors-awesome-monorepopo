@@ -9,9 +9,9 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./counter": {
-      "types": "./dist/PreactCounter.js",
-      "default": "./dist/PreactCounter.js"
+    "./Counter": {
+      "types": "./src/PreactCounter.tsx",
+      "default": "./dist/Counter.js"
     }
   },
   "scripts": {

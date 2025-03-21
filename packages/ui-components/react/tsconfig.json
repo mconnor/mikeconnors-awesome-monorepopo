@@ -2,8 +2,8 @@
   "extends": "@repo/typescript-config/react.json",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": ".",
+
     "strict": true
   },
-  "include": ["**/*"]
+  "files": ["eslint.config.mjs", "jsx.d.ts"]
 }

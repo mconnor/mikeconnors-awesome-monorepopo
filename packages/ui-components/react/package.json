@@ -7,7 +7,7 @@
   },
   "type": "module",
   "exports": {
-    "./counter": {
+    "./Counter": {
       "types": "./src/Counter.tsx",
       "default": "./dist/Counter.js"
     },
@@ -21,7 +21,7 @@
     "dev": "tsup --watch",
     "test": "jest",
     "format": "prettier . --write",
-    "lint": "eslint src/",
+    "lint": "eslint .",
     "fix": "eslint . --fix",
     "inspect": "eslint --inspect-config",
     "check-types": "tsc --noEmit",

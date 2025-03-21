@@ -7,5 +7,5 @@
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
   },
-  "include": ["${configDir}/src/**/ts", "${configDir}/src/**/tsx"]
+  "include": ["${configDir}/src/**/*.ts", "${configDir}/src/**/*.tsx"]
 }

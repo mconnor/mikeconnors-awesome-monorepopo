@@ -7,7 +7,7 @@ interface Props {
   klass: string;
 }
 
-export function Counter({ children, klass }: Props): JSX.Element {
+export default function Counter({ children, klass }: Props): JSX.Element {
   const [count, setCount] = useState(0);
   const add = () => setCount((i) => i + 1);
   const subtract = () => setCount((i) => i - 1);

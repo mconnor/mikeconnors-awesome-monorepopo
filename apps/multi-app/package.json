@@ -36,13 +36,13 @@
     "add": "catalog:",
     "astro": "catalog:",
     "lit": "catalog:",
-    "open-props": "^1.7.13",
+    "open-props": "^1.7.14",
     "preact": "catalog:",
     "svelte": "catalog:svelte5",
     "vue": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "@types/react": "catalog:",

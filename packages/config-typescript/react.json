@@ -19,11 +19,12 @@
     "target": "ES2022",
     "jsx": "react-jsx"
   },
-  "files": ["${configDir}/eslint.config.mjs", "${configDir}/tsup.config.ts"],
   "include": [
     "${configDir}/*.d.ts",
-    "${configDir}/src/**/ts",
-    "${configDir}/src/**/tsx"
+    "${configDir}/src/**/*.ts",
+    "${configDir}/src/**/*.tsx",
+    "${configDir}/src/**/*.tsx",
+    "${configDir}/*.config.*"
   ],
   "exclude": [
     "${configDir}/node_modules",

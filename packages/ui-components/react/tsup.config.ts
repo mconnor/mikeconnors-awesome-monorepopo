@@ -1,7 +1,9 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: ['./src/ReactCounter.tsx'],
+  entry: {
+    Counter: 'src/ReactCounter.tsx',
+  },
   format: ['esm'],
   external: ['react'],
   banner: {
