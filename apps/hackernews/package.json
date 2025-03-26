@@ -24,7 +24,7 @@
     "astro": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",

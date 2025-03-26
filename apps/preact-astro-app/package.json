@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/preact": "^4.0.5",
+    "@astrojs/preact": "^4.0.6",
     "@preact/signals": "^2.0.1",
     "@repo/layout-webcomponents": "workspace:*",
     "astro": "catalog:",
@@ -24,7 +24,7 @@
     "typescript": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",

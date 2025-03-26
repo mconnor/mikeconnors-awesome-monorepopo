@@ -26,14 +26,14 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@tailwindcss/vite": "^4.0.14",
+    "@tailwindcss/vite": "^4.0.15",
     "astro": "catalog:",
     "astro-icon": "catalog:",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",
-    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",

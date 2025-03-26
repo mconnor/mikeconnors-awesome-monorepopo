@@ -17,15 +17,15 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/markdoc": "^0.13.0",
-    "@astrojs/starlight": "^0.32.2",
+    "@astrojs/markdoc": "^0.13.1",
+    "@astrojs/starlight": "^0.32.4",
     "@astrojs/starlight-markdoc": "^0.3.0",
     "@repo/styles": "workspace:*",
     "astro": "catalog:",
     "sharp": "catalog:"
   },
   "devDependencies": {
-    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",

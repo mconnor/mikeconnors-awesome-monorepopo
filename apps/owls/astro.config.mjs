@@ -6,4 +6,9 @@ export default defineConfig({
   output: 'server',
   adapter: vercel(),
   site: 'https://example.com',
+  vite: {
+    ssr: {
+      noExternal: ['open-props'],
+    },
+  },
 });
