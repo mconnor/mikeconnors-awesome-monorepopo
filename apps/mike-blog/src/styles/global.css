@@ -1,19 +1,62 @@
-/* @media (prefers-color-scheme: dark) {
-  :where([data-theme='dark'], .dark, .dark-theme) {
-    color-scheme: dark;
+@import 'open-props/style';
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+/*
+Here's what you're actually importing when you import tailwindcss:
 
-    --brand: var(--brand-dark);
-    --link: var(--link-dark);
-    --link-visited: var(--link-visited-dark);
+@layer theme, base, components, utilities;
 
-    --text-1: var(--text-1-dark);
-    --text-2: var(--text-2-dark);
+@import "./theme.css" layer(theme);
+@import "./preflight.css" layer(base);
+@import "./utilities.css" layer(utilities);
+ */
 
-    --surface-1: var(--surface-1-dark);
-    --surface-2: var(--surface-2-dark);
-    --surface-3: var(--surface-3-dark);
-    --surface-4: var(--surface-4-dark);
+/* see all tailwindcss/theme.css */
+@theme {
+  /* theme variables defined in the --font-* namespace determine
+   all of the font-family utilities that exist in a project: */
 
-    --border-color: var(--brand-dark);
+  /* --font-display: var(--font-transitional);
+  --font-script: var(--font-handwritten);
+  --font-poppins: Poppins, sans-serif; */
+
+  --color-mint-500: oklch(0.72 0.11 178);
+  /* --tab-size-github: 8; */
+}
+
+/* @utility tab-* {
+  tab-size: --value(integer);
+}
+
+@utility btn {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: ButtonFace;
+} */
+
+/* @utility typography {
+  p {
+    font-size: var(--text-base);
+    color: var(--color-gray-700);
+  }
+  h1 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-orange-950);
+    shadow: var(-shadow-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-950);
+  }
+}
+
+.my-element {
+  background: white;
+  @variant dark {
+    @variant hover {
+      background: black;
+    }
   }
 } */

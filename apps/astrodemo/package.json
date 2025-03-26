@@ -25,7 +25,7 @@
     "@astrojs/check": "catalog:",
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
-    "@astrojs/vercel": "^8.1.2",
+    "@astrojs/vercel": "^8.1.3",
     "@repo/astro-wc": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/scripts": "workspace:^",
@@ -34,10 +34,10 @@
     "@webcomponents/template-shadowroot": "catalog:",
     "astro": "catalog:",
     "lit": "catalog:",
-    "open-props": "^1.7.13"
+    "open-props": "^1.7.14"
   },
   "devDependencies": {
-    "@repo/eslint-config": "link:../../packages/config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "autoprefixer": "catalog:",

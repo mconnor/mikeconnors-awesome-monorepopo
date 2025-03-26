@@ -19,18 +19,21 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/mdx": "^4.2.0",
+    "@astrojs/mdx": "^4.2.1",
     "@repo/astro-wc": "workspace:^",
     "@repo/layout-webcomponents": "workspace:^",
-    "@tailwindcss/vite": "^4.0.14",
+    "@tailwindcss/vite": "^4.0.15",
     "@types/canvas-confetti": "^1.9.0",
     "astro": "catalog:",
     "canvas-confetti": "^1.9.3",
+    "date-fns": "^4.1.0",
+    "open-props": "catalog:",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",

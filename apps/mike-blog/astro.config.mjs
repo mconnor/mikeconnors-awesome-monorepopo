@@ -3,6 +3,7 @@ import mdx from '@astrojs/mdx';
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   outDir: 'dist',
@@ -10,6 +11,7 @@ export default defineConfig({
   // trailingSlash: 'never',
   cacheDir: './cache-directory',
   vite: {
+    plugins: [tailwindcss()],
     ssr: {
       noExternal: ['open-props'],
     },

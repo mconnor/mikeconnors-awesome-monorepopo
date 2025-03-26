@@ -1,4 +1,4 @@
-import autoprefixer from 'autoprefixer';
+// import autoprefixer from 'autoprefixer';
 import nano from 'cssnano';
 import OpenProps from 'open-props';
 import postcssCustomMedia from 'postcss-custom-media';
@@ -7,6 +7,7 @@ import postcssJitProps from 'postcss-jit-props';
 import postcssNesting from 'postcss-nesting';
 import postcssPow from 'postcss-pow';
 import process from 'process';
+import tailwindcssPostCss from '@tailwindcss/postcss';
 
 // const isProd = import.meta.env.PROD;
 const isDev = process.env.NODE_ENV === 'development';
@@ -18,7 +19,7 @@ const devConfig = {
 
 const prodConfig = {
   plugins: [
-    postcssImport,
+    // postcssImport
     postcssJitProps(OpenProps),
     postcssNesting({
       edition: '2024-02',
@@ -26,7 +27,8 @@ const prodConfig = {
     postcssPow,
     postcssCustomMedia,
     nano,
-    autoprefixer({ overrideBrowserslist: ['last 2 versions'] }),
+
+    // autoprefixer({ overrideBrowserslist: ['last 2 versions'] }),
   ],
 };
 

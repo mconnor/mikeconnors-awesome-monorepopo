@@ -1,5 +1,5 @@
 ---
-import Box from '@repo/ui-lit/Box';
+import Box from '@repo/layout-webcomponents/Box';
 import type { HTMLAttributes } from 'astro/types';
 type Props = HTMLAttributes<'a'> & {
   className?: string;
@@ -12,45 +12,14 @@ const subpath = pathname.match(/[^/]+/g);
 const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
-{
-  isActive ?
-    <slot />
-  : <a href={href} class="my-button">
+<div>
+  {
+    isActive ?
       <slot />
-    </a>
-}
-
-<style>
-  a {
-    color: var(--link);
-
-    font-size: 1.125rem;
-
-    transition: all var(--wa-transition-slow) var(--wa-transition-easing);
+    : <div class="border-4 border-indigo-5000">
+        <a href={href} class="my-button">
+          <slot />
+        </a>
+      </div>
   }
-  a:active {
-    /* border-top-color: #ad005c;
-    border-right-color: #ff7ac1;
-    border-bottom-color: #ff7ac1;
-    border-left-color: #ad005c; */
-    transform: translateY(5px);
-  }
-
-  a:hover {
-    transform: scale(1.1);
-    text-decoration: underline;
-  }
-
-  /* wa-button.pink::part(base):active {
-    border-top-color: #ad005c;
-    border-right-color: #ff7ac1;
-    border-bottom-color: #ff7ac1;
-    border-left-color: #ad005c;
-    transform: translateY(5px);
-  }
-
-  wa-button.pink::part(base):focus-visible {
-    outline: dashed 2px deeppink;
-    outline-offset: 4px;
-  } */
-</style>
+</div>

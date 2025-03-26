@@ -1,10 +1,10 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-// import '../styles/global.css';
+import Styles from '#styles/Style.astro';
 
-import DevModeStyle from '@repo/styles/DevModeStyle';
-import GlobalStyle from '@repo/styles/GlobalStyle';
+// import DevModeStyle from '@repo/styles/DevModeStyle';
+
 import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
@@ -16,8 +16,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 const { title, description, image = 'andy-og.jpeg' } = Astro.props;
 
-const isDev = process.env.NODE_ENV === 'development';
-const isTest = process.env.NODE_ENV === 'test';
+// const isDev = process.env.NODE_ENV === 'development';
+// const isTest = process.env.NODE_ENV === 'test';
 ---
 
 <!-- Global Metadata -->
@@ -49,14 +49,19 @@ const isTest = process.env.NODE_ENV === 'test';
 <meta property="twitter:description" content={description} />
 {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 <meta name="color-scheme" content="dark light dim grape choco toucan" />
-<!-- <link
+<link
   rel="stylesheet"
   href="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/styles/themes/default.css"
-/> -->
+/>
+<link
+  rel="stylesheet"
+  href="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/styles/webawesome.css"
+/>
 <script
   type="module"
   src="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/webawesome.loader.js"
 ></script>
+
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
 
 <!-- <script>
@@ -80,7 +85,4 @@ const isTest = process.env.NODE_ENV === 'test';
 </script> -->
 
 <ClientRouter />
-
-<!-- {(isDev || isTest) && <DevModeStyle />}
-<GlobalStyle /> -->
-<DevModeStyle />
+<Styles />

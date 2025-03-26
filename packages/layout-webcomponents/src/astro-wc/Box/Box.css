@@ -1,7 +1,7 @@
 box-l {
   display: block;
   padding: var(--s1);
-  border-width: var(--border-thin);
+  border-width: var(--border-thin, 1px);
 
   background-color: var(--surface-1) !important;
   color: var(--text-2) !important;

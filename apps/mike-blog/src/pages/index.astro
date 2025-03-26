@@ -8,10 +8,12 @@ export const prerender = true;
 //   height: number;
 //   format: string;
 // }
+import GreetingBtn from '#components/actions-buttons/GreetingBtn/index.astro';
+
 import Frame from '@repo/layout-webcomponents/Frame';
 import Stack from '@repo/layout-webcomponents/Stack';
 // import Cluster from '@repo/layout-webcomponents/Cluster';
-import Box from '@repo/ui-lit/Box';
+import Box from '@repo/layout-webcomponents/Box';
 import Clock from '@repo/ui-lit/Clock';
 import { Image } from 'astro:assets';
 import Andy from '#assets/andy-og.webp';
@@ -21,9 +23,22 @@ import Layout from '#layouts/Layout.astro';
 import Hero from '#components/Hero.astro';
 ---
 
-<Layout maxW="100%">
+<Layout>
   <Stack space="0" splitAfter={2}>
     <Box invert padding="0"><Hero /></Box>
+    <Box borderWidth="0">
+      <GreetingBtn />
+    </Box>
+
+    <details>
+      <summary>Tincidunt nunc pulvinar</summary>
+      <p>
+        Ut lectus arcu bibendum at varius. Convallis a cras semper auctor neque
+        vitae. Odio pellentesque diam volutpat commodo sed egestas. Amet dictum
+        sit amet justo donec enim diam vulputate ut.
+      </p>
+    </details>
+
     <!-- <Clock /> -->
     <Box borderWidth="0" padding="0">
       <Frame ratio="16:9">
@@ -38,23 +53,3 @@ import Hero from '#components/Hero.astro';
     >
   </Stack>
 </Layout>
-
-<style>
-  h2,
-  h3 {
-    font-family: var(--font-antique);
-  }
-  .hero {
-    background: var(--gradient-1);
-    color: var(--text-1);
-    font-size: var(--font-size-6);
-
-    /* text-align: center; */
-    display: flex;
-    flex-wrap: wrap;
-    > * {
-      flex-grow: 1;
-      flex-basis: calc((30rem - 100%) * 999);
-    }
-  }
-</style>

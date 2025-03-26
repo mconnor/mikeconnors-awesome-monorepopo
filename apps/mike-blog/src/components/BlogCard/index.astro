@@ -27,39 +27,13 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
   <h3 class="wa-heading-s">Tulip</h3>
   <em>{title}</em>
 </div> -->
-<a href={`./posts/${id}`}>
-  <wa-card with-image with-footer class="card-overview">
-    <!-- <img slot="image" src={cover.src} alt={cover.alt} width={200} height={200} /> -->
-    <img
-      slot="image"
-      src={cover.src}
-      alt={cover.alt}
-      width={400}
-      height={300}
-    />
+<div>
+  <!-- <img slot="image" src={cover.src} alt={cover.alt} width={200} height={200} /> -->
+  <img slot="image" src={cover.src} alt={cover.alt} width={400} height={300} />
 
-    <strong>{title}</strong><br />
+  <h2>{title}</h2>
 
-    <div slot="footer" class="description">
-      {pubDate}
-    </div>
-  </wa-card>
-</a>
-<style>
-  .card-overview {
-  }
-
-  .card-overview small {
-    color: var(--wa-color-text-quiet);
-  }
-
-  .description {
-    color: var(--wa-color-text-quiet);
-    font-size: small;
-  }
-  .card-overview [slot='footer'] {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-</style>
+  <div slot="footer" class="description">
+    {pubDate}
+  </div>
+</div>

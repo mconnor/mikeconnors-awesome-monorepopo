@@ -1,3 +1,63 @@
+@import 'open-props/style';
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
-@custom-variant dark (&:where(.dark, .dark *));
+/*
+Here's what you're actually importing when you import tailwindcss:
+
+@layer theme, base, components, utilities;
+
+@import "./theme.css" layer(theme);
+@import "./preflight.css" layer(base);
+@import "./utilities.css" layer(utilities);
+ */
+
+/* see all tailwindcss/theme.css */
+@theme {
+  /* theme variables defined in the --font-* namespace determine
+   all of the font-family utilities that exist in a project: */
+
+  /* --font-display: var(--font-transitional);
+  --font-script: var(--font-handwritten);
+  --font-poppins: Poppins, sans-serif; */
+
+  --color-mint-500: oklch(0.72 0.11 178);
+  /* --tab-size-github: 8; */
+}
+
+/* @utility tab-* {
+  tab-size: --value(integer);
+}
+
+@utility btn {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: ButtonFace;
+} */
+
+/* @utility typography {
+  p {
+    font-size: var(--text-base);
+    color: var(--color-gray-700);
+  }
+  h1 {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-orange-950);
+    shadow: var(-shadow-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-gray-950);
+  }
+}
+
+.my-element {
+  background: white;
+  @variant dark {
+    @variant hover {
+      background: black;
+    }
+  }
+} */

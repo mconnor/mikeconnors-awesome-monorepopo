@@ -1,0 +1,56 @@
+---
+import Card from '#components/Card/index.astro';
+// import Card from '@repo/astro-wc/Card';
+// Component Imports
+// import Button from '#components/Button.astro';
+import Stack from '@repo/layout-webcomponents/Stack';
+import Layout from '#layouts/Layout.astro';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
+---
+
+<Layout>
+  <Stack>
+    <Card
+      href="/about"
+      alt="Modern building architecture"
+      label="Incredible accommodation for your team"
+      imagePath="../assets/andy-og.webp"
+      date="2021-09-01"
+    >
+      <p slot="headline" class="line-clamp-1">
+        Commodo aute sit dolor qui.Commodo aute sit dolor qui. Commodo aute sit
+        dolor qui.
+      </p>
+      <p class="line-clamp-3 md:line-clamp-4" slot="description">
+        Ut incididunt veniam culpa do duis irure sit. Id nisi est ad id non
+        occaecat commodo excepteur cupidatat. Ea non id et adipisicing ex velit
+        amet commodo. Consequat mollit dolore ut enim. Fugiat duis excepteur
+        sunt aliqua pariatur nulla est et nisi. Duis non ea ullamco aute laborum
+        pariatur. Est qui voluptate veniam eiusmod veniam dolore dolore ipsum
+        quis irure ipsum. Laboris amet officia aliqua dolor sunt.
+      </p>
+    </Card>
+    <Card
+      href="/about"
+      alt="Modern building architecture"
+      label="Incredible accommodation for your team"
+      imagePath="../assets/andy-og.webp"
+      date="2021-09-01"
+    >
+      <p slot="headline" class="line-clamp-1">
+        Commodo aute sit dolor qui.Commodo aute sit dolor qui. Commodo aute sit
+        dolor qui.
+      </p>
+      <p class="line-clamp-3 md:line-clamp-4" slot="description">
+        Ut incididunt veniam culpa do duis irure sit. Id nisi est ad id non
+        occaecat commodo excepteur cupidatat. Ea non id et adipisicing ex velit
+        amet commodo. Consequat mollit dolore ut enim. Fugiat duis excepteur
+        sunt aliqua pariatur nulla est et nisi. Duis non ea ullamco aute laborum
+        pariatur. Est qui voluptate veniam eiusmod veniam dolore dolore ipsum
+        quis irure ipsum. Laboris amet officia aliqua dolor sunt.
+      </p>
+    </Card>
+  </Stack>
+</Layout>

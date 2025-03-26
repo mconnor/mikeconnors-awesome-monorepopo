@@ -20,9 +20,14 @@ export interface navLinkType {
 }
 export const navLinks: navLinkType[] = [
   { label: 'Home', href: '/', icon: 'home' },
-  { label: 'Now', href: '/now', icon: 'home' },
+  { label: 'countries', href: '/countries', icon: 'country' },
+  { label: 'buttons', href: '/buttons', icon: 'home' },
   { label: 'Blog', href: '/posts', icon: 'blog' },
-  { label: 'About', href: '/about', icon: 'projects' },
+  { label: 'Sidebar', href: '/about', icon: 'projects' },
+  { label: 'form', href: '/form-test', icon: 'projects' },
+  { label: 'contact', href: '/contact', icon: 'projects' },
+  { label: 'blank', href: '/blank', icon: 'projects' },
+  { label: 'announcements', href: '/announcements', icon: 'projects' },
   // { label: 'CV', href: '/cv', icon: 'cv' },
   // { label: 'Store', href: '/store', icon: 'store' },
 ];

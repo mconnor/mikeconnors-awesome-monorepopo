@@ -1,7 +1,7 @@
 ---
 // import Hamburger from '/Hamburger.astro';
 import Cluster from '@repo/layout-webcomponents/Cluster';
-import Box from '@repo/ui-lit/Box';
+import Box from '@repo/layout-webcomponents/Box';
 import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
 import DropDownNav from '#components/DropDownNav/index.astro';
 // import ThemeSwitcher from '#wc-lit/ThemeSwitcher/index.astro';
@@ -21,12 +21,10 @@ const subpath = getPaths(Astro.url.pathname);
 //  pathname.match(/[^/]+/g);
 ---
 
-<header class="header-colors">
-  <Box><ThemeSwitcher /></Box>
-
+<div class="flex flex-row justify-between bg-mint-500 px-4">
   <Cluster align="baseline" justify="space-around" space="0">
-    <Box padding="0"
-      ><a href="/" style="text-decoration: none;">
+    <Box borderWidth="0">
+      <a href="/" style="text-decoration: none;">
         <wa-avatar
           shape="circle"
           initials="MC"
@@ -34,28 +32,18 @@ const subpath = getPaths(Astro.url.pathname);
           label="Avatar with initials: SL"></wa-avatar></a
       ></Box
     >
+    <!--
+    <div class="box">{subpath}</div> -->
 
-    <div class="box">{subpath}</div>
-    <div class="box">
-      <Cluster align="baseline" justify="flex-end" space="var(--s1)">
-        <!-- <DropDownNav /> -->
-        <!-- <SunMoon /> -->
+    <Cluster align="baseline" justify="flex-end" space="var(--s1)">
+      <!-- <DropDownNav />
+      <SunMoon /> -->
 
-        {
-          navLinks.map(({ href, label }) => (
-            <Box>
-              <HeaderLink href={href}>{label}</HeaderLink>
-            </Box>
-          ))
-        }
-      </Cluster>
-    </div>
+      {
+        navLinks.map(({ href, label }) => (
+          <HeaderLink href={href}>{label}</HeaderLink>
+        ))
+      }
+    </Cluster>
   </Cluster>
-</header>
-
-<style>
-  .header-colors {
-    color: var(--text-1);
-    background-color: var(--surface-4);
-  }
-</style>
+</div>

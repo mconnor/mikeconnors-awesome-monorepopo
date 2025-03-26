@@ -1,0 +1,12 @@
+---
+import Prose from '#components/Prose.astro';
+import Layout from '#layouts/Layout.astro';
+import Box from '@repo/layout-webcomponents/Box';
+const { title } = Astro.props;
+---
+
+<Layout title={title}>
+  <div class="">
+    <slot />
+  </div>
+</Layout>

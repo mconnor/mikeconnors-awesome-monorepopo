@@ -1,6 +1,6 @@
 ---
 import type { RmUnitType } from '@repo/styles/Types';
-import '../styles/global.css';
+
 import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
 import BaseHead from '#components/BaseHead.astro';
 
@@ -13,7 +13,7 @@ interface Props {
 }
 
 const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
-const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
+// const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 ---
 
 <html lang="en" data-theme="auto">
@@ -22,13 +22,13 @@ const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
   </head>
 
   <body>
-    <code class="mode">{mode}</code>
+    <!-- <code class="mode">{mode}</code> -->
     <slot />
   </body>
 </html>
 
-<script>
-  // on page, get the last theme from the cookie and set it
+<!-- <script>
+
   document.addEventListener('astro:page-load', () => {
     console.log('astro:page-load');
     const storedTheme = localStorage.getItem('theme');
@@ -52,4 +52,4 @@ const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
   .warning {
     --my-element-text-color: var(--theme-warning);
   }
-</style>
+</style> -->

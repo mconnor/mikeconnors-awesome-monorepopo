@@ -31,7 +31,7 @@
     customElements.whenDefined('wa-select'),
     customElements.whenDefined('wa-textarea'),
   ]).then(() => {
-    form.addEventListener('submit', (event) => {
+    form!.addEventListener('submit', (event) => {
       event.preventDefault();
       alert('All fields are valid!');
     });

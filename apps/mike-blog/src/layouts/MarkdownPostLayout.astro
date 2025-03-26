@@ -1,25 +1,11 @@
 ---
-// import { Debug } from 'astro:components';
-// import type { MarkdownLayoutProps } from 'astro';
-import ImageWrapper from '#components/ImageWrapper.astro';
-import TagContainer from '#components/TagContainer.astro';
 import Layout from '#layouts/Layout.astro';
 import '@repo/styles/css/markdown-style.css';
 import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
-import { format } from 'date-fns';
+import { format, compareAsc } from "date-fns";
+
 type Props = CollectionEntry<'blog'>['data'];
-// interface Props {
-//   blogData: BlogSchemaType;
-// }
-
-// type Props = MarkdownLayoutProps<{
-//   // Define frontmatter props here
-//   blogData: BlogSchemaType;
-// }>;
-
-// type Props = CollectionEntry<'blog'>['data'];
-// const { blogData } = Astro.props;
 
 const { title, description, pubDate, cover, author, tags } = Astro.props;
 
@@ -36,16 +22,6 @@ const { name } = authorResults.data;
 
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
-  <!-- <div class="wa-flank">
-    <div class="wa-frame" style="max-inline-size: 20rem;">
-      <ImageWrapper url={cover.src} alt={cover.alt} />
-    </div>
-
-    <Box borderWidth="1px">
-      Written by: {name},
-      {format(pubDate, 'd MMM, yyyy')}
-    </Box>
-  </div> -->
   <slot />
 </Layout>
 <style>
