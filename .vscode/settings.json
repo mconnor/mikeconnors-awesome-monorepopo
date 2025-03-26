@@ -11,9 +11,29 @@
     "source.fixAll.eslint": "never",
     "source.organizeImports": "never"
   },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "files.associations": {
     "*.css": "tailwindcss"
   },
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html"
+  },
+  "tailwindCSS.files.exclude": ["**/node_modules/**", "**/dist/**"],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "class:list",
+    "tw",
+    "twx"
+  ],
+  "tailwindCSS.validate": true,
+  "tailwindCSS.showPixelEquivalents": true,
+  "tailwindCSS.classFunctions": ["tw", "clsx"],
   "emmet.includeLanguages": {
     "astro": "html",
     "postcss": "css",
