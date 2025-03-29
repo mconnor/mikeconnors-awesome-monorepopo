@@ -1,6 +1,6 @@
 [data-columns] {
   display: grid;
-  grid-gap: 1rem;
+  gap: var(--s1, 1rem);
   border-radius: var(--radius-2);
   box-shadow: var(--shadow-2);
   padding: var(--size-fluid-1);

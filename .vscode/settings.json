@@ -1,4 +1,5 @@
 {
+  "turbo.transitNodes": ["transit"],
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 8,
   "workbench.editor.limit.perEditorGroup": true,
