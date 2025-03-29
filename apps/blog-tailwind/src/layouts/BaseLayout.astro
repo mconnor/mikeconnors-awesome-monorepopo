@@ -1,0 +1,41 @@
+---
+import type { RmUnitType } from '@repo/styles/Types';
+
+import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
+import BaseHead from '#components/BaseHead.astro';
+
+interface Props {
+  image?: string;
+  maxW?: RmUnitType;
+  title?: string;
+  children: unknown;
+  description?: string;
+}
+
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+---
+
+<html lang="en" data-theme="auto" class="scheme-light">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
+
+<!-- <script>
+  // on page, get the last theme from the cookie and set it
+  document.addEventListener('astro:page-load', () => {
+    console.log('astro:page-load');
+    const storedTheme = localStorage.getItem('theme');
+    const doc = document.documentElement;
+    if (storedTheme) {
+      doc.setAttribute('data-theme', storedTheme);
+      // $currTheme.set(storedTheme);
+    } else {
+      doc.setAttribute('data-theme', 'light');
+    }
+  });
+</script> -->

@@ -9,6 +9,7 @@ import VueCounter from '@repo/vue/counter';
 
 import Layout from '#layouts/Layout.astro';
 import Box from '@repo/ui-lit/Box';
+import Switcher from '@repo/layout-webcomponents/Switcher';
 ---
 
 <style>
@@ -25,9 +26,9 @@ import Box from '@repo/ui-lit/Box';
   }
 </style>
 
-<Layout>
-  <Stack>
-    <Box borderWidth="4px" borderStyle="double">
+<Layout centerWidth="80ch">
+  <Box borderWidth="4px" borderStyle="double">
+    <Switcher>
       <Box>
         <ReactCounter client:only="react" klass="counter">
           <h1>Hello from React!</h1>
@@ -39,18 +40,19 @@ import Box from '@repo/ui-lit/Box';
           <h1>Hello from Preact!</h1>
         </PreactCounter></Box
       >
-
       <Box>
         <VueCounter client:visible>
           <h1>Hello from Vue!</h1>
+          <wa-icon family="vue" name="font-awesome"></wa-icon>
         </VueCounter></Box
       >
 
       <Box>
         <CounterSvelte client:visible klass="counter">
           <h1>Hello from Svelte!</h1>
+          <wa-icon family="svelte" name="font-awesome"></wa-icon>
         </CounterSvelte></Box
       >
-    </Box>
-  </Stack>
+    </Switcher>
+  </Box>
 </Layout>

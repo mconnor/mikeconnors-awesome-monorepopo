@@ -7,11 +7,11 @@ export const SITE_DESCRIPTION =
 // export const GENERATE_SLUG_FROM_TITLE = true;
 // export const TRANSITION_API = true;
 
-export enum Links {
-  LINKEDIN = 'https://www.linkedin.com/in/michaelgconnor/',
-  GITHUB = 'https://www.github.com/mconnor',
-  TWITTER = 'https://www.twitter.com/mikeconnor504',
-}
+export const Links = {
+  LINKEDIN: 'https://www.linkedin.com/in/michaelgconnor/',
+  GITHUB: 'https://www.github.com/mconnor',
+  TWITTER: 'https://www.twitter.com/mikeconnor504',
+} as const;
 
 export interface navLinkType {
   label: string;
@@ -21,16 +21,16 @@ export interface navLinkType {
 export const navLinks: navLinkType[] = [
   { label: 'Home', href: '/', icon: 'home' },
   { label: 'countries', href: '/countries', icon: 'country' },
-  { label: 'buttons', href: '/buttons', icon: 'home' },
+  // { label: 'buttons', href: '/buttons', icon: 'home' },
   { label: 'Blog', href: '/posts', icon: 'blog' },
-  { label: 'Sidebar', href: '/about', icon: 'projects' },
-  { label: 'form', href: '/form-test', icon: 'projects' },
+  // { label: 'Sidebar', href: '/about', icon: 'projects' },
+  // { label: 'form', href: '/form-test', icon: 'projects' },
   { label: 'contact', href: '/contact', icon: 'projects' },
-  { label: 'blank', href: '/blank', icon: 'projects' },
+  // { label: 'blank', href: '/blank', icon: 'projects' },
   { label: 'announcements', href: '/announcements', icon: 'projects' },
   // { label: 'CV', href: '/cv', icon: 'cv' },
   // { label: 'Store', href: '/store', icon: 'store' },
-];
+] as const;
 
 /*
 These rad font-families from Dan Klammer's modern font stacks provide great typefaces that are entirely local. With these font stacks you won't have to worry about slowing down your page load or layout shift from external fonts!

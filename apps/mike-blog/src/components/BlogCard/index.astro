@@ -27,7 +27,7 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
   <h3 class="wa-heading-s">Tulip</h3>
   <em>{title}</em>
 </div> -->
-<div>
+<a href={`./posts/${id}`}>
   <!-- <img slot="image" src={cover.src} alt={cover.alt} width={200} height={200} /> -->
   <img slot="image" src={cover.src} alt={cover.alt} width={400} height={300} />
 
@@ -36,4 +36,4 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
   <div slot="footer" class="description">
     {pubDate}
   </div>
-</div>
+</a>

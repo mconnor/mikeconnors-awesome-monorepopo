@@ -1,0 +1,47 @@
+---
+import 'open-props/style';
+
+// import 'open-props/normalize';
+// import 'open-props/buttons';
+
+// import 'open-props/theme.light.switch.min.css';
+// import 'open-props/theme.dark.switch.min.css';
+
+// import '@repo/styles/css/layoutStyles/box.css';
+
+// import '@repo/styles/css/utility-classes.css';
+// import '@repo/styles/css/extra/theme.css';
+// import '@repo/styles/css/last.css';
+---
+
+<style is:global>
+  :root {
+    --font-size-base: 1rem;
+    --s0: var(--font-size-base);
+    --ratio: 1.618;
+    --s000: calc(var(--s0) * pow(var(--ratio), -3));
+    --s00: calc(var(--s0) * pow(var(--ratio), -2));
+    --s1: calc(var(--s0) * pow(var(--ratio), 1));
+    --s2: calc(var(--s0) * pow(var(--ratio), 2));
+
+    --s3: calc(var(--s0) * pow(var(--ratio), 3));
+    --s4: calc(var(--s0) * pow(var(--ratio), 4));
+    --s5: calc(var(--s0) * pow(var(--ratio), 5));
+    --s6: calc(var(--s0) * pow(var(--ratio), 6));
+    --s7: calc(var(--s0) * pow(var(--ratio), 7));
+    --s8: calc(var(--s0) * pow(var(--ratio), 8));
+
+    --h0: 10;
+    --h1: calc(80vh / var(--h0) * pow(var(--ratio), 1));
+    --h2: calc(80vh / var(--h0) * pow(var(--ratio), 2));
+    --h3: calc(80vh / var(--h0) * pow(var(--ratio), 3));
+    --h4: calc(80vh / var(--h0) * pow(var(--ratio), 4));
+    --h5: calc(80vh / var(--h0) * pow(var(--ratio), 5));
+
+    --line-height: var(--ratio);
+    --border-thin: var(--border-size-1);
+
+    --font-size-biggish: var(--s1);
+    --font-size-big: var(--s2);
+  }
+</style>

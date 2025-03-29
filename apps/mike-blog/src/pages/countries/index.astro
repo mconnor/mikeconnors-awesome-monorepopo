@@ -9,24 +9,21 @@ const countries = await getCollection('countries');
 ---
 
 <Layout maxW="80ch">
-  <Stack space="0">
-    <h2>This is my website</h2>
-    <Box>
-      <p>{countries.length} countires returned</p>
-    </Box>
+  <article class="prose lg:prose-xl">
+    <h1>This is my website</h1>
+
+    <p>{countries.length} countires returned</p>
 
     {
       countries && (
-        <Box>
+        <ul>
           {countries.map(({ id, data }) => (
-            <Box>
-              <h3>
-                {id}-{data.name.common}
-              </h3>
-            </Box>
+            <li>
+              {id}-{data.name.common}
+            </li>
           ))}
-        </Box>
+        </ul>
       )
     }
-  </Stack>
+  </article>
 </Layout>

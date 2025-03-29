@@ -1,27 +1,32 @@
 ---
-import BaseHead from '#components/BaseHead.astro';
-import Header from '#components/Header.astro';
-import Footer from '#components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Center from '@repo/layout-webcomponents/Center';
+import Cover from '@repo/layout-webcomponents/Cover';
+import type { RmUnitType } from '@repo/styles/Types';
 
-interface Prop {
-  title: string;
-  description: string;
+import Footer from '#components/Footer.astro';
+import Header from '#components/Header.astro';
+
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  maxW?: RmUnitType;
+  children: unknown;
+  title?: string;
+  description?: string;
 }
 
-const { title, description } = Astro.props;
+const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout {...rest}>
+  <Cover centeredElement="center-l" space="0">
+    <Header transition:persist />
+
+    <Center max={maxW} transition:animate="slide">
+      <div class="prose md:prose-lg lg:prose-xl prose-blue scheme-light">
+        <slot />
+      </div>
+    </Center>
+  </Cover>
+</BaseLayout>
+class="prose lg:prose-xl"

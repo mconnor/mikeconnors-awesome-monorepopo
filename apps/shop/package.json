@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@tailwindcss/vite": "^4.0.15",
+    "@tailwindcss/vite": "^4.0.17",
     "astro": "catalog:",
     "astro-icon": "catalog:",
     "tailwindcss": "catalog:"
@@ -37,7 +37,6 @@
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "postcss": "^8.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:"
   },

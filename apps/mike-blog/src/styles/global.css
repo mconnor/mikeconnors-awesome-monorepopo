@@ -1,6 +1,6 @@
-@import 'open-props/style';
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+@import 'open-props/style';
 /*
 Here's what you're actually importing when you import tailwindcss:
 
@@ -19,15 +19,39 @@ Here's what you're actually importing when you import tailwindcss:
   /* --font-display: var(--font-transitional);
   --font-script: var(--font-handwritten);
   --font-poppins: Poppins, sans-serif; */
+  --color-primary-50: oklch(0.977 0.013 236.62);
+  --color-primary-100: oklch(0.951 0.026 236.824);
+  --color-primary-200: oklch(0.901 0.058 230.902);
+  --color-primary-300: oklch(0.828 0.111 230.318);
+  --color-primary-400: oklch(0.746 0.16 232.661);
+  --color-primary-500: oklch(0.685 0.169 237.323);
+  --color-primary-600: oklch(0.588 0.158 241.966);
+  --color-primary-700: oklch(0.5 0.134 242.749);
+  --color-primary-800: oklch(0.443 0.11 240.79);
+  --color-primary-900: oklch(0.391 0.09 240.876);
+  --color-primary-950: oklch(0.293 0.066 243.157);
+
+  --color-accent-50: oklch(0.98 0.016 73.684);
+  --color-accent-100: oklch(0.954 0.038 75.164);
+  --color-accent-200: oklch(0.901 0.076 70.697);
+  --color-accent-300: oklch(0.837 0.128 66.29);
+  --color-accent-400: oklch(0.75 0.183 55.934);
+  --color-accent-500: oklch(0.705 0.213 47.604);
+  --color-accent-600: oklch(0.646 0.222 41.116);
+  --color-accent-700: oklch(0.553 0.195 38.402);
+  --color-accent-800: oklch(0.47 0.157 37.304);
+  --color-accent-900: oklch(0.408 0.123 38.172);
+  --color-accent-950: oklch(0.266 0.079 36.259);
 
   --color-mint-500: oklch(0.72 0.11 178);
+
   /* --tab-size-github: 8; */
 }
 
 /* @utility tab-* {
   tab-size: --value(integer);
 }
-
+x
 @utility btn {
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
@@ -42,7 +66,7 @@ Here's what you're actually importing when you import tailwindcss:
   h1 {
     font-size: var(--text-3xl);
     font-weight: var(--font-weight-semibold);
-    color: var(--color-orange-950);
+    color: var(--color-accent-950);
     shadow: var(-shadow-2xl);
   }
   h2 {

@@ -3,8 +3,6 @@
 // all pages through the use of the <BaseHead /> component.
 import Styles from '#styles/Style.astro';
 
-// import DevModeStyle from '@repo/styles/DevModeStyle';
-
 import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
@@ -49,18 +47,7 @@ const { title, description, image = 'andy-og.jpeg' } = Astro.props;
 <meta property="twitter:description" content={description} />
 {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 <meta name="color-scheme" content="dark light dim grape choco toucan" />
-<link
-  rel="stylesheet"
-  href="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/styles/themes/default.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/styles/webawesome.css"
-/>
-<script
-  type="module"
-  src="https://early.webawesome.com/webawesome@3.0.0-alpha.11/dist/webawesome.loader.js"
-></script>
+
 
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
 

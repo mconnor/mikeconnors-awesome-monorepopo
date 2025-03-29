@@ -3,8 +3,8 @@ import Layout from '#layouts/Layout.astro';
 import '@repo/styles/css/markdown-style.css';
 import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
-import { format, compareAsc } from "date-fns";
-
+import { format, compareAsc } from 'date-fns';
+import Prose from '#components/Prose.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, cover, author, tags } = Astro.props;
@@ -22,7 +22,7 @@ const { name } = authorResults.data;
 
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
-  <slot />
+  <Prose><slot /></Prose>
 </Layout>
 <style>
   .card-overview {

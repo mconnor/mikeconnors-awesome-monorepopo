@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import '@repo/styles/css/modular-scale.css';
+/* @import 'open-props/style'; */
+@theme {
+  /* theme variables defined in the --font-* namespace determine
+   all of the font-family utilities that exist in a project: */
+
+  /* --font-display: var(--font-transitional);
+  --font-script: var(--font-handwritten);
+  --font-poppins: Poppins, sans-serif; */
+
+  --color-mint-500: oklch(0.72 0.11 178);
+  /* --tab-size-github: 8; */
+}

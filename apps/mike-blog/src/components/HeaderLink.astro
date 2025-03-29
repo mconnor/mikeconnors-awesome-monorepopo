@@ -1,25 +1,33 @@
 ---
 import Box from '@repo/layout-webcomponents/Box';
+
 import type { HTMLAttributes } from 'astro/types';
 type Props = HTMLAttributes<'a'> & {
-  className?: string;
+  first?: boolean;
+  last?: boolean;
 };
 
-const { href, className, ...rest } = Astro.props;
+const { href, first, last } = Astro.props;
 
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
 const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
-<div>
-  {
-    isActive ?
+{
+  isActive ?
+    <div class="font-bold px-2 py-2">
       <slot />
-    : <div class="border-4 border-indigo-5000">
-        <a href={href} class="my-button">
-          <slot />
-        </a>
-      </div>
-  }
-</div>
+    </div>
+  : <span
+      class:list={[
+        'bg-accent-400  hover:bg-accent-800 border-indigo-5000 px-2 py-2',
+        { 'rounded-l-lg': first },
+        { 'rounded-r-lg': last },
+      ]}
+    >
+      <a href={href} class="underline decoration-sky-500">
+        <slot />
+      </a>
+    </span>
+}

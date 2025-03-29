@@ -10,9 +10,10 @@ interface Props {
   alt?: string;
 
   date: string;
+  showInset?: boolean;
 }
 
-const { href = '#', label, date, ...rest } = Astro.props;
+const { href = '#', label, date, showInset, ...rest } = Astro.props;
 ---
 
 <div
@@ -22,9 +23,10 @@ const { href = '#', label, date, ...rest } = Astro.props;
   <slot name="img" />
   <h2 class="text-xl font-bold text-zinc-800">{label}</h2>
 
-  <InsetLink href={href} />
+  <!-- <InsetLink href={href} /> -->
 
-  <!-- <span class:list={['absolute inset-0', { 'bg-pink-600/25': bool }]}></span> -->
+  <span class:list={['absolute inset-0', { 'bg-pink-600/25': showInset }]}
+  ></span>
   <!-- <span class="absolute inset-0 bg-pink-600/25"></span> -->
 
   <time class="relative order-first text-sm text-gray-600" datetime={date}

@@ -1,0 +1,25 @@
+---
+import Layout from '#layouts/Layout.astro';
+import '@repo/styles/css/markdown-style.css';
+import type { CollectionEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, cover, author, tags } = Astro.props;
+
+const authorResults = await getEntry('authors', author.id);
+
+if (!authorResults) {
+  throw new Error(`Author not found for post: ${title}`);
+}
+
+const { name } = authorResults.data;
+
+// const { data :  relatedPostData} = getEntries('blog', authorResults.data.relatedPosts);
+---
+
+<!-- TODO: fix the date format -->
+<Layout title={title} description={description} maxW="60ch">
+  <slot />
+</Layout>

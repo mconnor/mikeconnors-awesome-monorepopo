@@ -24,7 +24,7 @@ const sortedPosts = publishsedPosts.sort(
 
 <Layout title={pageTitle} maxW="100%">
   <Box>
-    <div class="my-colors">
+    <div>
       <Grid>
         {
           sortedPosts.map(({ id, data }) => (
@@ -37,7 +37,7 @@ const sortedPosts = publishsedPosts.sort(
 
             // <wa-card with-header class="card-style">
             //   <div slot="header">
-            //     <a href=`./${id}`>{data.title}</a>
+            //     <a href=`./posts/${id}`>{data.title}</a>
 
             //     <wa-icon-button name="gear" variant="solid" label="Settings" />
             //   </div>
@@ -49,29 +49,3 @@ const sortedPosts = publishsedPosts.sort(
     </div>
   </Box>
 </Layout>
-
-<style>
-  .my-colors {
-    --fore: var(--text-2);
-    --back: var(--surface-4);
-  }
-  /* .card-style {
-    color: var(--fore);
-    background-color: var(--back);
-    > [slot='header'] {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-
-  .card-style:nth-child(odd) {
-    background-color: var(--fore);
-    color: var(--back);
-  }
-
-  .details:nth-child(odd) {
-    background-color: var(--fore);
-    color: var(--back);
-  } */
-</style>
