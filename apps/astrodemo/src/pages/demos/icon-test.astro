@@ -36,7 +36,7 @@ import Box from '@repo/ui-lit/Box';
   const ICON_LIBRARY = 'tabler';
 
   registerIconLibrary('tabler', {
-    resolver: (name: string) =>
+    resolver: (name, family, variant) =>
       `https://cdn.jsdelivr.net/npm/@${ICON_LIBRARY}/icons@1.68.0/icons/${name}.svg`,
     mutator: (svg: SVGElement) => {
       svg.style.fill = 'none';

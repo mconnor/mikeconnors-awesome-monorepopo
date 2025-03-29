@@ -1,6 +1,5 @@
 ---
-import DevModeStyle from '@repo/styles/DevModeStyle';
-
+import '../styles/global.css';
 import { ClientRouter } from 'astro:transitions';
 
 interface Props {
@@ -103,11 +102,9 @@ const isDev = import.meta.env.DEV;
 </script>
 
 <ClientRouter />
-
-<DevModeStyle />
-
+<!--
 <style is:global>
   :not(:defined) {
     visibility: hidden;
   }
-</style>
+</style> -->
