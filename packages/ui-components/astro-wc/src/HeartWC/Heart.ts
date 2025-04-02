@@ -6,10 +6,7 @@ class AstroHeart extends HTMLElement {
 
   connectedCallback() {
     let initialCount = this.getAttribute('data-count');
-
-    if (!initialCount) {
-      initialCount = '0';
-    }
+    initialCount ??= '0';
 
     let count = parseInt(initialCount);
 

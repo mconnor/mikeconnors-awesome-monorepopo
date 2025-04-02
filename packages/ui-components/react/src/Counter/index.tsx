@@ -16,7 +16,7 @@ export default function Counter({ children, klass }: Props): JSX.Element {
     <div>
       <div className={klass}>
         <MyButton mathFunc={subtract}>-</MyButton>
-        <pre>{count}</pre>
+        <p className="text-white/50">{count}</p>
 
         <MyButton mathFunc={add}>+</MyButton>
       </div>

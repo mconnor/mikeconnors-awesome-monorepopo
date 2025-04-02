@@ -7,6 +7,11 @@
     "#*": "./src/*"
   },
   "exports": {
+    "./styles.css": "./dist/styles.css",
+    "./NavBar": "./src/tw/NavBar/index.astro",
+    "./Icon": "./src/Icon/index.astro",
+    "./Header": "./src/Header/index.astro",
+    "./Card": "./src/Card/index.astro",
     "./AstroDropMenu": "./src/AstroDropMenu/index.astro",
     "./AppDrawer": "./src/AppDrawer/index.astro",
     "./FancyButton": "./src/FancyButton/index.astro",
@@ -14,33 +19,39 @@
     "./api/feedback": "./src/api/feedback.ts",
     "./ThemeMenu": "./src/ThemeMenu/index.astro",
     "./SunMoon": "./src/SunMoon/index.astro",
-    "./AstroForm": "./src/AstroForm/index.astro"
+    "./AstroForm": "./src/AstroForm/index.astro",
+    "./Link": "./src/Link/index.astro"
   },
   "scripts": {
+    "clean": "rm -rf dist",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
     "lint": "eslint .",
     "fix": "eslint . --fix",
-    "inspect": "eslint . --inspect-config",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "check-types": "tsc --noEmit",
-    "@repo/styles": "workspace:*"
+    "@repo/styles": "workspace:*",
+    "@repo/layout-webcomponents": "workspace:^"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "link:../../config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@types/eslint-config-prettier": "^6.11.3",
     "astro": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "typescript": "catalog:"
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "catalog:"
   },
   "peerDependencies": {
     "astro": ">=5"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.0"
+  }
 }

@@ -32,10 +32,9 @@
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "link:../config-eslint",
+    "@repo/eslint-config":"workspace:^",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:^",
-    "@types/eslint-config-prettier": "^6.11.3",
     "astro": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",

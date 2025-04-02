@@ -1,0 +1,33 @@
+{
+  "name": "@repo/design-system",
+  "version": "1.0.0",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
+    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit",
+    "format": "prettier . --write"
+  },
+  "exports": {
+    "./theme.css": "./src/theme.css",
+    "./styles.css": "./dist/styles.css"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "link:../config-eslint",
+    "@repo/typescript-config": "workspace:*",
+    "@types/react": "^19.0.12",
+    "eslint": "^9.23.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "class-variance-authority": "^0.7.1",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.0"
+  }
+}

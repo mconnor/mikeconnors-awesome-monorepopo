@@ -1,11 +1,10 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-  entry: {
-    Counter: 'src/ReactCounter.tsx',
-  },
+  entry: ['src/index.ts'],
   format: ['esm'],
   external: ['react'],
+  dts: true,
   banner: {
     js: "'use client'",
   },
@@ -13,4 +12,10 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   minify: false,
+  outExtension() {
+    return {
+      js: `.mjs`,
+      dts: `.d.mts`,
+    };
+  },
 });

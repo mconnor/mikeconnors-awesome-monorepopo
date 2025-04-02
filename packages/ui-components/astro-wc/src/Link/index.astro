@@ -1,0 +1,12 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+type Props = HTMLAttributes<'a'>;
+
+// const path = Astro.url.pathname;
+const { href } = Astro.props;
+
+// const isActive = href === path || href === path.replace(/\/$/, '');
+---
+
+<a class="bg-sky-500 p-8 hover:bg-sky-700" href={href}><slot /></a>
