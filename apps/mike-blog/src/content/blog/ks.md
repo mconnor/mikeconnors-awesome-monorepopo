@@ -1,5 +1,5 @@
 ---
-title: Markdown Kitchen Sink
+title: Kitchen Sink
 pubDate: 2022-07-09
 author: mike-connor
 description: "After learning some Astro, I couldn't stop!"
@@ -8,6 +8,8 @@ cover:
   alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['astro', 'blogging', 'learning-in-public', 'successes']
 ---
+
+# Kitchen
 
 ## Table of Contents
 

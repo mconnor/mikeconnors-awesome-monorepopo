@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 
 // import { styleMap } from 'lit/directives/style-map.js';
 // import { classMap } from 'lit/directives/class-map.js';
-import { wcStyles } from '../wcStyles/wc-styles';
+import { wcStyles } from './wc-styles.ts';
 
 @customElement('heart-button')
 export class LitHeartButton extends LitElement {

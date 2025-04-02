@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 @import '@repo/styles/css/modular-scale.css';
+@import 'open-props/style';
+@import 'open-props/indigo';
 /* @import 'open-props/style'; */
 @theme {
   /* theme variables defined in the --font-* namespace determine
@@ -10,5 +12,46 @@
   --font-poppins: Poppins, sans-serif; */
 
   --color-mint-500: oklch(0.72 0.11 178);
+  --color-surface-600: var(--purple-08);
+
   /* --tab-size-github: 8; */
 }
+
+@utility tw-card {
+  display: block;
+  padding: var(--s1);
+  border-width: var(--border-thin, 1px);
+
+  background-color: var(--color-surface-600) !important;
+  color: var(--text-2) !important;
+
+  outline: 0.125rem solid transparent;
+  outline-offset: -0.125rem;
+  box-shadow: var(--shadow-xl);
+}
+
+@utility btn {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: ButtonFace;
+}
+
+/* --gray-{0-12}
+--stone-{0-12}
+--red-{0-12}
+--pink-{0-12}
+--purple-{0-12}
+--violet-{0-12}
+--indigo-{0-12}
+--blue-{0-12}
+--cyan-{0-12}
+--teal-{0-12}
+--green-{0-12}
+--lime-{0-12}
+--yellow-{0-12}
+--orange-{0-12}
+--choco-{0-12}
+--brown-{0-12}
+--sand-{0-12}
+--camo-{0-12}
+--jungle-{0-12} */

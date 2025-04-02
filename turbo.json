@@ -18,7 +18,7 @@
       "outputs": ["dist/**"]
     },
     "lint": {
-      "dependsOn": ["transit"]
+      "dependsOn": ["^lint"]
     },
     "//#lint:root": {},
     "transit": {

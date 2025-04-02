@@ -1,9 +1,16 @@
-import BlockQuote from '#components/BlockQuote.astro';
-import Layout from '#layouts/Layout.astro';
-
-export const components = { blockquote: BlockQuote };
-
-<Layout title='MDX Test' description='mdx astro page'>
+---
+title: MDX
+pubDate: 2024-11-30
+author: mike-connor
+description: The Future of Dynamic Web Content
+cover:
+  src: 'https://picsum.photos/400/300?random=3'
+  alt: 'this is the alt text'
+tags: ['coding', 'successes', 'learning-in-public']
+relatedPosts:
+  - about-me
+  - my-projects # references `src/data/blog/my-year-in-review.md`
+---
 
 # MDX Test
 
@@ -202,5 +209,3 @@ def hello_world():
 Check out [OpenAI](https://www.openai.com/) for more interesting projects!
 
 > "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-
-</Layout>

@@ -1,6 +1,20 @@
 {
-    "debug.javascript.defaultRuntimeExecutable": {
-        "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
-    },
-    "bun.runtime": "/Users/mikeconnor/.local/share/mise/shims/bun"
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
+  },
+  "bun.runtime": "/Users/mikeconnor/.local/share/mise/shims/bun",
+  "cssvar.files": [
+    "./packages/styles/src/css/**/*css",
+    "./node_modules/open-props/open-props.min.css"
+    // if you have an alternative path to where your styles are located
+    // you can add it in this array of files
+    // "assets/styles/variables.css"
+  ],
+
+  "cssvar.enable": true,
+  "cssvar.ignore": [],
+  "cssvar.excludeThemedVariables": true,
+  "editor.inlayHints.enabled": "on",
+
+  "cssvar.extensions": ["css", "astro"]
 }

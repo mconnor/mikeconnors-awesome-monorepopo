@@ -16,7 +16,7 @@
   "scripts": {
     "astro-check": "astro check",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "inspect": "eslint . --inspect-config",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "lint": "eslint .",
     "format": "prettier . --write",
     "fix": "eslint . --fix",

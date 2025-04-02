@@ -20,16 +20,27 @@ import Andy from '#assets/andy-og.webp';
 // import Andy from '#assets/andyBushes.jpg';
 import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
-import Hero from '#components/Hero.astro';
 ---
 
 <Layout>
-  <Stack space="0" splitAfter={2}>
-    <Box invert padding="0"><Hero /></Box>
-    <Box borderWidth="0">
+  <Stack splitAfter={2}>
+    <!-- <div class="text-4xl">xx@tech</div> -->
+
+    <button type="button" class="bg-sky-500 hover:bg-sky-700"
+      >Get greeting</button
+    >
+    <!-- <Box borderWidth="0">
       <GreetingBtn />
-    </Box>
-    <article class="prose lg:prose-xl">
+    </Box> -->
+    <article class="">
+      <div>
+        <button
+          type="button"
+          class="bg-violet-500 hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700 ..."
+        >
+          Save changes
+        </button>
+      </div>
       <h1>This is my website</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
@@ -49,7 +60,7 @@ import Hero from '#components/Hero.astro';
     </details>
 
     <!-- <Clock /> -->
-    <Box borderWidth="0" padding="0">
+    <Box borderWidth="2rem" padding="0">
       <Frame ratio="16:9">
         <Image
           src={Andy}

@@ -1,0 +1,26 @@
+---
+import Cluster from '@repo/layout-webcomponents/Cluster';
+import Box from '@repo/layout-webcomponents/Box';
+import HeaderLink from './HeaderLink.astro';
+
+import { navLinks } from '#app.config.ts';
+---
+
+<div class="border-nuetral-600 rounded-lg border">
+  <Cluster>
+    <!-- <DropDownNav />
+      <SunMoon /> -->
+
+    {
+      navLinks.map(({ href, label }, index) => (
+        <HeaderLink
+          first={index === 0}
+          last={index === navLinks.length - 1}
+          href={href}
+        >
+          {label}
+        </HeaderLink>
+      ))
+    }
+  </Cluster>
+</div>

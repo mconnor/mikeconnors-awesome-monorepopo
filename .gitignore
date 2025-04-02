@@ -43,3 +43,4 @@ pnpm-debug.log*
 /apps-next/blog-starter-app/.gitignore
 /apps-next/blog-starter-app/.next
 /mise.local.toml
+/out

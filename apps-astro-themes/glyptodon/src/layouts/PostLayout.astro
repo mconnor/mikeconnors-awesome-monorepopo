@@ -24,7 +24,7 @@ type Props = CollectionEntry<'posts'>['data'];
 // } = Astro.props;
 
 const { post } = Astro.props;
-const { title, description, id } = post.data;
+const { title, description } = post.data;
 ---
 
 <Layout title={title} description={description}>

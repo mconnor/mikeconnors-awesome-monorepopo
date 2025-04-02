@@ -1,0 +1,42 @@
+---
+// import Hamburger from '/Hamburger.astro';
+
+import Cluster from '@repo/layout-webcomponents/Cluster';
+import Box from '@repo/layout-webcomponents/Box';
+import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
+import DropDownNav from '#components/DropDownNav/index.astro';
+
+import SunMoon from '@repo/astro-wc/SunMoon';
+import MainNav from './MainNav.astro';
+import OutLinks from './OutLinks.astro';
+import Icon from '@repo/astro-wc/Icon';
+
+import { getPaths } from '#lib/index.ts';
+
+// TODO: Move to a helper function
+
+const subpath = getPaths(Astro.url.pathname);
+//  pathname.match(/[^/]+/g);
+---
+
+<div class="border-2 bg-zinc-100 px-4 py-4 dark:bg-zinc-800">
+  <!-- <div class="border"> -->
+  <Cluster align="center" justify="space-between" space="0">
+    <div class="flex gap-4">
+      <SunMoon />
+      <wa-icon-button name="sun"></wa-icon-button>
+      <wa-icon-button name="moon"></wa-icon-button>
+      <wa-avatar
+        shape="circle"
+        initials="MC"
+        href="./"
+        label="Avatar with initials: SL"></wa-avatar>
+    </div>
+
+    <div class="flex gap-4 text-2xl"><MainNav /></div>
+
+    <div class="flex gap-4 text-4xl">
+      <OutLinks />
+    </div>
+  </Cluster>
+</div>

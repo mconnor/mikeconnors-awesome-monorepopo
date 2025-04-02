@@ -1,0 +1,33 @@
+{
+  "name": "@repo/icon-paths",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "exports": {
+    "./IconPaths": "./src/IconPaths.ts"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "astro-check": "astro check",
+    "test": "echo 'no tests yet'",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "check-types": "tsc --noEmit",
+    "@repo/styles": "workspace:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "tsup": "^8.4.0",
+    "typescript": "catalog:"
+  }
+}

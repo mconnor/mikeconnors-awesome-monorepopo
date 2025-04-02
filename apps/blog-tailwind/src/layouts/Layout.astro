@@ -23,9 +23,9 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
     <Header transition:persist />
 
     <Center max={maxW} transition:animate="slide">
-      <div class="prose md:prose-lg lg:prose-xl prose-blue scheme-light">
-        <slot />
-      </div>
+      <!-- <div class="prose md:prose-lg lg:prose-xl prose-blue scheme-light"> -->
+      <slot />
+      <!-- </div> -->
     </Center>
   </Cover>
 </BaseLayout>

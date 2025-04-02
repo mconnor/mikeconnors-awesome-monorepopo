@@ -22,10 +22,9 @@
   },
   "include": [
     "${configDir}/*.d.ts",
-    "${configDir}/src/**/*.ts",
     "${configDir}/src/**/*.tsx",
     "${configDir}/src/**/*.tsx",
-    "${configDir}/*.config.*"
+    "${configDir}/*.config.ts"
   ],
   "exclude": [
     "${configDir}/node_modules",

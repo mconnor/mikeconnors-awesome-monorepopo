@@ -40,6 +40,7 @@ export default defineConfig({
   },
   experimental: {
     responsiveImages: true,
+    headingIdCompat: true,
   },
 
   scopedStyleStrategy: 'attribute',

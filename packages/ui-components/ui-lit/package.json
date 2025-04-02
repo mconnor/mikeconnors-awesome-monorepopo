@@ -19,13 +19,13 @@
     "format": "prettier . --write",
     "lint": "eslint .",
     "fix": "eslint . --fix",
-    "inspect": "eslint . --inspect-config",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "astro-check": "astro check",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "link:../../config-eslint",
+    "@repo/eslint-config": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",

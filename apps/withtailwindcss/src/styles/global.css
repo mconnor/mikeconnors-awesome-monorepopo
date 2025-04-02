@@ -1,7 +1,7 @@
 /* @import 'open-props/style'; */
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
-
+@custom-variant dark (&:where(.dark, .dark *));
 /*
 Here's what you're actually importing when you import tailwindcss:
 
@@ -17,12 +17,40 @@ Here's what you're actually importing when you import tailwindcss:
   /* theme variables defined in the --font-* namespace determine
    all of the font-family utilities that exist in a project: */
 
-  /* --font-display: var(--font-transitional);
-  --font-script: var(--font-handwritten);
-  --font-poppins: Poppins, sans-serif; */
+  --font-sans: InterVariable, sans-serif;
+  /* --font-display--font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  --font-display--font-variation-settings: 'opsz' 32; */
 
   --color-mint-500: oklch(0.72 0.11 178);
   /* --tab-size-github: 8; */
+}
+
+@layer components {
+  .card {
+    background-color: var(--color-white);
+    border-radius: var(--rounded-lg);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-xl);
+  }
+  .cta {
+    /* border-radius: var(--radius-md);
+    padding-inline: calc(var(--spacing) * 3.5);
+    padding-block: calc(var(--spacing) * 2.5); */
+    font-size: var(--text-sm) /* 0.875rem = 14px */;
+    line-height: calc(var(--spacing) * 6) /* 1.5rem = 24px */;
+    /* background-color: var(--color-blue-500);
+    color: var(--color-white);
+    padding: var(--spacing-4);
+    border-radius: var(--rounded-md);
+    box-shadow: var(--shadow-lg); */
+  }
+}
+
+.shadow-xs {
+  --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+  box-shadow:
+    var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+    var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 
 /* @utility tab-* {
