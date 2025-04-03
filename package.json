@@ -29,7 +29,7 @@
     "prettier": "~3.5.3",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.4.4"
+    "turbo": "^2.5.0"
   },
   "engines": {
     "node": ">= 22.9.0",
