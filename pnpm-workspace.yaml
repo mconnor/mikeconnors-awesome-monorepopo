@@ -25,13 +25,13 @@ catalog:
   '@eslint/compat': ^1.2.4
   '@iconify-json/mdi': ^1.2.3
   '@open-wc/testing': ^4.0.0
-  '@types/react': ^19.0.12
-  '@types/react-dom': ^19.0.4
+  '@types/react': ^19.1.0
+  '@types/react-dom': ^19.1.1
   '@vanilla-extract/vite-plugin': ^4.0.16
   '@web/test-runner': ^0.19.0
   '@webcomponents/template-shadowroot': ^0.2.1
-  '@types/node': ^22.13.17
-  astro: ^5.5.6
+  '@types/node': ^22.14.0
+  astro: ^5.6.0
   add: ^2.0.6
   astro-icon: ^1.1.5
   autoprefixer: ^10.4.21
@@ -53,7 +53,7 @@ catalog:
   react: ^19.0.0
   react-dom: ^19.0.0
   sharp: ^0.33.5
-  tailwindcss: ^4.1.0
+  tailwindcss: ^4.1.2
   typescript: ^5.8.2
   vite: ^5.4.11
   vitest: ^2.1.6
