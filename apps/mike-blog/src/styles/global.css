@@ -93,26 +93,43 @@ Here's what you're actually importing when you import tailwindcss:
       background-color: var(--color-accent-300);
     }
   } */
+  t
 
   /* .btn-copy {
     @apply p-4 font-semibold text-gray-900 md:text-lg;
   } */
+  .tab-primary-gradient {
+    @apply h-14 bg-linear-to-r from-violet-500 to-fuchsia-500;
+  }
+
+  .tab-bg {
+    @apply h-14 bg-linear-to-l from-violet-500 to-fuchsia-500 md:bg-linear-to-t;
+  }
   .tab-primary {
-    @apply bg-primary-500/30 p-4 font-semibold text-stone-900 md:text-lg;
+    @apply p-4 font-semibold text-stone-900 md:text-lg;
+  }
+  .tab-font {
+    @apply text-sm font-semibold text-gray-900;
+  }
+  .tab-first {
+    @apply first:rounded-t-lg first:md:rounded-t-none first:md:rounded-l-2xl;
+  }
+  .tab-last {
+    @apply last:rounded-b-xl last:md:rounded-l-none last:md:rounded-r-2xl;
+  }
 
-    /* font-weight: var(--font-weight-semibold); */
-    /* box-shadow: var(--shadow-md); */
+  /* font-weight: var(--font-weight-semibold); */
+  /* box-shadow: var(--shadow-md); */
 
-    /* &:hover {
+  /* &:hover {
       @media (hover: hover) {
         font-weight: var(--font-weight-normal);
         background-color: var(--color-accent-300);
       }
     } */
-    /* :active {
+  /* :active {
       background-color: var(--color-accent-500);
     } */
-  }
 }
 
 /* @utility tab-* {

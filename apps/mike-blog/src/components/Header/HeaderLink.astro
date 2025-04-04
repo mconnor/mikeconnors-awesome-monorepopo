@@ -20,13 +20,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
     <span class:list={['tab-primary bg-transparent text-stone-500 underline']}>
       <slot name="activeTab" />
     </span>
-  : <span
-      class:list={[
-        'tab-primary relative visited:bg-purple-600 hover:underline',
-        { 'rounded-l-2xl': rest.first },
-        { 'rounded-r-2xl': rest.last },
-      ]}
-    >
+  : <span class="tab-primary tab-bg tab-first tab-last relative">
       <a href={href} class="">
         <span class="absolute inset-0" />
         <slot name="btnContents" />
