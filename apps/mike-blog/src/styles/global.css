@@ -45,126 +45,21 @@ Here's what you're actually importing when you import tailwindcss:
   --color-accent-950: oklch(0.266 0.079 36.259);
 
   --color-mint-500: oklch(0.72 0.11 178);
-
-  /* --font-size-base: 1rem;
-  --ratio: 1.618;
-  --s0: var(--font-size-base);
-  --s000: calc(var(--s0) * pow(var(--ratio), -3));
-  --s00: calc(var(--s0) * pow(var(--ratio), -2));
-  --s1: calc(var(--s0) * pow(var(--ratio), 1));
-  --s2: calc(var(--s0) * pow(var(--ratio), 2));
-
-  --s3: calc(var(--s0) * pow(var(--ratio), 3));
-  --s4: calc(var(--s0) * pow(var(--ratio), 4));
-  --s5: calc(var(--s0) * pow(var(--ratio), 5));
-  --s6: calc(var(--s0) * pow(var(--ratio), 6));
-  --s7: calc(var(--s0) * pow(var(--ratio), 7));
-  --s8: calc(var(--s0) * pow(var(--ratio), 8));
-
-  --h0: 10;
-  --h1: calc(80vh / var(--h0) * pow(var(--ratio), 1));
-  --h2: calc(80vh / var(--h0) * pow(var(--ratio), 2));
-  --h3: calc(80vh / var(--h0) * pow(var(--ratio), 3));
-  --h4: calc(80vh / var(--h0) * pow(var(--ratio), 4));
-  --h5: calc(80vh / var(--h0) * pow(var(--ratio), 5));
-
-  --line-height: var(--ratio);
-  --border-thin: var(--border-size-1);
-
-  --font-size-biggish: var(--s1);
-  --font-size-big: var(--s2); */
-
-  /* --tab-size-github: 8; */
 }
 
 @layer components {
-  /* .btnText {
-    @apply text-sm font-semibold text-gray-900;
-    padding: var(--spacing(2)) var(--spacing(4));
-    border-radius: var(--border-radius-2xl);
-    background-color: var(--color-accent-100);
-    box-shadow: var(--shadow-md);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-accent-200);
-      }
-    }
-    :active {
-      background-color: var(--color-accent-300);
-    }
-  } */
-  t
-
-  /* .btn-copy {
-    @apply p-4 font-semibold text-gray-900 md:text-lg;
-  } */
   .tab-primary-gradient {
     @apply h-14 bg-linear-to-r from-violet-500 to-fuchsia-500;
   }
 
   .tab-bg {
-    @apply h-14 bg-linear-to-l from-violet-500 to-fuchsia-500 md:bg-linear-to-t;
+    @apply bg-linear-to-l from-violet-500 to-fuchsia-500 md:bg-linear-to-t;
   }
   .tab-primary {
-    @apply p-4 font-semibold text-stone-900 md:text-lg;
-  }
-  .tab-font {
-    @apply text-sm font-semibold text-gray-900;
-  }
-  .tab-first {
-    @apply first:rounded-t-lg first:md:rounded-t-none first:md:rounded-l-2xl;
-  }
-  .tab-last {
-    @apply last:rounded-b-xl last:md:rounded-l-none last:md:rounded-r-2xl;
+    @apply font-mono font-semibold text-gray-900 sm:text-sm md:text-base lg:text-lg;
   }
 
-  /* font-weight: var(--font-weight-semibold); */
-  /* box-shadow: var(--shadow-md); */
-
-  /* &:hover {
-      @media (hover: hover) {
-        font-weight: var(--font-weight-normal);
-        background-color: var(--color-accent-300);
-      }
-    } */
-  /* :active {
-      background-color: var(--color-accent-500);
-    } */
-}
-
-/* @utility tab-* {
-  tab-size: --value(integer);
-}
-x
-@utility btn {
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: ButtonFace;
-} */
-
-/* @utility typography {
-  p {
-    font-size: var(--text-base);
-    color: var(--color-gray-700);
-  }
-  h1 {
-    font-size: var(--text-3xl);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-accent-950);
-    shadow: var(-shadow-2xl);
-  }
-  h2 {
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-gray-950);
+  .tab-ends {
+    @apply first:rounded-t-lg last:rounded-b-xl first:sm:rounded-t-none first:sm:rounded-l-2xl last:sm:rounded-l-none last:sm:rounded-r-2xl;
   }
 }
-
-.my-element {
-  background: white;
-  @variant dark {
-    @variant hover {
-      background: black;
-    }
-  }
-} */

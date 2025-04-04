@@ -51,7 +51,7 @@
     "@sentry/cli": "^2.43.0",
     "@sentry/vite-plugin": "^3.2.4",
     "@std/toml": "npm:@jsr/std__toml@^1.0.3",
-    "@tailwindcss/vite": "^4.1.2",
+    "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "astro-icon": "catalog:",
     "date-fns": "^4.1.0",

@@ -2,9 +2,6 @@
 import { type NavLinkI, navLinks } from '#app.config.ts';
 
 interface Props extends Omit<NavLinkI, 'label'> {
-  first?: boolean;
-  last?: boolean;
-
   children: unknown;
 }
 
@@ -17,10 +14,10 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 {
   isActive && !rest.subPages ?
-    <span class:list={['tab-primary bg-transparent text-stone-500 underline']}>
+    <span class="tab-primary bg-transparent p-2 text-stone-500 underline">
       <slot name="activeTab" />
     </span>
-  : <span class="tab-primary tab-bg tab-first tab-last relative">
+  : <span class="tab-primary tab-bg tab-ends relative p-2">
       <a href={href} class="">
         <span class="absolute inset-0" />
         <slot name="btnContents" />
