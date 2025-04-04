@@ -77,6 +77,44 @@ Here's what you're actually importing when you import tailwindcss:
   /* --tab-size-github: 8; */
 }
 
+@layer components {
+  /* .btnText {
+    @apply text-sm font-semibold text-gray-900;
+    padding: var(--spacing(2)) var(--spacing(4));
+    border-radius: var(--border-radius-2xl);
+    background-color: var(--color-accent-100);
+    box-shadow: var(--shadow-md);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-accent-200);
+      }
+    }
+    :active {
+      background-color: var(--color-accent-300);
+    }
+  } */
+
+  .btn-copy {
+    @apply p-4 font-semibold text-gray-900 md:text-lg;
+  }
+  .tab-primary {
+    @apply bg-primary-500/30 p-4 font-semibold text-stone-900 md:text-lg;
+
+    /* font-weight: var(--font-weight-semibold); */
+    /* box-shadow: var(--shadow-md); */
+
+    /* &:hover {
+      @media (hover: hover) {
+        font-weight: var(--font-weight-normal);
+        background-color: var(--color-accent-300);
+      }
+    } */
+    /* :active {
+      background-color: var(--color-accent-500);
+    } */
+  }
+}
+
 /* @utility tab-* {
   tab-size: --value(integer);
 }

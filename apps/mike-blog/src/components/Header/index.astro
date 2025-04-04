@@ -12,28 +12,15 @@ import OutLinks from './OutLinks.astro';
 import Icon from '@repo/astro-wc/Icon';
 
 import { getPaths } from '#lib/index.ts';
-
-// TODO: Move to a helper function
-
-const subpath = getPaths(Astro.url.pathname);
-//  pathname.match(/[^/]+/g);
 ---
 
 <div class="border-2 bg-zinc-100 px-4 py-4 dark:bg-zinc-800">
   <!-- <div class="border"> -->
   <Cluster align="center" justify="space-between" space="0">
-    <div class="flex gap-4">
-      <SunMoon />
-      <wa-icon-button name="sun"></wa-icon-button>
-      <wa-icon-button name="moon"></wa-icon-button>
-      <wa-avatar
-        shape="circle"
-        initials="MC"
-        href="./"
-        label="Avatar with initials: SL"></wa-avatar>
-    </div>
+    <SunMoon />
 
-    <div class="flex gap-4 text-2xl"><MainNav /></div>
+    <!-- <div class="flex gap-4 text-2xl"><MainNav /></div> -->
+    <MainNav />
 
     <div class="flex gap-4 text-4xl">
       <OutLinks />

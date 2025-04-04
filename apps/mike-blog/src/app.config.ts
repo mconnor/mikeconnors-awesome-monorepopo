@@ -13,16 +13,17 @@ export const Links = {
   TWITTER: 'https://www.twitter.com/mikeconnor504',
 } as const;
 
-export interface navLinkType {
+export interface NavLinkI {
   label: string;
   href: string;
-  icon: string;
+  icon?: string;
+  subPages?: boolean;
 }
-export const navLinks: navLinkType[] = [
+export const navLinks: NavLinkI[] = [
   { label: 'Home', href: '/', icon: 'home' },
   { label: 'countries', href: '/countries', icon: 'country' },
   // { label: 'buttons', href: '/buttons', icon: 'home' },
-  { label: 'Blog', href: '/posts', icon: 'blog' },
+  { label: 'Blog', href: '/posts', icon: 'blog', subPages: true },
   // { label: 'Sidebar', href: '/about', icon: 'projects' },
   // { label: 'form', href: '/form-test', icon: 'projects' },
   { label: 'contact', href: '/contact', icon: 'projects' },

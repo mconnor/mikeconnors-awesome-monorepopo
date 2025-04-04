@@ -1,13 +1,14 @@
 ---
-import Box from '@repo/layout-webcomponents/Box';
+import { type NavLinkI, navLinks } from '#app.config.ts';
 
-import type { HTMLAttributes } from 'astro/types';
-type Props = HTMLAttributes<'a'> & {
+interface Props extends Omit<NavLinkI, 'label'> {
   first?: boolean;
   last?: boolean;
-};
 
-const { href, first, last } = Astro.props;
+  children: unknown;
+}
+
+const { href, ...rest } = Astro.props;
 
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
@@ -16,17 +17,24 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 {
   isActive ?
-    <div class="px-2 py-2 font-bold">
-      <slot />
-    </div>
-  : <span
+    <span
       class:list={[
-        'border-indigo-5000 bg-accent-400 px-2 py-2 hover:bg-accent-800',
-        { 'rounded-l-lg': first },
-        { 'rounded-r-lg': last },
+        'tab-primary bg-transparent text-stone-500 underline inset-ring-2 inset-ring-blue-500/50',
+        { 'rounded-l-2xl': rest.first },
+        { 'rounded-r-2xl': rest.last },
       ]}
     >
-      <a href={href} class="hover:text-gray-400">
+      <slot />
+    </span>
+  : <span
+      class:list={[
+        'tab-primary relative visited:bg-purple-600 hover:underline hover:ring-2',
+        { 'rounded-l-2xl': rest.first },
+        { 'rounded-r-2xl': rest.last },
+      ]}
+    >
+      <a href={href} class="">
+        <span class="absolute inset-0 hover:bg-accent-200/10" />
         <slot />
       </a>
     </span>
