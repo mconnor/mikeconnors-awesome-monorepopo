@@ -6,7 +6,7 @@ import HeaderLink from './HeaderLink.astro';
 import { type NavLinkI, navLinks } from '#app.config.ts';
 ---
 
-<div class="flex divide-x-3 divide-dotted divide-primary-700/50">
+<div class="flex divide-x-3">
   <!-- <DropDownNav />
       <SunMoon /> -->
 
@@ -18,7 +18,8 @@ import { type NavLinkI, navLinks } from '#app.config.ts';
         href={href}
         subPages={subPages}
       >
-        {label}
+         <span slot="activeTab">{label}</span>
+        <span slot="btnContents">{label}</span>
       </HeaderLink>
     ))
   }

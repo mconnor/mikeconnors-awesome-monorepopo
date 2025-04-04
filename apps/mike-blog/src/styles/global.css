@@ -94,9 +94,9 @@ Here's what you're actually importing when you import tailwindcss:
     }
   } */
 
-  .btn-copy {
+  /* .btn-copy {
     @apply p-4 font-semibold text-gray-900 md:text-lg;
-  }
+  } */
   .tab-primary {
     @apply bg-primary-500/30 p-4 font-semibold text-stone-900 md:text-lg;
 

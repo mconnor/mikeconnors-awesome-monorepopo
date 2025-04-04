@@ -12,13 +12,14 @@ import OutLinks from './OutLinks.astro';
 import Icon from '@repo/astro-wc/Icon';
 
 import { getPaths } from '#lib/index.ts';
+const { pathname } = Astro.url;
 ---
 
 <div class="border-2 bg-zinc-100 px-4 py-4 dark:bg-zinc-800">
   <!-- <div class="border"> -->
   <Cluster align="center" justify="space-between" space="0">
     <SunMoon />
-
+    <!-- <h2>{pathname}</h2> -->
     <!-- <div class="flex gap-4 text-2xl"><MainNav /></div> -->
     <MainNav />
 

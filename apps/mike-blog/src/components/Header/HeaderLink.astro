@@ -16,26 +16,20 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 ---
 
 {
-  isActive ?
-    <span
-      class:list={[
-        'tab-primary bg-transparent text-stone-500 underline inset-ring-2 inset-ring-blue-500/50',
-        { 'rounded-l-2xl': rest.first },
-        { 'rounded-r-2xl': rest.last },
-      ]}
-    >
-      <slot />
+  isActive && !rest.subPages ?
+    <span class:list={['tab-primary bg-transparent text-stone-500 underline']}>
+      <slot name="activeTab" />
     </span>
   : <span
       class:list={[
-        'tab-primary relative visited:bg-purple-600 hover:underline hover:ring-2',
+        'tab-primary relative visited:bg-purple-600 hover:underline',
         { 'rounded-l-2xl': rest.first },
         { 'rounded-r-2xl': rest.last },
       ]}
     >
       <a href={href} class="">
-        <span class="absolute inset-0 hover:bg-accent-200/10" />
-        <slot />
+        <span class="absolute inset-0" />
+        <slot name="btnContents" />
       </a>
     </span>
 }
