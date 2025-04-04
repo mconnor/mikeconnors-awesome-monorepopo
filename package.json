@@ -41,6 +41,7 @@
       "@parcel/watcher",
       "@sentry/cli",
       "esbuild",
+      "sharp",
       "svelte-preprocess"
     ],
     "overrides": {}
