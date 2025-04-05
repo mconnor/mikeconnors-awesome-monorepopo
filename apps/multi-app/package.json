@@ -34,7 +34,7 @@
     "@repo/svelte": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@repo/vue": "workspace:*",
-    "@tailwindcss/vite": "^4.1.0",
+    "@tailwindcss/vite": "catalog:",
     "add": "catalog:",
     "astro": "catalog:",
     "lit": "catalog:",

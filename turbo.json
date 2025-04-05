@@ -18,7 +18,7 @@
       "outputs": ["dist/**"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["transit"]
     },
     "//#lint:root": {},
     "transit": {
@@ -49,7 +49,7 @@
     "astro-check": {
       "inputs": ["**/*.{astro,ts,tsx,js,jsx}"],
       "cache": true,
-      "dependsOn": ["^astro-check"]
+      "dependsOn": ["transit"]
     },
     "test": {
       "dependsOn": ["^lint", "^build"]

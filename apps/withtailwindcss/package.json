@@ -22,7 +22,7 @@
     "@astrojs/mdx": "^4.2.3",
     "@repo/astro-wc": "workspace:^",
     "@repo/layout-webcomponents": "workspace:^",
-    "@tailwindcss/vite": "^4.1.0",
+    "@tailwindcss/vite": "catalog:",
     "@types/canvas-confetti": "^1.9.0",
     "astro": "catalog:",
     "canvas-confetti": "^1.9.3",

@@ -24,7 +24,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/eslint-config": "link:../../config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
     "prettier-plugin-vue": "^1.1.6",

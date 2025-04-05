@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@tailwindcss/vite": "^4.1.0",
+    "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "astro-icon": "catalog:",
     "tailwindcss": "catalog:"

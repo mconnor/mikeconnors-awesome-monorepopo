@@ -17,17 +17,16 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/preact": "^4.0.8",
-    "@preact/signals": "^2.0.2",
+    "@preact/signals": "catalog:",
     "@repo/layout-webcomponents": "workspace:*",
     "astro": "catalog:",
-    "preact": "^10.26.4",
+    "preact": "catalog:",
     "typescript": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
-    "eslint": "catalog:",
-    "prettier-plugin-astro": "^0.14.1"
+    "eslint": "catalog:"
   }
 }
