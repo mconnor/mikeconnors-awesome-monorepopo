@@ -1,7 +1,8 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 
-interface  HTMLAttributes<'a'>;
+// Instead of an empty interface, directly use the type
+type Props = HTMLAttributes<'a'>;
 
 // const path = Astro.url.pathname;
 const { href } = Astro.props;
