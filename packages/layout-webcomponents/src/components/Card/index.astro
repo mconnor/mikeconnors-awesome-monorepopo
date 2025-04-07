@@ -15,20 +15,20 @@ const { href, label, showInset } = Astro.props;
 ---
 
 <div
-  class="relative isolate mt-3 flex flex-col items-start rounded-2xl px-6 py-4 hover:shadow-lg"
+  class="relative flex flex-col items-start rounded-2xl px-6 py-4 hover:shadow-lg"
 >
-  <Frame ratio="4:3"><slot name="image" /></Frame>
+  <!-- <Frame ratio="4:3"><slot name="image" /></Frame> -->
 
-  <h2 class="text-xl font-bold text-zinc-800">
+
     <a href={href}>
       <span
         class:list={['absolute inset-0 z-10', { 'bg-pink-600/25': showInset }]}
       ></span>
-      <span class="line-clamp-1">
+      <span class="text-4xl">
         <slot name="headline" />
       </span>
     </a>
-  </h2>
+
 
   <!-- <Tag class:list={['absolute inset-0', { 'bg-pink-600/25': bool }]}></Tag> -->
   <!-- <Tag class="absolute inset-0 bg-pink-600/25"></Tag> -->
