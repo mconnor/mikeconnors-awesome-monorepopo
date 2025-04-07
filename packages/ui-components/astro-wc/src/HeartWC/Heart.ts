@@ -1,8 +1,8 @@
 // Define the behaviour for our new type of HTML element.
 class AstroHeart extends HTMLElement {
-  constructor() {
-    super();
-  }
+  // constructor() {
+  //   super();
+  // }
 
   connectedCallback() {
     let initialCount = this.getAttribute('data-count');

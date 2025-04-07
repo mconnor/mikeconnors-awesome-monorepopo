@@ -7,8 +7,8 @@
     "#*": "./src/*"
   },
   "exports": {
-    ".": {
-      "types": "./src/index.ts",
+    ".*": {
+      "types": "./dist/index.mjs",
       "default": "./dist/index.mjs"
     }
   },
@@ -30,7 +30,7 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
-    "eslint": "^9.23.0",
+    "eslint": "^9.24.0",
     "eslint-config-preact": "^1.5.0",
     "prettier-plugin-astro": "catalog:",
     "tsup": "^8.4.0",

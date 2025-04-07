@@ -2,10 +2,9 @@
   "extends": "@repo/typescript-config/react.json",
   "compilerOptions": {
     "outDir": "dist",
+    "rootDir": ".",
     "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "rootDir": "./src"
-  },
-  "files": ["eslint.config.mjs", "jsx.d.ts", "src/index.ts"]
+    "strict": true
+  }
 }

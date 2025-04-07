@@ -1,13 +1,10 @@
 # generated types
-**/.astro/
-**/vercel/
-**/.frontmatter/
 
 #  default ignored files
-# **/.git
-# **/.svn
-# **/.hg
-# **/node_modules
+# .git
+# .svn
+# .hg
+# node_modules
 
 # logs
 npm-debug.log*
@@ -16,22 +13,14 @@ yarn-error.log*
 pnpm-debug.log*
 
 dist/
-.vscode/
 
 # Directories
 
 # macOS-specific files
-**/.DS_Store
+.DS_Store
 # Files
 pnpm-lock.yaml
 
-**/*d.ts
-
 # default
 
-**/.git
-**/.svn
-**/.hg
-**/node_modules/
-**/dist/
-**/.turbo/
+.turbo/

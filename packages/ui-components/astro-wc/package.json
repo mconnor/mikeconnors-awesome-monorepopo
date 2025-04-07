@@ -7,20 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./dist/styles.css",
-    "./NavBar": "./src/tw/NavBar/index.astro",
-    "./Icon": "./src/Icon/index.astro",
-    "./Header": "./src/Header/index.astro",
-    "./Card": "./src/Card/index.astro",
-    "./AstroDropMenu": "./src/AstroDropMenu/index.astro",
-    "./AppDrawer": "./src/AppDrawer/index.astro",
-    "./FancyButton": "./src/FancyButton/index.astro",
-    "./HeartBtn": "./src/HeartWC/index.astro",
-    "./api/feedback": "./src/api/feedback.ts",
-    "./ThemeMenu": "./src/ThemeMenu/index.astro",
-    "./SunMoon": "./src/SunMoon/index.astro",
-    "./AstroForm": "./src/AstroForm/index.astro",
-    "./Link": "./src/Link/index.astro"
+    "./*": "./src/*/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",
@@ -52,6 +39,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.2"
+    "@tailwindcss/cli": "^4.1.3"
   }
 }

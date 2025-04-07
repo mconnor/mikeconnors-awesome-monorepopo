@@ -1,5 +1,5 @@
-import DropDown from './DropDown/index.tsx';
-import FeedbackForm from './FeedbackForm/index.tsx';
-import Counter from './Counter/index.tsx';
+import DropDown from './DropDown';
+import FeedbackForm from './FeedbackForm';
+import Counter from './Counter';
 
 export { DropDown, FeedbackForm, Counter };

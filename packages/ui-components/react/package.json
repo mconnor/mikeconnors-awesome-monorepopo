@@ -8,8 +8,8 @@
   },
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "default": "./dist/index.js"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
     }
   },
   "scripts": {
@@ -34,7 +34,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/postcss": "^4.0.17",
+    "@tailwindcss/postcss": "^4.1.3",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "postcss": "catalog:",
@@ -49,8 +49,8 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.0",
+    "@headlessui/react": "^2.2.1",
     "@heroicons/react": "^2.2.0",
-    "@tailwindcss/cli": "^4.0.17"
+    "@tailwindcss/cli": "^4.1.3"
   }
 }
