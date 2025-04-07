@@ -1,0 +1,33 @@
+---
+
+---
+
+<astro-sun-moon>
+  <div class="icon-button-color">
+    <wa-button-group label="Alignment">
+      <wa-icon-button name="sun" label="light"></wa-icon-button>
+      <wa-icon-button name="moon" label="dark"></wa-icon-button>
+    </wa-button-group>
+  </div>
+</astro-sun-moon>
+<script>
+  import './SunMoon';
+</script>
+
+<style>
+  .icon-button-color wa-icon-button::part(base) {
+    color: var(--link);
+  }
+  .ready {
+    opacity: 1;
+    transition: 0.25s opacity;
+  }
+  .icon-button-color wa-icon-button::part(base):hover,
+  .icon-button-color wa-icon-button::part(base):focus {
+    color: #c913aa;
+  }
+
+  .icon-button-color wa-icon-button::part(base):active {
+    color: var(--link);
+  }
+</style>

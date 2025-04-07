@@ -29,6 +29,7 @@ export const navLinks: NavLinkI[] = [
   { label: 'contact', href: '/contact', icon: 'projects' },
   // { label: 'blank', href: '/blank', icon: 'projects' },
   { label: 'announcements', href: '/announcements', icon: 'projects' },
+  { label: 'xxx', href: '/xxx', icon: 'projects' },
   // { label: 'CV', href: '/cv', icon: 'cv' },
   // { label: 'Store', href: '/store', icon: 'store' },
 ] as const;

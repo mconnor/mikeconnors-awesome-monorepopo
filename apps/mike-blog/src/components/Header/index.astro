@@ -6,10 +6,9 @@ import Box from '@repo/layout-webcomponents/Box';
 import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
 import DropDownNav from '#components/DropDownNav/index.astro';
 
-import SunMoon from '@repo/astro-wc/SunMoon';
+import SunMoon from '#components/SunMoon/index.astro';
 import MainNav from './MainNav.astro';
-import OutLinks from './OutLinks.astro';
-import Icon from '@repo/astro-wc/Icon';
+import OutLinks from '../OutLinks.astro';
 
 import { getPaths } from '#lib/index.ts';
 const { pathname } = Astro.url;
@@ -22,8 +21,6 @@ const { pathname } = Astro.url;
     <!-- <div class="flex gap-4 text-2xl"><MainNav /></div> -->
     <MainNav />
 
-    <div class="flex gap-4 text-4xl">
-      <OutLinks />
-    </div>
+    <OutLinks />
   </Cluster>
 </div>

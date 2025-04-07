@@ -11,13 +11,13 @@ class GreetingButton extends HTMLElement {
   }
   connectedCallback() {
     // const stringLiteralSchema = z.literal(this.dataset.message);
-    const input = this.querySelector('input[name="login"]');
+    const input = this.querySelector('input[name="login"]') as HTMLInputElement;
 
     const btn = this.querySelector('wa-button');
-    // eslint-disable-next-line @typescript-eslint/no-misused-promises
+
     btn?.addEventListener('click', async () => {
       // Show alert pop-up with greeting from action
-      const enteredNamedParsed = nameSchema.safeParse(input?.value);
+      const enteredNamedParsed = nameSchema.safeParse(input.value);
 
       const {
         success: clientSideSuccess,

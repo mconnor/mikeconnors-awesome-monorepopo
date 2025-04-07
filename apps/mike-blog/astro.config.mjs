@@ -7,6 +7,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   outDir: 'dist',
+
   compressHTML: true,
   // trailingSlash: 'never',
   cacheDir: './cache-directory',
@@ -37,6 +38,8 @@ export default defineConfig({
     domains: ['astro.build', 'picsum.photos', 'https://doodleipsum.com'],
     // Used for all `<Image />` and `<Picture />` components unless overridden
     experimentalLayout: 'responsive',
+    // experimentalBreakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
+
     service: {
       entrypoint: 'astro/assets/services/sharp',
       config: {
