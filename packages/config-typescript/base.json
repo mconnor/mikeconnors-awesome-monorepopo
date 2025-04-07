@@ -29,8 +29,8 @@
     "allowArbitraryExtensions": true,
     "strictNullChecks": true // this is new
   },
-  "files": ["${configDir}/eslint.config.mjs"],
-  "include": ["${configDir}/src/**/*"],
+
+  "include": ["${configDir}/src/**/*", "${configDir}/*.config.mjs"],
   "exclude": [
     "${configDir}/node_modules",
     "${configDir}/.astro",

@@ -13,7 +13,7 @@ const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx', 'vue'];
  * Use this and only this script to lint react packages
  *
  * @type {import("eslint").Linter.Config} */
-export const config = [
+const reactConfig = [
   ...baseConfig,
 
   pluginReact.configs.flat.recommended,
@@ -44,3 +44,5 @@ export const config = [
     },
   },
 ];
+
+export default reactConfig;

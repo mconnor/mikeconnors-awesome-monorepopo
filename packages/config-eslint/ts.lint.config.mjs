@@ -1,6 +1,6 @@
 // @ts-check
 import js from '@eslint/js';
-
+// import barrelFiles from 'eslint-plugin-barrel-files';
 import eslintPluginAstro from 'eslint-plugin-astro';
 // import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 
@@ -18,6 +18,7 @@ export default tseslint.config(
   ignoresConfig,
   {
     name: '[*] global language options',
+    // ...barrelFiles.reccommended,
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -33,8 +34,10 @@ export default tseslint.config(
   js.configs.recommended,
   // comments.recommended,
   // TypeScript
-  tseslint.configs.recommendedTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
+  tseslint.configs.recommended,
+  // tseslint.configs.stylisticTypeChecked,
+  // tseslint.configs.strictTypeChecked,
+  // tseslint.configs.stylisticTypeChecked,
 
   {
     name: '[*] TS Rules',

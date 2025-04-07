@@ -3,9 +3,7 @@
   "extends": "./base.json",
   "compilerOptions": {
     "skipLibCheck": true,
-    "baseUrl": "${configDir}/",
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
-  },
-  "include": ["${configDir}/src/**/*.ts", "${configDir}/src/**/*.tsx"]
+  }
 }
