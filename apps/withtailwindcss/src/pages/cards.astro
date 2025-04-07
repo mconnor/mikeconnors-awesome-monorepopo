@@ -1,5 +1,4 @@
 ---
-
 import Card from '@repo/layout-webcomponents/Card';
 // Component Imports
 // import Button from '#components/Button.astro';
@@ -17,47 +16,25 @@ import Bushes from '../assets/andyBushes.jpg';
 ---
 
 <Layout>
-  <Stack>
-    <Card
-      href="/about"
-      label="Incredible accommodation for your team"
-      date="2021-09-01"
-    >
-      <Image slot="image" src={Andy} alt="Modern building architecture" />
+  <!-- <Stack> -->
+  <Card
+    href="/about"
+    label="Incredible accommodation for your team"
+    date="2021-09-01"
+  >
+    <Image slot="image" src={Andy} alt="Modern building architecture" />
 
-      <Fragment slot="headline">
-        Commodo aute sit dolor qui.Commodo aute sit dolor qui. Commodo aute sit
-        dolor qui.
-      </Fragment>
-      <Fragment slot="description">
-        Ut incididunt veniam culpa do duis irure sit. Id nisi est ad id non
-        occaecat commodo excepteur cupidatat. Ea non id et adipisicing ex velit
-        amet commodo. Consequat mollit dolore ut enim. Fugiat duis excepteur
-        sunt aliqua pariatur nulla est et nisi. Duis non ea ullamco aute laborum
-        pariatur. Est qui voluptate veniam eiusmod veniam dolore dolore ipsum
-        quis irure ipsum. Laboris amet officia aliqua dolor sunt.
-      </Fragment>
-    </Card>
-
-    <Card
-      href="/about"
-      label="Incredible accommodation for your team"
-      date="2021-09-01"
-    >
-      <Image slot="image" src={Bushes} alt="Modern building architecture" />
-
-      <Fragment slot="headline" class="line-clamp-1">
-        Commodo aute sit dolor qui.Commodo aute sit dolor qui. Commodo aute sit
-        dolor qui.
-      </Fragment>
-      <Fragment lot="description">
-        Ut incididunt veniam culpa do duis irure sit. Id nisi est ad id non
-        occaecat commodo excepteur cupidatat. Ea non id et adipisicing ex velit
-        amet commodo. Consequat mollit dolore ut enim. Fugiat duis excepteur
-        sunt aliqua pariatur nulla est et nisi. Duis non ea ullamco aute laborum
-        pariatur. Est qui voluptate veniam eiusmod veniam dolore dolore ipsum
-        quis irure ipsum. Laboris amet officia aliqua dolor sunt.
-      </Fragment>
-    </Card>
-  </Stack>
+    <Fragment slot="headline">
+      Commodo aute sit dolor qui.Commodo aute sit dolor qui. Commodo aute sit
+      dolor qui.
+    </Fragment>
+    <Fragment slot="description">
+      Ut incididunt veniam culpa do duis irure sit. Id nisi est ad id non
+      occaecat commodo excepteur cupidatat. Ea non id et adipisicing ex velit
+      amet commodo. Consequat mollit dolore ut enim. Fugiat duis excepteur sunt
+      aliqua pariatur nulla est et nisi. Duis non ea ullamco aute laborum
+      pariatur. Est qui voluptate veniam eiusmod veniam dolore dolore ipsum quis
+      irure ipsum. Laboris amet officia aliqua dolor sunt.
+    </Fragment>
+  </Card>
 </Layout>

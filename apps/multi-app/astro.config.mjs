@@ -15,7 +15,7 @@ export default defineConfig({
     ssr: {
       noExternal: [
         'open-props',
-        'https://early.webawesome.com/webawesome@3.0.0-alpha.11/',
+        'https://early.webawesome.com/webawesome@3.0.0-alpha.12/',
       ],
     },
   },
@@ -27,8 +27,8 @@ export default defineConfig({
     //   include: ['@repo/solid/**', '**/node_modules/@suid/material/**'],
     // }),
     react({ include: ['@repo/react/*'] }),
-    svelte(),
-    vue(),
+    svelte({ include: ['@repo/svelte/*'] }),
+    vue({ include: ['@repo/vue/*'] }),
   ],
 
   output: 'server',

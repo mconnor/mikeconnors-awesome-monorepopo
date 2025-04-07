@@ -2,7 +2,6 @@
   "extends": "@repo/typescript-config/astro-base",
   "compilerOptions": {
     "strict": true,
-    "baseUrl": ".",
-    "rootDir": "./src"
+    "baseUrl": "."
   }
 }

@@ -50,8 +50,6 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
-    "autoprefixer": "catalog:",
-    "cssnano": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "svelte-preprocess": "catalog:svelte5",

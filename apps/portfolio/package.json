@@ -29,6 +29,6 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }
