@@ -7,14 +7,11 @@
     "#*": "./src/*"
   },
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.mjs"
-    }
+    ".": "./src/index.ts"
   },
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css & tsup",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css & tsup --watch",
+    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
+    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
     "test": "jest",
     "format": "prettier . --write",
     "lint": "eslint .",

@@ -7,7 +7,8 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./*": "./src/*/index.astro"
+    "./*": "./src/*/index.astro",
+    "./DynamicCarousel": "./src/wa/DynamicCarousel/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",
