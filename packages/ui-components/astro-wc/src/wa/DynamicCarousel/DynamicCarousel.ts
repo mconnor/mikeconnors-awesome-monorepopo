@@ -29,6 +29,11 @@ class AstroDynamicCarousel extends HTMLElement {
     this.removeButton.addEventListener('click', this.removeSlide.bind(this));
   }
 
+  disCoonnectedCallback() {
+    this.addButton.removeEventListener('click', this.addSlide.bind(this));
+    this.removeButton.removeEventListener('click', this.removeSlide.bind(this));
+  }
+
   addSlide(): void {
     const slide = document.createElement('wa-carousel-item');
     // Increment colorIndex then select a new color by modulo

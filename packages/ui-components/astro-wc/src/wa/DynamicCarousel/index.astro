@@ -1,11 +1,11 @@
 <astro-dynamiccarousel>
-  <wa-carousel class="dynamic-carousel" pagination navigation>
+  <wa-carousel class="aspect-[3 / 2]" pagination navigation>
     <wa-carousel-item style="background: red">Slide 1</wa-carousel-item>
     <wa-carousel-item style="background: orange">Slide 2</wa-carousel-item>
     <wa-carousel-item style="background: yellow">Slide 3</wa-carousel-item>
   </wa-carousel>
 
-  <div class="carousel-options">
+  <div class="flex justify-center gap-3.5">
     <wa-button id="dynamic-add">Add slide</wa-button>
     <wa-button id="dynamic-remove">Remove slide</wa-button>
   </div>
@@ -15,18 +15,7 @@
   import './DynamicCarousel';
 </script>
 <style>
-  .dynamic-carousel {
-    --aspect-ratio: 3 / 2;
-  }
-
-  .dynamic-carousel ~ .carousel-options {
-    display: flex;
-    justify-content: center;
-    gap: var(--wa-space-xs);
-    margin-top: var(--wa-space-l);
-  }
-
-  .dynamic-carousel wa-carousel-item {
+  wa-carousel-item {
     flex: 0 0 100%;
     display: flex;
     align-items: center;
