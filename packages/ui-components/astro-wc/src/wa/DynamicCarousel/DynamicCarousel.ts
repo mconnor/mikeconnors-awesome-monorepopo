@@ -30,11 +30,11 @@ class AstroDynamicCarousel extends HTMLElement {
   }
 
   disCoonnectedCallback() {
-    this.addButton.removeEventListener('click', this.addSlide.bind(this));
-    this.removeButton.removeEventListener('click', this.removeSlide.bind(this));
+    this.addButton.removeEventListener('click', this.addSlide());
+    this.removeButton.removeEventListener('click', this.removeSlide());
   }
 
-  addSlide(): void {
+  addSlide(e): void {
     const slide = document.createElement('wa-carousel-item');
     // Increment colorIndex then select a new color by modulo
     const color = this.colors[++this.colorIndex % this.colors.length];
@@ -45,7 +45,7 @@ class AstroDynamicCarousel extends HTMLElement {
     this.removeButton.disabled = false;
   }
 
-  removeSlide(): void {
+  removeSlide(e): void {
     const numSlides = this.carousel.querySelectorAll('wa-carousel-item').length;
     if (numSlides > 1) {
       // Remove the last slide

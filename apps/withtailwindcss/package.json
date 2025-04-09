@@ -37,6 +37,7 @@
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "rollup-plugin-visualizer": "^5.14.0",
     "sharp": "catalog:",
     "typescript": "catalog:"
   }

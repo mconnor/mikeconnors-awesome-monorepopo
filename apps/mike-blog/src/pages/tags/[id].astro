@@ -34,7 +34,7 @@ const { id } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<Layout title={id}>
+<Layout title={id ?? 'needs title'}>
   {
     posts.map(({ data, id }) => (
       <BlogCard

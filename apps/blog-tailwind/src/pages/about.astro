@@ -1,15 +1,16 @@
 ---
-import Layout from '#layouts/BlogPost.astro';
+import Layout from '#layouts/ProseLayout.astro';
 import Hero from '#components/Hero.astro';
 ---
 
-<Layout title="About Me" pubDate={new Date('August 08 2021')}>
+<Layout>
   <Hero
     title="About Me"
     description="Lorem ipsum dolor sit amet"
     heroImage="/blog-placeholder-about.jpg"
     alt="About Me"
   />
+  <p>Html surrounded by prose</p>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo

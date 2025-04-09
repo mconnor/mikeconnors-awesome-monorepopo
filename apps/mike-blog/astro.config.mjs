@@ -4,6 +4,7 @@ import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   outDir: 'dist',
@@ -12,10 +13,13 @@ export default defineConfig({
   // trailingSlash: 'never',
   cacheDir: './cache-directory',
   vite: {
-    plugins: [tailwindcss()],
-    ssr: {
-      noExternal: ['open-props'],
-    },
+    plugins: [
+      tailwindcss(),
+      visualizer({
+        emitFile: true,
+        filename: 'stats.html',
+      }),
+    ],
   },
 
   // env: {

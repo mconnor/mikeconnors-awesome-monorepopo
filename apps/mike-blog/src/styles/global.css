@@ -1,6 +1,5 @@
 @import 'tailwindcss';
-@import 'open-props/style';
-/* @plugin '@tailwindcss/typography'; */
+@plugin '@tailwindcss/typography';
 
 /*
 Here's what you're actually importing when you import tailwindcss:
@@ -16,7 +15,7 @@ Here's what you're actually importing when you import tailwindcss:
 @theme {
   /* theme variables defined in the --font-* namespace determine
    all of the font-family utilities that exist in a project: */
-
+  --font-sans: InterVariable, sans-serif;
   /* --font-display: var(--font-transitional);
   --font-script: var(--font-handwritten);
   --font-poppins: Poppins, sans-serif; */
@@ -47,19 +46,17 @@ Here's what you're actually importing when you import tailwindcss:
   --color-mint-500: oklch(0.72 0.11 178);
 }
 
-@layer components {
-  .tab-primary-gradient {
-    @apply h-14 bg-linear-to-r from-violet-500 to-fuchsia-500;
-  }
+@utility tab-primary-gradient {
+  @apply h-14 bg-linear-to-r from-violet-500 to-fuchsia-500;
+}
 
-  .tab-bg {
-    @apply bg-linear-to-l from-violet-500 to-fuchsia-500 md:bg-linear-to-t;
-  }
-  .tab-primary {
-    @apply font-mono font-semibold text-gray-900 sm:text-sm md:text-base lg:text-lg;
-  }
+@utility tab-bg {
+  @apply bg-linear-to-l from-violet-500 to-fuchsia-500 md:bg-linear-to-t;
+}
+@utility tab-primary {
+  @apply font-mono font-semibold text-gray-900 sm:text-sm md:text-base lg:text-lg;
+}
 
-  .tab-ends {
-    @apply first:rounded-t-lg last:rounded-b-xl first:sm:rounded-t-none first:sm:rounded-l-2xl last:sm:rounded-l-none last:sm:rounded-r-2xl;
-  }
+@utility tab-ends {
+  @apply first:rounded-t-lg last:rounded-b-xl first:sm:rounded-t-none first:sm:rounded-l-2xl last:sm:rounded-l-none last:sm:rounded-r-2xl;
 }

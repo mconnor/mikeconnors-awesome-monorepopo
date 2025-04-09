@@ -6,11 +6,13 @@ export const SITE_DESCRIPTION =
   'Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.';
 // export const GENERATE_SLUG_FROM_TITLE = true;
 // export const TRANSITION_API = true;
-
 export const Links = {
   LINKEDIN: 'https://www.linkedin.com/in/michaelgconnor/',
   GITHUB: 'https://www.github.com/mconnor',
   TWITTER: 'https://www.twitter.com/mikeconnor504',
+  linkedin: 'https://www.linkedin.com/in/michaelgconnor/',
+  github: 'https://www.github.com/mconnor',
+  tiwtter: 'https://www.twitter.com/mikeconnor504',
 } as const;
 
 export interface NavLinkI {
@@ -21,15 +23,16 @@ export interface NavLinkI {
 }
 export const navLinks: NavLinkI[] = [
   { label: 'Home', href: '/', icon: 'home' },
-  { label: 'countries', href: '/countries', icon: 'country' },
+  // { label: 'countries', href: '/countries', icon: 'country' },
   // { label: 'buttons', href: '/buttons', icon: 'home' },
   { label: 'Blog', href: '/posts', icon: 'blog', subPages: true },
   // { label: 'Sidebar', href: '/about', icon: 'projects' },
   // { label: 'form', href: '/form-test', icon: 'projects' },
   { label: 'contact', href: '/contact', icon: 'projects' },
+  { label: 'cv', href: '/resume', icon: 'projects' },
   // { label: 'blank', href: '/blank', icon: 'projects' },
-  { label: 'announcements', href: '/announcements', icon: 'projects' },
-  { label: 'xxx', href: '/xxx', icon: 'projects' },
+  // { label: 'announcements', href: '/announcements', icon: 'projects' },
+
   // { label: 'CV', href: '/cv', icon: 'cv' },
   // { label: 'Store', href: '/store', icon: 'store' },
 ] as const;

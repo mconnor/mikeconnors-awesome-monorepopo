@@ -34,7 +34,6 @@
     "@tailwindcss/vite": "catalog:",
     "@webcomponents/template-shadowroot": "catalog:",
     "astro": "catalog:",
-    "lit": "catalog:",
     "open-props": "^1.7.14",
     "tailwindcss": "catalog:"
   },
@@ -47,6 +46,7 @@
     "cssnano": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
+    "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "catalog:",
     "vite": "^6.2.5"
   }

@@ -558,6 +558,9 @@ importers:
       '@astrojs/check':
         specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
+      '@astrojs/mdx':
+        specifier: 'catalog:'
+        version: 4.2.3(astro@5.6.1(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.39.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       '@astrojs/preact':
         specifier: 'catalog:'
         version: 4.0.8(@babel/core@7.26.10)(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.3)(preact@10.26.5)(terser@5.39.0)(yaml@2.7.1)

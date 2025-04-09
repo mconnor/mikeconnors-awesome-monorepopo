@@ -14,10 +14,10 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 {
   isActive && !rest.subPages ?
-    <span class="tab-primary bg-transparent p-2 text-stone-500 underline">
+    <span class="bg-transparent p-2 tab-primary text-stone-500 underline">
       <slot name="activeTab" />
     </span>
-  : <span class="tab-primary tab-bg tab-ends relative p-2">
+  : <span class="relative tab-ends tab-bg p-2 tab-primary">
       <a href={href} class="">
         <span class="absolute inset-0" />
         <slot name="btnContents" />

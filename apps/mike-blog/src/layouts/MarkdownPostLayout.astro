@@ -3,7 +3,6 @@ import Layout from '#layouts/Layout.astro';
 // import '@repo/styles/css/markdown-style.css';
 import type { CollectionEntry } from 'astro:content';
 import { getEntry } from 'astro:content';
-import { format, compareAsc } from 'date-fns';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -22,5 +21,9 @@ const { name } = authorResults.data;
 
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
-  <slot />
+  <div
+    class="prose md:prose-lg lg:prose-xl dark:prose-invert prose-a:text-blue-600 prose-a:hover:text-blue-500"
+  >
+    <slot />
+  </div>
 </Layout>

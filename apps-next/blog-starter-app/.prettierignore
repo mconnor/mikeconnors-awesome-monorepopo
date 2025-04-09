@@ -1,14 +1,13 @@
 # generated types
-**/.astro/
-**/vercel/
-**/.frontmatter/
+.astro/
+vercel/
+.frontmatter/
 
 #  default ignored files
-# **/.git
-# **/.svn
-# **/.hg
-# **/node_modules
-
+# .git
+# .svn
+# .hg
+# node_modules
 
 # dependencies
 /node_modules
@@ -28,22 +27,21 @@ dist/
 # Directories
 
 # macOS-specific files
-**/.DS_Store
+.DS_Store
 # Files
 pnpm-lock.yaml
 
-**/*d.ts
+*d.ts
 
 # default
 
-**/.git
-**/.svn
-**/.hg
-**/node_modules/
-**/dist/
-**/.turbo/
+.git
+.svn
+.hg
+node_modules/
+dist/
+.turbo/
 .vercel/
-
 
 # next.js
 /.next/

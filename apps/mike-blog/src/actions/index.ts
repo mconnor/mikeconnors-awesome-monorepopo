@@ -1,4 +1,5 @@
-import { ActionError, defineAction, type ActionErrorCode } from 'astro:actions';
+import type { ActionErrorCode } from 'astro:actions';
+import { ActionError, defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
 
 const notFound: ActionErrorCode = 'NOT_FOUND';

@@ -53,6 +53,7 @@
     "postcss-nesting": "catalog:",
     "postcss-pow": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
+    "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "catalog:",
     "vite": "^6.2.5"
   }

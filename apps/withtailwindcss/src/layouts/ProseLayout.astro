@@ -6,7 +6,9 @@ const { title } = Astro.props;
 ---
 
 <Layout title={title}>
-  <div class="">
+  <div
+    class="prose md:prose-lg lg:prose-xl dark:prose-invert prose-a:text-blue-600 prose-a:hover:text-blue-500"
+  >
     <slot />
   </div>
 </Layout>

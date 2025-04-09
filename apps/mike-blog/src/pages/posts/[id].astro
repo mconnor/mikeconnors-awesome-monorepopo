@@ -3,7 +3,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { getCollection, render } from 'astro:content';
 import BlogCard from '#components/BlogCard/index.astro';
-import Layout from '#layouts/MarkdownPostLayout.astro';
+import MarkdownPostLayout from '#layouts/MarkdownPostLayout.astro';
 
 export const prerender = true;
 
@@ -29,6 +29,6 @@ const { data } = props;
 const { Content, headings } = await render(props);
 ---
 
-<Layout {...data}>
+<MarkdownPostLayout {...data}>
   <Content />
-</Layout>
+</MarkdownPostLayout>

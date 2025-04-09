@@ -29,6 +29,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
+    "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "catalog:"
   }
 }

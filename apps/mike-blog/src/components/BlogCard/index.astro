@@ -1,8 +1,6 @@
 ---
-import Image from 'astro/components/Image.astro';
 import { type CollectionEntry } from 'astro:content';
-import { format } from 'date-fns';
-// interface Props extends HTMLAttributes<'a'> extends CollectionEntry<'blog'>.data;
+
 interface Props {
   foregroundColor?: string;
   backgroundColor?: string;
@@ -13,20 +11,11 @@ interface Props {
 
 const { postData, id, ssr = false } = Astro.props;
 
-const { title, description, cover, pubDate } = postData;
+const { title, cover, pubDate } = postData;
 
 const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
-// const authObj = await getEntry('authors', id);
-// const { name } = authObj.data;
 ---
 
-<!-- <div class="wa-stack wa-gap-s">
-  <div class="wa-frame wa-border-radius-l">
-    <Image src={cover.src} alt={cover.alt} width={200} height={200} />
-  </div>
-  <h3 class="wa-heading-s">Tulip</h3>
-  <em>{title}</em>
-</div> -->
 <a href={`./posts/${id}`}>
   <!-- <img slot="image" src={cover.src} alt={cover.alt} width={200} height={200} /> -->
   <img slot="image" src={cover.src} alt={cover.alt} width={400} height={300} />
