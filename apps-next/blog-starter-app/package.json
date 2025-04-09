@@ -3,7 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "imports": {
-    "#*": "./src/*"
+    "#app": "./src/app*",
+    "#interfaces": "./src/interfaces*",
+    "#lib": "./src/lib*"
   },
   "scripts": {
     "dev": "next dev --turbopack",
@@ -16,25 +18,26 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "tailwindcss": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "gray-matter": "^4.0.3",
-    "next": "^15.1.3",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "next": "^15.2.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^2.0.0",
-    "@repo/typescript-config": "workspace:^2.0.0",
-    "@types/node": "^22.10.4",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.2",
     "autoprefixer": "catalog:",
     "eslint": "catalog:",
     "postcss": "catalog:",
-    "tailwindcss": "catalog:",
     "typescript": "catalog:"
   }
 }

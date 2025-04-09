@@ -3,7 +3,11 @@
   "compilerOptions": {
     "strict": false,
     "esModuleInterop": true,
-    "incremental": true
+    "incremental": true,
+    "rootDir": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",

@@ -1,3 +1,4 @@
+// import Image from "next";
 interface Props {
   name: string;
   picture: string;
