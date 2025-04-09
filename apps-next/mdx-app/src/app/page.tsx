@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Content from './message.mdx';
+import Image from "next/image";
+import Content from "./message.mdx";
 export default function Home() {
   return (
     <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
       <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-        <article className="prose prose-lg">
+        <article className="border-1  prose prose-lg">
           <Content />
         </article>
 
-        {/* <Image
+        <Image
           className="dark:invert"
           src="/next.svg"
           alt="Next.js logo"
@@ -18,7 +18,7 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+        {/*  <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
@@ -57,7 +57,7 @@ export default function Home() {
           </a>
         </div> */}
       </main>
-      {/* <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
+      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
@@ -103,7 +103,7 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
-      </footer> */}
+      </footer>
     </div>
   );
 }
