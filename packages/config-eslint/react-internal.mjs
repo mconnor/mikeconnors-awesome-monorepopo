@@ -1,6 +1,7 @@
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
+import { defineConfig, globalIgnores } from 'eslint/config';
 
 import { config as baseConfig } from './nextBase.mjs';
 
@@ -13,7 +14,7 @@ const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx', 'vue'];
  * Use this and only this script to lint react packages
  *
  * @type {import("eslint").Linter.Config} */
-const reactConfig = [
+const reactConfig = defineConfig([
   ...baseConfig,
 
   pluginReact.configs.flat.recommended,
@@ -43,6 +44,6 @@ const reactConfig = [
       'react/react-in-jsx-scope': 'off',
     },
   },
-];
+]);
 
 export default reactConfig;

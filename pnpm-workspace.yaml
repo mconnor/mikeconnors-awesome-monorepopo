@@ -1,6 +1,7 @@
 packages:
   - apps/*
   - apps-astro-themes/*
+  - apps-next/*
   - '!apps-svelte/*'
   - '!apps/hackernews/*'
   - packages/*

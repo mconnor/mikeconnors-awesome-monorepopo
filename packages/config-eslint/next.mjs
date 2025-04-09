@@ -1,6 +1,6 @@
 import js from '@eslint/js';
 import pluginNext from '@next/eslint-plugin-next';
-
+import { defineConfig, globalIgnores } from 'eslint/config';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
@@ -12,7 +12,7 @@ import { config as baseConfig } from './nextBase.mjs';
  *
  * @type {import("eslint").Linter.Config}
  * */
-export default [
+export default defineConfig([
   ...baseConfig,
   js.configs.recommended,
 
@@ -46,4 +46,4 @@ export default [
       'react/react-in-jsx-scope': 'off',
     },
   },
-];
+]);
