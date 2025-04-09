@@ -1,5 +1,5 @@
-import Avatar from "@/app/_components/avatar";
-import CoverImage from "@/app/_components/cover-image";
+import Avatar from "#components/avatar";
+import CoverImage from "#components/cover-image";
 import { type Author } from "@/interfaces/author";
 import Link from "next/link";
 import DateFormatter from "./date-formatter";
@@ -11,6 +11,7 @@ interface Props {
   excerpt: string;
   author: Author;
   slug: string;
+
 }
 
 export function HeroPost({
@@ -20,7 +21,7 @@ export function HeroPost({
   excerpt,
   author,
   slug,
-}: Props) {
+}: Props): JSX.Element {
   return (
     <section>
       <div className="mb-8 md:mb-16">
