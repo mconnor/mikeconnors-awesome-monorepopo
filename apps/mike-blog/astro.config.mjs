@@ -1,49 +1,20 @@
 // @ts-check
-import mdx from '@astrojs/mdx';
+
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
-import { visualizer } from 'rollup-plugin-visualizer';
+// import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   outDir: 'dist',
-
-  compressHTML: true,
-  // trailingSlash: 'never',
-  cacheDir: './cache-directory',
-  vite: {
-    plugins: [
-      tailwindcss(),
-      visualizer({
-        emitFile: true,
-        filename: 'stats.html',
-      }),
-    ],
-  },
-
-  // env: {
-  //   schema: {
-  //     SENTRY_DSN: envField.string({ context: "server", access: "private"}),
-  //     SENTRY_AUTH_TOKEN: envField.string({ context: "server", access: "private"}),
-  //   }
-  // }
-  prefetch: {
-    prefetchAll: true,
-    defaultStrategy: 'viewport',
-  },
-  // experimental: {
-  //   clientPrerender: true,
-  // },
-
   site: 'https://staging.mikeconnor.tech/',
-
   image: {
     domains: ['astro.build', 'picsum.photos', 'https://doodleipsum.com'],
     // Used for all `<Image />` and `<Picture />` components unless overridden
     experimentalLayout: 'responsive',
     // experimentalBreakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
-
     service: {
       entrypoint: 'astro/assets/services/sharp',
       config: {
@@ -57,7 +28,34 @@ export default defineConfig({
     contentIntellisense: true,
   },
 
-  scopedStyleStrategy: 'attribute',
+  // compressHTML: true,
+  // trailingSlash: 'never',
+  cacheDir: './cache-directory',
+  vite: {
+    plugins: [
+      tailwindcss(),
+      // visualizer({
+      //   emitFile: true,
+      //   filename: 'stats.html',
+      // }),
+    ],
+  },
+
+  // env: {
+  //   schema: {
+  //     SENTRY_DSN: envField.string({ context: "server", access: "private"}),
+  //     SENTRY_AUTH_TOKEN: envField.string({ context: "server", access: "private"}),
+  //   }
+  // }
+  // prefetch: {
+  //   prefetchAll: true,
+  //   defaultStrategy: 'viewport',
+  // },
+  // experimental: {
+  //   clientPrerender: true,
+  // },
+
+  // scopedStyleStrategy: 'attribute',
 
   integrations: [icon(), mdx()],
   output: 'server',

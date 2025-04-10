@@ -6,7 +6,7 @@ import type { RmUnitType } from '@repo/styles/Types';
 import Footer from '#components/Footer.astro';
 import Header from '#components/Header.astro';
 
-import BaseLayout from './BaseLayout.astro';
+import Layout from './BaseLayout.astro';
 
 interface Props {
   maxW?: RmUnitType;
@@ -15,17 +15,18 @@ interface Props {
   description?: string;
 }
 
-const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
+const {
+  maxW = 'var(--measure, 60ch)',
+  title,
+  description,
+  ...rest
+} = Astro.props;
 ---
 
-<BaseLayout {...rest}>
-  <Cover centeredElement="center-l" space="0">
-    <Header transition:persist />
-
-    <Center max={maxW} transition:animate="slide">
-      <!-- <div class="prose md:prose-lg lg:prose-xl prose-blue scheme-light"> -->
-      <div class="prose lg:prose-xl"><slot /></div>
-      <!-- </div> -->
-    </Center>
-  </Cover>
-</BaseLayout>
+<Layout title={title} description={description} {...rest} maxW="60ch">
+  <div
+    class="prose md:prose-lg lg:prose-xl dark:prose-invert prose-a:text-blue-600 prose-a:hover:text-blue-500"
+  >
+    <slot />
+  </div>
+</Layout>

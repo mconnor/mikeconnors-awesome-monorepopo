@@ -1,7 +1,7 @@
+import { defineCollection } from 'astro:content';
 import { parse as parseToml } from '@std/toml/parse';
 // build-in loaders
 import { file, glob } from 'astro/loaders';
-import { defineCollection } from 'astro:content';
 
 // import { countryLoader } from './loaders/index.ts';
 
@@ -12,10 +12,15 @@ type ParserReturnType =
   | Record<string, unknown>[];
 
 const authors = defineCollection({
-  loader: file('./src/content/authors.toml', {
-    parser: (text) => parseToml(text).authors as ParserReturnType,
+  loader: file('src/content/authors.toml', {
+    parser: (text) => {
+      const parsed = parseToml(text);
+      if (!parsed || !parsed.authors) {
+        throw new Error('Invalid TOML: missing authors section');
+      }
+      return parsed.authors as ParserReturnType;
+    },
   }),
-
   schema: authorsSchema,
 });
 

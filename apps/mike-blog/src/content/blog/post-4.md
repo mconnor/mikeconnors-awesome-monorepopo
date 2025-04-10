@@ -9,10 +9,7 @@ description: The Future of Dynamic Web Content
 tags: ['coding', 'successes', 'learning-in-public']
 ---
 
-<!-- TODO - set up an MDX file to do this -->
-<!-- ![Astro and markdown are cool](@assets/markdown-cartoon.png) -->
-
-### The Essence of Markdown
+## The Essence of Markdown
 
 Markdown represents the epitome of technological minimalism in content creation.
 Its importance lies in its unobtrusive nature - a plain-text formatting syntax
@@ -21,9 +18,9 @@ simplicity is crucial in a digital landscape where agility and adaptability are
 paramount. Markdown allows content creators to focus on the essence of their
 message, free from the constraints of intricate coding.
 
-### Astro: A Paradigm Shift in Web Frameworks
+## Astro: A Paradigm Shift in Web Frameworks
 
-Astro emerges as a beacon of modern web development. It's not just a framework;
+_Astro_ emerges as a beacon of modern web development. It's not just a framework;
 it's a re-imagining of how dynamic web content should be created and served.
 Astro stands out by delivering content as static HTML whenever possible,
 injecting JavaScript only as needed. This approach ensures lightning-fast page

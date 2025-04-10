@@ -9,10 +9,7 @@ description: The Future of Dynamic Web Content
 tags: ['coding', 'successes', 'learning-in-public']
 ---
 
-<!-- TODO - set up an MDX file to do this -->
-<!-- ![Astro and markdown are cool](@assets/markdown-cartoon.png) -->
-
-### The Essence of Markdown
+## The Essence of Markdown
 
 Markdown represents the epitome of technological minimalism in content creation.
 Its importance lies in its unobtrusive nature - a plain-text formatting syntax

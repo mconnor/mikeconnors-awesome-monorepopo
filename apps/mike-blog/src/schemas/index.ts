@@ -1,5 +1,5 @@
-import { reference } from 'astro:content';
-import { z } from 'astro:schema';
+import { z, reference } from 'astro:content';
+// import { z } from 'astro:schema';
 
 const announcementsSchema = z
   .object({

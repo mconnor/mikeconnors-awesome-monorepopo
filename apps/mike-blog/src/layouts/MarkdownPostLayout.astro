@@ -8,22 +8,18 @@ type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, cover, author, tags } = Astro.props;
 
-const authorResults = await getEntry('authors', author.id);
+// const authorResults = await getEntry('authors', author.id);
 
-if (!authorResults) {
-  throw new Error(`Author not found for post: ${title}`);
-}
+// if (!authorResults) {
+//   throw new Error(`Author not found for post: ${title}`);
+// }
 
-const { name } = authorResults.data;
+// const { name } = authorResults.data;
 
 // const { data :  relatedPostData} = getEntries('blog', authorResults.data.relatedPosts);
 ---
 
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
-  <div
-    class="prose md:prose-lg lg:prose-xl dark:prose-invert prose-a:text-blue-600 prose-a:hover:text-blue-500"
-  >
-    <slot />
-  </div>
+  <slot />
 </Layout>

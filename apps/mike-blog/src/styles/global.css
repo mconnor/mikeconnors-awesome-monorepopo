@@ -1,6 +1,7 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography';
-
+@plugin "@tailwindcss/typography";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
 /*
 Here's what you're actually importing when you import tailwindcss:
 
@@ -15,7 +16,7 @@ Here's what you're actually importing when you import tailwindcss:
 @theme {
   /* theme variables defined in the --font-* namespace determine
    all of the font-family utilities that exist in a project: */
-  --font-sans: InterVariable, sans-serif;
+  /* --font-sans: InterVariable, sans-serif; */
   /* --font-display: var(--font-transitional);
   --font-script: var(--font-handwritten);
   --font-poppins: Poppins, sans-serif; */

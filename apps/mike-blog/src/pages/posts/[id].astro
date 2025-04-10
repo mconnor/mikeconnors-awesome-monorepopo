@@ -1,13 +1,11 @@
 ---
 // import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
-import type { CollectionEntry } from 'astro:content';
-import { getCollection, render } from 'astro:content';
-import BlogCard from '#components/BlogCard/index.astro';
+
+import { type CollectionEntry, getCollection, render } from 'astro:content';
 import MarkdownPostLayout from '#layouts/MarkdownPostLayout.astro';
 
 export const prerender = true;
 
-// type Props = CollectionEntry<'blog'>;
 // type Props = CollectionEntry<'blog'>['data'];
 
 export async function getStaticPaths() {
@@ -19,16 +17,13 @@ export async function getStaticPaths() {
     props: post,
   }));
 }
-// satisfies GetStaticPaths;
 type Props = CollectionEntry<'blog'>;
-// type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 
-const props = Astro.props;
+const post = Astro.props;
 
-const { data } = props;
-const { Content, headings } = await render(props);
+const { Content, headings } = await render(post);
 ---
 
-<MarkdownPostLayout {...data}>
-  <Content />
+<MarkdownPostLayout {...post.data}>
+  <div class="prose prose-sm"><Content /></div>
 </MarkdownPostLayout>

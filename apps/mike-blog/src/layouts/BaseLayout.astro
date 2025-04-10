@@ -1,5 +1,4 @@
 ---
-import '../styles/global.css';
 import type { RmUnitType } from '@repo/styles/Types';
 
 import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
@@ -22,7 +21,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
 
-  <body class="">
+  <body>
     <slot />
   </body>
 </html>

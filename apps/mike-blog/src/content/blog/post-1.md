@@ -16,7 +16,7 @@ tags: ['astro', 'blogging', 'learning-in-public']
 </div>
 
 Officia veniam dolor sit eu veniam eu tempor magna exercitation id minim non
-adipisicing commodo. Laboris nulla consequat veniam sint officia exercitation
+adipisicing commodo. Laboris [title](https://www.example.com) nulla consequat veniam sint officia exercitation
 elit tempor labore irure ipsum adipisicing. Cupidatat proident culpa sunt cillum
 do nostrud ea id id incididunt ullamco. Proident dolore nulla ipsum consequat
 aute eiusmod proident ex excepteur.

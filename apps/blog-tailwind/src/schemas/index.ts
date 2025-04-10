@@ -1,9 +1,8 @@
-import { reference } from 'astro:content';
-import { z } from 'astro:schema';
+import { z, reference } from 'astro:content';
 
 const announcementsSchema = z
   .object({
-    title: z.string(),
+    name: z.string(),
   })
   .strict();
 
@@ -11,6 +10,7 @@ const announcementsSchema = z
 
 const zTags = z.array(z.string()).nonempty();
 
+// const emojiSchema = z.string().emoji();
 // Record<string, number>;
 
 const tagCountTypeSchema = z.record(z.number());

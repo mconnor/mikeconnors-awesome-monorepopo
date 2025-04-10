@@ -8,8 +8,8 @@ export const prerender = true;
 //   height: number;
 //   format: string;
 // }
-import GreetingBtn from '#components/actions-buttons/GreetingBtn/index.astro';
-
+// import GreetingBtn from '#components/actions-buttons/GreetingBtn/index.astro';
+import HeartWC from '@repo/astro-wc/HeartWC';
 import Frame from '@repo/layout-webcomponents/Frame';
 import Stack from '@repo/layout-webcomponents/Stack';
 // import Cluster from '@repo/layout-webcomponents/Cluster';
@@ -25,7 +25,8 @@ import Layout from '#layouts/Layout.astro';
 <Layout>
   <Stack splitAfter={2}>
     <!-- <div class="text-4xl">xx@tech</div> -->
-
+    <HeartWC />
+    <HeartWC />
     <button type="button" class="bg-sky-500 hover:bg-sky-700"
       >Get greeting</button
     >
