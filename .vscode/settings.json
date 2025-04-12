@@ -167,6 +167,5 @@
         "}"
       ]
     }
-  ],
-  "window.zoomLevel": 1.5 // Increase the value to make icons larger (e.g., 1.5, 2)
+  ]
 }

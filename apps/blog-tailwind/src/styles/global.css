@@ -5,6 +5,8 @@
  */
 
 @import 'tailwindcss';
+@import '@repo/design-system/theme.css';
+
 /* @import './modular-scale.css'; */
 @plugin '@tailwindcss/typography';
 
@@ -15,7 +17,7 @@
  @import "tailwindcss/preflight.css" layer(base);
  @import "tailwindcss/utilities.css" layer(utilities); */
 
-@theme {
+/* @theme {
   --color-mint-500: oklch(0.72 0.11 178);
   --font-script: Great Vibes, cursive;
-}
+} */
