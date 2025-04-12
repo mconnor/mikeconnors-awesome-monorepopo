@@ -28,17 +28,16 @@
   "license": "ISC",
   "devDependencies": {
     "@astrojs/check": "catalog:",
-    "@repo/eslint-config": "link:../config-eslint",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "astro": "catalog:",
     "eslint": "catalog:",
-    "open-props": "^1.7.14",
+    "open-props": "^1.7.15",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:",
     "zod": "catalog:"
   },
   "peerDependencies": {
-    "astro": ">=5",
-    "open-props": "*"
+    "astro": ">=5"
   }
 }

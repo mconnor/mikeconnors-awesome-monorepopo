@@ -1,0 +1,19 @@
+{
+  "extends": "@repo/typescript-config/next.json",
+  "compilerOptions": {
+    "strict": false,
+    "esModuleInterop": true,
+    "incremental": true,
+    "rootDir": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.mjs",
+    ".next/types/**/*.ts"
+  ]
+}

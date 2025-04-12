@@ -1,0 +1,51 @@
+---
+
+---
+
+<astro-form>
+  <form class="input-validation-required">
+    <wa-input
+      name="name"
+      label="nickname"
+      minlength="2"
+      hint="What would you like people to call you?"
+      required
+      placeholder="????"></wa-input>
+    <br />
+    <wa-input name="phone" label="phone number" required inputmode="tel"
+    ></wa-input>
+    <br />
+    <wa-input name="email" label="email" required inputmode="email"></wa-input>
+    <br />
+    <wa-select label="Spirit Animal?" clearable required>
+      <wa-option value="birds">Birds</wa-option>
+      <wa-option value="cats">Cats</wa-option>
+      <wa-option value="dogs">Dogs</wa-option>
+      <wa-option value="other">Other</wa-option>
+    </wa-select>
+    <br />
+    <wa-textarea
+      placeholder="Type something"
+      size="medium"
+      resize="auto"
+      name="comment"
+      label="Comment"
+      minlength="10"
+      maxlength="100"
+      spellcheck
+      required></wa-textarea>
+    <br />
+    <wa-checkbox required>Check me before submitting</wa-checkbox>
+    <br /><br />
+    <wa-button type="submit" variant="brand">Submit</wa-button>
+  </form>
+</astro-form>
+<script>
+  import './form';
+</script>
+
+<style>
+  :not(:defined) {
+    visibility: hidden;
+  }
+</style>

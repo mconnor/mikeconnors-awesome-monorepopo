@@ -1,0 +1,12 @@
+---
+interface Props {
+  duration?: number;
+}
+
+const { duration = 3600 } = Astro.props;
+---
+
+<script>
+  import './MyTimer';
+</script>
+<my-timer duration={duration}></my-timer>

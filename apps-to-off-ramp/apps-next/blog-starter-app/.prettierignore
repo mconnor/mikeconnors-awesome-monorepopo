@@ -1,0 +1,51 @@
+# generated types
+.astro/
+vercel/
+.frontmatter/
+
+#  default ignored files
+# .git
+# .svn
+# .hg
+# node_modules
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+dist/
+.vscode/
+
+# Directories
+
+# macOS-specific files
+.DS_Store
+# Files
+pnpm-lock.yaml
+
+*d.ts
+
+# default
+
+.git
+.svn
+.hg
+node_modules/
+dist/
+.turbo/
+.vercel/
+
+# next.js
+/.next/
+/out/
+# typescript
+*.tsbuildinfo
+next-env.d.ts

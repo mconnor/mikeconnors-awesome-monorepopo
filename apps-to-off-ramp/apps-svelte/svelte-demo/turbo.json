@@ -1,0 +1,14 @@
+{
+	"extends": ["//"],
+	"globalEnv": ["DEV", "PROD"],
+	"tasks": {
+		"check-types": {
+			"inputs": ["**/*.{ts,svelte}"],
+			"outputs": []
+		},
+		"spell-check": {
+			"inputs": ["**/*.ts", "**/*.svelte"],
+			"outputs": []
+		}
+	}
+}

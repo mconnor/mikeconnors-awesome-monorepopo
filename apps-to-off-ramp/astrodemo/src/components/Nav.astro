@@ -1,0 +1,13 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+// Instead of an empty interface, directly use the type
+type Props = HTMLAttributes<'a'>;
+
+// const path = Astro.url.pathname;
+const { href } = Astro.props;
+
+// const isActive = href === path || href === path.replace(/\/$/, '');
+---
+
+<a href={href}><slot /></a>
