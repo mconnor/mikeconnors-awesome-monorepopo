@@ -16,7 +16,7 @@
     "spell-check": "cspell --no-summary --no-progress --no-colors --config cspell.json \"**/*.{md,mts,ts,tsx}\"",
     "dev": "astro dev",
     "astro-check": "astro check",
-    "build": "astro build",
+    "build": "node -v && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write",
