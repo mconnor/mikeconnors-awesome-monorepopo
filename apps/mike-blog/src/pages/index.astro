@@ -8,30 +8,31 @@ export const prerender = true;
 //   height: number;
 //   format: string;
 // }
-import GreetingBtn from '#components/actions-buttons/GreetingBtn/index.astro';
+// import GreetingBtn from '#components/actions-buttons/GreetingBtn/index.astro';
 import HeartWC from '@repo/astro-wc/HeartWC';
+import HeartLit from '@repo/ui-lit/HeartLitBtn';
+
 import Frame from '@repo/layout-webcomponents/Frame';
 import Stack from '@repo/layout-webcomponents/Stack';
-// import Cluster from '@repo/layout-webcomponents/Cluster';
+
 import Box from '@repo/layout-webcomponents/Box';
-import Clock from '@repo/ui-lit/Clock';
+
 import { Image } from 'astro:assets';
 import Andy from '#assets/andy-og.webp';
 import Me from '#assets/sovietplane.jpg';
-// import Andy from '#assets/andyBushes.jpg';
+
 import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
 ---
 
 <Layout>
   <Stack space="4rem" splitAfter={2}>
-    <!-- <div class="text-4xl">xx@tech</div> -->
-    <!-- <HeartWC /> -->
-
     <!-- <Box borderWidth="0">
       <GreetingBtn />
     </Box> -->
     <div class="">
+      <HeartWC />
+      <HeartLit />
       <h1 class="font-[font-hero] text-5xl font-extrabold">MG Connor</h1>
       <!-- <h2 class="">web-dev - intrepid explorer - dog whisperer</h2> -->
     </div>

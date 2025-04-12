@@ -1,77 +1,89 @@
+/* source not "open-props/open-props.min.css" */
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+/*
+Here's what you're actually importing when you import tailwindcss:
 
+@layer theme, base, components, utilities;
+
+@import "./theme.css" layer(theme);
+@import "./preflight.css" layer(base);
+@import "./utilities.css" layer(utilities);
+
+ */
+
+/* see all tailwindcss/theme.css */
 @theme {
-  /* Color Paletts with https://www.colorpalett.es/ */
-  /* Primary Color */
-  --color-primary: var(--theme-color-primary);
-  --color-primary-50: oklch(91.45% 0.023 264);
-  --color-primary-100: oklch(84% 0.053 263);
-  --color-primary-200: oklch(76.41% 0.089 264);
-  --color-primary-300: oklch(68.9% 0.128 263);
-  --color-primary-400: oklch(61.26% 0.165 264);
-  --color-primary-500: oklch(53.73% 0.192 264);
-  --color-primary-600: oklch(46.08% 0.213 264);
-  --color-primary-700: oklch(38.4% 0.211 264);
-  --color-primary-800: oklch(30.46% 0.192 264);
-  --color-primary-900: oklch(21.78% 0.151 264);
-  --color-primary-950: oklch(13.72% 0.074 263);
+  --font-hero: var(--font-transitional);
+  --font-display: "Oswald", "sans-serif";
+  --font-size-base: 1rem;
+  --ratio: 1.618;
+  --s0: var(--font-size-base);
+  --s000: calc(var(--s0) * pow(var(--ratio), -3));
+  --s00: calc(var(--s0) * pow(var(--ratio), -2));
+  --s1: calc(var(--s0) * pow(var(--ratio), 1));
+  --s2: calc(var(--s0) * pow(var(--ratio), 2));
 
-  /* Secondary Color  */
-  --color-secondary: var(--theme-color-secondary);
-  --color-secondary-50: oklch(91.33% 0.119 142);
-  --color-secondary-100: oklch(83.93% 0.224 142);
-  --color-secondary-200: oklch(76.15% 0.242 142);
-  --color-secondary-300: oklch(68.63% 0.233 142);
-  --color-secondary-400: oklch(61.44% 0.199 142);
-  --color-secondary-500: oklch(54.16% 0.161 142);
-  --color-secondary-600: oklch(46.9% 0.123 142);
-  --color-secondary-700: oklch(39.4% 0.091 142);
-  --color-secondary-800: oklch(31.81% 0.069 142);
-  --color-secondary-900: oklch(23.67% 0.047 142);
-  --color-secondary-950: oklch(13.76% 0.023 144);
+  --s3: calc(var(--s0) * pow(var(--ratio), 3));
+  --s4: calc(var(--s0) * pow(var(--ratio), 4));
+  --s5: calc(var(--s0) * pow(var(--ratio), 5));
+  --s6: calc(var(--s0) * pow(var(--ratio), 6));
+  --s7: calc(var(--s0) * pow(var(--ratio), 7));
+  --s8: calc(var(--s0) * pow(var(--ratio), 8));
+  /* theme variables defined in the --font-* namespace determine
+   all of the font-family utilities that exist in a project: */
+  /* --font-sans: InterVariable, sans-serif; */
+  /* --font-display: var(--font-transitional);
+  --font-script: var(--font-handwritten);
+  --font-poppins: Poppins, sans-serif; */
+  --color-primary-50: oklch(0.977 0.013 236.62);
+  --color-primary-100: oklch(0.951 0.026 236.824);
+  --color-primary-200: oklch(0.901 0.058 230.902);
+  --color-primary-300: oklch(0.828 0.111 230.318);
+  --color-primary-400: oklch(0.746 0.16 232.661);
+  --color-primary-500: oklch(0.685 0.169 237.323);
+  --color-primary-600: oklch(0.588 0.158 241.966);
+  --color-primary-700: oklch(0.5 0.134 242.749);
+  --color-primary-800: oklch(0.443 0.11 240.79);
+  --color-primary-900: oklch(0.391 0.09 240.876);
+  --color-primary-950: oklch(0.293 0.066 243.157);
 
-  /* Text Color */
-  --color-text: var(--theme-color-text);
+  --color-accent-50: oklch(0.98 0.016 73.684);
+  --color-accent-100: oklch(0.954 0.038 75.164);
+  --color-accent-200: oklch(0.901 0.076 70.697);
+  --color-accent-300: oklch(0.837 0.128 66.29);
+  --color-accent-400: oklch(0.75 0.183 55.934);
+  --color-accent-500: oklch(0.705 0.213 47.604);
+  --color-accent-600: oklch(0.646 0.222 41.116);
+  --color-accent-700: oklch(0.553 0.195 38.402);
+  --color-accent-800: oklch(0.47 0.157 37.304);
+  --color-accent-900: oklch(0.408 0.123 38.172);
+  --color-accent-950: oklch(0.266 0.079 36.259);
 
-  /* Background Color */
-  --color-background: var(--theme-color-background);
-}
-
-@layer base {
-  :root {
-    --theme-color-primary: var(--color-primary-500);
-    --theme-color-secondary: var(--color-secondary-500);
-
-    --theme-color-text: var(--color-slate-800);
-    --theme-color-background: var(--color-slate-200);
-  }
-
-  [data-theme='dark'] {
-    --theme-color-primary: var(--color-primary-400);
-    --theme-color-secondary: var(--color-secondary-400);
-
-    --theme-color-text: var(--color-slate-50);
-    --theme-color-background: var(--color-slate-900);
-  }
+  --color-mint-500: oklch(0.72 0.11 178);
 }
 
 @layer components {
-  body {
-    color: var(--color-text);
-    background: var(--color-background);
-  }
-
-  h1 {
-    font-size: var(--text-3xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text);
-
-    @variant md {
-      font-size: var(--text-4xl);
-    }
-
-    @variant lg {
-      font-size: var(--text-5xl);
+  .btn {
+    @apply cursor-pointer rounded-full bg-primary-900 px-3 py-1 text-base text-white outline-2 outline-offset-2 outline-blue-500 hover:bg-primary-400; /* 1rem (16px) */
+    @variant dark {
+      @apply bg-primary-300 hover:bg-primary-200;
     }
   }
+}
+
+@utility tab-primary-gradient {
+  @apply h-14 bg-linear-to-r from-violet-500 to-fuchsia-500;
+}
+
+@utility tab-bg {
+  @apply bg-linear-to-l from-violet-500 to-fuchsia-500 md:bg-linear-to-t;
+}
+@utility tab-primary {
+  @apply font-mono font-semibold text-gray-900 sm:text-sm md:text-base lg:text-lg;
+}
+
+@utility tab-ends {
+  @apply first:rounded-t-lg last:rounded-b-xl first:sm:rounded-t-none first:sm:rounded-l-2xl last:sm:rounded-l-none last:sm:rounded-r-2xl;
 }

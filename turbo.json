@@ -36,7 +36,7 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "dependsOn": ["^build"]
+      "dependsOn": ["^clean", "^build"]
     },
     "preview": {
       "cache": true,
@@ -53,7 +53,7 @@
       "dependsOn": ["transit"]
     },
     "test": {
-      "dependsOn": ["^lint", "^build"]
+      "dependsOn": ["^lint", "^clean", "^build"]
     },
     "spell-check": {
       "inputs": ["**/*.md", "**/*.mdx"]

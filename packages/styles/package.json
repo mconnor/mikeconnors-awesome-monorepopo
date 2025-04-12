@@ -20,8 +20,7 @@
     "lint": "eslint .",
     "format": "prettier . --write",
     "fix": "eslint . --fix",
-    "check-types": "tsc --noEmit",
-    "clean": "find ./src -type f ( -name \"*.d.ts\" -o -name \"*.d.ts.map\" -o -name \"*.js\" ) -delete"
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",

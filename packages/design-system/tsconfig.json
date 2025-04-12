@@ -1,6 +1,4 @@
 {
   "extends": "@repo/typescript-config/astro-base",
-  "compilerOptions": {
-    "strict": true
-  }
+  "compilerOptions": {}
 }

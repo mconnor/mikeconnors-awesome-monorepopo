@@ -20,53 +20,26 @@ export class LitHeartButton extends LitElement {
     `,
   ];
 
-  @property() hostName = '';
-  @property() shadowName = '';
-
   @property({ type: Number, reflect: true }) count = 0;
-
-  @property({ attribute: false }) borderW = '1px';
 
   constructor() {
     super();
 
     // event listner added to to HOST element
-    this.addEventListener(
-      'click',
-      (e: Event) => (this.hostName = (e.target as Element).localName),
-    );
+    this.addEventListener('click', this.inc);
   }
 
-  protected createRenderRoot() {
-    const root = super.createRenderRoot();
-    root.addEventListener('click', (e: Event) => {
-      this.shadowName = (e.target as Element).localName;
-      this.click();
-    });
-
-    return root;
-  }
-
-  click = () => {
+  inc = () => {
     this.count++;
   };
 
   protected render() {
     /* const styles = wcStyles; */
     return html`
-      <div class="surface1 cluster">
-        <button class="btn blue-button" aria-label="Heart">💜</button>
+      <div>
+        <button type="button" class="" aria-label="Heart">💜</button>
 
-        <h4>
-          Component target:
-          <span style="font-style: italic">${this.hostName}</span>
-        </h4>
-        <h4>
-          Shadow target:
-          <span style="font-style: italic">${this.shadowName}</span>
-        </h4>
-        <div><slot></slot></div>
-        <h4>count: ${this.count}</h4>
+        <div>count: ${this.count}</div>
       </div>
     `;
   }

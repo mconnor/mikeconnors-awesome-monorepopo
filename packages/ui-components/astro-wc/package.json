@@ -8,11 +8,15 @@
   },
   "exports": {
     "./*": "./src/*/index.astro",
+    "./styles.css": "./dist/styles.css",
     "./Icon": "./src/Icon/index.astro",
-    "./DynamicCarousel": "./src/wa/DynamicCarousel/index.astro"
+    "./DynamicCarousel": "./src/wa/DynamicCarousel/index.astro",
+    "./SunMoon": "./src/SunMoon/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",
+    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
+    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css  --watch",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
@@ -28,19 +32,20 @@
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@repo/design-system": "workspace:^",
+    "@tailwindcss/cli": "^4.1.3",
+    "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "catalog:"
+    "tailwindcss": "catalog:",
+    "vite": "catalog:"
   },
   "peerDependencies": {
     "astro": ">=5"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.3"
-  }
+  "license": "ISC"
 }
