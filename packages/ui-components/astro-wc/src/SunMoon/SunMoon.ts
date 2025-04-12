@@ -1,8 +1,7 @@
 class AstroSunMoon extends HTMLElement {
   connectedCallback() {
-    const group = this.querySelector('wa-button-group');
+    const group = this.getElementById('group');
     group?.addEventListener('click', (event) => {
-      console.log('click');
       const btn = (event.target as HTMLElement).closest('wa-icon-button')!;
 
       const theme = btn.getAttribute('label');

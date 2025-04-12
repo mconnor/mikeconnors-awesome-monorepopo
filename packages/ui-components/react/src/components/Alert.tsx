@@ -1,4 +1,4 @@
-import { cn } from '@repo/utils/cn';
+import { cn } from '@repo/utils';
 
 interface AlertProps {
   type: 'success' | 'error';

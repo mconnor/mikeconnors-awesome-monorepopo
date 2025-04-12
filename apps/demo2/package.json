@@ -37,7 +37,7 @@
     "@webcomponents/template-shadowroot": "catalog:",
     "astro": "catalog:",
     "lit": "catalog:",
-    "open-props": "^1.7.14"
+    "open-props": "^1.7.15"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^2.0.0",
@@ -55,6 +55,6 @@
     "prettier-plugin-astro": "^0.14.1",
     "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "catalog:",
-    "vite": "^6.2.5"
+    "vite": "^6.2.6"
   }
 }

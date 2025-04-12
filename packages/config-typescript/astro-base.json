@@ -1,6 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "strict": true,
     // Enable top-level await, and other modern ESM features.
     "target": "ESNext",
     "module": "ESNext",

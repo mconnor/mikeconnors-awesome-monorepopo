@@ -16,16 +16,16 @@ const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx'];
 
 export default tseslint.config(
   ignoresConfig,
-  {
-    name: '[*] global language options',
-    // ...barrelFiles.reccommended,
-    languageOptions: {
-      globals: {
-        ...globals.browser,
-        ...globals.node,
-      },
-    },
-  },
+  // {
+  //   name: '[*] global language options',
+  //   // ...barrelFiles.reccommended,
+  //   languageOptions: {
+  //     globals: {
+  //       ...globals.browser,
+  //       ...globals.node,
+  //     },
+  //   },
+  // },
 
   // ...turboPlugin['flat/recommended'],
   // ...turboConfig,
@@ -34,7 +34,8 @@ export default tseslint.config(
   js.configs.recommended,
   // comments.recommended,
   // TypeScript
-  tseslint.configs.recommended,
+  // tseslint.configs.recommended,
+  tseslint.configs.recommendedTypeChecked,
   // tseslint.configs.stylisticTypeChecked,
   // tseslint.configs.strictTypeChecked,
   // tseslint.configs.stylisticTypeChecked,

@@ -45,7 +45,7 @@ const { title, description, image = 'andy-og.jpeg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
-<meta name="color-scheme" content="dark light dim grape choco toucan" />
+<meta name="color-scheme" content="dark light" />
 
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
 
@@ -72,10 +72,14 @@ const { title, description, image = 'andy-og.jpeg' } = Astro.props;
 <!-- <link
   rel="stylesheet"
   href="https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/webawesome.css"
+/> -->
+<link
+  rel="stylesheet"
+  href="https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/utilities.css"
 />
 <script
   type="module"
   src="https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/webawesome.loader.js"
-></script> -->
+></script>
 
 <ClientRouter />

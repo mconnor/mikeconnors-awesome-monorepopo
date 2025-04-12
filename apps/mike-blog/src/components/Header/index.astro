@@ -2,25 +2,84 @@
 // import Hamburger from '/Hamburger.astro';
 
 import Cluster from '@repo/layout-webcomponents/Cluster';
+import { Links } from '#app.config.ts';
+import Icon from '@repo/astro-wc/Icon';
 import Box from '@repo/layout-webcomponents/Box';
-import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
-import DropDownNav from '#components/DropDownNav/index.astro';
+// import ThemeSwitcher from '@repo/ui-lit/ThemeSwitcher';
+// import DropDownNav from '#components/DropDownNav/index.astro';
 
-import SunMoon from '@repo/astro-wc/SunMoon';
-import MainNav from './MainNav.astro';
-import OutLinks from '../Footer/OutLinks.astro';
+// import SunMoon from '@repo/astro-wc/SunMoon';
+import MainNav from './MainNav/index.astro';
+// import OutLinks from '../Footer/OutLinks.astro';
 
-import { getPaths } from '#lib/index.ts';
+// import { getPaths } from '#lib/index.ts';
+// import HeaderLink from './HeaderLink.astro';
+
+import { navLinks } from '#app.config.ts';
 const { pathname } = Astro.url;
 ---
 
-<div class="border-2 bg-primary-600 dark:bg-primary-300">
+<div class="bg-primary-600 dark:bg-primary-300 border-2 px-4">
   <Cluster align="center" justify="space-between" space="0">
-    <SunMoon />
+    <Box padding="0">
+      <Icon
+        icon="sun"
+        size="var(--s1)"
+        color="var(--color-primary-200)"
+        gradient={false}
+      />
+      <Icon
+        icon="moon-stars"
+        size="var(--s1)"
+        color="var(--color-primary-200)"
+        gradient={false}
+      />
+    </Box>
     <!-- <h2>{pathname}</h2> -->
     <!-- <div class="flex gap-4 text-2xl"><MainNav /></div> -->
     <MainNav />
 
-    <OutLinks />
+    <div class="flex flex-col gap-2 border-0 sm:flex-row">
+      <Box padding="0">
+        <a href={Links.github}
+          ><Icon
+            icon="github-logo"
+            size="var(--s1)"
+            color="var(--color-primary-200)"
+            gradient={false}
+          /></a
+        >
+      </Box>
+      <Box padding="0">
+        <a href={Links.twitter}
+          ><Icon
+            icon="twitter-logo"
+            size="var(--s1)"
+            color="var(--color-primary-200)"
+            gradient={false}
+          /></a
+        >
+      </Box>
+      <Box padding="0">
+        <a href={Links.linkedin}
+          ><Icon
+            icon="linkedin-logo"
+            size="var(--s1)"
+            color="var(--color-primary-200)"
+            gradient={false}
+          /></a
+        >
+      </Box>
+      <Box padding="0">
+        <a href={Links.discord}
+          ><Icon
+            icon="discord-logo"
+            size="var(--s1)"
+            color="var(--color-primary-200)"
+            gradient={false}
+          /></a
+        >
+      </Box>
+    </div>
   </Cluster>
 </div>

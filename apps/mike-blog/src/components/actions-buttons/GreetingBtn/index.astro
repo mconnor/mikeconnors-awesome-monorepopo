@@ -1,9 +1,25 @@
+---
+interface Props {
+  hello?: string;
+  // greeting: string;
+  // name: string;
+}
+
+const { hello = "Hi, I'm Mike" } = Astro.props;
+---
+
 <script>
   import './GreetingBtn.ts';
 </script>
 
 <greeting-button data-message="enter your name here">
-  <button class="bg-sky-500 hover:bg-sky-700">Get greeting</button>
-  <p>enter your name below</p>
+  <div class="flex flex-col items-center gap-4">
+    <h2 class="text-4xl">{hello}</h2>
+
+    <p class="text-2xl">Click the button to get a greeting</p>
+    <button type="submit" class="btn">Get greeting</button>
+
+    <p>enter your name below</p>
+  </div>
   <input type="text" name="login" value="hi" /></greeting-button
 >

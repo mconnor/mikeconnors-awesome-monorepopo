@@ -8,7 +8,7 @@ export const prerender = true;
 //   height: number;
 //   format: string;
 // }
-// import GreetingBtn from '#components/actions-buttons/GreetingBtn/index.astro';
+import GreetingBtn from '#components/actions-buttons/GreetingBtn/index.astro';
 import HeartWC from '@repo/astro-wc/HeartWC';
 import Frame from '@repo/layout-webcomponents/Frame';
 import Stack from '@repo/layout-webcomponents/Stack';
@@ -17,60 +17,49 @@ import Box from '@repo/layout-webcomponents/Box';
 import Clock from '@repo/ui-lit/Clock';
 import { Image } from 'astro:assets';
 import Andy from '#assets/andy-og.webp';
+import Me from '#assets/sovietplane.jpg';
 // import Andy from '#assets/andyBushes.jpg';
 import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
 ---
 
 <Layout>
-  <Stack splitAfter={2}>
+  <Stack space="4rem" splitAfter={2}>
     <!-- <div class="text-4xl">xx@tech</div> -->
-    <HeartWC />
-    <HeartWC />
-    <button type="button" class="bg-sky-500 hover:bg-sky-700"
-      >Get greeting</button
-    >
+    <!-- <HeartWC /> -->
+
     <!-- <Box borderWidth="0">
       <GreetingBtn />
     </Box> -->
-    <article class="">
-      <div>
-        <button
-          type="button"
-          class="bg-violet-500 hover:bg-violet-600 focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700 ..."
-        >
-          Save changes
-        </button>
-      </div>
-      <h2>h2 This is my website</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-        sollicitudin, nunc et facilisis efficitur, nisi ligula convallis nunc,
-        nec tincidunt nunc nisi id enim. Donec ac ligula euismod, varius felis
-        a, facilisis erat. Sed in dui ut augue bibendum fringilla. Donec ac
-        ligula euismod, varius felis a, facilisis erat.
-      </p>
-    </article>
-    <details>
-      <summary>Tincidunt nunc pulvinar</summary>
-      <p>
-        Ut lectus arcu bibendum at varius. Convallis a cras semper auctor neque
-        vitae. Odio pellentesque diam volutpat commodo sed egestas. Amet dictum
-        sit amet justo donec enim diam vulputate ut.
-      </p>
-    </details>
-
-    <!-- <Clock /> -->
-    <Box borderWidth="2rem" padding="0">
-      <Frame ratio="16:9">
-        <Image
-          src={Andy}
-          layout="responsive"
-          priority
-          alt="A description of my image."
-        />
-      </Frame>
-      <h3>This is my dog</h3></Box
-    >
+    <div class="">
+      <h1 class="font-[font-hero] text-5xl font-extrabold">MG Connor</h1>
+      <!-- <h2 class="">web-dev - intrepid explorer - dog whisperer</h2> -->
+    </div>
+    <div class="flex flex-col gap-2 border-0 sm:flex-row">
+      <Box borderWidth="0" padding="0">
+        <Frame ratio="16:9">
+          <Image
+            width={400}
+            src={Me}
+            layout="responsive"
+            priority
+            alt="A description of my image."
+          />
+        </Frame>
+        <h3>The man</h3></Box
+      >
+      <Box borderWidth="0" padding="0">
+        <Frame ratio="16:9">
+          <Image
+            width={400}
+            src={Andy}
+            layout="responsive"
+            priority
+            alt="A description of my image."
+          />
+        </Frame>
+        <h3>The dog</h3></Box
+      >
+    </div>
   </Stack>
 </Layout>

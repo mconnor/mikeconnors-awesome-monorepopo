@@ -8,6 +8,7 @@
   },
   "exports": {
     "./*": "./src/*/index.astro",
+    "./Icon": "./src/Icon/index.astro",
     "./DynamicCarousel": "./src/wa/DynamicCarousel/index.astro"
   },
   "scripts": {

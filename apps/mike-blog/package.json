@@ -61,7 +61,7 @@
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/mdi": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/typography": "^0.5.16",

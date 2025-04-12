@@ -7,12 +7,11 @@ export const SITE_DESCRIPTION =
 // export const GENERATE_SLUG_FROM_TITLE = true;
 // export const TRANSITION_API = true;
 export const Links = {
-  LINKEDIN: 'https://www.linkedin.com/in/michaelgconnor/',
-  GITHUB: 'https://www.github.com/mconnor',
-  TWITTER: 'https://www.twitter.com/mikeconnor504',
-  linkedin: 'https://www.linkedin.com/in/michaelgconnor/',
   github: 'https://www.github.com/mconnor',
+  twitter: 'https://www.twitter.com/mikeconnor504',
+  linkedin: 'https://www.linkedin.com/in/michaelgconnor/',
   tiwtter: 'https://www.twitter.com/mikeconnor504',
+  discord: 'https://discord.com/users/mike4989',
 } as const;
 
 export interface NavLinkI {

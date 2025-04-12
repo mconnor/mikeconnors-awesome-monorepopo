@@ -1,36 +1,49 @@
 {
-  "name": "@app/portfolio",
+  "name": "@app-theme/shop",
+  "private": true,
   "type": "module",
-  "author": "Mike Connor",
+  "version": "0.0.1",
   "imports": {
     "#*": "./src/*"
   },
-  "version": "0.0.1",
+  "keywords": [
+    "astro",
+    "lit",
+    "blog",
+    "tags",
+    "zod"
+  ],
   "scripts": {
+    "updateAstro": "dlx @astrojs/upgrade",
     "dev": "astro dev",
+    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro-check": "astro check",
     "astro": "astro",
-    "format": "prettier . --write",
     "lint": "eslint .",
-    "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@repo/layout-webcomponents": "workspace:*",
+    "@astrojs/check": "catalog:",
+    "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
-    "astro-icon": "catalog:"
+    "astro-icon": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
+    "@iconify-json/mdi": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "rollup-plugin-visualizer": "^5.14.0",
-    "typescript": "^5.8.3"
+    "typescript": "catalog:"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "experimentalTernaries": true,
+    "proseWrap": "always"
   }
 }

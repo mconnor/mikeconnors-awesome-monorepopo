@@ -1,3 +1,6 @@
 {
-  "extends": "@repo/typescript-config/react-library.json"
+  "extends": "@repo/typescript-config/astro-base",
+  "compilerOptions": {
+    "strict": true
+  }
 }

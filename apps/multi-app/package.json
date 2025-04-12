@@ -38,7 +38,7 @@
     "add": "catalog:",
     "astro": "catalog:",
     "lit": "catalog:",
-    "open-props": "^1.7.14",
+    "open-props": "^1.7.15",
     "preact": "catalog:",
     "svelte": "catalog:svelte5",
     "tailwindcss": "catalog:",

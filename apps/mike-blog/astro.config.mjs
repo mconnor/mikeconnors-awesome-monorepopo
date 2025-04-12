@@ -2,30 +2,39 @@
 
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
-import { defineConfig } from 'astro/config';
+import { defineConfig, sharpImageService } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
+
 // import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
   outDir: 'dist',
   site: 'https://staging.mikeconnor.tech/',
   image: {
-    domains: ['astro.build', 'picsum.photos', 'https://doodleipsum.com'],
+    domains: [
+      'astro.build',
+      'picsum.photos',
+      'https://doodleipsum.com',
+      'unsplash.com',
+    ],
     // Used for all `<Image />` and `<Picture />` components unless overridden
     experimentalLayout: 'responsive',
     // experimentalBreakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
-    service: {
-      entrypoint: 'astro/assets/services/sharp',
-      config: {
-        limitInputPixels: false,
-      },
-    },
+    service: sharpImageService(),
+    // service: {
+    //   service: sharpImageService(),
+    //   entrypoint: 'astro/assets/services/sharp',
+    //   config: {
+    //     limitInputPixels: false,
+    //   },
+    // },
   },
   experimental: {
     responsiveImages: true,
     headingIdCompat: true,
     contentIntellisense: true,
+    svg: true,
   },
 
   // compressHTML: true,

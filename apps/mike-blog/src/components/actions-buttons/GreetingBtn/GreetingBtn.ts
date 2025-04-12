@@ -13,7 +13,7 @@ class GreetingButton extends HTMLElement {
     // const stringLiteralSchema = z.literal(this.dataset.message);
     const input = this.querySelector('input[name="login"]') as HTMLInputElement;
 
-    const btn = this.querySelector('wa-button');
+    const btn = this.querySelector('button');
 
     btn?.addEventListener('click', async () => {
       // Show alert pop-up with greeting from action

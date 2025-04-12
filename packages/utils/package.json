@@ -9,16 +9,21 @@
     "./cn": "./src/cn.ts"
   },
   "scripts": {
-    "format": "prettier . --write"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
-    "eslint": "^9.24.0",
-    "typescript": "^5.8.3"
+    "eslint": "catalog:",
+    "typescript": "catalog:",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^"
   }
 }

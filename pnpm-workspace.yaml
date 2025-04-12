@@ -1,9 +1,6 @@
 packages:
   - apps/*
-  - apps-astro-themes/*
-  - apps-next/*
-  - '!apps-svelte/*'
-  - '!apps/hackernews/*'
+  - apps/astro-themes/*
   - packages/*
   - packages/ui-components/*
   - '!**/test/**'
@@ -43,7 +40,7 @@ catalog:
   eslint: ^9.24.0
   jest: ^29.7.0
   lit: ^3.2.1
-  open-props: ^1.7.13
+  open-props: ^1.7.15
   postcss: ^8.5.2
   postcss-custom-media: ^11.0.5
   postcss-html: ^1.7.0

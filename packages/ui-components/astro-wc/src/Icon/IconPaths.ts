@@ -36,3 +36,55 @@ export const iconPaths = {
   'instagram-logo': `<circle cx="128" cy="128" r="40" fill="none" stroke-miterlimit="10" stroke-width="16"/><rect width="184" height="184" x="36" y="36" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" rx="48"/><circle cx="180" cy="76" r="12" stroke="none" />`,
   'tiktok-logo': `<path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" d="M168 106a96 96 0 0 0 56 18V84a56 56 0 0 1-56-56h-40v128a28 28 0 1 1-40-25V89a68 68 0 1 0 80 67Z"/>`,
 };
+
+// The keys in the iconPaths object are:
+// 	•	terminal-window
+// 	•	trophy
+// 	•	strategy
+// 	•	paper-plane-tilt
+// 	•	arrow-right
+// 	•	arrow-left
+// 	•	code
+// 	•	microphone-stage
+// 	•	pencil-line
+// 	•	rocket-launch
+// 	•	list
+// 	•	heart
+// 	•	moon-stars
+// 	•	sun
+// 	•	twitter-logo
+// 	•	codepen-logo
+// 	•	github-logo
+// 	•	twitch-logo
+// 	•	youtube-logo
+// 	•	dribbble-logo
+// 	•	discord-logo
+// 	•	linkedin-logo
+// 	•	instagram-logo
+// 	•	tiktok-logo
+
+// Expanded Explanation:
+// 	1.	terminal-window – Represents an icon that likely resembles a terminal or command-line window.
+// 	2.	trophy – Likely an icon for achievements or awards.
+// 	3.	strategy – Represents an icon related to planning or strategy.
+// 	4.	paper-plane-tilt – An icon resembling a paper plane, possibly indicating messaging or sending.
+// 	5.	arrow-right – A rightward-pointing arrow icon.
+// 	6.	arrow-left – A leftward-pointing arrow icon.
+// 	7.	code – Typically represents code or programming.
+// 	8.	microphone-stage – Likely depicts a microphone, suitable for audio-related contexts.
+// 	9.	pencil-line – Generally used for editing or drawing.
+// 	10.	rocket-launch – An icon symbolizing launch or rapid action, often used for ‘launch’ buttons.
+// 	11.	list – Represents a simple list or menu.
+// 	12.	heart – Often used for favorite, like, or love actions.
+// 	13.	moon-stars – Could be indicative of a night mode or related theme.
+// 	14.	sun – Typically signifies brightness or a day theme.
+// 	15.	twitter-logo – The official Twitter logo or a representation thereof.
+// 	16.	codepen-logo – An icon representing the CodePen logo.
+// 	17.	github-logo – Represents the GitHub logo.
+// 	18.	twitch-logo – The official Twitch logo.
+// 	19.	youtube-logo – The icon representing YouTube.
+// 	20.	dribbble-logo – Represents Dribbble.
+// 	21.	discord-logo – The Discord logo icon.
+// 	22.	linkedin-logo – Represents the LinkedIn logo.
+// 	23.	instagram-logo – The Instagram logo icon.
+// 	24.	tiktok-logo – Represents the TikTok logo.

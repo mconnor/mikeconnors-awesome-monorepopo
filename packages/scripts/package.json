@@ -2,17 +2,27 @@
   "name": "@repo/scripts",
   "version": "1.0.0",
   "description": "",
+  "imports": {
+    "#*": "./src/*"
+  },
   "exports": {
     "./get-theme": "./get-theme.ts"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^"
   }
 }

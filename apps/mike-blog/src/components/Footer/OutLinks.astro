@@ -1,12 +1,58 @@
 ---
 import { Links } from '#app.config.ts';
+import Icon from '@repo/astro-wc/Icon';
+import Box from '@repo/layout-webcomponents/Box';
+// import type { IconType } from '@repo/astro-wc/Icon';
 ---
 
-<div class="text-3xl">
+<!-- <div class="text-3xl">
   <wa-icon-button size="large" name="github" family="brands" href={Links.GITHUB}
   ></wa-icon-button>
   <wa-icon-button family="brands" name="twitter" href={Links.TWITTER}
   ></wa-icon-button>
   <wa-icon-button family="brands" name="linkedin" href={Links.LINKEDIN}
   ></wa-icon-button>
+
+</div> -->
+<div class="flex flex-col gap-2 border-0 sm:flex-row">
+  <Box>
+    <a href={Links.github}
+      ><Icon
+        icon="github-logo"
+        size="var(--s1)"
+        color="var(--color-primary-200)"
+        gradient={false}
+      /></a
+    >
+  </Box>
+  <Box>
+    <a href={Links.twitter}
+      ><Icon
+        icon="twitter-logo"
+        size="var(--s1)"
+        color="var(--color-primary-200)"
+        gradient={false}
+      /></a
+    >
+  </Box>
+  <Box>
+    <a href={Links.linkedin}
+      ><Icon
+        icon="linkedin-logo"
+        size="var(--s1)"
+        color="var(--color-primary-200)"
+        gradient={false}
+      /></a
+    >
+  </Box>
+  <Box>
+    <a href={Links.discord}
+      ><Icon
+        icon="discord-logo"
+        size="var(--s1)"
+        color="var(--color-primary-200)"
+        gradient={false}
+      /></a
+    >
+  </Box>
 </div>

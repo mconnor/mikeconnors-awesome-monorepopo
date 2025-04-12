@@ -1,5 +1,8 @@
 @import 'tailwindcss';
 @plugin "@tailwindcss/typography";
+@import 'open-props/open-props.min.css';
+source not "open-props/open-props.min.css"
+
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 /*
@@ -10,10 +13,27 @@ Here's what you're actually importing when you import tailwindcss:
 @import "./theme.css" layer(theme);
 @import "./preflight.css" layer(base);
 @import "./utilities.css" layer(utilities);
+
  */
 
 /* see all tailwindcss/theme.css */
 @theme {
+  --font-hero: var(--font-transitional);
+  --font-display: 'Oswald', 'sans-serif';
+  --font-size-base: 1rem;
+  --ratio: 1.618;
+  --s0: var(--font-size-base);
+  --s000: calc(var(--s0) * pow(var(--ratio), -3));
+  --s00: calc(var(--s0) * pow(var(--ratio), -2));
+  --s1: calc(var(--s0) * pow(var(--ratio), 1));
+  --s2: calc(var(--s0) * pow(var(--ratio), 2));
+
+  --s3: calc(var(--s0) * pow(var(--ratio), 3));
+  --s4: calc(var(--s0) * pow(var(--ratio), 4));
+  --s5: calc(var(--s0) * pow(var(--ratio), 5));
+  --s6: calc(var(--s0) * pow(var(--ratio), 6));
+  --s7: calc(var(--s0) * pow(var(--ratio), 7));
+  --s8: calc(var(--s0) * pow(var(--ratio), 8));
   /* theme variables defined in the --font-* namespace determine
    all of the font-family utilities that exist in a project: */
   /* --font-sans: InterVariable, sans-serif; */
@@ -47,17 +67,26 @@ Here's what you're actually importing when you import tailwindcss:
   --color-mint-500: oklch(0.72 0.11 178);
 }
 
+@layer components {
+  .btn {
+    @apply bg-primary-900 hover:bg-primary-400 cursor-pointer rounded-full px-3 py-1 text-base text-white outline-2 outline-offset-2 outline-blue-500; /* 1rem (16px) */
+    @variant dark {
+      @apply bg-primary-300 hover:bg-primary-200;
+    }
+  }
+}
+
 @utility tab-primary-gradient {
-  @apply h-14 bg-linear-to-r from-violet-500 to-fuchsia-500;
+  @apply bg-linear-to-r h-14 from-violet-500 to-fuchsia-500;
 }
 
 @utility tab-bg {
-  @apply bg-linear-to-l from-violet-500 to-fuchsia-500 md:bg-linear-to-t;
+  @apply bg-linear-to-l md:bg-linear-to-t from-violet-500 to-fuchsia-500;
 }
 @utility tab-primary {
   @apply font-mono font-semibold text-gray-900 sm:text-sm md:text-base lg:text-lg;
 }
 
 @utility tab-ends {
-  @apply first:rounded-t-lg last:rounded-b-xl first:sm:rounded-t-none first:sm:rounded-l-2xl last:sm:rounded-l-none last:sm:rounded-r-2xl;
+  @apply first:rounded-t-lg last:rounded-b-xl first:sm:rounded-l-2xl first:sm:rounded-t-none last:sm:rounded-l-none last:sm:rounded-r-2xl;
 }
