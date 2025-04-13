@@ -1,14 +1,16 @@
 ---
 title: Hello, World
-layout: ../layouts/Layout.astro
+layout: ../layouts/MarkdownPostLayout.astro
 ---
 
 # I am Michael Connor - React Native developer
 
 I am a Frontend developer with twenty years experience developing applications for the auto, pharmaceutical, entertainment, and advertising industries. Which is to say, I was a Flash dev and now... i'm a React Native developer.
 
-I have been working with Hybrid building a mobile marketing app for the Cannabis industry for the last couple of years.
+## More info
 
+I have been working with Hybrid building a mobile marketing app for the Cannabis industry for the last couple of years.
+x
 My current and preferred tech stack is:
 
 - React
