@@ -72,6 +72,17 @@ Here's what you're actually importing when you import tailwindcss:
     }
   }
 }
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
+  }
+}
 
 @utility tab-primary-gradient {
   @apply h-14 bg-linear-to-r from-violet-500 to-fuchsia-500;

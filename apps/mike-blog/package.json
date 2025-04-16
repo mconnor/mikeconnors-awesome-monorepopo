@@ -57,7 +57,6 @@
     "date-fns": "^4.1.0",
     "dotenv": "^16.5.0",
     "open-props": "catalog:",
-    "sanitize-html": "^2.15.0",
     "sharp": "catalog:",
     "tailwindcss": "catalog:"
   },
@@ -66,7 +65,7 @@
     "@repo/design-system": "workspace:*",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/typography": "catalog:",
     "@types/node": "catalog:",
     "@webcomponents/template-shadowroot": "^0.2.1",
     "eslint": "catalog:",

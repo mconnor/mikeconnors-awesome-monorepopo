@@ -36,7 +36,7 @@ export default tseslint.config(
   // TypeScript
   // tseslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
-  // tseslint.configs.stylisticTypeChecked,
+  tseslint.configs.stylisticTypeChecked,
   // tseslint.configs.strictTypeChecked,
   // tseslint.configs.stylisticTypeChecked,
 

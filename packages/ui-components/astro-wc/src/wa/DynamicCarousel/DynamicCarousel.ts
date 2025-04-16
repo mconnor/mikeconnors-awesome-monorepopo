@@ -9,13 +9,13 @@ class AstroDynamicCarousel extends HTMLElement {
     super();
     this.colorIndex = 2;
     this.colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
-    this.carousel = document.querySelector('.dynamic-carousel') as HTMLElement;
+    this.carousel = document.querySelector('.dynamic-carousel')!;
     this.addButton = document.querySelector(
       '#dynamic-add',
-    ) as HTMLButtonElement;
+    )!;
     this.removeButton = document.querySelector(
       '#dynamic-remove',
-    ) as HTMLButtonElement;
+    )!;
     // ...
   }
 

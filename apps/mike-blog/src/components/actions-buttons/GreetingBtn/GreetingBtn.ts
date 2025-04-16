@@ -42,7 +42,7 @@ class GreetingButton extends HTMLElement {
     // const stringLiteralSchema = z.literal(this.dataset.message);
 
     const button = this.querySelector('button');
-    const input = this.querySelector('input[name="login"]') as HTMLInputElement;
+    const input = this.querySelector('input[name="login"]')!;
     if (!button || !input) {
       console.error('Button or input element not found');
       return;

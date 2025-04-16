@@ -7,8 +7,6 @@
     "./IconPaths": "./src/IconPaths.ts"
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
     "clean": "rm -rf dist",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",

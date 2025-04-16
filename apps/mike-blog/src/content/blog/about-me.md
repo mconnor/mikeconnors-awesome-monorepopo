@@ -11,15 +11,25 @@ tags: ['astro', 'blogging', 'learning-in-public']
 
 # Hello, world!
 
-<div className="note">
-  > Some notable things in a block quote!
-</div>
+> Some notable things in a block quote!
 
 Officia veniam dolor sit eu veniam eu tempor magna exercitation id minim non
 adipisicing commodo. Laboris nulla consequat veniam sint officia exercitation
-elit tempor labore irure ipsum adipisicing. Cupidatat proident culpa sunt cillum
+elit tempor labore irure ipsum adipisicing.
+
+- React
+- ReactNative, Exponential
+- Nativebase component library
+- Typescript
+- monorepos (yarn workspaces)
+- Graphql
+
+## Cupidatat proident culpa sunt cillum
+
 do nostrud ea id id incididunt ullamco. Proident dolore nulla ipsum consequat
 aute eiusmod proident ex excepteur.
+
+### Cupidatat proident culpa sunt cillum
 
 Laborum non et Lorem enim dolor. Est eu deserunt aliqua pariatur enim et ullamco
 ea dolore officia enim officia. Nostrud cupidatat culpa commodo exercitation. Eu

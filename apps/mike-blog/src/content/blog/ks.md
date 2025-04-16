@@ -9,7 +9,7 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public', 'successes']
 ---
 
-# Kitchen
+# {frontmatter.title}
 
 ## Table of Contents
 
@@ -66,7 +66,7 @@ omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ## Images
 
-![Sample Image](https://picsum.photos/150/150?random=2)
+![Sample Image](https://picsum.photos/400/300?random=2)
 
 ## Lists
 

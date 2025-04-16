@@ -14,13 +14,13 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 {
   isActive && !rest.subPages ?
-    <span class="tab-primary relative bg-transparent px-8 py-2 text-stone-100 underline">
+    <div class="relative bg-transparent px-8 py-2 tab-primary text-stone-100 underline">
       <slot name="activeTab" />
-    </span>
-  : <span class="tab-ends tab-bg tab-primary relative px-8 py-2">
+    </div>
+  : <div class="relative tab-ends tab-bg px-8 py-2 tab-primary">
       <a href={href} class="">
         <span class="absolute inset-0" />
         <slot name="btnContents" />
       </a>
-    </span>
+    </div>
 }

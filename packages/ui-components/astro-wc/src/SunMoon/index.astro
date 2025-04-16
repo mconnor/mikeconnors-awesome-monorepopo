@@ -2,33 +2,25 @@
 import Icon from '#Icon/index.astro';
 
 type IconType = typeof Icon;
-
-interface Props {
-  className?: string;
-}
-
-const { className = 'flex flex-row' } = Astro.props as Props;
 ---
 
 <astro-sunmoon>
-  <div class="className">
-    <button id="btnSun" type="button" aria-label="Toggle dark mode">
-      <Icon
-        icon="sun"
-        size="var(--s1)"
-        color="var(--color-primary-200)"
-        gradient={false}
-      /></button
-    >
-    <button id="btnMoon" type="button" aria-label="Toggle dark mode">
-      <Icon
-        icon="moon-stars"
-        size="var(--s1)"
-        color="var(--color-primary-200)"
-        gradient={false}
-      /></button
-    >
-  </div>
+  <button id="btnSun" type="button" aria-label="Toggle dark mode">
+    <Icon
+      icon="sun"
+      size="var(--s1)"
+      color="var(--color-primary-200)"
+      gradient={false}
+    /></button
+  >
+  <button id="btnMoon" type="button" aria-label="Toggle dark mode">
+    <Icon
+      icon="moon-stars"
+      size="var(--s1)"
+      color="var(--color-primary-200)"
+      gradient={false}
+    /></button
+  >
 </astro-sunmoon>
 
 <script>

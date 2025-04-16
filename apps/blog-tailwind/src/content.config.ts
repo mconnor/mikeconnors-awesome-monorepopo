@@ -15,7 +15,7 @@ const authors = defineCollection({
   loader: file('src/content/authors.toml', {
     parser: (text) => {
       const parsed = parseToml(text);
-      if (!parsed || !parsed.authors) {
+      if (!parsed?.authors) {
         throw new Error('Invalid TOML: missing authors section');
       }
       return parsed.authors as ParserReturnType;
