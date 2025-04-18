@@ -1,13 +1,14 @@
 ---
-import Stack from '@repo/layout-webcomponents/Stack';
-import { Counter as PreactCounter } from '@repo/preact/counter';
+// import Stack from '@repo/layout-webcomponents/Stack';
+import { Counter as PreactCounter } from '@repo/preact';
 import { Counter as ReactCounter } from '@repo/react';
-import CounterSvelte from '@repo/svelte/counter';
+
 // import { SolidCounter as SolidC } from '@repo/solid/counter';
-import VueCounter from '@repo/vue/counter';
+import VueCounter from '@repo/vue/Counter';
+import SvelteCounter from '@repo/svelte/Counter';
 
 import Layout from '#layouts/Layout.astro';
-import Box from '@repo/ui-lit/Box';
+import Box from '@repo/layout-webcomponents/Box';
 import Switcher from '@repo/layout-webcomponents/Switcher';
 ---
 
@@ -40,18 +41,17 @@ import Switcher from '@repo/layout-webcomponents/Switcher';
           <h1>Hello from Preact!</h1>
         </PreactCounter></Box
       >
+
       <Box>
         <VueCounter client:visible>
-          <h1>Hello from Vue!</h1>
-          <wa-icon family="vue" name="font-awesome"></wa-icon>
+          <h1>Hello from Svelte!</h1>
         </VueCounter></Box
       >
 
       <Box>
-        <CounterSvelte client:visible klass="counter">
+        <SvelteCounter client:visible klass="counter">
           <h1>Hello from Svelte!</h1>
-          <wa-icon family="svelte" name="font-awesome"></wa-icon>
-        </CounterSvelte></Box
+        </SvelteCounter></Box
       >
     </Switcher>
   </Box>

@@ -2,6 +2,7 @@ import preact from '@astrojs/preact';
 import react from '@astrojs/react';
 // import solid from '@astrojs/solid-js';
 import svelte from '@astrojs/svelte';
+
 import vercel from '@astrojs/vercel';
 import vue from '@astrojs/vue';
 import { defineConfig } from 'astro/config';
@@ -27,8 +28,8 @@ export default defineConfig({
     //   include: ['@repo/solid/**', '**/node_modules/@suid/material/**'],
     // }),
     react({ include: ['@repo/react/*'] }),
-    svelte({ include: ['@repo/svelte/*'] }),
-    vue({ include: ['@repo/vue/*'] }),
+    svelte(),
+    vue(),
   ],
 
   output: 'server',
