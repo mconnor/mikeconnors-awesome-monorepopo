@@ -6,5 +6,9 @@
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "astro": "catalog:",
+    "typescript": "catalog:"
   }
 }

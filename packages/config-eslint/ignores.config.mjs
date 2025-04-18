@@ -5,6 +5,7 @@ export default defineConfig([
   globalIgnores(
     [
       '**/dist/',
+      '**/tsup.config.ts',
       '**/.vercel/',
       '**/.wrangler',
       '**/cache-directory/',

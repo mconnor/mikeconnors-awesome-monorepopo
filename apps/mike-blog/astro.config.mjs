@@ -34,7 +34,6 @@ export default defineConfig({
     responsiveImages: true,
     headingIdCompat: true,
     contentIntellisense: true,
-    svg: true,
   },
 
   // compressHTML: true,

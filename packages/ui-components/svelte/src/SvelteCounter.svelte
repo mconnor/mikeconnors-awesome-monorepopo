@@ -1,11 +1,11 @@
 <script lang="ts">
-  // import type { Snippet } from 'svelte';
-  // type Props = {
-  //   children?: () => Snippet<[]>;
-  //   klass?: string;
-  // };
+  import type { Snippet } from 'svelte';
+  interface Props {
+    children?: Snippet;
+    klass?: string;
+  }
 
-  let { children, klass = 'counter' } = $props();
+  let { children, klass = 'counter' }: Props = $props();
   let count = $state(0);
 
   function add() {
@@ -17,7 +17,7 @@
   }
 </script>
 
-<div class={klass}>
+<div class="counter">
   <button onclick={subtract}>-</button>
   <pre>{count}</pre>
   <button onclick={add}>+</button>

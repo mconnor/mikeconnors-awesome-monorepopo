@@ -2,5 +2,5 @@
 @import '@repo/design-system/theme.css';
 @import '@repo/astro-wc/styles.css';
 @plugin "@tailwindcss/typography";
-@import 'open-props/open-props.min.css';
+/* @import 'open-props/open-props.min.css'; */
 /* source not "open-props/open-props.min.css" */

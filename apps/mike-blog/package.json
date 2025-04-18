@@ -44,6 +44,7 @@
     "@astrojs/vercel": "catalog:",
     "@repo/astro-wc": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
+    "@repo/design-system": "workspace:*",
     "@repo/styles": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@sentry/astro": "^8.55.0",
@@ -62,7 +63,6 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",
-    "@repo/design-system": "workspace:*",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/typography": "catalog:",

@@ -1,15 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["./base.json", "@vue/tsconfig/tsconfig.dom.json"],
+  "extends": ["./astro-base.json", "@vue/tsconfig/tsconfig.dom.json"],
   "files": ["${configDir}/eslint.config.mjs"],
-  "include": ["${configDir}/src/**/*.vue"],
-  "exclude": [
-    "${configDir}/node_modules",
-    "${configDir}/.astro",
-    "${configDir}/dist",
-    "${configDir}/.turbo",
-    "${configDir}/.vercel",
-    "${configDir}/.next",
-    "${configDir}/cache-directory"
-  ]
+  "include": ["${configDir}/src/**/*.vue"]
 }

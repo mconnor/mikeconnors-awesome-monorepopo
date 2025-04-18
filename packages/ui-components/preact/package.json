@@ -7,8 +7,8 @@
     "#*": "./src/*"
   },
   "exports": {
-    ".*": {
-      "types": "./dist/index.mjs",
+    ".": {
+      "types": "./dist/index.d.ts",
       "default": "./dist/index.mjs"
     }
   },

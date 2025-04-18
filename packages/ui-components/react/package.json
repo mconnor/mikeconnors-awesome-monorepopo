@@ -10,8 +10,6 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
     "test": "jest",
     "format": "prettier . --write",
     "lint": "eslint .",
@@ -31,7 +29,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/postcss": "^4.1.3",
+    "@tailwindcss/postcss": "^4.1.4",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "postcss": "catalog:",
@@ -46,8 +44,9 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.1",
+    "@headlessui/react": "^2.2.2",
     "@heroicons/react": "^2.2.0",
-    "@tailwindcss/cli": "^4.1.3"
+    "@repo/utils": "workspace:^",
+    "@tailwindcss/cli": "^4.1.4"
   }
 }

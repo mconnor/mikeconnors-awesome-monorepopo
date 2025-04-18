@@ -8,10 +8,6 @@ interface Props {
 const { hello = "Hi, I'm Mike" } = Astro.props;
 ---
 
-<script>
-  import './GreetingBtn.ts';
-</script>
-
 <greeting-button data-message="enter your name here">
   <div class="flex flex-col items-center gap-4">
     <h2 class="text-4xl">{hello}</h2>
@@ -23,3 +19,71 @@ const { hello = "Hi, I'm Mike" } = Astro.props;
   </div>
   <input type="text" name="login" value="hi" /></greeting-button
 >
+<script>
+  import { actions } from 'astro:actions';
+  import { z } from 'astro:schema';
+  // helps with zod error messages
+  import { fromError } from 'zod-validation-error';
+
+  const nameSchema = z.string().min(4).max(40);
+
+  class GreetingButton extends HTMLElement {
+    constructor() {
+      super();
+    }
+
+    onKlick = async (val: string) => {
+      // Show alert pop-up with greeting from action
+      const enteredNamedParsed = nameSchema.safeParse(val);
+
+      const {
+        success: clientSideSuccess,
+        error: clientSideError,
+        data: clientSideData,
+      } = enteredNamedParsed;
+
+      if (clientSideError) {
+        alert(fromError(clientSideError).toString());
+        return;
+      } else {
+        console.error('passed clientside validation');
+      }
+
+      const { data, error } = await actions.getGreeting({
+        name: clientSideData,
+      });
+
+      if (error?.code === 'UNAUTHORIZED') {
+        alert('show log in page');
+        return;
+      }
+      alert(data);
+      return;
+    };
+    connectedCallback() {
+      // const stringLiteralSchema = z.literal(this.dataset.message);
+
+      const button = this.querySelector('button');
+      const input = this.querySelector(
+        'input[name="login"]',
+      )! as HTMLInputElement;
+      if (!button || !input) {
+        throw new Error('Button or input not found');
+      }
+
+      button.addEventListener('click', () => {
+        this.onKlick(input.value).catch((err) => {
+          console.error('Error in greeting button:', err);
+        });
+      });
+    }
+  }
+
+  customElements.define('greeting-button', GreetingButton);
+
+  declare global {
+    interface HTMLElementTagNameMap {
+      'greeting-button': GreetingButton;
+    }
+  }
+</script>

@@ -1,4 +1,5 @@
-// @ts-check
 import vue from "@repo/eslint-config/vue-config";
 
-export default vue;
+/** @type {import("eslint").Linter.Config} */
+const config = [...vue];
+export default config;

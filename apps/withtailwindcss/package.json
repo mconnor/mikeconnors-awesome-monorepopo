@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/mdx": "^4.2.3",
+    "@astrojs/mdx": "^4.2.4",
     "@repo/astro-wc": "workspace:^",
     "@repo/layout-webcomponents": "workspace:^",
     "@tailwindcss/vite": "catalog:",

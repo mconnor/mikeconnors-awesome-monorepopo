@@ -1,0 +1,64 @@
+---
+// Style Imports
+import '../styles/global.css';
+
+// Component Imports
+// For JSX components, all the common ways of exporting (under a namespace, specific export, default export etc) are supported!
+// import * as react from '../components/react/ReactCounter';
+// import { PreactCounter } from '../components/preact/PreactCounter';
+import { Counter as PreactCounter } from '@repo/preact';
+import { Counter as ReactCounter } from '@repo/react';
+import SolidCounter from '../components/solid/SolidCounter';
+
+import VueCounter from '@repo/vue/Counter';
+import SvelteCounter from '@repo/svelte/Counter';
+// import SvelteCounter from '#components/svelte/SvelteCounter.svelte';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/basics/astro-components/
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <main>
+      <ReactCounter client:only="react" klass="counter">
+        <h1>Hello from React!</h1>
+      </ReactCounter>
+
+      <PreactCounter client:visible klass="counter">
+        <h1>Hello from Preact!</h1>
+      </PreactCounter>
+
+      <SolidCounter client:visible>
+        <h1>Hello from Solid!</h1>
+      </SolidCounter>
+
+      <!-- <VueCounter client:visible>
+        <h1>Hello from Vue!</h1>
+      </VueCounter> -->
+
+      <SvelteCounter client:visible klass="counter">
+        <h1>Hello from Svelte!</h1>
+      </SvelteCounter>
+    </main>
+  </body>
+</html>
+<style>
+  .counter {
+    display: grid;
+    font-size: 2em;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 2em;
+    place-items: center;
+  }
+
+  .counter-message {
+    text-align: center;
+  }
+</style>

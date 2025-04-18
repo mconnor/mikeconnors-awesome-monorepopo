@@ -1,0 +1,49 @@
+{
+  "name": "@app/m2",
+  "type": "module",
+  "version": "0.0.1",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "astro-check": "astro check",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "help": "astro -- --help",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@astrojs/preact": "catalog:",
+    "@astrojs/react": "catalog:",
+    "@astrojs/solid-js": "^5.0.8",
+    "@astrojs/svelte": "^7.0.10",
+    "@astrojs/vue": "^5.0.10",
+    "@repo/preact": "workspace:*",
+    "@repo/react": "workspace:*",
+    "@repo/svelte": "workspace:*",
+    "@repo/vue": "workspace:*",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "astro": "^5.7.4",
+    "preact": "^10.26.5",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "solid-js": "^1.9.5",
+    "svelte": "^5.28.1",
+    "vue": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "eslint": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "typescript": "catalog:"
+  }
+}

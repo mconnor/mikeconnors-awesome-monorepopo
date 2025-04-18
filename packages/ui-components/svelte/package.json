@@ -7,7 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./counter": "./src/SvelteCounter.svelte",
+    "./Counter": "./src/SvelteCounter.svelte",
     "./card": "./src/Card.svelte",
     "./feedback-form": "./src/FeedbackFrom.svelte"
   },
@@ -17,7 +17,8 @@
     "format": "prettier --write .",
     "inspect": "eslint --inspect-config",
     "svelte-check": "svelte-check",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
