@@ -1,26 +1,36 @@
 ---
 import Icon from '#Icon/index.astro';
 
-type IconType = typeof Icon;
+// type IconType = typeof Icon;
+
+type Props = {
+  color?: string;
+  // gradient?: boolean;
+  size?: string;
+  wrapperClass?: string;
+};
+
+const {
+  wrapperClass,
+  size = 'var(--s2)',
+  color = 'var(--color-primary-200)',
+} = Astro.props;
 ---
 
 <astro-sunmoon>
-  <button id="btnSun" type="button" aria-label="Toggle dark mode">
-    <Icon
-      icon="sun"
-      size="var(--s1)"
-      color="var(--color-primary-200)"
-      gradient={false}
-    /></button
-  >
-  <button id="btnMoon" type="button" aria-label="Toggle dark mode">
-    <Icon
-      icon="moon-stars"
-      size="var(--s1)"
-      color="var(--color-primary-200)"
-      gradient={false}
-    /></button
-  >
+  <div class={wrapperClass}>
+    <button id="btnSun" type="button" aria-label="Toggle dark mode">
+      <Icon icon="sun" size={size} color={color} gradient={false} /></button
+    >
+    <button id="btnMoon" type="button" aria-label="Toggle dark mode">
+      <Icon
+        icon="moon-stars"
+        size={size}
+        color={color}
+        gradient={false}
+      /></button
+    >
+  </div>
 </astro-sunmoon>
 
 <script>

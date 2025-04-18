@@ -3,80 +3,43 @@
 import Switcher from '@repo/layout-webcomponents/Switcher';
 import Cluster from '@repo/layout-webcomponents/Cluster';
 import { Links } from '#app.config.ts';
-import Icon from '@repo/astro-wc/Icon';
-import Box from '@repo/layout-webcomponents/Box';
-import SunMoon from '@repo/astro-wc/SunMoon';
-import HeaderLink from './MainNav/HeaderLink.astro';
 
+import Box from '@repo/layout-webcomponents/Box';
+import LightDarkSwitch from '@repo/astro-wc/SunMoon';
+import HeaderLink from './MainNav/HeaderLink.astro';
+import Outlink from './Outlink.astro';
 import MainNav from './MainNav/index.astro';
 
 import { navLinks } from '#app.config.ts';
 const { pathname } = Astro.url;
+
+const IconSize = 'var(--s2)';
 ---
 
-<div class="max-w-full bg-primary-600 px-4 dark:bg-primary-300">
-  <Switcher>
-    <!-- items-center justify-between -->
-    <!-- <div class="flex flex-row flex-nowrap content-center justify-between"> -->
-    <div class="sm:flex sm:flex-none sm:flex-row"><SunMoon /></div>
+<div
+  class="flex max-w-full justify-between border-4 bg-primary-600 px-4 py-5 dark:bg-primary-300"
+>
+  <!-- items-center justify-between -->
+  <!-- <div class="flex flex-row flex-nowrap content-center justify-between"> -->
 
-    <!-- MAIN NAV -->
-    <div
-      class="sm:flex sm:flex-row sm:justify-center sm:rounded-2xl sm:border-x-4"
-    >
-      {
-        navLinks.map(({ href, label, subPages }, index) => (
-          <HeaderLink href={href} subPages={subPages}>
-            <div slot="activeTab">{label}</div>
-            <div slot="btnContents">{label}</div>
-          </HeaderLink>
-        ))
-      }
-      <!-- <div class="size-5 bg-accent-600"></div> -->
-    </div>
+  <!-- <LightDarkSwitch
+        wrapperClass="flex gap-20 border-2"
+        color="var(--color-primary-200)"
+        size={IconSize}
+      /> -->
+  <div class="sm:flex sm:flex-none sm:flex-row sm:justify-start sm:gap-5">
+    <Outlink href={Links.github} size={IconSize} iconKey="sun" />
+    <Outlink href={Links.github} size={IconSize} iconKey="moon-stars" />
+  </div>
 
-    <div class="sm:flex sm:flex-none sm:flex-row">
-      <div class="">
-        <a href={Links.github}
-          ><Icon
-            icon="github-logo"
-            size="var(--s1)"
-            color="var(--color-primary-200)"
-            gradient={false}
-          /></a
-        >
-      </div>
-      <div class="">
-        <a href={Links.twitter}
-          ><Icon
-            icon="twitter-logo"
-            size="var(--s1)"
-            color="var(--color-primary-200)"
-            gradient={false}
-          /></a
-        >
-      </div>
-      <div class="">
-        <a href={Links.linkedin}
-          ><Icon
-            icon="linkedin-logo"
-            size="var(--s1)"
-            color="var(--color-primary-200)"
-            gradient={false}
-          /></a
-        >
-      </div>
-      <div class="">
-        <a href={Links.discord}
-          ><Icon
-            icon="discord-logo"
-            size="var(--s1)"
-            color="var(--color-primary-200)"
-            gradient={false}
-          /></a
-        >
-      </div>
-    </div>
-  </Switcher>
+  <MainNav />
+
+  <div class="sm:flex sm:flex-none sm:flex-row sm:justify-end sm:gap-5">
+    <Outlink href={Links.github} size={IconSize} iconKey="github-logo" />
+    <Outlink href={Links.twitter} size={IconSize} iconKey="twitter-logo" />
+    <Outlink href={Links.linkedin} size={IconSize} iconKey="linkedin-logo" />
+    <Outlink href={Links.discord} size={IconSize} iconKey="discord-logo" />
+  </div>
+
   <!-- </div> -->
 </div>

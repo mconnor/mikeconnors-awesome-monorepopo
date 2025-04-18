@@ -1,0 +1,30 @@
+---
+import Icon from '@repo/astro-wc/Icon';
+import type { IconType } from '@repo/astro-wc/Icon';
+import type { HTMLAttributes } from 'astro/types';
+// import { z } from 'astro:content';
+
+type Props = HTMLAttributes<'a'> & {
+  size?: string;
+  color?: string;
+  iconKey: string;
+  gradient?: boolean;
+};
+
+const {
+  color = 'var(--color-primary-200)',
+  size = 'var(--s2)',
+  ...rest
+} = Astro.props;
+---
+
+<div class="">
+  <a href={rest.href}
+    ><Icon
+      icon={rest.iconKey as IconType}
+      size={size}
+      color={color}
+      gradient={rest.gradient}
+    /></a
+  >
+</div>

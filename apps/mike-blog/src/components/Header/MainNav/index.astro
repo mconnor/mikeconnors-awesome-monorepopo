@@ -4,7 +4,9 @@ import HeaderLink from './HeaderLink.astro';
 import { navLinks } from '#app.config.ts';
 ---
 
-<div class="flex flex-row border-0 sm:rounded-2xl sm:border-x-4">
+<div
+  class="border-1 sm:flex sm:flex-row sm:justify-center sm:rounded-2xl sm:border-x-4"
+>
   {
     navLinks.map(({ href, label, subPages }, index) => (
       <HeaderLink href={href} subPages={subPages}>
