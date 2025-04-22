@@ -1,0 +1,39 @@
+---
+
+import BaseLayout from './BaseLayout.astro'
+import { Icon } from 'astro-icon/components'
+interface Props {
+  title: string;
+  image?: string;
+  description?: string;
+}
+
+const props = Astro.props;
+
+
+---
+<BaseLayout {...props}>
+    <nav class="absolute top-0 right-0 p-6 lg:p-2">
+      <a href="https://github.com/igorm84/astro-shop" target="_blank">
+        <Icon name="mdi:github" class="h-6 w-6 lg:h-8 lg:w-8 text-gray-800" />
+      </a>
+    </nav>
+    <main
+      class="relative max-w-6xl min-h-screen mx-auto py-6 lg:pt-10 px-4 pb-20"
+    >
+      <slot />
+      <footer
+        class="text-gray-400 text-xs text-center py-8 absolute bottom-0 inset-x-0"
+      >
+        <a
+          href="https://github.com/igorm84"
+          class="inline-flex items-center gap-2"
+          target="_blank"
+          >Built by Igor Penaque @ 2023
+        </a>
+      </footer>
+    </main>
+
+  
+
+  </BaseLayout>

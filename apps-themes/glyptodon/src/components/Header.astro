@@ -1,0 +1,251 @@
+---
+export interface Props {
+  activeNav?: string;
+}
+
+const { activeNav } = Astro.props;
+---
+
+<header class="header">
+  <div class="logo">
+    <a href="/" id="home">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <path
+          d="M16 16c-0.7-0.7-0.7-2 0-2.7 0.9-0.9 2.4-0.9 3.3 0 1.5 1.5 1.5 3.9 0 5.3-2 2-5.3 2-7.3 0-2.5-2.5-2.5-6.8 0-9.3 3.2-3.2 8.3-3.2 11.3 0 3.7 3.7 3.7 9.6 0 13.3-4.3 4.3-11.1 4.3-15.3 0"
+        ></path>
+        <path
+          d="M16 16c0.7 0.7 0.7 2 0 2.7-0.9 0.9-2.4 0.9-3.3 0-1.5-1.5-1.5-3.9 0-5.3 2-2 5.3-2 7.3 0 2.5 2.5 2.5 6.8 0 9.3-3.2 3.2-8.3 3.2-11.3 0-3.7-3.7-3.7-9.6 0-13.3 4.3-4.3 11.1-4.3 15.3 0"
+        ></path>
+      </svg>
+      <span> &nbsp;&gt;&nbsp;Home </span>
+    </a>
+  </div>
+  <nav class="nav">
+    <ul class="menu">
+      <li>
+        <a href="/now/"> Now </a>
+      </li>
+      <li>
+        <a href="/about/"> About </a>
+      </li>
+
+      <li>
+        <a href="/posts/"> Posts </a>
+      </li>
+      <li>
+        <a href="/finds/"> Found </a>
+      </li>
+    </ul>
+    <div class="nav-right">
+      <a href="/rss.xml" title="RSS Feed" class="rss-link">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M4 11a9 9 0 0 1 9 9"></path>
+          <path d="M4 4a16 16 0 0 1 16 16"></path>
+          <circle cx="5" cy="19" r="1"></circle>
+        </svg>
+        <span class="sr-only">RSS Feed</span>
+      </a>
+      <button class="hamburger" aria-label="Toggle Menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const menu = document.querySelector('.menu');
+
+  hamburger?.addEventListener('click', () => {
+    menu?.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (event) => {
+    const target = event.target as HTMLElement;
+    if (!target.closest('.nav') && menu?.classList.contains('active')) {
+      menu.classList.remove('active');
+    }
+  });
+</script>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-background);
+    color: var(--color-text-base);
+    box-shadow: 2px 9px 24px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 2px 9px 24px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 2px 9px 24px 0px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-border);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    color: var(--color-text-base);
+  }
+
+  .logo a {
+    display: flex;
+    align-items: center;
+    padding: 0 0.25em;
+  }
+
+  .logo #home:hover {
+    color: var(--color-link);
+  }
+
+  .logo svg {
+    width: 32px;
+  }
+
+  .logo svg path {
+    fill: none;
+    stroke: var(--color-text-base);
+  }
+
+  .logo #home {
+    font-size: var(--step-1);
+    margin-right: 10px;
+    color: var(--color-text-base);
+    text-decoration: none;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    padding-left: 1em;
+    gap: 1rem;
+  }
+
+  .menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin-left: 20px;
+  }
+
+  .menu li a {
+    color: var(--color-text-base);
+    text-decoration: none;
+    padding: 0 0.25em;
+  }
+
+  .menu li a:hover {
+    color: var(--color-link);
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+  }
+
+  .hamburger .line {
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text-base);
+    margin: 0;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+
+  .rss-link {
+    display: flex;
+    color: var(--color-text-base);
+    align-items: center;
+    padding: 0 0.25em;
+  }
+
+  .rss-link svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rss-link:hover {
+    color: var(--color-link);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: var(--color-background);
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--color-border);
+    }
+
+    .menu.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu li {
+      margin: 0.5rem 0;
+      text-align: right;
+    }
+  }
+</style>
