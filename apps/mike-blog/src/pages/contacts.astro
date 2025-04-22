@@ -1,0 +1,34 @@
+---
+import ContactCard from '@repo/astro-wc/ContactCard';
+import me from '#assets/mexico.jpg';
+import { Image } from 'astro:assets';
+
+import Stack from '@repo/layout-webcomponents/Stack';
+
+import Layout from '#layouts/Layout.astro';
+---
+
+<Layout>
+  <Stack space="4rem" splitAfter={2}>
+    <div class="flex flex-col gap-4 bg-primary-400 p-20">
+      <ContactCard name="Mike Connor" class="bg-primary-900">
+        <Image
+          width="200"
+          slot="contact-img"
+          class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
+          src={me}
+          alt=""
+        />
+      </ContactCard>
+      <ContactCard name="Mike Connor" class="bg-primary-900">
+        <Image
+          width="200"
+          slot="contact-img"
+          class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
+          src={me}
+          alt=""
+        />
+      </ContactCard>
+    </div>
+  </Stack>
+</Layout>

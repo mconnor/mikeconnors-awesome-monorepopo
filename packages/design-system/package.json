@@ -1,17 +1,20 @@
 {
   "name": "@repo/design-system",
   "version": "1.0.0",
-  "scripts": {
-    "clean": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "type-check": "tsc --noEmit",
-    "format": "prettier . --write"
-  },
   "imports": {
     "#*": "./src/*"
   },
   "exports": {
-    "./theme.css": "./src/theme.css"
+    "./styles.css": "./dist/index.css",
+    "./Swatches": "./src/components/swatches/index.astro"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./dist/index.css",
+    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit",
+    "format": "prettier . --write"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
@@ -23,10 +26,9 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tsup": "^8.4.0",
     "typescript": "catalog:",
-    "vite": "catalog:"
-  },
-  "dependencies": {
+    "vite": "catalog:",
     "@tailwindcss/cli": "^4.1.4",
     "tailwindcss": "catalog:"
-  }
+  },
+  "dependencies": {}
 }

@@ -1,6 +1,6 @@
 ---
 title: Kitchen Sink
-pubDate: 2022-07-09
+date: 2022-07-09
 author: mike-connor
 description: "After learning some Astro, I couldn't stop!"
 cover:

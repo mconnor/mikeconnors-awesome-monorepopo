@@ -11,7 +11,7 @@ interface Props {
 
 const { postData, id, ssr = false } = Astro.props;
 
-const { title, cover, pubDate } = postData;
+const { title, cover, date } = postData;
 
 const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
 ---
@@ -23,6 +23,6 @@ const link = ssr ? `/postsSSR/${id}` : `/posts/${id}`;
   <h2>{title}</h2>
 
   <div slot="footer" class="description">
-    {pubDate}
+    {date}
   </div>
 </a>

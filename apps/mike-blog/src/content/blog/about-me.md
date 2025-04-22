@@ -1,6 +1,6 @@
 ---
 title: About Me
-pubDate: 2022-09-01
+date: 2022-09-01
 author: mike-connor
 description: 'Morlochs and Eloi'
 cover:
@@ -9,7 +9,7 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 
-# Hello, world!
+# Hello, world
 
 > Some notable things in a block quote!
 

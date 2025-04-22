@@ -16,7 +16,7 @@ const publishsedPosts = await getCollection(
 );
 
 const sortedPosts = publishsedPosts.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
 
@@ -29,6 +29,7 @@ const sortedPosts = publishsedPosts.sort(
           backgroundColor="var(--surface-4)"
           foregroundColor="var(--text-2)"
           id={id}
+          xx
           postData={data}
           ssr
         />

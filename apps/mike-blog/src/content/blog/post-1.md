@@ -1,6 +1,6 @@
 ---
 title: In aliqua exercitation ullamco id
-pubDate: 2022-09-01
+date: 2022-01-04
 author: mike-connor
 description: 'Morlochs and Eloi'
 cover:
@@ -9,7 +9,7 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 
-# Hello, world!
+# Hello, world
 
 <div>
   > Some notable things in a block quote!
@@ -21,7 +21,7 @@ elit tempor labore irure ipsum adipisicing. Cupidatat proident culpa sunt cillum
 do nostrud ea id id incididunt ullamco. Proident dolore nulla ipsum consequat
 aute eiusmod proident ex excepteur.
 
-### Lorem tempor magna irure anim anim enim eu reprehenderit laboris proident magna.
+### Lorem tempor magna irure anim anim enim eu reprehenderit laboris proident magna
 
 Laborum non et Lorem enim dolor. Est eu deserunt aliqua pariatur enim et ullamco
 ea dolore officia enim officia. Nostrud cupidatat culpa commodo exercitation. Eu

@@ -1,10 +1,8 @@
 ---
 title: Draft Post
-pubDate: 2024-01-13
+date: 2024-01-13
 author: mike-connor
-description:
-  'A graphic representation of data abstracted from the banks of every computer
-  in the coffin for Armitage’s call.'
+description: 'A graphic representation of data abstracted from the banks of every computer in the coffin for Armitage’s call.'
 cover:
   src: 'https://picsum.photos/400/300?random=0'
   alt: 'A photograph of a sunset behind a mountain range.'
@@ -16,7 +14,7 @@ tags: ['space', 'liver', 'xanadu']
 I can link internally to [my conclusion](#conclusion) on the same page when
 writing Markdown.
 
-### Lorem tempor magna irure anim anim enim eu reprehenderit laboris proident magna.
+### Lorem tempor magna irure anim anim enim eu reprehenderit laboris proident magna
 
 A graphic representation of data abstracted from the banks of every computer in
 the coffin for Armitage’s call. Its hands were holograms that altered to match

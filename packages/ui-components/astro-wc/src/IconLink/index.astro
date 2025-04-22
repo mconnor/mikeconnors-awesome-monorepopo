@@ -1,5 +1,5 @@
 ---
-import Icon from '@repo/astro-wc/Icon';
+import Icon from '../Icon/index.astro';
 
 import type { ComponentProps } from 'astro/types';
 
@@ -14,16 +14,29 @@ type IconThemeProps = ComponentProps<typeof Icon>;
 
 interface Props extends IconThemeProps {
   href: string;
+  class?: string;
 }
 
 const {
   // color = 'var(--color-primary-200)',
   // size = 'var(--s2)',
   href,
+
+  color = 'var(--color-primary-200)',
   ...rest
 } = Astro.props;
 ---
 
-<div class="">
-  <a href={href}><Icon {...rest} /></a>
-</div>
+<link-icon>
+  <div>
+    <a href={href}><Icon color={color} {...rest} /></a>
+  </div>
+</link-icon>
+
+<script>
+  class LinkIcon extends HTMLElement {
+    connectedCallback() {}
+  }
+
+  customElements.define('link-icon', LinkIcon);
+</script>

@@ -1,6 +1,6 @@
 ---
 title: It's Friday
-pubDate: 2024-01-11
+date: 2024-01-11
 author: mike-connor
 cover:
   src: 'https://picsum.photos/400/300?random=4'

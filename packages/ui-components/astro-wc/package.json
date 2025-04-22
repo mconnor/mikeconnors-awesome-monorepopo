@@ -7,16 +7,21 @@
     "#*": "./src/*"
   },
   "exports": {
+    "./styles.css": "./dist/index.css",
     "./*": "./src/*/index.astro",
-    "./styles.css": "./dist/styles.css",
+    "./swatches/*": "./src/swatches/*.astro",
+    "./Card": "./src/Card/index.astro",
+    "./ContactCard": "./src/ContactCard/index.astro",
+    "./IconLink": "./src/IconLink/index.astro",
+    "./AstroForm": "./src/AstroForm/index.astro",
     "./Icon": "./src/Icon/index.astro",
     "./DynamicCarousel": "./src/wa/DynamicCarousel/index.astro",
-    "./SunMoon": "./src/SunMoon/index.astro"
+    "./ThemeIcon": "./src/ThemeIcon/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css  --watch",
+    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
+    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
@@ -24,7 +29,6 @@
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "check-types": "tsc --noEmit",
-    "@repo/styles": "workspace:*",
     "@repo/layout-webcomponents": "workspace:^"
   },
   "devDependencies": {
@@ -33,13 +37,15 @@
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/cli": "^4.1.4",
+    "@tailwindcss/cli": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
+    "luxon": "^3.6.1",
     "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "^0.6.11",
+    "prettier-plugin-tailwindcss": "catalog:",
     "tailwindcss": "catalog:",
+    "typescript": "catalog:",
     "vite": "catalog:"
   },
   "peerDependencies": {
@@ -47,5 +53,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  }
 }

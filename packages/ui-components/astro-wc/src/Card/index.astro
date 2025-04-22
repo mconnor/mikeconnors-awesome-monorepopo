@@ -1,47 +1,54 @@
 ---
 // import { link } from 'fs';
-import Frame from '@repo/layout-webcomponents/Frame';
+// import Frame from '@repo/layout-webcomponents/Frame';
 import Tag from './Tag.astro';
 
 interface Props {
-  href: string;
   label: string;
-
+  href: string;
   showInset?: boolean;
-  date?: string;
+  date?: Date;
+  tags?: string[];
 }
 
-const { href, label, showInset } = Astro.props;
+const { href, showInset, tags, date } = Astro.props;
 ---
 
 <div
   class="relative isolate mt-3 flex flex-col items-start rounded-2xl px-6 py-4 hover:shadow-lg"
 >
-  <Frame ration="4:3"><slot name="image" /></Frame>
-
+  <!-- <Frame ration="4:3"><slot name="image" /></Frame> -->
+  <div class="border-4 aspect-auto"><slot name="card-img" /></div>
   <h2 class="text-xl font-bold text-zinc-800">
     <a href={href}>
       <span
         class:list={['absolute inset-0 z-10', { 'bg-pink-600/25': showInset }]}
       ></span>
-      <span class="line-clamp-1">
+
+      <div class="line-clamp-1">
         <slot name="headline" />
-      </span>
+      </div>
     </a>
   </h2>
 
-  <!-- <Tag class:list={['absolute inset-0', { 'bg-pink-600/25': bool }]}></Tag> -->
-  <!-- <Tag class="absolute inset-0 bg-pink-600/25"></Tag> -->
-
-  <time class="relative order-first text-sm text-gray-600" datetime="2021-08-01"
-    >August 1, 2021</time
+  <time
+    class="relative order-first border-1 text-sm text-gray-600"
+    datetime="2021-08-01">{date}</time
   >
-  <p class="text-base text-gray-700">
-    <slot name="description" />
-  </p>
-  <div class="px-6 pt-4 pb-2">
-    <Tag>Tag1</Tag>
-    <Tag>Tag2</Tag>
-    <Tag>Tag3</Tag>
+
+  <div class="flex flex-col gap-0">
+    <div class="border-1 text-base text-gray-700">
+      <slot name="description" />
+    </div>
+    <div class="flex flex-row gap-0 border-1 px-6 pt-4 pb-2">
+      {
+        tags &&
+          tags.map((tag) => (
+            <div class="mr-2 mb-2 inline-block rounded-full bg-blue-200 px-3 py-1 text-sm font-semibold text-blue-700">
+              {tag}
+            </div>
+          ))
+      }
+    </div>
   </div>
 </div>

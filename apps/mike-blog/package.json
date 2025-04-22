@@ -43,6 +43,7 @@
     "@astrojs/rss": "catalog:",
     "@astrojs/vercel": "catalog:",
     "@repo/astro-wc": "workspace:*",
+    "@repo/utils": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@repo/styles": "workspace:*",

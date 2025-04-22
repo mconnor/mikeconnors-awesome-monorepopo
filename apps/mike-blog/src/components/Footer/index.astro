@@ -1,10 +1,16 @@
 ---
 // import { Links } from '#app.config.ts';
-// import Cluster from '@repo/layout-webcomponents/Cluster';
-// import Box from '@repo/layout-webcomponents/Box';
+import Center from '@repo/layout-webcomponents/Center';
+import Box from '@repo/layout-webcomponents/Box';
+import Stack from '@repo/layout-webcomponents/Box';
 import OutLinks from './OutLinks.astro';
 ---
 
-<footer>
-  <OutLinks />
+<footer class="flex flex-col">
+  <div class="self-center text-primary-900 dark:text-white">
+    Site and contents by Mike Connor
+  </div>
+  <div class="self-center">
+    Enquiries: <a href="mailto:mike@mikeconnor.tech">mike@mikeconnor.tech</a>
+  </div>
 </footer>

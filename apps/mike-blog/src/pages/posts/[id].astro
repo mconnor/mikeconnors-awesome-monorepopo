@@ -21,7 +21,7 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 
-const { Content, headings } = await render(post);
+const { Content } = await render(post);
 ---
 
 <MarkdownPostLayout {...post.data}>

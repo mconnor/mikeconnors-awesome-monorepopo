@@ -40,6 +40,9 @@ export default defineConfig({
   // trailingSlash: 'never',
   cacheDir: './cache-directory',
   vite: {
+    ssr: {
+      noExternal: ['@repo/design-system'],
+    },
     plugins: [
       tailwindcss(),
       // visualizer({

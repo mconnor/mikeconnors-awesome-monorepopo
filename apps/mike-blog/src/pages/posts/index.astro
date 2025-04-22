@@ -1,7 +1,8 @@
 ---
 // import { Debug } from 'astro:components';
+import { parseISO, format } from 'date-fns';
 import Stack from '@repo/layout-webcomponents/Stack';
-
+import Card from '@repo/astro-wc/Card';
 import Grid from '@repo/layout-webcomponents/Grid';
 import { getCollection } from 'astro:content';
 import Box from '@repo/layout-webcomponents/Box';
@@ -18,7 +19,7 @@ const publishsedPosts = await getCollection(
 );
 
 const sortedPosts = publishsedPosts.sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
 
@@ -28,21 +29,24 @@ const sortedPosts = publishsedPosts.sort(
       <Grid>
         {
           sortedPosts.map(({ id, data }) => (
-            <BlogCard
-              backgroundColor="var(--surface-4)"
-              foregroundColor="var(--text-2)"
-              id={id}
-              postData={data}
-            />
-
-            // <wa-card with-header class="card-style">
-            //   <div slot="header">
-            //     <a href=`./posts/${id}`>{data.title}</a>
-
-            //     <wa-icon-button name="gear" variant="solid" label="Settings" />
-            //   </div>
-            //   {data.description}
-            // </wa-card>
+            // <BlogCard
+            //   backgroundColor="var(--surface-4)"
+            //   foregroundColor="var(--text-2)"
+            //   id={id}
+            //   postData={data}
+            // />
+            <Card href={`./posts/${id}`} tags={data.tags} date={data.date}>
+              <img
+                class="aspect-4/3 object-cover"
+                slot="card-img"
+                src={data.cover.src}
+                alt={data.cover.alt}
+                width={400}
+                height={300}
+              />
+              <span slot="headline">{data.title}</span>
+              <span slot="description">{data.description}</span>
+            </Card>
           ))
         }
       </Grid>

@@ -3,9 +3,7 @@ import type { HTMLAttributes } from 'astro/types';
 
 import { iconPaths } from './IconPaths';
 
-export type IconType = keyof typeof iconPaths;
-
-
+type IconType = keyof typeof iconPaths;
 
 interface Props {
   icon: IconType;

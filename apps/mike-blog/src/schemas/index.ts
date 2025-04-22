@@ -15,8 +15,9 @@ const zTags = z.array(z.string()).nonempty();
 
 const tagCountTypeSchema = z.record(z.number());
 
-const dateLike = z.union([z.number(), z.string(), z.date()]);
-const dateLikeToDate = dateLike.pipe(z.coerce.date());
+// The z.string().date() method validates strings in the format YYYY-MM-DD.
+
+// const yearMonthDateSchema = z.string().date();
 
 const authorsSchema = z.object({
   id: z.string(),
@@ -26,14 +27,17 @@ const authorsSchema = z.object({
   bio: z.string().optional(),
 });
 
+const dateLike = z.union([z.number(), z.string(), z.date()]);
+const dateLikeToDate = dateLike.pipe(z.coerce.date());
+
 const blogSchema = z.object({
   title: z.string(),
-  pubDate: dateLikeToDate,
+  date: dateLikeToDate,
   description: z.string(),
   author: reference('authors'),
   relatedPosts: z.array(reference('blog')).optional(),
   draft: z.boolean().optional().default(false),
-  tags: z.array(z.string()),
+  tags: z.array(z.string()).default([]),
   cover: z.object({ src: z.string().url(), alt: z.string() }),
 });
 
@@ -60,6 +64,7 @@ const countrySchema = z.object({
 const countriesSchema = z.array(countrySchema);
 
 export {
+  // yearMonthDateSchema,
   announcementsSchema,
   authorsSchema,
   blogSchema,

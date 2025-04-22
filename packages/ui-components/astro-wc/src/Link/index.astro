@@ -9,4 +9,11 @@ const { href } = Astro.props;
 // const isActive = href === path || href === path.replace(/\/$/, '');
 ---
 
-<a class="bg-sky-500 p-8 hover:bg-sky-700" href={href}><slot /></a>
+<div>
+  <a class="bg-sky-500 p-8 hover:bg-sky-700" href={href}><slot /></a>
+
+  <!-- <script>
+  class LinkIcon extends HTMLElement {}
+  customElements.define('theme-icon', LinkIcon);
+</script> -->
+</div>
