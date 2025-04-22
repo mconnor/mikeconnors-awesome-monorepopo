@@ -1,6 +1,6 @@
 ---
 import '../styles.css';
-import { ClientRouter } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -11,14 +11,14 @@ interface Props {
 
 const {
   title,
-  image = "/products/ryan-hoffman-A7f7XRKgUWc-unsplash.webp",
-  description = "A simple Shop built in Astro using View Transitions and TailwindCSS",
+  image = '/products/ryan-hoffman-A7f7XRKgUWc-unsplash.webp',
+  description = 'A simple Shop built in Astro using View Transitions and TailwindCSS',
 } = Astro.props;
 
-const imageUrl = import.meta.env.PUBLIC_URL
-  ? new URL(image, import.meta.env.PUBLIC_URL)
+const imageUrl =
+  import.meta.env.PUBLIC_URL ?
+    new URL(image, import.meta.env.PUBLIC_URL)
   : image;
-
 ---
 
 <!doctype html>
@@ -43,9 +43,7 @@ const imageUrl = import.meta.env.PUBLIC_URL
     <title>{title} - Astro Transitions Shop</title>
     <ClientRouter />
   </head>
-  <body class="bg-gradient-to-tl via-transparent from-gray-500/5">
+  <body class="bg-gradient-to-tl from-gray-500/5 via-transparent">
     <slot />
-
-    
   </body>
 </html>

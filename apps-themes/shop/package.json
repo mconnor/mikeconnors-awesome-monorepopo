@@ -21,6 +21,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",
+    "format": "prettier . --write",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "check-types": "tsc --noEmit"
@@ -43,10 +44,5 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "rollup-plugin-visualizer": "^5.14.0",
     "typescript": "catalog:"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "experimentalTernaries": true,
-    "proseWrap": "always"
   }
 }
