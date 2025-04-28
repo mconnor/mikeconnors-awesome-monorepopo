@@ -7,7 +7,6 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./Card": "./src/components/Card/index.astro",
     "./Box": "./src/ed-layouts/Box/index.astro",
     "./Center": "./src/ed-layouts/Center/index.astro",
     "./Reel": "./src/ed-layouts/Reel/index.astro",
@@ -33,9 +32,11 @@
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "workspace:^",
     "@repo/styles": "workspace:*",
+    "@repo/design-system": "workspace:^",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
