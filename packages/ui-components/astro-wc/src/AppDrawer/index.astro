@@ -2,7 +2,7 @@
 
 ---
 
-<app-drawer>
+<app-drawer class="flex disabled:pointer-events-none disabled:hidden">
   <panel-item>Do</panel-item>
   <panel-item>Re</panel-item>
   <panel-item>Mi</panel-item>
@@ -12,13 +12,6 @@
 </script>
 
 <style>
-  app-drawer[disabled] {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-  app-drawer {
-    display: flex;
-  }
   panel-item {
     transition: opacity 400ms ease-in-out;
     opacity: 0.3;

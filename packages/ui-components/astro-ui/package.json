@@ -1,0 +1,56 @@
+{
+  "name": "@repo/astro-ui",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "imports": {
+    "#*": "./src/*"
+  },
+  "exports": {
+    "./styles.css": "./dist/index.css",
+    "./*": "./src/*/index.astro",
+    "./DaisyUICard": "./src/DaisyUICard/index.astro",
+    "./SimpleGrid": "./src/SimpleGrid/index.astro"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
+    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
+    "astro-check": "astro check",
+    "test": "echo 'no tests yet'",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "fix": "eslint . --fix",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "check-types": "tsc --noEmit",
+    "@repo/layout-webcomponents": "workspace:^"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@repo/design-system": "workspace:^",
+    "@repo/utils": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "daisyui": "^5.0.28",
+    "lorem-ipsum": "^2.0.8",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@astrojs/check": "catalog:",
+    "@open-wc/testing": "catalog:",
+    "@repo/design-system": "workspace:^",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "astro": "catalog:",
+    "eslint": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  },
+  "peerDependencies": {
+    "astro": ">=5"
+  }
+}

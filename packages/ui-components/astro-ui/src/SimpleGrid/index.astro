@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+  w: number;
+  h: number;
+  children: unknown;
+}
+
+const { title = 'grid' } = Astro.props;
+---
+
+<div class="border-1">
+  {title}
+  <div class="grid-simple sm:[--cols:3]"><slot /></div>
+</div>

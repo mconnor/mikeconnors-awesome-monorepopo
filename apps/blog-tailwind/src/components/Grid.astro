@@ -1,0 +1,16 @@
+---
+interface Props {
+  cols: number;
+}
+
+const { cols } = Astro.props;
+---
+
+<div class="grid-simple sm:[--cols:3]">
+  <div class="bg-sky-300 h-16 w-16"></div>
+  <div class="bg-sky-300 h-16 w-16"></div>
+  <div class="bg-sky-300 h-16 w-16"></div>
+  <div class="bg-sky-300 h-16 w-16"></div>
+  <div class="bg-sky-300 h-16 w-16"></div>
+  <div class="bg-sky-300 h-16 w-16"></div>
+</div>

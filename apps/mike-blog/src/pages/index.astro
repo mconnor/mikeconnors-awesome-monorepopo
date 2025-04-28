@@ -1,55 +1,24 @@
 ---
-export const prerender = true;
-import ThemeDemo from '#components/ThemeDemo.astro';
 
-import Frame from '@repo/layout-webcomponents/Frame';
-import Stack from '@repo/layout-webcomponents/Stack';
-
-import Box from '@repo/layout-webcomponents/Box';
-
-import { Image } from 'astro:assets';
-import Andy from '#assets/andy-og.webp';
-import Me from '#assets/sovietplane.jpg';
-
-import AndyMud from '#assets/andy_mud_color.webp';
+import DCard from '#components/DCard/index.astro';
+// import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
+
+
+const features = [
+  '24-7 customer support',
+  'Unlimited access to all features',
+  'Free trial for 30 days',
+  'No credit card required',
+  'Cancel anytime',
+  'Access to exclusive content',
+  'Priority support',
+  'Early access to new features',
+];
+
+const LEN = features.length;
 ---
 
-<Layout>
-  <Stack space="4rem" splitAfter={2}>
-    <div class="w-48 h16 bg-sky-600">600</div>
-    <div class="">
-      <!-- <HeartWC />
-      <HeartLit /> -->
-      <ThemeDemo />
-      <h1 class="font-[font-hero] text-5xl font-extrabold">MG Connor</h1>
-      <!-- <h2 class="">web-dev - intrepid explorer - dog whisperer</h2> -->
-    </div>
-    <div class="flex flex-col gap-2 border-0 sm:flex-row">
-      <Box borderWidth="0" padding="0">
-        <Frame ratio="16:9">
-          <Image
-            width={400}
-            src={Me}
-            layout="responsive"
-            priority
-            alt="A description of my image."
-          />
-        </Frame>
-        <h3>The man</h3></Box
-      >
-      <Box borderWidth="0" padding="0">
-        <Frame ratio="16:9">
-          <Image
-            width={400}
-            src={Andy}
-            layout="responsive"
-            priority
-            alt="A description of my image."
-          />
-        </Frame>
-        <h3>The dog</h3></Box
-      >
-    </div>
-  </Stack>
+<Layout maxW="80ch">
+  <DCard />
 </Layout>

@@ -1,51 +1,54 @@
 ---
 // import Hamburger from '/Hamburger.astro';
-import Switcher from '@repo/layout-webcomponents/Switcher';
-import Cluster from '@repo/layout-webcomponents/Cluster';
+import HeaderLink from './MainNav/HeaderLink.astro';
+
+import { navLinks } from '#app.config.ts';
 import { Links } from '#app.config.ts';
 
-import Box from '@repo/layout-webcomponents/Box';
 import ThemeIcon from '@repo/astro-wc/ThemeIcon';
 import IconLink from '@repo/astro-wc/IconLink';
-import HeaderLink from './MainNav/HeaderLink.astro';
+// import HeaderLink from './MainNav/HeaderLink.astro';
 // import Outlink from './Outlink.astro';
 import MainNav from './MainNav/index.astro';
 
-import { navLinks } from '#app.config.ts';
-const { pathname } = Astro.url;
+// import { navLinks } from '#app.config.ts';
+// const { pathname } = Astro.url;
 
-const IconSize = 'var(--s2)';
+const IconSize = 'var(--s2, 3rem)';
 ---
 
 <div
-  class="flex max-w-full justify-between border-4 bg-primary-600 px-4 py-5 dark:bg-primary-300"
+  class="flex max-w-full justify-between border-4  px-4 py-5 bg-primary-100 dark:bg-primary-800"
 >
   <!-- items-center justify-between -->
   <!-- <div class="flex flex-row flex-nowrap content-center justify-between"> -->
 
-  <!-- <LightDarkSwitch
-        wrapperClass="flex gap-20 border-2"
-        color="var(--color-primary-200)"
-        size={IconSize}
-      /> -->
-  <div class="sm:flex sm:flex-none sm:flex-row sm:justify-start sm:gap-5">
+  <div class="gap-2 sm:gap-5 sm:flex sm:flex-row">
+    
     <ThemeIcon
-      color="var(--color-primary-200)"
-      size={IconSize}
+    class='fill-gray-900 stroke-gray-900 dark:fill-gray-50 dark:stroke-gray-50 h-10 w-10'
       theme="light"
       icon="sun"
     />
     <ThemeIcon
-      color="var(--color-primary-200)"
-      size={IconSize}
+       class='fill-gray-900 stroke-gray-900 dark:fill-gray-50 dark:stroke-gray-50 h-10 w-10'
       theme="dark"
       icon="moon-stars"
     />
   </div>
 
-  <MainNav />
+  <div class="gap-0 sm:flex sm:flex-row sm:justify-end">
+    {
+      navLinks.map(({ href, label, subPages }, index) => (
+        <HeaderLink href={href} subPages={subPages}>
+          <span slot="activeTab">{label}</span>
+          <span slot="btnContents">{label}</span>
+        </HeaderLink>
+      ))
+    }
+  </div>
 
-  <div class="sm:flex sm:flex-none sm:flex-row sm:justify-end sm:gap-5">
+  <div class="gap-2 sm:flex sm:flex-row sm:justify-end sm:gap-5">
     <IconLink href={Links.github} size={IconSize} icon="github-logo" />
     <IconLink href={Links.twitter} size={IconSize} icon="twitter-logo" />
     <IconLink href={Links.linkedin} size={IconSize} icon="linkedin-logo" />

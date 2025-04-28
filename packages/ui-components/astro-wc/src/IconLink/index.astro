@@ -1,41 +1,39 @@
 ---
-import Icon from '../Icon/index.astro';
-
 import type { ComponentProps } from 'astro/types';
 
-type IconThemeProps = ComponentProps<typeof Icon>;
+import Icon from '#Icon/index.astro';
+type IconProps = ComponentProps<typeof Icon>;
 
-// type Props = HTMLAttributes<'a'> & {
-//   size?: string;
-//   color?: string;
-//   iconKey: IconType;
-//   gradient?: boolean;
-// };
 
-interface Props extends IconThemeProps {
-  href: string;
-  class?: string;
+  interface Props extends IconProps {
+href: string;
+  
 }
 
-const {
-  // color = 'var(--color-primary-200)',
-  // size = 'var(--s2)',
-  href,
 
-  color = 'var(--color-primary-200)',
-  ...rest
+
+
+
+
+const {
+
+  href,
+  icon,
+  class:
+    className = 'fill-gray-900 stroke-gray-900 dark:fill-gray-50 dark:stroke-gray-50 h-10 w-10',
+
 } = Astro.props;
 ---
 
 <link-icon>
   <div>
-    <a href={href}><Icon color={color} {...rest} /></a>
+    <a href={href}> <Icon class={className} icon={icon} /></a>
   </div>
 </link-icon>
 
 <script>
   class LinkIcon extends HTMLElement {
-    connectedCallback() {}
+   
   }
 
   customElements.define('link-icon', LinkIcon);

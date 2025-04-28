@@ -1,12 +1,8 @@
 ---
-import type { ImageMetadata } from 'astro/assets/utils';
-import { Image } from 'astro:assets';
-
 interface Props {
   name: string;
   job?: string;
   msg?: string;
-  imgSrc: ImageMetadata;
 }
 
 const { name, job = 'strategist', msg = 'add msg' } = Astro.props as Props;

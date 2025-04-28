@@ -1,0 +1,27 @@
+---
+interface Props {
+  fill?: string;
+}
+---
+
+<svg
+  width="100%"
+  height="150"
+  viewBox="0 0 600 150"
+  preserveAspectRatio="none"
+  aria-hidden="true"
+  style="position:absolute; top:0; left:0; z-index:-1;"
+>
+  <defs>
+    <linearGradient id="hdrGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4f46e5"></stop>
+      <stop offset="100%" stop-color="#3b82f6"></stop>
+    </linearGradient>
+  </defs>
+  <path
+    d="M0,50 C150,100 450,0 600,50 L600,150 L0,150 Z"
+    fill="url(#hdrGrad)"
+    opacity="0.3"></path>
+  <circle cx="120" cy="80" r="25" fill="#fff" opacity="0.15"></circle>
+  <circle cx="480" cy="60" r="35" fill="#fff" opacity="0.1"></circle>
+</svg>

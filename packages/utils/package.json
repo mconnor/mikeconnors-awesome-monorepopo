@@ -2,16 +2,14 @@
   "name": "@repo/utils",
   "version": "1.0.0",
   "private": true,
+  "type":"module",
   "imports": {
     "#*": "./src/*"
   },
   "exports": {
-    "./cn": "./src/cn.ts"
+    "./cn": "./src/cn.mts"
   },
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "tsup",
-    "dev": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
     "lint": "eslint .",

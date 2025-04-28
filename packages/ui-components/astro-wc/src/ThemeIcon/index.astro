@@ -2,33 +2,39 @@
 import type { ComponentProps } from 'astro/types';
 
 import Icon from '#Icon/index.astro';
-type IconThemeProps = ComponentProps<typeof Icon>;
+type IconProps = ComponentProps<typeof Icon>;
 
 // type IconType = typeof Icon;
 
-interface Props extends IconThemeProps {
+interface Props extends IconProps {
   theme: 'light' | 'dark';
 }
 
-const { theme, ...rest } = Astro.props;
+const {
+  theme,
+  icon,
+  class:
+    className
+} = Astro.props;
 ---
 
-<theme-icon data-theme={theme}>
+<theme-icon data-selecttheme={theme}>
+
   <button type="button" aria-label="Toggle dark mode">
-    <Icon {...rest} /></button
-  >
+    <Icon class={className} icon={icon} />
+  </button>
 </theme-icon>
 
 <script>
   class ThemeIcon extends HTMLElement {
     connectedCallback() {
-      const myTheme = this.dataset.theme ?? 'light';
+      const myTheme = this.dataset.selecttheme ?? 'light';
       const themeIcon = this.querySelector('button') as HTMLButtonElement;
       const docElem = document.firstElementChild;
 
       myTheme &&
         themeIcon.addEventListener('click', () => {
-          const myTheme = this.dataset!.theme;
+          const myTheme = this.dataset!.selecttheme;
           if (docElem && myTheme) {
             docElem!.setAttribute('data-theme', myTheme);
           }

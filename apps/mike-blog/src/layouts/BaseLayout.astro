@@ -3,7 +3,7 @@ import type { RmUnitType } from '@repo/styles/Types';
 
 import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
 import BaseHead from '#components/BaseHead.astro';
-import Prose from '#components/Prose.astro';
+
 interface Props {
   image?: string;
   maxW?: RmUnitType;
@@ -21,7 +21,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
 
-  <body>
+  <body class='bg-primary-100 dark:bg-primary-800'>
     <slot />
   </body>
 </html>

@@ -14,13 +14,13 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 {
   isActive && !rest.subPages ?
-    <div class="relative bg-transparent px-8 py-2 text-stone-900 underline">
-      <div class="font-mono font-semibold sm:text-sm md:text-base lg:text-lg">
+    <div class="relative min-w-20 bg-transparent px-8 py-2 text-stone-900 underline">
+      <div class="font-mono text-xs font-semibold sm:text-sm md:text-base lg:text-lg">
         <slot name="activeTab" />
       </div>
     </div>
-  : <div class="relative bg-linear-to-l from-violet-500 to-fuchsia-500 px-8 py-2 text-stone-100 first:rounded-t-lg last:rounded-b-xl first:sm:rounded-t-none first:sm:rounded-l-2xl last:sm:rounded-l-none last:sm:rounded-r-2xl md:bg-linear-to-t">
-      <div class="font-mono font-semibold sm:text-sm md:text-base lg:text-lg">
+  : <div class="relative min-w-20 bg-linear-to-l from-violet-500 to-fuchsia-500 px-8 py-2 text-stone-100 sm:first:rounded-l-2xl sm:last:rounded-r-2xl">
+      <div class="font-mono text-xs font-semibold sm:text-sm md:text-base lg:text-lg">
         <a href={href} class="">
           <span class="absolute inset-0" />
           <slot name="btnContents" />

@@ -20,16 +20,16 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 ---
 
 <BaseLayout {...rest}>
-  <div class="bg-primary-200 dark:bg-primary-900">
+
     <Cover centeredElement="center-l" space="0">
       <Header transition:persist />
 
-      <Center max={maxW} transition:animate="slide">
+      <Center   max={maxW} transition:animate="slide">
         <!-- <div class="prose prose-sm"><slot /></div> -->
-        <slot />
+       <div class="p-4"><slot /></div>  
       </Center>
 
       <Footer />
     </Cover>
-  </div>
+  
 </BaseLayout>

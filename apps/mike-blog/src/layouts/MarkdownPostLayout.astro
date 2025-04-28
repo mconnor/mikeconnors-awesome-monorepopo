@@ -1,9 +1,7 @@
 ---
 import Layout from '#layouts/Layout.astro';
 
-// import '@repo/styles/css/markdown-style.css';
 import type { CollectionEntry } from 'astro:content';
-import { getEntry } from 'astro:content';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -23,5 +21,5 @@ const { title, description, date, cover, author, tags } = Astro.props;
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
   <!-- <p>Published on: {date.toDateString()}</p> -->
-  <slot />
+  <div class="prose prose-slate dark:prose-invert"><slot /><div></div>
 </Layout>

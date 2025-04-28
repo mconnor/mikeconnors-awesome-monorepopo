@@ -1,5 +1,6 @@
 /* @import 'open-props/style'; */
 @import 'tailwindcss';
+@import '@repo/design-system/styles.css';
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:where(.dark, .dark *));
 /*

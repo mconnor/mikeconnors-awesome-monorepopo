@@ -1,0 +1,14 @@
+---
+interface Props {
+  price?: number;
+  currency?: '$' | '€' | '£';
+  timeUnit?: 'mo' | 'yr';
+}
+
+const { price = '29', currency = '$', timeUnit = 'mo' } = Astro.props as Props;
+---
+
+<div class="flex items-end">
+  <span class="text-3xl font-bold text-gray-900">{currency}{price}</span>
+  <span class="ml-1 text-sm text-gray-600">/{timeUnit}</span>
+</div>

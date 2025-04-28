@@ -1,98 +1,19 @@
 ---
-import Stack from '@repo/layout-webcomponents/Stack';
-import Box from '@repo/layout-webcomponents/Box';
-
 import Layout from '#layouts/Layout.astro';
+import DaisyUICard from '@repo/astro-ui/DaisyUICard';
+
+const copy =
+  'He’d waited in the human system. Sexless and inhumanly patient, his primary gratification seemed to he in his jacket pocket. The two surviving Founders of Zion were old men.';
 ---
 
-<Layout>
-  <Stack recursive space="var(--s00)" splitAfter={4}>
-    <Box>
-      <p class="copy">Lorem ipsum dolor, sit amet consec</p>
-    </Box>
-    <Box>
-      <p class="copy">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam sed
-        non, fugit excepturi nihil illum similique culpa suscipit temporibus
-        quasi accusantium, odio minima provident voluptas dolorum esse error!
-        Expedita, molestiae!
-      </p>
-    </Box>
-    <Box>
-      <p class="copy">
-        ectetur adipisicing elit. Veniam sed non, fugit excepturi nihil illum
-        similique culpa suscipit temporibus quasi accusantium, odio minima
-        provident voluptas dolorum esse error! Expedita, molestiae!
-      </p>
-    </Box>
-    <Box>
-      <Box invert>
-        <p class="copy">ectetur adipisicing elit. Veniam sed non, fugit</p>
-      </Box>
-      <Box invert>
-        <p class="copy">ectetur adipisicing elit. Veniam sed non, fugit</p>
-      </Box>
-      <Box invert>
-        <p class="copy">ectetur adipisicing elit. Veniam sed non, fugit</p>
-      </Box>
-      <Box invert>
-        <p class="copy">ectetur adipisicing elit. Veniam sed non, fugit</p>
-      </Box>
-    </Box>
-    <Box>
-      <p class="copy">Lorem ipsum dolor, sit amet consec</p>
-    </Box>
-    <Box>
-      <p class="copy">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam sed
-        non, fugit excepturi nihil illum similique culpa suscipit temporibus
-        quasi accusantium, odio minima provident voluptas dolorum esse error!
-        Expedita, molestiae!
-      </p>
-    </Box>
+<Layout maxW="100ch" title="DaisyUI Cards" description="DaisyUI Card component">
+  <div class="flex flex-col gap-2 border-2">
+    <DaisyUICard cta="Buy Now" size="xs" title="XSmall Card" copy={copy} />
+    <DaisyUICard cta="Buy Now" size="sm" title="XSmall Card" copy={copy} />
+    <DaisyUICard cta="Buy Now" size="sm" title="Small Card" copy={copy} />
 
-    <Box>
-      <p class="copy">
-        ectetur adipisicing elit. Veniam sed non, fugit excepturi nihil illum
-        similique culpa suscipit temporibus quasi accusantium, odio minima
-        provident voluptas dolorum esse error! Expedita, molestiae!
-      </p>
-    </Box>
-    <Box>
-      <p class="copy">Lorem ipsum dolor, sit amet consec</p>
-    </Box>
-    <Box>
-      <p class="copy">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam sed
-        non, fugit excepturi nihil illum similique culpa suscipit temporibus
-        quasi accusantium, odio minima provident voluptas dolorum esse error!
-        Expedita, molestiae!
-      </p>
-    </Box>
-    <Box>
-      <Box>
-        <Box invert>
-          <p class="copy">ectetur adipisicing elit. Veniam sed non, fugit</p>
-        </Box>
-        <Box invert>
-          <p class="copy">ectetur adipisicing elit. Veniam sed non, fugit</p>
-        </Box>
-        <Box invert>
-          <p class="copy">ectetur adipisicing elit. Veniam sed non, fugit</p>
-        </Box>
-        <Box invert>
-          <p class="copy">ectetur adipisicing elit. Veniam sed non, fugit</p>
-        </Box>
-      </Box>
-      <Box>
-        <p class="copy">Lorem ipsum dolor, sit amet consec</p>
-      </Box>
-    </Box>
-  </Stack>
+    <DaisyUICard cta="Buy Now" size="md" title="Medium Card" copy={copy} />
+    <DaisyUICard cta="Buy Now" size="lg" title="Large Card" copy={copy} />
+    <DaisyUICard cta="Buy Now" size="xl" title="Xlarge Card" copy={copy} />
+  </div>
 </Layout>
-
-<style>
-  p.copy {
-    font-size: var(--font-size-0);
-  }
-</style>

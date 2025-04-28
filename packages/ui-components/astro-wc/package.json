@@ -31,20 +31,24 @@
     "check-types": "tsc --noEmit",
     "@repo/layout-webcomponents": "workspace:^"
   },
+  "dependencies": {
+    "@repo/design-system": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "tailwindcss": "catalog:",
+    "date-fns": "^4.1.0"
+  },
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/cli": "catalog:",
-    "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
     "luxon": "^3.6.1",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
-    "tailwindcss": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:"
   },
@@ -53,8 +57,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "date-fns": "^4.1.0"
-  }
+  "license": "ISC"
 }
