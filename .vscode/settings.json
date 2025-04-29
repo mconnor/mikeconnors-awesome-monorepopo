@@ -1,5 +1,6 @@
 {
   "turbo.transitNodes": ["transit"],
+
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 8,
   "workbench.editor.limit.perEditorGroup": true,
@@ -10,7 +11,7 @@
     "*.css": "tailwindcss"
   },
   "tailwindCSS.includeLanguages": {
-    "plaintext": "html"
+    "astro": "html"
   },
   "tailwindCSS.files.exclude": ["**/node_modules/**", "**/dist/**"],
   "tailwindCSS.classAttributes": [
@@ -22,6 +23,7 @@
   ],
   "tailwindCSS.validate": true,
   "tailwindCSS.showPixelEquivalents": true,
+  "tailwindCSS.colorDecorators": true,
   "tailwindCSS.classFunctions": ["tw", "clsx"],
   "emmet.includeLanguages": {
     "astro": "html",
@@ -31,7 +33,8 @@
     "vue-html": "html",
     "svelte": "html",
     "preact": "html",
-    "lit": "html"
+    "lit": "html",
+    "css": "css"
   },
   "javascript.preferences.importModuleSpecifier": "shortest",
   "typescript.preferences.importModuleSpecifier": "shortest",
@@ -47,18 +50,18 @@
   },
   "[svelte]": {
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
   },
   "[vue]": {
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
   },
   "[css]": {
     "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
   },
   "eslint.validate": [
     "javascript",
@@ -78,7 +81,7 @@
   "cssvar.excludeThemedVariables": true,
   "editor.inlayHints.enabled": "on",
   "cssvar.files": [
-    "./packages/styles/src/css/**/*css",
+    "./packages/design-system/src/css/**/*.css",
     "./packages/styles/node_modules/open-props/open-props.min.css"
     // if you have an alternative path to where your styles are located
     // you can add it in this array of files
@@ -92,8 +95,13 @@
   //     120
   // ],
   "editor.minimap.enabled": false,
+  "editor.colorDecorators": true,
   "editor.stickyScroll.enabled": true,
-  // "editor.linkedEditing": true, // Temporarily disable to check for interference
+  "editor.linkedEditing": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+
   "explorer.compactFolders": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
@@ -106,5 +114,10 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "editor.parameterHints.enabled": false,
-  "editor.columnSelection": false // Ensure column selection mode doesn't persist
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
+  },
+  "python.defaultInterpreterPath": "/Users/mikeconnor/.local/share/mise/installs/python/3.13.3/bin/python",
+  "editor.lineNumbers": "off",
+  "cursor.general.disableHttp2": true
 }

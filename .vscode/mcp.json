@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "Tavily Expert": {
+      "serverUrl": "https://tavily.api.tadata.com/mcp/tavily/alley-mRNA-teen-i7b83k"
+    }
+  }
+}
