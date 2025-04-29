@@ -1,0 +1,12 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@plugin "daisyui" {
+  themes: dracula --default;
+  root: ":root";
+  include: ;
+  exclude: ;
+  prefix: "d-";
+  logs: true;
+}

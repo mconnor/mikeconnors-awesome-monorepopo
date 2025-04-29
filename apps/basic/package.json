@@ -1,14 +1,30 @@
 {
-  "name": "basic",
+  "name": "@app/basic",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "format": "prettier . --write",
+    "lint": "eslint .",
+    "help": "astro -- --help",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "fix": "eslint . --fix",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.7.5"
+    "@astrojs/check": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "astro": "catalog:",
+    "daisyui": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "eslint": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:"
   }
 }
