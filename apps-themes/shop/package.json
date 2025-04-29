@@ -37,12 +37,12 @@
     "@iconify-json/mdi": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/cli": "^4.1.4",
+    "@tailwindcss/cli": "catalog:",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }
 }

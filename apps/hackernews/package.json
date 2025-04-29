@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/node": "^9.2.1",
+    "@astrojs/node": "catalog:",
     "astro": "catalog:"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }
 }

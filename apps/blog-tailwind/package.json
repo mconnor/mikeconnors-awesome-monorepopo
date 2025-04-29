@@ -21,9 +21,9 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/mdx": "^4.2.5",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.3.1",
+    "@astrojs/mdx": "catalog:",
+    "@astrojs/rss": "catalog:",
+    "@astrojs/sitemap": "catalog:",
     "@astrojs/vercel": "catalog:",
     "@repo/astro-wc": "workspace:*",
     "@repo/design-system": "workspace:*",
@@ -31,7 +31,7 @@
     "@std/toml": "jsr:^1.0.5",
     "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
-    "date-fns": "^4.1.0",
+    "date-fns": "catalog:",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
@@ -41,8 +41,8 @@
     "@tailwindcss/typography": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }
 }

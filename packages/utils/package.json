@@ -2,7 +2,7 @@
   "name": "@repo/utils",
   "version": "1.0.0",
   "private": true,
-  "type":"module",
+  "type": "module",
   "imports": {
     "#*": "./src/*"
   },
@@ -18,14 +18,14 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^3.2.0"
+    "clsx": "catalog:",
+    "tailwind-merge": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
-    "tsup": "^8.4.0",
+    "tsup": "catalog:",
     "typescript": "catalog:"
   }
 }

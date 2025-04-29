@@ -9,9 +9,15 @@ catalogs:
     '@astrojs/check':
       specifier: ^0.9.4
       version: 0.9.4
+    '@astrojs/markdoc':
+      specifier: ^0.14.1
+      version: 0.14.1
     '@astrojs/mdx':
       specifier: ^4.2.5
       version: 4.2.5
+    '@astrojs/node':
+      specifier: ^9.2.1
+      version: 9.2.1
     '@astrojs/preact':
       specifier: ^4.0.10
       version: 4.0.10
@@ -21,21 +27,81 @@ catalogs:
     '@astrojs/rss':
       specifier: ^4.0.11
       version: 4.0.11
+    '@astrojs/sitemap':
+      specifier: ^3.3.1
+      version: 3.3.1
+    '@astrojs/solid-js':
+      specifier: ^5.0.9
+      version: 5.0.9
+    '@astrojs/starlight':
+      specifier: ^0.34.1
+      version: 0.34.1
+    '@astrojs/starlight-markdoc':
+      specifier: ^0.4.0
+      version: 0.4.0
     '@astrojs/vercel':
       specifier: ^8.1.4
       version: 8.1.4
     '@astrojs/vue':
       specifier: ^5.0.11
       version: 5.0.11
+    '@custom-elements-manifest/analyzer':
+      specifier: ^0.10.4
+      version: 0.10.4
+    '@eslint/eslintrc':
+      specifier: ^3.3.1
+      version: 3.3.1
+    '@eslint/js':
+      specifier: ^9.25.1
+      version: 9.25.1
+    '@eslint/json':
+      specifier: ^0.12.0
+      version: 0.12.0
+    '@eslint/markdown':
+      specifier: ^6.4.0
+      version: 6.4.0
+    '@headlessui/react':
+      specifier: ^2.2.2
+      version: 2.2.2
+    '@headlessui/vue':
+      specifier: ^1.7.23
+      version: 1.7.23
+    '@heroicons/react':
+      specifier: ^2.2.0
+      version: 2.2.0
+    '@heroicons/vue':
+      specifier: ^2.2.0
+      version: 2.2.0
     '@iconify-json/mdi':
       specifier: ^1.2.3
       version: 1.2.3
+    '@next/eslint-plugin-next':
+      specifier: ^15.3.1
+      version: 15.3.1
     '@open-wc/testing':
       specifier: ^4.0.0
       version: 4.0.0
+    '@playform/compress':
+      specifier: ^0.1.9
+      version: 0.1.9
     '@preact/signals':
       specifier: ^2.0.4
       version: 2.0.4
+    '@sentry/astro':
+      specifier: ^8.55.0
+      version: 8.55.0
+    '@sentry/browser':
+      specifier: ^8.55.0
+      version: 8.55.0
+    '@sentry/cli':
+      specifier: ^2.43.1
+      version: 2.43.1
+    '@sentry/vite-plugin':
+      specifier: ^3.3.1
+      version: 3.3.1
+    '@sveltejs/vite-plugin-svelte':
+      specifier: ^5.0.3
+      version: 5.0.3
     '@tailwindcss/cli':
       specifier: ^4.1.4
       version: 4.1.4
@@ -45,6 +111,9 @@ catalogs:
     '@tailwindcss/vite':
       specifier: ^4.1.4
       version: 4.1.4
+    '@types/canvas-confetti':
+      specifier: ^1.9.0
+      version: 1.9.0
     '@types/node':
       specifier: ^22.15.3
       version: 22.15.3
@@ -54,6 +123,12 @@ catalogs:
     '@types/react-dom':
       specifier: ^19.1.2
       version: 19.1.2
+    '@typescript-eslint/utils':
+      specifier: ^8.31.1
+      version: 8.31.1
+    '@vitejs/plugin-vue':
+      specifier: ^5.2.3
+      version: 5.2.3
     '@webcomponents/template-shadowroot':
       specifier: ^0.2.1
       version: 0.2.1
@@ -63,24 +138,96 @@ catalogs:
     astro:
       specifier: ^5.7.8
       version: 5.7.8
+    astro-embed:
+      specifier: ^0.9.0
+      version: 0.9.0
+    astro-eslint-parser:
+      specifier: ^1.2.2
+      version: 1.2.2
     astro-icon:
       specifier: ^1.1.5
       version: 1.1.5
+    astro-og-canvas:
+      specifier: ^0.7.0
+      version: 0.7.0
     autoprefixer:
       specifier: ^10.4.21
       version: 10.4.21
+    canvas-confetti:
+      specifier: ^1.9.3
+      version: 1.9.3
+    clsx:
+      specifier: ^2.1.1
+      version: 2.1.1
     cssnano:
       specifier: ^7.0.6
       version: 7.0.6
     daisyui:
       specifier: ^5.0.2
       version: 5.0.28
+    date-fns:
+      specifier: ^4.1.0
+      version: 4.1.0
+    dotenv:
+      specifier: ^16.5.0
+      version: 16.5.0
     eslint:
       specifier: ^9.25.1
       version: 9.25.1
+    eslint-config-prettier:
+      specifier: ^10.1.2
+      version: 10.1.2
+    eslint-plugin-astro:
+      specifier: ^1.3.1
+      version: 1.3.1
+    eslint-plugin-barrel-files:
+      specifier: ^3.0.1
+      version: 3.0.1
+    eslint-plugin-lit:
+      specifier: ^2.1.1
+      version: 2.1.1
+    eslint-plugin-only-warn:
+      specifier: ^1.1.0
+      version: 1.1.0
+    eslint-plugin-react:
+      specifier: ^7.37.5
+      version: 7.37.5
+    eslint-plugin-react-hooks:
+      specifier: ^5.2.0
+      version: 5.2.0
+    eslint-plugin-regexp:
+      specifier: ^2.7.0
+      version: 2.7.0
+    eslint-plugin-simple-import-sort:
+      specifier: ^12.1.1
+      version: 12.1.1
+    eslint-plugin-solid:
+      specifier: ^0.14.5
+      version: 0.14.5
+    eslint-plugin-svelte:
+      specifier: ^3.5.1
+      version: 3.5.1
+    eslint-plugin-turbo:
+      specifier: ^2.5.2
+      version: 2.5.2
+    eslint-plugin-vue:
+      specifier: ^10.0.0
+      version: 10.0.0
+    eslint-plugin-wc:
+      specifier: ^3.0.1
+      version: 3.0.1
+    globals:
+      specifier: ^16.0.0
+      version: 16.0.0
     lit:
       specifier: ^3.3.0
       version: 3.3.0
+    lorem-ipsum:
+      specifier: ^2.0.8
+      version: 2.0.8
+    luxon:
+      specifier: ^3.6.1
+      version: 3.6.1
     open-props:
       specifier: ^1.7.15
       version: 1.7.15
@@ -111,30 +258,60 @@ catalogs:
     prettier-plugin-tailwindcss:
       specifier: ^0.6.11
       version: 0.6.11
+    prettier-plugin-vue:
+      specifier: ^1.1.6
+      version: 1.1.6
     react:
       specifier: ^19.0.0
       version: 19.1.0
     react-dom:
       specifier: ^19.1.0
       version: 19.1.0
+    rollup-plugin-visualizer:
+      specifier: ^5.14.0
+      version: 5.14.0
     sharp:
       specifier: ^0.34.1
       version: 0.34.1
+    solid-js:
+      specifier: ^1.9.5
+      version: 1.9.5
+    svelte-eslint-parser:
+      specifier: ^1.1.3
+      version: 1.1.3
+    tailwind-merge:
+      specifier: ^3.2.0
+      version: 3.2.0
     tailwindcss:
       specifier: ^4.1.4
       version: 4.1.4
+    tsup:
+      specifier: ^8.4.0
+      version: 8.4.0
+    turbo:
+      specifier: ^2.5.2
+      version: 2.5.2
     typescript:
       specifier: ^5.8.3
       version: 5.8.3
+    typescript-eslint:
+      specifier: ^8.31.1
+      version: 8.31.1
     vite:
       specifier: ^6.3.3
       version: 6.3.3
     vue:
       specifier: ^3.5.13
       version: 3.5.13
+    vue-eslint-parser:
+      specifier: ^10.1.3
+      version: 10.1.3
     zod:
       specifier: ^3.24.2
       version: 3.24.3
+    zod-validation-error:
+      specifier: ^3.4.0
+      version: 3.4.0
   svelte5:
     '@astrojs/svelte':
       specifier: ^7.0.11
@@ -163,10 +340,10 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.11
+        specifier: 'catalog:'
         version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.28.2))(prettier@3.5.3)
       turbo:
-        specifier: ^2.5.2
+        specifier: 'catalog:'
         version: 2.5.2
 
   apps-themes/glyptodon:
@@ -175,28 +352,28 @@ importers:
         specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/mdx':
-        specifier: ^4.2.5
+        specifier: 'catalog:'
         version: 4.2.5(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       '@astrojs/rss':
-        specifier: ^4.0.11
+        specifier: 'catalog:'
         version: 4.0.11
       '@astrojs/sitemap':
-        specifier: ^3.3.1
+        specifier: 'catalog:'
         version: 3.3.1
       '@playform/compress':
-        specifier: ^0.1.9
+        specifier: 'catalog:'
         version: 0.1.9(@types/node@22.15.3)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.7.1)
       astro:
         specifier: 'catalog:'
         version: 5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
       astro-embed:
-        specifier: ^0.9.0
+        specifier: 'catalog:'
         version: 0.9.0(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       astro-og-canvas:
-        specifier: ^0.7.0
+        specifier: 'catalog:'
         version: 0.7.0(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       date-fns:
-        specifier: ^4.1.0
+        specifier: 'catalog:'
         version: 4.1.0
     devDependencies:
       '@repo/eslint-config':
@@ -215,7 +392,7 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
@@ -249,7 +426,7 @@ importers:
         specifier: workspace:^
         version: link:../../packages/config-typescript
       '@tailwindcss/cli':
-        specifier: ^4.1.4
+        specifier: 'catalog:'
         version: 4.1.4
       '@types/node':
         specifier: 'catalog:'
@@ -258,13 +435,13 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       prettier-plugin-astro:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.11
+        specifier: 'catalog:'
         version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.28.2))(prettier@3.5.3)
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
@@ -319,13 +496,13 @@ importers:
         specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/mdx':
-        specifier: ^4.2.5
+        specifier: 'catalog:'
         version: 4.2.5(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       '@astrojs/rss':
-        specifier: ^4.0.11
+        specifier: 'catalog:'
         version: 4.0.11
       '@astrojs/sitemap':
-        specifier: ^3.3.1
+        specifier: 'catalog:'
         version: 3.3.1
       '@astrojs/vercel':
         specifier: 'catalog:'
@@ -349,7 +526,7 @@ importers:
         specifier: 'catalog:'
         version: 5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
       date-fns:
-        specifier: ^4.1.0
+        specifier: 'catalog:'
         version: 4.1.0
       tailwindcss:
         specifier: 'catalog:'
@@ -374,10 +551,10 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.11
+        specifier: 'catalog:'
         version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.28.2))(prettier@3.5.3)
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
@@ -395,7 +572,7 @@ importers:
         specifier: 'catalog:'
         version: 4.0.11
       '@astrojs/vercel':
-        specifier: ^8.1.4
+        specifier: 'catalog:'
         version: 8.1.4(@sveltejs/kit@2.20.7(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1)))(svelte@5.28.2)(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1)))(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))(next@15.3.0(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(rollup@4.40.1)(svelte@5.28.2)(vue@3.5.13(typescript@5.8.3))
       '@repo/astro-wc':
         specifier: workspace:*
@@ -419,7 +596,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/ui-components/lit
       '@sentry/astro':
-        specifier: ^8.55.0
+        specifier: 'catalog:'
         version: 8.55.0(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       '@webcomponents/template-shadowroot':
         specifier: 'catalog:'
@@ -431,7 +608,7 @@ importers:
         specifier: 'catalog:'
         version: 3.3.0
       open-props:
-        specifier: ^1.7.15
+        specifier: 'catalog:'
         version: 1.7.15
     devDependencies:
       '@types/node':
@@ -465,16 +642,16 @@ importers:
         specifier: 'catalog:'
         version: 1.0.1
       prettier-plugin-astro:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
       vite:
-        specifier: ^6.3.3
+        specifier: 'catalog:'
         version: 6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1)
 
   apps/hackernews:
@@ -483,7 +660,7 @@ importers:
         specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/node':
-        specifier: ^9.2.1
+        specifier: 'catalog:'
         version: 9.2.1(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       astro:
         specifier: 'catalog:'
@@ -505,7 +682,7 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
@@ -520,7 +697,7 @@ importers:
         specifier: 'catalog:'
         version: 4.2.5(@types/node@22.15.3)(@types/react-dom@19.1.2(@types/react@19.1.2))(@types/react@19.1.2)(jiti@2.4.2)(lightningcss@1.29.3)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(terser@5.39.0)(yaml@2.7.1)
       '@astrojs/solid-js':
-        specifier: ^5.0.9
+        specifier: 'catalog:'
         version: 5.0.9(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(solid-js@1.9.5)(terser@5.39.0)(yaml@2.7.1)
       '@astrojs/svelte':
         specifier: catalog:svelte5
@@ -559,7 +736,7 @@ importers:
         specifier: 'catalog:'
         version: 19.1.0(react@19.1.0)
       solid-js:
-        specifier: ^1.9.5
+        specifier: 'catalog:'
         version: 1.9.5
       svelte:
         specifier: catalog:svelte5
@@ -575,7 +752,7 @@ importers:
         specifier: workspace:^
         version: link:../../packages/config-typescript
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^5.0.3
+        specifier: 'catalog:'
         version: 5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))
       eslint:
         specifier: 'catalog:'
@@ -626,16 +803,16 @@ importers:
         specifier: workspace:*
         version: link:../../packages/utils
       '@sentry/astro':
-        specifier: ^8.55.0
+        specifier: 'catalog:'
         version: 8.55.0(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       '@sentry/browser':
-        specifier: ^8.55.0
+        specifier: 'catalog:'
         version: 8.55.0
       '@sentry/cli':
-        specifier: ^2.43.1
+        specifier: 'catalog:'
         version: 2.43.1
       '@sentry/vite-plugin':
-        specifier: ^3.3.1
+        specifier: 'catalog:'
         version: 3.3.1
       '@std/toml':
         specifier: jsr:^1.0.5
@@ -653,13 +830,13 @@ importers:
         specifier: 'catalog:'
         version: 5.0.28
       date-fns:
-        specifier: ^4.1.0
+        specifier: 'catalog:'
         version: 4.1.0
       dotenv:
-        specifier: ^16.5.0
+        specifier: 'catalog:'
         version: 16.5.0
       lorem-ipsum:
-        specifier: ^2.0.8
+        specifier: 'catalog:'
         version: 2.0.8
       open-props:
         specifier: 'catalog:'
@@ -687,22 +864,22 @@ importers:
         specifier: 'catalog:'
         version: 22.15.3
       '@webcomponents/template-shadowroot':
-        specifier: ^0.2.1
+        specifier: 'catalog:'
         version: 0.2.1
       eslint:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       prettier-plugin-astro:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
       zod-validation-error:
-        specifier: ^3.4.0
+        specifier: 'catalog:'
         version: 3.4.0(zod@3.24.3)
 
   apps/multi-app:
@@ -726,10 +903,10 @@ importers:
         specifier: 'catalog:'
         version: 5.0.11(@types/node@22.15.3)(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(vue@3.5.13(typescript@5.8.3))(yaml@2.7.1)
       '@headlessui/react':
-        specifier: ^2.2.2
+        specifier: 'catalog:'
         version: 2.2.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@heroicons/react':
-        specifier: ^2.2.0
+        specifier: 'catalog:'
         version: 2.2.0(react@19.1.0)
       '@preact/signals':
         specifier: 'catalog:'
@@ -771,7 +948,7 @@ importers:
         specifier: 'catalog:'
         version: 19.1.2(@types/react@19.1.2)
       '@vitejs/plugin-vue':
-        specifier: ^5.2.3
+        specifier: 'catalog:'
         version: 5.2.3(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))(vue@3.5.13(typescript@5.8.3))
       add:
         specifier: 'catalog:'
@@ -780,16 +957,16 @@ importers:
         specifier: 'catalog:'
         version: 5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
       open-props:
-        specifier: ^1.7.15
+        specifier: 'catalog:'
         version: 1.7.15
       preact:
         specifier: 'catalog:'
         version: 10.26.5
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       solid-js:
-        specifier: ^1.9.5
+        specifier: 'catalog:'
         version: 1.9.5
       svelte:
         specifier: catalog:svelte5
@@ -814,7 +991,7 @@ importers:
         specifier: workspace:^
         version: link:../../packages/config-typescript
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^5.0.3
+        specifier: 'catalog:'
         version: 5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))
       eslint:
         specifier: 'catalog:'
@@ -829,7 +1006,7 @@ importers:
         specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/vercel':
-        specifier: ^8.1.4
+        specifier: 'catalog:'
         version: 8.1.4(@sveltejs/kit@2.20.7(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1)))(svelte@5.28.2)(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1)))(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))(next@15.3.0(@babel/core@7.26.10)(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(rollup@4.40.1)(svelte@5.28.2)(vue@3.5.13(typescript@5.8.3))
       '@repo/layout-webcomponents':
         specifier: workspace:*
@@ -860,7 +1037,7 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
@@ -869,7 +1046,7 @@ importers:
   apps/portfolio:
     dependencies:
       '@astrojs/check':
-        specifier: ^0.9.4
+        specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@repo/layout-webcomponents':
         specifier: workspace:*
@@ -894,13 +1071,13 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       prettier-plugin-astro:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
-        specifier: ^5.8.3
+        specifier: 'catalog:'
         version: 5.8.3
 
   apps/preact-astro-app:
@@ -937,7 +1114,7 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
@@ -949,13 +1126,13 @@ importers:
         specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/markdoc':
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1(@types/react@19.1.2)(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))(react@19.1.0)
       '@astrojs/starlight':
-        specifier: ^0.34.1
+        specifier: 'catalog:'
         version: 0.34.1(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       '@astrojs/starlight-markdoc':
-        specifier: ^0.4.0
+        specifier: 'catalog:'
         version: 0.4.0(@astrojs/markdoc@0.14.1(@types/react@19.1.2)(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))(react@19.1.0))(@astrojs/starlight@0.34.1(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)))
       '@repo/styles':
         specifier: workspace:*
@@ -983,7 +1160,7 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       typescript:
         specifier: 'catalog:'
@@ -995,7 +1172,7 @@ importers:
         specifier: 'catalog:'
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.5.3)(typescript@5.8.3)
       '@astrojs/mdx':
-        specifier: ^4.2.5
+        specifier: 'catalog:'
         version: 4.2.5(astro@5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1))
       '@repo/astro-ui':
         specifier: workspace:^
@@ -1013,16 +1190,16 @@ importers:
         specifier: 'catalog:'
         version: 4.1.4(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))
       '@types/canvas-confetti':
-        specifier: ^1.9.0
+        specifier: 'catalog:'
         version: 1.9.0
       astro:
         specifier: 'catalog:'
         version: 5.7.8(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
       canvas-confetti:
-        specifier: ^1.9.3
+        specifier: 'catalog:'
         version: 1.9.3
       date-fns:
-        specifier: ^4.1.0
+        specifier: 'catalog:'
         version: 4.1.0
       tailwindcss:
         specifier: 'catalog:'
@@ -1044,13 +1221,13 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       prettier-plugin-astro:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.11
+        specifier: 'catalog:'
         version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.28.2))(prettier@3.5.3)
       rollup-plugin-visualizer:
-        specifier: ^5.14.0
+        specifier: 'catalog:'
         version: 5.14.0(rollup@4.40.1)
       sharp:
         specifier: 'catalog:'
@@ -1062,88 +1239,88 @@ importers:
   packages/config-eslint:
     dependencies:
       '@custom-elements-manifest/analyzer':
-        specifier: ^0.10.4
+        specifier: 'catalog:'
         version: 0.10.4
       '@eslint/eslintrc':
-        specifier: ^3.3.1
+        specifier: 'catalog:'
         version: 3.3.1
       '@eslint/js':
-        specifier: ^9.25.1
+        specifier: 'catalog:'
         version: 9.25.1
       '@eslint/json':
-        specifier: ^0.12.0
+        specifier: 'catalog:'
         version: 0.12.0
       '@eslint/markdown':
-        specifier: ^6.4.0
+        specifier: 'catalog:'
         version: 6.4.0
       '@next/eslint-plugin-next':
-        specifier: ^15.3.1
+        specifier: 'catalog:'
         version: 15.3.1
       '@typescript-eslint/utils':
-        specifier: ^8.31.1
+        specifier: 'catalog:'
         version: 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       astro-eslint-parser:
-        specifier: ^1.2.2
+        specifier: 'catalog:'
         version: 1.2.2
       eslint:
         specifier: '>=9'
         version: 9.25.1(jiti@2.4.2)
       eslint-config-prettier:
-        specifier: ^10.1.2
+        specifier: 'catalog:'
         version: 10.1.2(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-astro:
-        specifier: ^1.3.1
+        specifier: 'catalog:'
         version: 1.3.1(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-barrel-files:
-        specifier: ^3.0.1
+        specifier: 'catalog:'
         version: 3.0.1(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-lit:
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.1(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-only-warn:
-        specifier: ^1.1.0
+        specifier: 'catalog:'
         version: 1.1.0
       eslint-plugin-react:
-        specifier: ^7.37.5
+        specifier: 'catalog:'
         version: 7.37.5(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-react-hooks:
-        specifier: ^5.2.0
+        specifier: 'catalog:'
         version: 5.2.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-regexp:
-        specifier: ^2.7.0
+        specifier: 'catalog:'
         version: 2.7.0(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-simple-import-sort:
-        specifier: ^12.1.1
+        specifier: 'catalog:'
         version: 12.1.1(eslint@9.25.1(jiti@2.4.2))
       eslint-plugin-solid:
-        specifier: ^0.14.5
+        specifier: 'catalog:'
         version: 0.14.5(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       eslint-plugin-svelte:
-        specifier: ^3.5.1
+        specifier: 'catalog:'
         version: 3.5.1(eslint@9.25.1(jiti@2.4.2))(svelte@5.28.2)
       eslint-plugin-turbo:
-        specifier: ^2.5.2
+        specifier: 'catalog:'
         version: 2.5.2(eslint@9.25.1(jiti@2.4.2))(turbo@2.5.2)
       eslint-plugin-vue:
-        specifier: ^10.0.0
+        specifier: 'catalog:'
         version: 10.0.0(eslint@9.25.1(jiti@2.4.2))(vue-eslint-parser@10.1.3(eslint@9.25.1(jiti@2.4.2)))
       eslint-plugin-wc:
-        specifier: ^3.0.1
+        specifier: 'catalog:'
         version: 3.0.1(eslint@9.25.1(jiti@2.4.2))
       globals:
-        specifier: ^16.0.0
+        specifier: 'catalog:'
         version: 16.0.0
       prettier-plugin-astro:
         specifier: 'catalog:'
         version: 0.14.1
       svelte-eslint-parser:
-        specifier: ^1.1.3
+        specifier: 'catalog:'
         version: 1.1.3(svelte@5.28.2)
       typescript-eslint:
-        specifier: ^8.31.1
+        specifier: 'catalog:'
         version: 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       vue-eslint-parser:
-        specifier: ^10.1.3
+        specifier: 'catalog:'
         version: 10.1.3(eslint@9.25.1(jiti@2.4.2))
     devDependencies:
       typescript:
@@ -1187,10 +1364,10 @@ importers:
         specifier: ^3.5.3
         version: 3.5.3
       prettier-plugin-tailwindcss:
-        specifier: ^0.6.11
+        specifier: 'catalog:'
         version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.28.2))(prettier@3.5.3)
       tsup:
-        specifier: ^8.4.0
+        specifier: 'catalog:'
         version: 8.4.0(jiti@2.4.2)(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.1)
       typescript:
         specifier: 'catalog:'
@@ -1214,7 +1391,7 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       tsup:
-        specifier: ^8.4.0
+        specifier: 'catalog:'
         version: 8.4.0(jiti@2.4.2)(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.1)
       typescript:
         specifier: 'catalog:'
@@ -1289,7 +1466,7 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       open-props:
-        specifier: ^1.7.15
+        specifier: 'catalog:'
         version: 1.7.15
       prettier-plugin-astro:
         specifier: 'catalog:'
@@ -1316,7 +1493,7 @@ importers:
         specifier: 'catalog:'
         version: 4.1.4(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))
       lorem-ipsum:
-        specifier: ^2.0.8
+        specifier: 'catalog:'
         version: 2.0.8
       tailwindcss:
         specifier: 'catalog:'
@@ -1368,7 +1545,7 @@ importers:
         specifier: 'catalog:'
         version: 4.1.4(vite@6.3.3(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))
       date-fns:
-        specifier: ^4.1.0
+        specifier: 'catalog:'
         version: 4.1.0
       tailwindcss:
         specifier: 'catalog:'
@@ -1393,7 +1570,7 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       luxon:
-        specifier: ^3.6.1
+        specifier: 'catalog:'
         version: 3.6.1
       prettier-plugin-astro:
         specifier: 'catalog:'
@@ -1463,7 +1640,7 @@ importers:
         specifier: 'catalog:'
         version: 0.14.1
       tsup:
-        specifier: ^8.4.0
+        specifier: 'catalog:'
         version: 8.4.0(jiti@2.4.2)(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.1)
       typescript:
         specifier: 'catalog:'
@@ -1472,16 +1649,16 @@ importers:
   packages/ui-components/react:
     dependencies:
       '@headlessui/react':
-        specifier: ^2.2.2
+        specifier: 'catalog:'
         version: 2.2.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@heroicons/react':
-        specifier: ^2.2.0
+        specifier: 'catalog:'
         version: 2.2.0(react@19.1.0)
       '@repo/utils':
         specifier: workspace:^
         version: link:../../utils
       '@tailwindcss/cli':
-        specifier: ^4.1.4
+        specifier: 'catalog:'
         version: 4.1.4
       '@tailwindcss/vite':
         specifier: 'catalog:'
@@ -1518,13 +1695,13 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       prettier-plugin-astro:
-        specifier: ^0.14.1
+        specifier: 'catalog:'
         version: 0.14.1
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
         version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.28.2))(prettier@3.5.3)
       tsup:
-        specifier: ^8.4.0
+        specifier: 'catalog:'
         version: 8.4.0(jiti@2.4.2)(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.1)
       typescript:
         specifier: 'catalog:'
@@ -1560,10 +1737,10 @@ importers:
   packages/ui-components/vue:
     dependencies:
       '@headlessui/vue':
-        specifier: ^1.7.23
+        specifier: 'catalog:'
         version: 1.7.23(vue@3.5.13(typescript@5.8.3))
       '@heroicons/vue':
-        specifier: ^2.2.0
+        specifier: 'catalog:'
         version: 2.2.0(vue@3.5.13(typescript@5.8.3))
     devDependencies:
       '@repo/eslint-config':
@@ -1576,22 +1753,22 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       prettier-plugin-vue:
-        specifier: ^1.1.6
+        specifier: 'catalog:'
         version: 1.1.6
       tsup:
-        specifier: ^8.4.0
+        specifier: 'catalog:'
         version: 8.4.0(jiti@2.4.2)(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.1)
       vue:
-        specifier: ^3.5.13
+        specifier: 'catalog:'
         version: 3.5.13(typescript@5.8.3)
 
   packages/utils:
     dependencies:
       clsx:
-        specifier: ^2.1.1
+        specifier: 'catalog:'
         version: 2.1.1
       tailwind-merge:
-        specifier: ^3.2.0
+        specifier: 'catalog:'
         version: 3.2.0
     devDependencies:
       '@repo/eslint-config':
@@ -1604,7 +1781,7 @@ importers:
         specifier: 'catalog:'
         version: 9.25.1(jiti@2.4.2)
       tsup:
-        specifier: ^8.4.0
+        specifier: 'catalog:'
         version: 8.4.0(jiti@2.4.2)(postcss@8.5.3)(typescript@5.8.3)(yaml@2.7.1)
       typescript:
         specifier: 'catalog:'
@@ -5185,7 +5362,6 @@ packages:
     resolution: {integrity: sha512-/baBXDqkfW8x0UlqfYAfRCkmVWiH8qFZ4uhT6yLVBLssiypDTbe78W6lNBse7huBFv1ipR5PG9evkxEnIXDxjA==}
     peerDependencies:
       eslint: '>= 5'
-    bundledDependencies: []
 
   eslint-plugin-lit@2.1.1:
     resolution: {integrity: sha512-qmyAOnnTCdS+vDnNxtCoF0icSKIio4GUv6ZLnaCtTX6G/YezRa6Ag6tOQ+MfV5Elvtw9CIXeliRX4mIBSwrPIA==}

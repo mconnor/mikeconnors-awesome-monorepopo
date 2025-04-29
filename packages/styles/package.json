@@ -31,7 +31,7 @@
     "@repo/typescript-config": "workspace:^",
     "astro": "catalog:",
     "eslint": "catalog:",
-    "open-props": "^1.7.15",
+    "open-props": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:",
     "zod": "catalog:"

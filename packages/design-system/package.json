@@ -22,8 +22,8 @@
     "@types/react": "catalog:",
     "eslint": "catalog:",
     "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tsup": "^8.4.0",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "tsup": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:"
   },

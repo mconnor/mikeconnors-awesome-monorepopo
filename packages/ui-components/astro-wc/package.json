@@ -36,7 +36,7 @@
     "@tailwindcss/cli": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "tailwindcss": "catalog:",
-    "date-fns": "^4.1.0"
+    "date-fns": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",
@@ -45,7 +45,7 @@
     "@repo/typescript-config": "workspace:^",
     "astro": "catalog:",
     "eslint": "catalog:",
-    "luxon": "^3.6.1",
+    "luxon": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "typescript": "catalog:",

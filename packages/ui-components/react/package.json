@@ -35,8 +35,8 @@
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
-    "tsup": "^8.4.0",
+    "prettier-plugin-astro": "catalog:",
+    "tsup": "catalog:",
     "typescript": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "@repo/design-system": "workspace:^",
@@ -50,10 +50,10 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "catalog:",
-    "@tailwindcss/cli": "^4.1.4",
+    "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
-    "@headlessui/react": "^2.2.2",
-    "@heroicons/react": "^2.2.0",
+    "@headlessui/react": "catalog:",
+    "@heroicons/react": "catalog:",
     "@repo/utils": "workspace:^"
   }
 }

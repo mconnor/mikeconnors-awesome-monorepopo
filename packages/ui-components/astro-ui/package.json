@@ -36,7 +36,7 @@
     "@tailwindcss/cli": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "tailwindcss": "catalog:",
-    "lorem-ipsum": "^2.0.8"
+    "lorem-ipsum": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",

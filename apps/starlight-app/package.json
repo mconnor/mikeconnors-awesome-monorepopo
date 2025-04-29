@@ -17,9 +17,9 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/markdoc": "^0.14.1",
-    "@astrojs/starlight": "^0.34.1",
-    "@astrojs/starlight-markdoc": "^0.4.0",
+    "@astrojs/markdoc": "catalog:",
+    "@astrojs/starlight": "catalog:",
+    "@astrojs/starlight-markdoc": "catalog:",
     "@repo/styles": "workspace:*",
     "astro": "catalog:",
     "sharp": "catalog:"
@@ -30,7 +30,7 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }
 }

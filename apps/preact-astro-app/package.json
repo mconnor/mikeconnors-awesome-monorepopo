@@ -31,7 +31,7 @@
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }
 }

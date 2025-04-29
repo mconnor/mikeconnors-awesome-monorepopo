@@ -19,7 +19,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
+    "@astrojs/check": "catalog:",
     "@repo/layout-webcomponents": "workspace:*",
     "astro": "catalog:",
     "astro-icon": "catalog:"
@@ -29,8 +29,8 @@
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
-    "rollup-plugin-visualizer": "^5.14.0",
-    "typescript": "^5.8.3"
+    "prettier-plugin-astro": "catalog:",
+    "rollup-plugin-visualizer": "catalog:",
+    "typescript": "catalog:"
   }
 }

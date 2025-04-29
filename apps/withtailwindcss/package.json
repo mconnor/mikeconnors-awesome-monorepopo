@@ -19,16 +19,16 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/mdx": "^4.2.5",
+    "@astrojs/mdx": "catalog:",
     "@repo/astro-ui": "workspace:^",
     "@repo/astro-wc": "workspace:^",
     "@repo/layout-webcomponents": "workspace:^",
     "@repo/design-system": "workspace:*",
     "@tailwindcss/vite": "catalog:",
-    "@types/canvas-confetti": "^1.9.0",
+    "@types/canvas-confetti": "catalog:",
     "astro": "catalog:",
-    "canvas-confetti": "^1.9.3",
-    "date-fns": "^4.1.0",
+    "canvas-confetti": "catalog:",
+    "date-fns": "catalog:",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
@@ -37,9 +37,9 @@
     "@tailwindcss/typography": "catalog:",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "rollup-plugin-visualizer": "^5.14.0",
+    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "rollup-plugin-visualizer": "catalog:",
     "sharp": "catalog:",
     "typescript": "catalog:"
   }

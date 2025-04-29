@@ -21,7 +21,7 @@
   "dependencies": {
     "@astrojs/preact": "catalog:",
     "@astrojs/react": "catalog:",
-    "@astrojs/solid-js": "^5.0.9",
+    "@astrojs/solid-js": "catalog:",
     "@astrojs/svelte": "catalog:svelte5",
     "@astrojs/vue": "catalog:",
     "@repo/preact": "workspace:*",
@@ -34,14 +34,14 @@
     "preact": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "solid-js": "^1.9.5",
+    "solid-js": "catalog:",
     "svelte": "catalog:svelte5",
     "vue": "catalog:"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@sveltejs/vite-plugin-svelte": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:"
