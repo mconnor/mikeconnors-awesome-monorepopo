@@ -12,7 +12,6 @@ export default defineConfig({
   image: {
     domains: ['astro.build', 'picsum.photos', 'https://doodleipsum.com'],
     // Used for all `<Image />` and `<Picture />` components unless overridden
-    experimentalLayout: 'responsive',
   },
   experimental: {
     responsiveImages: true,

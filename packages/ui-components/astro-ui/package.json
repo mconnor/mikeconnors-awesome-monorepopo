@@ -10,7 +10,9 @@
     "./styles.css": "./dist/index.css",
     "./*": "./src/*/index.astro",
     "./DaisyUICard": "./src/DaisyUICard/index.astro",
-    "./SimpleGrid": "./src/SimpleGrid/index.astro"
+    "./SimpleGrid": "./src/SimpleGrid/index.astro",
+    "./Modal": "./src/Modal/index.astro",
+    "./Icon": "./src/Icon/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",
@@ -33,9 +35,8 @@
     "@repo/utils": "workspace:^",
     "@tailwindcss/cli": "catalog:",
     "@tailwindcss/vite": "catalog:",
-    "daisyui": "^5.0.28",
-    "lorem-ipsum": "^2.0.8",
-    "tailwindcss": "catalog:"
+    "tailwindcss": "catalog:",
+    "lorem-ipsum": "^2.0.8"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",
@@ -48,6 +49,7 @@
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "typescript": "catalog:",
+    "daisyui": "catalog:",
     "vite": "catalog:"
   },
   "peerDependencies": {

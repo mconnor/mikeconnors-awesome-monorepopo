@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/vercel": "^8.1.3",
+    "@astrojs/vercel": "^8.1.4",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "astro": "catalog:",

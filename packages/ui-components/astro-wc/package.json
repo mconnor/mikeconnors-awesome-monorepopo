@@ -43,7 +43,6 @@
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/cli": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
     "luxon": "^3.6.1",

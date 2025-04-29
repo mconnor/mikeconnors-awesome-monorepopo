@@ -9,7 +9,7 @@
 
 @layer components {
   .btn {
-    @apply cursor-pointer rounded-full bg-primary-900 px-3 py-1 text-base text-white outline-2 outline-offset-2 outline-blue-500 hover:bg-primary-400; /* 1rem (16px) */
+    @apply bg-primary-900 hover:bg-primary-400 cursor-pointer rounded-full px-3 py-1 text-base text-white outline-2 outline-offset-2 outline-blue-500; /* 1rem (16px) */
     @variant dark {
       @apply bg-primary-300 hover:bg-primary-200;
     }

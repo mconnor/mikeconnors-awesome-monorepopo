@@ -1,16 +1,16 @@
 ---
-import '../global.css';
+import BaseLayout from './BaseLayout.astro'
+import ThemeController from '@repo/astro-ui/ThemeController';
+// import sun from '#assets/sun.svg'
+// import moon from '#assets/sun.svg'
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
-  </head>
-  <body id="my-app">
+<BaseLayout>
+  <header>
+    <ThemeController>
+     <sun slot="sun"/>
+     <moon slot="moon"/>
+   </ThemeController>
+   </header>
     <slot />
-  </body>
-</html>
+  </BaseLayout>

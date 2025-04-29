@@ -30,12 +30,12 @@
     "prettier": "~3.5.3",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "^2.5.0"
+    "turbo": "^2.5.2"
   },
   "engines": {
     "node": ">= 22.9.0"
   },
-  "packageManager": "pnpm@10.8.1",
+  "packageManager": "pnpm@10.10.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",

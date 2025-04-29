@@ -1,6 +1,4 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-
 import { iconPaths } from './IconPaths';
 
 type IconType = keyof typeof iconPaths;
@@ -19,7 +17,6 @@ const iconPath = iconPaths[icon];
 
 // const attrs: HTMLAttributes<'svg'> = {};
 // if (size) attrs.style = { '--size': size };
-
 ---
 
 <svg

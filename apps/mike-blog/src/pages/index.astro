@@ -1,9 +1,7 @@
 ---
-
 import DCard from '#components/DCard/index.astro';
 // import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
-
 
 const features = [
   '24-7 customer support',
@@ -20,5 +18,10 @@ const LEN = features.length;
 ---
 
 <Layout maxW="80ch">
+  <button class="btn btn-primary">One</button>
+  <button class="btn btn-secondary">Two</button>
+  <button class="btn btn-outline btn-accent">Three</button>
+  <button class="btn rounded-full">One</button>
+  <button class="btn rounded-none px-16">Two</button>
   <DCard />
 </Layout>

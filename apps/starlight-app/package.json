@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@astrojs/markdoc": "^0.14.0",
-    "@astrojs/starlight": "^0.34.0",
+    "@astrojs/markdoc": "^0.14.1",
+    "@astrojs/starlight": "^0.34.1",
     "@astrojs/starlight-markdoc": "^0.4.0",
     "@repo/styles": "workspace:*",
     "astro": "catalog:",

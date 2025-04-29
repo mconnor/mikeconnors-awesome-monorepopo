@@ -1,34 +1,35 @@
 {
   "name": "@repo/design-system",
   "version": "1.0.0",
+  "type": "module",
   "imports": {
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./dist/index.css",
-    "./Swatches": "./src/components/swatches/index.astro"
+    "./theme.css": "./src/css/theme.css"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./dist/index.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
+    "build": "npx @tailwindcss/cli -i ./src/css/theme.css -o ./dist/theme.css",
+    "dev": "npx @tailwindcss/cli -i ./src/css/theme.css -o ./dist/theme.css  --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "type-check": "tsc --noEmit",
+    "check-type": "tsc --noEmit",
     "format": "prettier . --write"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:*",
-    "@tailwindcss/vite": "catalog:",
     "@types/react": "catalog:",
     "eslint": "catalog:",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tsup": "^8.4.0",
     "typescript": "catalog:",
-    "vite": "catalog:",
-    "@tailwindcss/cli": "^4.1.4",
-    "tailwindcss": "catalog:"
+    "vite": "catalog:"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@tailwindcss/cli": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "tailwindcss": "catalog:"
+  }
 }

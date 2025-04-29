@@ -7,9 +7,13 @@
     "#*": "./src/*"
   },
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./*": "./src/*/index.tsx",
+    "./DropDown": "./src/DropDown/index.tsx"
   },
   "scripts": {
+    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
+    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
     "test": "jest",
     "format": "prettier . --write",
     "lint": "eslint .",
@@ -29,13 +33,14 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/postcss": "^4.1.4",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "postcss": "catalog:",
     "prettier-plugin-astro": "^0.14.1",
     "tsup": "^8.4.0",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "@repo/design-system": "workspace:^",
+    "vite": "catalog:"
   },
   "peerDependencies": {
     "@types/react": ">=18",
@@ -44,9 +49,11 @@
     "react-dom": ">=18"
   },
   "dependencies": {
+    "@tailwindcss/vite": "catalog:",
+    "@tailwindcss/cli": "^4.1.4",
+    "tailwindcss": "catalog:",
     "@headlessui/react": "^2.2.2",
     "@heroicons/react": "^2.2.0",
-    "@repo/utils": "workspace:^",
-    "@tailwindcss/cli": "^4.1.4"
+    "@repo/utils": "workspace:^"
   }
 }

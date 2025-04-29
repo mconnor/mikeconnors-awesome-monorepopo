@@ -1,23 +1,33 @@
-/*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
- */
-
 @import 'tailwindcss';
-@import '@repo/design-system/theme.css';
-
-/* @import './modular-scale.css'; */
+@import '@repo/design-system/styles.css';
 @plugin '@tailwindcss/typography';
+@custom-variant dark (&:where(.dark, .dark *));
 
-@layer theme;
-
-/* , base, components, utilities;
- @import "tailwindcss/theme.css" layer(theme);
- @import "tailwindcss/preflight.css" layer(base);
- @import "tailwindcss/utilities.css" layer(utilities); */
-
-/* @theme {
-  --color-mint-500: oklch(0.72 0.11 178);
-  --font-script: Great Vibes, cursive;
+/* @font-face {
+  font-family: atkinson;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: 
+    local("atkinson");
+    url('/fonts/atkinson.woff') format('woff');
 } */
+
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Atkinson';
+  src: url('/fonts/atkinson-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  font-family: 'atkinson Vera Serif Bold', serif;
+}

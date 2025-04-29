@@ -25,6 +25,8 @@ export default defineConfig([
       '**/*.svg',
       '**/*-lock.yaml',
       '**/package-lock.json',
+      '**/.vscode/*.json',
+      '**/node_modules/',
     ],
     'Ignore build directory',
   ),

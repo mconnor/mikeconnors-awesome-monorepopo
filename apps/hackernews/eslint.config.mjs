@@ -1,8 +1,7 @@
-import litConfig from '@repo/eslint-config/lit-config';
-import markdownConfig from '@repo/eslint-config/md-config';
 import tsLint from '@repo/eslint-config/ts-lint';
+// import jsonLint from '@repo/eslint-config/jsonLint';
 
 /** @type {import("eslint").Linter.Config} */
-const config = [...tsLint, ...litConfig, ...markdownConfig];
+// const config = [...tsLint, ...jsonLint];
 
-export default config;
+export default tsLint;

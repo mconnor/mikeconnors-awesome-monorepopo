@@ -1,12 +1,11 @@
 @import 'tailwindcss';
-
-@custom-variant dark (&:where(.dark, .dark *));
+@plugin "@tailwindcss/typography";
 
 @plugin "daisyui" {
-  themes: dracula --default;
+  themes: light --default, dark --prefersdark, cupcake;
   root: ":root";
   include: ;
   exclude: ;
-  prefix: "d-";
+  prefix: "";
   logs: true;
 }

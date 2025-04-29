@@ -30,13 +30,14 @@ catalog:
   "@web/test-runner": ^0.19.0
   "@webcomponents/template-shadowroot": ^0.2.1
   "@tailwindcss/vite": ^4.1.4
-  "@types/node": ^22.15.2
-  astro: ^5.7.5
+  "@types/node": ^22.15.3
+  astro: ^5.7.8
   add: ^2.0.6
   astro-icon: ^1.1.5
   autoprefixer: ^10.4.21
   cssnano: ^7.0.6
   dotenv: ^16.4.7
+  daisyui: ^5.0.2
   eslint: ^9.25.1
   jest: ^29.7.0
   lit: ^3.3.0

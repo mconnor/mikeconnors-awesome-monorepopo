@@ -1,11 +1,11 @@
 ---
-// import Hamburger from '/Hamburger.astro';
 import HeaderLink from './MainNav/HeaderLink.astro';
 
 import { navLinks } from '#app.config.ts';
 import { Links } from '#app.config.ts';
-
-import ThemeIcon from '@repo/astro-wc/ThemeIcon';
+import Sun from '#assets/svgs/sun.svg';
+import Moon from '#assets/svgs/moon.svg';
+import ThemeController from '@repo/astro-ui/ThemeController';
 import IconLink from '@repo/astro-wc/IconLink';
 // import HeaderLink from './MainNav/HeaderLink.astro';
 // import Outlink from './Outlink.astro';
@@ -18,23 +18,21 @@ const IconSize = 'var(--s2, 3rem)';
 ---
 
 <div
-  class="flex max-w-full justify-between border-4  px-4 py-5 bg-primary-100 dark:bg-primary-800"
+  class="flex max-w-full justify-between border-4 bg-primary-100 px-4 py-5 dark:bg-primary-800"
 >
   <!-- items-center justify-between -->
   <!-- <div class="flex flex-row flex-nowrap content-center justify-between"> -->
 
-  <div class="gap-2 sm:gap-5 sm:flex sm:flex-row">
-    
-    <ThemeIcon
-    class='fill-gray-900 stroke-gray-900 dark:fill-gray-50 dark:stroke-gray-50 h-10 w-10'
-      theme="light"
-      icon="sun"
-    />
-    <ThemeIcon
-       class='fill-gray-900 stroke-gray-900 dark:fill-gray-50 dark:stroke-gray-50 h-10 w-10'
-      theme="dark"
-      icon="moon-stars"
-    />
+  <div class="gap-2 sm:flex sm:flex-row sm:gap-5">
+    <label class="swap swap-rotate">
+      <!-- this hidden checkbox controls the state -->
+      <input type="checkbox" class="theme-controller" value="dark" />
+
+      <!-- sun icon -->
+      <Sun />
+
+      <Moon />
+    </label>
   </div>
 
   <div class="gap-0 sm:flex sm:flex-row sm:justify-end">
