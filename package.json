@@ -30,6 +30,7 @@
     "prettier": "~3.5.3",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
+    "prettier-plugin-toml": "^2.0.4",
     "turbo": "catalog:"
   },
   "engines": {
@@ -40,6 +41,7 @@
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "@sentry/cli",
+      "core-js",
       "esbuild",
       "sharp",
       "svelte-preprocess"
