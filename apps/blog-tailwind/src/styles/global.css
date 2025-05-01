@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import '@repo/design-system/styles.css';
+@import '@repo/design-system/theme.css';
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -12,7 +12,7 @@
     local("atkinson");
     url('/fonts/atkinson.woff') format('woff');
 } */
-
+/* 
 @font-face {
   font-family: 'Atkinson';
   src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -30,4 +30,4 @@
 
 :root {
   font-family: 'atkinson Vera Serif Bold', serif;
-}
+} */

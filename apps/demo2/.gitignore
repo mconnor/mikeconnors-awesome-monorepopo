@@ -1,8 +1,10 @@
 # build output
 dist/
+
 # generated types
 .astro/
-
+.vercel/
+.turbo
 # dependencies
 node_modules/
 
@@ -11,7 +13,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
 
 # environment variables
 .env
@@ -22,5 +23,3 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-.turbo/
-

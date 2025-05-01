@@ -1,6 +1,4 @@
 {
-  "turbo.transitNodes": ["transit"],
-
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 8,
   "workbench.editor.limit.perEditorGroup": true,
@@ -8,7 +6,7 @@
   "less.validate": false,
   "scss.validate": false,
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss", "*.md": "markdoc"
   },
   "tailwindCSS.includeLanguages": {
     "astro": "html"
@@ -75,19 +73,6 @@
     "toml"
   ],
   "breadcrumbs.filePath": "on",
-  "cssvar.themes": ["dark", "light", "dim", "choco", "toucan", "grape"],
-  "cssvar.enable": true,
-  "cssvar.ignore": [],
-  "cssvar.excludeThemedVariables": true,
-  "editor.inlayHints.enabled": "on",
-  "cssvar.files": [
-    "./packages/design-system/src/css/**/*.css",
-    "./packages/styles/node_modules/open-props/open-props.min.css"
-    // if you have an alternative path to where your styles are located
-    // you can add it in this array of files
-    // "assets/styles/variables.css"
-  ],
-  "cssvar.extensions": ["css", "postcss", "jsx", "tsx", "astro"],
   "editor.renderWhitespace": "boundary",
   // "editor.rulers": [
   //     80,
@@ -101,7 +86,7 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-
+  "editor.suggestOnTriggerCharacters": true,
   "explorer.compactFolders": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
@@ -110,14 +95,9 @@
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "terminal.integrated.scrollback": 10000,
-  "[properties]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
-  },
   "editor.parameterHints.enabled": false,
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
   },
-  "python.defaultInterpreterPath": "/Users/mikeconnor/.local/share/mise/installs/python/3.13.3/bin/python",
-  "editor.lineNumbers": "off",
-  "cursor.general.disableHttp2": true
+  "editor.lineNumbers": "off"
 }
