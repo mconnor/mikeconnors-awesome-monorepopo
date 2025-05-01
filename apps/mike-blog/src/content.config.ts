@@ -48,4 +48,4 @@ const countries = defineCollection({
 //   schema: /* ... */
 // })
 
-export const collections = { blog, authors, announcements, countries };
+export const collections = { blog, authors, announcements };

@@ -1,39 +1,19 @@
 ---
 import HeaderLink from './MainNav/HeaderLink.astro';
 
-import { navLinks } from '#app.config.ts';
-import { Links } from '#app.config.ts';
-import Sun from '#assets/svgs/sun.svg';
-import Moon from '#assets/svgs/moon.svg';
+import { navLinks, OUTBOUND_LINKS } from '#app.config.ts';
+
 import ThemeController from '@repo/astro-ui/ThemeController';
-import IconLink from '@repo/astro-wc/IconLink';
-// import HeaderLink from './MainNav/HeaderLink.astro';
-// import Outlink from './Outlink.astro';
-import MainNav from './MainNav/index.astro';
+import IconLink from '@repo/astro-ui/IconLink';
 
-// import { navLinks } from '#app.config.ts';
-// const { pathname } = Astro.url;
-
-const IconSize = 'var(--s2, 3rem)';
+const CLASSNAME =
+  'h-10 w-10 fill-accent-900 stroke-accent-900 dark:fill-accent-50 dark:stroke-accent-50';
 ---
 
 <div
-  class="flex max-w-full justify-between border-4 bg-primary-100 px-4 py-5 dark:bg-primary-800"
+  class="bg-primary-100 dark:bg-primary-800 flex max-w-full justify-between border-4 px-4 py-5"
 >
-  <!-- items-center justify-between -->
-  <!-- <div class="flex flex-row flex-nowrap content-center justify-between"> -->
-
-  <div class="gap-2 sm:flex sm:flex-row sm:gap-5">
-    <label class="swap swap-rotate">
-      <!-- this hidden checkbox controls the state -->
-      <input type="checkbox" class="theme-controller" value="dark" />
-
-      <!-- sun icon -->
-      <Sun />
-
-      <Moon />
-    </label>
-  </div>
+  <ThemeController />
 
   <div class="gap-0 sm:flex sm:flex-row sm:justify-end">
     {
@@ -47,11 +27,10 @@ const IconSize = 'var(--s2, 3rem)';
   </div>
 
   <div class="gap-2 sm:flex sm:flex-row sm:justify-end sm:gap-5">
-    <IconLink href={Links.github} size={IconSize} icon="github-logo" />
-    <IconLink href={Links.twitter} size={IconSize} icon="twitter-logo" />
-    <IconLink href={Links.linkedin} size={IconSize} icon="linkedin-logo" />
-    <IconLink href={Links.discord} size={IconSize} icon="discord-logo" />
+    {
+      OUTBOUND_LINKS.map(({ url, logo }) => (
+        <IconLink href={url} class={CLASSNAME} icon={logo} />
+      ))
+    }
   </div>
-
-  <!-- </div> -->
 </div>

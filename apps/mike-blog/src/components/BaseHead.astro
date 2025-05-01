@@ -1,7 +1,7 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import Style from '#styles/Style.astro';
+
 import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
@@ -68,7 +68,7 @@ const { title, description, image = 'andy-og.jpeg' } = Astro.props;
     integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
   });
 </script> -->
-<Style />
+
 <!-- <link
   rel="stylesheet"
   href="https://early.webawesome.com/webawesome@3.0.0-alpha.12/dist/styles/webawesome.css"

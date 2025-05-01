@@ -1,7 +1,11 @@
 // .prettierrc.mjs
 /** @type {import("prettier").Config} */
 const config = {
-  plugins: ['prettier-plugin-astro', 'prettier-plugin-tailwindcss'],
+  plugins: [
+    'prettier-plugin-astro',
+    'prettier-plugin-tailwindcss',
+    'prettier-plugin-toml',
+  ],
   tailwindStylesheet: './src/styles/global.css',
   overrides: [
     {

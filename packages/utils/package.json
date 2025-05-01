@@ -3,13 +3,20 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "main": "./dist/cn.js",
+  "module": "./dist/cn.mjs",
+  "types": "./dist/cn.d.ts",
   "imports": {
     "#*": "./src/*"
   },
   "exports": {
-    "./cn": "./src/cn.mts"
+    "./cn": {
+      "types": "./dist/cn.d.ts",
+      "default": "./dist/cn.js"
+    }
   },
   "scripts": {
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
     "lint": "eslint .",

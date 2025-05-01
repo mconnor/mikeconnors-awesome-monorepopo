@@ -3,12 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "imports": {
+    "#*": "./src/*"
+  },
   "exports": {
-    "./IconPaths": "./src/IconPaths.ts"
+    "./paths": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "astro-check": "astro check",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
     "lint": "eslint .",
@@ -25,7 +35,7 @@
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "tsup": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "tsup": "catalog:"
   }
 }

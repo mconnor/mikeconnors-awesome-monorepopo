@@ -2,9 +2,7 @@
 import Center from '@repo/layout-webcomponents/Center';
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/styles/Types';
-// // import NavBar from '@repo/astro-wc/NavBar';
 
-// import Footer from '#components/Footer/index.astro';
 import Header from '#components/Header/index.astro';
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
@@ -20,16 +18,14 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 ---
 
 <BaseLayout {...rest}>
+  <Cover centeredElement="center-l" space="0">
+    <Header transition:persist />
 
-    <Cover centeredElement="center-l" space="0">
-      <Header transition:persist />
+    <Center max={maxW} transition:animate="slide">
+      <!-- <div class="prose prose-sm"><slot /></div> -->
+      <div class="p-4"><slot /></div>
+    </Center>
 
-      <Center   max={maxW} transition:animate="slide">
-        <!-- <div class="prose prose-sm"><slot /></div> -->
-       <div class="p-4"><slot /></div>  
-      </Center>
-
-      <Footer />
-    </Cover>
-  
+    <Footer />
+  </Cover>
 </BaseLayout>

@@ -1,4 +1,7 @@
-import config from '@repo/eslint-config/ts-lint';
+import tsLint from '@repo/eslint-config/ts-lint';
 
 /** @type {import("eslint").Linter.Config} */
-export default config;
+const config = [...tsLint];
+
+export default config
+

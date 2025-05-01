@@ -10,16 +10,10 @@ interface Props extends IconProps {
   theme: 'light' | 'dark';
 }
 
-const {
-  theme,
-  icon,
-  class:
-    className
-} = Astro.props;
+const { theme, icon, class: className } = Astro.props;
 ---
 
 <theme-icon data-selecttheme={theme}>
-
   <button type="button" aria-label="Toggle dark mode">
     <Icon class={className} icon={icon} />
   </button>

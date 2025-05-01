@@ -37,7 +37,6 @@
     "@eslint/json": "catalog:",
     "@eslint/markdown": "catalog:",
     "@next/eslint-plugin-next": "catalog:",
-    "@typescript-eslint/utils": "catalog:",
     "astro-eslint-parser": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-astro": "catalog:",
@@ -58,8 +57,5 @@
     "svelte-eslint-parser": "catalog:",
     "typescript-eslint": "catalog:",
     "vue-eslint-parser": "catalog:"
-  },
-  "devDependencies": {
-    "typescript": "catalog:"
   }
 }

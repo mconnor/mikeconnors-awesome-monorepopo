@@ -21,5 +21,5 @@ const { title, description, date, cover, author, tags } = Astro.props;
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
   <!-- <p>Published on: {date.toDateString()}</p> -->
-  <div class="prose prose-slate dark:prose-invert"><slot /><div></div>
+  <div class="prose prose-slate dark:prose-invert"><slot /><div></div></div>
 </Layout>

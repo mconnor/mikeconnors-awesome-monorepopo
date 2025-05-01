@@ -1,14 +1,9 @@
 @import 'tailwindcss';
-
-@custom-variant dark (&:where(.dark, .dark *));
-@import '@repo/design-system/theme.css';
 @import '@repo/astro-ui/styles.css';
-@import '@repo/astro-wc/styles.css';
-/* @source "@repo/design-system"; */
 @plugin "@tailwindcss/typography";
-@plugin "daisyui";
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
-/* @source inline("{hover:,}bg-red-{50,{100..900..100},950}"); */
-/* @import 'open-props/open-props.min.css'; */
-/* source not "open-props/open-props.min.css" */
+@plugin "daisyui" {
+  themes:
+    light --default,
+    dark --prefersdark,
+    cupcake;
+}

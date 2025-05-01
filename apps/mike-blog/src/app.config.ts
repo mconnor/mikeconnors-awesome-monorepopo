@@ -1,6 +1,7 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
-
+import iconPaths from '@repo/icon-paths/paths';
+type IconType = keyof typeof iconPaths;
 export const SITE_TITLE = 'Astrofy | Personal Portfolio Website Template';
 export const SITE_DESCRIPTION =
   'Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.';
@@ -14,7 +15,36 @@ export const Links = {
   discord: 'https://discord.com/users/mike4989',
 } as const;
 
-export interface NavLinkI {
+interface OutboundLinksType {
+  url: string;
+  logo: IconType;
+}
+
+const GITHUB: OutboundLinksType = {
+  url: 'https://www.github.com/mconnor',
+  logo: 'github-logo',
+};
+const TWITTER: OutboundLinksType = {
+  url: 'https://www.twitter.com/mikeconnor504',
+  logo: 'twitter-logo',
+};
+const LINKEDIN: OutboundLinksType = {
+  url: 'https://www.linkedin.com/in/michaelgconnor/',
+  logo: 'linkedin-logo',
+};
+const DISCORD: OutboundLinksType = {
+  url: 'https://discord.com/users/mike4989',
+  logo: 'discord-logo',
+};
+
+export const OUTBOUND_LINKS: OutboundLinksType[] = [
+  GITHUB,
+  TWITTER,
+  LINKEDIN,
+  DISCORD,
+] as const;
+
+interface NavLinkI {
   label: string;
   href: string;
   icon?: string;
@@ -56,6 +86,6 @@ These rad font-families from Dan Klammer's modern font stacks provide great type
 --font-handwritten: Segoe Print, Bradley Hand, Chilanka, TSCu_Comic, casual, cursive;
 */
 
-export const MAIN_FONT = '--font-geometric-humanist';
+// export const MAIN_FONT = '--font-geometric-humanist';
 
 // see font setting in global.css

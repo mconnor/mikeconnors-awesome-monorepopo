@@ -39,6 +39,7 @@
     "date-fns": "catalog:"
   },
   "devDependencies": {
+    "daisyui": "catalog:",
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:^",
