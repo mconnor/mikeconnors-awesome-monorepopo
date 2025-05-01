@@ -21,10 +21,10 @@
     "@tailwindcss/vite": "catalog:",
     "@repo/astro-ui": "workspace:^",
     "astro": "catalog:",
-    "daisyui": "catalog:",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
+    "daisyui": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/typography": "catalog:",

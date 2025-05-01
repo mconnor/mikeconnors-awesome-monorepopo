@@ -2,10 +2,13 @@
 @plugin "@tailwindcss/typography";
 
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake;
-  root: ":root";
-  include: ;
-  exclude: ;
-  prefix: "";
+  themes:
+    light --default,
+    dark --prefersdark,
+    cupcake;
+  root: ':root';
+  include:;
+  exclude:;
+  prefix: '';
   logs: true;
 }

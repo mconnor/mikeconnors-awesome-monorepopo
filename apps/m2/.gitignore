@@ -2,6 +2,7 @@
 dist/
 # generated types
 .astro/
+.turbo/
 
 # dependencies
 node_modules/
@@ -22,5 +23,5 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-.turbo/
+
 

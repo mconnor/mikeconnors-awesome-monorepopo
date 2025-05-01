@@ -1,5 +1,5 @@
 ---
-import BaseLayout from './BaseLayout.astro'
+import BaseLayout from './BaseLayout.astro';
 import ThemeController from '@repo/astro-ui/ThemeController';
 // import sun from '#assets/sun.svg'
 // import moon from '#assets/sun.svg'
@@ -8,9 +8,9 @@ import ThemeController from '@repo/astro-ui/ThemeController';
 <BaseLayout>
   <header>
     <ThemeController>
-     <sun slot="sun"/>
-     <moon slot="moon"/>
-   </ThemeController>
-   </header>
-    <slot />
-  </BaseLayout>
+      <sun slot="sun"></sun>
+      <moon slot="moon"></moon>
+    </ThemeController>
+  </header>
+  <slot />
+</BaseLayout>
