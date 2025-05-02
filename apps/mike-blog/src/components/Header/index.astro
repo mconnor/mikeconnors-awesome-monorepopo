@@ -2,18 +2,18 @@
 import HeaderLink from './MainNav/HeaderLink.astro';
 
 import { navLinks, OUTBOUND_LINKS } from '#app.config.ts';
-
-import ThemeController from '@repo/astro-ui/ThemeController';
+import ThemeDropdown from '@repo/astro-ui/ThemeDropdown';
+// import ThemeController from '@repo/astro-ui/ThemeController';
 import IconLink from '@repo/astro-ui/IconLink';
 
 const CLASSNAME =
-  'h-10 w-10 fill-accent-900 stroke-accent-900 dark:fill-accent-50 dark:stroke-accent-50';
+  'h-10 w-10 fill-accent-900 stroke-primary-900 dark:fill-primary-50 dark:stroke-primary-50';
 ---
 
 <div
   class="bg-primary-100 dark:bg-primary-800 flex max-w-full justify-between border-4 px-4 py-5"
 >
-  <ThemeController />
+  <ThemeDropdown />
 
   <div class="gap-0 sm:flex sm:flex-row sm:justify-end">
     {

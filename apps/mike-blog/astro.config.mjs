@@ -17,6 +17,7 @@ export default defineConfig({
       'picsum.photos',
       'https://doodleipsum.com',
       'unsplash.com',
+      'img.daisyui.com',
     ],
     // Used for all `<Image />` and `<Picture />` components unless overridden
 

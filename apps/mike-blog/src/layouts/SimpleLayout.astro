@@ -1,5 +1,5 @@
 ---
-import './global.css';
+import '../styles/global.css';
 import BaseHead from '#components/BaseHead.astro';
 
 interface Props {
@@ -24,10 +24,6 @@ const {
   </head>
 
   <body>
-    <div
-      class="prose md:prose-lg lg:prose-xl dark:prose-invert prose-a:text-blue-600 prose-a:hover:text-blue-500"
-    >
-      <slot />
-    </div>
+    <slot />
   </body>
 </html>

@@ -1,13 +1,9 @@
 ---
-// import { Debug } from 'astro:components';
-import { parseISO, format } from 'date-fns';
-import Stack from '@repo/layout-webcomponents/Stack';
-import Card from '@repo/astro-ui/Card';
-import Grid from '@repo/layout-webcomponents/Grid';
+import { Image } from 'astro:assets';
+
 import { getCollection } from 'astro:content';
-import Box from '@repo/layout-webcomponents/Box';
-import BlogCard from '#components/BlogCard/index.astro';
-import Layout from '#layouts/Layout.astro';
+
+import Layout from '#layouts/SimpleLayout.astro';
 
 export const prerender = true;
 
@@ -23,33 +19,42 @@ const sortedPosts = publishsedPosts.sort(
 );
 ---
 
-<Layout title={pageTitle} maxW="100%">
-  <Box>
-    <div>
-      <Grid>
-        {
-          sortedPosts.map(({ id, data }) => (
-            // <BlogCard
-            //   backgroundColor="var(--surface-4)"
-            //   foregroundColor="var(--text-2)"
-            //   id={id}
-            //   postData={data}
-            // />
-            <Card href={`./posts/${id}`} tags={data.tags} date={data.date}>
+<Layout title={pageTitle}>
+  <div class="max-w-9/10 px-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        sortedPosts.map(({ id, data }) => (
+          <div class="card bg-base-100 shadow-sm card-xs md:card-md">
+            <figure>
               <img
-                class="aspect-4/3 object-cover"
-                slot="card-img"
                 src={data.cover.src}
                 alt={data.cover.alt}
-                width={400}
-                height={300}
+                width="400"
+                height="300"
               />
-              <span slot="headline">{data.title}</span>
-              <span slot="description">{data.description}</span>
-            </Card>
-          ))
-        }
-      </Grid>
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">{data.title}</h2>
+              <p>{data.description}</p>
+              <div class="card-actions justify-end">
+                <a  href={`/posts/${id}`} class="btn btn-primary">Read</a>
+              </div>
+              <div class="card-actions justify-end">
+                {data.tags.map((tag) => (
+                  <div class="badge-outline badge">{tag}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
     </div>
-  </Box>
+  </div>
 </Layout>
+
+<style>
+  img {
+    margin-block: 2.5rem;
+    border-radius: 0.75rem;
+  }
+</style>

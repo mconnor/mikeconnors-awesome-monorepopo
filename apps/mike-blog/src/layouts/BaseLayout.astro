@@ -17,18 +17,17 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 // const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 ---
 
-<html lang="en" data-theme="auto">
+<html lang="en" data-theme="auto" data-theme="cupcake">
   <head>
     <BaseHead title={title} description={description} />
   </head>
 
-  <body class="bg-primary-100 dark:bg-primary-800">
+  <body>
     <slot />
   </body>
 </html>
 
-<!-- <script>
-
+<script>
   document.addEventListener('astro:page-load', () => {
     console.log('astro:page-load');
     const storedTheme = localStorage.getItem('theme');
@@ -41,7 +40,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
     }
   });
 </script>
-<style is:global>
+<!-- <style is:global>
   .mode {
     position: absolute;
     top: 0;

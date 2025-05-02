@@ -1,6 +1,6 @@
 ---
 import Layout from '#layouts/Layout.astro';
-
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 
 type Props = CollectionEntry<'blog'>['data'];
@@ -21,5 +21,6 @@ const { title, description, date, cover, author, tags } = Astro.props;
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
   <!-- <p>Published on: {date.toDateString()}</p> -->
-  <div class="prose prose-slate dark:prose-invert"><slot /><div></div></div>
+   {cover && <Image width={1020} height={510} src={cover.src} alt={cover.alt} />}
+  <div class="prose prose-slate dark:prose-invert"><slot /><div>
 </Layout>

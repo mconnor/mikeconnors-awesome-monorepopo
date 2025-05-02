@@ -38,7 +38,7 @@ const blogSchema = z.object({
   relatedPosts: z.array(reference('blog')).optional(),
   draft: z.boolean().optional().default(false),
   tags: z.array(z.string()).default([]),
-  cover: z.object({ src: z.string().url(), alt: z.string() }),
+  cover: z.object({ src: z.string().url(), alt: z.string() }).optional(),
 });
 
 // from Zod website

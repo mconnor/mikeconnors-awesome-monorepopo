@@ -1,0 +1,88 @@
+---
+// import { Debug } from 'astro:components';
+import { parseISO, format } from 'date-fns';
+import Stack from '@repo/layout-webcomponents/Stack';
+import Frame from '@repo/layout-webcomponents/Frame';
+import { Image } from 'astro:assets';
+
+import Card from '@repo/astro-ui/Card';
+import Grid from '@repo/layout-webcomponents/Grid';
+import { getCollection } from 'astro:content';
+import Box from '@repo/layout-webcomponents/Box';
+import BlogCard from '#components/BlogCard/index.astro';
+import Layout from '#layouts/SimpleLayout.astro';
+
+export const prerender = true;
+
+const pageTitle = 'Blog';
+
+const publishsedPosts = await getCollection(
+  'blog',
+  ({ data }) => data.draft !== true,
+);
+
+const sortedPosts = publishsedPosts.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<Layout title={pageTitle}>
+  <div class="max-w-9/10 px-4">
+    <!-- <Grid min="204px" space="2rem">
+        {
+          sortedPosts.map(({ id, data }) => (
+            <Box borderWidth="1px">
+              <Stack splitAfter={4}>
+                <h4 class="line-clamp-1 font-bold">{data.title}</h4>
+          
+                <Frame ratio='1:1'>
+                  <Image
+                    src={data.cover.src}
+                    alt={data.cover.alt}
+                    width="200"
+                    height="200"
+                  />
+                </Frame>
+
+                <p class="line-clamp-3">{data.description}</p>
+                <p>{format(data.date, 'MMMM dd, yyyy')}</p>
+                <div>
+                  <a href={`/posts/${id}`}>Read more</a>
+                </div>
+                {/* <BlogCard post={data} /> */}
+              </Stack>
+            </Box>
+          ))
+        }
+      </Grid> -->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        sortedPosts.map(({ id, data }) => (
+          <div class="border-1">
+            <h4 class="line-clamp-1 font-bold">{data.title}</h4>
+            <Frame ratio="4:3">
+              <Image
+                src={data.cover.src}
+                alt={data.cover.alt}
+                width="400"
+                height="300"
+              />
+            </Frame>
+            <p class="line-clamp-3">{data.description}</p>
+            <p>{format(data.date, 'MMMM dd, yyyy')}</p>
+            <div>
+              <a href={`/posts/${id}`}>Read more</a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+<style>
+  img {
+    margin-block: 2.5rem;
+    border-radius: 0.75rem;
+  }
+</style>

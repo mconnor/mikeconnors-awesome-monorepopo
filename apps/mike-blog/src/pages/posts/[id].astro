@@ -1,12 +1,10 @@
 ---
-// import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
 
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import MarkdownPostLayout from '#layouts/MarkdownPostLayout.astro';
 
 export const prerender = true;
 
-// type Props = CollectionEntry<'blog'>['data'];
 
 export async function getStaticPaths() {
   // const posts = await getCollection('blog', ({ data }) => data.draft !== true);
