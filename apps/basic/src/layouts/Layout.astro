@@ -1,16 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-import ThemeController from '@repo/astro-ui/ThemeController';
+
+import Header from "#components/Header.astro";
 // import sun from '#assets/sun.svg'
 // import moon from '#assets/sun.svg'
 ---
 
 <BaseLayout>
-  <header>
-    <ThemeController>
-      <sun slot="sun"></sun>
-      <moon slot="moon"></moon>
-    </ThemeController>
-  </header>
+  <Header />
+
   <slot />
 </BaseLayout>

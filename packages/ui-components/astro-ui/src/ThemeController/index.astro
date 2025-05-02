@@ -1,21 +1,24 @@
 ---
 // import type { ComponentProps } from 'astro/types';
-
-import Icon from '#Icon/index.astro';
+import Sun from './sun.svg';
+import Moon from './moon.svg';
+// import Icon from '#Icon/index.astro';
 // type IconProps = ComponentProps<typeof Icon>;
+
+
 ---
+
+
+
 
 <label class="swap swap-rotate">
   <!-- this hidden checkbox controls the state -->
   <input type="checkbox" class="theme-controller" value="synthwave" />
-  <!-- <slot name="sun" />
-  <slot name="moon" /> -->
-  <Icon
-    class="h-10 w-10 fill-gray-900 stroke-gray-900 dark:fill-gray-50 dark:stroke-gray-50"
-    icon="sun"
-  />
-  <Icon
-    class="h-10 w-10 fill-gray-900 stroke-gray-900 dark:fill-gray-50 dark:stroke-gray-50"
-    icon="moon-stars"
-  />
+
+  <!-- sun icon -->
+<!-- <Sun /> -->
+
+<Sun />
+
+<Moon />
 </label>
