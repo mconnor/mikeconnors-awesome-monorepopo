@@ -376,6 +376,9 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
         version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.28.2))(prettier@3.5.3)
+      theme-change:
+        specifier: ^2.5.0
+        version: 2.5.0
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -1363,12 +1366,18 @@ importers:
       '@repo/icon-paths':
         specifier: workspace:^
         version: link:../../icon-paths
+      '@tailwindcss/vite':
+        specifier: 'catalog:'
+        version: 4.1.5(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))
       lorem-ipsum:
         specifier: 'catalog:'
         version: 2.0.8
       tailwind:
         specifier: '>=4'
         version: 4.0.0
+      tailwindcss:
+        specifier: 'catalog:'
+        version: 4.1.5
     devDependencies:
       '@astrojs/check':
         specifier: 'catalog:'
@@ -1385,9 +1394,6 @@ importers:
       '@tailwindcss/cli':
         specifier: 'catalog:'
         version: 4.1.5
-      '@tailwindcss/vite':
-        specifier: 'catalog:'
-        version: 4.1.5(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(terser@5.39.0)(yaml@2.7.1))
       astro:
         specifier: 'catalog:'
         version: 5.7.10(@types/node@22.15.3)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.7.1)
@@ -1403,9 +1409,6 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
         version: 0.6.11(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.3.3(prettier@3.5.3)(svelte@5.28.2))(prettier@3.5.3)
-      tailwindcss:
-        specifier: 'catalog:'
-        version: 4.1.5
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -8425,6 +8428,9 @@ packages:
     resolution: {integrity: sha512-LBAhFyLho16harJoWMg/nZsQYgTrg5jXOn2nCYjRUcZZEdE3qa2zb8QEDRUGVZBW4rlazf2fxkg8tztybTaqWw==}
     engines: {node: '>=10'}
     hasBin: true
+
+  theme-change@2.5.0:
+    resolution: {integrity: sha512-B/UdsgdHAGhSKHTAQnxg/etN0RaMDpehuJmZIjLMDVJ6DGIliRHGD6pODi1CXLQAN9GV0GSyB3G6yCuK05PkPQ==}
 
   thenify-all@1.6.0:
     resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
@@ -17379,6 +17385,8 @@ snapshots:
       commander: 2.20.3
       source-map-support: 0.5.21
     optional: true
+
+  theme-change@2.5.0: {}
 
   thenify-all@1.6.0:
     dependencies:

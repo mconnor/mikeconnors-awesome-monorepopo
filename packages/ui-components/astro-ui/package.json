@@ -32,7 +32,9 @@
   "license": "ISC",
   "dependencies": {
     "@repo/icon-paths": "workspace:^",
-    "lorem-ipsum": "catalog:"
+    "lorem-ipsum": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",
@@ -46,8 +48,6 @@
     "typescript": "catalog:",
     "daisyui": "catalog:",
     "@tailwindcss/cli": "catalog:",
-    "@tailwindcss/vite": "catalog:",
-    "tailwindcss": "catalog:",
     "vite": "catalog:"
   },
   "peerDependencies": {

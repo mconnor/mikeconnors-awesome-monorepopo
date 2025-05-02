@@ -23,7 +23,7 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 
     <Center max={maxW} transition:animate="slide">
       <!-- <div class="prose prose-sm"><slot /></div> -->
-      <div><slot /></div>
+      <div class="py-4"><slot /></div>
     </Center>
 
     <Footer />

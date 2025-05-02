@@ -2,10 +2,7 @@
 @import '@repo/astro-ui/styles.css';
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {
-  themes:
-    light --default,
-    dark --prefersdark,
-    cupcake;
+  themes: all;
 }
 
 @theme {

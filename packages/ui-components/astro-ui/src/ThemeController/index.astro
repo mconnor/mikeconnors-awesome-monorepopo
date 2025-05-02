@@ -4,21 +4,21 @@ import Sun from './sun.svg';
 import Moon from './moon.svg';
 // import Icon from '#Icon/index.astro';
 // type IconProps = ComponentProps<typeof Icon>;
+interface Props {
+  theme?: string;
+}
 
-
+const { theme = 'cupcake' } = Astro.props;
 ---
-
-
-
 
 <label class="swap swap-rotate">
   <!-- this hidden checkbox controls the state -->
-  <input type="checkbox" class="theme-controller" value="synthwave" />
+  <input type="checkbox" class="theme-controller" value={theme} />
 
   <!-- sun icon -->
-<!-- <Sun /> -->
+  <!-- <Sun /> -->
 
-<Sun />
+  <Sun />
 
-<Moon />
+  <Moon />
 </label>

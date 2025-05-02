@@ -10,6 +10,7 @@ export default {
       },
     },
   ],
+  tailwindStylesheet: './src/styles.css',
   singleQuote: true,
   experimentalTernaries: true,
 };

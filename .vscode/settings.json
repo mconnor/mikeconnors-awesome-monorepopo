@@ -6,7 +6,7 @@
   "less.validate": false,
   "scss.validate": false,
   "files.associations": {
-    "*.css": "tailwindcss", "*.md": "markdoc"
+    "*.css": "tailwindcss"
   },
   "tailwindCSS.includeLanguages": {
     "astro": "html"
@@ -24,7 +24,6 @@
   "tailwindCSS.colorDecorators": true,
   "tailwindCSS.classFunctions": ["tw", "clsx"],
   "emmet.includeLanguages": {
-    "astro": "html",
     "postcss": "css",
     "javascript": "javascriptreact",
     "typescript": "typescriptreact",
@@ -45,6 +44,11 @@
     "**/coverage/**": true,
     "./pnpm-lock.yaml": true,
     "**/.svelte-kit/**": true
+  },
+  "[astro]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
   },
   "[svelte]": {
     "editor.formatOnSave": true,
@@ -74,11 +78,6 @@
   ],
   "breadcrumbs.filePath": "on",
   "editor.renderWhitespace": "boundary",
-  // "editor.rulers": [
-  //     80,
-  //     100,
-  //     120
-  // ],
   "editor.minimap.enabled": false,
   "editor.colorDecorators": true,
   "editor.stickyScroll.enabled": true,
@@ -89,7 +88,7 @@
   "editor.suggestOnTriggerCharacters": true,
   "explorer.compactFolders": false,
   "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.expand": true,
   "workbench.tree.indent": 12,
   "workbench.tree.renderIndentGuides": "always",
   "files.autoSave": "afterDelay",
@@ -99,5 +98,6 @@
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
   },
-  "editor.lineNumbers": "off"
+  "editor.lineNumbers": "off",
+  "explorer.incrementalNaming": "simple"
 }

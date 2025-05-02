@@ -1,6 +1,7 @@
 grid-l {
   display: grid;
-  gap: var(--s1);
+  gap: var(--s1, 2rem);
   align-content: start;
+  align-items: stretch;
   grid-template-columns: 100%;
 }
