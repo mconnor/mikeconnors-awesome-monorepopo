@@ -1,6 +1,6 @@
 ---
-// import DevModeStyle from '@repo/styles/DevModeStyle.astro';
-import DevModeStyle from '@repo/styles/GlobalStyle';
+
+import Style from '@repo/styles/GlobalStyle';
 import { ClientRouter } from 'astro:transitions';
 
 interface Props {
@@ -85,4 +85,4 @@ const { title = 'title', description = 'description', image } = Astro.props;
 
 <ClientRouter />
 <!-- {isDev && <DevModeStyle />} -->
-<DevModeStyle />
+<Style />
