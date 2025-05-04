@@ -1,5 +1,5 @@
 ---
-import { cn } from '@repo/utils/cn';
+// import { cn } from '@repo/utils/cn';
 interface Props {
   cta?: string;
   title?: string;
@@ -17,7 +17,7 @@ const {
 const cardSize = 'card-' + size;
 ---
 
-<div class={cn('card w-96 bg-base-100  shadow-sm', cardSize)}>
+<div class:list={['card w-96 bg-base-100  shadow-sm', cardSize]}>
   <div class="card-body">
     <h2 class="card-title">{title}</h2>
     <p>
