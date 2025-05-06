@@ -6,11 +6,11 @@
     "#*": "./*"
   },
   "exports": {
+    "./tailwind-lint": "./tw.lint.config.mjs",
     "./turbo-config": "./turbo.lint.config.mjs",
     "./next-lint": "./next.mjs",
     "./ignores": "./ignores.config.mjs",
     "./vue-config": "./vue.lint.config.mjs",
-    "./jsonLint": "./json.lint.config.mjs",
     "./md-config": "./md.lint.config.mjs",
     "./react-internal": "./react-internal.mjs",
     "./ts-lint": "./ts.lint.config.mjs",
@@ -56,6 +56,8 @@
     "prettier-plugin-astro": "catalog:",
     "svelte-eslint-parser": "catalog:",
     "typescript-eslint": "catalog:",
-    "vue-eslint-parser": "catalog:"
-  }
+    "vue-eslint-parser": "catalog:",
+    "@eslint/css": "^0.7.0"
+  },
+  "devDependencies": {}
 }
