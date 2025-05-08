@@ -1,7 +1,7 @@
 ---
 // import Stack from '@repo/layout-webcomponents/Stack';
-import { Counter as PreactCounter } from '@repo/preact';
-import { Counter as ReactCounter } from '@repo/react';
+import PreactCounter from '@repo/preact/Counter';
+import  ReactCounter  from '@repo/react/Counter';
 import Colors from '@repo/react/Colors';
 
 // import { SolidCounter as SolidC } from '@repo/solid/counter';
@@ -28,18 +28,18 @@ import Switcher from '@repo/layout-webcomponents/Switcher';
 </style>
 
 <Layout centerWidth="80ch">
-  <Colors />
+  <!-- <Colors /> -->
   <div class="tw-card">hello</div>
   <Box borderWidth="4px" borderStyle="double">
     <Switcher>
       <Box>
-        <ReactCounter client:only="react" klass="counter">
+        <ReactCounter client:only="react" class="grid grid-col-3">
           <h1>Hello from React!</h1>
         </ReactCounter>
       </Box>
 
       <Box>
-        <PreactCounter client:visible klass="counter">
+        <PreactCounter client:visible class="grid grid-col-3">
           <h1>Hello from Preact!</h1>
         </PreactCounter></Box
       >

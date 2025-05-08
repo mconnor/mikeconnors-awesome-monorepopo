@@ -6,15 +6,8 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./theme.css": "./dist/theme.css"
-  },
-  "scripts": {
-    "clean": "rm -rf dist",
-    "build": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./dist/theme.css",
-    "dev": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./dist/theme.css  --watch",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "check-type": "tsc --noEmit",
-    "format": "prettier . --write"
+    "./styles.css": "./src/css/styles.css",
+    "./postcss": "./postcss.config.js"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
@@ -29,6 +22,8 @@
   "dependencies": {
     "@tailwindcss/cli": "catalog:",
     "@tailwindcss/vite": "catalog:",
-    "tailwindcss": "catalog:"
+    "tailwindcss": "catalog:",
+    "@tailwindcss/postcss": "catalog:",
+    "@tailwindcss/typography": "catalog:"
   }
 }

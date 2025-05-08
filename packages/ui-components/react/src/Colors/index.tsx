@@ -1,5 +1,4 @@
 import { cn } from '@repo/utils/cn';
-// import { type JSX, useState } from 'react';
 
 const colorsPrimary = [
   {
@@ -95,10 +94,10 @@ const colorsSecondary = [
   },
 ];
 
-export default function Colors({ secondary }: { secondary?: boolean }) {
+function Colors({ secondary }: { secondary?: boolean }) {
   const colorValues = secondary ? colorsSecondary : colorsPrimary;
   return (
-    <div>
+    <>
       <p>Colors.tsx from @repo/ui</p>
       {colorValues.map((color) => {
         return (
@@ -110,6 +109,8 @@ export default function Colors({ secondary }: { secondary?: boolean }) {
           </div>
         );
       })}
-    </div>
+    </>
   );
 }
+
+export default Colors;

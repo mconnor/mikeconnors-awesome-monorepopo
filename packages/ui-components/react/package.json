@@ -7,19 +7,23 @@
     "#*": "./src/*"
   },
   "exports": {
-    ".": "./src/index.ts",
-    "./*": "./src/*/index.tsx",
-    "./DropDown": "./src/DropDown/index.tsx"
+    "./styles.css": "./dist/index.css",
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.js"
+    }
   },
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
+    "build:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
+    "build:components": "tsup",
+    "dev:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css --watch",
+    "dev:components": "tsup --watch",
+    "check-types": "tsc --noEmit",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "lint": "eslint src --max-warnings 0",
     "test": "jest",
     "format": "prettier . --write",
-    "lint": "eslint .",
     "fix": "eslint . --fix",
-    "inspect": "eslint --inspect-config",
-    "check-types": "tsc --noEmit",
     "clean": "rm -rf dist"
   },
   "jest": {
@@ -31,16 +35,15 @@
   "author": "Michael Connor",
   "license": "ISC",
   "devDependencies": {
+    "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "tsup": "catalog:",
-    "typescript": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
-    "@repo/design-system": "workspace:^",
-    "vite": "catalog:"
+    "tsup": "catalog:",
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "@types/react": ">=18",
@@ -49,11 +52,10 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@tailwindcss/vite": "catalog:",
-    "@tailwindcss/cli": "catalog:",
-    "tailwindcss": "catalog:",
     "@headlessui/react": "catalog:",
     "@heroicons/react": "catalog:",
-    "@repo/utils": "workspace:^"
+    "@repo/utils": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
+    "tailwindcss": "catalog:"
   }
 }

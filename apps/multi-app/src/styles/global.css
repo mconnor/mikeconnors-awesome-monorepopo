@@ -1,18 +1,6 @@
 @import 'tailwindcss';
-
-@theme {
-  /* theme variables defined in the --font-* namespace determine
-   all of the font-family utilities that exist in a project: */
-
-  /* --font-display: var(--font-transitional);
-  --font-script: var(--font-handwritten);
-  --font-poppins: Poppins, sans-serif; */
-
-  --color-mint-500: oklch(0.72 0.11 178);
-  --color-surface-600: var(--purple-08);
-
-  /* --tab-size-github: 8; */
-}
+@import '@repo/design-system/styles.css';
+@import '@repo/react/styles.css';
 
 @utility tw-card {
   display: block;
@@ -32,23 +20,3 @@
   padding: 0.5rem 1rem;
   background-color: ButtonFace;
 }
-
-/* --gray-{0-12}
---stone-{0-12}
---red-{0-12}
---pink-{0-12}
---purple-{0-12}
---violet-{0-12}
---indigo-{0-12}
---blue-{0-12}
---cyan-{0-12}
---teal-{0-12}
---green-{0-12}
---lime-{0-12}
---yellow-{0-12}
---orange-{0-12}
---choco-{0-12}
---brown-{0-12}
---sand-{0-12}
---camo-{0-12}
---jungle-{0-12} */

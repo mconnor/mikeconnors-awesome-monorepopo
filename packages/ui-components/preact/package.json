@@ -7,14 +7,17 @@
     "#*": "./src/*"
   },
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.mjs"
+    "./styles.css": "./dist/index.css",
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.js"
     }
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
+    "build:components": "tsup",
+    "dev:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css --watch",
+    "dev:components": "tsup --watch",
     "lint": "echo skip: no linting specified",
     "fix": "echo skip: no fixing specified",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -26,12 +29,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@repo/design-system": "workspace:^",
     "@preact/signals": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "tsup": "catalog:",
+        "@tailwindcss/cli": "catalog:",
+    "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
   "eslintConfig": {
