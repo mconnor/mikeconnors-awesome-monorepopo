@@ -4,6 +4,7 @@ import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/styles/Types';
 
 import Header from '#components/Header/index.astro';
+// import Header from '#components/DaisyHeader/index.astro';
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
 
@@ -23,9 +24,9 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 
     <Center max={maxW} transition:animate="slide">
       <!-- <div class="prose prose-sm"><slot /></div> -->
-      <div class="py-4"><slot /></div>
+      <slot />
     </Center>
 
-    <Footer />
+    <!-- <Footer /> -->
   </Cover>
 </BaseLayout>

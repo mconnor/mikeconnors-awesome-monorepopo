@@ -1,3 +1,4 @@
 @import 'tailwindcss';
-/* @import '@repo/design-system/theme.css'; */
-@plugin "daisyui";
+@import "@repo/design-system/styles.css";
+
+/* @config "../tailwind.config.js"; */

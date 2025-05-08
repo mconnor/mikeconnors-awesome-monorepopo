@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 
+import Cluster from '@repo/layout-webcomponents/Cluster';
+import Switcher from '@repo/layout-webcomponents/Switcher';
 import { getCollection } from 'astro:content';
 
 import Layout from '#layouts/SimpleLayout.astro';
@@ -17,43 +19,40 @@ const publishsedPosts = await getCollection(
 const sortedPosts = publishsedPosts.sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
-
-
 ---
 
 <Layout title={pageTitle}>
-  <div class="max-w-9/10 py-4">
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        sortedPosts.map(({ id, data }) => {
-          const { title, description, date, cover, author, tags } = data;
-          return  (
-          <div class="card bg-base-100 shadow-sm card-xs md:card-md">
-            <figure>
-              {cover?.src && cover?.alt && <img class="aspect-3/2 object-cover"
-                src={cover.src}
-                alt={cover.alt}
+  <Cluster>
+    {
+      sortedPosts.map(({ id, data }) => {
+        const { title, description, date, cover, author, tags } = data;
+        return (
+        <div class="bg-base-100 shadow-sm card-md">
+            <Switcher>
+              
+              <figure class="border-2 bg-green-400 p-0">
+                {cover?.src && cover?.alt && (
+                  <img class="" src={cover.src} alt={cover.alt} />
+                )}
+              </figure>
+              <div class="">
+                <h2 class="text-2xl">{title}</h2>
+                <p>{description}</p>
 
-              />}
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">{title}</h2>
-              <p>{description}</p>
-              <div class="card-actions justify-end">
-                <a  href={`/posts/${id}`} class="btn btn-primary">Read</a>
+                <div class="justify-end border-1">
+                  {tags.map((tag) => (
+                    <div class="badge-outline badge">{tag}</div>
+                  ))}
+                </div>
               </div>
-              <div class="card-actions justify-end">
-                {tags.map((tag) => (
-                  <div class="badge-outline badge">{tag}</div>
-                ))}
-              </div>
-            </div>
+            
+            </Switcher>
           </div>
-        )
-        })
-      }
-    </div>
-  </div>
+        
+        );
+      })
+    }
+  </Cluster>
 </Layout>
 
 <style>

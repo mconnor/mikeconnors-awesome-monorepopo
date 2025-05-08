@@ -14,7 +14,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 {
   isActive && !rest.subPages ?
-    <div class="relative min-w-20 bg-transparent px-8 py-2 text-stone-900 underline">
+    <div class="relative min-w-20 bg-transparent px-8 py-2 underline">
       <div class="font-mono text-xs font-semibold sm:text-sm md:text-base lg:text-lg">
         <slot name="activeTab" />
       </div>
@@ -29,7 +29,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
     </div>
 }
 
-<!-- 
+<!--
 /* @utility tab-bg {
   @apply bg-linear-to-l from-violet-500 to-fuchsia-500 md:bg-linear-to-t;
 }

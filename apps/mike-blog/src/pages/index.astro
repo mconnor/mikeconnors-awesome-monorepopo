@@ -1,8 +1,8 @@
 ---
-import DCard from '#components/DCard/index.astro';
+import DaisySideCard from '#components/DaisySideCard/index.astro';
 // import AndyMud from '#assets/andy_mud_color.webp';
 import Layout from '#layouts/Layout.astro';
-
+// import DPrice from '#components/DaisyPriceCard.astro';
 const features = [
   '24-7 customer support',
   'Unlimited access to all features',
@@ -17,11 +17,31 @@ const features = [
 const LEN = features.length;
 ---
 
-<Layout maxW="80ch">
-  <button class="btn btn-primary">One</button>
-  <button class="btn btn-secondary">Two</button>
-  <button class="btn btn-outline btn-accent">Three</button>
-  <button class="btn rounded-full">One</button>
-  <button class="btn rounded-none px-16">Two</button>
-  <DCard />
+<Layout maxW="80%">
+  <div class="flex flex-row gap-4">
+
+    <DaisySideCard />
+    <DaisySideCard />
+   <!-- <DPrice />
+   <DPrice />
+   <DPrice />
+   <DPrice />
+   <DPrice />
+   <DPrice /> -->
+
+</div>
+  <!-- <div class="card card-side bg-base-100 shadow-sm">
+    <figure>
+      <img
+        src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+        alt="Movie" />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">New movie is released!</h2>
+      <p>Click the button to watch on Jetflix app.</p>
+      <div class="card-actions justify-end">
+        <button class="btn btn-primary">Watch</button>
+      </div>
+    </div>
+  </div> -->
 </Layout>

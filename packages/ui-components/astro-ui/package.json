@@ -8,7 +8,9 @@
   },
   "exports": {
     "./styles.css": "./dist/index.css",
+    "./index.css": "./dist/index.css",
     "./*": "./src/*/index.astro",
+    "./Card": "./src/Card/index.astro",
     "./DaisyUICard": "./src/DaisyUICard/index.astro",
     "./SimpleGrid": "./src/SimpleGrid/index.astro",
     "./Modal": "./src/Modal/index.astro",
@@ -40,6 +42,7 @@
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:^",
+    "@repo/design-system": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "astro": "catalog:",
     "eslint": "catalog:",

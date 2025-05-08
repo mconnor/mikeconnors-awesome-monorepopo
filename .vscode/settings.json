@@ -19,6 +19,9 @@
     "tw",
     "twx"
   ],
+  "tailwindCSS.lint.invalidApply": "error",
+  "tailwindCSS.lint.invalidScreen": "warning",
+  "tailwindCSS.lint.cssConflict": "warning",
   "tailwindCSS.validate": true,
   "tailwindCSS.showPixelEquivalents": true,
   "tailwindCSS.colorDecorators": true,

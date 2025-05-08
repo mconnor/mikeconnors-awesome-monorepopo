@@ -6,12 +6,12 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./theme.css": "./src/css/theme.css"
+    "./theme.css": "./dist/theme.css"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npx @tailwindcss/cli -i ./src/css/theme.css -o ./dist/theme.css",
-    "dev": "npx @tailwindcss/cli -i ./src/css/theme.css -o ./dist/theme.css  --watch",
+    "build": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./dist/theme.css",
+    "dev": "npx @tailwindcss/cli -i ./src/css/styles.css -o ./dist/theme.css  --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "check-type": "tsc --noEmit",
     "format": "prettier . --write"
@@ -19,7 +19,6 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:*",
-    "@types/react": "catalog:",
     "eslint": "catalog:",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "catalog:",

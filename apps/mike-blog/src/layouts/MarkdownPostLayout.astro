@@ -21,12 +21,18 @@ const { title, description, date, cover, author, tags } = Astro.props;
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
   <!-- <p>Published on: {date.toDateString()}</p> -->
-        <figure>
-              {cover?.src && cover?.alt && <img class="aspect-16/9 object-cover w-full rounded-lg shadow-2xl"
-                src={cover.src}
-                alt={cover.alt}
-
-              />}
-            </figure>
-  <div class="prose prose-slate dark:prose-invert"><slot /><div>
-</Layout>
+  <figure>
+    {
+      cover?.src && cover?.alt && (
+        <img
+          class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
+          src={cover.src}
+          alt={cover.alt}
+        />
+      )
+    }
+  </figure>
+  <div class="prose prose-slate dark:prose-invert">
+    <slot /><div></div>
+  </div></Layout
+>
