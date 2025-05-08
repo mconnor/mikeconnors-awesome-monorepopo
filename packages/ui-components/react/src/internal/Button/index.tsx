@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 function Button({
-  color= 'blue',
+  color = 'blue',
   children,
   onClick = () => console.log('click'),
 }: ButtonProps) {

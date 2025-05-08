@@ -7,10 +7,10 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./dist/index.css",
+    "./*.css": "./dist/*.css",
     "./*": {
       "types": "./dist/*/index.d.ts",
-      "import": "./dist/*/index.js"
+      "import": "./dist/*/index.mjs"
     }
   },
   "scripts": {
@@ -36,7 +36,7 @@
     "@types/node": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "tsup": "catalog:",
-        "@tailwindcss/cli": "catalog:",
+    "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },

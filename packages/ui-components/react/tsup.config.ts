@@ -1,8 +1,7 @@
 import { defineConfig } from 'tsup';
 
-
 export default defineConfig({
-  entry: ["src/*/index.tsx"],
+  entry: ['src/*/index.tsx'],
   format: ['esm'],
   external: ['react'],
   dts: true,
@@ -13,4 +12,9 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   minify: false,
+  outExtension() {
+    return {
+      js: `.mjs`,
+    };
+  },
 });

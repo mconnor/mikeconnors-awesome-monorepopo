@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 @import '@repo/design-system/styles.css';
-@import '@repo/react/styles.css';
-
+@import '@repo/react/index.css';
+@import '@repo/preact/index.css';
 @utility tw-card {
   display: block;
   padding: var(--s1);
   border-width: var(--border-thin, 1px);
 
-  background-color: var(--color-surface-600) !important;
+  background-color: var(--color-red-600) !important;
   color: var(--text-2) !important;
 
   outline: 0.125rem solid transparent;
@@ -15,8 +15,3 @@
   box-shadow: var(--shadow-xl);
 }
 
-@utility btn {
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: ButtonFace;
-}

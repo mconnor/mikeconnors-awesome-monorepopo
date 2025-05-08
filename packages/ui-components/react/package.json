@@ -7,10 +7,10 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./dist/index.css",
+    "./*.css": "./dist/*.css",
     "./*": {
       "types": "./dist/*/index.d.ts",
-      "import": "./dist/*/index.js"
+      "import": "./dist/*/index.mjs"
     }
   },
   "scripts": {
@@ -43,7 +43,11 @@
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "tsup": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",    "@headlessui/react": "catalog:",
+    "@heroicons/react": "catalog:",
+    "@repo/utils": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "peerDependencies": {
     "@types/react": ">=18",
@@ -52,10 +56,6 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@headlessui/react": "catalog:",
-    "@heroicons/react": "catalog:",
-    "@repo/utils": "workspace:^",
-    "@tailwindcss/cli": "catalog:",
-    "tailwindcss": "catalog:"
+
   }
 }

@@ -1,9 +1,8 @@
 .DS_Store
-node_modules
-.turbo
+.turbo/
 *.log
-dist
-dist-ssr
+dist/
+dist-ssr/
 *.local
 .env
 .cache
