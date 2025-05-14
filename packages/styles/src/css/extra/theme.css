@@ -4,14 +4,14 @@
 @import './theme.dark.css';
 @import './theme.dark.switch.css'; */
 
-@import url('./theme.grape.css');
-@import url('./theme.grape.switch.css');
-@import url('./theme.dim.css');
-@import url('./theme.dim.switch.css');
-@import url('./theme.choco.css');
-@import url('./theme.choco.switch.css');
-@import url('./theme.toucan.css');
-@import url('./theme.toucan.switch.css');
+@import './theme.grape.css';
+@import './theme.grape.switch.css';
+@import './theme.dim.css';
+@import './theme.dim.switch.css';
+@import './theme.choco.css';
+@import './theme.choco.switch.css';
+@import './theme.toucan.css';
+@import './theme.toucan.switch.css';
 
 /* init color scheme */
 :where(html) {

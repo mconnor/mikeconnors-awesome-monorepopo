@@ -3,7 +3,7 @@ import Stack from '@repo/layout-webcomponents/Stack';
 import AstroForm from '@repo/astro-wc/AstroForm';
 
 import Layout from '#layouts/Layout.astro';
-import Box from '@repo/ui-lit/Box';
+import Box from '@repo/layout-webcomponents/Box';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,7 +11,9 @@ import Box from '@repo/ui-lit/Box';
     <AstroForm />
 
     <Box>
-      <div style={{ maxWidth: '30px' }}><button>click me</button></div>
+      <div style="max-width: 30px;">
+        <button>click me</button>
+      </div>
 
       <Box>
         <h4>Learn how Astro works and explore the official API docs.</h4>

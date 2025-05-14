@@ -1,6 +1,5 @@
 ---
-
-import Style from '@repo/styles/GlobalStyle';
+// import DevModeStyle from '@repo/styles/DevModeStyle'
 import { ClientRouter } from 'astro:transitions';
 
 interface Props {
@@ -18,7 +17,7 @@ const { title = 'title', description = 'description', image } = Astro.props;
 
 // const isDev = process.env.NODE_ENV === 'development';
 ---
-
+<!-- <DevModeStyle /> -->
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -85,4 +84,4 @@ const { title = 'title', description = 'description', image } = Astro.props;
 
 <ClientRouter />
 <!-- {isDev && <DevModeStyle />} -->
-<Style />
+

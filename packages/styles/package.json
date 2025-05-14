@@ -7,11 +7,10 @@
     "#*": "./src/*"
   },
   "exports": {
+   "./DevModeStyle": "./src/DevModeStyle.astro",
+    "./styles.css": "./src/styles.css",
     "./Types": "./src/Types.ts",
-    "./schemas": "./src/Schemas.ts",
-    "./css/*": "./src/css/*",
-    "./GlobalStyle": "./src/GlobalStyle.astro",
-    "./DevModeStyle": "./src/DevModeStyle.astro"
+    "./schemas": "./src/Schemas.ts"
   },
   "scripts": {
     "astro-check": "astro check",
@@ -29,9 +28,16 @@
     "@astrojs/check": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "open-props": "catalog:",
+    "cssnano": "catalog:",
+    "postcss-custom-media": "catalog:",
+    "postcss-html": "catalog:",
+    "postcss-import": "catalog:",
+    "postcss-jit-props": "catalog:",
+    "postcss-nesting": "catalog:",
+    "postcss-pow": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
-    "open-props": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:",
     "zod": "catalog:"

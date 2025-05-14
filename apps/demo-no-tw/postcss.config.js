@@ -1,8 +1,13 @@
+// import config from '@repo/styles/postcss';
+// // const config = isDev || isTest ? devConfig : prodConfig;
+
+// export default config;
+
 import nano from 'cssnano';
-import OpenProps from 'open-props';
+// import OpenProps from 'open-props';
 import postcssCustomMedia from 'postcss-custom-media';
 
-import postcssJitProps from 'postcss-jit-props';
+// import postcssJitProps from 'postcss-jit-props';
 import postcssNesting from 'postcss-nesting';
 import postcssPow from 'postcss-pow';
 // import MyStyles from '@repo/styles';
@@ -17,7 +22,7 @@ import postcssPow from 'postcss-pow';
 
 const prodConfig = {
   plugins: [
-    postcssJitProps(OpenProps),
+    // postcssJitProps(OpenProps),
     postcssNesting,
     postcssPow,
     postcssCustomMedia,

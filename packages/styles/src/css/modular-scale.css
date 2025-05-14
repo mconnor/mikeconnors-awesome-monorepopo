@@ -2,6 +2,15 @@
   --font-size-base: 1rem;
   --ratio: 1.618;
   --s0: var(--font-size-base);
+
+  /* --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio)); */
+
+
   --s000: calc(var(--s0) * pow(var(--ratio), -3));
   --s00: calc(var(--s0) * pow(var(--ratio), -2));
   --s1: calc(var(--s0) * pow(var(--ratio), 1));
