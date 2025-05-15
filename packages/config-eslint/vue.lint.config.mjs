@@ -8,11 +8,9 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx', 'vue'];
+import extensionInstanceObj  from './fileExtensions.mjs';
+const extraFileExtensions = extensionInstanceObj.getExtensions();
 
-// import extraFileExtensionsSinglton from './fileExtensions.mjs';
-
-// const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
 
 export default tseslint.config(
   ignoresConfig,

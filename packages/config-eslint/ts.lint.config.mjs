@@ -12,7 +12,9 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 
-const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx'];
+// The default extensions are ['.js', '.mjs', '.cjs', '.jsx', '.ts', '.mts', '.cts', '.tsx']. 
+import extensionInstanceObj  from './fileExtensions.mjs';
+const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 export default tseslint.config(
   ignoresConfig,

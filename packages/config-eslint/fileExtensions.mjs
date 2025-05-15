@@ -2,7 +2,7 @@
 
 class ExtraFileExtensions {
   constructor() {
-    this.extensions = new Set(['.svelte', '.astro', '.md', '.mdx']); // Default extensions
+    this.extensions = new Set(['.vue','.svelte', '.astro', '.md', '.mdx']); // Default extensions
   }
 
   /**
@@ -30,5 +30,5 @@ class ExtraFileExtensions {
 }
 
 // Create a single shared instance
-const extensionInstance = new ExtraFileExtensions();
-export { extensionInstanceObj };
+const extensionInstanceObj = new ExtraFileExtensions();
+export  default extensionInstanceObj;

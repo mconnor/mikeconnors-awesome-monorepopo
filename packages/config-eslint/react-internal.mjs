@@ -5,10 +5,9 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 
 import { config as baseConfig } from './nextBase.mjs';
 
-// import extraFileExtensionsSinglton from './fileExtensions.mjs';
+import extensionInstanceObj  from './fileExtensions.mjs';
+const extraFileExtensions = extensionInstanceObj.getExtensions();
 
-// const extraFileExtensions = extraFileExtensionsSinglton.getExtensions();
-const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx', 'vue'];
 /**
  * A custom ESLint configuration for libraries that use React.
  * Use this and only this script to lint react packages

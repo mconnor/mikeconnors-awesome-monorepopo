@@ -57,7 +57,7 @@
     "svelte-eslint-parser": "catalog:",
     "typescript-eslint": "catalog:",
     "vue-eslint-parser": "catalog:",
-    "@eslint/css": "^0.7.0"
+    "@eslint/css": "^0.8.0"
   },
   "devDependencies": {}
 }

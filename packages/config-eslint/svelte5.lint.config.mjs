@@ -1,13 +1,14 @@
 // @ts-check
-import prettier from 'eslint-config-prettier';
-import js from '@eslint/js';
+// import prettier from 'eslint-config-prettier';
+// import js from '@eslint/js';
 import * as svelteParser from 'svelte-eslint-parser';
 import svelte from 'eslint-plugin-svelte';
-import globals from 'globals';
-
+// import globals from 'globals';
+// import ignoresConfig from './ignores.config.mjs';
 import tseslint from 'typescript-eslint';
-import ignoresConfig from './ignores.config.mjs';
-const extraFileExtensions = ['.svelte', '.astro', '.md', '.mdx'];
+
+import extensionInstanceObj  from './fileExtensions.mjs';
+const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 export default tseslint.config({
   extends: [
