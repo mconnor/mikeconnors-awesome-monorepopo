@@ -30,17 +30,18 @@
     "prettier": "~3.5.3",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
-    "prettier-plugin-toml": "^2.0.4",
+    "prettier-plugin-toml": "^2.0.5",
     "turbo": "catalog:"
   },
   "engines": {
     "node": ">= 22.9.0"
   },
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.11.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
       "@sentry/cli",
+      "@tailwindcss/oxide",
       "core-js",
       "esbuild",
       "sharp",
