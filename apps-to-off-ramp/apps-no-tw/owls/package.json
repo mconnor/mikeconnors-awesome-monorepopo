@@ -2,6 +2,10 @@
   "name": "@app/owls",
   "type": "module",
   "version": "0.0.1",
+  "keywords": [
+    "webawesome",
+    "no-tw"
+  ],
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
