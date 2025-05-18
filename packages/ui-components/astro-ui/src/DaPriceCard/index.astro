@@ -1,0 +1,40 @@
+---
+import type { ACTION_ERROR_CODES } from 'astro:actions';
+import Feature from './Feature.astro';
+interface FeatureI {
+  copy: string;
+  has: boolean;
+}
+interface Props {
+  price: string;
+  level?: 'Basic' | 'Premium' | 'Pro';
+  badgeBool?: boolean;
+  features: FeatureI[];
+}
+
+const { price, level = 'basic', badgeBool, features } = Astro.props;
+---
+
+<div class="card bg-base-100 w-96 shadow-sm">
+  <div class="card-body">
+    {
+      badgeBool && (
+        <span class="badge badge-xs badge-warning">Most Popular</span>
+      )
+    }
+    <div class="flex justify-between">
+      <h2 class="text-3xl font-bold">{level}</h2>
+      <span class="text-xl">{price}</span>
+    </div>
+    <ul class="mt-6 flex flex-col gap-2 text-xs">
+      {
+        features.map(({ copy, has }) =>
+          has ? <Feature copy={copy} checked={has} /> : <Feature copy={copy} />,
+        )
+      }
+    </ul>
+    <div class="mt-6">
+      <button class="btn btn-primary btn-block">Subscribe</button>
+    </div>
+  </div>
+</div>

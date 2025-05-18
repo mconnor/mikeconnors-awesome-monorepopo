@@ -9,12 +9,7 @@
   "exports": {
     "./styles.css": "./dist/index.css",
     "./index.css": "./dist/index.css",
-    "./*": "./src/*/index.astro",
-    "./Card": "./src/Card/index.astro",
-    "./DaisyUICard": "./src/DaisyUICard/index.astro",
-    "./SimpleGrid": "./src/SimpleGrid/index.astro",
-    "./Modal": "./src/Modal/index.astro",
-    "./Icon": "./src/Icon/index.astro"
+    "./*": "./src/*/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",
@@ -26,8 +21,7 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
-    "check-types": "tsc --noEmit",
-    "@repo/layout-webcomponents": "workspace:^"
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",

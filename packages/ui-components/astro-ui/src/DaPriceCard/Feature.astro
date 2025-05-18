@@ -1,0 +1,21 @@
+---
+import Check from './Check.astro';
+interface FeatureI {
+  copy: string;
+  checked: boolean;
+}
+
+const { copy, checked = false } = Astro.props as FeatureI;
+---
+
+{
+  checked ?
+    <li class="flex items-center gap-2">
+      <Check checked />
+      <span>{copy}</span>
+    </li>
+  : <li class="flex items-center gap-2 opacity-50">
+      <Check />
+      <span>{copy}</span>
+    </li>
+}
