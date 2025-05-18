@@ -12,7 +12,7 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 
-// The default extensions are ['.js', '.mjs', '.cjs', '.jsx', '.ts', '.mts', '.cts', '.tsx']. 
+
 import extensionInstanceObj  from './fileExtensions.mjs';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 

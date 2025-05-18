@@ -25,10 +25,11 @@ const reactConfig = defineConfig([
       },
       parserOptions: {
         projectService: true,
-        extraFileExtensions,
+      
         ecmaFeatures: {
           jsx: true,
         },
+        extraFileExtensions,
       },
     },
   },

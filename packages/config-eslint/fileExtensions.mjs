@@ -1,5 +1,5 @@
 // @repo/eslint/extensions.js
-
+// The default extensions are ['.js', '.mjs', '.cjs', '.jsx', '.ts', '.mts', '.cts', '.tsx']. 
 class ExtraFileExtensions {
   constructor() {
     this.extensions = new Set(['.vue','.svelte', '.astro', '.md', '.mdx']); // Default extensions
