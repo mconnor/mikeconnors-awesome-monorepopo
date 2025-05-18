@@ -6,7 +6,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./src/css/styles.css",
+    "./shared-styles.css": "./src/css/shared-styles.css",
     "./postcss": "./postcss.config.js"
   },
   "devDependencies": {
@@ -21,9 +21,10 @@
   },
   "dependencies": {
     "@tailwindcss/cli": "catalog:",
-    "@tailwindcss/vite": "catalog:",
-    "tailwindcss": "catalog:",
     "@tailwindcss/postcss": "catalog:",
-    "@tailwindcss/typography": "catalog:"
+    "@tailwindcss/typography": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "open-props": "catalog:",
+    "tailwindcss": "catalog:"
   }
 }

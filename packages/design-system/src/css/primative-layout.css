@@ -1,0 +1,25 @@
+@theme {
+    --ratio: 1.618;
+    --font-size-base: 1rem;
+    --s0: var(--font-size-base);
+    /* --s000: calc(var(--s0) * pow(var(--ratio), -3));
+    --s00: calc(var(--s0) * pow(var(--ratio), -2)); */
+    --s1: calc(var(--s0) * pow(var(--ratio), 1));
+    /* --s2: calc(var(--s0) * pow(var(--ratio), 2));
+  
+    --s3: calc(var(--s0) * pow(var(--ratio), 3));
+    --s4: calc(var(--s0) * pow(var(--ratio), 4));
+    --s5: calc(var(--s0) * pow(var(--ratio), 5));
+    --s6: calc(var(--s0) * pow(var(--ratio), 6));
+    --s7: calc(var(--s0) * pow(var(--ratio), 7));
+    --s8: calc(var(--s0) * pow(var(--ratio), 8)); */
+
+
+    --measure: 60ch;
+    --border-thin: 1px;
+    /* used in Reel */
+    --color-light: var(--color-primary-100);
+    --color-dark: var(--color-primary-900);
+
+    
+}

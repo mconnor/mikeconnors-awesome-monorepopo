@@ -1,2 +1,2 @@
-@import 'tailwindcss';
-@import '@repo/design-system/styles.css';
+@import "tailwindcss";
+@import '@repo/design-system/shared-styles.css';
