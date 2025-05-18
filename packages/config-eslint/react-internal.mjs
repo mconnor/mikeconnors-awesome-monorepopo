@@ -5,7 +5,7 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 
 import { config as baseConfig } from './nextBase.mjs';
 
-import extensionInstanceObj  from './fileExtensions.mjs';
+import extensionInstanceObj from './fileExtensions.mjs';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 /**
@@ -25,7 +25,7 @@ const reactConfig = defineConfig([
       },
       parserOptions: {
         projectService: true,
-      
+
         ecmaFeatures: {
           jsx: true,
         },

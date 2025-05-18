@@ -7,7 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
-   "./DevModeStyle": "./src/DevModeStyle.astro",
+    "./DevModeStyle": "./src/DevModeStyle.astro",
     "./styles.css": "./src/styles.css",
     "./Types": "./src/Types.ts",
     "./schemas": "./src/Schemas.ts"

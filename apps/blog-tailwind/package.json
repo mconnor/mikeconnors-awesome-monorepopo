@@ -36,7 +36,6 @@
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
-  
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/typography": "catalog:",
     "eslint": "catalog:",

@@ -5,20 +5,21 @@ import type { BorderStyle, RmUnitType } from '@repo/styles/Types';
 
 interface Props {
   padding?: RmUnitType;
-  borderWidth?: RmUnitType;
-  highlight?: boolean;
-  borderStyle?: BorderStyle;
+  borderWidth?: string; // stick with px, rem, em.
+  // highlight?: boolean;
+  // borderStyle?: BorderStyle;
   invert?: boolean;
   children?: unknown;
 }
 const props = Astro.props;
 ---
 
-<script>
-  import './Box';
-</script>
+
 <div>
-  <box-l {...props} class="bg-blue-500 text-white p-4">
+  <box-l {...props}>
     <slot />
   </box-l>
 </div>
+
+
+<script src="./Box.js"></script>

@@ -101,6 +101,6 @@
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
   },
-  "editor.lineNumbers": "off",
+  "editor.lineNumbers": "on",
   "explorer.incrementalNaming": "simple"
 }

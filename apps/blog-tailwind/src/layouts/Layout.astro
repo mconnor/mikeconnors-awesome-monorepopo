@@ -22,11 +22,10 @@ const { title } = Astro.props;
   <Cover centeredElement="center-l" space="0">
     <Header transition:persist />
 
-    <Center  transition:animate="slide">
+    <Center transition:animate="slide">
       <!-- <div class="prose md:prose-lg lg:prose-xl prose-blue scheme-light"> -->
       <slot />
       <!-- </div> -->
     </Center>
   </Cover>
 </BaseLayout>
-

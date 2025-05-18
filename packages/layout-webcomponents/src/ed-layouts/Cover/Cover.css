@@ -2,5 +2,5 @@ cover-l {
   display: flex;
   flex-direction: column;
   min-block-size: 100dvh;
-  padding: var(--s1);
+  padding: var(--s1, 2rem);
 }

@@ -7,7 +7,7 @@ import svelte from 'eslint-plugin-svelte';
 // import ignoresConfig from './ignores.config.mjs';
 import tseslint from 'typescript-eslint';
 
-import extensionInstanceObj  from './fileExtensions.mjs';
+import extensionInstanceObj from './fileExtensions.mjs';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 export default tseslint.config({

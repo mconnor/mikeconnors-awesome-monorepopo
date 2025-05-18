@@ -16,21 +16,21 @@ export default class Box extends HTMLElement {
         let styleEl = document.createElement('style');
         styleEl.id = this.i;
         styleEl.innerHTML = `
-            [data-i="${this.i}"] {
-              padding: ${this.padding};
-              border: ${this.borderWidth} solid;
-              ${
-                this.invert ?
-                  `color: var(--color-light);
-                filter: invert(100%);`
-                : ''
-              }
+          [data-i="${this.i}"] {
+            padding: ${this.padding};
+            border: ${this.borderWidth} solid;
+            ${
+              this.invert ?
+                `color: var(--color-light);
+              filter: invert(100%);`
+              : ''
             }
+          }
 
-            [data-i="${this.i}"] {
-              background-color: inherit;
-            }
-          `
+          [data-i="${this.i}"] {
+            background-color: inherit;
+          }
+        `
           .replace(/\s\s+/g, ' ')
           .trim();
         document.head.appendChild(styleEl);
@@ -43,7 +43,7 @@ export default class Box extends HTMLElement {
   }
 
   set padding(val) {
-    this.setAttribute('padding', val);
+    return this.setAttribute('padding', val);
   }
 
   get borderWidth() {
@@ -51,7 +51,7 @@ export default class Box extends HTMLElement {
   }
 
   set borderWidth(val) {
-    this.setAttribute('borderWidth', val);
+    return this.setAttribute('borderWidth', val);
   }
 
   static get observedAttributes() {
@@ -64,9 +64,9 @@ export default class Box extends HTMLElement {
 
   set invert(val) {
     if (val) {
-      this.setAttribute('invert', '');
+      return this.setAttribute('invert', '');
     } else {
-      this.removeAttribute('invert');
+      return this.removeAttribute('invert');
     }
   }
 

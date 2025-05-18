@@ -28,8 +28,7 @@
     "lint": "eslint .",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
-    "check-types": "tsc --noEmit",
-    "@repo/layout-webcomponents": "workspace:^"
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@repo/design-system": "workspace:^",

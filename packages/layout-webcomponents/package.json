@@ -32,10 +32,9 @@
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/styles": "workspace:*",
-    "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@repo/styles": "workspace:^",
     "@tailwindcss/cli": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
@@ -47,5 +46,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }

@@ -8,9 +8,8 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-import extensionInstanceObj  from './fileExtensions.mjs';
+import extensionInstanceObj from './fileExtensions.mjs';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
-
 
 export default tseslint.config(
   ignoresConfig,

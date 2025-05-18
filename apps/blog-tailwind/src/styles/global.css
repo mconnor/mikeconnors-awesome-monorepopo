@@ -3,7 +3,6 @@
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:where(.dark, .dark *));
 
-
 /* @font-face {
   font-family: atkinson;
   font-style: normal;

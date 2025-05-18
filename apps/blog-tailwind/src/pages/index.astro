@@ -2,12 +2,13 @@
 import { SITE_TITLE, SITE_DESCRIPTION } from '#app.config.ts';
 import Layout from '#layouts/Layout.astro';
 import MainSvg from '#components/MainSvg.astro';
-import Box from '@repo/layout-webcomponents/Box'
+import Box from '@repo/layout-webcomponents/Box';
 ---
+
 -border-size-5
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} maxW="100ch">
   <h2>grid-simple</h2>
-  <Box  padding="var(--size-8)" borderWidth='var(--border-size-5)'>
+  <Box padding="var(--size-8)" borderWidth="var(--border-size-5)">
     <h2>grid-simple</h2>
   </Box>
   <div class="vertical sm:horizontal">

@@ -1,13 +1,17 @@
 ---
 // import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Modal from '@repo/astro-ui/Modal';
+// import Modal from '@repo/astro-ui/Modal';
+import DaisyUICard from '@repo/astro-ui/DaisyUICard';
+import PriceCard from '@repo/astro-ui/PriceCard';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+  <DaisyUICard copy="hello" />
+  <PriceCard />
   <!-- <Welcome /> -->
   <p>
     Images formed and reformed: a flickering montage of the Sprawl’s towers and
@@ -32,9 +36,9 @@ import Modal from '@repo/astro-ui/Modal';
     <button class="btn btn-primary">One</button>
     <button class="btn btn-secondary">Two</button>
 
-    <button class="btn btn-accent btn-outline">Three</button>
+    <button class="btn btn-outline btn-accent">Three</button>
     <button class="btn btn-success">success</button>
-    <button class="btn btn-alert">alert</button>
+    <button class="btn-alert btn">alert</button>
   </div>
   <div>
     <button class="btn btn-xs">Xsmall</button>
@@ -46,11 +50,11 @@ import Modal from '@repo/astro-ui/Modal';
   <details class="dropdown">
     <summary class="btn m-1">open or close</summary>
     <ul
-      class="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+      class="dropdown-content menu z-1 w-52 rounded-box bg-base-100 p-2 shadow-sm"
     >
       <li><a>Item 1</a></li>
       <li><a>Item 2</a></li>
     </ul>
   </details>
-  <Modal> Press ESC key or click the button below to close </Modal>
+  <!-- <Modal> Press ESC key or click the button below to close </Modal> -->
 </Layout>

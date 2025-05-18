@@ -46,7 +46,6 @@
     "@repo/design-system": "workspace:*",
     "@repo/icon-paths": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
-
     "@repo/utils": "workspace:*",
     "@sentry/astro": "catalog:",
     "@sentry/browser": "catalog:",
