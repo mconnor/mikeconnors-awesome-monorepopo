@@ -26,13 +26,10 @@ const sortedPosts = publishsedPosts.sort(
         sortedPosts.map(({ id, data }) => {
           const { title, description, date, cover, author, tags } = data;
           return (
-            <div class="card shadow-xl card-xs md:card-md justify-between">
+            <div class="card justify-between shadow-xl card-xs md:card-md">
               <figure>
                 {cover?.src && cover?.alt && (
-                  <img
-                    src={cover.src}
-                    alt={cover.alt}
-                  />
+                  <img src={cover.src} alt={cover.alt} />
                 )}
               </figure>
               <div class="card-body">
@@ -45,7 +42,7 @@ const sortedPosts = publishsedPosts.sort(
                 </div> */}
                 <div class="card-actions justify-end">
                   {tags.map((tag) => (
-                    <div class="badge badge-primary badge-xs">{tag}</div>
+                    <div class="badge badge-xs badge-primary">{tag}</div>
                   ))}
                 </div>
               </div>

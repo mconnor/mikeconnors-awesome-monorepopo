@@ -3,7 +3,7 @@ import Center from '@repo/layout-webcomponents/Center';
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '#Types.ts';
 
-import Footer from '#components/Footer.astro';
+// import Footer from '#components/Footer.astro';
 import Header from '#components/Header.astro';
 
 import BaseLayout from './BaseLayout.astro';
@@ -15,14 +15,14 @@ interface Props {
   description?: string;
 }
 
-const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
+const { title } = Astro.props;
 ---
 
-<BaseLayout {...rest}>
+<BaseLayout title="{title">
   <Cover centeredElement="center-l" space="0">
     <Header transition:persist />
 
-    <Center max={maxW} transition:animate="slide">
+    <Center  transition:animate="slide">
       <!-- <div class="prose md:prose-lg lg:prose-xl prose-blue scheme-light"> -->
       <slot />
       <!-- </div> -->

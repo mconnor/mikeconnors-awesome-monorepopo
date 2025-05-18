@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
-import Layout from '#layouts/ProseLayout.astro';
+import ProseLayout from '#layouts/ProseLayout.astro';
 import { render } from 'astro:content';
 export const prerender = true;
 
@@ -18,6 +18,6 @@ const post = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Layout {...post.data}>
+<ProseLayout data={post.data}>
   <Content />
-</Layout>
+</ProseLayout>

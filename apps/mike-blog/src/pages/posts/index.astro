@@ -1,15 +1,15 @@
 ---
-import { Image } from 'astro:assets';
+
 
 import Cluster from '@repo/layout-webcomponents/Cluster';
-import Switcher from '@repo/layout-webcomponents/Switcher';
+import Grid from '@repo/layout-webcomponents/Grid';
 import { getCollection } from 'astro:content';
+import PostCard from '#components/PostCard/index.astro';
 
-import Layout from '#layouts/SimpleLayout.astro';
+import Layout from '#layouts/Layout.astro';
 
 export const prerender = true;
 
-const pageTitle = 'Blog';
 
 const publishsedPosts = await getCollection(
   'blog',
@@ -21,43 +21,17 @@ const sortedPosts = publishsedPosts.sort(
 );
 ---
 
-<Layout title={pageTitle}>
-  <Cluster>
+<Layout title='Blog' maxW="80vw">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
     {
-      sortedPosts.map(({ id, data }) => {
-        const { title, description, date, cover, author, tags } = data;
-        return (
-        <div class="bg-base-100 shadow-sm card-md">
-            <Switcher>
-              
-              <figure class="border-2 bg-green-400 p-0">
-                {cover?.src && cover?.alt && (
-                  <img class="" src={cover.src} alt={cover.alt} />
-                )}
-              </figure>
-              <div class="">
-                <h2 class="text-2xl">{title}</h2>
-                <p>{description}</p>
+      sortedPosts.map(
+        ({ id, data }) => (
+          <PostCard data={data} href={id}/>
 
-                <div class="justify-end border-1">
-                  {tags.map((tag) => (
-                    <div class="badge-outline badge">{tag}</div>
-                  ))}
-                </div>
-              </div>
-            
-            </Switcher>
-          </div>
         
-        );
-      })
+        ),
+      )
     }
-  </Cluster>
+  </div>
 </Layout>
 
-<style>
-  img {
-    margin-block: 2.5rem;
-    border-radius: 0.75rem;
-  }
-</style>

@@ -1,0 +1,26 @@
+---
+import Layout from '#layouts/Layout.astro';
+import {NAME, SITE_TITLE} from '#app.config.ts';
+import { SITE_DESCRIPTION } from '#app.config.ts';
+
+// const subpath = Astro.url.pathname.match(/[^/]+/g);
+
+---
+
+
+<Layout>
+   <div class="text-8xl"><h1 x-data="{ show: false }" x-init="show = true">
+    <template x-for="(char, index) in 'YOUR NAME'.split('')" :key="index">
+      <span
+        x-text="char"
+        :style="{ transitionDelay: `${index * 100}ms` }"
+        class="inline-block opacity-0 translate-y-3 transition duration-500"
+        x-show="show"
+        x-transition.opacity
+      ></span>
+    </template>
+  </h1>
+
+   </div>
+   <div class="text-6xl">Developer</div>
+</Layout>

@@ -1,24 +1,22 @@
 ---
 import '../styles/global.css';
-import type { RmUnitType } from '@repo/styles/Types';
+
 
 import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
 import BaseHead from '#components/BaseHead.astro';
 
 interface Props {
-  image?: string;
-  maxW?: RmUnitType;
   title?: string;
   children: unknown;
-  description?: string;
+  headerDescription?: string;
 }
 
-const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+const { title = SITE_TITLE, headerDescription = 'Blog Post' } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} headerDescription={headerDescription} />
   </head>
 
   <body>

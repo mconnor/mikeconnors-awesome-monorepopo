@@ -1,17 +1,8 @@
 @import 'tailwindcss';
-@import '@repo/design-system/styles.css';
+@source not '@repo/styles';
+@source not '@repo/layout-webcomponents';
+
+@import '@repo/design-system/shared-styles.css';
+@import '@repo/astro-wc/styles.css';
 @import '@repo/react/index.css';
 @import '@repo/preact/index.css';
-@utility tw-card {
-  display: block;
-  padding: var(--s1);
-  border-width: var(--border-thin, 1px);
-
-  background-color: var(--color-red-600) !important;
-  color: var(--text-2) !important;
-
-  outline: 0.125rem solid transparent;
-  outline-offset: -0.125rem;
-  box-shadow: var(--shadow-xl);
-}
-

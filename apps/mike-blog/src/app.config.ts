@@ -2,18 +2,32 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 import iconPaths from '@repo/icon-paths/paths';
 type IconType = keyof typeof iconPaths;
-export const SITE_TITLE = 'Astrofy | Personal Portfolio Website Template';
-export const SITE_DESCRIPTION =
-  'Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.';
-// export const GENERATE_SLUG_FROM_TITLE = true;
-// export const TRANSITION_API = true;
-export const Links = {
-  github: 'https://www.github.com/mconnor',
-  twitter: 'https://www.twitter.com/mikeconnor504',
-  linkedin: 'https://www.linkedin.com/in/michaelgconnor/',
-  tiwtter: 'https://www.twitter.com/mikeconnor504',
-  discord: 'https://discord.com/users/mike4989',
-} as const;
+
+
+// export const SITE_URL = 'https://mikeconnor.dev';
+//  const INFO = {
+//   name= 'Mike Connor',
+//   role= 'Developer',
+//   city= 'Kansas City',
+//   description = 'Developer, creator, producer. Available to chat'
+// }
+// export INFO;
+
+ const NAME = 'Mike Connor';
+ const SITE_TITLE = 'Mike Connor | Developer';
+ const SITE_DESCRIPTION =
+  'Developer, Designer, and Creator. I love to learn and share my knowledge with others. I am a full-stack developer with a passion for creating beautiful and functional web applications.';
+//  const GENERATE_SLUG_FROM_TITLE = true;
+//  const TRANSITION_API = true;
+//  const Links = {
+//   github: 'https://www.github.com/mconnor',
+//   twitter: 'https://www.twitter.com/mikeconnor504',
+//   linkedin: 'https://www.linkedin.com/in/michaelgconnor/',
+//   tiwtter: 'https://www.twitter.com/mikeconnor504',
+//   discord: 'https://discord.com/users/mike4989',
+// } as const;
+
+
 
 interface OutboundLinksType {
   url: string;
@@ -37,12 +51,13 @@ const DISCORD: OutboundLinksType = {
   logo: 'discord-logo',
 };
 
-export const OUTBOUND_LINKS: OutboundLinksType[] = [
+ const OUTBOUND_LINKS: OutboundLinksType[] = [
   GITHUB,
   TWITTER,
   LINKEDIN,
   DISCORD,
 ] as const;
+
 
 interface NavLinkI {
   label: string;
@@ -50,7 +65,7 @@ interface NavLinkI {
   icon?: string;
   subPages?: boolean;
 }
-export const navLinks: NavLinkI[] = [
+ const navLinks: NavLinkI[] = [
   { label: 'Home', href: '/', icon: 'home' },
   // { label: 'countries', href: '/countries', icon: 'country' },
   // { label: 'buttons', href: '/buttons', icon: 'home' },
@@ -66,6 +81,8 @@ export const navLinks: NavLinkI[] = [
   // { label: 'CV', href: '/cv', icon: 'cv' },
   // { label: 'Store', href: '/store', icon: 'store' },
 ] as const;
+
+export { NAME, SITE_TITLE, SITE_DESCRIPTION,OUTBOUND_LINKS ,navLinks};
 
 /*
 These rad font-families from Dan Klammer's modern font stacks provide great typefaces that are entirely local. With these font stacks you won't have to worry about slowing down your page load or layout shift from external fonts!

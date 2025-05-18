@@ -1,6 +1,7 @@
 ---
 title: Draft Post
 date: 2024-01-13
+draft: true
 author: mike-connor
 description: 'A graphic representation of data abstracted from the banks of every computer in the coffin for Armitage’s call.'
 cover:

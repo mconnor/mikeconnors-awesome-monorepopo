@@ -1,0 +1,27 @@
+---
+import Layout from '#layouts/SimpleLayout.astro';
+import {SITE_TITLE} from '#app.config.ts';
+import { SITE_DESCRIPTION } from '#app.config.ts';
+
+// const subpath = Astro.url.pathname.match(/[^/]+/g);
+
+---
+
+
+<Layout>
+    <div 
+    class="hero min-h-screen"
+    style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);"
+  >
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+      <div class="max-w-md">
+        <h1 class="mb-5 text-5xl font-bold text-shadow-lg">{SITE_TITLE}</h1>
+        <p class="mb-5">
+          {SITE_DESCRIPTION}
+        </p>
+        <a href='/' class="btn btn-primary">Let's Go</a>
+      </div>
+    </div>
+  </div>
+</Layout>

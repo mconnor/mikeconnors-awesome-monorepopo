@@ -1,0 +1,28 @@
+---
+import './Box.css';
+
+import type { BorderStyle, RmUnitType } from '@repo/styles/Types';
+
+interface Props {
+  padding?: RmUnitType;
+  borderWidth?: RmUnitType;
+  highlight?: boolean;
+  borderStyle?: BorderStyle;
+  invert?: boolean;
+  children?: unknown;
+}
+const props = Astro.props;
+---
+
+<!-- <script type="module">
+  import './Box';
+</script> -->
+<div>
+  <box-l {...props} class="bg-blue-500 text-white p-4">
+    <slot />
+  </box-l>
+</div>
+
+<script src="./Box.js"></script>
+
+

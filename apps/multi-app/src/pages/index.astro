@@ -1,7 +1,8 @@
 ---
 // import Stack from '@repo/layout-webcomponents/Stack';
 import PreactCounter from '@repo/preact/Counter';
-import  ReactCounter  from '@repo/react/Counter';
+import ReactCounter from '@repo/react/Counter';
+import Button from '@repo/react/Button';
 import Colors from '@repo/react/Colors';
 
 // import { SolidCounter as SolidC } from '@repo/solid/counter';
@@ -14,6 +15,7 @@ import Switcher from '@repo/layout-webcomponents/Switcher';
 ---
 
 <style>
+  @import 'tailwindcss';
   .counter {
     display: grid;
     font-size: 2em;
@@ -25,12 +27,28 @@ import Switcher from '@repo/layout-webcomponents/Switcher';
   .counter-message {
     text-align: center;
   }
+
+  @utility tw-card {
+  display: block;
+  padding: var(--s1);
+  border-width: var(--border-thin);
+background-color: var(--color-primary-500);
+
+
+  outline: 0.125rem solid transparent;
+  outline-offset: -0.125rem;
+  box-shadow: var(--shadow-xl);
+}
+
 </style>
 
 <Layout centerWidth="80ch">
-  <Colors /> 
+  <Button color="red">red btn</Button>
+  <Button color="blue">blue btn</Button>
+  <Button color="yellow">yellow btn</Button>
+  <Colors />
   <div class="tw-card">hello</div>
-  <Box borderWidth="4px" borderStyle="double">
+  <Box borderWidth="4px">
     <Switcher>
       <Box>
         <ReactCounter client:only="react" class="grid grid-col-3">
@@ -46,7 +64,7 @@ import Switcher from '@repo/layout-webcomponents/Switcher';
 
       <Box>
         <VueCounter client:visible>
-          <h1>Hello from Svelte!</h1>
+          <h1>Hello from Vue!</h1>
         </VueCounter></Box
       >
 

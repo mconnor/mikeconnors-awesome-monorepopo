@@ -34,7 +34,6 @@
     "@repo/preact": "workspace:*",
     "@repo/react": "workspace:*",
     "@repo/svelte": "workspace:*",
-    "@repo/ui-lit": "workspace:*",
     "@repo/vue": "workspace:*",
     "@tailwindcss/vite": "catalog:",
     "@types/node": "catalog:",

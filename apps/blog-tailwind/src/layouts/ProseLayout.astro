@@ -1,27 +1,38 @@
 ---
-import type { RmUnitType } from '@repo/styles/Types';
-
-import Layout from './BaseLayout.astro';
-
+// import type { RmUnitType } from '@repo/styles/Types';
+// import type { RmUnitType } from '#Types.ts';
+import Layout from './Layout.astro';
+import {blogSchema} from '#schemas/index.ts';
+import type { z } from 'astro:content';
 interface Props {
-  maxW?: RmUnitType;
-  children: unknown;
-  title?: string;
-  description?: string;
+  // maxW?: string;
+  // children: unknown;
+  // title?: string;
+  // description?: string;
+  data: z.infer<typeof blogSchema>;
+  children: unknown
 }
 
-const {
-  maxW = 'var(--measure, 60ch)',
-  title,
-  description,
-  ...rest
-} = Astro.props;
+const { data} = Astro.props;
+const {title, description, tags} = data;
 ---
 
-<Layout title={title} description={description} {...rest} maxW="60ch">
+<Layout title={title} description={description} maxW="60ch">
   <div
     class="prose md:prose-lg lg:prose-xl dark:prose-invert prose-a:text-blue-600 prose-a:hover:text-blue-500"
   >
     <slot />
+    {tags && (
+      <div class="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <span
+          
+            class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    )}
   </div>
 </Layout>

@@ -43,7 +43,8 @@
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "tsup": "catalog:",
-    "typescript": "catalog:",    "@headlessui/react": "catalog:",
+    "typescript": "catalog:",
+    "@headlessui/react": "catalog:",
     "@heroicons/react": "catalog:",
     "@repo/utils": "workspace:^",
     "@tailwindcss/cli": "catalog:",
@@ -55,7 +56,5 @@
     "react": ">=18",
     "react-dom": ">=18"
   },
-  "dependencies": {
-
-  }
+  "dependencies": {}
 }
