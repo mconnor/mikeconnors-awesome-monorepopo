@@ -1,3 +1,4 @@
+@import 'open-props/open-props.min.css';
 @import 'tailwindcss';
 @import '@repo/design-system/shared-styles.css';
 @plugin '@tailwindcss/typography';
@@ -8,11 +9,11 @@
   font-style: normal;
   font-weight: 200 700;
   font-display: swap;
-  src: 
+  src:
     local("atkinson");
     url('/fonts/atkinson.woff') format('woff');
 } */
-/* 
+/*
 @font-face {
   font-family: 'Atkinson';
   src: url('/fonts/atkinson-regular.woff') format('woff');

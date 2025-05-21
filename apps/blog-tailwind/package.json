@@ -39,6 +39,7 @@
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/typography": "catalog:",
     "eslint": "catalog:",
+    "open-props": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "rollup-plugin-visualizer": "catalog:",

@@ -31,7 +31,7 @@
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
-    "theme-change": "^2.5.0",
+    "theme-change": "catalog:",
     "typescript": "catalog:"
   }
 }
