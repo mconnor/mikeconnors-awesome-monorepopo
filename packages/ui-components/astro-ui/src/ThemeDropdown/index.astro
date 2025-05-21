@@ -44,39 +44,85 @@ const {
 } = Astro.props as Props;
 
 const WH = '12px';
-
-// const themes = ['Default', 'Retro', 'Cyberpunk', 'Valentine', 'Aqua'];
 ---
 
-<button class="btn" popovertarget="popover-1" style="anchor-name:--anchor-1">
-  Theme
-  <svg
-    width={WH}
-    height={WH}
-    class="inline-block h-2 w-2 fill-current opacity-60"
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 2048 2048"
-  >
-    <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"></path>
-  </svg>
-</button>
-<ul
-  class="menu dropdown w-52 rounded-box bg-base-100 shadow-sm"
-  popover
-  id="popover-1"
-  style="position-anchor:--anchor-1"
->
-  {
-    themes.map((theme) => (
-      <li>
-        <input
-          type="radio"
-          name="theme-dropdown"
-          class="theme-controller btn btn-block justify-start btn-ghost btn-sm"
-          aria-label={theme.charAt(0).toUpperCase() + theme.slice(1)}
-          value={theme}
-        />
-      </li>
-    ))
+<astro-theme-dropdown>
+  <form id="theme" data-select-theme>
+    <div class="dropdown mb-72">
+      <div tabindex="0" role="button" class="btn m-1">
+        Theme
+        <svg
+          width="12px"
+          height="12px"
+          class="inline-block h-2 w-2 fill-current opacity-60"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 2048 2048"
+        >
+          <path d="M1799 349l242 241-1017 1017L7 590l242-241 775 775 775-775z"
+          ></path>
+        </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="dropdown-content z-1 w-52 rounded-box bg-base-300 p-2 shadow-2xl"
+      >
+        {
+          themes.map((theme) => (
+            <li>
+              <input
+                type="radio"
+                name="theme-dropdown"
+                class="theme-controller btn btn-block w-full justify-start btn-ghost btn-sm"
+                aria-label={theme.charAt(0).toUpperCase() + theme.slice(1)}
+                value={theme}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </form>
+</astro-theme-dropdown>
+
+<script>
+  import { css, html, LitElement } from 'lit';
+  import { customElement } from 'lit/decorators.js';
+
+  @customElement('astro-theme-dropdown')
+  export class AstroThemeDropdown extends LitElement {
+    // @property({ type: Boolean })
+    // isVisible = false;
+
+    connectedCallback() {
+      super.connectedCallback();
+      const form = this.querySelector('[data-select-theme]');
+      form?.addEventListener('input', this.handleChange.bind(this));
+    }
+
+    disconnectedCallback() {
+      super.disconnectedCallback();
+
+      this.querySelector('[data-select-theme]')?.removeEventListener(
+        'input',
+        this.handleChange,
+      );
+    }
+
+    handleChange = (e: Event): void => {
+      console.log('handleChange', e);
+      const htmlTag = document.documentElement;
+      htmlTag.setAttribute('data-theme', (e.target as HTMLInputElement).value);
+      localStorage.setItem('theme', (e.target as HTMLInputElement).value);
+    };
+
+    render() {
+      return html`<slot></slot>`;
+    }
   }
-</ul>
+
+  declare global {
+    interface HTMLElementTagNameMap {
+      'astro-theme-dropdown': AstroThemeDropdown;
+    }
+  }
+</script>

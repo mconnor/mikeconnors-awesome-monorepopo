@@ -43,6 +43,7 @@
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "typescript": "catalog:",
+    "lit": "catalog:",
     "daisyui": "catalog:",
     "@tailwindcss/cli": "catalog:",
     "vite": "catalog:"

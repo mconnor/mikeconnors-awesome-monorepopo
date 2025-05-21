@@ -1,6 +1,4 @@
 {
-  "extends": "@repo/typescript-config/astro-base.json",
-  "compilerOptions": {
-    "strict": true
-  }
+  "extends": "@repo/typescript-config/lit.json",
+  "compilerOptions": { "strict": true }
 }

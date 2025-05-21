@@ -14,18 +14,30 @@ const {
   copy,
 } = Astro.props as Props;
 
-const cardSize = 'card-' + size;
----
+const cardSize = 'd-card-' + size;
 
-<div class:list={['card w-96 bg-base-100 shadow-sm', cardSize]}>
-  <div class="card-body">
-    <h2 class="card-title">{title}</h2>
+// class:list will work
+
+// const cardVariants = {
+//     xs: "d-card w-96 bg-base-100 d-card-xs shadow-sm",
+//     sm: "d-card w-96 bg-base-100 d-card-sm shadow-sm",
+//     md: "d-card w-96 bg-base-100 d-card-md shadow-sm",
+//     lg: "d-card w-96 bg-base-100 d-card-lg shadow-sm",
+//     xl: "d-card w-96 bg-base-100 d-card-xl shadow-sm",
+//   };
+
+
+---
+<div class:list={['d-card w-96 bg-base-100 shadow-sm',  {cardSize}]}>
+<!-- <div class={cardVariants[size]}> -->
+  <div class="d-card-body">
+    <h2 class="d-card-title">{title}</h2>
     <p>
-      {copy}
+     xx {copy}
     </p>
 
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">{cta}</button>
+  <div class="justify-end d-card-actions">
+<button class="d-btn d-btn-primary">Buy Now</button>
     </div>
   </div>
 </div>
