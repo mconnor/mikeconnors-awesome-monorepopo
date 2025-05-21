@@ -30,7 +30,7 @@
     "prettier": "~3.5.3",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
-    "prettier-plugin-toml": "^2.0.5",
+    "prettier-plugin-toml": "catalog:",
     "turbo": "catalog:"
   },
   "engines": {

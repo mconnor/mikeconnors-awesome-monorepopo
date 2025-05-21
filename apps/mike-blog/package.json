@@ -46,6 +46,7 @@
     "@repo/design-system": "workspace:*",
     "@repo/icon-paths": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
+    "@repo/ui-lit": "workspace:*",
     "@repo/utils": "workspace:*",
     "@sentry/astro": "catalog:",
     "@sentry/browser": "catalog:",
@@ -58,9 +59,10 @@
     "date-fns": "catalog:",
     "dotenv": "catalog:",
     "lorem-ipsum": "catalog:",
+    "open-props": "catalog:",
     "sharp": "catalog:",
-    "typescript": "catalog:",
-    "tailwindcss": "catalog:"
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
   },
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",
@@ -72,8 +74,9 @@
     "daisyui": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-toml": "^2.0.5",
+    "prettier-plugin-toml": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
+    "theme-change": "catalog:",
     "zod-validation-error": "catalog:"
   }
 }

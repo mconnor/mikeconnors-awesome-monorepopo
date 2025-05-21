@@ -9,7 +9,7 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 
-# Hello, world
+## Hello, world
 
 > Some notable things in a block quote!
 
@@ -24,7 +24,7 @@ elit tempor labore irure ipsum adipisicing.
 - monorepos (yarn workspaces)
 - Graphql
 
-## Cupidatat proident culpa sunt cillum
+### Cupidatat proident culpa sunt cillum
 
 do nostrud ea id id incididunt ullamco. Proident dolore nulla ipsum consequat
 aute eiusmod proident ex excepteur.

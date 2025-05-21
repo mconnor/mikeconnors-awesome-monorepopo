@@ -47,6 +47,20 @@ const { title, description, image = 'andy-og.jpeg' } = Astro.props;
 {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
 <meta name="color-scheme" content="dark light" />
 
+<script is:inline>
+  document.addEventListener('astro:page-load', () => {
+    console.log('astro:page-load');
+    const storedTheme = localStorage.getItem('theme');
+    const doc = document.documentElement;
+    if (storedTheme) {
+      doc.setAttribute('data-theme', storedTheme);
+      // $currTheme.set(storedTheme);
+    } else {
+      doc.setAttribute('data-theme', 'light');
+    }
+  });
+</script>
+
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
 
 <!-- <script>

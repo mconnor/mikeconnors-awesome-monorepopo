@@ -1,12 +1,6 @@
 ---
 import './Frame.css';
 
-// --ratio-square: 1;
-//   --ratio-landscape: 4/3;
-//   --ratio-portrait: 3/4;
-//   --ratio-widescreen: 16/9;
-//   --ratio-ultrawide: 18/5;
-//   --ratio-golden: 1.6180/1;
 
 // type  RatioType :
 interface Props {
@@ -36,7 +30,7 @@ const { ratio= '1:1' } = Astro.props;
 
 <script src="./Frame.js"></script>
 
-<!-- 
+<!--
 side	string	"left"	Which element to treat as the sidebar (all values but "left" are considered "right")
 sideWidth	string		Represents the width of the sidebar when adjacent. If not set (null) it defaults to the sidebar's content width
 contentMin	string	"50%"	A CSS percentage value. The minimum width of the content element in the horizontal configuration

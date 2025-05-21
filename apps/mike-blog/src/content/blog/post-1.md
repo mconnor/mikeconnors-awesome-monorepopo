@@ -9,7 +9,7 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 
-# Hello, world
+## Hello, world
 
 <div>
   > Some notable things in a block quote!

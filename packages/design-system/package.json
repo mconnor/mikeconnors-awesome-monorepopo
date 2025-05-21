@@ -25,6 +25,7 @@
     "@tailwindcss/typography": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "open-props": "catalog:",
-    "tailwindcss": "catalog:"
+    "tailwindcss": "catalog:",
+    "daisyui": "catalog:"
   }
 }

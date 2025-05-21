@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import type { RmUnitType } from '@repo/styles/Types';
+import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 
 import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
 import BaseHead from '#components/BaseHead.astro';
@@ -17,7 +17,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 // const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 ---
 
-<html lang="en" data-theme="auto" data-theme="light">
+<html lang="en" data-theme="auto" id="blog-app">
   <head>
     <BaseHead title={title} description={description} />
   </head>
@@ -26,29 +26,3 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
     <slot />
   </body>
 </html>
-
-<!-- <script>
-  document.addEventListener('astro:page-load', () => {
-    console.log('astro:page-load');
-    const storedTheme = localStorage.getItem('theme');
-    const doc = document.documentElement;
-    if (storedTheme) {
-      doc.setAttribute('data-theme', storedTheme);
-      // $currTheme.set(storedTheme);
-    } else {
-      doc.setAttribute('data-theme', 'light');
-    }
-  });
-</script> -->
-<!-- <style is:global>
-  .mode {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-  }
-
-  .warning {
-    --my-element-text-color: var(--theme-warning);
-  }
-</style> -->

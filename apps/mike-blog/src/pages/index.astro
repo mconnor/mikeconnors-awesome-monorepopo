@@ -1,67 +1,16 @@
 ---
 // import DaisySideCard from '#components/DaisySideCard/index.astro';
-import Wiggle from "#components/anims/Wiggle.astro";
+
 import Layout from '#layouts/Layout.astro';
 
 import Box from '@repo/layout-webcomponents/Box';
 // import Box from '#components/Box/index.astro';
 import { NAME, SITE_TITLE } from '#app.config.ts';
-
+import PriceCardDemo from '#demos/pricecard.astro';
 ---
 
 <Layout maxW="80%">
-
-  <Box borderWidth="var(--s2)">
-
-   <p class="text-2xl">Do incididunt nostrud elit commodo occaecat. Eu mollit cillum ut culpa. Nostrud pariatur anim ad aute dolor sint non consequat cillum Lorem.</p>
-  </Box>
-
-
-    <Wiggle />
-   <div class="bg-red-200">
-
-    <div class="scheme-light">
-      <input type="date" />
-    </div>
-    <div class="scheme-dark">
-      <input type="date" />
-    </div>
-    <div class="scheme-light-dark">
-      <input type="date" />
-    </div>
-
+  <div>
+    <PriceCardDemo />
   </div>
-
-
 </Layout>
-
-
-<style>
-.animated-name span.letter {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.5s forwards;
-
-
-}
-
-
-
-/* .animated-name span:nth-child(n) { animation-delay: .1s; } */
-/* .animated-name span:nth-child(2) { animation-delay: 0.1s; }
-.animated-name span:nth-child(3) { animation-delay: 0.2s; } */
-/*continue delays */
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
-<!-- <script>
-  document.querySelectorAll('.animated-name span').forEach((el, i) => {
-    el.style.animationDelay = `${i * 0.1}s`;
-  });
-</script> -->

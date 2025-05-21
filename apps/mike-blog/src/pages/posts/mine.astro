@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 
 import { getCollection } from 'astro:content';
 
-import Layout from '#layouts/SimpleLayout.astro';
+import Layout from '#layouts/BaseLayout.astro';
 
 export const prerender = true;
 
@@ -26,7 +26,7 @@ const sortedPosts = publishsedPosts.sort(
         sortedPosts.map(({ id, data }) => {
           const { title, description, date, cover, author, tags } = data;
           return (
-            <div class="card justify-between shadow-xl card-xs md:card-md">
+            <div class="card card-xs md:card-md justify-between shadow-xl">
               <figure>
                 {cover?.src && cover?.alt && (
                   <img src={cover.src} alt={cover.alt} />

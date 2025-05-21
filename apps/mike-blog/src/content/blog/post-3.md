@@ -1,5 +1,5 @@
 ---
-title: 3d Food
+title: star signals are cool
 date: 2024-01-02
 author: mike-connor
 description: The Future of Dynamic Web Content

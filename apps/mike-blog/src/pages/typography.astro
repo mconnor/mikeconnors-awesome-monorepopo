@@ -9,37 +9,68 @@ import MarkdownSample from '#content/blog/typography.md';
 ---
 
 <Layout>
-<div class="p-2">
+  <div class="p-2">
     <div class="grid grid-cols-2 gap-4">
-    <div>
-      <h1>Not Prose</h1>
-  <h2>Tailwind CSS Typography</h2>
-  <h3>Tailwind CSS Typography</h3>
-  <p>Quis dolor in enim elit et nostrud enim. Commodo culpa ad culpa aliquip mollit mollit adipisicing eu id mollit Lorem mollit. Tempor consectetur non amet officia velit officia esse sint in ipsum elit ex. Do laboris elit laborum officia est excepteur. Commodo laborum fugiat in dolore.</p>
-  <ul>
-    <li>Quis dolor in enim elit et nostrud enim.</li>
-    <li>Commodo culpa ad culpa aliquip mollit mollit adipisicing eu id mollit Lorem mollit.</li>
-    <li>Tempor consectetur non amet officia velit officia esse sint in ipsum elit ex.</li>
-    <li>Do laboris elit laborum officia est excepteur.</li>
-    <li>Commodo laborum fugiat in dolore.</li>
-  </ul>
+      <div>
+        <h1>Not Prose</h1>
+        <h2>Tailwind CSS Typography</h2>
+        <h3>Tailwind CSS Typography</h3>
+        <p>
+          Quis dolor in enim elit et nostrud enim. Commodo culpa ad culpa
+          aliquip mollit mollit adipisicing eu id mollit Lorem mollit. Tempor
+          consectetur non amet officia velit officia esse sint in ipsum elit ex.
+          Do laboris elit laborum officia est excepteur. Commodo laborum fugiat
+          in dolore.
+        </p>
+        <ul>
+          <li>Quis dolor in enim elit et nostrud enim.</li>
+          <li>
+            Commodo culpa ad culpa aliquip mollit mollit adipisicing eu id
+            mollit Lorem mollit.
+          </li>
+          <li>
+            Tempor consectetur non amet officia velit officia esse sint in ipsum
+            elit ex.
+          </li>
+          <li>Do laboris elit laborum officia est excepteur.</li>
+          <li>Commodo laborum fugiat in dolore.</li>
+        </ul>
+      </div>
+
+      <div>
+        <Prose>
+          <h1>Prose Text</h1>
+          <h2>Tailwind CSS Typography</h2>
+          <h3>Tailwind CSS Typography</h3>
+          <p class="not-prose bg-accent-500">
+            Quis dolor in enim elit et nostrud enim. Commodo culpa ad culpa
+            aliquip mollit mollit adipisicing eu id mollit Lorem mollit. Tempor
+            consectetur non amet officia velit officia esse sint in ipsum elit
+            ex. Do laboris elit laborum officia est excepteur. Commodo laborum
+            fugiat in dolore.
+          </p>
+          <p class="bg-accent-500">
+            Quis dolor in enim elit et nostrud enim. Commodo culpa ad culpa
+            aliquip mollit mollit adipisicing eu id mollit Lorem mollit. Tempor
+            consectetur non amet officia velit officia esse sint in ipsum elit
+            ex. Do laboris elit laborum officia est excepteur. Commodo laborum
+            fugiat in dolore.
+          </p>
+          <ul>
+            <li>Quis dolor in enim elit et nostrud enim.</li>
+            <li>
+              Commodo culpa ad culpa aliquip mollit mollit adipisicing eu id
+              mollit Lorem mollit.
+            </li>
+            <li>
+              Tempor consectetur non amet officia velit officia esse sint in
+              ipsum elit ex.
+            </li>
+            <li>Do laboris elit laborum officia est excepteur.</li>
+            <li>Commodo laborum fugiat in dolore.</li>
+          </ul>
+        </Prose>
+      </div>
     </div>
-
-
-
-  <div><Prose>
-    <h1>Prose Text</h1>
-  <h2>Tailwind CSS Typography</h2>
-  <h3>Tailwind CSS Typography</h3>
-  <p>Quis dolor in enim elit et nostrud enim. Commodo culpa ad culpa aliquip mollit mollit adipisicing eu id mollit Lorem mollit. Tempor consectetur non amet officia velit officia esse sint in ipsum elit ex. Do laboris elit laborum officia est excepteur. Commodo laborum fugiat in dolore.</p>
-  <ul>
-    <li>Quis dolor in enim elit et nostrud enim.</li>
-    <li>Commodo culpa ad culpa aliquip mollit mollit adipisicing eu id mollit Lorem mollit.</li>
-    <li>Tempor consectetur non amet officia velit officia esse sint in ipsum elit ex.</li>
-    <li>Do laboris elit laborum officia est excepteur.</li>
-    <li>Commodo laborum fugiat in dolore.</li>
-  </ul>
-  </Prose>
   </div>
-</div>
 </Layout>

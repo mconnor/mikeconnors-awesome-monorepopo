@@ -1,6 +1,4 @@
 ---
-
-
 import Cluster from '@repo/layout-webcomponents/Cluster';
 import Grid from '@repo/layout-webcomponents/Grid';
 import { getCollection } from 'astro:content';
@@ -9,7 +7,6 @@ import PostCard from '#components/PostCard/index.astro';
 import Layout from '#layouts/Layout.astro';
 
 export const prerender = true;
-
 
 const publishsedPosts = await getCollection(
   'blog',
@@ -21,17 +18,8 @@ const sortedPosts = publishsedPosts.sort(
 );
 ---
 
-<Layout title='Blog' maxW="80vw">
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-4">
-    {
-      sortedPosts.map(
-        ({ id, data }) => (
-          <PostCard data={data} href={id}/>
-
-        
-        ),
-      )
-    }
+<Layout title="Blog" maxW="80vw">
+  <div class="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2">
+    {sortedPosts.map(({ id, data }) => <PostCard data={data} href={id} />)}
   </div>
 </Layout>
-

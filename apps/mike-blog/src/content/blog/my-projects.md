@@ -1,5 +1,5 @@
 ---
-title: My Past and Current Projects
+title: My past and current Projects
 date: 2022-09-01
 author: mike-connor
 description: 'Morlochs and Eloi'
@@ -9,7 +9,7 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 
-# Hello, world
+## Hello, world
 
 <div className="note">
   > Some notable things in a block quote!
