@@ -49,7 +49,7 @@
     "vite": "catalog:"
   },
   "peerDependencies": {
-    "tailwind": ">=4",
+    "tailwindcss": ">=4",
     "astro": ">=5"
   }
 }

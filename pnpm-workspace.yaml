@@ -10,7 +10,7 @@ packages:
 catalogs:
   svelte5:
     "@astrojs/svelte": ^7.0.13
-    "@sveltejs/adapter-auto": ^3.3.1
+    "@sveltejs/adapter-auto": ^6.0.1
     svelte: ^5.28.6
     svelte-check: ^4.1.7
     svelte-preprocess: ^6.0.3
@@ -18,7 +18,7 @@ catalogs:
     vite: ^6.2.6
 catalog:
   "@astrojs/check": ^0.9.4
-  "@astrojs/markdoc": ^0.14.2
+  "@astrojs/markdoc": ^0.15.0
   "@astrojs/mdx": ^4.2.6
   "@astrojs/node": ^9.2.1
   "@astrojs/preact": ^4.0.11
@@ -61,7 +61,7 @@ catalog:
   "@vitejs/plugin-vue": ^5.2.4
   "@webcomponents/template-shadowroot": ^0.2.1
   add: ^2.0.6
-  astro: ^5.7.13
+  astro: ^5.8.0
   astro-embed: ^0.9.0
   astro-eslint-parser: ^1.2.2
   astro-icon: ^1.1.5
