@@ -1,26 +1,28 @@
-import { useState } from 'react';
+import { useState, memo, useCallback, type ReactNode } from 'react';
 
 import MyButton from '#internal/Button/index.tsx';
 
-interface Props {
-  children: React.ReactNode;
+interface CounterProps {
+  children: ReactNode;
   class: string;
 }
 
-export default function Counter({ children, class: className }: Props) {
+function Counter({ children, class: className }: CounterProps) {
   const [count, setCount] = useState(0);
-  const add = () => setCount((i) => i + 1);
-  const subtract = () => setCount((i) => i - 1);
+  
+const add = useCallback(() => setCount(prev => prev + 1), []);
+const subtract = useCallback(() => setCount(prev => prev - 1), []);
 
   return (
     <>
       <div className={className}>
         <MyButton onClick={subtract}>-</MyButton>
         <p className="text-primary-900 dark:text-primary-100">{count}</p>
-
         <MyButton onClick={add}>+</MyButton>
       </div>
       <div>{children}</div>
     </>
   );
 }
+
+export default memo(Counter);

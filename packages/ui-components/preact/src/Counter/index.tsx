@@ -1,18 +1,20 @@
 /** @jsxImportSource preact */
 
+import { memo } from 'preact/compat';
 import type { ComponentChildren } from 'preact';
-import { useState } from 'preact/hooks';
+import { useState, useCallback } from 'preact/hooks';
 
-interface Props {
+interface CounterProps {
   children?: ComponentChildren;
   class: string;
 }
 
 /** A counter written with Preact */
-export default function Counter({ children, class: className }: Props) {
+function Counter({ children, class: className }: CounterProps) {
   const [count, setCount] = useState(0);
-  const add = () => setCount((i) => i + 1);
-  const subtract = () => setCount((i) => i - 1);
+  
+  const add = useCallback(() => setCount((i) => i + 1), []);
+  const subtract = useCallback(() => setCount((i) => i - 1), []);
 
   return (
     <>
@@ -21,7 +23,9 @@ export default function Counter({ children, class: className }: Props) {
         <pre>{count}</pre>
         <button onClick={add}>+</button>
       </div>
-      <div class="counter-message">{children}</div>
+      {children && <div class="counter-message">{children}</div>}
     </>
   );
 }
+
+export default memo(Counter);
