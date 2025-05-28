@@ -21,7 +21,7 @@
     "dev": "tsup --watch",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "check-types": "tsc --noEmit",

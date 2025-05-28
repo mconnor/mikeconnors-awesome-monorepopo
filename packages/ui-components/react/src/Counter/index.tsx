@@ -9,9 +9,9 @@ interface CounterProps {
 
 function Counter({ children, class: className }: CounterProps) {
   const [count, setCount] = useState(0);
-  
-const add = useCallback(() => setCount(prev => prev + 1), []);
-const subtract = useCallback(() => setCount(prev => prev - 1), []);
+
+  const add = useCallback(() => setCount((prev) => prev + 1), []);
+  const subtract = useCallback(() => setCount((prev) => prev - 1), []);
 
   return (
     <>

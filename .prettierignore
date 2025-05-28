@@ -1,19 +1,21 @@
-.DS_Store
-.turbo/
+# Ignore all node_modules directories
+**/node_modules/
 *.log
-dist/
-dist-ssr/
 *.local
-.env
-.cache
-server/dist
-public/dist
+
+**/.cache
+**/dist
 
 notes.txt
 
-cache-directory/
-.vercel/
-.astro/
+**/cache-directory/
+
+/apps-to-off-ramp/
+/packages/styles/
+
+**/.vercel/
+**/.astro/
+**/.turbo/
 
 # playwright
 playwright-report/
@@ -25,33 +27,25 @@ yarn-error.log*
 pnpm-debug.log*
 
 # environment variables
-.env
-.env.production
+# .env
+# .env.production
 
 # macOS-specific files
 .DS_Store
 
-# jetbrains setting folder
-.idea/
+
 
 # Vite
 **/vite.config.js.timestamp-*
 **/vite.config.ts.timestamp-*
 **/.svelte-kit
-/tree.txt
-/apps-next/blog-starter-app/.gitignore
-/apps-next/blog-starter-app/.next
-
-/out
 
 
+# Ignore these for now
+/apps-next
+/apps-themes/
 
-apps-themes/
-apps/
-packages/
-apps-to-off-ramp/
-pnpm-workspace.yaml
+
 .npmrc
-.gitignore
-pnpm-lock.yaml
+*-lock.yaml
 

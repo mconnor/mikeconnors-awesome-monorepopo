@@ -1,13 +1,6 @@
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 @theme {
-
   --font-hero: var(--font-transitional);
   --font-display: "Oswald", "sans-serif";
-
-
-
-
-
 
   /* theme variables defined in the --font-* namespace determine
    all of the font-family utilities that exist in a project: */
@@ -48,7 +41,6 @@
   --tab-size-2: 2;
   --tab-size-4: 4;
   --tab-size-github: 8;
- 
 }
 
 /* @utility tab-primary-gradient {
@@ -81,7 +73,7 @@
 /* Tailwind Functional Utility */
 /* The tab-size CSS property is used to customize the width of tab characters (U+0009). */
 @utility tab-* {
-  tab-size: --value(--tab-size-*);
+  tab-size: --value(--tab-size- *);
 }
 
 @utility grid-simple {

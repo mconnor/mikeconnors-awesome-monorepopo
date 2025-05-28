@@ -12,7 +12,7 @@
     "./feedback-form": "./src/FeedbackFrom.svelte"
   },
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix",
     "format": "prettier --write .",
     "inspect": "eslint --inspect-config",

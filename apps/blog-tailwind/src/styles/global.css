@@ -1,8 +1,11 @@
-@import 'open-props/open-props.min.css';
+/* @import 'open-props/open-props.min.css'; */
 @import 'tailwindcss';
+@plugin "daisyui" {
+  themes: all;
+}
 @import '@repo/design-system/shared-styles.css';
 @plugin '@tailwindcss/typography';
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
 
 /* @font-face {
   font-family: atkinson;

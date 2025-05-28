@@ -12,8 +12,7 @@
     "astro": "astro",
     "sync": "astro sync",
     "clean": "rm -rf dist && echo 'Done.'",
-    "format": "prettier . --write",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0",
     "help": "astro -- --help",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "fix": "eslint . --fix",
@@ -35,13 +34,12 @@
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
+    "daisyui": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/typography": "catalog:",
     "eslint": "catalog:",
     "open-props": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }

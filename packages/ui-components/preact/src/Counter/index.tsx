@@ -12,7 +12,7 @@ interface CounterProps {
 /** A counter written with Preact */
 function Counter({ children, class: className }: CounterProps) {
   const [count, setCount] = useState(0);
-  
+
   const add = useCallback(() => setCount((i) => i + 1), []);
   const subtract = useCallback(() => setCount((i) => i - 1), []);
 

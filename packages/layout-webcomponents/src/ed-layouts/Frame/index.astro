@@ -1,7 +1,6 @@
 ---
 import './Frame.css';
 
-
 // type  RatioType :
 interface Props {
   ratio?:
@@ -21,7 +20,7 @@ interface Props {
     | '1.6180:1';
 }
 
-const { ratio= '1:1' } = Astro.props;
+const { ratio = '1:1' } = Astro.props;
 ---
 
 <frame-l ratio={ratio}>

@@ -13,7 +13,6 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:*",
     "eslint": "catalog:",
-    "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "catalog:",
     "tsup": "catalog:",
     "typescript": "catalog:",
@@ -24,8 +23,8 @@
     "@tailwindcss/postcss": "catalog:",
     "@tailwindcss/typography": "catalog:",
     "@tailwindcss/vite": "catalog:",
+    "daisyui": "catalog:",
     "open-props": "catalog:",
-    "tailwindcss": "catalog:",
-    "daisyui": "catalog:"
+    "tailwindcss": "catalog:"
   }
 }

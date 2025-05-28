@@ -13,7 +13,7 @@ function Button({ color, children }: ButtonI) {
   };
   return (
     <button
-      className={`${colorVariants[color]} text-2xl p-4 rounded-md underline`}
+      className={`${colorVariants[color]} rounded-md p-4 text-2xl underline`}
     >
       {children}
     </button>

@@ -1,13 +1,6 @@
 @import 'tailwindcss';
-@import 'open-props/open-props.min.css';
-@plugin "daisyui" {
-  prefix: 'd-';
-  themes: all;
-  root: '#blog-app';
-}
-
-@plugin "@tailwindcss/typography";
-
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+/* @import 'open-props/open-props.min.css'; */
 @source not '@repo/styles';
 @source not '@repo/layout-webcomponents';
 
@@ -15,35 +8,17 @@
 @import '@repo/astro-ui/styles.css';
 @import './anims.css';
 
-:root {
-  --font-size-base: 1rem;
-  --ratio: 1.618;
-  --s0: var(--font-size-base);
-
-  --s000: calc(var(--s0) * pow(var(--ratio), -3));
-  --s00: calc(var(--s0) * pow(var(--ratio), -2));
-  --s1: calc(var(--s0) * pow(var(--ratio), 1));
-  --s2: calc(var(--s0) * pow(var(--ratio), 2));
-
-  --s3: calc(var(--s0) * pow(var(--ratio), 3));
-  --s4: calc(var(--s0) * pow(var(--ratio), 4));
-  --s5: calc(var(--s0) * pow(var(--ratio), 5));
-  --s6: calc(var(--s0) * pow(var(--ratio), 6));
-  --s7: calc(var(--s0) * pow(var(--ratio), 7));
-  --s8: calc(var(--s0) * pow(var(--ratio), 8));
-
-  --h0: 10;
-  --h1: calc(80vh / var(--h0) * pow(var(--ratio), 1));
-  --h2: calc(80vh / var(--h0) * pow(var(--ratio), 2));
-  --h3: calc(80vh / var(--h0) * pow(var(--ratio), 3));
-  --h4: calc(80vh / var(--h0) * pow(var(--ratio), 4));
-  --h5: calc(80vh / var(--h0) * pow(var(--ratio), 5));
-
-  --tw-prose-headings: var(--color-pink-900);
-
-  --line-height: var(--ratio);
-  --border-thin: var(--border-size-1);
-
-  --font-size-biggish: var(--s1);
-  --font-size-big: var(--s2);
+@plugin "daisyui" {
+  root: '#blog-app';
+  themes: all;
 }
+@plugin "daisyui/theme" {
+  name: 'light';
+  default: true;
+  --color-neutral: --gray-900;
+  --color-neutral-content: gray-100;
+  --btn-color: var(--color-neutral) /* var(--color-neutral) */;
+  --btn-fg: var(--color-neutral-content) /* var(--color-neutral-content) */;
+}
+
+@plugin "@tailwindcss/typography";

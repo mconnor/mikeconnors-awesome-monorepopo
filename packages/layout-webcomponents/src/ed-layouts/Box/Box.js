@@ -43,7 +43,7 @@ export default class Box extends HTMLElement {
   }
 
   set padding(val) {
-    return this.setAttribute('padding', val);
+    this.setAttribute('padding', val);
   }
 
   get borderWidth() {
@@ -51,7 +51,7 @@ export default class Box extends HTMLElement {
   }
 
   set borderWidth(val) {
-    return this.setAttribute('borderWidth', val);
+    this.setAttribute('borderWidth', val);
   }
 
   static get observedAttributes() {
@@ -64,9 +64,9 @@ export default class Box extends HTMLElement {
 
   set invert(val) {
     if (val) {
-      return this.setAttribute('invert', '');
+      this.setAttribute('invert', '');
     } else {
-      return this.removeAttribute('invert');
+      this.removeAttribute('invert');
     }
   }
 

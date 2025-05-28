@@ -6,12 +6,17 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./get-theme": "./get-theme.ts"
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    }
   },
   "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "check-types": "tsc --noEmit"
@@ -23,6 +28,7 @@
     "eslint": "catalog:",
     "typescript": "catalog:",
     "@repo/eslint-config": "workspace:^",
+    "@types/node": "catalog:",
     "@repo/typescript-config": "workspace:^"
   }
 }

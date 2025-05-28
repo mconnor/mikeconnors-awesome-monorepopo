@@ -1,4 +1,5 @@
 // @ts-check
+import 'eslint-plugin-only-warn';
 import js from '@eslint/js';
 // import barrelFiles from 'eslint-plugin-barrel-files';
 import eslintPluginAstro from 'eslint-plugin-astro';

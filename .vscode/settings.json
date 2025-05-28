@@ -2,15 +2,25 @@
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 8,
   "workbench.editor.limit.perEditorGroup": true,
+  // "workbench.tree.indent": 20,
+  // "workbench.tree.renderIndentGuides": "always",
+  // "workbench.iconTheme": "vs-seti",
+  "editor.formatOnSave": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
   "files.associations": {
-    "*.css": "tailwindcss"
+    "*.css": "tailwindcss",
+    "*.json": "jsonc"
   },
   "tailwindCSS.includeLanguages": {
+    "plaintext": "tailwindcss",
     "astro": "html"
   },
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.files.exclude": ["**/node_modules/**", "**/dist/**"],
   "tailwindCSS.classAttributes": [
     "class",
@@ -26,7 +36,10 @@
   "tailwindCSS.showPixelEquivalents": true,
   "tailwindCSS.colorDecorators": true,
   "tailwindCSS.classFunctions": ["tw", "clsx"],
+
   "emmet.includeLanguages": {
+    "plaintext": "tailwindcss",
+    "astro": "html",
     "postcss": "css",
     "javascript": "javascriptreact",
     "typescript": "typescriptreact",
@@ -47,11 +60,6 @@
     "**/coverage/**": true,
     "./pnpm-lock.yaml": true,
     "**/.svelte-kit/**": true
-  },
-  "[astro]": {
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": false,
-    "editor.formatOnType": false
   },
   "[svelte]": {
     "editor.formatOnSave": true,
@@ -80,23 +88,13 @@
     "toml"
   ],
   "breadcrumbs.filePath": "on",
-  "editor.renderWhitespace": "boundary",
-  "editor.minimap.enabled": false,
-  "editor.colorDecorators": true,
-  "editor.stickyScroll.enabled": true,
-  "editor.linkedEditing": true,
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
-  "editor.suggestOnTriggerCharacters": true,
+
   "explorer.compactFolders": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": true,
-  "workbench.tree.indent": 12,
-  "workbench.tree.renderIndentGuides": "always",
+
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
-  "terminal.integrated.scrollback": 10000,
   "editor.parameterHints.enabled": false,
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"

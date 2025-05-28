@@ -15,11 +15,11 @@ interface Props {
 const { price, level = 'basic', badgeBool, features } = Astro.props;
 ---
 
-<div class="d-card w-96 bg-base-100 shadow-sm">
-  <div class="d-card-body">
+<div class="card w-96 bg-base-100 shadow-sm">
+  <div class="card-body">
     {
       badgeBool && (
-       <span class="d-badge d-badge-xs d-badge-warning">Most Popular</span>
+        <span class="badge badge-xs badge-warning">Most Popular</span>
       )
     }
     <div class="flex justify-between">
@@ -34,7 +34,7 @@ const { price, level = 'basic', badgeBool, features } = Astro.props;
       }
     </ul>
     <div class="mt-6">
-      <button class="d-btn d-btn-block d-btn-primary">Subscribe</button>
+      <button class="btn btn-block btn-primary">Subscribe</button>
     </div>
   </div>
 </div>

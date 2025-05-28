@@ -1,3 +1,14 @@
 {
-  "cssvar.files": ["./node_modules/tailwindcss/index.css"]
+  "cssvar.files": ["./node_modules/tailwindcss/index.css"],
+  "css.lint.unknownAtRules": "ignore",
+  "tailwindCSS.experimental.configFile": {
+    "src/styles/global.css": "packages/a/src/**",
+    "@repo/design-system/styles.css": "packages/b/src/**",
+    "@repo/astro-ui/styles.css": "@repo/astro-ui/src/**",
+    "@repo/astro-wc/styles.css": "@repo/astro-wc/src/**"
+  },
+  "terminal.integrated.enableFileLinks": true,
+  "editor.links": true,
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false
 }

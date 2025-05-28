@@ -30,20 +30,20 @@
   "peerDependencies": {
     "eslint": ">=9"
   },
-  "dependencies": {
+  "devDependencies": {
     "@custom-elements-manifest/analyzer": "catalog:",
     "@eslint/css": "^0.8.1",
     "@eslint/eslintrc": "catalog:",
     "@eslint/js": "catalog:",
     "@eslint/json": "catalog:",
     "@eslint/markdown": "catalog:",
+    "eslint-plugin-only-warn": "catalog:",
     "@next/eslint-plugin-next": "catalog:",
     "astro-eslint-parser": "catalog:",
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-astro": "catalog:",
     "eslint-plugin-barrel-files": "catalog:",
     "eslint-plugin-lit": "catalog:",
-    "eslint-plugin-only-warn": "catalog:",
     "eslint-plugin-react": "catalog:",
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-regexp": "catalog:",

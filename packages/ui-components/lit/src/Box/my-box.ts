@@ -1,4 +1,4 @@
-import type { BorderStyle, RmUnitType } from '@repo/styles/Types';
+import type { BorderStyle, RmUnitType } from '#Types';
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';

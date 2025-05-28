@@ -13,7 +13,7 @@
     "astro-check": "astro check",
     "astro": "astro",
     "format": "prettier . --write",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"

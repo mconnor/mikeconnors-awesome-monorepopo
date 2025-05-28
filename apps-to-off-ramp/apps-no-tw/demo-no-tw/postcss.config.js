@@ -1,7 +1,4 @@
-// import config from '@repo/styles/postcss';
-// // const config = isDev || isTest ? devConfig : prodConfig;
 
-// export default config;
 
 import nano from 'cssnano';
 // import OpenProps from 'open-props';

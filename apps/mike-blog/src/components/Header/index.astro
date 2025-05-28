@@ -3,63 +3,65 @@ import HeaderLink from './MainNav/HeaderLink.astro';
 import { navLinks, OUTBOUND_LINKS } from '#app.config.ts';
 
 import IconLink from '@repo/astro-ui/IconLink';
-
+import DThemeDropDown from '@repo/astro-ui/DThemeDropDown';
 const CLASSNAME = 'h-10 w-10 fill-link-neutral stroke-neutral';
 const themes = [
   'light',
   'dark',
   'cupcake',
-  // 'bumblebee',
-  // 'emerald',
-  // 'corporate',
-  // 'synthwave',
+  'bumblebee',
+  'emerald',
+  'corporate',
+  'synthwave',
   'retro',
-  // 'cyberpunk',
+  'cyberpunk',
   'valentine',
-  // 'halloween',
-  // 'garden',
-  // 'forest',
-  //'aqua',
-  // 'lofi',
-  // 'pastel',
-  // 'fantasy',
-  // 'wireframe',
-  // 'black',
-  // 'luxury',
-  // 'dracula',
-  // 'cmyk',
-  // 'autumn',
-  // 'business',
-  // 'acid',
-  // 'lemonade',
-  // 'night',
-  // 'coffee',
-  // 'winter',
-  // 'dim',
-  // 'nord',
-  // 'sunset',
-  // 'caramellatte',
-  // 'abyss',
-  // 'silk',
+  'halloween',
+  'garden',
+  'forest',
+  'aqua',
+  'lofi',
+  'pastel',
+  'fantasy',
+  'wireframe',
+  'black',
+  'luxury',
+  'dracula',
+  'cmyk',
+  'autumn',
+  'business',
+  'acid',
+  'lemonade',
+  'night',
+  'coffee',
+  'winter',
+  'dim',
+  'nord',
+  'sunset',
+  'caramellatte',
+  'abyss',
+  'silk',
 ];
 ---
 
 <div
   class="flex max-w-full justify-between border-1 bg-primary-100 px-4 py-1 dark:bg-primary-800"
 >
-  <div class="d-join-horizontal d-join">
+  <!-- <div class="join join-horizontal">
     {
       themes.map((theme) => (
         <input
           type="radio"
-          name="theme-buttons"
-          class="d-theme-controller d-btn d-join-item"
+      name="theme-buttons"
+      class="btn theme-controller join-item"
           aria-label={theme}
           value={theme}
         />
       ))
     }
-  </div>
+
+  </div> -->
+  <DThemeDropDown themes={themes} />
 
   <div class="gap-0 sm:flex sm:flex-row sm:justify-end">
     {

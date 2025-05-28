@@ -18,7 +18,7 @@
     "lint:eslint-docs": "npm run update:eslint-docs -- --check",
     "inspect": "eslint  --inspect-config",
     "format": "prettier --write .",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix"
   },
   "dependencies": {

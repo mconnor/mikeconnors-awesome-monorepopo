@@ -3,5 +3,4 @@
 @import '@repo/design-system/shared-styles.css';
 
 @plugin "daisyui" {
-  prefix: 'd-';
 }

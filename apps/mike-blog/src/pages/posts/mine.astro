@@ -26,7 +26,7 @@ const sortedPosts = publishsedPosts.sort(
         sortedPosts.map(({ id, data }) => {
           const { title, description, date, cover, author, tags } = data;
           return (
-            <div class="card card-xs md:card-md justify-between shadow-xl">
+            <div class="card justify-between shadow-xl card-xs md:card-md">
               <figure>
                 {cover?.src && cover?.alt && (
                   <img src={cover.src} alt={cover.alt} />

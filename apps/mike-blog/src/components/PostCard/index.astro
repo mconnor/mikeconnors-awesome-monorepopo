@@ -12,22 +12,23 @@ const { href, data } = Astro.props;
 const { cover, title, description, tags } = data;
 ---
 
-
-<div class="d-image-full d-card w-96 bg-base-100 shadow-sm">
+<div class="image-full card w-96 bg-base-100 shadow-sm">
   <figure>
     <img src={cover!.src} alt={cover!.alt} />
   </figure>
 
+  <a
+    href={`/posts/${href}`}
+    class="absolute inset-0 z-10 rounded-2xl"
+    aria-label="Full card link"></a>
 
-  <a href={`/posts/${href}`} class="absolute inset-0 rounded-2xl z-10" aria-label="Full card link"></a>
-
-  <div class="d-card-body">
-    <h2 class="d-card-title">{title}</h2>
+  <div class="card-body">
+    <h2 class="card-title">{title}</h2>
     <p>{description}</p>
-    <div class="d-card-actions justify-end">
+    <div class="card-actions justify-end">
       {
         tags.map((tag) => (
-          <a href={`/tags/${tag}`} class="d-btn z-10 d-btn-primary">
+          <a href={`/tags/${tag}`} class="btn z-10 btn-primary">
             {tag}
           </a>
         ))
@@ -35,4 +36,3 @@ const { cover, title, description, tags } = data;
     </div>
   </div>
 </div>
-

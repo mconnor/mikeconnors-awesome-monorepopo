@@ -8,7 +8,7 @@ import markdown from '@eslint/markdown';
 export default [
   {
     // Apply the Markdown processor to all .md files
-    files: ['**/*.md'],
+    files: ['**/*.md', '**/*.mdoc'],
     plugins: {
       markdown,
     },

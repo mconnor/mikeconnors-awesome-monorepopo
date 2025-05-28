@@ -8,16 +8,13 @@
   },
   "exports": {
     "./DevModeStyle": "./src/DevModeStyle.astro",
-    "./styles.css": "./src/styles.css",
-    "./Types": "./src/Types.ts",
-    "./schemas": "./src/Schemas.ts"
+    "./styles.css": "./src/styles.css"
   },
   "scripts": {
     "astro-check": "astro check",
     "test": "echo \"Error: no test specified\" && exit 1",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
-    "lint": "eslint .",
-    "format": "prettier . --write",
+    "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
   },
@@ -28,19 +25,18 @@
     "@astrojs/check": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "open-props": "catalog:",
+    "astro": "catalog:",
     "cssnano": "catalog:",
+    "eslint": "catalog:",
+    "open-props": "catalog:",
     "postcss-custom-media": "catalog:",
     "postcss-html": "catalog:",
     "postcss-import": "catalog:",
     "postcss-jit-props": "catalog:",
     "postcss-nesting": "catalog:",
     "postcss-pow": "catalog:",
-    "astro": "catalog:",
-    "eslint": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "typescript": "catalog:",
-    "zod": "catalog:"
+    "stylelint": "^16.19.1",
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "astro": ">=5"

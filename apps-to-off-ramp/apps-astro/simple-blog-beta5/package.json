@@ -12,8 +12,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier . --write",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "fix": "eslint . --fix",
     "check-types": "tsc --noEmit"
@@ -31,7 +30,6 @@
     "@repo/eslint-config": "workspace:^2.0.0",
     "@repo/typescript-config": "workspace:^2.0.0",
     "eslint": "catalog:",
-    "prettier-plugin-astro": "^0.14.1",
     "typescript": "catalog:",
     "vitest": "catalog:"
   },

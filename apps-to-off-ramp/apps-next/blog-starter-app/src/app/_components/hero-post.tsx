@@ -11,7 +11,6 @@ interface Props {
   excerpt: string;
   author: Author;
   slug: string;
-
 }
 
 export function HeroPost({

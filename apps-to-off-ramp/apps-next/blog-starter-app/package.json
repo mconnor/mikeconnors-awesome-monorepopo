@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "format": "prettier . --write",
-    "lint": "eslint .",
+    "lint": "eslint --max-warnings=0",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "fix": "eslint . --fix",
     "build": "next build",
