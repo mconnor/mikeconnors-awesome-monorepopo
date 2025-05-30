@@ -2,6 +2,20 @@
   "workbench.editor.limit.enabled": true,
   "workbench.editor.limit.value": 8,
   "workbench.editor.limit.perEditorGroup": true,
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": "./.vscode/daisyui.md"
+    }
+  ],
+  "mcp": {
+    "servers": {
+      "Context7": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp@latest"]
+      }
+    }
+  },
   // "workbench.tree.indent": 20,
   // "workbench.tree.renderIndentGuides": "always",
   // "workbench.iconTheme": "vs-seti",
