@@ -8,21 +8,25 @@ const CLASSNAME = 'h-10 w-10 fill-link-neutral stroke-neutral';
 import { daisyuiThemes } from '#utils/daisyui-themes.ts';
 ---
 
-<div class="flex max-w-full justify-between border-1 px-4 py-1">
-  <DThemeDropDown themes={[...daisyuiThemes]} />
-
-  <div class="gap-0 sm:flex sm:flex-row sm:justify-end">
-    {
-      navLinks.map(({ href, label, subPages }, index) => (
-        <HeaderLink href={href} subPages={subPages}>
-          <span slot="activeTab">{label}</span>
-          <span slot="btnContents">{label}</span>
-        </HeaderLink>
-      ))
-    }
+<div class="navbar bg-base-100 shadow-sm">
+  <div class="flex-0">
+    <DThemeDropDown themes={[...daisyuiThemes]} />
   </div>
 
-  <div class="gap-2 sm:flex sm:flex-row sm:justify-end sm:gap-5">
+  <div class="flex-1 border-1">
+    <div class="flex flex-row justify-end-safe gap-4">
+      {
+        navLinks.map(({ href, label, subPages }, index) => (
+          <HeaderLink href={href} subPages={subPages}>
+            <span slot="activeTab">{label}</span>
+            <span slot="btnContents">{label}</span>
+          </HeaderLink>
+        ))
+      }
+    </div>
+  </div>
+
+  <div class="flex flex-0 flex-row gap-2">
     {
       OUTBOUND_LINKS.map(({ url, logo }) => (
         <IconLink href={url} class={CLASSNAME} icon={logo} />
@@ -30,3 +34,4 @@ import { daisyuiThemes } from '#utils/daisyui-themes.ts';
     }
   </div>
 </div>
+<!-- flex  flex-row content-center gap-4 border-1 -->

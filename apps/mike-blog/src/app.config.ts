@@ -55,7 +55,7 @@ const OUTBOUND_LINKS: OutboundLinksType[] = [
   DISCORD,
 ] as const;
 
-interface NavLinkI {
+export interface NavLinkI {
   label: string;
   href: string;
   icon?: string;
@@ -66,11 +66,11 @@ const navLinks: NavLinkI[] = [
   // { label: 'countries', href: '/countries', icon: 'country' },
   // { label: 'buttons', href: '/buttons', icon: 'home' },
   { label: 'Blog', href: '/posts', icon: 'blog', subPages: true },
-  { label: 'Swatches', href: '/swatch', icon: 'blog', subPages: true },
+  { label: 'Swatches', href: '/swatch', icon: 'blog' },
   // { label: 'Sidebar', href: '/about', icon: 'projects' },
   // { label: 'form', href: '/form-test', icon: 'projects' },
-  { label: 'contact', href: '/contact', icon: 'projects' },
-  { label: 'cv', href: '/resume', icon: 'projects' },
+  { label: 'Contact', href: '/contact', icon: 'projects' },
+  { label: 'CV', href: '/resume', icon: 'projects' },
   // { label: 'blank', href: '/blank', icon: 'projects' },
   // { label: 'announcements', href: '/announcements', icon: 'projects' },
 
