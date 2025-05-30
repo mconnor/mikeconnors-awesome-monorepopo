@@ -10,21 +10,12 @@
     "./postcss": "./postcss.config.js"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:^",
-    "@repo/typescript-config": "workspace:*",
-    "eslint": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
-    "tsup": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:"
+    "prettier-plugin-tailwindcss": "catalog:"
   },
   "dependencies": {
-    "@tailwindcss/cli": "catalog:",
     "@tailwindcss/postcss": "catalog:",
     "@tailwindcss/typography": "catalog:",
-    "@tailwindcss/vite": "catalog:",
     "daisyui": "catalog:",
-    "open-props": "catalog:",
     "tailwindcss": "catalog:"
   }
 }
