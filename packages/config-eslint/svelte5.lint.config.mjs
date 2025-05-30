@@ -11,10 +11,7 @@ import extensionInstanceObj from './fileExtensions.mjs';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 export default tseslint.config({
-  extends: [
-    ...svelte.configs['flat/recommended'],
-    ...svelte.configs['flat/prettier'],
-  ],
+  extends: [...svelte.configs.recommended, ...svelte.configs.prettier],
   files: ['**/*.svelte'],
 
   languageOptions: {
@@ -24,4 +21,5 @@ export default tseslint.config({
       extraFileExtensions,
     },
   },
+  rules: { 'no-undef': 'off' },
 });

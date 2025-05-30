@@ -35,7 +35,7 @@
     "postcss-jit-props": "catalog:",
     "postcss-nesting": "catalog:",
     "postcss-pow": "catalog:",
-    "stylelint": "^16.19.1",
+    "stylelint": "^16.20.0",
     "typescript": "catalog:"
   },
   "peerDependencies": {
