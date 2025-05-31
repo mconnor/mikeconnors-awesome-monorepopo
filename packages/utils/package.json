@@ -3,16 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "main": "./dist/cn.js",
-  "module": "./dist/cn.mjs",
-  "types": "./dist/cn.d.ts",
   "imports": {
     "#*": "./src/*"
   },
   "exports": {
     "./cn": {
       "types": "./dist/cn.d.ts",
-      "default": "./dist/cn.js"
+      "import": "./dist/cn.js"
     }
   },
   "scripts": {
