@@ -7,15 +7,7 @@
       "file": "./.vscode/daisyui.md"
     }
   ],
-  "mcp": {
-    "servers": {
-      "Context7": {
-        "type": "stdio",
-        "command": "npx",
-        "args": ["-y", "@upstash/context7-mcp@latest"]
-      }
-    }
-  },
+
   // "workbench.tree.indent": 20,
   // "workbench.tree.renderIndentGuides": "always",
   // "workbench.iconTheme": "vs-seti",
@@ -114,5 +106,20 @@
     "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
   },
   "editor.lineNumbers": "on",
-  "explorer.incrementalNaming": "simple"
+  "explorer.incrementalNaming": "simple",
+  "mcp": {
+    
+    "inputs": [],
+    "servers": {
+      "mcp-server-time": {
+        "command": "python",
+        "args": [
+          "-m",
+          "mcp_server_time",
+          "--local-timezone=America/Los_Angeles"
+        ],
+        "env": {}
+      }
+    }
+  }
 }
