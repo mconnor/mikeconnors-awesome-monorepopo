@@ -20,6 +20,10 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "clean": "rm -rf dist"
   },
+  "dependencies": {
+    "@repo/design-system": "workspace:*",
+    "@repo/layout-webcomponents": "workspace:*"
+  },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
