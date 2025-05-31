@@ -33,7 +33,7 @@
     "prettier-plugin-tailwindcss": "catalog:",
     "prettier-plugin-toml": "catalog:",
     "prettier-plugin-vue": "catalog:",
-    "turbo": "catalog:"
+    "turbo": "^2.5.4"
   },
   "engines": {
     "node": ">= 22.9.0"
