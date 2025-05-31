@@ -43,7 +43,8 @@
 	</p>
 </div>
 
-<style>
+<style lang="postcss">
+	@reference "tailwindcss";
 	span {
 		display: inline-flex;
 		justify-content: center;
@@ -63,14 +64,20 @@
 		color: rgba(0, 0, 0, 0.5);
 	}
 
-	.close {
+	/* .close {
 		border-style: solid;
 		border-color: var(--color-theme-2);
+	} */
+	.close {
+		@apply border-theme-2 border-1;
 	}
-
+	/* 
 	.exact {
 		background: var(--color-theme-2);
 		color: white;
+	} */
+	.exact {
+		@apply bg-theme-2 text-white;
 	}
 
 	.example {
