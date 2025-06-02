@@ -14,10 +14,10 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
 
 {
   isActive && !rest.subPages ?
-    <div class="btn p-2 btn-ghost">
+    <div class="btn btn-ghost">
       <slot name="activeTab" />
     </div>
-  : <a role="button" href={href} class="btn p-2 btn-accent" data-astro-reload>
+  : <a role="button" href={href} class="btn btn-primary">
       <slot name="btnContents" />
     </a>
 }

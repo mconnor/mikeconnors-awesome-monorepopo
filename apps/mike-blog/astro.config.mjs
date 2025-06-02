@@ -70,7 +70,7 @@ export default defineConfig({
   // scopedStyleStrategy: 'attribute',
 
   integrations: [icon(), mdx()],
-  output: 'server',
+  output: 'static',
   adapter: vercel({
     imageService: true,
     devImageService: 'sharp',

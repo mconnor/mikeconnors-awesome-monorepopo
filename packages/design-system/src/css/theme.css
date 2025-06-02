@@ -1,6 +1,6 @@
 @theme {
-  --font-hero: var(--font-transitional);
-  --font-display: "Oswald", "sans-serif";
+  /* --font-hero: var(--font-transitional);
+  --font-display: "Oswald", "sans-serif"; */
 
   /* theme variables defined in the --font-* namespace determine
    all of the font-family utilities that exist in a project: */

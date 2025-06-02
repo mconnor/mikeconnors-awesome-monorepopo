@@ -72,7 +72,7 @@ const navLinks: NavLinkI[] = [
   { label: 'Contact', href: '/contact', icon: 'projects' },
   { label: 'CV', href: '/resume', icon: 'projects' },
   // { label: 'blank', href: '/blank', icon: 'projects' },
-  // { label: 'announcements', href: '/announcements', icon: 'projects' },
+  { label: 'announcements', href: '/announcements', icon: 'projects' },
 
   // { label: 'CV', href: '/cv', icon: 'cv' },
   // { label: 'Store', href: '/store', icon: 'store' },

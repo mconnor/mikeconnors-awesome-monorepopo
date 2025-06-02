@@ -5,9 +5,9 @@ import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 
 import Header from '#components/Header/index.astro';
 // import Header from '#components/DaisyHeader/index.astro';
-import Footer from '#components/Footer/index.astro';
+// import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
-import { slide } from 'astro:transitions';
+// import { slide } from 'astro:transitions';
 interface Props {
   maxW?: RmUnitType;
   children: unknown;
@@ -15,18 +15,19 @@ interface Props {
   description?: string;
 }
 
-const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
+const { maxW = '60ch', ...rest } = Astro.props;
 ---
 
 <BaseLayout {...rest}>
-  <Cover centeredElement="center-l" space="0">
-    <Header transition:persist />
-
-    <Center max={maxW}>
-      <div transition:animate={slide({ duration: '2.4s' })}><slot /></div>
-    </Center>
-
-    <!-- <Footer /> -->
-  </Cover>
+  <div class="flex min-h-screen flex-col">
+    <Header />
+    <div class="m-auto max-w-6/10 border-1">
+      <slot />
+    </div>
+    <footer class="mt-auto flex items-center justify-center p-4">
+      <p class="text-sm text-gray-500">
+        © {new Date().getFullYear()} Mike Connor. All rights reserved.
+      </p>
+    </footer>
+  </div>
 </BaseLayout>
-x

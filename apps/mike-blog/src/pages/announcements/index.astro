@@ -7,11 +7,11 @@ import Layout from '#layouts/Layout.astro';
 const announcements = await getCollection('announcements');
 ---
 
-<Layout>
+<Layout title="Announcements" maxW="80vw">
   <ul>
     {
       announcements.map(({ id, data }) => (
-        <li>
+        <li class="p-2">
           <a href={`/announcements/${id}`}>{data.title}</a>
         </li>
       ))
