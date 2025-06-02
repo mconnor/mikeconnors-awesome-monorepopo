@@ -6,10 +6,6 @@ import Layout from '#layouts/Layout.astro';
 
 export const prerender = true;
 
-// interface Props {
-//   posts: CollectionEntry<'blog'>[];
-// }
-
 export async function getStaticPaths() {
   const publishsedPosts = await getCollection(
     'blog',

@@ -6,6 +6,7 @@ const { id } = Astro.params;
 
 if (id === undefined) Astro.redirect('/404');
 
+export const prerender = false;
 // type Props = CollectionEntry<'authors'>;
 
 const author = await getEntry('authors', id!);
