@@ -12,20 +12,21 @@
     }
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
     "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsup --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "eslint": "catalog:",
+    "tsup": "catalog:",
     "typescript": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@types/node": "catalog:",

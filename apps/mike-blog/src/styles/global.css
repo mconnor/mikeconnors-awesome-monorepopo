@@ -9,16 +9,7 @@
 @import './anims.css';
 
 @plugin "daisyui" {
-  root: '#blog-app';
   themes: all;
-}
-
-@plugin "daisyui/theme" {
-  themes: light --default bumblebee, dark --prefersdark, halloween;
-  /* name: 'light';
-  default: true;
-  --color-neutral: oklch(14% 0.005 285.823);
-  --color-neutral-content: oklch(92% 0.004 286.32); */
 }
 
 @plugin "@tailwindcss/typography";

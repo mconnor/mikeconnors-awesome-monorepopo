@@ -36,11 +36,9 @@ export class MyTimer extends LitElement {
     return html`
       <h1>${min ? `${min}:${sec}` : `${sec}.${hun}`}</h1>
       <footer>
-        ${
-          remaining === 0 ? ''
-          : running ? html`<span @click=${this.pause}>${pause}</span>`
-          : html`<span @click=${this.start}>${play}</span>`
-        }
+        ${remaining === 0 ? ''
+        : running ? html`<span @click=${this.pause}>${pause}</span>`
+        : html`<span @click=${this.start}>${play}</span>`}
 
         <span @click=${this.reset}>${replay}</span>
       </footer>

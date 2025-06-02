@@ -56,7 +56,6 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@sveltejs/vite-plugin-svelte": "catalog:",
-    "eslint": "catalog:",
-    "prettier-plugin-astro": "catalog:"
+    "eslint": "catalog:"
   }
 }

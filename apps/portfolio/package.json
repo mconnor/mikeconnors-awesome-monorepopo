@@ -22,7 +22,8 @@
     "@astrojs/check": "catalog:",
     "@repo/layout-webcomponents": "workspace:*",
     "astro": "catalog:",
-    "astro-icon": "catalog:"
+    "astro-icon": "catalog:",
+    "@repo/scripts": "workspace:^"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",

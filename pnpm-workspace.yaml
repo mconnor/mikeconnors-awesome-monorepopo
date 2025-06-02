@@ -15,7 +15,7 @@ catalogs:
     '@testing-library/svelte': ^5.2.8
     '@testing-library/jest-dom': ^6.6.3
 
-    svelte: ^5.33.10
+    svelte: ^5.33.12
     svelte-check: ^4.2.1
     svelte-preprocess: ^6.0.3
     prettier-plugin-svelte: ^3.4.0
@@ -89,7 +89,7 @@ catalog:
   eslint-plugin-regexp: ^2.7.0
   eslint-plugin-simple-import-sort: ^12.1.1
   eslint-plugin-solid: ^0.14.5
-  eslint-plugin-svelte: ^3.9.0
+  eslint-plugin-svelte: ^3.9.1
   eslint-plugin-turbo: ^2.5.4
   eslint-plugin-vue: ^10.1.0
   eslint-plugin-wc: ^3.0.1

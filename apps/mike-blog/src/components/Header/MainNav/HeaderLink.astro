@@ -17,7 +17,7 @@ const isActive = href === pathname || href === '/' + subpath?.[0];
     <div class="btn p-2 btn-ghost">
       <slot name="activeTab" />
     </div>
-  : <a role="button" href={href} class="btn p-2 btn-accent">
+  : <a role="button" href={href} class="btn p-2 btn-accent" data-astro-reload>
       <slot name="btnContents" />
     </a>
 }

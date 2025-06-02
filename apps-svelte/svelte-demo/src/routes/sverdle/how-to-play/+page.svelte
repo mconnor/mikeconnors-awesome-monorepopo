@@ -68,13 +68,11 @@
 		border-style: solid;
 		border-color: var(--color-theme-2);
 	}
-	
-	
+
 	.exact {
 		background: var(--color-theme-2);
 		color: white;
-	} 
-	
+	}
 
 	.example {
 		display: flex;

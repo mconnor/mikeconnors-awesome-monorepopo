@@ -44,7 +44,7 @@ export type DaisyUITheme = (typeof daisyuiThemes)[number];
 
 // Helper to check if a string is a valid DaisyUI theme
 export function isValidDaisyUITheme(theme: string): theme is DaisyUITheme {
-  return daisyuiThemes.includes(theme as any);
+  return daisyuiThemes.includes(theme as unknown);
 }
 
 // Export default grouped by light/dark for easier usage

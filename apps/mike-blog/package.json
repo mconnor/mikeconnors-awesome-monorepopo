@@ -45,6 +45,7 @@
     "@repo/astro-ui": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@repo/icon-paths": "workspace:*",
+    "@repo/scripts": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/ui-lit": "workspace:*",
     "@repo/utils": "workspace:*",

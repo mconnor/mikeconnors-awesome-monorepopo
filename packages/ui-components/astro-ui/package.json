@@ -28,27 +28,28 @@
   "license": "ISC",
   "dependencies": {
     "@repo/icon-paths": "workspace:^",
-    "lorem-ipsum": "catalog:",
     "@tailwindcss/vite": "catalog:",
-    "tailwindcss": "catalog:"
+    "lorem-ipsum": "catalog:",
+    "tailwindcss": "catalog:",
+    "theme-change": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
-    "@repo/eslint-config": "workspace:^",
     "@repo/design-system": "workspace:^",
+    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
     "astro": "catalog:",
+    "daisyui": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "typescript": "catalog:",
-    "daisyui": "catalog:",
-    "@tailwindcss/cli": "catalog:",
     "vite": "catalog:"
   },
   "peerDependencies": {
-    "tailwindcss": ">=4",
-    "astro": ">=5"
+    "astro": ">=5",
+    "tailwindcss": ">=4"
   }
 }

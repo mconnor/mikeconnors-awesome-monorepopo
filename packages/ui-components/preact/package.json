@@ -18,8 +18,6 @@
     "build:components": "tsup",
     "dev:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css --watch",
     "dev:components": "tsup --watch",
-    "lint": "echo skip: no linting specified",
-    "fix": "echo skip: no fixing specified",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
     "check-types": "echo skip: check-types",

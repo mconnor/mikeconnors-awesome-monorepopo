@@ -45,9 +45,9 @@ const { title, description, image = 'andy-og.jpeg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 {image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
-<meta name="color-scheme" content="dark light" />
+<!-- <meta name="color-scheme" content="dark light" /> -->
 
-<script is:inline>
+<!-- <script is:inline>
   document.addEventListener('astro:page-load', () => {
     console.log('astro:page-load');
     const storedTheme = localStorage.getItem('theme');
@@ -59,7 +59,7 @@ const { title, description, image = 'andy-og.jpeg' } = Astro.props;
       doc.setAttribute('data-theme', 'light');
     }
   });
-</script>
+</script> -->
 
 <!-- <script src="https://unpkg.com/lucide@latest"></script> -->
 
@@ -84,3 +84,31 @@ const { title, description, image = 'andy-og.jpeg' } = Astro.props;
 </script> -->
 
 <ClientRouter />
+
+<script is:inline>
+  function applyTheme() {
+    if (localStorage.getItem('theme') === null) {
+      document.documentElement.setAttribute('data-theme', 'halloween');
+    } else
+      document.documentElement.setAttribute(
+        'data-theme',
+        localStorage.getItem('theme'),
+      );
+  }
+
+  document.addEventListener('astro:after-swap', applyTheme);
+  applyTheme();
+  // ☝️ This script prevent the FART effect.
+
+  // console.log(
+  //   'Theme set to: ' + localStorage.getItem('theme') + ' by default.',
+  // );
+  // "theme" LocalStorage value is set by the package to remember user preference.
+  // The value is checked and applyed before rendering anything.
+</script>
+
+<script>
+  import { themeChange } from 'theme-change';
+  themeChange();
+  // 👆 you could import the CDN directly instead of these two lines
+</script>
