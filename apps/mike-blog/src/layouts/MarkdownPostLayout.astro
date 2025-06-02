@@ -2,7 +2,7 @@
 import Layout from '#layouts/Layout.astro';
 // import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-
+import Prose from '#components/Prose.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, date, cover, author, tags } = Astro.props;
@@ -20,7 +20,7 @@ const { title, description, date, cover, author, tags } = Astro.props;
 
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW="60ch">
-  <div class="prose prose-slate">
+  <Prose>
     <h1 class="capitalize">{title}</h1>
     <p>Published on: {date}</p>
     <figure>
@@ -35,5 +35,5 @@ const { title, description, date, cover, author, tags } = Astro.props;
       }
     </figure>
     <slot />
-  </div></Layout
+  </Prose></Layout
 >

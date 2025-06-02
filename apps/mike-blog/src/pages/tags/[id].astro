@@ -30,15 +30,17 @@ const { id } = Astro.params;
 const { posts } = Astro.props;
 ---
 
-<Layout title={id ?? 'needs title'}>
-  {
-    posts.map(({ data, id }) => (
-      <BlogCard
-        backgroundColor="var(--surface-4)"
-        foregroundColor="var(--text-2)"
-        id={id}
-        postData={data}
-      />
-    ))
-  }
+<Layout title={id}>
+  <div class="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2">
+    {
+      posts.map(({ data, id }) => (
+        <BlogCard
+          backgroundColor="var(--surface-4)"
+          foregroundColor="var(--text-2)"
+          id={id}
+          postData={data}
+        />
+      ))
+    }
+  </div>
 </Layout>

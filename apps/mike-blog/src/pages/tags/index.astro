@@ -8,8 +8,6 @@ import { tagCountTypeSchema, zTags } from '#schemas/index.js';
 
 const allBlogPost = await getCollection('blog');
 
-// const allBlogDataObjs = allBlogPost.map((post) => post);
-
 /// we only need a list of unique tags and their counts
 const slugTags = allBlogPost
   .filter((post) => post.data.draft !== true)
@@ -26,7 +24,22 @@ const slugTags = allBlogPost
 //   throw new Error('Invalid blog post data');
 // }
 
-const zString = z.string();
+// This improved regex pattern:
+
+// Starts with a lowercase letter (^[a-z])
+// Can be followed by any number of lowercase letters or dashes ((?:[a-z-]*)
+// Must end with a lowercase letter if there are more characters ([a-z])?$)
+// The pattern will match:
+
+// Single lowercase letters like "a"
+// Words like "blog"
+// Hyphenated terms like "web-development" or "react-hooks"
+// But will reject:
+
+// "-blog" (starts with dash)
+// "blog-" (ends with dash)
+// "blog--post" (allows consecutive dashes, modify if this is undesired)
+const zString = z.string().regex(/^[a-z](?:[a-z-]*[a-z])?$/);
 
 const tagCountsObject = slugTags.reduce(
   (tagCountAcc, post) => {
@@ -57,7 +70,7 @@ if (!tagCountSuccess) {
 }
 ---
 
-<Layout title="Tag Index" description="Index of tags">
+<Layout title="Tag Index" description="Index of tags" title="Tags">
   <Box padding="2rem">
     {
       zUniqueTagArray.success && tagCountSuccess ?

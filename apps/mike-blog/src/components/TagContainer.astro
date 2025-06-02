@@ -1,27 +1,25 @@
 ---
-// import { Debug } from 'astro:components';
-
-import Cluster from '@repo/layout-webcomponents/Cluster';
 import Icon from '@repo/layout-webcomponents/Icon';
-import Box from '@repo/layout-webcomponents/Box';
+
 interface Props {
   tags: string[];
-  tagCounts?: Record<string, number>;
+  tagCounts: Record<string, number>;
   // children: never;
 }
-const { tags, tagCounts } = Astro.props;
 
-// const keys = Object.keys(tagCounts);
+const { tags, tagCounts } = Astro.props;
+console.log(tagCounts);
 ---
 
-<Cluster space="var(--s0)">
+<div class="flex flex-row flex-wrap gap-2">
   {
-    tags
-      .filter((tag) => tag !== undefined)
-      .map((tag) => (
-        <Box borderStyle="dotted">
-          <a href={`/tags/${tag}`}>
-            <Icon space="var(--size-1)">
+    tagCounts &&
+      Object.entries(tagCounts).map(([tag, count]) => (
+        <div class="badge badge-lg badge-primary">
+          <a href={`/tags/${tag}`} class="link link-hover">
+            🏷️
+            {tag}: {count}
+            {/* <Icon space="1rem">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="16"
@@ -30,19 +28,10 @@ const { tags, tagCounts } = Astro.props;
               >
                 <path d="M0 80V229.5c0 17 6.7 33.3 18.7 45.3l176 176c25 25 65.5 25 90.5 0L418.7 317.3c25-25 25-65.5 0-90.5l-176-176c-12-12-28.3-18.7-45.3-18.7H48C21.5 32 0 53.5 0 80zm112 32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z" />
               </svg>
-
-              {tagCounts ? `${tag}, ${tagCounts[tag]}` : `${tag}`}
-            </Icon>
+              {tag}: {count}
+            </Icon> */}
           </a>
-        </Box>
+        </div>
       ))
   }
-</Cluster>
-<style>
-  .cluster-l box-l:empty:nth-child(3n) {
-    min-inline-size: 6rem;
-  }
-  .cluster-l box-l:empty:nth-child(3n + 2) {
-    min-inline-size: 8rem;
-  }
-</style>
+</div>

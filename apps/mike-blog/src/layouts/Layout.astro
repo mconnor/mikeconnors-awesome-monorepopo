@@ -15,15 +15,18 @@ interface Props {
   description?: string;
 }
 
-const { maxW = '60ch', ...rest } = Astro.props;
+const { maxW = '60ch', title, ...rest } = Astro.props;
 ---
 
 <BaseLayout {...rest}>
   <div class="flex min-h-screen flex-col">
     <Header />
-    <div class="m-auto max-w-6/10 border-1">
+    <main
+      class="m-auto flex max-w-6/10 flex-col items-center justify-center p-4"
+    >
+      {title && <h2 class="pb-3 text-lg">{title}</h2>}
       <slot />
-    </div>
+    </main>
     <footer class="mt-auto flex items-center justify-center p-4">
       <p class="text-sm text-gray-500">
         © {new Date().getFullYear()} Mike Connor. All rights reserved.
