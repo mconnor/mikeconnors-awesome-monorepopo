@@ -6,12 +6,13 @@
 interface Props {
   title: string;
   description: string;
-  image?: string;
+  image?: ImageMetadata;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+import FallbackImage from '../assets/andy-og.webp';
 
-const { title, description, image = 'andy-og.webp' } = Astro.props;
+const { title, description, image = FallbackImage } = Astro.props;
 
 // const isDev = process.env.NODE_ENV === 'development';
 // const isTest = process.env.NODE_ENV === 'test';
@@ -37,14 +38,18 @@ const { title, description, image = 'andy-og.webp' } = Astro.props;
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={new URL(image.src, Astro.url)} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-{image && <meta property="twitter:image" content={new URL(image, Astro.url)} />}
+{
+  image && (
+    <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
+  )
+}
 <!-- <meta name="color-scheme" content="dark light" /> -->
 
 <!-- <script is:inline>
