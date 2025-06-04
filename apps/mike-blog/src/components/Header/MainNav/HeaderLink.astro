@@ -9,16 +9,21 @@ const { href, ...rest } = Astro.props;
 
 const { pathname } = Astro.url;
 const subpath = pathname.match(/[^/]+/g);
-const isActive = href === pathname || href === '/' + subpath?.[0];
+const isActive = href === pathname;
+// || href === '/' + subpath?.[0];
+console.log('---------');
+console.log('href', href);
+console.log('pathname', pathname);
+// console.log('subpath', subpath);
 ---
 
 {
-  isActive && !rest.subPages ?
-    <div class="btn btn-ghost">
-      <slot name="activeTab" />
-    </div>
-  : <a role="button" href={href} class="btn btn-primary">
-      <slot name="btnContents" />
+  isActive ?
+    <button class="btn-small btn btn-active">
+      <slot />
+    </button>
+  : <a role="button" href={href} class="btn-small btn btn-ghost">
+      <slot />
     </a>
 }
 

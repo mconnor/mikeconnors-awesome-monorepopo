@@ -1,11 +1,10 @@
 ---
 import HeaderLink from './MainNav/HeaderLink.astro';
 import { navLinks, OUTBOUND_LINKS } from '#app.config.ts';
-//
 
 import IconLink from '@repo/astro-ui/IconLink';
 import DThemeDropDown from '#components/DThemeDropDown/index.astro';
-const CLASSNAME = 'h-10 w-10 fill-link-neutral stroke-neutral';
+
 import { daisyuiThemes } from '#utils/daisyui-themes.ts';
 ---
 
@@ -14,13 +13,12 @@ import { daisyuiThemes } from '#utils/daisyui-themes.ts';
     <DThemeDropDown themes={[...daisyuiThemes]} />
   </div>
 
-  <div class="flex-1 border-1">
+  <div class="flex-1">
     <div class="flex flex-row justify-end-safe gap-4">
       {
         navLinks.map(({ href, label, subPages }, index) => (
           <HeaderLink href={href} subPages={subPages}>
-            <span slot="activeTab">{label}</span>
-            <span slot="btnContents">{label}</span>
+            {label}
           </HeaderLink>
         ))
       }
@@ -30,7 +28,11 @@ import { daisyuiThemes } from '#utils/daisyui-themes.ts';
   <div class="flex flex-0 flex-row gap-2">
     {
       OUTBOUND_LINKS.map(({ url, logo }) => (
-        <IconLink href={url} class={CLASSNAME} icon={logo} />
+        <IconLink
+          href={url}
+          class="h-10 w-10 fill-accent stroke-accent stroke-1"
+          icon={logo}
+        />
       ))
     }
   </div>

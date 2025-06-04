@@ -9,12 +9,7 @@ interface Props extends IconProps {
   class: string;
 }
 
-const {
-  href,
-  icon,
-  class:
-    className = 'fill-gray-900 stroke-gray-900 dark:fill-gray-50 dark:stroke-gray-50 h-10 w-10',
-} = Astro.props;
+const { href, icon, class: className } = Astro.props;
 ---
 
 <link-icon>
