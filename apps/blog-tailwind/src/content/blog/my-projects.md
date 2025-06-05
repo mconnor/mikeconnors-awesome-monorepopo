@@ -4,7 +4,7 @@ pubDate: 2022-09-01
 author: mike-connor
 description: 'Morlochs and Eloi'
 cover:
-  src: 'https://picsum.photos/400/300?random=5'
+  src: 'https://picsum.photos/1600/900?random=5'
   alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['astro', 'blogging', 'learning-in-public']
 ---

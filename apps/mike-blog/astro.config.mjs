@@ -12,13 +12,14 @@ export default defineConfig({
   outDir: 'dist',
   site: 'https://staging.mikeconnor.tech/',
   image: {
-    domains: [
-      'astro.build',
-      'picsum.photos',
-      'https://doodleipsum.com',
-      'unsplash.com',
-      'img.daisyui.com',
-    ],
+    remotePatterns: [{ protocol: 'https' }],
+    // domains: [
+    //   'astro.build',
+    //   'picsum.photos',
+    //   'https://doodleipsum.com',
+    //   'unsplash.com',
+    //   'img.daisyui.com',
+    // ],
     // Used for all `<Image />` and `<Picture />` components unless overridden
 
     // experimentalBreakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
@@ -51,6 +52,10 @@ export default defineConfig({
       //   filename: 'stats.html',
       // }),
     ],
+  },
+  build: {
+    // Example: Generate `page.html` instead of `page/index.html` during build.
+    format: 'file',
   },
 
   // env: {

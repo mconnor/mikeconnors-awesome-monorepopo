@@ -63,9 +63,10 @@ export interface NavLinkI {
 }
 const navLinks: NavLinkI[] = [
   { label: 'Home', href: '/', icon: 'home' },
+  { label: 'About', href: '/about', icon: 'projects' },
   // { label: 'countries', href: '/countries', icon: 'country' },
   // { label: 'buttons', href: '/buttons', icon: 'home' },
-  { label: 'Blog', href: '/posts', icon: 'blog', subPages: true },
+  { label: 'Posts', href: '/posts', icon: 'blog', subPages: true },
   { label: 'Swatches', href: '/swatch', icon: 'blog' },
   // { label: 'Sidebar', href: '/about', icon: 'projects' },
   // { label: 'form', href: '/form-test', icon: 'projects' },
@@ -73,8 +74,8 @@ const navLinks: NavLinkI[] = [
   { label: 'Tags', href: '/tags', icon: 'projects' },
   { label: 'CV', href: '/resume', icon: 'projects' },
   // { label: 'blank', href: '/blank', icon: 'projects' },
-  { label: 'announcements', href: '/announcements', icon: 'projects' },
-  { label: 'get-started', href: '/get-started', icon: 'projects' },
+  // { label: 'announcements', href: '/announcements', icon: 'projects' },
+  // { label: 'get-started', href: '/get-started', icon: 'projects' },
 
   // { label: 'CV', href: '/cv', icon: 'cv' },
   // { label: 'Store', href: '/store', icon: 'store' },

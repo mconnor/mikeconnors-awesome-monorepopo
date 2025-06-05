@@ -1,0 +1,15 @@
+---
+interface Props {
+  tag: string;
+  count: number;
+}
+const { tag, count } = Astro.props;
+
+const copy = `🏷️ ${tag}: ${count}`;
+---
+
+<div class="badge badge-lg badge-primary">
+  <a href={`/tags/${tag}`} class="link whitespace-nowrap link-hover">
+    {copy}
+  </a>
+</div>

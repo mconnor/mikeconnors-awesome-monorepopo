@@ -32,7 +32,7 @@ const dateLikeToDate = dateLike.pipe(z.coerce.date());
 
 const blogSchema = z.object({
   title: z.string(),
-  date: dateLikeToDate,
+  date: dateLikeToDate.optional(),
   description: z.string(),
   author: reference('authors'),
   relatedPosts: z.array(reference('blog')).optional(),

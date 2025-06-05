@@ -7,7 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./*.css": "./dist/*.css",
+    "./styles.css": "./dist/index.css",
     "./*": {
       "types": "./dist/*/index.d.ts",
       "import": "./dist/*/index.mjs"
@@ -35,26 +35,26 @@
   "author": "Michael Connor",
   "license": "ISC",
   "devDependencies": {
+    "@headlessui/react": "catalog:",
+    "@heroicons/react": "catalog:",
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@repo/utils": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
     "@types/node": "catalog:",
+    "daisyui": "catalog:",
     "eslint": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
+    "tailwindcss": "catalog:",
     "tsup": "catalog:",
-    "typescript": "catalog:",
-    "@headlessui/react": "catalog:",
-    "@heroicons/react": "catalog:",
-    "@repo/utils": "workspace:^",
-    "@tailwindcss/cli": "catalog:",
-    "tailwindcss": "catalog:"
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "@types/react": ">=18",
     "@types/react-dom": ">=18",
     "react": ">=18",
     "react-dom": ">=18"
-  },
-  "dependencies": {}
+  }
 }

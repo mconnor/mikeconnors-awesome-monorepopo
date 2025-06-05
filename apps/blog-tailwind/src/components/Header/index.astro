@@ -1,0 +1,20 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '#app.config.ts';
+---
+
+<header
+  class="bg-base-100 flex min-h-24 flex-col justify-center px-4 shadow-md"
+>
+  <nav class="hidden flex-row justify-between lg:flex">
+    <div class="border-1 bg-amber-200">
+      <a href="/" class="text-3xl">{SITE_TITLE}</a>
+    </div>
+
+    <div class="border-1 flex flex-row justify-between gap-x-5">
+      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href="/blog">Blog</HeaderLink>
+      <HeaderLink href="/about">About</HeaderLink>
+    </div>
+  </nav>
+</header>

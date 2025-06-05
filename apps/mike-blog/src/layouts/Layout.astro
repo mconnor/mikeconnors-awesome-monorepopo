@@ -2,35 +2,38 @@
 import Center from '@repo/layout-webcomponents/Center';
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
-
+import Prose from '#components/Prose.astro';
 import Header from '#components/Header/index.astro';
+import NavBar from '#components/NavBar/index.astro';
 // import Header from '#components/DaisyHeader/index.astro';
-// import Footer from '#components/Footer/index.astro';
+import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
+// import Nav from '@repo/astro-ui/NavBarRes';
 // import { slide } from 'astro:transitions';
 interface Props {
   maxW?: RmUnitType;
   children: unknown;
-  title?: string;
+  title: string;
   description?: string;
 }
 
-const { maxW = '60ch', title, ...rest } = Astro.props;
+const { maxW = '60ch', ...rest } = Astro.props;
 ---
 
 <BaseLayout {...rest}>
   <div class="flex min-h-screen flex-col">
-    <Header />
+    <NavBar />
     <main
       class="m-auto flex max-w-6/10 flex-col items-center justify-center p-4"
     >
-      {title && <h2 class="pb-3 text-lg">{title}</h2>}
+      <Prose><slot name="headline" /></Prose>
       <slot />
     </main>
-    <footer class="mt-auto flex items-center justify-center p-4">
+    <Footer />
+    <!-- <footer class="mt-auto flex items-center justify-center p-4">
       <p class="text-sm text-gray-500">
         © {new Date().getFullYear()} Mike Connor. All rights reserved.
       </p>
-    </footer>
+    </footer> -->
   </div>
 </BaseLayout>

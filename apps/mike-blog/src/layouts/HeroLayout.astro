@@ -4,7 +4,8 @@ import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 
 import Footer from '#components/Footer/index.astro';
-import Header from '#components/Header/index.astro';
+// import Header from '#components/Header/index.astro';
+import Navbar from '#components/NavBar/index.astro';
 
 import BaseLayout from './BaseLayout.astro';
 
@@ -20,7 +21,7 @@ const { maxW = 'var(--measure, 60ch)', ...rest } = Astro.props;
 
 <BaseLayout {...rest}>
   <Cover centeredElement="center-l" space="0">
-    <Header transition:persist />
+    <Navbar transition:persist />
 
     <Center max={maxW} transition:animate="slide"><slot /></Center>
 

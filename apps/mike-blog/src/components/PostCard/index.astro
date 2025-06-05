@@ -1,20 +1,23 @@
 ---
 import { z, reference } from 'astro:content';
 import { blogSchema } from '#schemas/index.ts';
+import { format } from 'date-fns';
+import { Image } from 'astro:assets';
 
 interface Props {
   data: z.infer<typeof blogSchema>;
   href: string;
+  showTags?: boolean;
 }
 
-const { href, data } = Astro.props;
+const { href, data, showTags = false } = Astro.props;
 
-const { cover, title, description, tags } = data;
+const { cover, title, description, tags, date } = data;
 ---
 
-<div class="image-full card w-96 bg-base-100 shadow-sm">
+<div class="card w-96 bg-base-100 shadow-sm card-sm md:card-md lg:card-lg">
   <figure>
-    <img src={cover!.src} alt={cover!.alt} />
+    <Image src={cover!.src} alt={cover!.alt} width="1600" height="900" />
   </figure>
 
   <a
@@ -23,15 +26,19 @@ const { cover, title, description, tags } = data;
     aria-label="Full card link"></a>
 
   <div class="card-body">
-    <h2 class="card-title">{title}</h2>
-    <p>{description}</p>
+    <div class="text-sm">{format(date, 'yyyy-MM-dd')}</div>
+    <h2 class="card-title line-clamp-1">{title}</h2>
+
+    <p class="line-clamp-3">{description}</p>
+
     <div class="card-actions justify-end">
       {
-        tags.map((tag) => (
-          <a href={`/tags/${tag}`} class="btn z-10 btn-primary">
-            {tag}
-          </a>
-        ))
+        showTags &&
+          tags.map((tag) => (
+            <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
+              {tag}
+            </a>
+          ))
       }
     </div>
   </div>

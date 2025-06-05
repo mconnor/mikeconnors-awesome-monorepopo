@@ -4,15 +4,13 @@ date: 2025-04-01
 author: mike-connor
 description: 'Typography should be easy'
 cover:
-  src: 'https://picsum.photos/400/300?random=1'
+  src: 'https://picsum.photos/1600/900?random=1'
   alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['typography', 'tailwindcss']
 ---
 
-<p className="lead">
-  Until now, trying to style an article, document, or blog post with Tailwind has been a tedious
-  task that required a keen eye for typography and a lot of complex custom CSS.
-</p>
+> Until now, trying to style an article, document, or blog post with Tailwind has been a tedious
+> task that required a keen eye for typography and a lot of complex custom CSS.
 
 By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you _really are_ just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.
 

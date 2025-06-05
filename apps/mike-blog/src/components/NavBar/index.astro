@@ -1,0 +1,69 @@
+---
+import { navLinks, OUTBOUND_LINKS } from '#app.config.ts';
+import Hamburger from './Hamburger.astro';
+import IconLink from '@repo/astro-ui/IconLink';
+import { daisyuiThemes } from '#utils/daisyui-themes.ts';
+import DThemeDropDown from '#components/DThemeDropDown/index.astro';
+import HeaderLink from '#components/Header/MainNav/HeaderLink.astro';
+// import { navLinks, OUTBOUND_LINKS } from '#app.config.ts';
+---
+
+<div class="navbar bg-base-100 shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <Hamburger />
+      </div>
+      <ul
+        tabindex="0"
+        class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
+      >
+        {
+          navLinks.map(({ href, label, subPages }, index) => (
+            <li>
+              <a role="button" href={href} class="">
+                {label}
+              </a>
+            </li>
+          ))
+        }
+        <!-- <li>
+          <a>Parent</a>
+          <ul class="p-2">
+            <li><a>Submenu 1</a></li>
+            <li><a>Submenu 2</a></li>
+          </ul>
+        </li> -->
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+
+    <DThemeDropDown themes={[...daisyuiThemes]} />
+
+
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      {
+        navLinks.map(({ href, label, subPages }, index) => (
+          <li>
+            <a role="button" href={href} class="btn-small btn btn-ghost">
+              {label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="navbar-end hidden lg:flex">
+    {
+      OUTBOUND_LINKS.map(({ url, logo }) => (
+        <IconLink
+          href={url}
+          class="h-10 w-10 fill-accent stroke-accent stroke-1"
+          icon={logo}
+        />
+      ))
+    }
+  </div>
+</div>

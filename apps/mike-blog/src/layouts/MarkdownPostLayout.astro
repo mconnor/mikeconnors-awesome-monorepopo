@@ -1,12 +1,17 @@
 ---
 import Layout from '#layouts/Layout.astro';
-// import { Image } from 'astro:assets';
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import Prose from '#components/Prose.astro';
+
+import { inferRemoteSize } from 'astro:assets';
+
 type Props = CollectionEntry<'blog'>['data'];
+import { format } from 'date-fns';
 
 const { title, description, date, cover, author, tags } = Astro.props;
 
+// const { width, height } = cover && (await inferRemoteSize(cover.src));
 // const authorResults = await getEntry('authors', author.id);
 
 // if (!authorResults) {
@@ -22,14 +27,16 @@ const { title, description, date, cover, author, tags } = Astro.props;
 <Layout title={title} description={description} maxW="60ch">
   <Prose>
     <h1 class="capitalize">{title}</h1>
-    <p>Published on: {date}</p>
+    {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
     <figure>
       {
         cover?.src && cover?.alt && (
-          <img
+          <Image
             class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
             src={cover.src}
-            alt={cover.alt}
+            alt={cover.alt ?? 'alt image needed'}
+            width="1600"
+            height="900"
           />
         )
       }

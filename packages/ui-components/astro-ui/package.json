@@ -9,7 +9,8 @@
   "exports": {
     "./styles.css": "./dist/index.css",
     "./index.css": "./dist/index.css",
-    "./*": "./src/*/index.astro"
+    "./*": "./src/*/index.astro",
+    "./NavBarRes": "./src/NavBars/NavBarRes/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",

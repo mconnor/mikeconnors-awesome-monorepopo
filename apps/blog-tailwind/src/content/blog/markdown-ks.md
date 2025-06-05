@@ -4,7 +4,7 @@ pubDate: 2022-07-09
 author: mike-connor
 description: "After learning some Astro, I couldn't stop!"
 cover:
-  src: 'https://picsum.photos/400/300?random=6'
+  src: 'https://picsum.photos/1600/900?random=6'
   alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['astro', 'blogging', 'learning-in-public', 'successes']
 ---
