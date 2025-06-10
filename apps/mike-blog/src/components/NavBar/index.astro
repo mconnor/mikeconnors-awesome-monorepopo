@@ -27,14 +27,20 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
             </li>
           ))
         }
-        <!-- <li>
-          <a>Parent</a>
-          <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+        <li>
+          <a>Outlinks</a>
+          <ul>
+            {
+              OUTBOUND_LINKS.map(({ url, logo }) => (
+                <IconLink
+                  href={url}
+                  class="h-10 w-10 fill-accent stroke-accent stroke-1"
+                  icon={logo}
+                />
+              ))
+            }
           </ul>
-        </li> -->
-        <li><a>Item 3</a></li>
+        </li>
       </ul>
     </div>
 
