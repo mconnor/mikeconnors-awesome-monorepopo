@@ -38,8 +38,6 @@ export default tseslint.config(
   // TypeScript
   // tseslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
-  tseslint.configs.stylisticTypeChecked,
-  // tseslint.configs.strictTypeChecked,
   // tseslint.configs.stylisticTypeChecked,
 
   {
@@ -78,7 +76,9 @@ export default tseslint.config(
       parserOptions: {
         parser: tseslint.parser,
         allowDefaultProject: ['*.astro'],
-        JSX: false,
+        ecmaFeatures: {
+          jsx: false,
+        },
         // tsconfigRootDir: import.meta.dirname,
         // project: [
         //   '../apps/*/tsconfig.json',
