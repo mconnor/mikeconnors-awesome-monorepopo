@@ -1,11 +1,11 @@
 ---
-import Center from '@repo/layout-webcomponents/Center';
-import Cover from '@repo/layout-webcomponents/Cover';
+// import Center from '@repo/layout-webcomponents/Center';
+// import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 import Prose from '#components/Prose.astro';
-import Header from '#components/Header/index.astro';
+// import Header from '#components/Header/index.astro';
 import NavBar from '#components/NavBar/index.astro';
-// import Header from '#components/DaisyHeader/index.astro';
+
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
 // import Nav from '@repo/astro-ui/NavBarRes';
@@ -13,7 +13,7 @@ import BaseLayout from './BaseLayout.astro';
 interface Props {
   maxW?: RmUnitType;
   children: unknown;
-  title: string;
+  title?: string;
   description?: string;
 }
 
@@ -24,9 +24,9 @@ const { maxW = '60ch', ...rest } = Astro.props;
   <div class="flex min-h-screen flex-col">
     <NavBar />
     <main
-      class="m-auto flex max-w-6/10 flex-col items-center justify-center p-4"
+      class="m-auto flex flex-col items-center justify-center p-4 lg:max-w-6/10"
     >
-      <Prose><slot name="headline" /></Prose>
+      <!-- <Prose><slot name="headline" /></Prose> -->
       <slot />
     </main>
     <Footer />

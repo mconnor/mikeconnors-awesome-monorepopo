@@ -1,7 +1,7 @@
 ---
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseHead /> component.
-import { ImageMetadata } from 'astro';
+import type { ImageMetadata } from 'astro';
 // import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-import FallbackImage from '../assets/andy-og.webp';
+import FallbackImage from '#assets/andy-og.webp';
 
 const { title, description, image = FallbackImage } = Astro.props;
 

@@ -19,6 +19,7 @@ interface Props {
   contentMin?: Percentage;
   space?: RmUnitType;
   noStretch?: boolean;
+  children: unknown;
 }
 const { side = 'left', ...rest } = Astro.props;
 ---

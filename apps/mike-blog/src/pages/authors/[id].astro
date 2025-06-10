@@ -1,24 +1,22 @@
 ---
-import { getEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
 
-const { id } = Astro.params;
+export async function getStaticPaths() {
+  // const posts = await getCollection('blog', ({ data }) => data.draft !== true);
+  const authors = await getCollection('authors');
 
-if (id === undefined) Astro.redirect('/404');
-
-export const prerender = false;
-// type Props = CollectionEntry<'authors'>;
-
-const author = await getEntry('authors', id!);
-if (author === undefined) {
-  return Astro.redirect('/404');
+  return authors.map((author) => ({
+    params: { id: author.data.id },
+    props: author,
+  }));
 }
 
-const { name, bio } = author.data;
-// const { Content } = await render(author);
+const id = Astro.params;
+const { data } = Astro.props;
 ---
 
-<Layout title="author" maxW="60ch">
-  <h1>{name}</h1>
-  <p>{bio}</p>
+<Layout title={data.name} maxW="60ch">
+  <h1>{data.name}</h1>
+  <p>{data.bio}</p>
 </Layout>

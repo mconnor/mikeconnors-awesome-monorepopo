@@ -1,13 +1,13 @@
 ---
 import '../styles/global.css';
+import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 
-import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
-import BaseHead from '#components/BaseHead.astro';
+import BaseHead from '#components/BaseHead/index.astro';
 
 interface Props {
   image?: string;
-  maxW?: RmUnitType;
+
   title?: string;
   children: unknown;
   description?: string;

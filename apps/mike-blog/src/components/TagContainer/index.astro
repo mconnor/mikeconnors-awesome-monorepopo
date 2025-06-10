@@ -4,11 +4,10 @@ import Tag from './Tag.astro';
 interface Props {
   tags: string[];
   tagCounts: Record<string, number>;
-  // children: never;
+  children: never;
 }
 
-const { tags, tagCounts } = Astro.props;
-console.log(tagCounts);
+const { tagCounts } = Astro.props;
 ---
 
 <div class="flex flex-row flex-wrap gap-2">

@@ -1,0 +1,30 @@
+---
+import Layout from '#layouts/Layout.astro';
+export const prerender = true;
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en', version: 'v1' } },
+    { params: { lang: 'fr', version: 'v2' } },
+  ];
+}
+
+const { lang, version } = Astro.params;
+---
+
+<Layout title={`Info - ${lang} ${version}`} maxW="60ch">
+  <h1 class="mb-4 text-3xl font-bold">Information Page</h1>
+  <p class="mb-4">
+    This is a dynamic page for language: <strong>{lang}</strong> and version: <strong
+      >{version}</strong
+    >.
+  </p>
+
+  <p class="text-gray-700">
+    You can use this page to display information specific to the selected
+    language and version.
+  </p>
+
+  <p class="mt-6">
+    For more details, please refer to the documentation or contact support.
+  </p></Layout
+>

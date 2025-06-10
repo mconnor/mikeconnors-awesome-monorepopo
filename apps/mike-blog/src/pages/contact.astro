@@ -3,31 +3,112 @@ import Stack from '@repo/layout-webcomponents/Stack';
 import Box from '@repo/layout-webcomponents/Box';
 
 import Layout from '#layouts/Layout.astro';
+
+// Form submission handling
+const errors = { name: '', email: '', message: '' };
+let success = false;
+
+// Handle form submission if the form was submitted
+if (Astro.request.method === 'POST') {
+  try {
+    const data = await Astro.request.formData();
+    const name = data.get('name');
+    const email = data.get('email');
+    const message = data.get('message');
+
+    // Basic validation
+    if (!name || name.length < 2)
+      errors.name = 'Name is required (min 2 characters)';
+    if (!email || !email.toString().includes('@'))
+      errors.email = 'Valid email is required';
+    if (!message || message.length < 10)
+      errors.message = 'Message is required (min 10 characters)';
+
+    // If no errors, process the form
+    if (Object.values(errors).every((err) => err === '')) {
+      // Here you would typically send the data to an API or email service
+      // For now, we'll just mark it as successful
+      success = true;
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
 ---
 
 <Layout maxW="80ch" title="Contact">
-  <Stack space="0">
-    <h1>Contact</h1>
-    <h2>Get in touch</h2>
-    <h3>goodbydy</h3>
+  <Box my="8">
+    <h1 class="mb-8 text-4xl font-bold">Contact Us</h1>
 
-    <Box borderWidth="0" borderWidth="1px">
-      <form name="contact" method="POST" data-netlify="true" action="/thanks">
-        <input type="hidden" name="form-name" value="contact" />
-        <label>
-          Your Name:
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Your Email:
-          <input type="email" name="email" />
-        </label>
-        <label>
-          Message:
-          <textarea name="message"></textarea>
-        </label>
-        <button type="submit">Send</button>
-      </form>
-    </Box>
-  </Stack>
+    {
+      success ?
+        <div
+          class="mb-6 rounded border border-green-400 bg-green-100 px-4 py-3 text-green-700"
+          role="alert"
+        >
+          <p class="font-medium">Thank you for your message!</p>
+          <p>We'll get back to you as soon as possible.</p>
+        </div>
+      : <form method="POST" class="space-y-6">
+          <Stack direction="vertical" gap="4">
+            <div>
+              <label for="name" class="mb-1 block text-sm font-medium">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                class="w-full rounded border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                required
+              />
+              {errors.name && (
+                <p class="mt-1 text-xs text-red-500">{errors.name}</p>
+              )}
+            </div>
+
+            <div>
+              <label for="email" class="mb-1 block text-sm font-medium">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full rounded border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                required
+              />
+              {errors.email && (
+                <p class="mt-1 text-xs text-red-500">{errors.email}</p>
+              )}
+            </div>
+
+            <div>
+              <label for="message" class="mb-1 block text-sm font-medium">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="w-full rounded border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                required
+              />
+              {errors.message && (
+                <p class="mt-1 text-xs text-red-500">{errors.message}</p>
+              )}
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                class="rounded bg-blue-600 px-6 py-2 font-medium text-white shadow-sm hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-none"
+              >
+                Send Message
+              </button>
+            </div>
+          </Stack>
+        </form>
+    }
+  </Box>
 </Layout>

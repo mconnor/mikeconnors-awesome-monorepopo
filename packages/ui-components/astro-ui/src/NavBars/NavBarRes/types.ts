@@ -9,7 +9,4 @@ interface DropdownNavLinkI {
   subMenu: SimpleNavLinkI[];
 }
 
-
-
-
 export { type DropdownNavLinkI, type SimpleNavLinkI };

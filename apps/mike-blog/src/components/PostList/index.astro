@@ -1,0 +1,21 @@
+---
+import PostCard from '#components/PostCard/index.astro';
+import { blogSchema } from '#schemas/index.ts';
+import { z } from 'astro:content';
+import Switcher from '@repo/layout-webcomponents/Switcher';
+import Stack from '@repo/layout-webcomponents/Stack';
+import Prose from '#components/Prose.astro';
+interface Props {
+  headline?: string;
+  posts: { id: string; data: z.infer<typeof blogSchema> }[];
+}
+
+const { posts, headline = 'Blog Posts' } = Astro.props;
+---
+
+<Stack space="2rem">
+  <Prose><h2>{headline}</h2></Prose>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+    {posts.map(({ id, data }) => <PostCard data={data} href={id} showTags />)}
+  </div>
+</Stack>

@@ -1,19 +1,23 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import MarkdownPostLayout from '#layouts/MarkdownPostLayout.astro';
-// export const prerender = true;
+
+// STATIC SITE GENERATION
+// This page is statically generated at build time using Astro's getStaticPaths
+// and prerendering capabilities. It fetches all blog posts and generates a static page for each.
+
 export async function getStaticPaths() {
   // const posts = await getCollection('blog', ({ data }) => data.draft !== true);
   const posts = await getCollection('blog');
 
   return posts.map((post) => ({
     params: { id: decodeURI(post.id) },
-    props: post,
+    props: { post },
   }));
 }
-type Props = CollectionEntry<'blog'>;
+// type Props = CollectionEntry<'blog'>;
 
-const post = Astro.props;
+const { post } = Astro.props;
 
 const { Content } = await render(post);
 ---

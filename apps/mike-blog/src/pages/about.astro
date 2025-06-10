@@ -1,17 +1,13 @@
 ---
-// import DaisySideCard from '#components/DaisySideCard/index.astro';
-
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
 
-export const prerender = true
+export const prerender = true;
 ---
 
 <Layout title="About">
+  <h2 slot="headline">About</h2>
   <Prose>
-    <h1>About</h1>
-    <p>
-      I am Mike Connor, a software engineer with a passion for building
-    </p>
+    <p>I am Mike Connor, a software engineer with a passion for building</p>
   </Prose>
 </Layout>

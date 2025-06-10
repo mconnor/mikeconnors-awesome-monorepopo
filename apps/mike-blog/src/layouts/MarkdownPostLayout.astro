@@ -1,30 +1,32 @@
 ---
 import Layout from '#layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
+import { type CollectionEntry, getEntry } from 'astro:content';
 import Prose from '#components/Prose.astro';
+import type { RmUnitType } from '@repo/layout-webcomponents/Types';
+// import { inferRemoteSize } from 'astro:assets';
 
-import { inferRemoteSize } from 'astro:assets';
+type Props = {
+  maxW?: RmUnitType;
+  children: unknown;
+} & CollectionEntry<'blog'>['data'];
 
-type Props = CollectionEntry<'blog'>['data'];
 import { format } from 'date-fns';
 
-const { title, description, date, cover, author, tags } = Astro.props;
+const { maxW = '60ch', title, description, date, cover, author } = Astro.props;
 
-// const { width, height } = cover && (await inferRemoteSize(cover.src));
-// const authorResults = await getEntry('authors', author.id);
+let authorObj;
+if (author) {
+  authorObj = await getEntry('authors', author.id);
+}
 
-// if (!authorResults) {
-//   throw new Error(`Author not found for post: ${title}`);
+// if (authorObj === undefined) {
+//   return Astro.redirect('/404');
 // }
-
-// const { name } = authorResults.data;
-
-// const { data :  relatedPostData} = getEntries('blog', authorResults.data.relatedPosts);
 ---
 
 <!-- TODO: fix the date format -->
-<Layout title={title} description={description} maxW="60ch">
+<Layout title={title} description={description} maxW={maxW}>
   <Prose>
     <h1 class="capitalize">{title}</h1>
     {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
@@ -41,6 +43,15 @@ const { title, description, date, cover, author, tags } = Astro.props;
         )
       }
     </figure>
+
+    {
+      authorObj && (
+        <p class="text-sm text-gray-500">
+          By <a href={`../authors/${authorObj.id}`}>{authorObj.data.name}</a>
+        </p>
+      )
+    }
+
     <slot />
   </Prose></Layout
 >

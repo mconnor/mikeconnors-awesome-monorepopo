@@ -1,36 +1,9 @@
 ---
-// import DaisySideCard from '#components/DaisySideCard/index.astro';
+
 
 import Layout from '#layouts/Layout.astro';
-
-import Box from '@repo/layout-webcomponents/Box';
-// import Box from '#components/Box/index.astro';
-import { NAME, SITE_TITLE } from '#app.config.ts';
-import PriceCardDemo from '#demos/pricecard.astro';
 ---
 
-<Layout>
-  <div class="flex flex-row items-center justify-center gap-1">
-    <button class="btn">Neutral</button>
-    <button class="btn btn-primary">Primary</button>
-    <button class="btn btn-secondary">Secondary</button>
-    <button class="btn btn-accent">Accent</button>
-    <button class="btn btn-info">Info</button>
-    <button class="btn btn-success">Success</button>
-    <button class="btn btn-warning">Warning</button>
-    <button class="btn btn-error">Error</button>
-  </div>
-  <div class="flex flex-row items-center justify-center gap-1"></div>
-  <div class="flex flex-row items-center justify-center gap-1">
-    <button class="btn">Neutral</button>
-    <button class="btn btn-primary">Primary</button>
-    <button class="btn btn-secondary">Secondary</button>
-    <button class="btn btn-accent">Accent</button>
-    <button class="btn btn-info">Info</button>
-    <button class="btn btn-success">Success</button>
-    <button class="btn btn-warning">Warning</button>
-    <button class="btn btn-error">Error</button>
-  </div>
-
-  <PriceCardDemo />
+<Layout title="Home" description="Home page of the Mike Blog">
+  <h3 class="mb-4 text-3xl font-bold">Welcome</h3>
 </Layout>

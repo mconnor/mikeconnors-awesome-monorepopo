@@ -1,34 +1,24 @@
 ---
 import { getCollection } from 'astro:content';
+import ListOfPost from '#components/PostList/index.astro';
 import PostCard from '#components/PostCard/index.astro';
+import PostList from '#components/PostList/index.astro';
 
 import Layout from '#layouts/Layout.astro';
-
-// export const prerender = true;
-
-interface PostData {
-  groupTitle?: string;
-}
+import Stack from '@repo/layout-webcomponents/Stack';
 
 const publishsedPosts = await getCollection(
   'blog',
   ({ data }) => data.draft !== true,
 );
 
-const sortedPosts = publishsedPosts.sort(
-  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
-);
-
-const { groupTitle = 'Post' } = Astro.props as PostData;
+const posts = publishsedPosts.sort((a, b) => {
+  const dateA = a.data.date ? a.data.date.valueOf() : 0;
+  const dateB = b.data.date ? b.data.date.valueOf() : 0;
+  return dateB - dateA;
+});
 ---
 
-<Layout title="Blog" maxW="0%">
-  <h2 slot="headline">{groupTitle}</h2>
-  <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
-    {
-      sortedPosts.map(({ id, data }) => (
-        <PostCard data={data} href={id} showTags />
-      ))
-    }
-  </div>
+<Layout title="Blog" maxW="80ch">
+  <PostList posts={posts} />
 </Layout>

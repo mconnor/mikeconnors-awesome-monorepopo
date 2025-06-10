@@ -1,12 +1,12 @@
 ---
 import Layout from '#layouts/Layout.astro';
-import { NAME, SITE_TITLE } from '#app.config.ts';
+
 import { SITE_DESCRIPTION } from '#app.config.ts';
 
 // const subpath = Astro.url.pathname.match(/[^/]+/g);
 ---
 
-<Layout>
+<Layout title="Splash Page" description={SITE_DESCRIPTION} maxW="80ch">
   <div class="text-8xl">
     <h1 x-data="{ show: false }" x-init="show = true">
       <template x-for="(char, index) in 'YOUR NAME'.split('')" :key="index">
