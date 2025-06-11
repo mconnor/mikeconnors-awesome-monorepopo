@@ -40,15 +40,14 @@ catalog:
   '@sentry/browser': ^8.55.0
   '@sentry/cli': ^2.43.1
   '@sentry/vite-plugin': ^3.5.0
-  '@sveltejs/vite-plugin-svelte': ^5.1.0
-  '@tailwindcss/cli': ^4.1.8
-  '@tailwindcss/postcss': ^4.1.8
+  '@tailwindcss/cli': ^4.1.9
+  '@tailwindcss/postcss': ^4.1.9
   '@tailwindcss/forms': ^0.5.10
   '@tailwindcss/typography': ^0.5.16
-  '@tailwindcss/vite': ^4.1.8
+  '@tailwindcss/vite': ^4.1.9
   '@types/canvas-confetti': ^1.9.0
   '@types/node': ^22.15.31
-  '@types/react': ^19.1.7
+  '@types/react': ^19.1.8
   '@types/react-dom': ^19.1.6
   '@vitejs/plugin-vue': ^5.2.4
   '@webcomponents/template-shadowroot': ^0.2.1
@@ -93,7 +92,7 @@ catalog:
   postcss-jit-props: ^1.0.16
   postcss-nesting: ^13.0.2
   postcss-pow: ^1.0.1
-  preact: ^10.26.8
+  preact: ^10.26.9
   prettier: ^3.5.3
   prettier-plugin-astro: ^0.14.1
   prettier-plugin-tailwindcss: ^0.6.12
@@ -106,7 +105,7 @@ catalog:
   solid-js: ^1.9.7
   svelte-eslint-parser: ^1.2.0
   tailwind-merge: ^3.3.1
-  tailwindcss: ^4.1.8
+  tailwindcss: ^4.1.9
   theme-change: ^2.5.0
   tsup: ^8.5.0
   typescript: ^5.8.3

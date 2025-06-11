@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
-type Product = {
+interface Product {
   id: number;
   name: string;
   price: number;
-};
+}
 
 const initialProducts: Product[] = [
   { id: 1, name: 'Sample Product 1', price: 10 },
   { id: 2, name: 'Sample Product 2', price: 20 },
 ];
 
-export const ProductManagement: React.FC = () => {
+const ProductManagement: React.FC = () => {
   const [products, setProducts] = useState<Product[]>(initialProducts);
   const [name, setName] = useState('');
   const [price, setPrice] = useState<number>(0);
