@@ -56,7 +56,7 @@
     "daisyui": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@sveltejs/vite-plugin-svelte": "catalog:",
+    "@sveltejs/vite-plugin-svelte": "catalog:svelte5",
     "eslint": "catalog:"
   }
 }
