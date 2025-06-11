@@ -897,6 +897,9 @@ importers:
       daisyui:
         specifier: 'catalog:'
         version: 5.0.43
+      open-props:
+        specifier: 'catalog:'
+        version: 1.7.15
       tailwindcss:
         specifier: 'catalog:'
         version: 4.1.8

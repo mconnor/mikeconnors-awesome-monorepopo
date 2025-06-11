@@ -1,5 +1,4 @@
 ---
-import Icon from '@repo/layout-webcomponents/Icon';
 import Tag from './Tag.astro';
 interface Props {
   tags: string[];
@@ -10,11 +9,11 @@ interface Props {
 const { tagCounts } = Astro.props;
 ---
 
-<div class="flex flex-row flex-wrap gap-2">
+<div class="flex flex-row flex-wrap gap-4">
   {
     tagCounts &&
-      Object.entries(tagCounts).map(([tag, count]) => (
-        <Tag tag={tag} count={count} />
+      Object.entries(tagCounts).map(([tag, count], index) => (
+        <Tag tag={tag} count={count} del={index} />
       ))
   }
 </div>

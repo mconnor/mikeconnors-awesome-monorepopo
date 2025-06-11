@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 /* @import 'open-props/open-props.min.css'; */
+@import 'open-props/animations';
 @source not '@repo/styles';
 @source not '@repo/layout-webcomponents';
 

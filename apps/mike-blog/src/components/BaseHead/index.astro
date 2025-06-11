@@ -50,6 +50,13 @@ const { title, description, image = FallbackImage } = Astro.props;
     <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
   )
 }
+
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+/>
+
 <!-- <meta name="color-scheme" content="dark light" /> -->
 
 <!-- <script is:inline>
