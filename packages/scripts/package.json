@@ -19,7 +19,7 @@
     "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
-    "check-types": "tsup --noEmit"
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
