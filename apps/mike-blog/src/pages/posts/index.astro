@@ -1,11 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import ListOfPost from '#components/PostList/index.astro';
-import PostCard from '#components/PostCard/index.astro';
+
 import PostList from '#components/PostList/index.astro';
 
 import Layout from '#layouts/Layout.astro';
-import Stack from '@repo/layout-webcomponents/Stack';
 
 const publishsedPosts = await getCollection(
   'blog',
