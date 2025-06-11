@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "new": "turbo gen workspace --copy",
-    "format": "prettier --write \"**/*.{ts,tsx,md,astro,css,svelte,vue}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,md,astro,css,svelte,vue}\" --ignore-path .prettierignore",
     "graph": "turbo run build --graph",
     "build": "turbo build",
     "preview": "turbo preview",

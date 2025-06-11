@@ -85,7 +85,7 @@ catalog:
   lorem-ipsum: ^2.0.8
   luxon: ^3.6.1
   open-props: ^1.7.15
-  postcss: ^8.5.4
+  postcss: ^8.5.5
   postcss-custom-media: ^11.0.6
   postcss-html: ^1.8.0
   postcss-import: ^16.1.0
