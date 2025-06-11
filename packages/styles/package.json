@@ -29,6 +29,7 @@
     "cssnano": "catalog:",
     "eslint": "catalog:",
     "open-props": "catalog:",
+    "postcss": "catalog:",
     "postcss-custom-media": "catalog:",
     "postcss-html": "catalog:",
     "postcss-import": "catalog:",

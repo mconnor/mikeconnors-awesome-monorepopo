@@ -16,16 +16,10 @@ const copy = `${tag}: ${count}`;
 const animationDelay = `${index * 100}ms`;
 ---
 
-<a
-  href={`/tags/${tag}`}
-  class="btn whitespace-nowrap transition delay-150 duration-300 ease-in-out btn-primary hover:-translate-y-1 hover:scale-110 hover:btn-secondary"
+<div
+  class="animate-fadeIn badge badge-xl opacity-0"
+  style={`animation-delay: ${animationDelay}; animation-fill-mode: forwards;`}
 >
   <i class="ph ph-tag"></i>
-  <span class="text-xl">{tag}</span><span class="badge badge-xl">{count}</span>
-</a>
-
-<!-- <button
-  class="btn bg-blue-500 transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 ..."
->
-  Save Changes
-</button> -->
+  <span>{copy}</span>
+</div>

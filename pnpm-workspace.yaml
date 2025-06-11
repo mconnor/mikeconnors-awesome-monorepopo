@@ -76,7 +76,7 @@ catalog:
   eslint-plugin-regexp: ^2.9.0
   eslint-plugin-simple-import-sort: ^12.1.1
   eslint-plugin-solid: ^0.14.5
-  eslint-plugin-svelte: ^3.9.1
+  eslint-plugin-svelte: ^3.9.2
   eslint-plugin-turbo: ^2.5.4
   eslint-plugin-vue: ^10.2.0
   eslint-plugin-wc: ^3.0.1
@@ -105,7 +105,7 @@ catalog:
   sharp: ^0.34.2
   solid-js: ^1.9.7
   svelte-eslint-parser: ^1.2.0
-  tailwind-merge: ^3.3.0
+  tailwind-merge: ^3.3.1
   tailwindcss: ^4.1.8
   theme-change: ^2.5.0
   tsup: ^8.5.0
@@ -122,11 +122,11 @@ catalogs:
   svelte5:
     '@astrojs/svelte': ^7.1.0
     '@sveltejs/adapter-auto': ^6.0.1
-    '@sveltejs/kit': ^2.21.3
+    '@sveltejs/kit': ^2.21.4
     '@sveltejs/vite-plugin-svelte': ^5.1.0
     '@testing-library/svelte': ^5.2.8
     '@testing-library/jest-dom': ^6.6.3
-    svelte: ^5.33.18
+    svelte: ^5.33.19
     svelte-check: ^4.2.1
     svelte-preprocess: ^6.0.3
     prettier-plugin-svelte: ^3.4.0
