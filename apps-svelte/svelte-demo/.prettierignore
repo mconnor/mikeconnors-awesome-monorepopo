@@ -1,6 +1,19 @@
-# Package Managers
-package-lock.json
-.svelte-kit
-dist
-.turbo
-static
+# Build output
+dist/
+.astro/
+
+# Node modules
+node_modules/
+
+# Cache directories
+.turbo/
+.svelte-kit/
+
+
+# Cache directories
+.turbo/
+.astro/
+.vercel/
+.frontmatter/
+
+.DS_Store

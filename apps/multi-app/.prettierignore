@@ -6,3 +6,7 @@ node_modules/
 
 # Cache directories
 .turbo/
+.astro/
+.vercel/
+.frontmatter/
+cache-directory/
