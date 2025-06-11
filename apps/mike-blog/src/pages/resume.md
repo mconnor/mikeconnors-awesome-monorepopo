@@ -1,42 +1,55 @@
 ---
-title: Hello, World
+title: Resume - Michael Connor
 layout: ../layouts/MarkdownPostLayout.astro
 ---
 
-## I am Michael Connor - React Native developer
+## Michael Connor - Frontend Developer
 
-I am a Frontend developer with twenty years experience developing applications for the auto, pharmaceutical, entertainment, and advertising industries. Which is to say, I was a Flash dev and now... i'm a React Native developer.
+Currently Located in Westport, Kansas City, MO
 
-### More info
+---
 
-I have been working with Hybrid building a mobile marketing app for the Cannabis industry for the last couple of years.
-x
-My current and preferred tech stack is:
+Developer with over twenty years experience developing web sites and single page applications for the auto, pharmaceutical, entertainment, and advertising industries. I am open to discussing new opportunities. I am fortunate to be in a position where I can select projects that I find interesting and rewarding.
 
-- React
-- ReactNative, Exponential
-- Nativebase component libraryß
-- Typescript
-- monorepos (yarn workspaces)
-- Graphql
+I have worked in a variety of environments, from small startups to large corporations. I've worked as the solo dev and as part of a team - Trello, Github, Slack. Communicaiton is the key.
 
-I live in New Orleans - the greatest city in the world. I'm a huge fan of JazzFest - which is literally just behind my backyard.
+**Personal Mission:** Efficiancy, and to leveragle AI as much as possible.
+
+My tech journey has gone down many paths, but my ....
+
+### Current and preferred tech stack is
+
+- [Astro][astro]
+- Vite
+- Tailwind CSS, [DaisyUI][daisyui]
+- React, React Native with Expo
+- Next.js
+- Nativebase component library
+- Monorepos
+- [Supabase][supabase]
+- Vercel: Serverless Deployment
+
+#### Current Mission
+
+Getting this pesonal site up and being writing and sharing wit and wisdom rather than giving it all away for free on social media.
+
+#### Journey
+
+I've returned to my home town, KCMO, after a long wonderful stint in New Orleans. I worked at [JazzFest](https://www.nojazzfest.com/) - a 50 year old music festival.
 
 I've traveled through Central America, Siberia (Tuva), Morocco.
 
-I've been all in on a lot of moral challenging crushingly exhausting large scale art projects (The Temple @ Burning Man). Working through the night with power tools.
+I've worked on many bone crushingly exhausting large scale art projects all volunteer art projects and have the scars.
 
-I ride a KLR 650 but thinking of hanging that up.
-
-Yet more manly (but not exclusively so) stuff, I punched a bucket-list item and worked on as a professional white water rafting guide.
-
-Dogs and I have a mutual admiration thing going on.
-
-I am one of those obnoxious Crossfit people.
+- Professional white water rafting guide
+- Rescuer dogs and cats
+- Amatuer historian
+- Crossfiter
+- I used to ride a KLR 650 (until it got stolen)
 
 Favorite quote:
 
-> The high point of civilization is that you can hate me and I can hate you but we develop an etiquette that allows us to deal with each other because if we acted solely upon our impulse we'd probably go to war.
+> The high point of civilization is that you can hate me and I can hate you but we develop an etiquette that allows us to deal with each other because if we acted solely upon our impulse we'd probably go to war. - Jazz Critic and radical pragmatist, Stanley Crouch.
 
 [github-link]: https://github.com/mconnor
 [wine-store]: https://hooks-wine-store.mconnor.now.sh/
@@ -44,3 +57,6 @@ Favorite quote:
 [adchoices]: https://youradchoices.com/
 [vpaid]: https://www.iab.com/guidelines/digital-video-player-ad-interface-definition-vpaid-2-0/
 [vast]: https://www.iab.com/guidelines/digital-video-ad-serving-template-vast-3-0/
+[astro]: https://astro.build/
+[daisyui]: https://daisyui.com/
+[supabase]: https://supabase.com/
