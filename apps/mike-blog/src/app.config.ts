@@ -67,7 +67,7 @@ const navLinks: NavLinkI[] = [
   // { label: 'countries', href: '/countries', icon: 'country' },
   // { label: 'buttons', href: '/buttons', icon: 'home' },
   { label: 'Posts', href: '/posts', icon: 'blog', subPages: true },
-  { label: 'Swatches', href: '/swatch', icon: 'blog' },
+  // { label: 'Swatches', href: '/swatch', icon: 'blog' },
   // { label: 'Sidebar', href: '/about', icon: 'projects' },
   // { label: 'form', href: '/form-test', icon: 'projects' },
   { label: 'Contact', href: '/contact', icon: 'projects' },

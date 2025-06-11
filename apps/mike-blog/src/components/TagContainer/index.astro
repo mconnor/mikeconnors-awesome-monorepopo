@@ -3,7 +3,6 @@ import Tag from './Tag.astro';
 interface Props {
   tags: string[];
   tagCounts: Record<string, number>;
-  children: never;
 }
 
 const { tagCounts } = Astro.props;

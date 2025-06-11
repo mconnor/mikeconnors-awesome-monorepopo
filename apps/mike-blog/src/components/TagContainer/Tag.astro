@@ -4,22 +4,19 @@
 interface Props {
   tag: string;
   count: number;
-  del: number;
+  // del: number;
   /** Index of tag for staggered animation delay */
-  index?: number;
+  // index?: number;
 }
-const { tag, count, index = 0 } = Astro.props;
+const { tag, count } = Astro.props;
 
 // Use the actual Unicode character (U+E478)
 const copy = `${tag}: ${count}`;
 // Calculate animation delay based on index (100ms per tag)
-const animationDelay = `${index * 100}ms`;
+// const animationDelay = `${index * 100}ms`;
 ---
 
-<div
-  class="animate-fadeIn badge badge-xl opacity-0"
-  style={`animation-delay: ${animationDelay}; animation-fill-mode: forwards;`}
->
+<a href=`tags/${tag}` class="badge badge-xl">
   <i class="ph ph-tag"></i>
   <span>{copy}</span>
-</div>
+</a>
