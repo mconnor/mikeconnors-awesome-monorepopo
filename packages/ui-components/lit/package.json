@@ -26,7 +26,7 @@
   "devDependencies": {
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:*",
-    "@repo/layout-webcomponents/": "workspace:*",
+    "@repo/layout-webcomponents": "workspace:*",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "astro": "catalog:",

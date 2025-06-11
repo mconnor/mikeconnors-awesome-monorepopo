@@ -201,6 +201,9 @@ catalogs:
     open-props:
       specifier: ^1.7.15
       version: 1.7.15
+    postcss:
+      specifier: ^8.5.4
+      version: 8.5.4
     postcss-custom-media:
       specifier: ^11.0.6
       version: 11.0.6
@@ -502,9 +505,6 @@ importers:
       '@repo/scripts':
         specifier: workspace:*
         version: link:../../packages/scripts
-      '@repo/ui-lit':
-        specifier: workspace:*
-        version: link:../../packages/ui-components/lit
       '@repo/utils':
         specifier: workspace:*
         version: link:../../packages/utils
@@ -1006,6 +1006,9 @@ importers:
       open-props:
         specifier: 'catalog:'
         version: 1.7.15
+      postcss:
+        specifier: 'catalog:'
+        version: 8.5.4
       postcss-custom-media:
         specifier: 'catalog:'
         version: 11.0.6(postcss@8.5.4)
@@ -1152,9 +1155,9 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../config-eslint
-      '@repo/styles':
+      '@repo/layout-webcomponents':
         specifier: workspace:*
-        version: link:../../styles
+        version: link:../../layout-webcomponents
       '@repo/typescript-config':
         specifier: workspace:^
         version: link:../../config-typescript
@@ -4962,6 +4965,7 @@ packages:
     resolution: {integrity: sha512-/baBXDqkfW8x0UlqfYAfRCkmVWiH8qFZ4uhT6yLVBLssiypDTbe78W6lNBse7huBFv1ipR5PG9evkxEnIXDxjA==}
     peerDependencies:
       eslint: '>= 5'
+    bundledDependencies: []
 
   eslint-plugin-lit@2.1.1:
     resolution: {integrity: sha512-qmyAOnnTCdS+vDnNxtCoF0icSKIio4GUv6ZLnaCtTX6G/YezRa6Ag6tOQ+MfV5Elvtw9CIXeliRX4mIBSwrPIA==}
