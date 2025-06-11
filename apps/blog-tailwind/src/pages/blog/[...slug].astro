@@ -8,16 +8,18 @@ export async function getStaticPaths() {
   const posts = await getCollection('blog');
   return posts.map((post) => ({
     params: { slug: post.id },
-    props: post,
+    props: { post },
   }));
 }
 
 type Props = CollectionEntry<'blog'>;
 
-const post = Astro.props;
+const { pid } = Astro.params;
+const { post } = Astro.props;
+
 const { Content } = await render(post);
 ---
 
-<ProseLayout data={post.data}>
+<ProseLayout id={pid} data={post.data}>
   <Content />
 </ProseLayout>

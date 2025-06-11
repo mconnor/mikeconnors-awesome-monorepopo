@@ -3,6 +3,11 @@
 @source not '@repo/layout-webcomponents';
 
 @import '@repo/design-system/shared-styles.css';
-@import '@repo/astro-wc/styles.css';
-@import '@repo/react/index.css';
-@import '@repo/preact/index.css';
+
+@import '@repo/react/styles.css';
+@import '@repo/preact/styles.css';
+
+@plugin "daisyui" {
+  root: '#multi-app';
+  themes: all;
+}
