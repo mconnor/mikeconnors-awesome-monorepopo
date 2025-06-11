@@ -5,6 +5,8 @@ import Layout from '#layouts/Layout.astro';
 
 import Prose from '#components/Prose.astro';
 
+export const prerender = false;
+
 // 1. Get the slug from the incoming server request
 const { id } = Astro.params;
 if (id === undefined) {
