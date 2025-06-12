@@ -29,7 +29,7 @@ const encodedDomain = encodeToEntities(domain);
   data-text={buttonText}
 >
   <button
-    class="btn btn-primary"
+    class="inline-flex items-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 active:bg-blue-800"
     aria-live="polite"
     aria-label={`${buttonText}: Contact via email`}
   >
@@ -90,13 +90,15 @@ const encodedDomain = encodeToEntities(domain);
 
       // Set display text with visually hidden spans for better screen reader understanding
       button.innerHTML = `
-        <span>${buttonText}: </span>
-        <span aria-hidden="true">${displayUser}</span>
-        <span class="sr-only">partially hidden email username</span>
-        <span aria-hidden="true" class="mx-1 text-gray-500">[at]</span>
-        <span class="sr-only"> at </span>
-        <span aria-hidden="true">${displayDomain}</span>
-        <span class="sr-only">partially hidden domain name</span>
+        <span class="inline-flex items-center">
+          <span class="mr-1">${buttonText}:</span>
+          <span aria-hidden="true" class="font-mono">${displayUser}</span>
+          <span class="sr-only">partially hidden email username</span>
+          <span aria-hidden="true" class="mx-1 text-blue-200 font-mono">[at]</span>
+          <span class="sr-only"> at </span>
+          <span aria-hidden="true" class="font-mono">${displayDomain}</span>
+          <span class="sr-only">partially hidden domain name</span>
+        </span>
       `;
 
       // Add specific role and tabindex to ensure keyboard accessibility
@@ -116,7 +118,16 @@ const encodedDomain = encodeToEntities(domain);
           const feedbackEl = document.createElement('div');
           feedbackEl.textContent = 'Opening email client...';
           feedbackEl.className =
-            'fixed bottom-4 right-4 bg-green-100 text-green-800 px-4 py-2 rounded-md shadow-lg transition-opacity';
+            'fixed bottom-4 right-4 bg-green-50 text-green-700 px-4 py-2.5 rounded-lg shadow-lg transition duration-300 text-sm font-medium flex items-center';
+
+          // Add a checkmark icon using inline SVG (Tailwind v4 friendly)
+          const iconSpan = document.createElement('span');
+          iconSpan.className = 'mr-2 text-green-600';
+          iconSpan.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>`;
+
+          feedbackEl.prepend(iconSpan);
           document.body.appendChild(feedbackEl);
 
           // Remove both feedback elements after announcement
