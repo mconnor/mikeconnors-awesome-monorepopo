@@ -1,4 +1,5 @@
 ---
+import { navigate } from 'astro:transitions/client';
 interface Props {
   domain?: string;
   user?: string;
@@ -27,15 +28,13 @@ const encodedDomain = encodeToEntities(domain);
   data-user={encodedUser}
   data-text={buttonText}
 >
-  <a class="btn btn-primary" aria-label="Send an email"></a>
-  <!-- <noscript>
-
-    <div>
-      {buttonText}: {user.slice(0, 1)}••• [at] {
-        domain.split('.')[0].slice(0, 1)
-      }••• dot {domain.split('.')[1].slice(0, 1)}•••
-    </div>
-  </noscript> -->
+  <button
+    class="btn btn-primary"
+    aria-live="polite"
+    aria-label={`${buttonText}: Contact via email`}
+  >
+  </button>
+  <span id="email-success-msg" class="sr-only" aria-live="assertive"></span>
 </mailto-button>
 
 <script>
@@ -64,8 +63,9 @@ const encodedDomain = encodeToEntities(domain);
     }
 
     connectedCallback() {
-      const link = this.querySelector('a');
-      if (!link) return;
+      const button = this.querySelector('button');
+      const srOnlyElement = this.querySelector('#email-success-msg');
+      if (!button) return;
 
       const encodedUser = this.dataset.user;
       const encodedDomain = this.dataset.domain;
@@ -82,21 +82,67 @@ const encodedDomain = encodeToEntities(domain);
       const displayUser = this.obfuscateEmailPart(encodedUser);
       const displayDomain = this.obfuscateEmailPart(encodedDomain);
 
-      // Set display text that doesn't show the actual email
-      link.innerText = `${buttonText}: ${displayUser} [at] ${displayDomain}`;
+      // Proper ARIA labeling with both role and meaningful text
+      button.setAttribute(
+        'aria-label',
+        `${buttonText}: Contact via ${displayUser} at ${displayDomain.replace(/•/g, '')}`,
+      );
 
-      // Don't set the href attribute until clicked
-      link.removeAttribute('href');
+      // Set display text with visually hidden spans for better screen reader understanding
+      button.innerHTML = `
+        <span>${buttonText}: </span>
+        <span aria-hidden="true">${displayUser}</span>
+        <span class="sr-only">partially hidden email username</span>
+        <span aria-hidden="true" class="mx-1 text-gray-500">[at]</span>
+        <span class="sr-only"> at </span>
+        <span aria-hidden="true">${displayDomain}</span>
+        <span class="sr-only">partially hidden domain name</span>
+      `;
 
-      // Only create the actual mailto link when clicked
-      link.addEventListener('click', (event) => {
-        event.preventDefault();
+      // Add specific role and tabindex to ensure keyboard accessibility
+      button.setAttribute('role', 'button');
+      button.setAttribute('tabindex', '0');
 
+      // Support both click and keyboard activation
+      const activateMailto = () => {
         const user = this.decodeEntities(encodedUser);
         const domain = this.decodeEntities(encodedDomain);
 
-        // Create and use the actual email only on click
-        window.location.href = `mailto:${user}@${domain}`;
+        // Announce to screen readers that email client is opening
+        if (srOnlyElement) {
+          srOnlyElement.textContent = 'Opening your email client...';
+
+          // Add a visual feedback element for sighted users
+          const feedbackEl = document.createElement('div');
+          feedbackEl.textContent = 'Opening email client...';
+          feedbackEl.className =
+            'fixed bottom-4 right-4 bg-green-100 text-green-800 px-4 py-2 rounded-md shadow-lg transition-opacity';
+          document.body.appendChild(feedbackEl);
+
+          // Remove both feedback elements after announcement
+          setTimeout(() => {
+            srOnlyElement.textContent = '';
+            feedbackEl.classList.add('opacity-0');
+            setTimeout(() => feedbackEl.remove(), 500);
+          }, 3000);
+        }
+
+        // Create and use the actual email only on interaction
+        navigate(`mailto:${user}@${domain}`);
+      };
+
+      // Handle click events
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        activateMailto();
+      });
+
+      // Handle keyboard events (Enter and Space)
+      button.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          activateMailto();
+        }
       });
     }
   }
