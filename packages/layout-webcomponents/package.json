@@ -8,7 +8,7 @@
   },
   "exports": {
     "./Types": {
-      "types": "./src/Types.ts"
+      "types": "./src/types/index.ts"
     },
     "./Box": "./src/ed-layouts/Box/index.astro",
     "./Center": "./src/ed-layouts/Center/index.astro",
