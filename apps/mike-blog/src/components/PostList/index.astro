@@ -16,5 +16,7 @@ const { posts, headline = 'Blog Posts' } = Astro.props;
 <Stack space="2rem">
   <!-- <Prose><h2>{headline}</h2></Prose> -->
   <h2>{headline}</h2>
-  {posts.map(({ id, data }) => <PostCard data={data} href={id} showTags />)}
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-8">
+    {posts.map(({ id, data }) => <PostCard data={data} href={id} showTags />)}
+  </div>
 </Stack>
