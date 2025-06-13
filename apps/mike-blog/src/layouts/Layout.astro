@@ -26,7 +26,7 @@ const { maxW = '60ch', ...rest } = Astro.props;
     <main
       class="m-auto flex flex-col items-center justify-center p-4 lg:max-w-6/10"
     >
-      <!-- <Prose><slot name="headline" /></Prose> -->
+      <Prose><slot name="headline" /></Prose>
       <slot />
     </main>
     <Footer />

@@ -1,6 +1,7 @@
 import type { ActionErrorCode } from 'astro:actions';
 import { ActionError, defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
+import { navigate } from 'astro:transitions/client';
 
 const notFound: ActionErrorCode = 'NOT_FOUND';
 // import { user } from './user';
@@ -44,9 +45,26 @@ export const server = {
       return ['Sarah', 'Chris', 'Yan', 'Elian'];
     },
   }),
-};
 
-// export const user = {
-//   getUser: defineAction(/* ... */),
-//   createUser: defineAction(/* ... */),
-// }
+  // mailto: defineAction({
+  //   input: z.object({ user: z.string(), domain: z.string() }),
+  //   handler: async (input) => {
+  //     await Promise.resolve(); // Add await to fix lint error
+
+  //     const emailSchema = z.coerce.string().email().min(5);
+
+  //     const { success, data: mailtoAddress } = emailSchema.safeParse(
+  //       `${input.user}@${input.domain}`,
+  //     );
+
+  //     if (!success) {
+  //       throw new ActionError({
+  //         code: 'UNAUTHORIZED',
+  //         message: 'improper mailto',
+  //       });
+  //     }
+
+  //     return `mailto:${mailtoAddress}`;
+  //   },
+  // }),
+};

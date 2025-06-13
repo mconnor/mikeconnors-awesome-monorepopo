@@ -1,5 +1,5 @@
 ---
-import Sidebar from '@repo/layout-webcomponents/Sidebar';
+import SidebarLayout from '@repo/layout-webcomponents/Sidebar';
 import Stack from '@repo/layout-webcomponents/Stack';
 import Box from '@repo/layout-webcomponents/Box';
 
@@ -8,29 +8,30 @@ const pageTitle = 'box class';
 ---
 
 <Layout title={pageTitle}>
-  <Sidebar contentMin="20%" noStretch={false} sideWidth="30ch">
-    <Stack recursive splitAfter={2}>
+  <SidebarLayout contentMin="10%" noStretch={false} sideWidth="30ch">
+    <Stack splitAfter={1}>
       <Box>xxx</Box>
       <Box>xxx</Box>
       <Box>xxx</Box>
     </Stack>
-    <Box
-      ><p class="bg-emerald-100 dark:bg-emerald-800">
+    <div>
+      <p class="">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam magnam est
         iure veniam eos saepe unde doloremque corporis? Mollitia ex reiciendis
         ea iure, at neque velit vero nihil esse sed. Lorem ipsum, dolor sit amet
         consectetur adipisicing elit. Nam magnam est iure veniam eos saepe unde
         doloremque corporis? Mollitia ex reiciendis ea iure, at neque velit vero
         nihil esse sed.
-      </p></Box
-    >
-    <p class="bg-emerald-100 dark:bg-emerald-800">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam magnam est
-      iure veniam eos saepe unde doloremque corporis? Mollitia ex reiciendis ea
-      iure, at neque velit vero nihil esse sed. Lorem ipsum, dolor sit amet
-      consectetur adipisicing elit. Nam magnam est iure veniam eos saepe unde
-      doloremque corporis? Mollitia ex reiciendis ea iure, at neque velit vero
-      nihil esse sed.
-    </p>
-  </Sidebar>
+      </p>
+
+      <p class="">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam magnam est
+        iure veniam eos saepe unde doloremque corporis? Mollitia ex reiciendis
+        ea iure, at neque velit vero nihil esse sed. Lorem ipsum, dolor sit amet
+        consectetur adipisicing elit. Nam magnam est iure veniam eos saepe unde
+        doloremque corporis? Mollitia ex reiciendis ea iure, at neque velit vero
+        nihil esse sed.
+      </p>
+    </div>
+  </SidebarLayout>
 </Layout>
