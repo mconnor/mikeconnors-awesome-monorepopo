@@ -1,16 +1,10 @@
 ---
-import Layout from '#layouts/Layout.astro';
-
-interface Props {
-  domain?: string;
-  name?: string;
-}
-
-import MailtoBtn from '#components/actions-buttons/MailtoBtn.astro';
+import SplashPage from '#components/SplashPage.astro';
+import BaseLayout from '#layouts/BaseLayout.astro';
 ---
 
-<Layout title="Home" description="Home page of the Mike Blog">
-  <h3 class="mb-4 text-3xl font-bold">Welcome</h3>
-
-  <div><MailtoBtn /></div>
-</Layout>
+<BaseLayout title="Welcome" description="Mike's Blog - Splash Page">
+  <div class="m-0 overflow-hidden p-0">
+    <SplashPage />
+  </div>
+</BaseLayout>

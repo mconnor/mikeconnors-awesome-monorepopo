@@ -1,0 +1,121 @@
+---
+
+---
+
+<div
+  class="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-zinc-950 via-indigo-950 to-blue-950"
+>
+  <div class="px-4 text-center text-white">
+    <h1
+      class="split-text mb-4 overflow-hidden text-5xl font-black tracking-tight md:text-6xl"
+    >
+      Welcome to Mike's Blog
+    </h1>
+    <p class="split-text mb-8 overflow-hidden text-xl font-light md:text-2xl">
+      Exploring Ideas & Technology
+    </p>
+    <div class="enter-site-button translate-y-5 opacity-0">
+      <a
+        href="/home"
+        class="inline-block rounded-full bg-rose-500 px-8 py-3 font-bold text-white shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-rose-500 hover:shadow-xl focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95"
+        >Enter Site</a
+      >
+    </div>
+  </div>
+</div>
+
+<script>
+  import { gsap } from 'gsap';
+
+  // Enhanced function to split text into individual characters with nicer styling
+  function splitText() {
+    document.querySelectorAll('.split-text').forEach((text) => {
+      if (!text.textContent) return;
+      const letters = text.textContent.split('');
+      const wordClass =
+        text.tagName === 'H1' ?
+          'relative inline-block'
+        : 'relative inline-block';
+
+      text.textContent = '';
+
+      letters.forEach((letter) => {
+        const span = document.createElement('span');
+        span.className = wordClass;
+        span.style.opacity = '0';
+        span.style.display = 'inline-block';
+        // Add slight randomization to initial positions for more organic feel
+        span.style.transform = `translateY(${20 + Math.random() * 10}px)`;
+
+        span.textContent = letter === ' ' ? '\u00A0' : letter;
+        text.appendChild(span);
+      });
+    });
+  }
+
+  // Enhanced animation sequence
+  function animateText() {
+    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+    // Add a slight initial delay
+    tl.set({}, {}, 0.3);
+
+    // Animate each letter of the heading with a custom wave effect
+    tl.to('.split-text:first-child span', {
+      duration: 0.7,
+      opacity: 1,
+      y: 0,
+      stagger: {
+        amount: 0.5,
+        ease: 'power2.inOut',
+      },
+      ease: 'back.out(1.2)',
+    });
+
+    // Animate the subtitle with slightly different timing
+    tl.to(
+      '.split-text:nth-child(2) span',
+      {
+        duration: 0.5,
+        opacity: 1,
+        y: 0,
+        stagger: {
+          amount: 0.3,
+          ease: 'power1.inOut',
+        },
+      },
+      '-=0.25',
+    );
+
+    // Animate the button with a bounce effect
+    tl.to(
+      '.enter-site-button',
+      {
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: 'elastic.out(1, 0.5)',
+      },
+      '-=0.1',
+    );
+  }
+
+  // Run when DOM is loaded with fallback for Astro's hydration
+  const runAnimation = () => {
+    // Initialize all text spans
+    splitText();
+
+    // Set initial positions for animation with slight randomization
+    gsap.set('.split-text span', { opacity: 0 });
+
+    // Run animation
+    setTimeout(() => animateText(), 100); // Small delay to ensure all is ready
+  };
+
+  // Handle both standard DOM loading and Astro hydration
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', runAnimation);
+  } else {
+    runAnimation();
+  }
+</script>

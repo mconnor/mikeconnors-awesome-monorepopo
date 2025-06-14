@@ -34,13 +34,15 @@
   ],
   "author": "Michael Connor",
   "license": "ISC",
+  "dependencies": {
+    "@repo/utils": "workspace:^"
+  },
   "devDependencies": {
     "@headlessui/react": "catalog:",
     "@heroicons/react": "catalog:",
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@repo/utils": "workspace:^",
     "@tailwindcss/cli": "catalog:",
     "@types/node": "catalog:",
     "daisyui": "catalog:",
