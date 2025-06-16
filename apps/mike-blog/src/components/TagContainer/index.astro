@@ -12,7 +12,7 @@ const { tagCounts } = Astro.props;
   {
     tagCounts &&
       Object.entries(tagCounts).map(([tag, count], index) => (
-        <Tag tag={tag} count={count} del={index} />
+        <Tag tag={tag} count={count} />
       ))
   }
 </div>

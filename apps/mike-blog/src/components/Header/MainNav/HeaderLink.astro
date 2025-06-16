@@ -1,19 +1,19 @@
 ---
-import { type NavLinkI, navLinks } from '#app.config.ts';
+import { type NavLinkI } from '#app.config.ts';
 
 interface Props extends Omit<NavLinkI, 'label'> {
   children: unknown;
 }
 
-const { href, ...rest } = Astro.props;
+const { href } = Astro.props;
 
 const { pathname } = Astro.url;
-const subpath = pathname.match(/[^/]+/g);
+// const subpath = pathname.match(/[^/]+/g);
 const isActive = href === pathname;
 // || href === '/' + subpath?.[0];
-console.log('---------');
-console.log('href', href);
-console.log('pathname', pathname);
+// console.log('---------');
+// console.log('href', href);
+// console.log('pathname', pathname);
 // console.log('subpath', subpath);
 ---
 

@@ -3,6 +3,8 @@ title: Resume - Michael Connor
 layout: ../layouts/MarkdownPostLayout.astro
 ---
 
+# Resume
+
 ## Michael Connor - Frontend Developer
 
 Currently Located in Westport, Kansas City, MO

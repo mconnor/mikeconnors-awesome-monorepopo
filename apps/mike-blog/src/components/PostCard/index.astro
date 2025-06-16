@@ -15,7 +15,9 @@ const { href, data, showTags = false } = Astro.props;
 const { cover, title, description, tags, date } = data;
 ---
 
-<div class="card max-w-96 bg-base-100 shadow-sm card-sm md:card-md lg:card-lg">
+<div
+  class="card max-w-78 bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg"
+>
   <figure>
     <Image src={cover!.src} alt={cover!.alt} width="1600" height="900" />
   </figure>

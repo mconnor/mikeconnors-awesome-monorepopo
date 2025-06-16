@@ -5,6 +5,7 @@ import Box from '@repo/layout-webcomponents/Box';
 import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
 import { tagCountTypeSchema, zTags } from '#schemas/index.js';
+import Prose from '#components/Prose.astro';
 
 const allBlogPost = await getCollection('blog');
 
@@ -71,7 +72,7 @@ if (!tagCountSuccess) {
 ---
 
 <Layout title="Tag Index" description="Index of tags" title="Tags">
-  <h2>Tags</h2>
+  <Prose><h1>Tags</h1></Prose>
   <Box padding="2rem">
     {
       zUniqueTagArray.success && tagCountSuccess ?

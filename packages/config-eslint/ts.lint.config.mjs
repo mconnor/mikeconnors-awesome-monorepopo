@@ -1,6 +1,8 @@
 // @ts-check
 import 'eslint-plugin-only-warn';
 import js from '@eslint/js';
+
+// import eslintPluginImport from 'eslint-plugin-import';
 // import barrelFiles from 'eslint-plugin-barrel-files';
 import eslintPluginAstro from 'eslint-plugin-astro';
 // import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
@@ -17,36 +19,22 @@ import extensionInstanceObj from './fileExtensions.mjs';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 export default tseslint.config(
+  // @ts-ignore
   ignoresConfig,
-  // {
-  //   name: '[*] global language options',
-  //   // ...barrelFiles.reccommended,
-  //   languageOptions: {
-  //     globals: {
-  //       ...globals.browser,
-  //       ...globals.node,
-  //     },
-  //   },
-  // },
-
-  // ...turboPlugin['flat/recommended'],
-  // ...turboConfig,
-  // Global config
-  // JavaScript
   js.configs.recommended,
-  // comments.recommended,
-  // TypeScript
-  // tseslint.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
-  // tseslint.configs.stylisticTypeChecked,
 
   {
     name: '[*] TS Rules',
+
     languageOptions: {
+      ecmaVersion: 'latest',
       parser: tseslint.parser,
       parserOptions: {
         sourceType: 'module',
-        projectService: true,
+        projectService: {
+          allowDefaultProject: ['*.js'],
+        },
         tsconfigRootDir: import.meta.dirname,
         extraFileExtensions,
       },
@@ -58,9 +46,19 @@ export default tseslint.config(
     rules: {
       'capitalized-comments': 'off',
       '@typescript-eslint/no-unsafe-call': 'warn',
-      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-unused-expressions': 'off',
       '@typescript-eslint/consistent-type-definitions': 'warn',
+
+      // 'import/named': 'warn',
+      // 'import/namespace': 'warn',
+      // 'import/default': 'off',
+      // 'import/no-named-as-default-member': 'warn',
+      // 'import/no-unresolved': 'warn',
+      // 'import/no-named-as-default': 'warn',
+      // 'import/no-cycle': 'warn',
+      // 'import/no-unused-modules': 'warn',
+      // 'import/no-deprecated': 'warn',
     },
   },
 
@@ -93,7 +91,7 @@ export default tseslint.config(
     name: '[*] .d.ts files',
     files: ['**/*.d.ts'],
     rules: {
-      '@typescript-eslint/triple-slash-reference': 'off',
+      '@typescript-eslint/triple-slash-reference': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/consistent-type-definitions': 'warn',
     },
@@ -101,7 +99,7 @@ export default tseslint.config(
   {
     files: ['**/actions/*.ts'],
     rules: {
-      '@typescript-eslint/no-misused-promises': 'off',
+      '@typescript-eslint/no-misused-promises': 'warn',
     },
   },
 

@@ -3,18 +3,22 @@ export const prerender = false;
 import { getCollection } from 'astro:content';
 
 import Layout from '#layouts/Layout.astro';
-
+import Prose from '#components/Prose.astro';
 const announcements = await getCollection('announcements');
 ---
 
 <Layout title="Announcements" maxW="80vw">
-  <ul>
-    {
-      announcements.map(({ id, data }) => (
-        <li class="p-2">
-          <a href={`/announcements/${id}`}>{data.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+  <Prose>
+    <h1>Announcements</h1>
+
+    <ul>
+      {
+        announcements.map(({ id, data }) => (
+          <li class="p-2">
+            <a href={`/announcements/${id}`}>{data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </Prose>
 </Layout>

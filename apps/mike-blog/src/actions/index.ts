@@ -1,7 +1,7 @@
 import type { ActionErrorCode } from 'astro:actions';
 import { ActionError, defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
-import { navigate } from 'astro:transitions/client';
+// import { navigate } from 'astro:transitions/client';
 
 const notFound: ActionErrorCode = 'NOT_FOUND';
 // import { user } from './user';

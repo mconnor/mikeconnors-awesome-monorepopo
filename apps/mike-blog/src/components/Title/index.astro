@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import Prose from '#components/Prose.astro';
+---
+
+<Prose>
+  <h1>
+    {title}
+  </h1></Prose
+>

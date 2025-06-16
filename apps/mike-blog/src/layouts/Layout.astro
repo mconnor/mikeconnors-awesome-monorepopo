@@ -1,8 +1,8 @@
 ---
-// import Center from '@repo/layout-webcomponents/Center';
-// import Cover from '@repo/layout-webcomponents/Cover';
+import Center from '@repo/layout-webcomponents/Center';
+import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
-import Prose from '#components/Prose.astro';
+// import Prose from '#components/Prose.astro';
 // import Header from '#components/Header/index.astro';
 import NavBar from '#components/NavBar/index.astro';
 
@@ -17,17 +17,17 @@ interface Props {
   description?: string;
 }
 
-const { maxW = '60ch', ...rest } = Astro.props;
+const { maxW = '60ch', title = 'needs title', ...rest } = Astro.props;
 ---
 
 <BaseLayout {...rest}>
-  <div class="flex min-h-screen flex-col">
+  <div class="flex min-h-dvh flex-col justify-between py-2">
     <NavBar />
-    <main
-      class="m-auto flex flex-col items-center justify-center p-4 lg:max-w-6/10"
-    >
-      <slot />
-    </main>
+    <Center max={maxW}>
+      <main>
+        <slot />
+      </main>
+    </Center>
     <Footer />
     <!-- <footer class="mt-auto flex items-center justify-center p-4">
       <p class="text-sm text-gray-500">

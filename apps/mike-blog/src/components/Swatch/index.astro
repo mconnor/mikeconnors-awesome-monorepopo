@@ -1,11 +1,11 @@
 ---
 interface Props {
-  color?: string;
+  color?: 'blue' | 'red' | 'yellow';
 
   shade: number;
 }
 
-const { color = 'primary-', shade } = Astro.props as Props;
+const { color = 'blue', shade } = Astro.props as Props;
 
 const colorVariants = {
   blue: 'bg-blue-600 hover:bg-blue-500 text-white',
@@ -14,15 +14,15 @@ const colorVariants = {
 };
 ---
 
-<!-- <div class:list={[`${colorVariants[color]}`]}> -->
-<div class="bg-blue-600 text-white hover:bg-blue-500">
-  Eu enim eiusmod tempor elit aute aliqua ullamco mollit ea nulla. Qui id
-  eiusmod consequat id nulla officia cillum in magna sunt ea officia deserunt.
-  Cillum aliquip cillum irure fugiat nisi ex. Consectetur non minim
-  reprehenderit eu consequat dolore veniam. Eiusmod incididunt nostrud consequat
-  aliquip in qui adipisicing occaecat labore ullamco sunt esse elit. Sunt irure
-  magna adipisicing labore exercitation id commodo consequat amet commodo ex
-  enim. Mollit reprehenderit cupidatat aliquip officia.
+<div class:list={[`${colorVariants[color]}`]}>
+  <!-- <div class="bg-blue-600 text-white hover:bg-blue-500"> -->
+  Eu enim eiusmod tempor elit aute aliqua ullamco mollit ea nulla. Qui id eiusmod
+  consequat id nulla officia cillum in magna sunt ea officia deserunt. Cillum aliquip
+  cillum irure fugiat nisi ex. Consectetur non minim reprehenderit eu consequat dolore
+  veniam. Eiusmod incididunt nostrud consequat aliquip in qui adipisicing occaecat
+  labore ullamco sunt esse elit. Sunt irure magna adipisicing labore exercitation
+  id commodo consequat amet commodo ex enim. Mollit reprehenderit cupidatat aliquip
+  officia.
   <!-- <div class="flex gap-2 border-2">
     <div class:list={['flex flex-col items-center justify-items-center gap-1']}>
       <div class:list={['flex h-8 w-16 flex-col gap-2 rounded-3xl shadow-2xl']}>
