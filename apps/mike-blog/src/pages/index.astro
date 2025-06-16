@@ -5,6 +5,10 @@ import BaseLayout from '#layouts/BaseLayout.astro';
 
 <BaseLayout title="Welcome" description="Mike's Blog - Splash Page">
   <div class="m-0 overflow-hidden p-0">
-    <SplashPage />
+    <SplashPage>
+      <div slot="enter-site-button">
+        <a href="/about" class="btn btn-primary">Go Site</a>
+      </div>
+    </SplashPage>
   </div>
 </BaseLayout>

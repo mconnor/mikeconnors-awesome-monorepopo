@@ -39,7 +39,7 @@
     "@eslint/json": "catalog:",
     "@eslint/markdown": "catalog:",
     "@next/eslint-plugin-next": "catalog:",
-    "@typescript-eslint/parser": "^8.34.0",
+    "@typescript-eslint/parser": "catalog:",
     "astro-eslint-parser": "catalog:",
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",

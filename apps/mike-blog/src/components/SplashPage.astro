@@ -1,5 +1,9 @@
 ---
+interface Props {
+  children: unknown;
+}
 
+const { children } = Astro.props;
 ---
 
 <div
@@ -14,13 +18,14 @@
     <p class="split-text mb-8 overflow-hidden text-xl font-light md:text-2xl">
       Exploring Ideas & Technology
     </p>
-    <div class="enter-site-button translate-y-5 opacity-0">
+    <!-- <div class="enter-site-button translate-y-5 opacity-0">
       <a
         href="/home"
         class="inline-block rounded-full bg-rose-500 px-8 py-3 font-bold text-white shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-rose-500 hover:shadow-xl focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95"
         >Enter Site</a
       >
-    </div>
+    </div> -->
+    <slot name="enter-site-button" />
   </div>
 </div>
 

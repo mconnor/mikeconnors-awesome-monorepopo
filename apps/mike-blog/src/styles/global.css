@@ -2,12 +2,15 @@
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 /* @import 'open-props/open-props.min.css'; */
 @import 'open-props/animations';
-@source not '@repo/styles';
+@source not '@repo/icon-paths';
 @source not '@repo/layout-webcomponents';
+@source not '@repo/scripts';
+@source not '@repo/eslint-config';
+@source not '@repo/typescript-config';
 
 @import '@repo/design-system/shared-styles.css';
 @import '@repo/astro-ui/styles.css';
-@import './anims.css';
+/* @import './anims.css'; */
 
 @plugin "daisyui" {
   themes: all;
