@@ -1,0 +1,19 @@
+---
+import type { ImageMetadata } from 'astro';
+import { getImage } from 'astro:assets';
+
+interface Props {
+  bgImage: ImageMetadata;
+  children?: unknown;
+}
+
+const { bgImage } = Astro.props as Props;
+const optimizedBackground = await getImage({ src: bgImage, format: 'avif' });
+---
+
+<div
+  class="bg-center"
+  style={`background-image: url(${optimizedBackground.src});`}
+>
+  <slot />
+</div>

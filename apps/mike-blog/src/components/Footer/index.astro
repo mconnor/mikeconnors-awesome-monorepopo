@@ -1,17 +1,15 @@
 ---
 // import { Links } from '#app.config.ts';
 // import Cluster from '@repo/layout-webcomponents/Cluster';
+import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
 ---
 
-<footer class="">
-  <div
-    class="grid grid-cols-1 place-content-center gap-4 border-0 bg-primary-100 px-6 py-8 text-primary-700 md:grid-cols-2 dark:bg-primary-800 dark:text-primary-300"
-  >
-    <div class="h-[1lh] place-self-center text-nowrap">
-      Site and contents by Mike Connor
-    </div>
-    <div class="h-[1lh] place-self-center text-nowrap">
-      Enquiries: <a href="mailto:mike@mikeconnor.tech">mike@mikeconnor.tech</a>
-    </div>
+<footer
+  transition:persist
+  class="space-around flex flex-col items-center justify-between bg-base-200 p-4 text-base-content"
+>
+  <div class="text-nowrap">Site and contents by Mike Connor</div>
+  <div class="">
+    <MailtoBtn buttonText="CONTACT ME" />
   </div>
 </footer>

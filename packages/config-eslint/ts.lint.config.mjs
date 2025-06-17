@@ -11,7 +11,7 @@ import eslintPluginAstro from 'eslint-plugin-astro';
 import tseslint from 'typescript-eslint';
 
 import astroParser from 'astro-eslint-parser';
-import eslintConfigPrettier from 'eslint-config-prettier';
+import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 
@@ -46,7 +46,7 @@ export default tseslint.config(
     rules: {
       'capitalized-comments': 'off',
       '@typescript-eslint/no-unsafe-call': 'warn',
-      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
       '@typescript-eslint/consistent-type-definitions': 'warn',
 

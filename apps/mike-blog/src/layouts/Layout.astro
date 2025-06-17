@@ -1,10 +1,15 @@
 ---
 import Center from '@repo/layout-webcomponents/Center';
-import Cover from '@repo/layout-webcomponents/Cover';
+
+//  cover causes a flash issue
+// import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 // import Prose from '#components/Prose.astro';
 // import Header from '#components/Header/index.astro';
 import NavBar from '#components/NavBar/index.astro';
+
+// import Andy from '#assets/andy_mud_color.webp';
+// import BgImage from '#components/bg-img/index.astro';
 
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
@@ -17,10 +22,11 @@ interface Props {
   description?: string;
 }
 
-const { maxW = '60ch', title = 'needs title', ...rest } = Astro.props;
+const { maxW = '60ch', ...rest } = Astro.props;
 ---
 
 <BaseLayout {...rest}>
+  <!-- <BgImage bgImage={Andy}> -->
   <div class="flex min-h-dvh flex-col justify-between py-2">
     <NavBar />
     <Center max={maxW}>
@@ -35,4 +41,5 @@ const { maxW = '60ch', title = 'needs title', ...rest } = Astro.props;
       </p>
     </footer> -->
   </div>
+  <!-- </BgImage> -->
 </BaseLayout>

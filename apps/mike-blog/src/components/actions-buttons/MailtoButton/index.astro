@@ -1,0 +1,37 @@
+---
+interface Props {
+  // domain?: string;
+  // user?: string;
+  buttonText?: string;
+}
+
+const domain = import.meta.env.DOMAIN;
+const user = import.meta.env.ME;
+
+const { buttonText = 'Contact via email' } = Astro.props;
+
+// Pre-encode the email parts on the server-side
+const encodeToEntities = (text: string) => {
+  return Array.from(text)
+    .map((char) => `&#${char.charCodeAt(0)};`)
+    .join('');
+};
+
+const encodedUser = encodeToEntities(user);
+const encodedDomain = encodeToEntities(domain);
+---
+
+<script src="./MailBtn.ts"></script>
+<mailto-button
+  data-domain={encodedDomain}
+  data-user={encodedUser}
+  data-text={buttonText}
+>
+  <button
+    aria-live="polite"
+    aria-label={buttonText}
+    class="btn btn-block btn-primary"
+  >
+  </button>
+  <span id="email-success-msg" class="sr-only" aria-live="assertive"></span>
+</mailto-button>

@@ -2,7 +2,7 @@
 
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
-import { defineConfig, sharpImageService } from 'astro/config';
+import { defineConfig, sharpImageService, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -58,12 +58,17 @@ export default defineConfig({
     format: 'file',
   },
 
-  // env: {
-  //   schema: {
-  //     SENTRY_DSN: envField.string({ context: "server", access: "private"}),
-  //     SENTRY_AUTH_TOKEN: envField.string({ context: "server", access: "private"}),
-  //   }
-  // }
+  env: {
+    schema: {
+      SENTRY_DSN: envField.string({ context: 'server', access: 'secret' }),
+      SENTRY_AUTH_TOKEN: envField.string({
+        context: 'server',
+        access: 'secret',
+      }),
+      USER: envField.string({ context: 'server', access: 'secret' }),
+      DOMAIN: envField.string({ context: 'server', access: 'secret' }),
+    },
+  },
   // prefetch: {
   //   prefetchAll: true,
   //   defaultStrategy: 'viewport',

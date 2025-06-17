@@ -7,3 +7,5 @@ const featuresArr = [
   { copy: 'Seamless cloud integration', has: false },
   { copy: 'Real-time collaboration tools', has: false },
 ];
+
+export { featuresArr };

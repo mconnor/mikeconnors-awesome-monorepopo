@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { SITE_DESCRIPTION, SITE_TITLE } from '#app.config.js';
+import { ClientRouter } from 'astro:transitions';
 
 import BaseHead from '#components/BaseHead/index.astro';
 
@@ -19,9 +20,8 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 <html lang="en" id="blog-app">
   <head>
     <BaseHead title={title} description={description} />
-  </head>
-
-  <body>
+    <ClientRouter />
+  </head><body>
     <slot />
   </body>
 </html>
