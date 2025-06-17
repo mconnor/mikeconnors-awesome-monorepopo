@@ -1,6 +1,5 @@
 ---
 // import { authorSchema } from '#schemas/idex.js';
-import Stack from '@repo/layout-webcomponents/Stack';
 
 import { getCollection } from 'astro:content';
 
@@ -12,13 +11,12 @@ const authors = await getCollection('authors');
 <Layout title="authors">
   <!-- <Debug {tag} />
     <Debug {posts} /> -->
-  <Stack>
-    {
-      authors.map(({ data }) => (
-        <div class="flex items-center gap-2">
-          <a href={`/authors/${data.id}`}>{data.name}</a>
-        </div>
-      ))
-    }
-  </Stack>
+
+  {
+    authors.map(({ data }) => (
+      <div class="flex items-center gap-2">
+        <a href={`/authors/${data.id}`}>{data.name}</a>
+      </div>
+    ))
+  }
 </Layout>

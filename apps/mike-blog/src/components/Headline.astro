@@ -1,0 +1,14 @@
+---
+interface Props {
+  headline: string;
+}
+const { headline } = Astro.props;
+---
+
+<div
+  class="prose prose-sm prose-stone md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert"
+>
+  <h1>
+    {headline}
+  </h1>
+</div>

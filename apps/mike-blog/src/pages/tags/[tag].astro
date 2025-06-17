@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-
+import Prose from '#components/Prose.astro';
 import Layout from '#layouts/Layout.astro';
 import PostList from '#components/PostList/index.astro';
-
+import Stack from '@repo/layout-webcomponents/Stack';
 export const prerender = true;
 
 export async function getStaticPaths() {
@@ -33,6 +33,6 @@ const { posts } = Astro.props;
 // see
 ---
 
-<Layout title={tag}>
-  <PostList posts={posts} headline=`#${tag}` />
+<Layout title="Blog" maxW="100ch">
+  <PostList posts={posts} headline="Tags" />
 </Layout>

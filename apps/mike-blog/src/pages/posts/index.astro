@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import Prose from '#components/Prose.astro';
+
 import PostList from '#components/PostList/index.astro';
 
 import Layout from '#layouts/Layout.astro';
@@ -18,8 +18,5 @@ const posts = publishsedPosts.sort((a, b) => {
 ---
 
 <Layout title="Blog" maxW="100ch">
-  <div class="flex flex-col gap-4">
-    <Prose><h1>Blog Post</h1></Prose>
-    <PostList posts={posts} />
-  </div>
+  <PostList posts={posts} headline="Blog Posts" />
 </Layout>

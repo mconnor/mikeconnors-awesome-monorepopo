@@ -2,19 +2,23 @@
 import PostCard from '#components/PostCard/index.astro';
 import { blogSchema } from '#schemas/index.ts';
 import { z } from 'astro:content';
+import Headline from '#components/Headline.astro';
+// import Prose from '#components/Prose.astro';
 // import Switcher from '@repo/layout-webcomponents/Switcher';
-import Stack from '@repo/layout-webcomponents/Stack';
+// import Stack from '@repo/layout-webcomponents/Stack';
 // import Prose from '#components/Prose.astro';
 interface Props {
-  headline?: string;
+  headline: string;
   posts: { id: string; data: z.infer<typeof blogSchema> }[];
 }
 
-const { posts } = Astro.props;
+const { posts, headline } = Astro.props;
 ---
 
-<Stack space="2rem">
-  <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
-    {posts.map(({ id, data }) => <PostCard data={data} href={id} showTags />)}
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <div class="col-span-1 md:col-span-2 lg:col-span-3">
+    <Headline headline={headline} />
   </div>
-</Stack>
+
+  {posts.map(({ id, data }) => <PostCard data={data} href={id} showTags />)}
+</div>
