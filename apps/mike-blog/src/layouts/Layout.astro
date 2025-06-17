@@ -1,8 +1,8 @@
 ---
 import Center from '@repo/layout-webcomponents/Center';
-
+import Stack from '@repo/layout-webcomponents/Stack';
 //  cover causes a flash issue
-// import Cover from '@repo/layout-webcomponents/Cover';
+import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 // import Prose from '#components/Prose.astro';
 // import Header from '#components/Header/index.astro';
@@ -27,19 +27,19 @@ const { maxW = '60ch', ...rest } = Astro.props;
 
 <BaseLayout {...rest}>
   <!-- <BgImage bgImage={Andy}> -->
-  <div class="flex min-h-dvh flex-col justify-between py-2">
+  <Cover centeredElement="center-l">
     <NavBar />
     <Center max={maxW}>
-      <main>
+      <Stack>
         <slot />
-      </main>
+      </Stack>
     </Center>
-    <Footer />
-    <!-- <footer class="mt-auto flex items-center justify-center p-4">
+  </Cover>
+  <Footer />
+  <!-- <footer class="mt-auto flex items-center justify-center p-4">
       <p class="text-sm text-gray-500">
         © {new Date().getFullYear()} Mike Connor. All rights reserved.
       </p>
     </footer> -->
-  </div>
-  <!-- </BgImage> -->
 </BaseLayout>
+<!-- </BgImage> -->
