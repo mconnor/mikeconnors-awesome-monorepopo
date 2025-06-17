@@ -1,4 +1,10 @@
 {
   "extends": ["//"],
-  "globalEnv": ["DEV", "PROD"]
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md", ".env*"],
+      "outputs": ["dist/**"]
+    }
+  }
 }
