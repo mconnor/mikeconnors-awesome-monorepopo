@@ -6,7 +6,7 @@ description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ei
 cover:
   src: 'https://picsum.photos/1600/900?random=1'
   alt: 'A photograph of a sunset behind a mountain range.'
-tags: ['astro', 'blogging', 'learning-in-public']
+tags: ['astro', 'blogging', 'learning-in-public', 'tailwindcss']
 ---
 
 ## Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu sprechen Und Hoffnung wieder

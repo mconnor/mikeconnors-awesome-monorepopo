@@ -70,7 +70,7 @@ const navLinks: NavLinkI[] = [
   // { label: 'Swatches', href: '/swatch', icon: 'blog' },
   // { label: 'Sidebar', href: '/about', icon: 'projects' },
   // { label: 'form', href: '/form-test', icon: 'projects' },
-  { label: 'Contact', href: '/contact', icon: 'projects' },
+  // { label: 'Contact', href: '/contact', icon: 'projects' },
   { label: 'Tags', href: '/tags', icon: 'projects' },
   { label: 'CV', href: '/resume', icon: 'projects' },
   // { label: 'blank', href: '/blank', icon: 'projects' },
