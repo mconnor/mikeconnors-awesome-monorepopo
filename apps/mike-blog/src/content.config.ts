@@ -1,4 +1,4 @@
-import { parse as parseToml } from '@std/toml/parse';
+import TOML from '@iarna/toml';
 // build-in loaders
 import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
@@ -13,7 +13,7 @@ type ParserReturnType =
 
 const authors = defineCollection({
   loader: file('src/content/authors.toml', {
-    parser: (text) => parseToml(text).authors as ParserReturnType,
+    parser: (text) => TOML.parse(text).authors as ParserReturnType,
   }),
 
   schema: authorsSchema,
