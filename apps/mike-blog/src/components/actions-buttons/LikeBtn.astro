@@ -11,12 +11,12 @@
       const postId = this.dataset.id;
       const btn = this.querySelector('button');
       btn?.addEventListener('click', async () => {
-        // if (!postId) {
-        //   throw new Error('ERRor' + 'No post id provided');
-        // }
+        if (!postId) {
+          throw new Error('ERRor' + 'No post id provided');
+        }
 
-        const updatedLikes = await actions.likePost.orThrow({
-          postId: 'example',
+        await actions.likePost.orThrow({
+          postId: postId,
         });
         //    ^ type: number
 

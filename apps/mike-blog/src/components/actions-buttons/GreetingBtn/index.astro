@@ -37,7 +37,7 @@ const { hello = "Hi, I'm Mike" } = Astro.props;
       const enteredNamedParsed = nameSchema.safeParse(val);
 
       const {
-        success: clientSideSuccess,
+        // success: clientSideSuccess,
         error: clientSideError,
         data: clientSideData,
       } = enteredNamedParsed;

@@ -1,11 +1,9 @@
 ---
 interface Props {
   color?: 'blue' | 'red' | 'yellow';
-
-  shade: number;
 }
 
-const { color = 'blue', shade } = Astro.props as Props;
+const { color = 'blue' } = Astro.props as Props;
 
 const colorVariants = {
   blue: 'bg-blue-600 hover:bg-blue-500 text-white',

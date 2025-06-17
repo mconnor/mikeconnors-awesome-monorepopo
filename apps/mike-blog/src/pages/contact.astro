@@ -17,11 +17,11 @@ if (Astro.request.method === 'POST') {
     const message = data.get('message');
 
     // Basic validation
-    if (!name || name.length < 2)
+    if (!name || name.toString().length < 2)
       errors.name = 'Name is required (min 2 characters)';
     if (!email || !email.toString().includes('@'))
       errors.email = 'Valid email is required';
-    if (!message || message.length < 10)
+    if (!message || message.toString().length < 10)
       errors.message = 'Message is required (min 10 characters)';
 
     // If no errors, process the form

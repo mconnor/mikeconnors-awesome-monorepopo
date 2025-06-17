@@ -40,12 +40,13 @@ export const daisyuiThemes = [
   'nord',
 ] as const;
 
-export type DaisyUITheme = (typeof daisyuiThemes)[number];
+// type DaisyThemesType = typeof daisyuiThemes;
 
-// Helper to check if a string is a valid DaisyUI theme
-export function isValidDaisyUITheme(theme: string): theme is DaisyUITheme {
-  return daisyuiThemes.includes(theme as unknown);
-}
+// export type DaisyUITheme = DaisyThemesType[number];
+
+// export function isValidDaisyUITheme(theme: string): theme is DaisyUITheme {
+//   return daisyuiThemes.includes(theme as DaisyUITheme);
+// }
 
 // Export default grouped by light/dark for easier usage
 export const daisyuiThemeGroups = {

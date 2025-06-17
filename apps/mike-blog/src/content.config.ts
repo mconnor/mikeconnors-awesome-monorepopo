@@ -3,7 +3,7 @@ import { parse as parseToml } from '@std/toml/parse';
 import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
 
-import { countryLoader } from './loaders/index.ts';
+// import { countryLoader } from './loaders/index.ts';
 
 import { announcementsSchema, authorsSchema, blogSchema } from './schemas';
 
@@ -38,10 +38,10 @@ const announcements = defineCollection({
   schema: announcementsSchema,
 });
 
-const countries = defineCollection({
-  loader: countryLoader(),
-  //  schema:
-});
+// const countries = defineCollection({
+//   loader: countryLoader(),
+//   //  schema:
+// });
 
 // const dogs = defineCollection({
 //   loader: file("src/data/authors.toml", { parser: (text) => parseToml(text).dogs }),

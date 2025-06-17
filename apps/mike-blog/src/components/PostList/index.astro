@@ -10,7 +10,7 @@ interface Props {
   posts: { id: string; data: z.infer<typeof blogSchema> }[];
 }
 
-const { posts, headline = 'Blog Posts' } = Astro.props;
+const { posts } = Astro.props;
 ---
 
 <Stack space="2rem">

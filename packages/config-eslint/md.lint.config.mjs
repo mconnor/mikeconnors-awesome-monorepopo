@@ -1,14 +1,10 @@
+// @ts-check
 import markdown from '@eslint/markdown';
 
-/**
- * A custom ESLint configuration for libraries that use Next.js.
- *
- * @type {import("eslint").Linter.Config}
- * */
 export default [
   {
     // Apply the Markdown processor to all .md files
-    files: ['**/*.md', '**/*.mdoc'],
+    files: ['**/*.md'],
     plugins: {
       markdown,
     },

@@ -19,9 +19,9 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
         class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
       >
         {
-          navLinks.map(({ href, label, subPages }, index) => (
+          navLinks.map(({ href, label }) => (
             <li>
-              <a role="button" href={href} class="">
+              <a role="button" href={href}>
                 {label}
               </a>
             </li>
@@ -49,7 +49,7 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       {
-        navLinks.map(({ href, label, subPages }, index) => (
+        navLinks.map(({ href, label }) => (
           <li>
             <a role="button" href={href} class="btn-small btn btn-ghost">
               {label}
