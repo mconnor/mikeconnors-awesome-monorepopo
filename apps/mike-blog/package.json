@@ -42,7 +42,7 @@
     "@astrojs/preact": "catalog:",
     "@astrojs/rss": "catalog:",
     "@astrojs/vercel": "catalog:",
-    "@iarna/toml": "^2.2.5",
+    "@iarna/toml": "catalog:",
     "@repo/astro-ui": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@repo/icon-paths": "workspace:*",
