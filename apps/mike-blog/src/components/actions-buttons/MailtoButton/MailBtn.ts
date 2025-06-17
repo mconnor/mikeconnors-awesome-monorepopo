@@ -100,7 +100,7 @@ class MailtoButton extends HTMLElement {
       }
 
       // Create and use the actual email only on interaction
-      navigate(`mailto:${user}@${domain}`);
+      void navigate(`mailto:${user}@${domain}`);
     };
 
     // Handle click events
