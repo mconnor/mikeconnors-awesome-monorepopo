@@ -8,7 +8,9 @@
     "PROD",
     "import.meta.env.PROD",
     "import.meta.env.DEV",
-    "ENABLE_EXPERIMENTAL_COREPACK"
+    "ENABLE_EXPERIMENTAL_COREPACK",
+    "ME",
+    "DOMAIN"
   ],
   "globalPassThroughEnv": ["AWS_SECRET_KEY", "GITHUB_TOKEN"],
   "envMode": "strict",
