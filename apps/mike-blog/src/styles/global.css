@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 /* @import 'open-props/open-props.min.css'; */
-@import 'open-props/animations';
+/* @import 'open-props/animations'; */
 @source not '@repo/icon-paths';
 @source not '@repo/layout-webcomponents';
 @source not '@repo/scripts';
@@ -10,6 +10,7 @@
 
 @import '@repo/design-system/shared-styles.css';
 @import '@repo/astro-ui/styles.css';
+@import '@repo/ui-lit/styles.css';
 /* @import './anims.css'; */
 
 @plugin "daisyui" {

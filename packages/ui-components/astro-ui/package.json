@@ -30,9 +30,8 @@
   "dependencies": {
     "@repo/icon-paths": "workspace:^",
     "@tailwindcss/vite": "catalog:",
-    "lorem-ipsum": "catalog:",
     "tailwindcss": "catalog:",
-    "theme-change": "catalog:"
+    "lorem-ipsum": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",

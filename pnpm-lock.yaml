@@ -514,6 +514,9 @@ importers:
       '@repo/scripts':
         specifier: workspace:*
         version: link:../../packages/scripts
+      '@repo/ui-lit':
+        specifier: workspace:^
+        version: link:../../packages/ui-components/lit
       '@repo/utils':
         specifier: workspace:*
         version: link:../../packages/utils
@@ -1062,9 +1065,6 @@ importers:
       tailwindcss:
         specifier: 'catalog:'
         version: 4.1.10
-      theme-change:
-        specifier: 'catalog:'
-        version: 2.5.0
     devDependencies:
       '@astrojs/check':
         specifier: 'catalog:'
@@ -1162,10 +1162,20 @@ importers:
         version: 6.3.5(@types/node@24.0.1)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0)
 
   packages/ui-components/lit:
+    dependencies:
+      '@tailwindcss/vite':
+        specifier: 'catalog:'
+        version: 4.1.10(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0))
+      tailwindcss:
+        specifier: 'catalog:'
+        version: 4.1.10
     devDependencies:
       '@open-wc/testing':
         specifier: 'catalog:'
         version: 4.0.0
+      '@repo/design-system':
+        specifier: workspace:^
+        version: link:../../design-system
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../config-eslint
@@ -1175,12 +1185,18 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:^
         version: link:../../config-typescript
+      '@tailwindcss/cli':
+        specifier: 'catalog:'
+        version: 4.1.10
       '@types/node':
         specifier: 'catalog:'
         version: 22.15.32
       astro:
         specifier: 'catalog:'
         version: 5.9.4(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0)
+      daisyui:
+        specifier: 'catalog:'
+        version: 5.0.43
       eslint:
         specifier: 'catalog:'
         version: 9.29.0(jiti@2.4.2)
@@ -1193,6 +1209,9 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
+      vite:
+        specifier: 'catalog:'
+        version: 6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0)
 
   packages/ui-components/preact:
     dependencies:
@@ -17312,7 +17331,7 @@ snapshots:
       esbuild: 0.25.5
       fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
-      postcss: 8.5.5
+      postcss: 8.5.6
       rollup: 4.43.0
       tinyglobby: 0.2.14
     optionalDependencies:
@@ -17328,7 +17347,7 @@ snapshots:
       esbuild: 0.25.5
       fdir: 6.4.6(picomatch@4.0.2)
       picomatch: 4.0.2
-      postcss: 8.5.5
+      postcss: 8.5.6
       rollup: 4.43.0
       tinyglobby: 0.2.14
     optionalDependencies:

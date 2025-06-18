@@ -43,6 +43,7 @@
     "@astrojs/rss": "catalog:",
     "@astrojs/vercel": "catalog:",
     "@iarna/toml": "catalog:",
+    "@repo/ui-lit": "workspace:^",
     "@repo/astro-ui": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@repo/icon-paths": "workspace:*",

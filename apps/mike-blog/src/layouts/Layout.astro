@@ -29,7 +29,7 @@ const { maxW = '60ch', ...rest } = Astro.props;
   <!-- <BgImage bgImage={Andy}> -->
   <Cover centeredElement="center-l">
     <NavBar />
-    <Center max={maxW}>
+    <Center max={maxW} transition:animate="slide">
       <Stack space="2rem">
         <slot />
       </Stack>
