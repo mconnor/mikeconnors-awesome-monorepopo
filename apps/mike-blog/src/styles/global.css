@@ -9,8 +9,8 @@
 @source not '@repo/typescript-config';
 
 @import '@repo/design-system/shared-styles.css';
-@import '@repo/astro-ui/styles.css';
-@import '@repo/ui-lit/styles.css';
+/* @import '@repo/astro-ui/styles.css';
+@import '@repo/ui-lit/styles.css'; */
 /* @import './anims.css'; */
 
 @plugin "daisyui" {

@@ -13,7 +13,7 @@ type Props = {
 
 import { format } from 'date-fns';
 
-const { maxW = '60ch', title, description, date, cover, author } = Astro.props;
+const { maxW = '40ch', title, description, date, cover, author } = Astro.props;
 
 let authorObj;
 if (author) {
@@ -28,30 +28,28 @@ if (author) {
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description} maxW={maxW}>
   <Prose>
-    <h1 class="capitalize">{title}</h1>
+    <h1 class="">{title}</h1>
     {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
-    <figure>
-      {
-        cover?.src && cover?.alt && (
-          <Image
-            class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
-            src={cover.src}
-            alt={cover.alt ?? 'alt image needed'}
-            width="1600"
-            height="900"
-          />
-        )
-      }
-    </figure>
+    <!-- <figure>
+        {
+          cover?.src && cover?.alt && (
+            <img
+              class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
+              src={cover.src}
+              alt={cover.alt ?? 'alt image needed'}
+            />
+          )
+        }
+      </figure> -->
 
     {
       authorObj && (
-        <p class="text-sm text-gray-500">
+        <p class="prose-sm">
           By <a href={`../authors/${authorObj.id}`}>{authorObj.data.name}</a>
         </p>
       )
     }
 
     <slot />
-  </Prose></Layout
->
+  </Prose>
+</Layout>

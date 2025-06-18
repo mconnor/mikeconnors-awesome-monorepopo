@@ -73,9 +73,10 @@ if (!tagCountSuccess) {
 ---
 
 <Layout maxW="40ch" title="Tag Index" description="Index of tags" title="Tags">
-  <Headline headline="Tags" />
+ 
   {
     zUniqueTagArray.success && tagCountSuccess ?
+     <Headline headline="Tags" />
       <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />
     : <p>No tags</p>
   }

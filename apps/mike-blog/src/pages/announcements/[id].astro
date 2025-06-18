@@ -24,7 +24,7 @@ if (announcement === undefined) {
 const { Content } = await render(announcement);
 ---
 
-<Layout title={announcement.data.title} maxW="80ch">
+<Layout title={announcement.data.title} maxW="60ch">
   <Prose>
     <h1>{announcement.data.title}</h1>
     <Content />

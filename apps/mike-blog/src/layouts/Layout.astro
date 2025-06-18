@@ -1,6 +1,6 @@
 ---
 import Center from '@repo/layout-webcomponents/Center';
-import Stack from '@repo/layout-webcomponents/Stack';
+
 //  cover causes a flash issue
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
@@ -29,13 +29,12 @@ const { maxW = '60ch', ...rest } = Astro.props;
   <!-- <BgImage bgImage={Andy}> -->
   <Cover centeredElement="center-l">
     <NavBar />
-    <Center max={maxW} transition:animate="slide">
-      <Stack space="2rem">
-        <slot />
-      </Stack>
+    <Center>
+      <slot />
     </Center>
+    <Footer />
   </Cover>
-  <Footer />
+
   <!-- <footer class="mt-auto flex items-center justify-center p-4">
       <p class="text-sm text-gray-500">
         © {new Date().getFullYear()} Mike Connor. All rights reserved.
