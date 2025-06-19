@@ -1,0 +1,26 @@
+---
+// import { pathname } from 'astro';
+
+const arr = Astro.url.pathname.split('/');
+---
+
+<div class="breadcrumbs text-sm">
+  <ul>
+    <li><a href="../">Home</a></li>
+
+    {
+      arr.map((segment, index) => {
+        if (segment === '') return null; // Skip empty segments
+        const path = Astro.url.pathname
+          .split('/')
+          .slice(0, index + 1)
+          .join('/');
+        return (
+          <li>
+            <a href={path}>{segment}</a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</div>

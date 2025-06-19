@@ -1,0 +1,30 @@
+---
+import Capsule from './Capsule.astro';
+
+// type Item = {
+//   label: string;
+//   year: number;
+// };
+// interface Props {
+//   items: Item[];
+// }
+const { items } = Astro.props;
+---
+
+<ul class="timeline">
+  <!-- {
+    items.map((item) => (
+      <li>
+        <Capsule label={item.label} year={item.year} />
+      </li>
+    ))
+  } -->
+  <Capsule label="Apple Inc. founded" year={1976} first />
+
+  <Capsule label="iMac" year={1998} />
+
+  <Capsule label="iPod" year={2001} />
+
+  <Capsule label="iPhone" year={2007} />
+  <Capsule label="Apple Watch" year={2015} last />
+</ul>

@@ -1,5 +1,5 @@
 ---
-title: tailwindcss/typography
+title: tailwindcss / typography
 date: 2025-04-01
 author: mike-connor
 description: 'Typography should be easy'

@@ -14,7 +14,7 @@
   "scripts": {
     "clean": "rm -rf dist && echo 'Done.'",
     "spell-check": "cspell --no-summary --no-progress --no-colors --config cspell.json \"**/*.{md,mts,ts,tsx}\"",
-    "dev": "astro dev",
+    "dev": "astro dev --host",
     "astro-check": "astro check",
     "build": "node -v && ls -la src/content && cat src/content/authors.toml && astro build",
     "preview": "astro preview",

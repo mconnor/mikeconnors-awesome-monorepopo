@@ -4,16 +4,17 @@ import { Image } from 'astro:assets';
 import { type CollectionEntry, getEntry } from 'astro:content';
 import Prose from '#components/Prose.astro';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
-// import { inferRemoteSize } from 'astro:assets';
+import BreadCrumbs from '#components/BreadCrumbs/index.astro';
 
 type Props = {
-  maxW?: RmUnitType;
+  // maxW?: RmUnitType;
   children: unknown;
+  id?: string;
 } & CollectionEntry<'blog'>['data'];
 
 import { format } from 'date-fns';
 
-const { maxW = '40ch', title, description, date, cover, author } = Astro.props;
+const { title, description, date, cover, author } = Astro.props;
 
 let authorObj;
 if (author) {
@@ -26,30 +27,40 @@ if (author) {
 ---
 
 <!-- TODO: fix the date format -->
-<Layout title={title} description={description} maxW={maxW}>
-  <Prose>
-    <h1 class="">{title}</h1>
-    {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
-    <!-- <figure>
-        {
-          cover?.src && cover?.alt && (
-            <img
-              class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
-              src={cover.src}
-              alt={cover.alt ?? 'alt image needed'}
-            />
-          )
-        }
-      </figure> -->
+<Layout title={title} description={description}>
+  <BreadCrumbs />
 
+  <!-- <h1>The current URL is: {Astro.url}</h1>
+  <h1>The current URL pathname is: {Astro.url.pathname}</h1>
+  <h1>The current URL origin is: {Astro.url.origin}</h1> -->
+
+  <!-- <h1 class="">{title}</h1> -->
+  <div
+    class="background-gradient-to-r mb-4 rounded-lg from-blue-500 to-purple-500 p-4 shadow-lg"
+  >
+    <h1 class="text-2xl font-bold text-white">{title}</h1>
+  </div>
+  {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
+  <figure>
     {
-      authorObj && (
-        <p class="prose-sm">
-          By <a href={`../authors/${authorObj.id}`}>{authorObj.data.name}</a>
-        </p>
+      cover?.src && cover?.alt && (
+        <img
+          class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
+          src={cover.src}
+          alt={cover.alt ?? 'alt image needed'}
+        />
       )
     }
+  </figure>
 
+  {
+    authorObj && (
+      <p class="prose-sm">
+        By <a href={`../authors/${authorObj.id}`}>{authorObj.data.name}</a>
+      </p>
+    )
+  }
+  <Prose>
     <slot />
   </Prose>
 </Layout>

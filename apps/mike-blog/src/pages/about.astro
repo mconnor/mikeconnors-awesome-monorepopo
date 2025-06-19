@@ -2,36 +2,32 @@
 import { Image } from 'astro:assets';
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
+import TimeLine from '#components/TimeLine/index.astro';
 import Frame from '@repo/layout-webcomponents/Frame';
+import Stack from '@repo/layout-webcomponents/Stack';
 import Andy from '#assets/andy_mud_color.webp';
 
 export const prerender = true;
 ---
 
 <Layout title="About">
-  <div class="flex h-full flex-col items-center justify-center"></div>
-  <div class="bg-url[(/)]">
+  <Stack space="var(--s1)">
+    <TimeLine />
     <Prose>
       <h1>About Me</h1>
       <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
+      <p>
+        This is a blog about my adventures in software development, travel, and
+        fitness.
+      </p>
     </Prose>
-    <div class="flex flex-col gap-4">
-      <Prose>
-        <p>
-          This is a blog about my adventures in software development, travel,
-          and fitness.
-        </p>
-      </Prose>
-
-      <Frame ratio="1.6180:1">
-        <Image
-          class="rounded-xl"
-          src={Andy}
-          width="1200"
-          sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px`}
-          alt="Andy in the mud"
-        /></Frame
-      >
-    </div>
-  </div>
+    <Frame ratio="1.6180:1">
+      <Image
+        class="rounded-xl"
+        src={Andy}
+        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px`}
+        alt="Andy in the mud"
+      />
+    </Frame>
+  </Stack>
 </Layout>

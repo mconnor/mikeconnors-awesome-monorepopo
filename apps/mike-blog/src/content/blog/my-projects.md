@@ -11,9 +11,9 @@ tags: ['astro', 'blogging', 'learning-in-public']
 
 ## Hello, world
 
-<div className="note">
-  > Some notable things in a block quote!
-</div>
+> Some notable things in a block quote!
+
+![Astro](https://picsum.photos/800/300)
 
 Officia veniam dolor sit eu veniam eu tempor magna exercitation id minim non
 adipisicing commodo. Laboris nulla consequat veniam sint officia exercitation
@@ -33,7 +33,5 @@ deserunt laborum elit do anim eu velit officia ipsum consequat non dolore et.
 Dolor sint velit cupidatat sunt proident ut ipsum do. Excepteur nostrud et eu in
 irure veniam. Incididunt sunt ut enim dolor esse tempor sint exercitation
 consequat ex est.
-
-![Astro](https://picsum.photos/800/300)
 
 <!-- TODO - create mdx -->

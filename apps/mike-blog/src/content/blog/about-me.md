@@ -9,8 +9,6 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 
-## Hello, world
-
 > Some notable things in a block quote!
 
 Officia veniam dolor sit eu veniam eu tempor magna exercitation id minim non
@@ -24,12 +22,12 @@ elit tempor labore irure ipsum adipisicing.
 - monorepos (yarn workspaces)
 - Graphql
 
-### Cupidatat proident culpa sunt cillum
+## Cupidatat proident culpa sunt cillum
 
 do nostrud ea id id incididunt ullamco. Proident dolore nulla ipsum consequat
 aute eiusmod proident ex excepteur.
 
-### Cupidatat proident culpa sunt cillum
+## Proident culpa sunt cillum
 
 Laborum non et Lorem enim dolor. Est eu deserunt aliqua pariatur enim et ullamco
 ea dolore officia enim officia. Nostrud cupidatat culpa commodo exercitation. Eu

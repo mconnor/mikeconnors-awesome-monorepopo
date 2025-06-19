@@ -9,11 +9,9 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public', 'tailwindcss']
 ---
 
-## Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu sprechen Und Hoffnung wieder
+### Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu sprechen Und Hoffnung wieder
 
-<div>
-  > Some notable things in a block quote!
-</div>
+> Some notable things in a block quote!
 
 Officia veniam dolor sit eu veniam eu tempor magna exercitation id minim non
 adipisicing commodo. Laboris [title](https://www.example.com) nulla consequat veniam sint officia exercitation
@@ -36,6 +34,6 @@ Dolor sint velit cupidatat sunt proident ut ipsum do. Excepteur nostrud et eu in
 irure veniam. Incididunt sunt ut enim dolor esse tempor sint exercitation
 consequat ex est.
 
-![Astro](https://picsum.photos/800/300)
+<!-- ![Astro](https://picsum.photos/800/300) -->
 
 <!-- TODO - create mdx -->

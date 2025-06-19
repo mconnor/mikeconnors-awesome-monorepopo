@@ -22,16 +22,18 @@ interface Props {
   description?: string;
 }
 
-const { maxW = '60ch', ...rest } = Astro.props;
+const { maxW = '60ch', title, ...rest } = Astro.props;
 ---
 
-<BaseLayout {...rest}>
+<BaseLayout title={title} {...rest}>
   <!-- <BgImage bgImage={Andy}> -->
-  <Cover centeredElement="center-l">
+  <Cover centeredElement="center-l" space="2ch">
     <NavBar />
-    <Center>
+
+    <Center gutters="1ch" max={maxW}>
       <slot />
     </Center>
+
     <Footer />
   </Cover>
 
@@ -40,5 +42,6 @@ const { maxW = '60ch', ...rest } = Astro.props;
         © {new Date().getFullYear()} Mike Connor. All rights reserved.
       </p>
     </footer> -->
+
+  <!-- </BgImage> -->
 </BaseLayout>
-<!-- </BgImage> -->

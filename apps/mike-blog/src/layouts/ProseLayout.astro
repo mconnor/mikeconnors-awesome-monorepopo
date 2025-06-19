@@ -1,0 +1,12 @@
+---
+import Layout from './Layout.astro';
+import Prose from '#components/Prose.astro';
+
+const { title } = Astro.props;
+---
+
+<Layout title={title} maxW="60ch">
+  <div class="prose max-w-none">
+    <slot />
+  </div>
+</Layout>
