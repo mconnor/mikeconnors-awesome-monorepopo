@@ -1,9 +1,10 @@
 ---
 import Layout from '#layouts/Layout.astro';
 // import { Image } from 'astro:assets';
+import Headline from '#components/Headline.astro';
 import { type CollectionEntry, getEntry } from 'astro:content';
 import Prose from '#components/Prose.astro';
-
+import Stack from '@repo/layout-webcomponents/Stack';
 import BreadCrumbs from '#components/BreadCrumbs/index.astro';
 
 type Props = {
@@ -35,32 +36,31 @@ if (author) {
   <h1>The current URL origin is: {Astro.url.origin}</h1> -->
 
   <!-- <h1 class="">{title}</h1> -->
-  <div
-    class="background-gradient-to-r mb-4 rounded-lg from-blue-500 to-purple-500 p-4 shadow-lg"
-  >
-    <h1 class="text-2xl font-bold text-white">{title}</h1>
-  </div>
-  {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
-  <figure>
+  <Stack>
+    <Headline headline={title} />
+
+    {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
+    <figure>
+      {
+        cover?.src && cover?.alt && (
+          <img
+            class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
+            src={cover.src}
+            alt={cover.alt ?? 'alt image needed'}
+          />
+        )
+      }
+    </figure>
+
     {
-      cover?.src && cover?.alt && (
-        <img
-          class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
-          src={cover.src}
-          alt={cover.alt ?? 'alt image needed'}
-        />
+      authorObj && (
+        <p class="prose-sm">
+          By <a href={`../authors/${authorObj.id}`}>{authorObj.data.name}</a>
+        </p>
       )
     }
-  </figure>
-
-  {
-    authorObj && (
-      <p class="prose-sm">
-        By <a href={`../authors/${authorObj.id}`}>{authorObj.data.name}</a>
-      </p>
-    )
-  }
-  <Prose>
-    <slot />
-  </Prose>
+    <Prose>
+      <slot />
+    </Prose>
+  </Stack>
 </Layout>
