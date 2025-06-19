@@ -11,11 +11,10 @@ export default defineConfig({
   site: 'https://example.com',
   image: {
     domains: ['astro.build', 'picsum.photos', 'https://doodleipsum.com'],
+    responsiveStyles: true,
     // Used for all `<Image />` and `<Picture />` components unless overridden
   },
-  experimental: {
-    responsiveImages: true,
-  },
+
   integrations: [sitemap(), mdx()],
   output: 'server',
   vite: {

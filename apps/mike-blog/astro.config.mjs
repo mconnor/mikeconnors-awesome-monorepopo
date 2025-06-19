@@ -12,6 +12,7 @@ export default defineConfig({
   outDir: 'dist',
   site: 'https://staging.mikeconnor.tech/',
   image: {
+    responsiveStyles: true,
     remotePatterns: [{ protocol: 'https' }],
     // domains: [
     //   'astro.build',
@@ -33,8 +34,7 @@ export default defineConfig({
     // },
   },
   experimental: {
-    responsiveImages: true,
-    // headingIdCompat: true,
+    // liveContentCollections: true,
     contentIntellisense: true,
   },
 
@@ -69,13 +69,6 @@ export default defineConfig({
       DOMAIN: envField.string({ context: 'server', access: 'secret' }),
     },
   },
-  // prefetch: {
-  //   prefetchAll: true,
-  //   defaultStrategy: 'viewport',
-  // },
-  // experimental: {
-  //   clientPrerender: true,
-  // },
 
   // scopedStyleStrategy: 'attribute',
 
