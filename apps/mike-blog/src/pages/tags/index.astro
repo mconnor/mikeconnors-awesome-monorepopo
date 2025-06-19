@@ -2,11 +2,11 @@
 import { getCollection } from 'astro:content';
 import { z } from 'astro:content';
 import Headline from '#components/Headline.astro';
-import Box from '@repo/layout-webcomponents/Box';
+
 import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
 import { tagCountTypeSchema, zTags } from '#schemas/index.js';
-import Prose from '#components/Prose.astro';
+
 
 const allBlogPost = await getCollection('blog');
 
@@ -18,29 +18,6 @@ const slugTags = allBlogPost
     tags: post.data.tags,
   }));
 
-// const { success, data: zslugTagsDataArray } = z
-//   .array(blogSchema)
-//   .safeParse(slugTags);
-
-// if (!success) {
-//   throw new Error('Invalid blog post data');
-// }
-
-// This improved regex pattern:
-
-// Starts with a lowercase letter (^[a-z])
-// Can be followed by any number of lowercase letters or dashes ((?:[a-z-]*)
-// Must end with a lowercase letter if there are more characters ([a-z])?$)
-// The pattern will match:
-
-// Single lowercase letters like "a"
-// Words like "blog"
-// Hyphenated terms like "web-development" or "react-hooks"
-// But will reject:
-
-// "-blog" (starts with dash)
-// "blog-" (ends with dash)
-// "blog--post" (allows consecutive dashes, modify if this is undesired)
 const zString = z.string().regex(/^[a-z](?:[a-z-]*[a-z])?$/);
 
 const tagCountsObject = slugTags.reduce(
