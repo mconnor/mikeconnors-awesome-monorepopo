@@ -71,6 +71,4 @@ const countryLoader = (): Loader => {
   };
 };
 
-
-
 export { countryLoader };
