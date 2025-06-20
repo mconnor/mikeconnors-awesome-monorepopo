@@ -1,16 +1,4 @@
 {
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 8,
-  "workbench.editor.limit.perEditorGroup": true,
-  "github.copilot.chat.codeGeneration.instructions": [
-    {
-      "file": "./.vscode/daisyui.md"
-    }
-  ],
-
-  // "workbench.tree.indent": 20,
-  // "workbench.tree.renderIndentGuides": "always",
-  // "workbench.iconTheme": "vs-seti",
   "editor.formatOnSave": true,
   "css.validate": false,
   "less.validate": false,
@@ -19,15 +7,12 @@
     "*.css": "tailwindcss",
     "*.json": "jsonc"
   },
+
+  // TailwindCSS Configuration
   "tailwindCSS.includeLanguages": {
     "plaintext": "tailwindcss",
     "astro": "html"
   },
-  "tailwindCSS.experimental.classRegex": [
-    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
-  "tailwindCSS.emmetCompletions": true,
-  "tailwindCSS.files.exclude": ["**/node_modules/**", "**/dist/**"],
   "tailwindCSS.classAttributes": [
     "class",
     "className",
@@ -35,38 +20,54 @@
     "tw",
     "twx"
   ],
-  "tailwindCSS.lint.invalidApply": "error",
-  "tailwindCSS.lint.invalidScreen": "warning",
-  "tailwindCSS.lint.cssConflict": "warning",
+  "tailwindCSS.classFunctions": ["tw", "clsx"],
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "tailwindCSS.files.exclude": ["**/node_modules/**", "**/dist/**"],
+  "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.validate": true,
   "tailwindCSS.showPixelEquivalents": true,
   "tailwindCSS.colorDecorators": true,
-  "tailwindCSS.classFunctions": ["tw", "clsx"],
-
+  "tailwindCSS.lint.invalidApply": "error",
+  "tailwindCSS.lint.invalidScreen": "warning",
+  "tailwindCSS.lint.cssConflict": "warning",
   "emmet.includeLanguages": {
     "plaintext": "tailwindcss",
     "astro": "html",
-    "postcss": "css",
     "javascript": "javascriptreact",
     "typescript": "typescriptreact",
     "vue-html": "html",
     "svelte": "html",
     "preact": "html",
     "lit": "html",
-    "css": "css"
+    "markdown": "html",
+    "postcss": "css"
   },
   "javascript.preferences.importModuleSpecifier": "shortest",
   "typescript.preferences.importModuleSpecifier": "shortest",
-  "search.exclude": {
-    "**/dist/**": true,
-    "**/.next/**": true,
-    "**/.astro/**": true,
-    "**/.turbo/**": true,
-    "**/.vercel/**": true,
-    "**/coverage/**": true,
-    "./pnpm-lock.yaml": true,
-    "**/.svelte-kit/**": true
+  "typescript.suggest.autoImports": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   "[svelte]": {
     "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
@@ -82,6 +83,7 @@
     "editor.formatOnPaste": false,
     "editor.formatOnType": false
   },
+
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -109,6 +111,32 @@
   "explorer.incrementalNaming": "simple",
   "mcp": {
     "inputs": [],
-    "servers": {}
-  }
+    "servers": {
+      "Context7": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp@latest"]
+      },
+      "filesystem": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-filesystem", "./"]
+      },
+      "github": {
+        "type": "stdio",
+        "command": "npx",
+        "args": ["-y", "@modelcontextprotocol/server-github"]
+      }
+    }
+  },
+
+  // Extension-specific settings (add if needed)
+  "cssvar.files.exclude": ["**/node_modules/**", "**/dist/**"],
+  "cssvar.enabledLanguages": ["css", "scss", "less", "postcss"],
+
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "file": "./.vscode/copilot-instructions.md"
+    }
+  ]
 }
