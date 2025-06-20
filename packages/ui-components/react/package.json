@@ -22,7 +22,7 @@
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "lint": "eslint src --max-warnings 0",
     "test": "jest",
-    "format": "prettier . --write",
+    "format": "prettier . --check",
     "fix": "eslint . --fix",
     "clean": "rm -rf dist"
   },
@@ -47,8 +47,6 @@
     "@types/node": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
     "tailwindcss": "catalog:",
     "tsup": "catalog:",
     "typescript": "catalog:"

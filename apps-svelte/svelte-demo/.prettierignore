@@ -17,3 +17,4 @@ node_modules/
 .frontmatter/
 
 .DS_Store
+static/
