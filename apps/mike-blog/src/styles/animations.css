@@ -1,6 +1,6 @@
 @theme {
   --animate-wiggle: wiggle 1s ease-in-out infinite;
-  --animate-bounce-in: bounce-in 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s;
+  --animate-bounce-in: bounce-in 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s both;
 
   @keyframes wiggle {
     0%,
