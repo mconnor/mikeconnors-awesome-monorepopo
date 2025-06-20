@@ -1,15 +1,16 @@
 ---
 // import { Links } from '#app.config.ts';
 // import Cluster from '@repo/layout-webcomponents/Cluster';
+
+import EasterEgg from '@repo/astro-ui/EasterEgg';
 import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
 ---
 
 <footer
-  transition:persist
-  class="space-around bg-base-200 text-base-content flex flex-col items-center justify-between p-4"
+  class="space-around flex flex-row items-center justify-between p-4 text-base-content"
 >
   <div class="text-nowrap">Site and contents by Mike Connor</div>
-  <div class="">
-    <MailtoBtn buttonText="CONTACT ME" />
-  </div>
+
+  <MailtoBtn buttonText="CONTACT ME" />
+  <EasterEgg file="drink" />
 </footer>

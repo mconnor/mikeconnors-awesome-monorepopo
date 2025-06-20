@@ -1,0 +1,23 @@
+---
+interface Props {
+  file: string;
+}
+
+const { file } = Astro.props as Props;
+---
+
+<audio id="egg-audio" src=`/audio/${file}.mp3`></audio>
+
+<link-icon>
+<button id="secret-sound" class="btn btn-square"><i class="ph ph-rabbit scale-200 "></i></button>
+</link-icon>
+
+
+<script is:inline>
+  document
+    .getElementById('secret-sound')
+    .addEventListener('click', () =>
+      document.getElementById('egg-audio').play(),
+    );
+</script>
+
