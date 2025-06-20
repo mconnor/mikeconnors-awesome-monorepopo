@@ -1,29 +1,31 @@
 ---
+import Stack from '@repo/layout-webcomponents/Stack';
 interface Props {
   children: unknown;
+  heading?: string;
+  copy?: string;
 }
+
+const {
+  children,
+  heading = "Welcome to Mike's Blog",
+  copy = 'Exploring Ideas & Technology',
+} = Astro.props;
 ---
 
 <div
   class="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-zinc-950 via-pink-500 to-blue-950"
 >
-  <div class="px-4 text-center text-white">
+  <div class="h-6/10 flex flex-col justify-around px-4 text-center text-white">
     <h1
-      class="split-text mb-4 overflow-hidden text-5xl font-black tracking-tight md:text-6xl"
+      class="split-text md:text:4xl mb-4 overflow-hidden text-2xl font-black tracking-tight lg:text-5xl"
     >
-      Welcome to Mike's Blog
+      {heading}
     </h1>
-    <p class="split-text mb-8 overflow-hidden text-xl font-light md:text-2xl">
-      Exploring Ideas & Technology
+    <p class="mb-8 overflow-hidden text-xl font-light md:text-2xl">
+      {copy}
     </p>
-    <!-- <div class="enter-site-button translate-y-5 opacity-0">
-      <a
-        href="/home"
-        class="inline-block rounded-full bg-rose-500 px-8 py-3 font-bold text-white shadow-lg transition-all duration-300 ease-out hover:scale-105 hover:bg-white hover:text-rose-500 hover:shadow-xl focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-white active:scale-95"
-        >Enter Site</a
-      >
-    </div> -->
-    <slot name="enter-site-button" />
+    <slot name="cta" />
   </div>
 </div>
 
@@ -117,7 +119,7 @@ interface Props {
 
   // Handle both standard DOM loading and Astro hydration
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', runAnimation);
+    document.addEventListener('astro:after-swap', runAnimation);
   } else {
     runAnimation();
   }

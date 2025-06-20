@@ -16,7 +16,7 @@ const { cover, title, description, tags, date } = data;
 ---
 
 <div
-  class="card max-w-78 bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg"
+  class="card max-w-78 bg-base-100 card-sm md:card-md lg:card-lg shadow-sm md:max-w-96"
 >
   <figure>
     <Image src={cover!.src} alt={cover!.alt} width="1600" height="900" />
@@ -37,7 +37,7 @@ const { cover, title, description, tags, date } = data;
       {
         showTags &&
           tags.map((tag) => (
-            <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
+            <a href={`/tags/${tag}`} class="badge badge-sm z-10">
               {tag}
             </a>
           ))
