@@ -8,11 +8,19 @@ import Stack from '@repo/layout-webcomponents/Stack';
 import Andy from '#assets/andy_mud_color.webp';
 
 export const prerender = true;
+
+const timeCapsules = [
+  { label: 'Apple Inc. founded', year: 1976, first: true },
+  { label: 'iMac', year: 1998 },
+  { label: 'iPod', year: 2001 },
+  { label: 'iPhone', year: 2007 },
+  { label: 'Apple Watch', year: 2015, last: true },
+];
 ---
 
 <Layout title="About">
   <Stack space="var(--s1)">
-    <TimeLine />
+    <TimeLine items={timeCapsules} />
     <Prose>
       <h1>About Me</h1>
       <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
@@ -21,6 +29,7 @@ export const prerender = true;
         fitness.
       </p>
     </Prose>
+
     <Frame ratio="1.6180:1">
       <Image
         class="rounded-xl"
@@ -31,3 +40,11 @@ export const prerender = true;
     </Frame>
   </Stack>
 </Layout>
+
+<script is:inline>
+  document
+    .getElementById('secret-sound')
+    .addEventListener('click', () =>
+      document.getElementById('egg-audio').play(),
+    );
+</script>

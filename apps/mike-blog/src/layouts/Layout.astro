@@ -27,14 +27,14 @@ const { maxW = '60ch', title, ...rest } = Astro.props;
 
 <BaseLayout title={title} {...rest}>
   <!-- <BgImage bgImage={Andy}> -->
-  <Cover centeredElement="center-l" space="2ch">
-    <NavBar />
+  <Cover centeredElement="center-l" noPad>
+    <NavBar transition:persist />
 
     <Center gutters="1ch" max={maxW}>
       <slot />
     </Center>
 
-    <Footer />
+    <Footer transition:persist />
   </Cover>
 
   <!-- <footer class="mt-auto flex items-center justify-center p-4">

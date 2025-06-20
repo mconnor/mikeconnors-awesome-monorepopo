@@ -1,14 +1,21 @@
 ---
 import SplashPage from '#components/SplashPage.astro';
 import BaseLayout from '#layouts/BaseLayout.astro';
+import Icon from '@repo/astro-ui/Icon';
+import Wiggle from '#components/anims/Wiggle.astro';
 ---
 
 <BaseLayout title="Welcome" description="Mike's Blog - Splash Page">
   <div class="m-0 overflow-hidden p-0">
     <SplashPage>
-      <div slot="enter-site-button">
-        <a href="/about" class="btn btn-primary">Go Site</a>
-      </div>
+      <a
+        role="button"
+        href="/about"
+        slot="cta"
+        class="btn btn-active animate-bounce-in btn-xl"
+      >
+        Let's Go
+      </a>
     </SplashPage>
   </div>
 </BaseLayout>
