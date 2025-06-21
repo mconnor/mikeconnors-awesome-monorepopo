@@ -3,9 +3,9 @@ import Center from '@repo/layout-webcomponents/Center';
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 
-// import Header from '#components/Header/index.astro';
+import Header from '#components/Header/index.astro';
 import BaseLayout from '#layouts/BaseLayout.astro';
-import Nav from '@repo/astro-ui/NavBar/NavBarRes';
+// import Nav from '@repo/astro-ui/NavBarRes';
 
 interface Props {
   title?: string;
@@ -19,7 +19,7 @@ const { centerWidth = '60ch', title = 'mike connor' } = Astro.props;
 <BaseLayout title={title}>
   <Cover centeredElement="center-l" noPad>
     <!-- <Header desc={title} /> -->
-    <Nav />
+    <Header />
     <Center max={centerWidth}><slot /></Center>
   </Cover>
 </BaseLayout>

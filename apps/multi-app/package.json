@@ -31,6 +31,7 @@
     "@repo/astro-wc": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
+    "@repo/astro-ui": "workspace:*",
     "@repo/preact": "workspace:*",
     "@repo/react": "workspace:*",
     "@repo/svelte": "workspace:*",

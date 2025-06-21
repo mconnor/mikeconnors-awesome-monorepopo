@@ -54,7 +54,12 @@ const ProductManagement: React.FC = () => {
         {products.map((product) => (
           <li key={product.id}>
             {product.name} (${product.price})
-            <button onClick={() => removeProduct(product.id)}>Remove</button>
+            <button
+              className="btn btn-primary"
+              onClick={() => removeProduct(product.id)}
+            >
+              Remove
+            </button>
           </li>
         ))}
       </ul>

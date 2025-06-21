@@ -635,6 +635,9 @@ importers:
       '@preact/signals':
         specifier: 'catalog:'
         version: 2.2.0(preact@10.26.9)
+      '@repo/astro-ui':
+        specifier: workspace:*
+        version: link:../../packages/ui-components/astro-ui
       '@repo/astro-wc':
         specifier: workspace:*
         version: link:../../packages/ui-components/astro-wc

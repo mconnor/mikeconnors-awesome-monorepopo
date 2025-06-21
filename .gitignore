@@ -45,3 +45,4 @@ pnpm-debug.log*
 /mise.local.toml
 /out
 /mise.toml
+.vercel

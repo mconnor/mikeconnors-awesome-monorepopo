@@ -11,7 +11,8 @@ const navLinks: NavLinkI[] = [
 
   { label: 'Product', href: '/product', icon: 'blog' },
 
-  { label: 'Contact', href: '/contact', icon: 'projects' },
+  { label: 'UI', href: '/ui', icon: 'projects' },
+  { label: 'Form', href: '/form', icon: 'projects' },
 ] as const;
 
 export { type NavLinkI, navLinks };

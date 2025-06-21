@@ -5,4 +5,4 @@ interface NavLinkI {
   subPages?: boolean;
 }
 
-export { NavLinkI };
+export { type NavLinkI };
