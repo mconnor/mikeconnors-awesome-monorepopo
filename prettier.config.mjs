@@ -3,9 +3,9 @@
 export default {
   plugins: [
     'prettier-plugin-astro',
-    'prettier-plugin-tailwindcss',
     'prettier-plugin-svelte',
     'prettier-plugin-vue',
+    'prettier-plugin-tailwindcss',
   ],
   overrides: [
     {
