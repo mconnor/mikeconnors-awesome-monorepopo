@@ -28,7 +28,6 @@
     "@headlessui/react": "catalog:",
     "@heroicons/react": "catalog:",
     "@preact/signals": "catalog:",
-    "@repo/astro-wc": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/astro-ui": "workspace:*",

@@ -8,7 +8,7 @@
   /* --font-display: var(--font-transitional);
   --font-script: var(--font-handwritten);
   --font-poppins: Poppins, sans-serif; */
-
+/*
   --color-accent-50: oklch(0.98 0.016 73.684);
   --color-accent-100: oklch(0.954 0.038 75.164);
   --color-accent-200: oklch(0.901 0.076 70.697);
@@ -33,7 +33,7 @@
   --color-primary-900: oklch(21.6% 0.006 56.043);
   --color-primary-950: oklch(14.7% 0.004 49.25);
 
-  --color-mint-500: oklch(0.72 0.11 178);
+  --color-mint-500: oklch(0.72 0.11 178); */
 
   --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
   --ease-snappy: cubic-bezier(0.2, 0, 0, 1);

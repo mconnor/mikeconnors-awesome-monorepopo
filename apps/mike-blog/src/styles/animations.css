@@ -3,6 +3,11 @@
   --animate-bounce-in: bounce-in 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1s
     both;
 
+  --animate-gradient-shift:
+    gradient-shift-x 7s ease-in-out infinite,
+    gradient-shift-y 11s ease-in-out infinite 1.3s,
+    gradient-shift-size 13s ease-in-out infinite 0.7s;
+
   @keyframes wiggle {
     0%,
     100% {
@@ -29,6 +34,72 @@
     100% {
       transform: scale(1);
       opacity: 1;
+    }
+  }
+
+  @keyframes gradient-shift-x {
+    0%,
+    100% {
+      background-position-x: 0%;
+    }
+    17% {
+      background-position-x: 25%;
+    }
+    33% {
+      background-position-x: 75%;
+    }
+    50% {
+      background-position-x: 100%;
+    }
+    67% {
+      background-position-x: 60%;
+    }
+    83% {
+      background-position-x: 15%;
+    }
+  }
+
+  @keyframes gradient-shift-y {
+    0%,
+    100% {
+      background-position-y: 50%;
+    }
+    14% {
+      background-position-y: 0%;
+    }
+    29% {
+      background-position-y: 85%;
+    }
+    43% {
+      background-position-y: 20%;
+    }
+    57% {
+      background-position-y: 100%;
+    }
+    71% {
+      background-position-y: 35%;
+    }
+    86% {
+      background-position-y: 75%;
+    }
+  }
+
+  @keyframes gradient-shift-size {
+    0%,
+    100% {
+      background-size: 300% 300%;
+    }
+    20% {
+      background-size: 250% 400%;
+    }
+    40% {
+      background-size: 500% 200%;
+    }
+    60% {
+      background-size: 180% 350%;
+    }
+    80% {
+      background-size: 420% 280%;
     }
   }
 }

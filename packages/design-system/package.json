@@ -6,7 +6,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./shared-styles.css": "./src/css/shared-styles.css",
+     ".": "./src/css/shared-styles.css",
     "./postcss": "./postcss.config.js"
   },
   "devDependencies": {
