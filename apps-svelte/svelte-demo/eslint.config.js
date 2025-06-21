@@ -32,10 +32,10 @@ const config = tseslint.config(
 				projectService: true,
 				extraFileExtensions: ['.svelte'],
 				parser: tseslint.parser,
-				svelteConfig
-			}
-		}
-	}
+				svelteConfig,
+			},
+		},
+	},
 );
 
 export default [...tsLint, ...config];
