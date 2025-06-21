@@ -2,9 +2,10 @@
 /** @type {import("prettier").Config} */
 export default {
   plugins: [
-    'prettier-plugin-astro',
-    'prettier-plugin-svelte',
+    'prettier-plugin-toml',
     'prettier-plugin-vue',
+    // 'prettier-plugin-svelte',
+    'prettier-plugin-astro',
     'prettier-plugin-tailwindcss',
   ],
   overrides: [
@@ -14,13 +15,13 @@ export default {
         parser: 'astro',
       },
     },
-    {
-      files: '*.svelte',
-      options: {
-        parser: 'svelte',
-        bracketSameLine: false,
-      },
-    },
+    // {
+    //   files: '*.svelte',
+    //   options: {
+    //     parser: 'svelte',
+    //     bracketSameLine: false,
+    //   },
+    // },
     {
       files: '*.vue',
       options: {
@@ -29,12 +30,6 @@ export default {
       },
     },
     // Package-specific TailwindCSS configs
-    {
-      files: ['packages/ui-components/astro-ui/**/*'],
-      options: {
-        tailwindStylesheet: './packages/ui-components/astro-ui/src/styles.css',
-      },
-    },
     {
       files: ['apps/mike-blog/**/*'],
       options: {

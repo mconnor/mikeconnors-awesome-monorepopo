@@ -3,7 +3,7 @@
 
   export let fetchData: () => Promise<string>;
 
-  let message: string = 'Loading...';
+  let message: string = "Loading...";
 
   async function getData() {
     message = await fetchData();
@@ -13,7 +13,7 @@
     e.preventDefault();
     const formData = new FormData(e.currentTarget as HTMLFormElement);
     const response = await fetch(fetchData, {
-      method: 'POST',
+      method: "POST",
       body: formData,
     });
     const data = await response.json();

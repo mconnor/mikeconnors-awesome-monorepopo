@@ -1,11 +1,11 @@
 <script lang="ts">
-  import type { Snippet } from 'svelte';
+  import type { Snippet } from "svelte";
   interface Props {
     children?: Snippet;
     klass?: string;
   }
 
-  let { children, klass = 'counter' }: Props = $props();
+  let { children, klass = "counter" }: Props = $props();
   let count = $state(0);
 
   function add() {

@@ -22,7 +22,7 @@
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "lint": "eslint src --max-warnings 0",
     "test": "jest",
-    "format": "prettier . --check",
+    "format": "prettier . --write",
     "fix": "eslint . --fix",
     "clean": "rm -rf dist"
   },

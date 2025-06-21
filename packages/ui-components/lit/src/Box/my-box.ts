@@ -1,4 +1,4 @@
-import type { BorderStyle, RmUnitType } from '#Types.ts';
+import type { BorderStyle, RmUnitType } from '../Types.ts';
 import { css, html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';

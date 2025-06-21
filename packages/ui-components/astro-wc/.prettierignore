@@ -7,3 +7,4 @@ node_modules/
 
 # Cache directories
 .turbo/
+src/svgs/

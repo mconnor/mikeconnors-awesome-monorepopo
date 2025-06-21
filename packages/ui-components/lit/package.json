@@ -9,42 +9,29 @@
   "exports": {
     "./styles.css": "./dist/index.css",
     "./index.css": "./dist/index.css",
-    "./Clock": "./src/Clock/index.astro",
-    "./Box": "./src/Box/index.astro",
-    "./ThemeSwitcher": "./src/ThemeSwitcher/index.astro",
-    "./Hello": "./src/Hello/index.astro",
-    "./HeartLitBtn": "./src/HeartBtn/index.astro",
-    "./Timer": "./src/Timer/index.astro"
+    "./*": "./src/*/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier . --write",
     "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "astro-check": "astro check",
     "check-types": "tsc --noEmit"
   },
-  "dependencies": {
-    "@tailwindcss/vite": "catalog:",
-    "tailwindcss": "catalog:"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@open-wc/testing": "catalog:",
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/cli": "catalog:",
     "@types/node": "catalog:",
     "daisyui": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
     "lit": "catalog:",
-    "prettier-plugin-astro": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:"
   },

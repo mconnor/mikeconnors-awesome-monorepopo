@@ -20,6 +20,7 @@
     "dev:components": {
       "cache": false,
       "persistent": true
-    }
+    },
+    "format": {}
   }
 }

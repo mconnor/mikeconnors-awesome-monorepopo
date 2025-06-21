@@ -514,9 +514,6 @@ importers:
       '@repo/scripts':
         specifier: workspace:*
         version: link:../../packages/scripts
-      '@repo/ui-lit':
-        specifier: workspace:^
-        version: link:../../packages/ui-components/lit
       '@repo/utils':
         specifier: workspace:*
         version: link:../../packages/utils
@@ -1165,13 +1162,6 @@ importers:
         version: 6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0)
 
   packages/ui-components/lit:
-    dependencies:
-      '@tailwindcss/vite':
-        specifier: 'catalog:'
-        version: 4.1.10(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0))
-      tailwindcss:
-        specifier: 'catalog:'
-        version: 4.1.10
     devDependencies:
       '@open-wc/testing':
         specifier: 'catalog:'
@@ -1188,9 +1178,6 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:^
         version: link:../../config-typescript
-      '@tailwindcss/cli':
-        specifier: 'catalog:'
-        version: 4.1.10
       '@types/node':
         specifier: 'catalog:'
         version: 22.15.32
@@ -1206,9 +1193,6 @@ importers:
       lit:
         specifier: 'catalog:'
         version: 3.3.0
-      prettier-plugin-astro:
-        specifier: 'catalog:'
-        version: 0.14.1
       typescript:
         specifier: 'catalog:'
         version: 5.8.3

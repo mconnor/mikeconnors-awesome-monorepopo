@@ -5,10 +5,10 @@
 <div class="container">
   Flip the card
   <button
-    class={['card', { flipped }]}
-    style="transform: {flipped ? 'rotateY(0)' : (
-      ''
-    )}; --bg-1: palegoldenrod; --bg-2: black; --bg-3: goldenrod"
+    class={["card", { flipped }]}
+    style="transform: {flipped
+      ? 'rotateY(0)'
+      : ''}; --bg-1: palegoldenrod; --bg-2: black; --bg-3: goldenrod"
     onclick={() => (flipped = !flipped)}
   >
     <div class="front">

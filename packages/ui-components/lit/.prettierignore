@@ -9,5 +9,5 @@ node_modules/
 .astro/
 .vercel/
 
-
+src/Box/my-box.ts 
 .DS_Store
