@@ -1,8 +1,10 @@
 packages:
   - apps/*
   - apps-svelte/*
+  - apps-to-off-ramp/apps-no-tw/*
   - packages/*
   - packages/ui-components/*
+  - '!apps-to-off-ramp/**'
   - '!**/test/**'
   - '!**/.vercel/**'
   - '!**/cache-directory/**'

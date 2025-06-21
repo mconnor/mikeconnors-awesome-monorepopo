@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@import '@repo/design-system/shared-styles.css';
+@import '@repo/design-system';
 @plugin "daisyui" {
   themes: all;
 }

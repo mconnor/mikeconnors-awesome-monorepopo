@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
+  "better-comments.multilineComments": true,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,

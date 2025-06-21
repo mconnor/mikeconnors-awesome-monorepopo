@@ -4,7 +4,7 @@ export default {
   plugins: [
     'prettier-plugin-toml',
     'prettier-plugin-vue',
-    // 'prettier-plugin-svelte',
+    'prettier-plugin-svelte',
     'prettier-plugin-astro',
     'prettier-plugin-tailwindcss',
   ],
@@ -34,6 +34,12 @@ export default {
       files: ['apps/mike-blog/**/*'],
       options: {
         tailwindStylesheet: './apps/mike-blog/src/styles/global.css',
+      },
+    },
+    {
+      files: '*.svelte',
+      options: {
+        parser: 'svelte',
       },
     },
   ],

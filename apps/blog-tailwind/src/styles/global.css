@@ -3,7 +3,7 @@
 @source not '@repo/styles';
 @source not '@repo/layout-webcomponents';
 
-@import '@repo/design-system/shared-styles.css';
+@import '@repo/design-system';
 @plugin '@tailwindcss/typography';
 @plugin "daisyui" {
   root: '#my-app';
