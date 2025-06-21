@@ -18,9 +18,13 @@ const { cover, title, description, tags, date } = data;
 <div
   class="card max-w-78 bg-base-100 card-sm md:card-md lg:card-lg shadow-sm md:max-w-96"
 >
-  <figure>
-    <Image src={cover!.src} alt={cover!.alt} width="1600" height="900" />
-  </figure>
+  {
+    cover ?
+      <figure>
+        <Image src={cover.src} alt={cover.alt} width="1600" height="900" />
+      </figure>
+    : <div class="inheritRadius from-error via-warning to-success animate-gradient-shift size-full bg-gradient-to-br" />
+  }
 
   <a
     href={`/posts/${href}`}
@@ -45,3 +49,30 @@ const { cover, title, description, tags, date } = data;
     </div>
   </div>
 </div>
+
+<style>
+  .inheritRadius {
+    overflow: hidden;
+    border-start-start-radius: inherit;
+    border-start-end-radius: inherit;
+    border-end-start-radius: unset;
+    border-end-end-radius: unset;
+  }
+
+  @keyframes gradient-shift {
+    0%,
+    100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease-in-out infinite;
+  }
+</style>
