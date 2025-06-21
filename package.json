@@ -49,6 +49,8 @@
       "sharp",
       "svelte-preprocess"
     ],
-    "overrides": {}
+    "overrides": {
+      
+    }
   }
 }

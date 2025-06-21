@@ -1,27 +1,33 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
 interface Props {
-  name: string;
-  job?: string;
+  title?: string;
   msg?: string;
+  img?: ImageMetadata;
 }
 
-const { name, job = 'strategist', msg = 'add msg' } = Astro.props as Props;
+const {
+  img,
+  title = 'strategist',
+  msg = 'Fugiat aliqua veniam nisi non sunt aliquip ipsum.',
+} = Astro.props as Props;
 ---
 
-<div
-  class="flex flex-col gap-2 rounded-lg p-8 shadow-2xl sm:flex-row sm:items-center sm:gap-6 sm:py-4"
->
-  <slot name="contact-img" />
+<div class="card card-side bg-base-100 shadow-sm">
+  <figure>
+    {
+      img ?
+        <Image src={img} alt="" />
+      : <div class="bg:bg-base-300 size-full" />
+    }
+  </figure>
 
-  <div class="space-y-2 text-center sm:text-left">
-    <div class="space-y-0.5">
-      <p class="text-lg font-semibold text-black">{name}</p>
-      <p class="font-medium text-gray-500">{job}</p>
+  <div class="card-body">
+    <h2 class="card-title">{title}</h2>
+    <p>{msg}</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Let's chat</button>
     </div>
-    <button
-      class="border-accent-200 text-accent-600 hover:bg-accent-600 active:bg-accent-700 hover:border-transparent hover:text-white"
-    >
-      {msg}
-    </button>
   </div>
 </div>

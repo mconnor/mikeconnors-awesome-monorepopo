@@ -1,4 +1,6 @@
 @import 'tailwindcss';
+@source './**/*.{html,astro,js,ts,md,json}';
+@source "../node_modules/@repo/astro-ui";
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 /* @import 'open-props/open-props.min.css'; */
 /* @import 'open-props/animations'; */
@@ -8,10 +10,11 @@
 @source not '@repo/eslint-config';
 @source not '@repo/typescript-config';
 
-@import '@repo/design-system/shared-styles.css';
+@import '@repo/design-system';
+@import '@repo/astro-ui/styles.css';
+/* @import '@repo/ui-lit/styles.css'; */
+
 @import './animations.css';
-/* @import '@repo/astro-ui/styles.css';
-@import '@repo/ui-lit/styles.css'; */
 
 @plugin "daisyui" {
   themes: all;

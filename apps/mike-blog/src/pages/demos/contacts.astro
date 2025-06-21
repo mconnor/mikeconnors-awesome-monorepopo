@@ -1,5 +1,5 @@
 ---
-import ContactCard from '@repo/astro-ui/ContactCard';
+import ContactsComponent from '#components/Contacts/index.astro';
 import me from '#assets/mexico.jpg';
 import { Image } from 'astro:assets';
 
@@ -8,27 +8,13 @@ import Stack from '@repo/layout-webcomponents/Stack';
 import Layout from '#layouts/Layout.astro';
 ---
 
-<Layout title="Contacts" description="Mike's Blog - Contacts Page">
-  <Stack space="4rem" splitAfter={2}>
-    <div class="bg-primary-400 flex flex-col gap-4 p-20">
-      <ContactCard name="Mike Connor">
-        <Image
-          width="200"
-          slot="contact-img"
-          class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
-          src={me}
-          alt=""
-        />
-      </ContactCard>
-      <ContactCard name="Mike Connor">
-        <Image
-          width="200"
-          slot="contact-img"
-          class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0"
-          src={me}
-          alt=""
-        />
-      </ContactCard>
-    </div>
+<Layout title="My Contacts" description="Mike's Blog - Contacts Page">
+  <Stack space="4rem">
+    <button
+      class="btn btn-accent transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500"
+    >
+      Save Changes
+    </button>
+    <ContactsComponent />
   </Stack>
 </Layout>

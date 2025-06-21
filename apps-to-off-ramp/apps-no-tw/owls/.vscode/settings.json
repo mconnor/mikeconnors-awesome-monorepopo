@@ -1,15 +1,14 @@
 {
-  "cssvar.themes": ["dark", "light"],
-  "cssvar.enable": true,
-  "cssvar.ignore": [],
-  "cssvar.excludeThemedVariables": true,
-  "editor.inlayHints.enabled": "on",
-  "cssvar.files": [
-    "./styles/Style.astro",
-    "./node_modules/open-props/open-props.min.css"
-    // if you have an alternative path to where your styles are located
-    // you can add it in this array of files
-    // "assets/styles/variables.css"
-  ],
-  "cssvar.extensions": ["css", "postcss", "jsx", "tsx", "astro"]
+  "files.associations": {
+    "*.css": "css",
+    "*.scss": "scss"
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "css.validate": true,
+  "scss.validate": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit"
+  },
+  "stylelint.validate": ["css", "scss"]
 }

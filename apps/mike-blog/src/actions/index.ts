@@ -1,10 +1,15 @@
 import type { ActionErrorCode } from 'astro:actions';
 import { ActionError, defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
-// import { navigate } from 'astro:transitions/client';
+// // import { navigate } from 'astro:transitions/client';
 
 const notFound: ActionErrorCode = 'NOT_FOUND';
-// import { user } from './user';
+// // import { user } from './user';
+
+// * Better Comments Extension Examples:
+// ! Critical: Remember to handle all error cases
+// ? TODO: Should we add rate limiting to these actions?
+// * Important: These actions are server-side only
 
 export const server = {
   getGreeting: defineAction({
