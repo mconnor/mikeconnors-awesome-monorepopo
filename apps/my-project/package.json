@@ -19,12 +19,14 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
+    "@astrojs/check": "catalog:",
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
     "@astrojs/sitemap": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "sharp": "catalog:",
+    "@repo/layout-webcomponents": "workspace:*",
     "tailwindcss": "catalog:"
   },
   "devDependencies": {

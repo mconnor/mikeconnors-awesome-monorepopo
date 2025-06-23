@@ -45,7 +45,7 @@ catalog:
   '@tailwindcss/postcss': ^4.1.10
   '@tailwindcss/forms': ^0.5.10
   '@tailwindcss/typography': ^0.5.16
-  '@tailwindcss/vite': ^4.1.10
+  '@tailwindcss/vite': 4.1.10
   '@typescript-eslint/parser': ^8.35.0
   '@types/canvas-confetti': ^1.9.0
   '@types/node': ^22.15.32
@@ -107,7 +107,7 @@ catalog:
   solid-js: ^1.9.7
   svelte-eslint-parser: ^1.2.0
   tailwind-merge: ^3.3.1
-  tailwindcss: ^4.1.10
+  tailwindcss: 4.1.10
   theme-change: ^2.5.0
   tsup: ^8.5.0
   typescript: ^5.8.3
