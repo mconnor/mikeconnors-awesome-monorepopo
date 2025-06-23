@@ -2,11 +2,21 @@
   "name": "@app/proj",
   "type": "module",
   "version": "0.0.1",
+  "imports": {
+    "#*": "./src/*"
+  },
   "scripts": {
+    "astro-check": "astro check",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier . --write",
+    "lint": "eslint --max-warnings=0",
+    "help": "astro -- --help",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@astrojs/mdx": "catalog:",
@@ -15,7 +25,16 @@
     "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",
     "sharp": "catalog:",
-    "tailwindcss": "catalog:",
-    "@tailwindcss/typography": "catalog:"
+    "tailwindcss": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "@tailwindcss/typography": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "typescript": "catalog:"
   }
 }

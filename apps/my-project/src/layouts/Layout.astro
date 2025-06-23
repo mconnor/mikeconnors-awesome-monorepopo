@@ -1,0 +1,25 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  children: unknown;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="flex min-h-screen flex-col justify-between gap-3">
+    <Header />
+    <!-- <div class="mx-auto flex max-w-[60ch] flex-col border-2">
+      <slot />
+    </div> -->
+    <slot />
+    <Footer />
+  </div>
+</BaseLayout>

@@ -1,0 +1,13 @@
+# Build output
+dist/
+
+# Node modules
+node_modules/
+
+# Cache directories
+.turbo/
+.astro/
+.vercel/
+.frontmatter/
+cache-directory/
+.DS_Store
