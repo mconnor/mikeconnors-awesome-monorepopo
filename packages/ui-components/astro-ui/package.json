@@ -44,6 +44,7 @@
     "astro": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
+    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "typescript": "catalog:",
