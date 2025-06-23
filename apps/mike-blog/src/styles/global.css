@@ -1,9 +1,7 @@
 @import 'tailwindcss';
 @source './**/*.{html,astro,js,ts,md,json}';
-@source "../node_modules/@repo/astro-ui";
-/* @custom-variant dark (&:where(.dark, .dark *)); */
-/* @import 'open-props/open-props.min.css'; */
-/* @import 'open-props/animations'; */
+/* @source "../node_modules/@repo/astro-ui"; */
+
 @source not '@repo/icon-paths';
 @source not '@repo/layout-webcomponents';
 @source not '@repo/scripts';

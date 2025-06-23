@@ -25,9 +25,9 @@ const bool3 = posts.length > 2;
     { 'lg:grid-cols-3': bool3 },
   ]}
 >
-  <div class="col-span-1 md:col-span-2 lg:col-span-3">
+  <div class="justify col-span-1 flex flex-col gap-2">
     <Headline headline={headline} />
+    <Headline headline={headline} color="yellow" />
   </div>
-
   {posts.map(({ id, data }) => <PostCard data={data} href={id} showTags />)}
 </div>

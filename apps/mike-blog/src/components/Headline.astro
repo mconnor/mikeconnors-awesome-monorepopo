@@ -1,14 +1,17 @@
 ---
 interface Props {
   headline: string;
+  color?: 'blue' | 'red' | 'yellow';
 }
-const { headline } = Astro.props;
+const { headline, color = 'blue' } = Astro.props;
+
+const colorVariants = {
+  blue: 'bg-blue-600 hover:bg-blue-500 text-white',
+  red: 'bg-red-500 hover:bg-red-400 text-white',
+  yellow: 'bg-yellow-300 hover:bg-yellow-400 text-black',
+};
 ---
 
-<div
-  class="prose prose-sm prose-stone md:prose-base lg:prose-lg xl:prose-xl dark:prose-invert"
->
-  <h1>
-    {headline}
-  </h1>
-</div>
+<h1 class:list={[`${colorVariants[color]}`, 'font-mono text-5xl']}>
+  {headline}
+</h1>

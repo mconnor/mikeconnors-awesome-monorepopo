@@ -16,7 +16,7 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
       </div>
       <ul
         tabindex="0"
-        class="dropdown-content menu z-1 menu-sm rounded-box bg-base-100 mt-3 w-52 p-2 shadow"
+        class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
       >
         {
           navLinks.map(({ href, label }) => (
@@ -34,7 +34,7 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
               OUTBOUND_LINKS.map(({ url, logo }) => (
                 <IconLink
                   href={url}
-                  class="fill-accent stroke-accent h-10 w-10 stroke-1"
+                  class="h-10 w-10 fill-accent stroke-accent stroke-1"
                   icon={logo}
                 />
               ))
@@ -64,7 +64,7 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
       OUTBOUND_LINKS.map(({ url, logo }) => (
         <IconLink
           href={url}
-          class="fill-accent stroke-accent h-10 w-10 stroke-1"
+          class="h-10 w-10 fill-accent stroke-accent stroke-1"
           icon={logo}
         />
       ))

@@ -51,7 +51,7 @@ class MailtoButton extends HTMLElement {
     // Set display text with visually hidden spans for better screen reader understanding
     button.innerHTML = `
         <span class="inline-flex items-center">
-          <span class="mr-1">${buttonText}:</span>
+          <span class="mr-1 text-nowrap">${buttonText}:</span>
           <span aria-hidden="true" class="font-mono">${displayUser}</span>
           <span class="sr-only">partially hidden email username</span>
           <span aria-hidden="true" class="mx-1  font-mono">[at]</span>

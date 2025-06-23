@@ -1,16 +1,28 @@
 ---
 // import { Links } from '#app.config.ts';
-// import Cluster from '@repo/layout-webcomponents/Cluster';
+import Switcher from '@repo/layout-webcomponents/Switcher';
 
 import EasterEgg from '@repo/astro-ui/EasterEgg';
 import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
 ---
 
-<footer
-  class="space-around text-base-content flex flex-row items-center justify-between p-4"
->
-  <div class="text-nowrap">Site and contents by Mike Connor</div>
+<!-- Footer with responsive flex direction -->
+<footer class="border-t-1 p-4">
+  <!-- <div class="flex flex-col @6xl:flex-row">
+    <p class="border-1 text-center">Mike Connor</p>
+    <p class="border-1 text-center">Site and contents</p>
+  </div> -->
+  <Switcher space="var(--s00)" threshold="48rem">
+    <p class="text-neutral-content-300 text-center text-shadow-accent">
+      Site and contents by Mike Connor
+    </p>
 
-  <MailtoBtn buttonText="CONTACT ME" />
-  <EasterEgg file="drink" />
+    <div class="flex justify-center">
+      <MailtoBtn buttonText="CONTACT ME" />
+    </div>
+    <div class="flex justify-center">
+      <EasterEgg file="drink" />
+    </div>
+  </Switcher>
+  <!-- </footer> -->
 </footer>

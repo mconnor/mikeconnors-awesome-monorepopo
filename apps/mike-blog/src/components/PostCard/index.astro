@@ -16,14 +16,14 @@ const { cover, title, description, tags, date } = data;
 ---
 
 <div
-  class="card max-w-78 bg-base-100 card-sm md:card-md lg:card-lg shadow-sm md:max-w-96"
+  class="card max-w-78 bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg"
 >
   {
     cover ?
       <figure>
         <Image src={cover.src} alt={cover.alt} width="1600" height="900" />
       </figure>
-    : <div class="from-error via-warning to-success animate-gradient-shift bg-size-[200%] size-full overflow-hidden rounded-e-[unset] rounded-t-[inherit] bg-gradient-to-br" />
+    : <div class="size-full animate-gradient-shift overflow-hidden rounded-e-[unset] rounded-t-[inherit] bg-gradient-to-br from-error via-warning to-success bg-size-[200%]" />
   }
 
   <a
@@ -41,7 +41,7 @@ const { cover, title, description, tags, date } = data;
       {
         showTags &&
           tags.map((tag) => (
-            <a href={`/tags/${tag}`} class="badge badge-sm z-10">
+            <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
               {tag}
             </a>
           ))

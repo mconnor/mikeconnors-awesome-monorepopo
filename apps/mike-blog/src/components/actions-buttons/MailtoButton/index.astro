@@ -27,11 +27,7 @@ const encodedDomain = encodeToEntities(domain);
   data-user={encodedUser}
   data-text={buttonText}
 >
-  <button
-    aria-live="polite"
-    aria-label={buttonText}
-    class="btn btn-block btn-primary"
-  >
+  <button aria-live="polite" aria-label={buttonText} class="btn btn-primary">
   </button>
   <span id="email-success-msg" class="sr-only" aria-live="assertive"></span>
 </mailto-button>
