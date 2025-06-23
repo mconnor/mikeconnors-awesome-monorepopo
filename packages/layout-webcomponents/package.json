@@ -40,7 +40,9 @@
     "astro": "catalog:",
     "eslint": "catalog:",
     "open-props": "catalog:",
+    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {

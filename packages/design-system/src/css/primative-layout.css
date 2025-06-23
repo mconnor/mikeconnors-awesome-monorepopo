@@ -14,6 +14,8 @@
   --s7: calc(var(--s0) * pow(var(--ratio), 7));
   --s8: calc(var(--s0) * pow(var(--ratio), 8));
 
+  --size-biggish: calc(var(--s0) * pow(var(--ratio), 8));
+
   --measure: 60ch;
   --border-thin: 1px;
   /* used in Reel */

@@ -27,7 +27,7 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
-    "prettier": "^3.5.3",
+    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
     "prettier-plugin-tailwindcss": "catalog:",
@@ -38,7 +38,7 @@
   "engines": {
     "node": ">= 22.9.0"
   },
-  "packageManager": "pnpm@10.12.1",
+  "packageManager": "pnpm@10.12.2",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
@@ -49,8 +49,6 @@
       "sharp",
       "svelte-preprocess"
     ],
-    "overrides": {
-      
-    }
+    "overrides": {}
   }
 }
