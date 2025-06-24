@@ -1,5 +1,6 @@
 packages:
   - apps/*
+  - apps-svelte/*
   - apps-to-off-ramp/apps-no-tw/*
   - packages/*
   - packages/ui-components/*
