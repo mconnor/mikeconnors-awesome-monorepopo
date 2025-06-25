@@ -1,8 +1,6 @@
 ---
-// import Box from '@repo/layout-webcomponents/Box';
-// import Frame from '@repo/layout-webcomponents/Frame';
-import Prose from '#components/Prose.astro';
-import { Image } from 'astro:assets';
+// import Prose from '#components/Prose.astro';
+import Fig from './Fig.astro';
 
 import img1 from '#assets/Andy.jpg';
 import img2 from '#assets/img-2.jpg';
@@ -10,92 +8,17 @@ import img3 from '#assets/img-3.jpg';
 import img4 from '#assets/img-4.jpg';
 ---
 
-<Prose>
-  <h1>Expanding Captioned Images</h1>
-  <p>
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-    ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-    tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-    ultricies mi vitae est. Mauris placerat eleifend leo.
-  </p>
+<h1>Expanding Captioned Images</h1>
+<p>
+  Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+  turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor
+  sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
+  mi vitae est. Mauris placerat eleifend leo.
+</p>
 
-  <section class="img-gallery not-prose group">
-    <figure tabindex="1">
-      <Image src={img1} alt="jump, matey" />
-      <figcaption>Jump!</figcaption>
-    </figure>
-
-    <figure tabindex="2">
-      <Image src={img2} alt="jump, matey" />
-      <figcaption>Woah there!</figcaption>
-    </figure>
-
-    <figure tabindex="3">
-      <Image src={img3} alt="jump, matey" />
-      <figcaption>Crossed Axes</figcaption>
-    </figure>
-
-    <figure tabindex="4">
-      <Image src={img4} alt="jump, matey" />
-      <figcaption>Brothers in Arms</figcaption>
-    </figure>
-  </section>
-
-  <p>
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-    ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget,
-    tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-    ultricies mi vitae est. Mauris placerat eleifend leo.
-  </p>
-</Prose>
-
-<style>
-  .group:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: ' ';
-    clear: both;
-    height: 0;
-  }
-
-  figure {
-    width: 120px;
-    float: left;
-    margin: 0 20px 0 0;
-    background: white;
-    border: 10px solid white;
-    box-shadow: 0 3px 10px #ccc;
-
-    transform: rotate(5deg);
-
-    -webkit-transition: all 0.7s ease;
-    -moz-transition: all 1s ease;
-    position: relative;
-  }
-
-  figcaption {
-    text-align: center;
-    display: block;
-    font-size: 12px;
-    font-style: italic;
-  }
-
-  figure Image {
-    width: 100%; /* Scale down */
-  }
-
-  figure:hover {
-    transform: rotate(1deg);
-    box-shadow: 0 3px 10px #666;
-  }
-
-  figure:focus {
-    outline: none;
-    transform: rotate(-3deg) scale(2.5);
-
-    box-shadow: 0 3px 10px #666;
-
-    z-index: 9999;
-  }
-</style>
+<section class="img-gallery not-prose group">
+  <Fig index={1} img2={img1} caption="Jump!" alt="jump, matey" />
+  <Fig index={2} img2={img2} caption="Woah there!" alt="jump, matey" />
+  <Fig index={3} img2={img3} caption="Crossed Axes" alt="jump, matey" />
+  <Fig index={4} img2={img4} caption="Brothers in Arms" alt="jump" />
+</section>

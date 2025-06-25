@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import Ball from '@repo/astro-ui/Ball';
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
 import TimeLine from '#components/TimeLine/index.astro';
@@ -51,17 +51,41 @@ const imageSources = [
 
 <Layout title="About">
   <Stack space="var(--s1)">
-    <TimeLine items={timeCapsules} />
-    <Prose>
-      <h1>About Me</h1>
-      <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
-      <p>
-        This is a blog about my adventures in software development, travel, and
-        fitness.
-      </p>
-    </Prose>
+    <Ball className="bg-base-content" size="size-40" />
+    <Ball className="bg-base-content" size="size-100" />
 
-    <!-- <Frame ratio="1.6180:1">
+    <div class="size-79.25 rounded-full bg-base-content">
+      <h2 class="text-base-content">base-200</h2>
+    </div>
+
+    <div class="bg-base-content">
+      <div class="border-base-300 bg-base-100 text-base-content">
+        This is dark text on a light background, which switches to light text on
+        a dark background in dark mode.
+      </div>
+    </div>
+
+    <div class="m-0 overflow-hidden p-0">
+      <div class="scheme-light ...">
+        <input type="date" />
+      </div>
+      <div class="scheme-dark ...">
+        <input type="date" />
+      </div>
+      <div class="scheme-light-dark ...">
+        <input type="date" />
+      </div>
+      <TimeLine items={timeCapsules} />
+      <Prose>
+        <h1>About Me</h1>
+        <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
+        <p>
+          This is a blog about my adventures in software development, travel,
+          and fitness.
+        </p>
+      </Prose>
+
+      <!-- <Frame ratio="1.6180:1">
       <Image
         class="rounded-xl"
         src={Andy}
@@ -70,14 +94,15 @@ const imageSources = [
       />
     </Frame> -->
 
-    <Carousel images={imageSources} />
+      <Carousel images={imageSources} />
+    </div>
   </Stack>
-</Layout>
 
-<script is:inline>
-  document
-    .getElementById('secret-sound')
-    .addEventListener('click', () =>
-      document.getElementById('egg-audio').play(),
-    );
-</script>
+  <script is:inline>
+    document
+      .getElementById('secret-sound')
+      .addEventListener('click', () =>
+        document.getElementById('egg-audio').play(),
+      );
+  </script>
+</Layout>

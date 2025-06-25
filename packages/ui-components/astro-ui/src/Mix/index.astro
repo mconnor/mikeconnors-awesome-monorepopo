@@ -1,0 +1,30 @@
+---
+// import Ball from './Ball.astro';
+interface Props {
+  alert?: boolean;
+}
+
+const { alert } = Astro.props;
+---
+
+<h2>mix</h2>
+<div class="flex justify-center -space-x-14">
+  <div
+    class:list={[
+      'rounded-full',
+      { 'bg-red-500': alert },
+      'size-80 mix-blend-multiply',
+    ]}
+  >
+    pink
+  </div>
+  <div
+    class:list={[
+      'rounded-full',
+      { 'bg-green-500': alert },
+      'size-80 mix-blend-multiply',
+    ]}
+  >
+    blue
+  </div>
+</div>

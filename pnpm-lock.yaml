@@ -902,6 +902,9 @@ importers:
       '@repo/astro-ui':
         specifier: workspace:*
         version: link:../../packages/ui-components/astro-ui
+      '@repo/icon-paths':
+        specifier: workspace:*
+        version: link:../../packages/icon-paths
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents

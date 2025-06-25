@@ -10,8 +10,8 @@ function Button({
   onClick = () => console.log('click'),
 }: ButtonProps) {
   const colorVariants = {
-    blue: 'bg-blue-600 hover:bg-blue-500',
-    red: 'bg-red-600 hover:bg-red-500',
+    blue: 'btn bg-blue-600 hover:bg-blue-500',
+    red: 'btn bg-red-600 hover:bg-red-500',
   };
   return (
     <button onClick={onClick} className={`${colorVariants[color]}`}>

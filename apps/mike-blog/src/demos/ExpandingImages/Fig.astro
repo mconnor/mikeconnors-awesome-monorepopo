@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  index: number;
+  img2: ImageMetadata;
+  caption?: string;
+  alt?: string;
+}
+const { index, img2, caption, alt = 'need alt tex' } = Astro.props;
+---
+
+<figure tabindex={index}>
+  <Image src={img2} alt="/" />
+  <figcaption>{caption}</figcaption>
+</figure>

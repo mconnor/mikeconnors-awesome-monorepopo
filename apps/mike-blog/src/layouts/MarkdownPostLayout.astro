@@ -6,7 +6,7 @@ import { type CollectionEntry, getEntry } from 'astro:content';
 import Prose from '#components/Prose.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
 import BreadCrumbs from '#components/BreadCrumbs/index.astro';
-
+import BlogPicWrapper from '#components/BlogPicWrapper.astro';
 type Props = {
   // maxW?: RmUnitType;
   children: unknown;
@@ -40,7 +40,7 @@ if (author) {
     <Headline headline={title} />
 
     {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
-    <figure>
+    <!-- <figure>
       {
         cover?.src && cover?.alt && (
           <img
@@ -50,13 +50,14 @@ if (author) {
           />
         )
       }
-    </figure>
+    </figure> -->
+    {cover?.src && cover?.alt && <BlogPicWrapper cover={cover} />}
 
     {
       authorObj && (
-        <p class="prose-sm">
-          By <a href={`../authors/${authorObj.id}`}>{authorObj.data.name}</a>
-        </p>
+        <a class="link text-6xl link-hover" href={`../authors/${authorObj.id}`}>
+          {authorObj.data.name}
+        </a>
       )
     }
     <Prose>

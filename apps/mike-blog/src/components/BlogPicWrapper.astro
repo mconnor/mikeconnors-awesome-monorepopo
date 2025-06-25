@@ -1,0 +1,22 @@
+---
+interface Props {
+  cover: {
+    src: string;
+    alt?: string;
+  };
+  thumbnail?: boolean;
+}
+
+const { cover, thumbnail } = Astro.props;
+
+const varient = {
+  round: 'aspect-16/9 w-full rounded-xl object-cover shadow-2xl',
+  roundTop: 'aspect-16/9 w-full rounded-t-lg object-cover shadow-sm',
+};
+---
+
+<img
+  class:list={[thumbnail ? varient.roundTop : varient.round]}
+  src={cover.src}
+  alt={cover.alt ?? 'alt image needed'}
+/>

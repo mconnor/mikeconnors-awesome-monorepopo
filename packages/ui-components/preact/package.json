@@ -8,6 +8,7 @@
   },
   "exports": {
     "./styles.css": "./dist/index.css",
+    "./index.css": "./dist/index.css",
     "./*": {
       "types": "./dist/*/index.d.ts",
       "import": "./dist/*/index.mjs"
@@ -32,10 +33,12 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
+    "daisyui": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "tsup": "catalog:",
     "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
+    "@tailwindcss/vite": "catalog:",
     "typescript": "catalog:"
   },
   "eslintConfig": {

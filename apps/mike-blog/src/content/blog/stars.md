@@ -2,7 +2,7 @@
 title: star signals are cool
 date: 2024-01-02
 author: mike-connor
-description: The Future of Dynamic Web Content
+description: The Future
 # cover:
 #   src: 'https://picsum.photos/1600/900?random=3'
 #   alt: 'lorem'

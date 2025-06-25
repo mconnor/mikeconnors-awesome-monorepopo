@@ -2,7 +2,7 @@
 @import 'tailwindcss';
 @import '@repo/design-system';
 
-@plugin "daisyui" {
+/* @plugin "daisyui" {
   themes: all;
-}
+} */
 /* @plugin "daisyui"; */
