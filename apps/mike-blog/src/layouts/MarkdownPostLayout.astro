@@ -5,7 +5,7 @@ import Headline from '#components/Headline.astro';
 import { type CollectionEntry, getEntry } from 'astro:content';
 import Prose from '#components/Prose.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
-import BreadCrumbs from '#components/BreadCrumbs/index.astro';
+
 import BlogPicWrapper from '#components/BlogPicWrapper.astro';
 type Props = {
   // maxW?: RmUnitType;
@@ -29,8 +29,6 @@ if (author) {
 
 <!-- TODO: fix the date format -->
 <Layout title={title} description={description}>
-  <BreadCrumbs />
-
   <!-- <h1>The current URL is: {Astro.url}</h1>
   <h1>The current URL pathname is: {Astro.url.pathname}</h1>
   <h1>The current URL origin is: {Astro.url.origin}</h1> -->

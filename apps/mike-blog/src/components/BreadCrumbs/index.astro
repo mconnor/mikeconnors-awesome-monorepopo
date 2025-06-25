@@ -1,23 +1,33 @@
 ---
 // import { pathname } from 'astro';
+import FolderIcon from './FolderIcon.astro';
 
+interface Props {
+  gutters?: string;
+}
 const arr = Astro.url.pathname.split('/');
 ---
 
-<div class="breadcrumbs text-sm">
+<div class="breadcrumbs text-lg">
   <ul>
     <li><a href="../">Home</a></li>
 
     {
       arr.map((segment, index) => {
         if (segment === '') return null; // Skip empty segments
+        if (index === arr.length - 1) {
+          return <li class="text-gray-500">{segment}</li>; // Last segment, no link
+        }
         const path = Astro.url.pathname
           .split('/')
           .slice(0, index + 1)
           .join('/');
         return (
           <li>
-            <a href={path}>{segment}</a>
+            <a href={path} class="link">
+              <FolderIcon />
+              {segment}
+            </a>
           </li>
         );
       })

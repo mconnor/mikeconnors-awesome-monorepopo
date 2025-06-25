@@ -1,6 +1,6 @@
 ---
 import Center from '@repo/layout-webcomponents/Center';
-
+import BreadCrumbs from '#components/BreadCrumbs/index.astro';
 //  cover causes a flash issue
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
@@ -23,16 +23,21 @@ interface Props {
 }
 
 const { maxW = '60ch', title, ...rest } = Astro.props;
+
+const GUTTERS = '1ch'; // padding for the main content area
+const paddClass = `ps-[${GUTTERS}]`; // class for padding
 ---
 
 <BaseLayout title={title} {...rest}>
   <!-- <BgImage bgImage={Andy}> -->
-  <Cover centeredElement="center-l" noPad>
-    <NavBar transition:persist />
-
-    <Center gutters="1ch" max={maxW}>
-      <slot />
-    </Center>
+  <NavBar transition:persist />
+  <div class={paddClass}><BreadCrumbs /></div>
+  <Cover centeredElement="main" noPad>
+    <main class="border-1">
+      <Center gutters={GUTTERS} max={maxW}>
+        <slot />
+      </Center>
+    </main>
 
     <Footer />
   </Cover>
