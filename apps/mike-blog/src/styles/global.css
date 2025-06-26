@@ -1,21 +1,30 @@
 @import 'tailwindcss';
-@source './**/*.{html,astro,js,ts,md,json}';
-/* @source "../node_modules/@repo/astro-ui"; */
 
+/* Content scanning sources - tells Tailwind where to look for classes */
+@source './**/*.{html,astro,js,ts,jsx,tsx,vue,svelte,md,mdx}';
+@source '@repo/ui-components/**/*.{astro,js,ts,jsx,tsx,vue,svelte}';
+
+/* Exclude non-UI packages from scanning */
 @source not '@repo/icon-paths';
 @source not '@repo/layout-webcomponents';
 @source not '@repo/scripts';
 @source not '@repo/eslint-config';
 @source not '@repo/typescript-config';
 
+/* Import shared design system styles */
 @import '@repo/design-system';
-@import '@repo/astro-ui/styles.css';
-/* @import '@repo/ui-lit/styles.css'; */
 
+/* Import framework-specific UI components if they have unique styles */
+/* @import '@repo/astro-ui/styles.css'; - Contains only tailwindcss + design-system, so redundant */
+
+/* Import app-specific styles */
 @import './animations.css';
 
+/* Configure plugins */
 @plugin "daisyui" {
   themes: all;
 }
 
 @plugin "@tailwindcss/typography";
+
+/* themes: light --default, dark --prefersdark, cupcake; */
