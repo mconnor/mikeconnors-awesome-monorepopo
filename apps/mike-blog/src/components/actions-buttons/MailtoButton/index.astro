@@ -8,7 +8,7 @@ interface Props {
 const domain = import.meta.env.DOMAIN;
 const user = import.meta.env.USER_NAME;
 
-const { buttonText = 'Contact via email' } = Astro.props;
+const { buttonText = 'Contact' } = Astro.props;
 
 // Pre-encode the email parts on the server-side
 const encodeToEntities = (text: string) => {
@@ -27,7 +27,11 @@ const encodedDomain = encodeToEntities(domain);
   data-user={encodedUser}
   data-text={buttonText}
 >
-  <button aria-live="polite" aria-label={buttonText} class="btn btn-primary">
+  <button
+    aria-live="polite"
+    aria-label={buttonText}
+    class="btn btn-ghost btn-xl"
+  >
   </button>
   <span id="email-success-msg" class="sr-only" aria-live="assertive"></span>
 </mailto-button>

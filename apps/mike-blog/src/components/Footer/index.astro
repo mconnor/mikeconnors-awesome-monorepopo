@@ -7,22 +7,20 @@ import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
 ---
 
 <!-- Footer with responsive flex direction -->
-<footer class="border-t-1 p-4">
-  <!-- <div class="flex flex-col @6xl:flex-row">
-    <p class="border-1 text-center">Mike Connor</p>
-    <p class="border-1 text-center">Site and contents</p>
-  </div> -->
-  <Switcher space="var(--s00)" threshold="48rem">
-    <p class="text-neutral-content-300 text-center text-shadow-accent">
-      Site and contents by Mike Connor
-    </p>
+<footer
+  class="flex flex-col items-stretch border-t-1 p-4 md:flex-row md:content-center md:justify-between"
+>
+  <!-- <Switcher space="var(--s00)" threshold="48rem"> -->
+  <p
+    class="text-neutral-content-300 hidden border-1 text-center text-xl text-shadow-accent md:block"
+  >
+    Site and contents by Mike Connor
+  </p>
 
-    <div class="flex justify-center">
-      <MailtoBtn buttonText="CONTACT ME" />
-    </div>
-    <div class="flex justify-center">
-      <EasterEgg file="drink" />
-    </div>
-  </Switcher>
+  <MailtoBtn buttonText="CONTACT" />
+
+  <EasterEgg />
+  <!-- </Switcher> -->
+
   <!-- </footer> -->
 </footer>

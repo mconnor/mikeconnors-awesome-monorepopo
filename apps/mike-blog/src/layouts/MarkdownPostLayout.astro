@@ -34,7 +34,7 @@ if (author) {
   <h1>The current URL origin is: {Astro.url.origin}</h1> -->
 
   <!-- <h1 class="">{title}</h1> -->
-  <Stack>
+  <Stack space="var(--space-6)">
     <Headline headline={title} />
 
     {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}

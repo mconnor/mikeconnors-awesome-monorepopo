@@ -1,41 +1,11 @@
 ---
 import SplashPage from '#components/SplashPage.astro';
 import Layout from '#layouts/Layout.astro';
-import Icon from '@repo/astro-ui/Icon';
-import Wiggle from '#components/anims/Wiggle.astro';
-import { Image } from 'astro:assets';
+// import Icon from '@repo/astro-ui/Icon';
+// import Wiggle from '#components/anims/Wiggle.astro';
 ---
 
 <Layout title="Welcome" description="Mike's Blog - Splash Page" maxW="100ch">
-  <div class="border-2">
-    <figure>
-      <Image
-        src="/images/adelle960.jpg"
-        alt="Marketplace"
-        width="800"
-        height="450"
-        class="rounded-full"
-      />
-    </figure>
-    <p>
-      Dolore elit irure qui commodo pariatur voluptate magna quis quis eiusmod
-      esse. Lorem fugiat nulla qui nostrud anim officia consectetur laboris
-      veniam. Pariatur dolore consectetur cupidatat Lorem. Labore reprehenderit
-      do esse excepteur pariatur non est voluptate commodo mollit ullamco dolor
-      sunt nisi. Adipisicing magna ut minim excepteur proident non.
-      Reprehenderit ipsum exercitation sunt commodo adipisicing id excepteur
-      laboris deserunt velit labore. Esse non sit aute irure eiusmod aliqua
-      voluptate nostrud aute amet. Ea ipsum sit aute Lorem nisi ullamco aute.
-      Sit aute incididunt et id in ea esse officia sit Lorem cillum dolor.
-      Excepteur anim culpa sit consectetur tempor ex consequat commodo aliqua
-      Lorem do aliqua irure. Deserunt in voluptate eiusmod sint ullamco ipsum
-      pariatur aliqua dolore qui proident. Dolor labore Lorem aliquip tempor
-      quis. Ut exercitation exercitation pariatur laborum eu laborum anim dolor
-      laborum. Aute velit in tempor dolor nisi ex sint aliqua occaecat ipsum
-      velit ex est. Id fugiat ad nulla adipisicing sint elit elit consectetur
-      cupidatat tempor.
-    </p>
-  </div>
   <!-- <h1 class="text-4xl font-bold mb-4">Welcome to Mike's Blog</h1>
     <p class="text-lg mb-8">Explore my latest posts and projects.</p>
     <a href="/about" class="btn btn-primary btn-lg">
@@ -43,14 +13,14 @@ import { Image } from 'astro:assets';
       Let's Go
     </a> -->
 
-  <!-- <SplashPage>
-      <a
-        role="button"
-        href="/about"
-        slot="cta"
-        class="btn btn-active animate-bounce-in btn-xl btn-primary"
-      >
-        Let's Go
-      </a>
-    </SplashPage> -->
+  <SplashPage>
+    <a
+      role="button"
+      href="/about"
+      slot="cta"
+      class="btn btn-active animate-bounce-in btn-xl btn-primary"
+    >
+      Let's Go
+    </a>
+  </SplashPage>
 </Layout>

@@ -2,7 +2,7 @@
 
 /* Content scanning sources - tells Tailwind where to look for classes */
 @source './**/*.{html,astro,js,ts,jsx,tsx,vue,svelte,md,mdx}';
-@source '@repo/ui-components/**/*.{astro,js,ts,jsx,tsx,vue,svelte}';
+@source '@repo/astro-ui/**/*.{astro,js,ts}';
 
 /* Exclude non-UI packages from scanning */
 @source not '@repo/icon-paths';

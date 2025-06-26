@@ -20,6 +20,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write",
+    "format:check": "prettier . --check",
     "lint": "eslint --max-warnings=0",
     "help": "astro -- --help",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",

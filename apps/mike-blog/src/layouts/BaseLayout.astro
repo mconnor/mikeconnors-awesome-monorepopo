@@ -16,7 +16,13 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 // const mode = import.meta.env.NODE_ENV?.toString().substring(0, 3);
 ---
 
-<html lang="en" id="blog-app" transition:name="root" transition:animate="none">
+<html
+  lang="en"
+  data-theme="cupcake"
+  id="blog-app"
+  transition:name="root"
+  transition:animate="none"
+>
   <head>
     <BaseHead title={title} description={description} />
   </head><body>

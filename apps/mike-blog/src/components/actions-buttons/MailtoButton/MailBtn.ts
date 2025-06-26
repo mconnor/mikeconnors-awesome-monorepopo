@@ -54,7 +54,7 @@ class MailtoButton extends HTMLElement {
           <span class="mr-1 text-nowrap">${buttonText}:</span>
           <span aria-hidden="true" class="font-mono">${displayUser}</span>
           <span class="sr-only">partially hidden email username</span>
-          <span aria-hidden="true" class="mx-1  font-mono">[at]</span>
+          <span aria-hidden="true" class="mx-1 font-mono">@</span>
           <span class="sr-only"> at </span>
           <span aria-hidden="true" class="font-mono">${displayDomain}</span>
           <span class="sr-only">partially hidden domain name</span>
@@ -79,11 +79,11 @@ class MailtoButton extends HTMLElement {
         const feedbackEl = document.createElement('div');
         feedbackEl.textContent = 'Opening email client...';
         feedbackEl.className =
-          'fixed bottom-4 right-4 bg-green-50 text-green-700 px-4 py-2.5 rounded-lg shadow-lg transition duration-300 text-sm font-medium flex items-center';
+          'fixed bottom-4 right-4 bg-info text-info-content px-4 py-2.5 rounded-lg shadow-lg transition duration-300 text-sm font-medium flex items-center';
 
         // Add a checkmark icon using inline SVG (Tailwind v4 friendly)
         const iconSpan = document.createElement('span');
-        iconSpan.className = 'mr-2 text-green-600';
+        iconSpan.className = 'mr-2 text-info-content';
         iconSpan.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
           </svg>`;

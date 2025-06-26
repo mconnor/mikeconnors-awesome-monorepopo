@@ -1,0 +1,29 @@
+---
+import Box from '@repo/layout-webcomponents/Box';
+
+import Layout from '#layouts/Layout.astro';
+export function getStaticPaths() {
+  return [
+    { params: { dog: 'clifford' } },
+    { params: { dog: 'rover' } },
+    { params: { dog: 'spot' } },
+  ];
+}
+
+const { dog } = Astro.params;
+---
+
+<Layout title={dog}>
+  <h1 slot="pageTitle">{dog}</h1>
+  <h2>Static (SSG) Mode</h2>
+
+  <p>
+    Because all routes must be determined at build time, a dynamic route must
+    export a getStaticPaths() that returns an array of objects with a params
+    property. Each of these objects will generate a corresponding route.
+    [dog].astro defines the dynamic dog parameter in its filename, so the
+    objects returned by getStaticPaths() must include dog in their params. The
+    page can then access this parameter using Astro.params.
+  </p>
+  <div>Good dog, {dog}!</div>
+</Layout>
