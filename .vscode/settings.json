@@ -133,7 +133,7 @@
 
   // Extension-specific settings (add if needed)
   "cssvar.files.exclude": ["**/node_modules/**", "**/dist/**"],
-  "cssvar.enabledLanguages": ["css", "scss", "less", "postcss"],
+  "cssvar.enabledLanguages": ["css", "postcss"],
 
   "github.copilot.chat.codeGeneration.instructions": [
     {

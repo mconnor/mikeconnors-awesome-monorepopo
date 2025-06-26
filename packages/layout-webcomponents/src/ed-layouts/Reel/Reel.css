@@ -1,4 +1,7 @@
 reel-l {
+  --color-light: var(--color-primary-100);
+  --color-dark: var(--color-primary-900);
+
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;

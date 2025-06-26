@@ -37,12 +37,12 @@
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@repo/design-system": "workspace:^",
     "astro": "catalog:",
     "eslint": "catalog:",
     "open-props": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
