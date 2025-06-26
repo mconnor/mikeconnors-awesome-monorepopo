@@ -1,26 +1,35 @@
-@layer components {
-  /* HTML: <div class="battery"></div> */
-  .battery {
-    --n: 6; /* the number of bar */
-    --g: 5px; /* the gap  */
+@utility battery {
+  --n: 6; /* the number of bar */
+  --g: 5px; /* the gap  */
 
-    width: 200px; /* control the size */
-    color: #2a363b;
-    aspect-ratio: 2;
-    border: var(--g) solid;
-    padding: var(--g);
-    border-radius: 10px;
-    background: repeating-linear-gradient(
-        90deg,
-        currentColor 0 calc(100% / var(--n) - var(--g)),
-        #0000 0 calc(100% / var(--n))
-      )
-      0 0 / calc(100% + var(--g)) content-box;
-    position: relative;
-    box-sizing: border-box;
+  width: 200px; /* control the size */
+  color: #2a363b;
+  aspect-ratio: 2;
+  border: var(--g) solid;
+  padding: var(--g);
+  border-radius: 10px;
+  background: repeating-linear-gradient(
+      90deg,
+      currentColor 0 calc(100% / var(--n) - var(--g)),
+      #0000 0 calc(100% / var(--n))
+    )
+    0 0 / calc(100% + var(--g)) content-box;
+  position: relative;
+  box-sizing: border-box;
+  &:hover {
+    background: blue;
   }
-  .battery:before {
-    content: "";
+
+  &:focus {
+    outline: 2px solid blue;
+  }
+
+  &::after {
+    content: '→';
+    margin-left: 0.5rem;
+  }
+  &:before {
+    content: '';
     position: absolute;
     inset: 30% -20px 30% 100%;
     background: currentColor;

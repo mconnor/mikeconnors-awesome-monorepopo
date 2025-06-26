@@ -6,17 +6,24 @@
     "#*": "./src/*"
   },
   "exports": {
-     ".": "./src/css/shared-styles.css",
-    "./postcss": "./postcss.config.js"
+    ".": "./src/css/shared-styles.css",
+    "./postcss": "./postcss.config.js",
+    "./viteConfig": "./vite.config.js"
+  },
+  "scripts": {
+    "format": "prettier . --write"
   },
   "devDependencies": {
-    "prettier-plugin-tailwindcss": "catalog:"
+    "prettier-plugin-tailwindcss": "catalog:",
+    "prettier": "catalog:"
   },
   "dependencies": {
     "@tailwindcss/postcss": "catalog:",
     "@tailwindcss/typography": "catalog:",
     "daisyui": "catalog:",
     "tailwindcss": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "vite": "catalog:",
     "open-props": "catalog:"
   }
 }
