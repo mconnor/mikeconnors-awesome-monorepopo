@@ -97,7 +97,7 @@ catalog:
   postcss-nesting: ^13.0.2
   postcss-pow: ^1.0.1
   preact: ^10.26.9
-  prettier: ^3.6.0
+  prettier: ^3.6.1
   prettier-plugin-astro: ^0.14.1
   prettier-plugin-tailwindcss: ^0.6.13
   prettier-plugin-toml: ^2.0.5

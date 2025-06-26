@@ -235,7 +235,7 @@ catalogs:
       specifier: ^10.26.9
       version: 10.26.9
     prettier:
-      specifier: ^3.6.0
+      specifier: ^3.6.1
       version: 3.6.0
     prettier-plugin-astro:
       specifier: ^0.14.1
@@ -329,19 +329,19 @@ importers:
     devDependencies:
       prettier:
         specifier: 'catalog:'
-        version: 3.6.0
+        version: 3.6.1
       prettier-plugin-astro:
         specifier: 'catalog:'
         version: 0.14.1
       prettier-plugin-svelte:
         specifier: catalog:svelte5
-        version: 3.4.0(prettier@3.6.0)(svelte@5.34.7)
+        version: 3.4.0(prettier@3.6.1)(svelte@5.34.7)
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
-        version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.0)(svelte@5.34.7))(prettier@3.6.0)
+        version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.1)(svelte@5.34.7))(prettier@3.6.1)
       prettier-plugin-toml:
         specifier: 'catalog:'
-        version: 2.0.5(prettier@3.6.0)
+        version: 2.0.5(prettier@3.6.1)
       prettier-plugin-vue:
         specifier: 'catalog:'
         version: 1.1.6
@@ -443,7 +443,7 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: 'catalog:'
         version: 4.3.0(astro@5.10.1(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0))
@@ -537,7 +537,7 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
       '@astrojs/vercel':
         specifier: 'catalog:'
         version: 8.2.0(@sveltejs/kit@2.22.0(@sveltejs/vite-plugin-svelte@5.1.0(svelte@5.34.7)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0)))(svelte@5.34.7)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0)))(astro@5.10.1(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0))(next@15.3.0(@opentelemetry/api@1.9.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)(rollup@4.43.0)(svelte@5.34.7)(vue@3.5.17(typescript@5.8.3))
@@ -580,7 +580,7 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
       '@astrojs/mdx':
         specifier: 'catalog:'
         version: 4.3.0(astro@5.10.1(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0))
@@ -774,7 +774,7 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
       '@astrojs/preact':
         specifier: 'catalog:'
         version: 4.1.0(@babel/core@7.27.4)(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(preact@10.26.9)(terser@5.39.0)(yaml@2.8.0)
@@ -956,7 +956,7 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
@@ -996,7 +996,7 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
       '@astrojs/preact':
         specifier: 'catalog:'
         version: 4.1.0(@babel/core@7.27.4)(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(preact@10.26.9)(terser@5.39.0)(yaml@2.8.0)
@@ -1250,7 +1250,7 @@ importers:
     devDependencies:
       '@astrojs/check':
         specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
       '@repo/eslint-config':
         specifier: workspace:^
         version: link:../config-eslint
@@ -1360,7 +1360,7 @@ importers:
     devDependencies:
       '@astrojs/check':
         specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
       '@open-wc/testing':
         specifier: 'catalog:'
         version: 4.0.0
@@ -1387,7 +1387,7 @@ importers:
         version: 0.14.1
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
-        version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.0)(svelte@5.34.7))(prettier@3.6.0)
+        version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.1)(svelte@5.34.7))(prettier@3.6.1)
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -1519,6 +1519,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 22.15.33
+      daisyui:
+        specifier: 'catalog:'
+        version: 5.0.43
       eslint:
         specifier: 'catalog:'
         version: 9.29.0(jiti@2.4.2)
@@ -1555,7 +1558,7 @@ importers:
         version: 9.29.0(jiti@2.4.2)
       prettier-plugin-svelte:
         specifier: catalog:svelte5
-        version: 3.4.0(prettier@3.6.0)(svelte@5.34.7)
+        version: 3.4.0(prettier@3.6.1)(svelte@5.34.7)
       svelte:
         specifier: catalog:svelte5
         version: 5.34.7
@@ -4520,6 +4523,9 @@ packages:
   caniuse-lite@1.0.30001724:
     resolution: {integrity: sha512-WqJo7p0TbHDOythNTqYujmaJTvtYRZrjpP8TCvH6Vb9CYJerJNKamKzIWOM4BkQatWj9H2lYulpdAQNBe7QhNA==}
 
+  caniuse-lite@1.0.30001726:
+    resolution: {integrity: sha512-VQAUIUzBiZ/UnlM28fSp2CRF3ivUn1BWEvxMcVTNwpw91Py1pGbPIyIKtd+tzct9C3ouceCVdGAXxZOpZAsgdw==}
+
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
 
@@ -5236,7 +5242,6 @@ packages:
     resolution: {integrity: sha512-/baBXDqkfW8x0UlqfYAfRCkmVWiH8qFZ4uhT6yLVBLssiypDTbe78W6lNBse7huBFv1ipR5PG9evkxEnIXDxjA==}
     peerDependencies:
       eslint: '>= 5'
-    bundledDependencies: []
 
   eslint-plugin-import@2.31.0:
     resolution: {integrity: sha512-ixmkI62Rbc2/w8Vfxyh1jQRTdRTF52VxwRVHl/ykPAmqG+Nb7/kNn+byLP0LxPgI7zWA16Jt82SybJInmMia3A==}
@@ -7477,6 +7482,11 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
 
+  prettier@3.6.1:
+    resolution: {integrity: sha512-5xGWRa90Sp2+x1dQtNpIpeOQpTDBs9cZDmA/qs2vDNN2i18PdapqY7CmBeyLlMuGqXJRIOPaCaVZTLNQRWUH/A==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   pretty-format@27.5.1:
     resolution: {integrity: sha512-Qb1gy5OrP5+zDf2Bvnzdl3jsTf1qXVMazbvCoKhtKqVs4/YK4ozX4gKQJJVyNe+cajNPn0KoC0MC3FUmaHWEmQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -9040,6 +9050,17 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
+  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)':
+    dependencies:
+      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)
+      chokidar: 4.0.3
+      kleur: 4.1.5
+      typescript: 5.8.3
+      yargs: 17.7.2
+    transitivePeerDependencies:
+      - prettier
+      - prettier-plugin-astro
+
   '@astrojs/compiler@2.12.2': {}
 
   '@astrojs/internal-helpers@0.6.1': {}
@@ -9066,6 +9087,32 @@ snapshots:
       vscode-uri: 3.1.0
     optionalDependencies:
       prettier: 3.6.0
+      prettier-plugin-astro: 0.14.1
+    transitivePeerDependencies:
+      - typescript
+
+  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@3.6.1)(typescript@5.8.3)':
+    dependencies:
+      '@astrojs/compiler': 2.12.2
+      '@astrojs/yaml2ts': 0.2.2
+      '@jridgewell/sourcemap-codec': 1.5.0
+      '@volar/kit': 2.4.14(typescript@5.8.3)
+      '@volar/language-core': 2.4.14
+      '@volar/language-server': 2.4.14
+      '@volar/language-service': 2.4.14
+      fast-glob: 3.3.3
+      muggle-string: 0.4.1
+      volar-service-css: 0.0.62(@volar/language-service@2.4.14)
+      volar-service-emmet: 0.0.62(@volar/language-service@2.4.14)
+      volar-service-html: 0.0.62(@volar/language-service@2.4.14)
+      volar-service-prettier: 0.0.62(@volar/language-service@2.4.14)(prettier@3.6.1)
+      volar-service-typescript: 0.0.62(@volar/language-service@2.4.14)
+      volar-service-typescript-twoslash-queries: 0.0.62(@volar/language-service@2.4.14)
+      volar-service-yaml: 0.0.62(@volar/language-service@2.4.14)
+      vscode-html-languageservice: 5.5.0
+      vscode-uri: 3.1.0
+    optionalDependencies:
+      prettier: 3.6.1
       prettier-plugin-astro: 0.14.1
     transitivePeerDependencies:
       - typescript
@@ -12767,6 +12814,9 @@ snapshots:
 
   caniuse-lite@1.0.30001724: {}
 
+  caniuse-lite@1.0.30001726:
+    optional: true
+
   ccount@2.0.1: {}
 
   chai-a11y-axe@1.5.0:
@@ -15480,7 +15530,7 @@ snapshots:
       '@swc/counter': 0.1.3
       '@swc/helpers': 0.5.15
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001724
+      caniuse-lite: 1.0.30001726
       postcss: 8.4.31
       react: 19.1.0
       react-dom: 19.1.0(react@19.1.0)
@@ -16110,12 +16160,17 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.12.2
-      prettier: 3.6.0
+      prettier: 3.6.1
       sass-formatter: 0.7.9
 
   prettier-plugin-svelte@3.4.0(prettier@3.6.0)(svelte@5.34.7):
     dependencies:
       prettier: 3.6.0
+      svelte: 5.34.7
+
+  prettier-plugin-svelte@3.4.0(prettier@3.6.1)(svelte@5.34.7):
+    dependencies:
+      prettier: 3.6.1
       svelte: 5.34.7
 
   prettier-plugin-tailwindcss@0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.0)(svelte@5.34.7))(prettier@3.6.0):
@@ -16125,10 +16180,22 @@ snapshots:
       prettier-plugin-astro: 0.14.1
       prettier-plugin-svelte: 3.4.0(prettier@3.6.0)(svelte@5.34.7)
 
+  prettier-plugin-tailwindcss@0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.1)(svelte@5.34.7))(prettier@3.6.1):
+    dependencies:
+      prettier: 3.6.1
+    optionalDependencies:
+      prettier-plugin-astro: 0.14.1
+      prettier-plugin-svelte: 3.4.0(prettier@3.6.1)(svelte@5.34.7)
+
   prettier-plugin-toml@2.0.5(prettier@3.6.0):
     dependencies:
       '@taplo/lib': 0.5.0
       prettier: 3.6.0
+
+  prettier-plugin-toml@2.0.5(prettier@3.6.1):
+    dependencies:
+      '@taplo/lib': 0.5.0
+      prettier: 3.6.1
 
   prettier-plugin-vue@1.1.6:
     dependencies:
@@ -16140,6 +16207,8 @@ snapshots:
   prettier@2.8.8: {}
 
   prettier@3.6.0: {}
+
+  prettier@3.6.1: {}
 
   pretty-format@27.5.1:
     dependencies:
@@ -17607,6 +17676,13 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.14
       prettier: 3.6.0
+
+  volar-service-prettier@0.0.62(@volar/language-service@2.4.14)(prettier@3.6.1):
+    dependencies:
+      vscode-uri: 3.1.0
+    optionalDependencies:
+      '@volar/language-service': 2.4.14
+      prettier: 3.6.1
 
   volar-service-typescript-twoslash-queries@0.0.62(@volar/language-service@2.4.14):
     dependencies:
