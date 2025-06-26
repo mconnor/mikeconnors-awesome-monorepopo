@@ -7,16 +7,14 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./dist/index.css",
-    "./index.css": "./dist/index.css",
+    "./styles.css": "./src/styles.css",
     "./*": {
       "default": "./src/*/index.astro"
-    }
+    },
+    "./MyButton": "./src/MyButton/index.astro"
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
@@ -30,25 +28,19 @@
   "license": "ISC",
   "dependencies": {
     "@repo/icon-paths": "workspace:^",
-    "@tailwindcss/vite": "catalog:",
-    "tailwindcss": "catalog:",
     "lorem-ipsum": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",
-    "@open-wc/testing": "catalog:",
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@tailwindcss/cli": "catalog:",
     "astro": "catalog:",
-    "daisyui": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:"
+    "typescript": "catalog:"
   },
   "peerDependencies": {
     "astro": ">=5",

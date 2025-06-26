@@ -64,7 +64,7 @@ const WH = '12px';
       </div>
       <ul
         tabindex="0"
-        class="dropdown-content z-1 w-52 rounded-box bg-base-300 p-2 shadow-2xl"
+        class="dropdown-content rounded-box bg-base-300 z-1 w-52 p-2 shadow-2xl"
       >
         {
           themes.map((theme) => (
@@ -72,7 +72,7 @@ const WH = '12px';
               <input
                 type="radio"
                 name="theme-dropdown"
-                class="theme-controller btn btn-block justify-start btn-ghost btn-sm"
+                class="theme-controller btn btn-block btn-ghost btn-sm justify-start"
                 aria-label={theme.charAt(0).toUpperCase() + theme.slice(1)}
                 value={theme}
               />

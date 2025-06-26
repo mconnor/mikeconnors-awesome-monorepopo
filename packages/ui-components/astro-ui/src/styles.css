@@ -1,8 +1,4 @@
-/* Component-level styles for the UI package */
-@import 'tailwindcss';
+/* Astro UI Component Styles */
 @import '@repo/design-system';
 
-/* @plugin "daisyui" {
-  themes: all;
-} */
-/* @plugin "daisyui"; */
+/* Additional component-specific styles can be added here */
