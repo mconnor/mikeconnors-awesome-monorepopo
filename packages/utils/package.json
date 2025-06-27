@@ -7,10 +7,7 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./cn": {
-      "types": "./dist/cn.d.ts",
-      "import": "./dist/cn.js"
-    }
+    "./cn": "./src/cn.ts"
   },
   "scripts": {
     "build": "tsup",

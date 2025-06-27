@@ -28,7 +28,7 @@ const { href, showInset, tags, date } = Astro.props;
   </h2>
 
   <time
-    class="relative order-first border-1 text-sm text-gray-600"
+    class="border-1 relative order-first text-sm text-gray-600"
     datetime="2021-08-01">{date}</time
   >
 
@@ -36,11 +36,11 @@ const { href, showInset, tags, date } = Astro.props;
     <div class="border-1 text-base text-gray-700">
       <slot name="description" />
     </div>
-    <div class="flex flex-row gap-0 border-1 px-6 pt-4 pb-2">
+    <div class="border-1 flex flex-row gap-0 px-6 pb-2 pt-4">
       {
         tags &&
           tags.map((tag) => (
-            <div class="mr-2 mb-2 inline-block rounded-full bg-blue-200 px-3 py-1 text-sm font-semibold text-blue-700">
+            <div class="mb-2 mr-2 inline-block rounded-full bg-blue-200 px-3 py-1 text-sm font-semibold text-blue-700">
               {tag}
             </div>
           ))

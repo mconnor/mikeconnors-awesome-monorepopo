@@ -10,10 +10,11 @@
     "./styles.css": "./src/styles.css",
     "./*": {
       "default": "./src/*/index.astro"
-    },
-    "./MyButton": "./src/MyButton/index.astro"
+    }
   },
   "scripts": {
+    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
+    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
     "clean": "rm -rf dist",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
@@ -31,6 +32,7 @@
     "lorem-ipsum": "catalog:"
   },
   "devDependencies": {
+    "daisyui": "catalog:",
     "@astrojs/check": "catalog:",
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",

@@ -1,4 +1,5 @@
 /* Astro UI Component Styles */
-@import '@repo/design-system';
+@import '@repo/design-system/shared-styles.css';
 
+@plugin "daisyui";
 /* Additional component-specific styles can be added here */

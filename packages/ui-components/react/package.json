@@ -7,15 +7,17 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./src/styles.css",
+    "./styles.css": "./dist/styles.css",
     "./*": {
       "types": "./dist/*/index.d.ts",
       "import": "./dist/*/index.mjs"
     }
   },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
+    "build:components": "tsup",
+    "dev:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
+    "dev:components": "tsup --watch",
     "check-types": "tsc --noEmit",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "lint": "eslint src --max-warnings 0",
@@ -44,6 +46,11 @@
     "@types/node": "catalog:",
     "eslint": "catalog:",
     "tsup": "catalog:",
+    "@tailwindcss/cli": "catalog:",
+    "tailwindcss": "catalog:",
+    "daisyui": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "vite": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {

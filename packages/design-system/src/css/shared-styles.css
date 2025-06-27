@@ -8,6 +8,5 @@ When you import tailwindcss into your project, Preflight is automatically inject
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities); */
 
-
 @import './modular.css';
 @import './shapes.css';

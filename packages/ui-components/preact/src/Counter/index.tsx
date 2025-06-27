@@ -19,9 +19,13 @@ function Counter({ children, class: className }: CounterProps) {
   return (
     <>
       <div class={className}>
-        <button onClick={subtract}>-</button>
+        <button className="btn btn-primary" onClick={subtract}>
+          -
+        </button>
         <pre>{count}</pre>
-        <button onClick={add}>+</button>
+        <button className="btn btn-primary" onClick={add}>
+          +
+        </button>
       </div>
       {children && <div class="counter-message">{children}</div>}
     </>

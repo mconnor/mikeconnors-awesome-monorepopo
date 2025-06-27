@@ -1,2 +1,7 @@
+/* React UI Component Styles */
 @import 'tailwindcss';
-@import '@repo/design-system';
+@import '@repo/design-system/shared-styles.css';
+
+/* Additional component-specific styles can be added here */
+@plugin "daisyui" {
+}

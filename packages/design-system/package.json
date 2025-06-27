@@ -3,19 +3,23 @@
   "version": "1.0.0",
   "type": "module",
   "imports": {
-    "#*": "./src/*"
+    "#*": "./*"
   },
   "exports": {
-    ".": "./src/css/shared-styles.css",
-    "./postcss": "./postcss.config.js",
-    "./viteConfig": "./vite.config.js"
+    "./shared-styles.css": "./src/css/shared-styles.css",
+    "./postcss": "./postcss.config.ts",
+    "./viteConfig": "./vite.config.ts",
+    "./viteReactConfig": "./vite-react.config.ts"
   },
   "scripts": {
     "format": "prettier . --write"
   },
   "devDependencies": {
+    "eslint": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
-    "prettier": "catalog:"
+    "prettier": "catalog:",
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^"
   },
   "dependencies": {
     "@tailwindcss/postcss": "catalog:",
@@ -24,6 +28,7 @@
     "tailwindcss": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "vite": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
     "open-props": "catalog:"
   }
 }
