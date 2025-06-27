@@ -7,10 +7,10 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./src/styles.css",
     "./*": {
       "default": "./src/*/index.astro"
-    }
+    },
+    "./styles.css": "./dist/styles.css"
   },
   "scripts": {
     "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
@@ -29,15 +29,17 @@
   "license": "ISC",
   "dependencies": {
     "@repo/icon-paths": "workspace:^",
-    "lorem-ipsum": "catalog:"
+    "lorem-ipsum": "catalog:",
+    "@astrojs/check": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
-    "daisyui": "catalog:",
-    "@astrojs/check": "catalog:",
-    "@repo/design-system": "workspace:^",
-    "@repo/eslint-config": "workspace:^",
-    "@repo/typescript-config": "workspace:^",
+    "@repo/design-system": "workspace:*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@tailwindcss/cli": "catalog:",
     "astro": "catalog:",
+    "daisyui": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",

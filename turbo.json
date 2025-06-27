@@ -22,7 +22,7 @@
       "dependsOn": ["^transit"]
     },
     "lint": {
-      "dependsOn": ["transit"]
+      "dependsOn": ["^lint"]
     },
     "format": {},
     "sync": {
@@ -35,7 +35,7 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "dependsOn": ["^clean", "^build"]
+      "dependsOn": ["^build"]
     },
     "preview": {
       "cache": true,
@@ -44,12 +44,12 @@
     "check-types": {
       "inputs": ["**/*.{ts,tsx}"],
       "cache": true,
-      "dependsOn": ["transit"]
+      "dependsOn": ["^check-types"]
     },
     "astro-check": {
       "inputs": ["**/*.{astro,ts,tsx,js,jsx}"],
       "cache": true,
-      "dependsOn": ["transit"]
+      "dependsOn": ["^astro-check"]
     },
     "test": {
       "dependsOn": ["^lint", "^clean", "^build"]

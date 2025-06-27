@@ -56,58 +56,18 @@ const imageSources = [
 <Layout title="About">
   <Stack space="var(--s4)">
     <Btns />
-    <div class="flex">
-      <button class="btn btn-neutral">Neutral</button>
-      <button class="btn btn-primary">Primary</button>
-      <button class="btn btn-secondary">Secondary</button>
-      <button class="btn btn-accent">Accent</button>
-      <button class="btn btn-info">Info</button>
-      <button class="btn btn-success">Success</button>
-      <button class="btn btn-warning">Warning</button>
-      <button class="btn btn-error">Error</button>
-    </div>
-    <div class="flex justify-center -space-x-14">
+
+    <div class="flex flex-col justify-center -space-x-14">
       <Mix alert />
       <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
         <h2>lorem</h2>
         <Frame ratio="1.6180:1">
           <Image src={Andy} alt="Andy" class="float-right" />
         </Frame>
-        <p>
-          <span
-            >Dolore elit irure qui commodo pariatur voluptate magna quis quis
-            eiusmod esse. Lorem fugiat nulla qui nostrud anim officia
-            consectetur laboris veniam. Pariatur dolore consectetur cupidatat
-            Lorem. Labore</span
-          >
-
-          <span>
-            reprehenderit do esse excepteur pariatur non est voluptate commodo
-            mollit ullamco dolor sunt nisi. Adipisicing magna ut minim excepteur
-            proident non. Reprehenderit ipsum exercitation sunt commodo
-            adipisicing id excepteur laboris deserunt velit labore. Esse non sit
-            aute irure eiusmod aliqua voluptate nostrud aute amet. Ea ipsum sit
-            aute Lorem nisi ullamco aute. Sit aute incididunt et id in ea esse
-            officia sit Lorem cillum dolor. Excepteur anim culpa sit consectetur
-            tempor ex consequat commodo aliqua Lorem do aliqua irure. Deserunt
-            in voluptate eiusmod sint ullamco ipsum pariatur aliqua dolore qui
-            proident. Dolor labore Lorem aliquip tempor quis. Ut exercitation
-            exercitation pariatur laborum eu laborum anim dolor laborum. Aute
-            velit in tempor dolor nisi ex sint aliqua occaecat ipsum velit ex
-            est. Id fugiat ad nulla adipisicing sint elit elit consectetur
-            cupidatat tempor.</span
-          >
-        </p>
       </div>
 
-      <div
-        class="border-neutral bg-neutral-content flex size-40 items-center justify-center rounded-full border-2"
-      >
-        <span class="text-neutral">base-200</span>
-      </div>
-
+      <TimeLine items={timeCapsules} />
       <div class="m-0 overflow-hidden p-0">
-        <TimeLine items={timeCapsules} />
         <Prose>
           <h1>About Me</h1>
           <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
@@ -116,15 +76,6 @@ const imageSources = [
             and fitness.
           </p>
         </Prose>
-
-        <!-- <Frame ratio="1.6180:1">
-      <Image
-        class="rounded-xl"
-        src={Andy}
-        sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px`}
-        alt="Andy in the mud"
-      />
-    </Frame> -->
 
         <Carousel images={imageSources} />
       </div>

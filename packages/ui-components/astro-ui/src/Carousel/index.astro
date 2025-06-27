@@ -9,7 +9,7 @@ interface Props {
 const { images } = Astro.props;
 ---
 
-<div class="carousel max-w-md carousel-center space-x-4 rounded-box bg-neutral">
+<div class="carousel carousel-center rounded-box">
   {
     images.map(({ img, altText }) => (
       <div class="carousel-item">

@@ -75,7 +75,7 @@ export default defineConfig({
   // cacheDir: './cache-directory',
   vite: {
     // ssr: {
-    //   noExternal: ['@repo/design-system'],
+    //   noExternal: ['@repo/astro-ui'],
     // },
     plugins: [
       tailwindcss(),
@@ -107,7 +107,7 @@ export default defineConfig({
   integrations: [icon(), mdx()],
   // Astro v5.0 merges the output: 'hybrid'
   //  and output: 'static' configurations into one single configuration (now called 'static')
-  output: 'static', // default all of your pages will continue to be prerendered
+  // output: 'static', // default all of your pages will continue to be prerendered
   adapter: vercel({
     imageService: true,
     devImageService: 'sharp',

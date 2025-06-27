@@ -1,15 +1,13 @@
 ---
 // import Ball from './Ball.astro';
-interface Props {
-  alert?: boolean;
-}
-
-const { alert } = Astro.props;
 ---
 
-<h2>mix</h2>
 <div class="flex justify-center -space-x-14">
-  <div class="size-24 rounded-full bg-primary mix-blend-multiply"></div>
-  <div class="size-24 rounded-full bg-secondary mix-blend-multiply"></div>
-  <div class="size-24 rounded-full bg-accent mix-blend-multiply"></div>
+  <div class="h-24 w-24 rounded-full bg-primary mix-blend-multiply">
+    primary
+  </div>
+  <div class="h-24 w-24 rounded-full bg-secondary mix-blend-multiply">
+    secondary
+  </div>
+  <div class="h-24 w-24 rounded-full bg-accent mix-blend-multiply">accent</div>
 </div>

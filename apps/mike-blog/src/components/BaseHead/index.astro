@@ -96,31 +96,3 @@ const { title, description, image = FallbackImage } = Astro.props;
 </script> -->
 
 <!-- <ClientRouter /> -->
-
-<script is:inline>
-  function applyTheme() {
-    if (localStorage.getItem('theme') === null) {
-      document.documentElement.setAttribute('data-theme', 'halloween');
-    } else
-      document.documentElement.setAttribute(
-        'data-theme',
-        localStorage.getItem('theme'),
-      );
-  }
-
-  document.addEventListener('astro:after-swap', applyTheme);
-  applyTheme();
-  // ☝️ This script prevent the FART effect.
-
-  // console.log(
-  //   'Theme set to: ' + localStorage.getItem('theme') + ' by default.',
-  // );
-  // "theme" LocalStorage value is set by the package to remember user preference.
-  // The value is checked and applyed before rendering anything.
-</script>
-
-<script>
-  import { themeChange } from 'theme-change';
-  themeChange();
-  // 👆 you could import the CDN directly instead of these two lines
-</script>
