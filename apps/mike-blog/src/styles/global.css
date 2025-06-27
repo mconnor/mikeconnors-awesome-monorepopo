@@ -1,8 +1,8 @@
 @import 'tailwindcss';
 
 /* Content scanning sources - tells Tailwind where to look for classes */
-@source './**/*.{html,astro,js,ts,jsx,tsx,vue,svelte,md,mdx}';
-@source '@repo/astro-ui/**/*.{astro,js,ts}';
+
+@source '@repo/astro-ui';
 
 /* Exclude non-UI packages from scanning */
 @source not '@repo/icon-paths';
@@ -12,7 +12,8 @@
 @source not '@repo/typescript-config';
 
 /* Import shared design system styles */
-@import '@repo/design-system';
+
+@import '@repo/design-system/shared-styles.css';
 
 /* Import framework-specific UI components if they have unique styles */
 /* @import '@repo/astro-ui/styles.css'; - Contains only tailwindcss + design-system, so redundant */

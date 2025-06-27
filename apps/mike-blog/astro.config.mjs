@@ -72,7 +72,7 @@ export default defineConfig({
 
   // compressHTML: true,
   // trailingSlash: 'never',
-  cacheDir: './cache-directory',
+  // cacheDir: './cache-directory',
   vite: {
     // ssr: {
     //   noExternal: ['@repo/design-system'],

@@ -1,15 +1,18 @@
 ---
 export const prerender = false;
-import { getCollection } from 'astro:content';
 
+import { getCollection } from 'astro:content';
+import Headline from '#components/Headline.astro';
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
 const announcements = await getCollection('announcements');
 ---
 
-<Layout title="Announcements" maxW="80vw">
-  <Prose>
-    <h1>Announcements</h1>
+<Layout title="Announcements">
+  <div
+    class="space-between flex max-h-full flex-col border-red-100 md:flex-row"
+  >
+    <Headline color="yellow" headline="Announcements" />
 
     <ul>
       {
@@ -20,5 +23,5 @@ const announcements = await getCollection('announcements');
         ))
       }
     </ul>
-  </Prose>
+  </div>
 </Layout>
