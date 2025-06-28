@@ -1,26 +1,37 @@
 ---
+// Footer with logo and social icons
 // import { Links } from '#app.config.ts';
-import Switcher from '@repo/layout-webcomponents/Switcher';
+// import Switcher from '@repo/layout-webcomponents/Switcher';
+import SocialIcon from './SocialIcon.astro';
 
-import EasterEgg from '@repo/astro-ui/EasterEgg';
-import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
+// import EasterEgg from '@repo/astro-ui/EasterEgg';
+// import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
 ---
 
-<!-- Footer with responsive flex direction -->
-<footer
-  class="border-t-1 flex flex-col items-stretch p-4 md:flex-row md:content-center md:justify-between"
->
-  <!-- <Switcher space="var(--s00)" threshold="48rem"> -->
-  <p
-    class="text-neutral-content-300 border-1 text-shadow-accent hidden text-center text-xl md:block"
-  >
-    Site and contents by Mike Connor
-  </p>
+<!-- <footer class="grid grid-cols-1 md:grid-cols-3">
+  <p class="hidden md:block">Site and contents by Mike Connor</p>
 
   <MailtoBtn buttonText="CONTACT" />
 
   <EasterEgg />
-  <!-- </Switcher> -->
-
-  <!-- </footer> -->
+</footer> -->
+<footer
+  class="footer bg-neutral p-10 text-neutral-content sm:footer-horizontal"
+>
+  <aside>
+    <SocialIcon company="logo" dim="50" />
+    <p>
+      ACME Industries Ltd.
+      <br />
+      Providing reliable tech since 1992
+    </p>
+  </aside>
+  <nav>
+    <h6 class="footer-title">Social</h6>
+    <div class="grid grid-flow-col gap-4">
+      <a href="./"><SocialIcon company="twitter" /></a>
+      <a href="./"><SocialIcon company="linkedin" /></a>
+      <a href="./"><SocialIcon company="facebook" /></a>
+    </div>
+  </nav>
 </footer>
