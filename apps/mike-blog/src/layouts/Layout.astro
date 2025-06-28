@@ -32,12 +32,10 @@ const paddClass = `ps-[${GUTTERS}]`; // class for padding
   <!-- <BgImage bgImage={Andy}> -->
   <NavBar transition:persist />
   <!-- <div class={paddClass}><BreadCrumbs /></div> -->
-  <Cover centeredElement="main" noPad>
-    <main class="border-1">
-      <Center gutters={GUTTERS} max={maxW}>
-        <slot />
-      </Center>
-    </main>
+  <Cover centeredElement="center-l" noPad>
+    <Center gutters={GUTTERS} max={maxW}>
+      <slot />
+    </Center>
 
     <Footer />
   </Cover>
