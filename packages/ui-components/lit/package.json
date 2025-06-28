@@ -23,17 +23,13 @@
   "dependencies": {},
   "devDependencies": {
     "@open-wc/testing": "catalog:",
-    "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@repo/typescript-config": "workspace:^",
-    "@types/node": "catalog:",
-    "daisyui": "catalog:",
     "astro": "catalog:",
     "eslint": "catalog:",
     "lit": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:"
+    "typescript": "catalog:"
   },
   "keywords": [
     "lit"

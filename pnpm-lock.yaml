@@ -669,9 +669,6 @@ importers:
       '@repo/astro-ui':
         specifier: workspace:*
         version: link:../../packages/ui-components/astro-ui
-      '@repo/design-system':
-        specifier: workspace:*
-        version: link:../../packages/design-system
       '@repo/icon-paths':
         specifier: workspace:*
         version: link:../../packages/icon-paths
@@ -714,19 +711,22 @@ importers:
       lorem-ipsum:
         specifier: 'catalog:'
         version: 2.0.8
-      open-props:
-        specifier: 'catalog:'
-        version: 1.7.15
       sharp:
         specifier: 'catalog:'
         version: 0.34.2
       tailwindcss:
         specifier: 'catalog:'
         version: 4.1.11
+      theme-change:
+        specifier: 'catalog:'
+        version: 2.5.0
     devDependencies:
       '@iconify-json/mdi':
         specifier: 'catalog:'
         version: 1.2.3
+      '@repo/design-system':
+        specifier: workspace:*
+        version: link:../../packages/design-system
       '@repo/eslint-config':
         specifier: workspace:^
         version: link:../../packages/config-eslint
@@ -763,9 +763,6 @@ importers:
       rollup-plugin-visualizer:
         specifier: 'catalog:'
         version: 6.0.3(rollup@4.43.0)
-      theme-change:
-        specifier: 'catalog:'
-        version: 2.5.0
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -844,9 +841,6 @@ importers:
       astro:
         specifier: 'catalog:'
         version: 5.10.1(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0)
-      open-props:
-        specifier: 'catalog:'
-        version: 1.7.15
       preact:
         specifier: 'catalog:'
         version: 10.26.9
@@ -902,12 +896,6 @@ importers:
       '@astrojs/sitemap':
         specifier: 'catalog:'
         version: 3.4.1
-      '@repo/astro-ui':
-        specifier: workspace:*
-        version: link:../../packages/ui-components/astro-ui
-      '@repo/icon-paths':
-        specifier: workspace:*
-        version: link:../../packages/icon-paths
       '@repo/layout-webcomponents':
         specifier: workspace:*
         version: link:../../packages/layout-webcomponents
@@ -924,9 +912,6 @@ importers:
         specifier: 'catalog:'
         version: 4.1.11
     devDependencies:
-      '@repo/design-system':
-        specifier: workspace:*
-        version: link:../../packages/design-system
       '@repo/eslint-config':
         specifier: workspace:^
         version: link:../../packages/config-eslint
@@ -936,9 +921,6 @@ importers:
       '@tailwindcss/typography':
         specifier: 'catalog:'
         version: 0.5.16(tailwindcss@4.1.11)
-      daisyui:
-        specifier: 'catalog:'
-        version: 5.0.43
       eslint:
         specifier: 'catalog:'
         version: 9.29.0(jiti@2.4.2)
@@ -1157,9 +1139,6 @@ importers:
       daisyui:
         specifier: 'catalog:'
         version: 5.0.43
-      open-props:
-        specifier: 'catalog:'
-        version: 1.7.15
       tailwindcss:
         specifier: 'catalog:'
         version: 4.1.11
@@ -1221,21 +1200,27 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:^
         version: link:../config-typescript
+      '@tailwindcss/cli':
+        specifier: 'catalog:'
+        version: 4.1.11
       astro:
         specifier: 'catalog:'
         version: 5.10.1(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0)
       eslint:
         specifier: 'catalog:'
         version: 9.29.0(jiti@2.4.2)
-      open-props:
-        specifier: 'catalog:'
-        version: 1.7.15
       prettier:
         specifier: 'catalog:'
         version: 3.6.0
       prettier-plugin-astro:
         specifier: 'catalog:'
         version: 0.14.1
+      prettier-plugin-tailwindcss:
+        specifier: 'catalog:'
+        version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.0)(svelte@5.34.8))(prettier@3.6.0)
+      tailwindcss:
+        specifier: 'catalog:'
+        version: 4.1.11
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -1314,19 +1299,16 @@ importers:
 
   packages/ui-components/astro-ui:
     dependencies:
-      '@astrojs/check':
-        specifier: 'catalog:'
-        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
       '@repo/icon-paths':
         specifier: workspace:^
         version: link:../../icon-paths
       lorem-ipsum:
         specifier: 'catalog:'
         version: 2.0.8
-      tailwindcss:
-        specifier: 'catalog:'
-        version: 4.1.11
     devDependencies:
+      '@astrojs/check':
+        specifier: 'catalog:'
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.6.0)(typescript@5.8.3)
       '@repo/design-system':
         specifier: workspace:*
         version: link:../../design-system
@@ -1357,27 +1339,18 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
         version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.0)(svelte@5.34.8))(prettier@3.6.0)
+      tailwindcss:
+        specifier: 'catalog:'
+        version: 4.1.11
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
 
   packages/ui-components/astro-wc:
     dependencies:
-      '@repo/design-system':
-        specifier: workspace:^
-        version: link:../../design-system
-      '@tailwindcss/cli':
-        specifier: 'catalog:'
-        version: 4.1.11
-      '@tailwindcss/vite':
-        specifier: 'catalog:'
-        version: 4.1.11(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0))
       date-fns:
         specifier: 'catalog:'
         version: 4.1.0
-      tailwindcss:
-        specifier: 'catalog:'
-        version: 4.1.11
     devDependencies:
       '@astrojs/check':
         specifier: 'catalog:'
@@ -1385,12 +1358,18 @@ importers:
       '@open-wc/testing':
         specifier: 'catalog:'
         version: 4.0.0
+      '@repo/design-system':
+        specifier: workspace:^
+        version: link:../../design-system
       '@repo/eslint-config':
         specifier: workspace:^
         version: link:../../config-eslint
       '@repo/typescript-config':
         specifier: workspace:^
         version: link:../../config-typescript
+      '@tailwindcss/cli':
+        specifier: 'catalog:'
+        version: 4.1.11
       astro:
         specifier: 'catalog:'
         version: 5.10.1(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0)
@@ -1409,6 +1388,9 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: 'catalog:'
         version: 0.6.13(prettier-plugin-astro@0.14.1)(prettier-plugin-svelte@3.4.0(prettier@3.6.1)(svelte@5.34.8))(prettier@3.6.1)
+      tailwindcss:
+        specifier: 'catalog:'
+        version: 4.1.11
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -1421,9 +1403,6 @@ importers:
       '@open-wc/testing':
         specifier: 'catalog:'
         version: 4.0.0
-      '@repo/design-system':
-        specifier: workspace:^
-        version: link:../../design-system
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../config-eslint
@@ -1433,15 +1412,9 @@ importers:
       '@repo/typescript-config':
         specifier: workspace:^
         version: link:../../config-typescript
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.15.33
       astro:
         specifier: 'catalog:'
-        version: 5.10.1(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0)
-      daisyui:
-        specifier: 'catalog:'
-        version: 5.0.43
+        version: 5.10.1(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.43.0)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0)
       eslint:
         specifier: 'catalog:'
         version: 9.29.0(jiti@2.4.2)
@@ -1451,9 +1424,6 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
-      vite:
-        specifier: 'catalog:'
-        version: 6.3.5(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0)
 
   packages/ui-components/preact:
     dependencies:
@@ -1467,24 +1437,21 @@ importers:
       '@repo/design-system':
         specifier: workspace:^
         version: link:../../design-system
-      '@repo/eslint-config':
-        specifier: workspace:^
-        version: link:../../config-eslint
       '@repo/typescript-config':
         specifier: workspace:^
         version: link:../../config-typescript
       '@tailwindcss/cli':
         specifier: 'catalog:'
         version: 4.1.11
-      '@tailwindcss/vite':
-        specifier: 'catalog:'
-        version: 4.1.11(vite@6.3.5(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0))
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.15.33
       daisyui:
         specifier: 'catalog:'
         version: 5.0.43
+      eslint:
+        specifier: 'catalog:'
+        version: 9.29.0(jiti@2.4.2)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.6.0
       prettier-plugin-astro:
         specifier: 'catalog:'
         version: 0.14.1
@@ -1534,18 +1501,18 @@ importers:
       '@tailwindcss/cli':
         specifier: 'catalog:'
         version: 4.1.11
-      '@tailwindcss/vite':
-        specifier: 'catalog:'
-        version: 4.1.11(vite@6.3.5(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0))
-      '@types/node':
-        specifier: 'catalog:'
-        version: 22.15.33
       daisyui:
         specifier: 'catalog:'
         version: 5.0.43
       eslint:
         specifier: 'catalog:'
         version: 9.29.0(jiti@2.4.2)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.6.0
+      prettier-plugin-astro:
+        specifier: 'catalog:'
+        version: 0.14.1
       tailwindcss:
         specifier: 'catalog:'
         version: 4.1.11
@@ -1555,9 +1522,6 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
-      vite:
-        specifier: 'catalog:'
-        version: 6.3.5(@types/node@22.15.33)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.39.0)(yaml@2.8.0)
 
   packages/ui-components/svelte:
     dependencies:

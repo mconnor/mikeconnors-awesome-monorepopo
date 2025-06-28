@@ -31,10 +31,6 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/design-system": "workspace:^",
-    "@tailwindcss/cli": "catalog:",
-    "@tailwindcss/vite": "catalog:",
-    "tailwindcss": "catalog:",
     "date-fns": "catalog:"
   },
   "devDependencies": {
@@ -48,11 +44,15 @@
     "luxon": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
+    "@repo/design-system": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
+    "tailwindcss": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:"
   },
   "peerDependencies": {
-    "astro": ">=5"
+    "astro": ">=5",
+    "tailwindcss": ">=4"
   },
   "keywords": [],
   "author": "",

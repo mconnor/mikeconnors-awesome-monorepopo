@@ -10,6 +10,8 @@
     "Vercel.turbo-vsc",
     "JamesBirtles.svelte-vscode",
     "vercel.turbo-vsc",
-    "pnpmCatalogLens.pnpm-catalog-lens"
+    "pnpmCatalogLens.pnpm-catalog-lens",
+    "github.copilot",
+    "bradlc.vscode-tailwindcss"
   ]
 }

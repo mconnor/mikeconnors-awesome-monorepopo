@@ -2,7 +2,7 @@
 @source not '@repo/styles';
 @source not '@repo/layout-webcomponents';
 
-@import '@repo/design-system';
+@import '@repo/design-system/shared-styles.css';
 
 @import '@repo/react/styles.css';
 @import '@repo/preact/styles.css';

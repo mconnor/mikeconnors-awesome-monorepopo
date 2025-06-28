@@ -42,7 +42,6 @@
     "@vitejs/plugin-vue": "catalog:",
     "add": "catalog:",
     "astro": "catalog:",
-    "open-props": "catalog:",
     "preact": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
     "solid-js": "catalog:",

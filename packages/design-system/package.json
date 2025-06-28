@@ -28,7 +28,6 @@
     "tailwindcss": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "vite": "catalog:",
-    "@vitejs/plugin-react": "catalog:",
-    "open-props": "catalog:"
+    "@vitejs/plugin-react": "catalog:"
   }
 }

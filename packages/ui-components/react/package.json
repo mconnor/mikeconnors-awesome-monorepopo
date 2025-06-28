@@ -1,6 +1,9 @@
 {
   "name": "@repo/react",
   "version": "1.1.0",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "description": "react ui",
   "type": "module",
   "imports": {
@@ -43,14 +46,13 @@
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@types/node": "catalog:",
     "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "catalog:",
     "tsup": "catalog:",
     "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
     "daisyui": "catalog:",
-    "@tailwindcss/vite": "catalog:",
-    "vite": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
