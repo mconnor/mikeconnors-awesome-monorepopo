@@ -6,3 +6,23 @@
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+<script is:inline>
+  function applyTheme() {
+    if (localStorage.getItem('theme') === null) {
+      document.documentElement.setAttribute('data-theme', 'halloween');
+    } else
+      document.documentElement.setAttribute(
+        'data-theme',
+        localStorage.getItem('theme'),
+      );
+  }
+
+  document.addEventListener('astro:after-swap', applyTheme);
+  applyTheme();
+</script>
+<script>
+  import { themeChange } from 'theme-change';
+  themeChange();
+  // 👆 you could import the CDN directly instead of these two lines
+</script>
