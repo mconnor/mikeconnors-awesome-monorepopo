@@ -30,15 +30,14 @@
   "devDependencies": {
     "@repo/design-system": "workspace:^",
     "@preact/signals": "catalog:",
-    "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@types/node": "catalog:",
-    "daisyui": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "tsup": "catalog:",
     "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
-    "@tailwindcss/vite": "catalog:",
+    "daisyui": "catalog:",
     "typescript": "catalog:"
   },
   "eslintConfig": {

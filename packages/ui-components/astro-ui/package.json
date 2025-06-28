@@ -29,15 +29,15 @@
   "license": "ISC",
   "dependencies": {
     "@repo/icon-paths": "workspace:^",
-    "lorem-ipsum": "catalog:",
-    "@astrojs/check": "catalog:",
-    "tailwindcss": "catalog:"
+    "lorem-ipsum": "catalog:"
   },
   "devDependencies": {
-    "@repo/design-system": "workspace:*",
+    "@astrojs/check": "catalog:",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "@repo/design-system": "workspace:*",
     "@tailwindcss/cli": "catalog:",
+    "tailwindcss": "catalog:",
     "astro": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
