@@ -54,30 +54,30 @@ const imageSources = [
 ---
 
 <Layout>
-  <Stack space="var(--s4)">
-    <!-- <Btns /> -->
+  <!-- <Stack space="var(--s4)"> -->
+  <!-- <Btns /> -->
 
-    <div class="flex flex-col justify-center -space-x-14">
-      <!-- <Mix alert /> -->
-      <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
-        <Frame ratio="1.6180:1">
-          <Image src={Andy} alt="Andy" class="float-right" />
-        </Frame>
-      </div>
-
-      <TimeLine items={timeCapsules} />
-      <div class="m-0 overflow-hidden p-0">
-        <Prose>
-          <h1>About Me</h1>
-          <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
-          <p>
-            This is a blog about my adventures in software development, travel,
-            and fitness.
-          </p>
-        </Prose>
-
-        <Carousel images={imageSources} />
-      </div>
+  <div class="flex flex-col justify-center -space-x-14">
+    <!-- <Mix alert /> -->
+    <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
+      <Frame ratio="1.6180:1">
+        <Image src={Andy} alt="Andy" class="float-right" />
+      </Frame>
     </div>
-  </Stack>
+
+    <!-- <TimeLine items={timeCapsules} /> -->
+    <div class="m-0 overflow-hidden p-0">
+      <Prose>
+        <h1>About Me</h1>
+        <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
+        <p>
+          This is a blog about my adventures in software development, travel,
+          and fitness.
+        </p>
+      </Prose>
+
+      <!-- <Carousel images={imageSources} /> -->
+    </div>
+  </div>
+  <!-- </Stack> -->
 </Layout>

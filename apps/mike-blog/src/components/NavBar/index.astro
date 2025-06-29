@@ -4,7 +4,9 @@ import { daisyuiThemes } from '#utils/daisyui-themes.ts';
 import Hamburger from './Hamburger.astro';
 import IconLink from '@repo/astro-ui/IconLink';
 
-import DThemeDropDown from '#components/DThemeDropDown/index.astro';
+// import DThemeDropDown from '#components/DThemeDropDown/index.astro';
+// import ThemeToggle from '#components/ThemeToggle/index.astro';
+
 // import HeaderLink from '#components/Header/MainNav/HeaderLink.astro';
 // import { navLinks, OUTBOUND_LINKS } from '#app.config.ts';
 ---
@@ -12,7 +14,7 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
 <div class="navbar bg-base-100">
   <div class="navbar-start">
     <div class="dropdown">
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+      <div tabindex="0" role="button" class="btn lg:hidden">
         <Hamburger />
       </div>
 
@@ -23,37 +25,24 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
         {
           navLinks.map(({ href, label }) => (
             <li>
-              <a role="button" href={href}>
+              <a role="button" class="link" href={href}>
                 {label}
               </a>
             </li>
           ))
         }
-        <li>
-          <a>Outlinks</a>
-          <ul>
-            {
-              OUTBOUND_LINKS.map(({ url, logo }) => (
-                <IconLink
-                  href={url}
-                  class="h-10 w-10 fill-accent stroke-accent stroke-1"
-                  icon={logo}
-                />
-              ))
-            }
-          </ul>
-        </li>
       </ul>
     </div>
 
-    <DThemeDropDown themes={[...daisyuiThemes]} />
+    <!-- <DThemeDropDown themes={[...daisyuiThemes]} /> -->
+    <!-- <ThemeToggle /> -->
   </div>
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
+    <ul tabindex="0" class="menu menu-horizontal px-1">
       {
         navLinks.map(({ href, label }) => (
           <li>
-            <a role="button" href={href} class="btn-small btn btn-ghost">
+            <a role="button" href={href} class="btn">
               {label}
             </a>
           </li>
@@ -61,7 +50,7 @@ import DThemeDropDown from '#components/DThemeDropDown/index.astro';
       }
     </ul>
   </div>
-  <div class="navbar-end hidden lg:flex">
+  <div class="navbar-end">
     {
       OUTBOUND_LINKS.map(({ url, logo }) => (
         <IconLink

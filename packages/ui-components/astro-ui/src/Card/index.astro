@@ -7,7 +7,7 @@ interface Props {
   tags?: string[];
 }
 
-const { href, showInset, tags, date } = Astro.props;
+const { href, tags, date } = Astro.props;
 ---
 
 <div
@@ -17,9 +17,7 @@ const { href, showInset, tags, date } = Astro.props;
   <div class="aspect-auto border-4"><slot name="card-img" /></div>
   <h2 class="text-xl font-bold text-zinc-800">
     <a href={href}>
-      <span
-        class:list={['absolute inset-0 z-10', { 'bg-pink-600/25': showInset }]}
-      ></span>
+      <span class="absolute inset-0 z-10"></span>
 
       <div class="line-clamp-1">
         <slot name="headline" />

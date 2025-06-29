@@ -16,8 +16,6 @@
     "./styles.css": "./dist/styles.css"
   },
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
@@ -31,14 +29,11 @@
     "@open-wc/testing": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@repo/design-system": "workspace:^",
     "astro": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
-    "@tailwindcss/cli": "catalog:",
-    "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {

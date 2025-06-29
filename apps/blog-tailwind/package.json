@@ -5,6 +5,7 @@
   "imports": {
     "#*": "./src/*"
   },
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",

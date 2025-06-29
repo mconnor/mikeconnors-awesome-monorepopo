@@ -3,7 +3,7 @@ import Center from '@repo/layout-webcomponents/Center';
 import BreadCrumbs from '#components/BreadCrumbs/index.astro';
 //  cover causes a flash issue
 import Cover from '@repo/layout-webcomponents/Cover';
-
+import ThemeToggle from '#components/ThemeToggle/index.astro';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 // import Prose from '#components/Prose.astro';
 // import Header from '#components/Header/index.astro';
@@ -32,23 +32,14 @@ const GUTTERS = '1ch'; // padding for the main content area
 ---
 
 <BaseLayout title={title} {...rest}>
-  <!-- <BgImage bgImage={Andy}> -->
-  <NavBar transition:persist />
-  <BreadCrumbs />
-  <!-- <div class={paddClass}><BreadCrumbs /></div> -->
   <Cover centeredElement="center-l" noPad minHeight="100dvh">
+    <NavBar transition:persist />
+
+    <BreadCrumbs />
     <Center gutters={GUTTERS} max={maxW}>
       <slot />
     </Center>
 
     <Footer />
   </Cover>
-
-  <!-- <footer class="mt-auto flex items-center justify-center p-4">
-      <p class="text-sm text-gray-500">
-        © {new Date().getFullYear()} Mike Connor. All rights reserved.
-      </p>
-    </footer> -->
-
-  <!-- </BgImage> -->
 </BaseLayout>

@@ -1,11 +1,19 @@
 @import 'tailwindcss';
-@import '@repo/design-system/shared-styles.css';
 
-@import '@repo/astro-ui/styles.css';
+@source "../**/*.astro";
+
+@source "./node_modules/@repo/astro-ui/**/*.astro";
+
+@import '@repo/design-system/shared-styles.css';
 @import './animations.css';
+@import '@repo/astro-ui/styles.css';
 
 @plugin "daisyui" {
-  themes: all;
+  themes:
+    light --default,
+    dark --prefersdark,
+    synthwave;
+  root: '#blog-app';
 }
 
 @plugin "@tailwindcss/typography";

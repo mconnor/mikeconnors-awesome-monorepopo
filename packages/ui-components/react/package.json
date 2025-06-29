@@ -38,7 +38,8 @@
   "author": "Michael Connor",
   "license": "ISC",
   "dependencies": {
-    "@repo/utils": "workspace:^"
+    "@repo/utils": "workspace:^",
+    "cally": "^0.8.0"
   },
   "devDependencies": {
     "@headlessui/react": "catalog:",
@@ -46,19 +47,19 @@
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
+    "daisyui": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "tsup": "catalog:",
-    "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
-    "daisyui": "catalog:",
+    "tsup": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@types/react": ">=18",
-    "@types/react-dom": ">=18",
-    "react": ">=18",
-    "react-dom": ">=18"
+    "@types/react": ">=19",
+    "@types/react-dom": ">=19",
+    "react": ">=19",
+    "react-dom": ">=19"
   }
 }
