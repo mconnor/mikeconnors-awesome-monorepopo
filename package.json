@@ -12,6 +12,7 @@
     "eslint",
     "astro"
   ],
+  "private": true,
   "scripts": {
     "new": "turbo gen workspace --copy",
     "format": "prettier --write \"**/*.{ts,tsx,md,astro,css,svelte,vue}\" --ignore-path .prettierignore",
@@ -32,13 +33,12 @@
     "prettier-plugin-svelte": "catalog:svelte5",
     "prettier-plugin-tailwindcss": "catalog:",
     "prettier-plugin-toml": "catalog:",
-    "prettier-plugin-vue": "catalog:",
     "turbo": "^2.5.4"
   },
   "engines": {
     "node": ">= 22.9.0"
   },
-  "packageManager": "pnpm@10.12.3",
+  "packageManager": "pnpm@10.12.4",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",

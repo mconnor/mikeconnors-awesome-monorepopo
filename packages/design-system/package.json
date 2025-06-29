@@ -8,6 +8,7 @@
   "exports": {
     "./shared-styles.css": "./src/css/shared-styles.css",
     "./postcss": "./postcss.config.ts",
+    "./vitePreatConfig": "./vite-preact",
     "./viteConfig": "./vite.config.ts",
     "./viteReactConfig": "./vite-react.config.ts"
   },
@@ -15,19 +16,20 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
-    "eslint": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
-    "prettier": "catalog:",
     "@repo/eslint-config": "workspace:^",
-    "@repo/typescript-config": "workspace:^"
+    "@repo/typescript-config": "workspace:^",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:"
   },
   "dependencies": {
+    "@preact/preset-vite": "catalog:",
     "@tailwindcss/postcss": "catalog:",
     "@tailwindcss/typography": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
     "daisyui": "catalog:",
     "tailwindcss": "catalog:",
-    "@tailwindcss/vite": "catalog:",
-    "vite": "catalog:",
-    "@vitejs/plugin-react": "catalog:"
+    "vite": "catalog:"
   }
 }
