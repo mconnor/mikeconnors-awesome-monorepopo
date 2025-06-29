@@ -14,4 +14,4 @@ id = "bob-dobbs"
 name = "Bob Dobbs"
 email = "bob@dobbs.com"
 bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-links =[]
+links = []
