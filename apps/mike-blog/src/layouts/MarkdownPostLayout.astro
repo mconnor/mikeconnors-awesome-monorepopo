@@ -5,22 +5,20 @@ import Headline from '#components/Headline.astro';
 import { type CollectionEntry, getEntry } from 'astro:content';
 import Prose from '#components/Prose.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
-
+import Author from '#components/Author/index.astro';
 import BlogPicWrapper from '#components/BlogPicWrapper.astro';
-type Props = {
-  // maxW?: RmUnitType;
-  children: unknown;
-  id?: string;
-} & CollectionEntry<'blogCollection'>['data'];
+
+// interface Props extends CollectionEntry<'blogCollection'> {}
 
 import { format } from 'date-fns';
 
-const { title, description, date, cover, author } = Astro.props;
+const { data } = Astro.props as CollectionEntry<'blogCollection'>;
+const { title, description, date, cover, author: authorRef } = data;
 
-let authorObj;
-if (author) {
-  authorObj = await getEntry('authorsCollection', author.id);
-}
+// let authorObj;
+// if (author) {
+//   authorObj = await getEntry('authorsCollection', author.id);
+// }
 
 // if (authorObj === undefined) {
 //   return Astro.redirect('/404');
@@ -51,13 +49,7 @@ if (author) {
     </figure> -->
     {cover?.src && cover?.alt && <BlogPicWrapper cover={cover} />}
 
-    {
-      authorObj && (
-        <a class="mx-auto link link-hover" href={`../authors/${authorObj.id}`}>
-          {authorObj.data.name}
-        </a>
-      )
-    }
+    {authorRef && <Author authorReference={authorRef} />}
     <Prose>
       <slot />
     </Prose>

@@ -10,7 +10,7 @@ const blogSchema = z.object({
   title: z.string(),
   date: dateLikeToDate.optional(),
   description: z.string(),
-  author: reference('authors').optional(),
+  author: reference('authorsCollection').optional(),
   relatedPosts: z.array(reference('blogCollection')).optional(),
   draft: z.boolean().optional().default(false),
   tags: z.array(z.string()).default([]),
