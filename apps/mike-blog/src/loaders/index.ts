@@ -1,10 +1,10 @@
-import { countriesSchema, countrySchema, jsonSchema } from '#schemas/index.ts';
-
+import { jsonSchema } from '#schemas/utils.ts';
+import { countriesSchema, countrySchema } from '#schemas/countries.ts';
 import type { Loader, LoaderContext } from 'astro/loaders';
 
 //  parseData<TData extends Record<string, unknown>>(props: ParseDataOptions<TData>): Promise<TData>;
 //
-
+s;
 const COUNTRY_URL = new URL(
   '/v3.1/region/africa/',
   'https://restcountries.com/',

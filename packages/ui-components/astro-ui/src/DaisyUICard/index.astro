@@ -1,6 +1,7 @@
 ---
 interface Props {
   cta?: string;
+  href?: string;
   title?: string;
   copy: string;
   size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
@@ -11,6 +12,7 @@ const {
   title = 'title',
   size = 'xs',
   copy,
+  href = './',
 } = Astro.props as Props;
 
 const cardSize = 'card-' + size;
@@ -35,7 +37,7 @@ const cardSize = 'card-' + size;
     </p>
 
     <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
+      <a href={href} class="btn btn-primary">{cta}</a>
     </div>
   </div>
 </div>

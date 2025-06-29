@@ -3,9 +3,15 @@ id = "mike-connor"
 name = "Mike Connor"
 email = "mike@mikeconnor.tech"
 bio = "Mike is a software developer and writer based in Kansas City."
+links = [
+  { platform = 'twitter', url = 'https://x.com/mikeconnor504' },
+  { platform = 'facebook', url = 'https://www.facebook.com/mike.connor.50702' },
+  { platform = 'linkedin', url = 'https://www.linkedin.com/in/michaelgconnor/' },
+]
 
 [[authors]]
 id = "bob-dobbs"
 name = "Bob Dobbs"
 email = "bob@dobbs.com"
 bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+links =[]

@@ -7,15 +7,14 @@ import MarkdownPostLayout from '#layouts/MarkdownPostLayout.astro';
 // and prerendering capabilities. It fetches all blog posts and generates a static page for each.
 
 export async function getStaticPaths() {
-  // const posts = await getCollection('blog', ({ data }) => data.draft !== true);
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blogCollection');
 
   return posts.map((post) => ({
     params: { id: decodeURI(post.id) },
     props: { post },
   }));
 }
-// type Props = CollectionEntry<'blog'>;
+// type Props = CollectionEntry<'blogCollection'>;
 
 const { post } = Astro.props;
 

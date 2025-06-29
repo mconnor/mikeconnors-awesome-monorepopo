@@ -1,13 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
-
 import PostList from '#components/PostList/index.astro';
-
 import Layout from '#layouts/Layout.astro';
 
 const publishsedPosts = await getCollection(
-  'blog',
-  ({ data }) => data.draft !== true,
+  'blogCollection',
+  // ({ data }) => data.draft !== true,
 );
 
 const posts = publishsedPosts.sort((a, b) => {

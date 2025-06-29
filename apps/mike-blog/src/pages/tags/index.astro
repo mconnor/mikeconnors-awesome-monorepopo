@@ -7,7 +7,7 @@ import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
 import { tagCountTypeSchema, zTags } from '#schemas/index.js';
 
-const allBlogPost = await getCollection('blog');
+const allBlogPost = await getCollection('blogCollection');
 
 /// we only need a list of unique tags and their counts
 const slugTags = allBlogPost

@@ -11,7 +11,7 @@ type Props = {
   // maxW?: RmUnitType;
   children: unknown;
   id?: string;
-} & CollectionEntry<'blog'>['data'];
+} & CollectionEntry<'blogCollection'>['data'];
 
 import { format } from 'date-fns';
 
@@ -19,7 +19,7 @@ const { title, description, date, cover, author } = Astro.props;
 
 let authorObj;
 if (author) {
-  authorObj = await getEntry('authors', author.id);
+  authorObj = await getEntry('authorsCollection', author.id);
 }
 
 // if (authorObj === undefined) {

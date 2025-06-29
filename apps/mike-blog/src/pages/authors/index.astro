@@ -2,10 +2,8 @@
 // import { authorSchema } from '#schemas/idex.js';
 
 import { getCollection } from 'astro:content';
-
 import Layout from '#layouts/Layout.astro';
-
-const authors = await getCollection('authors');
+const authors = await getCollection('authorsCollection');
 ---
 
 <Layout title="authors">

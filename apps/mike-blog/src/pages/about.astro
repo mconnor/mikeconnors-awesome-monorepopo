@@ -8,7 +8,7 @@ import Andy from '#assets/andy_mud_color.webp';
 import Carousel from '@repo/astro-ui/Carousel';
 import { Image } from 'astro:assets';
 import Mix from '@repo/astro-ui/Mix';
-import Btns from '@repo/astro-ui/Btns';
+// import Btns from '@repo/astro-ui/Btns';
 
 // import Andy from '#assets/Andy.jpg';
 export const prerender = true;
@@ -53,14 +53,13 @@ const imageSources = [
 ];
 ---
 
-<Layout title="About">
+<Layout>
   <Stack space="var(--s4)">
-    <Btns />
+    <!-- <Btns /> -->
 
     <div class="flex flex-col justify-center -space-x-14">
       <Mix alert />
       <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
-        <h2>lorem</h2>
         <Frame ratio="1.6180:1">
           <Image src={Andy} alt="Andy" class="float-right" />
         </Frame>

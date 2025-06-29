@@ -16,34 +16,38 @@ const NAME = 'Mike Connor';
 const SITE_TITLE = 'Mike Connor | Developer';
 const SITE_DESCRIPTION =
   'Developer, Designer, and Creator. I love to learn and share my knowledge with others. I am a full-stack developer with a passion for creating beautiful and functional web applications.';
-//  const GENERATE_SLUG_FROM_TITLE = true;
-//  const TRANSITION_API = true;
-//  const Links = {
-//   github: 'https://www.github.com/mconnor',
-//   twitter: 'https://www.twitter.com/mikeconnor504',
-//   linkedin: 'https://www.linkedin.com/in/michaelgconnor/',
-//   tiwtter: 'https://www.twitter.com/mikeconnor504',
-//   discord: 'https://discord.com/users/mike4989',
-// } as const;
+
+const SOCIAL_LINKS = {
+  twitter: 'https://x.com/mikeconnor504',
+  facebook: 'https://www.facebook.com/mike.connor.50702',
+  linkedin: 'https://www.linkedin.com/in/michaelgconnor/',
+};
 
 interface OutboundLinksType {
+  company: string;
   url: string;
   logo: IconType;
 }
 
+const MyInfo = {};
+
 const GITHUB: OutboundLinksType = {
+  company: 'github',
   url: 'https://www.github.com/mconnor',
   logo: 'github-logo',
 };
 const TWITTER: OutboundLinksType = {
+  company: 'twitter',
   url: 'https://www.twitter.com/mikeconnor504',
   logo: 'twitter-logo',
 };
 const LINKEDIN: OutboundLinksType = {
+  company: 'linkedin',
   url: 'https://www.linkedin.com/in/michaelgconnor/',
   logo: 'linkedin-logo',
 };
 const DISCORD: OutboundLinksType = {
+  company: 'discord',
   url: 'https://discord.com/users/mike4989',
   logo: 'discord-logo',
 };

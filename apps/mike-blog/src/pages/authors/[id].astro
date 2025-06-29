@@ -3,20 +3,53 @@ import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
 
 export async function getStaticPaths() {
-  // const posts = await getCollection('blog', ({ data }) => data.draft !== true);
-  const authors = await getCollection('authors');
+  const authors = await getCollection('authorsCollection');
 
   return authors.map((author) => ({
-    params: { id: author.data.id },
+    params: { id: author.id },
     props: author,
   }));
 }
 
 // const id = Astro.params;
 const { data } = Astro.props;
+const { name, bio, links } = data;
 ---
 
-<Layout title={data.name} maxW="60ch">
-  <h1>{data.name}</h1>
-  <p>{data.bio}</p>
+<Layout title={name} maxW="60ch">
+  <div class="card card-side bg-base-100 shadow-sm card-lg">
+    <figure>
+      <img
+        src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+        alt="Movie"
+      />
+    </figure>
+    <div class="card-body">
+      <h2 class="card-title">{name}</h2>
+      <p>{bio}</p>
+      <div class="card-actions justify-end">
+        {
+          links &&
+            links.map(({ platform, url }) => (
+              <a href={url} class="link">
+                {platform}
+              </a>
+            ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <!-- <h1>{name}</h1>
+  <p>{bio}</p>
+  {
+    links &&
+      links.map(({ platform, url }) => (
+        <li>
+          <a href={url} class="link">
+            {platform}
+          </a>
+        </li>
+      ))
+  } -->
 </Layout>

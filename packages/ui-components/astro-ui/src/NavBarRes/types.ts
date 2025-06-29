@@ -4,9 +4,9 @@ interface SimpleNavLinkI {
   icon?: string;
 }
 
-interface DropdownNavLinkI {
-  label: string;
-  subMenu: SimpleNavLinkI[];
-}
+// interface DropdownNavLinkI {
+//   label: string;
+//   subMenu: SimpleNavLinkI[];
+// }
 
-export { type DropdownNavLinkI, type SimpleNavLinkI };
+export { type SimpleNavLinkI };

@@ -13,8 +13,7 @@ import NavBar from '#components/NavBar/index.astro';
 
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
-// import Nav from '@repo/astro-ui/NavBarRes';
-// import { slide } from 'astro:transitions';
+
 interface Props {
   maxW?: RmUnitType;
   children: unknown;
@@ -22,7 +21,11 @@ interface Props {
   description?: string;
 }
 
-const { maxW = '60ch', title, ...rest } = Astro.props;
+const {
+  maxW = '60ch',
+  title = Astro.url.pathname.slice(1),
+  ...rest
+} = Astro.props;
 
 const GUTTERS = '1ch'; // padding for the main content area
 const paddClass = `ps-[${GUTTERS}]`; // class for padding
@@ -34,6 +37,7 @@ const paddClass = `ps-[${GUTTERS}]`; // class for padding
   <!-- <div class={paddClass}><BreadCrumbs /></div> -->
   <Cover centeredElement="center-l" noPad>
     <Center gutters={GUTTERS} max={maxW}>
+      <h2 class="uppercase">{title}</h2>
       <slot />
     </Center>
 

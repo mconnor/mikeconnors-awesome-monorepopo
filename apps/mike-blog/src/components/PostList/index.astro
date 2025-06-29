@@ -3,14 +3,13 @@ import PostCard from '#components/PostCard/index.astro';
 import { blogSchema } from '#schemas/index.ts';
 import { z } from 'astro:content';
 import Headline from '#components/Headline.astro';
-// import Prose from '#components/Prose.astro';
-// import Switcher from '@repo/layout-webcomponents/Switcher';
+import type { CollectionEntry } from 'astro:content';
 // import Stack from '@repo/layout-webcomponents/Stack';
-import Grid from '@repo/layout-webcomponents/Grid';
+
 // import Prose from '#components/Prose.astro';
 interface Props {
   headline: string;
-  posts: { id: string; data: z.infer<typeof blogSchema> }[];
+  posts: CollectionEntry<'blogCollection'>[];
 }
 
 const { posts, headline } = Astro.props;
@@ -26,10 +25,10 @@ const bool3 = posts.length > 2;
       { 'lg:grid-cols-3': bool3 },
     ]}
   >
-    <!-- <div class="justify col-span-1 flex flex-col gap-2">
-    <Headline headline={headline} />
-    <Headline headline={headline} color="yellow" />
-  </div> -->
+    <div class="justify col-span-1 flex flex-col gap-2">
+      <Headline headline={headline} />
+      <Headline headline={headline} color="yellow" />
+    </div>
     {posts.map(({ id, data }) => <PostCard data={data} href={id} showTags />)}
   </div>
 </div>

@@ -2,6 +2,7 @@ import TOML from '@iarna/toml';
 // build-in loaders
 import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
+import { personalSchema } from '#schemas/personalSchema.ts';
 
 // import { countryLoader } from './loaders/index.ts';
 
@@ -11,17 +12,14 @@ type ParserReturnType =
   | Record<string, Record<string, unknown>>
   | Record<string, unknown>[];
 
-const authors = defineCollection({
+const authorsCollection = defineCollection({
   loader: file('src/content/authors.toml', {
     parser: (text) => TOML.parse(text).authors as ParserReturnType,
   }),
-
   schema: authorsSchema,
 });
 
-// relatedPosts: z.array(reference('blog')).optional(),
-
-const blog = defineCollection({
+const blogCollection = defineCollection({
   // type: 'content',
   loader: glob({
     pattern: '**/*.{md,mdx}',
@@ -30,12 +28,19 @@ const blog = defineCollection({
   schema: blogSchema,
 });
 
-const announcements = defineCollection({
+const announcementsCollection = defineCollection({
   loader: glob({
     base: 'src/content/announcements',
     pattern: '**/*.md',
   }),
   schema: announcementsSchema,
+});
+
+const socailLinks = defineCollection({
+  loader: file('src,content/personal.toml', {
+    parser: (text) => TOML.parse(text).authors as ParserReturnType,
+  }),
+  schema: personalSchema,
 });
 
 // const countries = defineCollection({
@@ -48,4 +53,8 @@ const announcements = defineCollection({
 //   schema: /* ... */
 // })
 
-export const collections = { blog, authors, announcements };
+export const collections = {
+  blogCollection,
+  authorsCollection,
+  announcementsCollection,
+};
