@@ -2,7 +2,7 @@ import TOML from '@iarna/toml';
 // build-in loaders
 import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
-import { personalSchema } from '#schemas/personalSchema.ts';
+// import { personalSchema } from '#schemas/personalSchema.ts';
 
 // import { countryLoader } from './loaders/index.ts';
 

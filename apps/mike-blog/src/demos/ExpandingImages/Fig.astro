@@ -12,6 +12,6 @@ const { index, img2, caption, alt = 'need alt tex' } = Astro.props;
 ---
 
 <figure tabindex={index}>
-  <Image src={img2} alt="/" />
+  <Image src={img2} alt={alt} />
   <figcaption>{caption}</figcaption>
 </figure>
