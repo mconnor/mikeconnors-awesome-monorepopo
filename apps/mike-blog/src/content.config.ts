@@ -36,12 +36,12 @@ const announcementsCollection = defineCollection({
   schema: announcementsSchema,
 });
 
-const socailLinks = defineCollection({
-  loader: file('src,content/personal.toml', {
-    parser: (text) => TOML.parse(text).authors as ParserReturnType,
-  }),
-  schema: personalSchema,
-});
+// const socailLinks = defineCollection({
+//   loader: file('src,content/personal.toml', {
+//     parser: (text) => TOML.parse(text).authors as ParserReturnType,
+//   }),
+//   schema: personalSchema,
+// });
 
 // const countries = defineCollection({
 //   loader: countryLoader(),

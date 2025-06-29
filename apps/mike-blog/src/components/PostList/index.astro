@@ -1,18 +1,14 @@
 ---
 import PostCard from '#components/PostCard/index.astro';
-import { blogSchema } from '#schemas/index.ts';
-import { z } from 'astro:content';
-import Headline from '#components/Headline.astro';
-import type { CollectionEntry } from 'astro:content';
-// import Stack from '@repo/layout-webcomponents/Stack';
 
-// import Prose from '#components/Prose.astro';
+import type { CollectionEntry } from 'astro:content';
+
 interface Props {
   headline: string;
   posts: CollectionEntry<'blogCollection'>[];
 }
 
-const { posts, headline } = Astro.props;
+const { posts } = Astro.props;
 const bool2 = posts.length > 1;
 const bool3 = posts.length > 2;
 ---

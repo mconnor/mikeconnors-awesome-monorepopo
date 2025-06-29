@@ -4,7 +4,7 @@ import type { Loader, LoaderContext } from 'astro/loaders';
 
 //  parseData<TData extends Record<string, unknown>>(props: ParseDataOptions<TData>): Promise<TData>;
 //
-s;
+
 const COUNTRY_URL = new URL(
   '/v3.1/region/africa/',
   'https://restcountries.com/',

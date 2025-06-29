@@ -3,7 +3,7 @@ import Center from '@repo/layout-webcomponents/Center';
 import BreadCrumbs from '#components/BreadCrumbs/index.astro';
 //  cover causes a flash issue
 import Cover from '@repo/layout-webcomponents/Cover';
-import Stack from '@repo/layout-webcomponents/Stack';
+
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 // import Prose from '#components/Prose.astro';
 // import Header from '#components/Header/index.astro';
@@ -11,7 +11,7 @@ import NavBar from '#components/NavBar/index.astro';
 
 // import Andy from '#assets/andy_mud_color.webp';
 // import BgImage from '#components/bg-img/index.astro';
-import Headline from '#components/Headline.astro';
+// import Headline from '#components/Headline.astro';
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
 
@@ -29,7 +29,6 @@ const {
 } = Astro.props;
 
 const GUTTERS = '1ch'; // padding for the main content area
-const paddClass = `ps-[${GUTTERS}]`; // class for padding
 ---
 
 <BaseLayout title={title} {...rest}>
