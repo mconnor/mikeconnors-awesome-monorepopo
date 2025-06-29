@@ -10,8 +10,9 @@ interface Props {
 const { cover, thumbnail } = Astro.props;
 
 const varient = {
-  round: 'aspect-16/9 w-full rounded-xl object-cover shadow-2xl',
-  roundTop: 'aspect-16/9 w-full rounded-t-lg object-cover shadow-sm',
+  round: 'rounded-none aspect-16/9 w-full rounded-xl object-cover shadow-2xl',
+  roundTop:
+    'rounded-none aspect-16/9 w-full rounded-t-lg object-cover shadow-sm',
 };
 ---
 

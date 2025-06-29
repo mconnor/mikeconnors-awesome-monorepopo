@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 import { z } from 'astro:content';
 import Headline from '#components/Headline.astro';
-
 import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
 import { tagCountTypeSchema, zTags } from '#schemas/index.js';
@@ -48,12 +47,13 @@ if (!tagCountSuccess) {
 }
 ---
 
-<Layout maxW="40ch" title="Tag Index" description="Index of tags" title="Tags">
-  <Headline headline="Tags" />
-
+<Layout title="Tag Index" description="Index of tags" title="Tags">
   {
     zUniqueTagArray.success && tagCountSuccess ?
-      <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />
+      <div class="flex flex-col gap-y-6">
+        <Headline headline="Announcements" />
+        <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />
+      </div>
     : <p>No tags</p>
   }
 </Layout>
