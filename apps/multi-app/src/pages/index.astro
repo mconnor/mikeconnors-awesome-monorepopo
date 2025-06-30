@@ -1,73 +1,48 @@
 ---
 import PreactCounter from '@repo/preact/Counter';
 import ReactCounter from '@repo/react/Counter';
-
+import Filter from '#components/Filter.astro'
 // import { SolidCounter as SolidC } from '@repo/solid/counter';
 import VueCounter from '@repo/vue/Counter';
 import SvelteCounter from '@repo/svelte/Counter';
-import Skeleton from '@repo/preact/Skeleton';
+// import Skeleton from '@repo/preact/Skeleton';
 import Layout from '#layouts/Layout.astro';
-import Box from '@repo/layout-webcomponents/Box';
-import Switcher from '@repo/layout-webcomponents/Switcher';
+
 ---
 
-<!-- <style>
-  .counter {
-    display: grid;
-    font-size: 2em;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    margin-top: 2em;
-    place-items: center;
-  }
-
-  .counter-message {
-    text-align: center;
-  }
-
-  @utility tw-card {
-    display: block;
-    padding: var(--s1);
-    border-width: var(--border-thin);
-    background-color: var(--color-primary-500);
-
-    outline: 0.125rem solid transparent;
-    outline-offset: -0.125rem;
-    box-shadow: var(--shadow-xl);
-  }
-</style> -->
 <Layout centerWidth="80ch">
   <h1 class="text-8xl">Multiple frameworks</h1>
-<Skeleton />
+<Filter />
   <!-- <Button color="red">red btn</Button>
   <Button color="blue">blue btn</Button>
   <Button color="yellow">yellow btn</Button>
   <Colors /> -->
 
-  <Box borderWidth="4px">
-    <Switcher>
-      <Box>
+  <div class="border-1">
+
+      <div class="border-1">
         <ReactCounter client:only="react" class="grid-col-3 grid">
           <h1>Hello from React!</h1>
         </ReactCounter>
-      </Box>
+      </div>
 
-      <Box>
+      <div class="border-1">
         <PreactCounter client:visible class="grid-col-3 grid">
           <h1>Hello from Preact!</h1>
-        </PreactCounter></Box
+        </PreactCounter></div
       >
 
-      <Box>
+      <div class="border-1">
         <VueCounter client:visible>
           <h1>Hello from Vue!</h1>
-        </VueCounter></Box
+        </VueCounter></div
       >
 
-      <Box>
+      <div class="border-1">
         <SvelteCounter client:visible klass="counter">
           <h1>Hello from Svelte!</h1>
-        </SvelteCounter></Box
+        </SvelteCounter></div
       >
-    </Switcher>
-  </Box>
+
+  </div>
 </Layout>

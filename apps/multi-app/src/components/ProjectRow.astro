@@ -1,0 +1,56 @@
+---
+interface Props {
+  framework: 'svelte' | 'vue' | 'react';
+  projectName: string;
+  description: string;
+  githubUrl?: string;
+  demoUrl?: string;
+  class?: string;
+}
+
+const {
+  framework,
+  projectName,
+  description,
+  githubUrl,
+  demoUrl,
+  class: className = ""
+} = Astro.props;
+
+const frameworkBadgeColors = {
+  svelte: 'badge-warning',
+  vue: 'badge-success',
+  react: 'badge-info'
+};
+---
+
+<tr
+  class={`hover transition-all duration-300 ${className}`}
+  data-framework={framework}
+>
+  <td>
+    <div class="flex items-center gap-3">
+      <div class="font-bold">{projectName}</div>
+      <div class={`badge badge-sm ${frameworkBadgeColors[framework]}`}>
+        {framework}
+      </div>
+    </div>
+  </td>
+  <td class="text-sm text-base-content/70">
+    {description}
+  </td>
+  <td>
+    <div class="flex gap-2">
+      {githubUrl && (
+        <a href={githubUrl} class="btn btn-ghost btn-xs" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
+      )}
+      {demoUrl && (
+        <a href={demoUrl} class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
+          Demo
+        </a>
+      )}
+    </div>
+  </td>
+</tr>

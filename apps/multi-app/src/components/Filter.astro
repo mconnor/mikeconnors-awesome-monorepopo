@@ -1,0 +1,119 @@
+---
+interface Props {
+  id?: string;
+  class?: string;
+}
+
+const { id = "framework-filter", class: className = "" } = Astro.props;
+---
+
+<form  id={id}>
+  <input
+    class="btn btn-square join-item"
+    type="reset"
+    value="×"
+    title="Clear filter"
+  />
+  <input
+    class="btn join-item"
+    type="radio"
+    name="frameworks"
+    value="svelte"
+    aria-label="Svelte"
+    data-filter="svelte"
+  />
+  <input
+    class="btn join-item"
+    type="radio"
+    name="frameworks"
+    value="vue"
+    aria-label="Vue"
+    data-filter="vue"
+  />
+  <input
+    class="btn join-item"
+    type="radio"
+    name="frameworks"
+    value="react"
+    aria-label="React"
+    data-filter="react"
+  />
+  <input
+    class="btn join-item"
+    type="radio"
+    name="frameworks"
+    value="all"
+    aria-label="Show All"
+    data-filter="all"
+    checked
+  />
+</form>
+
+<script>
+  // Filter functionality
+  function initializeFilter() {
+    const filterForm = document.getElementById('framework-filter') as HTMLFormElement;
+    if (!filterForm) return;
+
+    const filterInputs = filterForm.querySelectorAll('input[type="radio"], input[type="reset"]');
+
+    filterInputs.forEach(input => {
+      input.addEventListener('change', handleFilterChange);
+      input.addEventListener('click', handleFilterChange);
+    });
+
+    // Initial load - show all items
+    filterItems('all');
+  }
+
+  function handleFilterChange(event: Event) {
+    const target = event.target as HTMLInputElement;
+
+    if (target.type === 'reset') {
+      // Reset to show all
+      filterItems('all');
+      // Check the "Show All" radio button
+      const allRadio = document.querySelector('input[data-filter="all"]') as HTMLInputElement;
+      if (allRadio) allRadio.checked = true;
+    } else if (target.type === 'radio') {
+      const filterValue = target.getAttribute('data-filter') || 'all';
+      filterItems(filterValue);
+    }
+  }
+
+  function filterItems(filterValue: string) {
+    // Dispatch custom event for other components to listen to
+    const filterEvent = new CustomEvent('framework-filter-change', {
+      detail: {
+        filter: filterValue,
+        timestamp: Date.now()
+      },
+      bubbles: true
+    });
+
+    document.dispatchEvent(filterEvent);
+
+    // Direct filtering of elements with data-framework attribute
+    const filteredElements = document.querySelectorAll('[data-framework]');
+
+    filteredElements.forEach(element => {
+      const elementFramework = element.getAttribute('data-framework');
+      const shouldShow = filterValue === 'all' || elementFramework === filterValue;
+
+      if (shouldShow) {
+        element.classList.remove('hidden');
+        element.classList.add('block');
+      } else {
+        element.classList.add('hidden');
+        element.classList.remove('block');
+      }
+    });
+  }
+
+  // Initialize when DOM is loaded
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeFilter);
+  } else {
+    initializeFilter();
+  }
+</script>

@@ -1,0 +1,55 @@
+---
+interface Props {
+  frameworks: Array<'svelte' | 'vue' | 'react'>;
+  title: string;
+  class?: string;
+}
+
+const { frameworks, title, class: className = "" } = Astro.props;
+const frameworkString = frameworks.join(',');
+---
+
+<!-- This component will be visible when any of its frameworks are selected -->
+<div
+  class={`alert shadow-lg transition-all duration-300 ${className}`}
+  data-framework={frameworkString}
+  data-multi-framework="true"
+>
+  <div>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+    <div>
+      <h3 class="font-bold">{title}</h3>
+      <div class="text-xs">
+        Supports: {frameworks.map(fw =>
+          `<span class="badge badge-outline badge-xs mr-1">${fw}</span>`
+        ).join('')}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Enhanced filtering for multi-framework components
+  document.addEventListener('framework-filter-change', (event: Event) => {
+    const customEvent = event as CustomEvent;
+    const { filter } = customEvent.detail;
+
+    // Handle multi-framework components
+    const multiFrameworkElements = document.querySelectorAll('[data-multi-framework="true"]');
+
+    multiFrameworkElements.forEach(element => {
+      const elementFrameworks = element.getAttribute('data-framework')?.split(',') || [];
+      const shouldShow = filter === 'all' || elementFrameworks.includes(filter);
+
+      if (shouldShow) {
+        element.classList.remove('hidden');
+        element.classList.add('block');
+      } else {
+        element.classList.add('hidden');
+        element.classList.remove('block');
+      }
+    });
+  });
+</script>

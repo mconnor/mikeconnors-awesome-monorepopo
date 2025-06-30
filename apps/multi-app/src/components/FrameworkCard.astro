@@ -1,0 +1,42 @@
+---
+interface Props {
+  framework: 'svelte' | 'vue' | 'react';
+  title: string;
+  description: string;
+  class?: string;
+}
+
+const { framework, title, description, class: className = "" } = Astro.props;
+
+const frameworkColors = {
+  svelte: 'border-orange-500 bg-orange-50',
+  vue: 'border-green-500 bg-green-50',
+  react: 'border-blue-500 bg-blue-50'
+};
+
+const frameworkIcons = {
+  svelte: '🔥',
+  vue: '💚',
+  react: '⚛️'
+};
+---
+
+<div
+  class={`card bg-base-100 shadow-lg border-2 transition-all duration-300 ${frameworkColors[framework]} ${className}`}
+  data-framework={framework}
+>
+  <div class="card-body">
+    <h2 class="card-title">
+      <span class="text-2xl mr-2">{frameworkIcons[framework]}</span>
+      {title}
+      <div class={`badge badge-outline badge-${framework === 'svelte' ? 'warning' : framework === 'vue' ? 'success' : 'info'}`}>
+        {framework}
+      </div>
+    </h2>
+    <p class="text-base-content/80">{description}</p>
+    <div class="card-actions justify-end mt-4">
+      <button class="btn btn-primary btn-sm">Learn More</button>
+      <button class="btn btn-outline btn-sm">Demo</button>
+    </div>
+  </div>
+</div>
