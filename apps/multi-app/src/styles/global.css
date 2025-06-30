@@ -6,18 +6,15 @@
 @source "./node_modules/@repo/preact/**/*.{ts,tsx}";
 @source "./node_modules/@repo/react/**/*.{ts,tsx}";
 
-
-
 @import '@repo/design-system/shared-styles.css';
 
 @import '@repo/react/styles.css';
 @import '@repo/preact/styles.css';
 
 @plugin "daisyui" {
-    themes:
+  themes:
     light --default,
     dark --prefersdark,
     synthwave;
   root: '#multi-app';
-
 }

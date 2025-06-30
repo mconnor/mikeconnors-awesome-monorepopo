@@ -5,7 +5,7 @@ interface Props {
   class?: string;
 }
 
-const { frameworks, title, class: className = "" } = Astro.props;
+const { frameworks, title, class: className = '' } = Astro.props;
 const frameworkString = frameworks.join(',');
 ---
 
@@ -16,15 +16,29 @@ const frameworkString = frameworks.join(',');
   data-multi-framework="true"
 >
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info shrink-0 w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      class="stroke-info h-6 w-6 shrink-0"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
     </svg>
     <div>
       <h3 class="font-bold">{title}</h3>
       <div class="text-xs">
-        Supports: {frameworks.map(fw =>
-          `<span class="badge badge-outline badge-xs mr-1">${fw}</span>`
-        ).join('')}
+        Supports: {
+          frameworks
+            .map(
+              (fw) =>
+                `<span class="badge badge-outline badge-xs mr-1">${fw}</span>`,
+            )
+            .join('')
+        }
       </div>
     </div>
   </div>
@@ -37,10 +51,13 @@ const frameworkString = frameworks.join(',');
     const { filter } = customEvent.detail;
 
     // Handle multi-framework components
-    const multiFrameworkElements = document.querySelectorAll('[data-multi-framework="true"]');
+    const multiFrameworkElements = document.querySelectorAll(
+      '[data-multi-framework="true"]',
+    );
 
-    multiFrameworkElements.forEach(element => {
-      const elementFrameworks = element.getAttribute('data-framework')?.split(',') || [];
+    multiFrameworkElements.forEach((element) => {
+      const elementFrameworks =
+        element.getAttribute('data-framework')?.split(',') || [];
       const shouldShow = filter === 'all' || elementFrameworks.includes(filter);
 
       if (shouldShow) {

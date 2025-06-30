@@ -33,6 +33,7 @@
     "prettier-plugin-svelte": "catalog:svelte5",
     "prettier-plugin-tailwindcss": "catalog:",
     "prettier-plugin-toml": "catalog:",
+    "prettier-plugin-vue": "catalog:",
     "turbo": "^2.5.4"
   },
   "engines": {

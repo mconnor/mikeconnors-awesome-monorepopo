@@ -348,6 +348,9 @@ importers:
       prettier-plugin-toml:
         specifier: 'catalog:'
         version: 2.0.5(prettier@3.6.2)
+      prettier-plugin-vue:
+        specifier: 'catalog:'
+        version: 1.1.6
       turbo:
         specifier: ^2.5.4
         version: 2.5.4
@@ -5257,6 +5260,7 @@ packages:
     resolution: {integrity: sha512-/baBXDqkfW8x0UlqfYAfRCkmVWiH8qFZ4uhT6yLVBLssiypDTbe78W6lNBse7huBFv1ipR5PG9evkxEnIXDxjA==}
     peerDependencies:
       eslint: '>= 5'
+    bundledDependencies: []
 
   eslint-plugin-import@2.31.0:
     resolution: {integrity: sha512-ixmkI62Rbc2/w8Vfxyh1jQRTdRTF52VxwRVHl/ykPAmqG+Nb7/kNn+byLP0LxPgI7zWA16Jt82SybJInmMia3A==}

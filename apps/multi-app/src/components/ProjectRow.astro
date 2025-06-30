@@ -1,56 +1,54 @@
 ---
+import type { ProjectType } from '#schemas/index.ts';
+
 interface Props {
-  framework: 'svelte' | 'vue' | 'react';
-  projectName: string;
-  description: string;
-  githubUrl?: string;
-  demoUrl?: string;
-  class?: string;
+  project: ProjectType;
 }
 
-const {
-  framework,
-  projectName,
-  description,
-  githubUrl,
-  demoUrl,
-  class: className = ""
-} = Astro.props;
+const props = Astro.props;
+const { framework, projectName, description, demoUrl, githubUrl } =
+  props.project;
 
 const frameworkBadgeColors = {
   svelte: 'badge-warning',
   vue: 'badge-success',
-  react: 'badge-info'
+  react: 'badge-info',
 };
 ---
 
-<tr
-  class={`hover transition-all duration-300 ${className}`}
-  data-framework={framework}
->
+<tr class="transition-all duration-300" data-framework={framework}>
   <td>
-    <div class="flex items-center gap-3">
-      <div class="font-bold">{projectName}</div>
+    {projectName}
+    <!-- <div class="flex items-center gap-3">
+      <h4 class="font-bold">{projectName}</h4>
       <div class={`badge badge-sm ${frameworkBadgeColors[framework]}`}>
         {framework}
       </div>
-    </div>
-  </td>
-  <td class="text-sm text-base-content/70">
-    {description}
+    </div> -->
   </td>
   <td>
-    <div class="flex gap-2">
+    <span class="text-base-content/70 text-sm">{description}</span>
+  </td>
+  <td>
+    <a
+      href={demoUrl}
+      class="btn btn-primary btn-xs"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Demo
+    </a>
+    <!-- <div class="flex flex-col gap-2">
       {githubUrl && (
         <a href={githubUrl} class="btn btn-ghost btn-xs" target="_blank" rel="noopener noreferrer">
           GitHub
         </a>
       )}
-      {demoUrl && (
+
         <a href={demoUrl} class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
           Demo
         </a>
-      )}
-    </div>
+
+    </div> -->
   </td>
 </tr>

@@ -3,39 +3,44 @@ interface Props {
   framework: 'svelte' | 'vue' | 'react';
   title: string;
   description: string;
-  class?: string;
+  // class?: string;
 }
 
-const { framework, title, description, class: className = "" } = Astro.props;
+const { framework, title, description } = Astro.props;
 
 const frameworkColors = {
-  svelte: 'border-orange-500 bg-orange-50',
-  vue: 'border-green-500 bg-green-50',
-  react: 'border-blue-500 bg-blue-50'
+  svelte: 'bg-orange-50',
+  vue: 'bg-green-50',
+  react: 'bg-blue-50',
 };
 
 const frameworkIcons = {
   svelte: '🔥',
   vue: '💚',
-  react: '⚛️'
+  react: '⚛️',
 };
 ---
 
+<!-- <div
+  class={`card bg-base-100 shadow-lg border-2 transition-all duration-300 ${frameworkColors[framework]}`}
+  data-framework={framework}
+> -->
 <div
-  class={`card bg-base-100 shadow-lg border-2 transition-all duration-300 ${frameworkColors[framework]} ${className}`}
+  class:list={[
+    'card',
+    frameworkColors[framework],
+    'transition-all duration-300',
+  ]}
   data-framework={framework}
 >
   <div class="card-body">
     <h2 class="card-title">
-      <span class="text-2xl mr-2">{frameworkIcons[framework]}</span>
+      <span class="mr-2 text-2xl">{frameworkIcons[framework]}</span>
       {title}
-      <div class={`badge badge-outline badge-${framework === 'svelte' ? 'warning' : framework === 'vue' ? 'success' : 'info'}`}>
-        {framework}
-      </div>
     </h2>
     <p class="text-base-content/80">{description}</p>
-    <div class="card-actions justify-end mt-4">
-      <button class="btn btn-primary btn-sm">Learn More</button>
+    <div class="card-actions mt-4 justify-end">
+      <!-- <button class="btn btn-primary btn-sm">Learn More</button> -->
       <button class="btn btn-outline btn-sm">Demo</button>
     </div>
   </div>

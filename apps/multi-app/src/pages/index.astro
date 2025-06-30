@@ -1,48 +1,45 @@
 ---
 import PreactCounter from '@repo/preact/Counter';
 import ReactCounter from '@repo/react/Counter';
-import Filter from '#components/Filter.astro'
+import Filter from '#components/Filter.astro';
 // import { SolidCounter as SolidC } from '@repo/solid/counter';
 import VueCounter from '@repo/vue/Counter';
 import SvelteCounter from '@repo/svelte/Counter';
 // import Skeleton from '@repo/preact/Skeleton';
 import Layout from '#layouts/Layout.astro';
-
 ---
 
 <Layout centerWidth="80ch">
   <h1 class="text-8xl">Multiple frameworks</h1>
-<Filter />
+  <Filter />
   <!-- <Button color="red">red btn</Button>
   <Button color="blue">blue btn</Button>
   <Button color="yellow">yellow btn</Button>
   <Colors /> -->
 
   <div class="border-1">
+    <div class="border-1">
+      <ReactCounter client:only="react" class="grid-col-3 grid">
+        <h1>Hello from React!</h1>
+      </ReactCounter>
+    </div>
 
-      <div class="border-1">
-        <ReactCounter client:only="react" class="grid-col-3 grid">
-          <h1>Hello from React!</h1>
-        </ReactCounter>
-      </div>
+    <div class="border-1">
+      <PreactCounter client:visible class="grid-col-3 grid">
+        <h1>Hello from Preact!</h1>
+      </PreactCounter>
+    </div>
 
-      <div class="border-1">
-        <PreactCounter client:visible class="grid-col-3 grid">
-          <h1>Hello from Preact!</h1>
-        </PreactCounter></div
-      >
+    <div class="border-1">
+      <VueCounter client:visible>
+        <h1>Hello from Vue!</h1>
+      </VueCounter>
+    </div>
 
-      <div class="border-1">
-        <VueCounter client:visible>
-          <h1>Hello from Vue!</h1>
-        </VueCounter></div
-      >
-
-      <div class="border-1">
-        <SvelteCounter client:visible klass="counter">
-          <h1>Hello from Svelte!</h1>
-        </SvelteCounter></div
-      >
-
+    <div class="border-1">
+      <SvelteCounter client:visible klass="counter">
+        <h1>Hello from Svelte!</h1>
+      </SvelteCounter>
+    </div>
   </div>
 </Layout>

@@ -4,10 +4,10 @@ interface Props {
   class?: string;
 }
 
-const { id = "framework-filter", class: className = "" } = Astro.props;
+const { id = 'framework-filter', class: className = '' } = Astro.props;
 ---
 
-<form  id={id}>
+<form id={id}>
   <input
     class="btn btn-square join-item"
     type="reset"
@@ -52,12 +52,16 @@ const { id = "framework-filter", class: className = "" } = Astro.props;
 <script>
   // Filter functionality
   function initializeFilter() {
-    const filterForm = document.getElementById('framework-filter') as HTMLFormElement;
+    const filterForm = document.getElementById(
+      'framework-filter',
+    ) as HTMLFormElement;
     if (!filterForm) return;
 
-    const filterInputs = filterForm.querySelectorAll('input[type="radio"], input[type="reset"]');
+    const filterInputs = filterForm.querySelectorAll(
+      'input[type="radio"], input[type="reset"]',
+    );
 
-    filterInputs.forEach(input => {
+    filterInputs.forEach((input) => {
       input.addEventListener('change', handleFilterChange);
       input.addEventListener('click', handleFilterChange);
     });
@@ -73,7 +77,9 @@ const { id = "framework-filter", class: className = "" } = Astro.props;
       // Reset to show all
       filterItems('all');
       // Check the "Show All" radio button
-      const allRadio = document.querySelector('input[data-filter="all"]') as HTMLInputElement;
+      const allRadio = document.querySelector(
+        'input[data-filter="all"]',
+      ) as HTMLInputElement;
       if (allRadio) allRadio.checked = true;
     } else if (target.type === 'radio') {
       const filterValue = target.getAttribute('data-filter') || 'all';
@@ -86,9 +92,9 @@ const { id = "framework-filter", class: className = "" } = Astro.props;
     const filterEvent = new CustomEvent('framework-filter-change', {
       detail: {
         filter: filterValue,
-        timestamp: Date.now()
+        timestamp: Date.now(),
       },
-      bubbles: true
+      bubbles: true,
     });
 
     document.dispatchEvent(filterEvent);
@@ -96,9 +102,10 @@ const { id = "framework-filter", class: className = "" } = Astro.props;
     // Direct filtering of elements with data-framework attribute
     const filteredElements = document.querySelectorAll('[data-framework]');
 
-    filteredElements.forEach(element => {
+    filteredElements.forEach((element) => {
       const elementFramework = element.getAttribute('data-framework');
-      const shouldShow = filterValue === 'all' || elementFramework === filterValue;
+      const shouldShow =
+        filterValue === 'all' || elementFramework === filterValue;
 
       if (shouldShow) {
         element.classList.remove('hidden');

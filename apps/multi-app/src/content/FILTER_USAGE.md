@@ -28,16 +28,19 @@ Add the `data-framework` attribute to any element you want to be filterable:
 ## How It Works
 
 ### 1. **Data Attributes**
+
 - Add `data-framework="framework-name"` to any element
 - Supported values: `svelte`, `vue`, `react`, `all`
 - Elements with `data-framework="all"` are always visible
 
 ### 2. **CSS Classes**
+
 - The filter adds/removes `hidden` and `block` classes
 - Uses Tailwind CSS utility classes for visibility
 - Smooth transitions with CSS `transition` properties
 
 ### 3. **Custom Events**
+
 - Dispatches `framework-filter-change` events when filter changes
 - Event contains `detail: { filter: string, timestamp: number }`
 - Other components can listen to this event for custom behavior
@@ -126,6 +129,7 @@ Override styles with CSS:
 ## Component Examples
 
 ### Framework Cards
+
 ```astro
 <FrameworkCard
   framework="svelte"
@@ -135,6 +139,7 @@ Override styles with CSS:
 ```
 
 ### Project Rows (Table)
+
 ```astro
 <ProjectRow
   framework="react"
@@ -146,6 +151,7 @@ Override styles with CSS:
 ```
 
 ### Stats Components
+
 ```astro
 <div class="stat" data-framework="vue">
   <div class="stat-title">Vue Projects</div>

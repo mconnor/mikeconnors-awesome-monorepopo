@@ -4,45 +4,53 @@ import Filter from '../components/Filter.astro';
 ---
 
 <Layout>
-    <div class="container mx-auto max-w-4xl">
-      <h1 class="text-3xl font-bold text-center mb-8">Simple Filter Test</h1>
+  <div class="mx-auto max-w-4xl p-8">
+    <h1 class="mb-8 text-center text-3xl font-bold">Simple Filter Test</h1>
 
-      <!-- Filter Component -->
-      <div class="flex justify-center mb-8">
-        <Filter />
-      </div>
+    <!-- Filter Component -->
+    <div class="mb-8 flex justify-center">
+      <Filter />
+    </div>
 
-      <!-- Test Components -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="card bg-base-100 shadow-lg" data-framework="svelte">
-          <div class="card-body">
-            <h2 class="card-title">🔥 Svelte Component</h2>
-            <p>This card is visible when Svelte filter is active.</p>
-          </div>
-        </div>
-
-        <div class="card bg-base-100 shadow-lg" data-framework="vue">
-          <div class="card-body">
-            <h2 class="card-title">💚 Vue Component</h2>
-            <p>This card is visible when Vue filter is active.</p>
-          </div>
-        </div>
-
-        <div class="card bg-base-100 shadow-lg" data-framework="react">
-          <div class="card-body">
-            <h2 class="card-title">⚛️ React Component</h2>
-            <p>This card is visible when React filter is active.</p>
-          </div>
+    <!-- Test Components -->
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <div class="card bg-base-100 shadow-lg" data-framework="svelte">
+        <div class="card-body">
+          <h2 class="card-title">🔥 Svelte Component</h2>
+          <p>This card is visible when Svelte filter is active.</p>
         </div>
       </div>
 
-      <!-- Always visible component -->
-      <div class="alert alert-info mt-8">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current shrink-0 w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        <span>This alert is always visible regardless of filter selection.</span>
+      <div class="card bg-base-100 shadow-lg" data-framework="vue">
+        <div class="card-body">
+          <h2 class="card-title">💚 Vue Component</h2>
+          <p>This card is visible when Vue filter is active.</p>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow-lg" data-framework="react">
+        <div class="card-body">
+          <h2 class="card-title">⚛️ React Component</h2>
+          <p>This card is visible when React filter is active.</p>
+        </div>
       </div>
     </div>
-  </Layout>
 
+    <!-- Always visible component -->
+    <div class="alert alert-info mt-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="h-6 w-6 shrink-0 stroke-current"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <span>This alert is always visible regardless of filter selection.</span>
+    </div>
+  </div>
+</Layout>

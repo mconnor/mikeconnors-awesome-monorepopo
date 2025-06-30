@@ -1,0 +1,27 @@
+---
+interface Props {
+  emoj: '🔥' | '💚' | '⚛️';
+  framework: string;
+  children: unknown;
+  count: string;
+  textColor: 'text-primary' | 'text-secondary' | 'text-accent';
+}
+
+const { emoj, framework, count, textColor } = Astro.props;
+---
+
+<div
+  class="bg-base-100 flex items-center gap-4 rounded-xl p-6 shadow-lg"
+  data-framework="svelte"
+>
+  <div class={textColor}>
+    <span class="text-4xl">{emoj}</span>
+  </div>
+  <div>
+    <div class="text-base-content/60 text-sm font-medium">
+      {framework} Projects
+    </div>
+    <div class:list={['text-3xl font-bold', { textColor }]}>{count}</div>
+    <div class="text-base-content/70 text-sm"><slot name="copy" /></div>
+  </div>
+</div>
