@@ -13,7 +13,7 @@
     "./vue-config": "./vue.lint.config.mjs",
     "./md-config": "./md.lint.config.mjs",
     "./react-internal": "./react-internal.mjs",
-    "./ts-lint": "./ts.lint.config.mjs",
+    "./ts-lint": "./ts.lint.cosnfig.mjs",
     "./lit-config": "./lit.lint.config.mjs",
     "./type-disable": "./tscheck.disable.config.mjs",
     "./regex": "./regex.lint.config.mjs",
