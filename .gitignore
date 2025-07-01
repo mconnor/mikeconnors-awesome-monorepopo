@@ -2,6 +2,7 @@
 node_modules
 .turbo
 *.log
+.next
 dist
 dist-ssr
 *.local
@@ -9,40 +10,6 @@ dist-ssr
 .cache
 server/dist
 public/dist
-
-notes.txt
-
-cache-directory/
-.vercel/
-.astro/
-
-# playwright
-playwright-report/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
-.DS_Store
-
-# jetbrains setting folder
-.idea/
-
-# Vite
-**/vite.config.js.timestamp-*
-**/vite.config.ts.timestamp-*
-**/.svelte-kit
-/tree.txt
-/apps-next/blog-starter-app/.gitignore
-/apps-next/blog-starter-app/.next
-/mise.local.toml
-/out
-/mise.toml
+.astro
 .vercel
+/notes.txt
