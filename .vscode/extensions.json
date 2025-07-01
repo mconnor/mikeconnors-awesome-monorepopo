@@ -4,14 +4,14 @@
     "mikestead.dotenv",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "phoenisx.cssvar",
     "unifiedjs.vscode-mdx",
     "runem.lit-plugin",
     "Vercel.turbo-vsc",
     "JamesBirtles.svelte-vscode",
-    "vercel.turbo-vsc",
     "pnpmCatalogLens.pnpm-catalog-lens",
     "github.copilot",
+    "vue.volar",
+    "svelte.svelte-vscode",
     "bradlc.vscode-tailwindcss"
   ]
 }
