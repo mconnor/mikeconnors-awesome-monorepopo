@@ -1,0 +1,89 @@
+---
+import { type TableRowType, zTableRowSchema } from '#schemas/index.ts';
+
+// import ProjectRow from '#components/ProjectRow.astro';
+interface Props {
+  tableData: TableRowType[];
+}
+
+const { tableData } = Astro.props;
+
+const frameworkBadgeColors = {
+  svelte: 'badge-warning',
+  vue: 'badge-success',
+  react: 'badge-info',
+};
+---
+
+<div>
+  <table class="table-zebra table border-separate border border-gray-400">
+    <thead>
+      <tr>
+        <th class="border-1 w-1/5">Project</th>
+        <th class="border-1">Description</th>
+        <th class="border-1">Links</th>
+      </tr>
+    </thead>
+    <tbody>
+      {
+        tableData.map((rowData) => {
+          const rData = zTableRowSchema.parse(rowData);
+          return (
+            <tr
+              class="transition-all duration-300"
+              data-framework={rowData.framework}
+            >
+              <td class="border-1 w-1/5">
+                <h4 class="font-bold">{rowData.projectName}</h4>
+                <div
+                  class={`badge badge-sm ${frameworkBadgeColors[rowData.framework]}`}
+                >
+                  {rowData.framework}
+                </div>
+              </td>
+              <td class="border-1">
+                <span class="text-base-content/70 text-xs">
+                  {rowData.description}
+                </span>
+              </td>
+
+              <td class="border-1 w-1/5">
+                <a
+                  href={rowData.demoUrl}
+                  class="btn btn-primary btn-xs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Demo
+                </a>
+                <div class="">
+                  {rowData.githubUrl && (
+                    <a
+                      href={rowData.githubUrl}
+                      class="btn btn-ghost btn-xs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      GitHub
+                    </a>
+                  )}
+
+                  <a
+                    href={rowData.demoUrl}
+                    class="btn btn-primary btn-xs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Demo
+                  </a>
+                </div>
+              </td>
+            </tr>
+          );
+        })
+      }
+    </tbody>
+  </table>
+</div>
+
+<!-- class="rounded-box border-base-content/5 bg-base-100 overflow-x-auto border" -->
