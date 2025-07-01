@@ -1,7 +1,7 @@
 ---
 import { z } from 'astro:content';
 import Filter from '#components/Filter.astro';
-// import Stats from '#components/filterDemo/Stats.astro';
+import Stats from '#components/filterDemo/Stats.astro';
 import FrameworkCard from '#components/FrameworkCard.astro';
 import ProjectRow from '#components/ProjectRow.astro';
 
@@ -99,9 +99,6 @@ const frameworkData = [
     <!-- Projects Table Section -->
     <section>
       <h2 class="text-base-content mb-6 text-2xl font-bold">Projects Table</h2>
-
-      <!-- <div class="card bg-base-100 shadow-lg w-full">
-          <div class="card-body"> -->
       <div
         class="rounded-box border-base-content/5 bg-base-100 overflow-x-auto border"
       >
@@ -122,136 +119,111 @@ const frameworkData = [
           </tbody>
         </table>
       </div>
-
-      <!-- </div>
-        </div> -->
     </section>
 
     <!-- Additional Filterable Content -->
     <section class="border-1 mt-12">
-      <!-- <Stats /> -->
       <h2 class="text-base-content mb-6 text-2xl font-bold">Quick Stats</h2>
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-        <div
-          class="bg-base-100 flex items-center gap-4 rounded-xl p-6 shadow-lg"
-          data-framework="react"
-        >
-          <div class="text-accent">
-            <span class="text-4xl">⚛️</span>
-          </div>
-          <div>
-            <div class="text-base-content/60 text-sm font-medium">
-              React Projects
-            </div>
-            <p class="text-primary text-3xl font-bold">2</p>
-            <p class="text-base-content/70 text-sm">Dashboard & Blog</p>
-          </div>
+        <div data-framework="react">
+          <Stats
+            framework="React"
+            descrip="Dashboard & Blog"
+            daisyColor="primary"
+            count={2}
+            emoji="⚛️"
+          />
+        </div>
+        <div data-framework="svelte">
+          <Stats
+            framework="React"
+            descrip="Weather, Portfolio, SvelteKit"
+            daisyColor="primary"
+            count={3}
+            emoji="🔥"
+          />
         </div>
 
-        <div
-          class="bg-base-100 flex items-center gap-4 rounded-xl p-6 shadow-lg"
-          data-framework="svelte"
-        >
-          <div class="text-secondary">
-            <span class="text-4xl">🔥</span>
-          </div>
-          <div>
-            <div class="text-base-content/60 text-sm font-medium">
-              Svelte Projects
-            </div>
-            <div class="text-secondary text-3xl font-bold">3</div>
-            <div class="text-base-content/70 text-sm">
-              Weather, Portfolio, SvelteKit
-            </div>
-          </div>
+        <div data-framework="vue">
+          <Stats
+            framework="vue"
+            descrip="Tasks & Nuxt site"
+            daisyColor="accent"
+            count={4}
+            emoji="💚"
+          />
         </div>
-        <!-- end of card -->
-        <div
-          class="bg-base-100 flex items-center gap-4 rounded-xl p-6 shadow-lg"
-          data-framework="vue"
-        >
-          <div class="text-accent">
-            <span class="text-4xl">💚</span>
-          </div>
-          <div>
-            <div class="text-base-content/60 text-sm font-medium">
-              Vue Projects
-            </div>
-            <div class="text-accent text-3xl font-bold">2</div>
-            <div class="text-base-content/70 text-sm">Tasks & Nuxt site</div>
-          </div>
-        </div>
-
-        <!-- end of card -->
       </div>
     </section>
-  </div>
 
-  <!-- Custom Script for Enhanced Filtering -->
-  <script>
-    // Listen for filter changes and add smooth animations
-    document.addEventListener('framework-filter-change', (event: Event) => {
-      const customEvent = event as CustomEvent;
-      const { filter } = customEvent.detail;
-      console.log(`Filter changed to: ${filter}`);
+    <!-- Custom Script for Enhanced Filtering -->
+    <script>
+      // Listen for filter changes and add smooth animations
+      document.addEventListener('framework-filter-change', (event: Event) => {
+        const customEvent = event as CustomEvent;
+        const { filter } = customEvent.detail;
+        console.log(`Filter changed to: ${filter}`);
 
-      // Add fade-in animation to visible elements
-      setTimeout(() => {
-        const visibleElements = document.querySelectorAll(
-          '[data-framework]:not(.hidden)',
-        );
-        visibleElements.forEach((element, index) => {
-          (element as HTMLElement).style.opacity = '0';
-          (element as HTMLElement).style.transform = 'translateY(20px)';
+        // Add fade-in animation to visible elements
+        setTimeout(() => {
+          const visibleElements = document.querySelectorAll(
+            '[data-framework]:not(.hidden)',
+          );
+          visibleElements.forEach((element, index) => {
+            (element as HTMLElement).style.opacity = '0';
+            (element as HTMLElement).style.transform = 'translateY(20px)';
 
-          setTimeout(() => {
-            (element as HTMLElement).style.transition =
-              'opacity 0.3s ease, transform 0.3s ease';
-            (element as HTMLElement).style.opacity = '1';
-            (element as HTMLElement).style.transform = 'translateY(0)';
-          }, index * 50);
-        });
-      }, 100);
-    });
+            setTimeout(() => {
+              (element as HTMLElement).style.transition =
+                'opacity 0.3s ease, transform 0.3s ease';
+              (element as HTMLElement).style.opacity = '1';
+              (element as HTMLElement).style.transform = 'translateY(0)';
+            }, index * 50);
+          });
+        }, 100);
+      });
 
-    // Add counter updates when filter changes
-    document.addEventListener('framework-filter-change', (event: Event) => {
-      const customEvent = event as CustomEvent;
-      const { filter } = customEvent.detail;
+      // Add counter updates when filter changes
+      document.addEventListener('framework-filter-change', (event: Event) => {
+        const customEvent = event as CustomEvent;
+        const { filter } = customEvent.detail;
 
-      // Update counters in real-time
-      const frameworks = ['react', 'svelte', 'vue'];
-      frameworks.forEach((framework) => {
-        const elements = document.querySelectorAll(
-          `[data-framework="${framework}"]`,
-        );
-        const visibleCount = Array.from(elements).filter(
-          (el) => !el.classList.contains('hidden'),
-        ).length;
+        // Update counters in real-time
+        const frameworks = ['react', 'svelte', 'vue'];
+        frameworks.forEach((framework) => {
+          const elements = document.querySelectorAll(
+            `[data-framework="${framework}"]`,
+          );
+          const visibleCount = Array.from(elements).filter(
+            (el) => !el.classList.contains('hidden'),
+          ).length;
 
-        // Update any counter displays if they exist
-        const counterElements = document.querySelectorAll(
-          `[data-counter="${framework}"]`,
-        );
-        counterElements.forEach((counter) => {
-          counter.textContent = visibleCount.toString();
+          // Update any counter displays if they exist
+          const counterElements = document.querySelectorAll(
+            `[data-counter="${framework}"]`,
+          );
+          counterElements.forEach((counter) => {
+            counter.textContent = visibleCount.toString();
+          });
         });
       });
-    });
-  </script>
+    </script>
 
-  <style>
-    /* Smooth transitions for all filterable elements */
-    [data-framework] {
-      transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-    }
+    <style>
+      @custom-variant framework (&:where([data-theme=framework], [data-theme=framework] *));
 
-    [data-framework].hidden {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-  </style>
+      /* Smooth transitions for all filterable elements */
+      [data-framework] {
+        transition:
+          opacity 0.3s ease,
+          transform 0.3s ease;
+      }
+
+      [data-framework].hidden {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    </style>
+  </div>
 </Layout>
