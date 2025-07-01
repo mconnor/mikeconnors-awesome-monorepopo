@@ -98,16 +98,23 @@
   ],
   "breadcrumbs.filePath": "on",
 
+  // Enhanced file nesting for monorepo structure
   "explorer.compactFolders": false,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.d.ts,${capture}.test.ts,${capture}.spec.ts",
+    "*.tsx": "${capture}.test.tsx,${capture}.spec.tsx",
+    "*.vue": "${capture}.test.ts,${capture}.spec.ts",
+    "*.svelte": "${capture}.test.ts,${capture}.spec.ts",
+    "*.astro": "${capture}.test.ts,${capture}.spec.ts",
+    // "package.json": "package-lock.json,pnpm-lock.yaml,yarn.lock",
+    "tailwind.config.*": "tailwind.config.*,postcss.config.*"
+  },
 
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 1000,
   "editor.parameterHints.enabled": false,
-  "debug.javascript.defaultRuntimeExecutable": {
-    "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
-  },
   "editor.lineNumbers": "on",
   "explorer.incrementalNaming": "simple",
   "mcp": {
@@ -130,14 +137,12 @@
       }
     }
   },
-
-  // Extension-specific settings (add if needed)
-  "cssvar.files.exclude": ["**/node_modules/**", "**/dist/**"],
-  "cssvar.enabledLanguages": ["css", "postcss"],
-
   "github.copilot.chat.codeGeneration.instructions": [
     {
       "file": "./.vscode/copilot-instructions.md"
     }
-  ]
+  ],
+  "debug.javascript.defaultRuntimeExecutable": {
+    "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
+  }
 }
