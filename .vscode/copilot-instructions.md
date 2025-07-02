@@ -14,6 +14,7 @@ This is a Turborepo monorepo for frontend development with multiple apps and sha
 - **Build Tools**: Vite, Astro
 - **Linting**: ESLint with custom configs
 - **Package Manager**: pnpm
+- **Layout Web Components**
 
 ## Code Generation Guidelines
 

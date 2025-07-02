@@ -53,20 +53,25 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
 
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "[astro]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[json]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[jsonc]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
   "[astro]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false
   },
 
   "[svelte]": {
@@ -99,21 +104,19 @@
   "breadcrumbs.filePath": "on",
 
   // Enhanced file nesting for monorepo structure
-  "explorer.compactFolders": false,
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": true,
-  "explorer.fileNesting.patterns": {
-    "*.ts": "${capture}.d.ts,${capture}.test.ts,${capture}.spec.ts",
-    "*.tsx": "${capture}.test.tsx,${capture}.spec.tsx",
-    "*.vue": "${capture}.test.ts,${capture}.spec.ts",
-    "*.svelte": "${capture}.test.ts,${capture}.spec.ts",
-    "*.astro": "${capture}.test.ts,${capture}.spec.ts",
-    // "package.json": "package-lock.json,pnpm-lock.yaml,yarn.lock",
-    "tailwind.config.*": "tailwind.config.*,postcss.config.*"
-  },
+  // "explorer.compactFolders": false,
+  // "explorer.fileNesting.enabled": true,
+  // "explorer.fileNesting.expand": true,
+  // "explorer.fileNesting.patterns": {
+  //   "*.ts": "${capture}.d.ts,${capture}.test.ts,${capture}.spec.ts",
+  //   "*.tsx": "${capture}.test.tsx,${capture}.spec.tsx",
+  //   "*.vue": "${capture}.test.ts,${capture}.spec.ts",
+  //   "*.svelte": "${capture}.test.ts,${capture}.spec.ts",
+  //   "*.astro": "${capture}.test.ts,${capture}.spec.ts",
+  //   "package.json": "package-lock.json,pnpm-lock.yaml,yarn.lock",
+  //   "tailwind.config.*": "tailwind.config.*,postcss.config.*"
+  // },
 
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
   "editor.parameterHints.enabled": false,
   "editor.lineNumbers": "on",
   "explorer.incrementalNaming": "simple",
@@ -140,6 +143,9 @@
   "github.copilot.chat.codeGeneration.instructions": [
     {
       "file": "./.vscode/copilot-instructions.md"
+    },
+    {
+      "file": "./.vscode/daisyui.md"
     }
   ],
   "debug.javascript.defaultRuntimeExecutable": {
