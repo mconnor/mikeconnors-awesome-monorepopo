@@ -1,13 +1,12 @@
 ---
-import type { ProjectType } from '#schemas/index.ts';
+import type { TableRowType } from '#schemas/index.ts';
 
 interface Props {
-  project: ProjectType;
+  project: TableRowType;
 }
 
-const props = Astro.props;
-const { framework, projectName, description, demoUrl, githubUrl } =
-  props.project;
+const { project } = Astro.props;
+const { framework, projectName, description, demoUrl, githubUrl } = project;
 
 const frameworkBadgeColors = {
   svelte: 'badge-warning',

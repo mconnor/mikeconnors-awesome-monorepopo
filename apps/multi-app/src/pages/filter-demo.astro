@@ -5,7 +5,7 @@ import StatsWidget from '#components/filterDemo/Stats.astro';
 import FrameworkCard from '#components/filterDemo/FrameworkCard.astro';
 import ProjectRow from '#components/ProjectRow.astro';
 
-import { projectData } from '#app.config.ts';
+import { projectData, tableData } from '#app.config.ts';
 import { zTableRowSchema } from '#schemas/index.ts';
 
 import Layout from '#layouts/Layout.astro';
@@ -21,7 +21,7 @@ interface PrType {
 // type ProjDataType= keyof typeof projectData;
 ---
 
-<Layout>
+<Layout centerWidth="100%">
   <div class="mx-auto max-w-7xl p-8">
     <!-- Header -->
     <div class="border-1 mb-8 text-center">
@@ -64,7 +64,7 @@ interface PrType {
     </section>
 
     <!-- Projects Table Section -->
-    <!-- <section>
+    <section>
       <h2 class="text-base-content mb-6 text-2xl font-bold">Projects Table</h2>
       <div
         class="rounded-box border-base-content/5 bg-base-100 overflow-x-auto border"
@@ -79,14 +79,17 @@ interface PrType {
           </thead>
           <tbody>
             {
-              projectData.map((p) => (
-                <ProjectRow project={zProjSchema.parse(p)} />
-              ))
+              tableData.map((p) => {
+                const { data, error } = zTableRowSchema.safeParse(p);
+                if (error) throw new Error(error.message);
+
+                return <ProjectRow project={data} />;
+              })
             }
           </tbody>
         </table>
       </div>
-    </section> -->
+    </section>
 
     <!-- Additional Filterable Content -->
     <section class="border-1 mt-12">
