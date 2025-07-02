@@ -1,16 +1,13 @@
 ---
-import type { HTMLAttributes } from 'astro/types';
-import { z } from 'astro:content';
-
 import { zIntPos } from '#schemas/index.ts';
 
 import { string, unknown } from 'astro:schema';
 import { z } from 'astro:content';
-interface Props extends HTMLAttributes<'div'> {
+interface Props {
   daisyColor: 'primary' | 'secondary' | 'accent';
   emoji: string;
-  framework: string;
-  descrip: string;
+  framework: 'svelte' | 'vue' | 'react';
+  description: string;
   count: number;
 }
 
@@ -20,21 +17,23 @@ const colorVarient = {
   accent: 'text-accent',
 };
 
-const { daisyColor, framework, descrip, count, emoji } = Astro.props;
+const { daisyColor, framework, description, count, emoji } = Astro.props;
 const parsedCount = zIntPos.parse(count).toString();
 ---
 
-<div class="bg-base-100 flex items-center gap-4 rounded-xl p-6 shadow-lg">
-  <div class={colorVarient[daisyColor]}>
-    <span class="text-4xl">{emoji}</span>
-  </div>
-  <div>
-    <div class="text-base-content/60 text-sm font-medium">
-      {framework} Projects
+<div class="grid grid-cols-1 gap-6 md:grid-cols-3" data-framework={framework}>
+  <div class="bg-base-100 flex items-center gap-4 rounded-xl p-6 shadow-lg">
+    <div class={colorVarient[daisyColor]}>
+      <span class="text-4xl">{emoji}</span>
     </div>
-    <div class:list={[colorVarient[daisyColor], 'text-3xl font-bold']}>
-      {parsedCount}
+    <div>
+      <div class="text-base-content/60 text-sm font-medium">
+        {framework} Projects
+      </div>
+      <div class:list={[colorVarient[daisyColor], 'text-3xl font-bold']}>
+        {parsedCount}
+      </div>
+      <div class="text-base-content/70 text-sm">{description}</div>
     </div>
-    <div class="text-base-content/70 text-sm">{descrip}</div>
   </div>
 </div>

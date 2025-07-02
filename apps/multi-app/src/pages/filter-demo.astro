@@ -1,12 +1,12 @@
 ---
 import { z } from 'astro:content';
 import Filter from '#components/Filter.astro';
-import Stats from '#components/filterDemo/Stats.astro';
-import FrameworkCard from '#components/FrameworkCard.astro';
+import StatsWidget from '#components/filterDemo/Stats.astro';
+import FrameworkCard from '#components/filterDemo/FrameworkCard.astro';
 import ProjectRow from '#components/ProjectRow.astro';
 
 import { projectData } from '#app.config.ts';
-import { zProjSchema } from '#schemas/index.ts';
+import { zTableRowSchema } from '#schemas/index.ts';
 
 import Layout from '#layouts/Layout.astro';
 
@@ -17,39 +17,6 @@ interface PrType {
   githubUrl: string;
   demoUrl: string;
 }
-
-const frameworkData = [
-  {
-    framework: 'svelte' as const,
-    title: 'Svelte Application',
-    description:
-      'A modern, reactive framework that compiles to vanilla JavaScript for optimal performance.',
-  },
-  {
-    framework: 'vue' as const,
-    title: 'Vue.js Project',
-    description:
-      'Progressive framework for building user interfaces with excellent developer experience.',
-  },
-  {
-    framework: 'react' as const,
-    title: 'React Application',
-    description:
-      'A JavaScript library for building user interfaces with component-based architecture.',
-  },
-  {
-    framework: 'svelte' as const,
-    title: 'SvelteKit App',
-    description:
-      'Full-stack framework built on top of Svelte with server-side rendering capabilities.',
-  },
-  {
-    framework: 'vue' as const,
-    title: 'Nuxt.js Website',
-    description:
-      'The intuitive Vue framework for creating type-safe, performant web applications.',
-  },
-];
 
 // type ProjDataType= keyof typeof projectData;
 ---
@@ -85,7 +52,7 @@ const frameworkData = [
       </h2>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {
-          frameworkData.map((item) => (
+          projectData.map((item) => (
             <FrameworkCard
               framework={item.framework}
               title={item.title}
@@ -97,7 +64,7 @@ const frameworkData = [
     </section>
 
     <!-- Projects Table Section -->
-    <section>
+    <!-- <section>
       <h2 class="text-base-content mb-6 text-2xl font-bold">Projects Table</h2>
       <div
         class="rounded-box border-base-content/5 bg-base-100 overflow-x-auto border"
@@ -119,7 +86,7 @@ const frameworkData = [
           </tbody>
         </table>
       </div>
-    </section>
+    </section> -->
 
     <!-- Additional Filterable Content -->
     <section class="border-1 mt-12">
@@ -127,18 +94,18 @@ const frameworkData = [
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         <div data-framework="react">
-          <Stats
-            framework="React"
-            descrip="Dashboard & Blog"
+          <StatsWidget
+            framework="react"
+            description="Dashboard & Blog"
             daisyColor="primary"
             count={2}
             emoji="⚛️"
           />
         </div>
         <div data-framework="svelte">
-          <Stats
-            framework="React"
-            descrip="Weather, Portfolio, SvelteKit"
+          <StatsWidget
+            framework="svelte"
+            description="Weather, Portfolio, SvelteKit"
             daisyColor="primary"
             count={3}
             emoji="🔥"
@@ -146,9 +113,9 @@ const frameworkData = [
         </div>
 
         <div data-framework="vue">
-          <Stats
+          <StatsWidget
             framework="vue"
-            descrip="Tasks & Nuxt site"
+            description="Tasks & Nuxt site"
             daisyColor="accent"
             count={4}
             emoji="💚"
@@ -158,72 +125,7 @@ const frameworkData = [
     </section>
 
     <!-- Custom Script for Enhanced Filtering -->
-    <script>
-      // Listen for filter changes and add smooth animations
-      document.addEventListener('framework-filter-change', (event: Event) => {
-        const customEvent = event as CustomEvent;
-        const { filter } = customEvent.detail;
-        console.log(`Filter changed to: ${filter}`);
-
-        // Add fade-in animation to visible elements
-        setTimeout(() => {
-          const visibleElements = document.querySelectorAll(
-            '[data-framework]:not(.hidden)',
-          );
-          visibleElements.forEach((element, index) => {
-            (element as HTMLElement).style.opacity = '0';
-            (element as HTMLElement).style.transform = 'translateY(20px)';
-
-            setTimeout(() => {
-              (element as HTMLElement).style.transition =
-                'opacity 0.3s ease, transform 0.3s ease';
-              (element as HTMLElement).style.opacity = '1';
-              (element as HTMLElement).style.transform = 'translateY(0)';
-            }, index * 50);
-          });
-        }, 100);
-      });
-
-      // Add counter updates when filter changes
-      document.addEventListener('framework-filter-change', (event: Event) => {
-        const customEvent = event as CustomEvent;
-        const { filter } = customEvent.detail;
-
-        // Update counters in real-time
-        const frameworks = ['react', 'svelte', 'vue'];
-        frameworks.forEach((framework) => {
-          const elements = document.querySelectorAll(
-            `[data-framework="${framework}"]`,
-          );
-          const visibleCount = Array.from(elements).filter(
-            (el) => !el.classList.contains('hidden'),
-          ).length;
-
-          // Update any counter displays if they exist
-          const counterElements = document.querySelectorAll(
-            `[data-counter="${framework}"]`,
-          );
-          counterElements.forEach((counter) => {
-            counter.textContent = visibleCount.toString();
-          });
-        });
-      });
-    </script>
-
-    <style>
-      @custom-variant framework (&:where([data-theme=framework], [data-theme=framework] *));
-
-      /* Smooth transitions for all filterable elements */
-      [data-framework] {
-        transition:
-          opacity 0.3s ease,
-          transform 0.3s ease;
-      }
-
-      [data-framework].hidden {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-    </style>
   </div>
 </Layout>
+
+<script src="../libs/filterPage.ts"></script>

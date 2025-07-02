@@ -15,13 +15,13 @@ const frameworkBadgeColors = {
 };
 ---
 
-<div>
-  <table class="table-zebra table border-separate border border-gray-400">
+<div class="w-full overflow-x-auto">
+  <table class="table-zebra table w-full">
     <thead>
       <tr>
-        <th class="border-1 w-1/5">Project</th>
-        <th class="border-1">Description</th>
-        <th class="border-1">Links</th>
+        <th class="w-1/6">Project</th>
+        <th>Description</th>
+        <th>Links</th>
       </tr>
     </thead>
     <tbody>
@@ -33,30 +33,28 @@ const frameworkBadgeColors = {
               class="transition-all duration-300"
               data-framework={rowData.framework}
             >
-              <td class="border-1 w-1/5">
-                <h4 class="font-bold">{rowData.projectName}</h4>
-                <div
-                  class={`badge badge-sm ${frameworkBadgeColors[rowData.framework]}`}
-                >
-                  {rowData.framework}
+              <td class="w-1/6">
+                <div class="flex flex-col gap-1">
+                  <div class="">{rowData.projectName}</div>
+                  <div class="badge badge-sm">{rowData.framework}</div>
                 </div>
               </td>
-              <td class="border-1">
-                <span class="text-base-content/70 text-xs">
+              <td class="w-4/6">
+                <span class="text-base-content/70 wrap-break-word text-xs">
                   {rowData.description}
                 </span>
               </td>
 
-              <td class="border-1 w-1/5">
-                <a
-                  href={rowData.demoUrl}
-                  class="btn btn-primary btn-xs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Demo
-                </a>
-                <div class="">
+              <td class="w-1/6">
+                <div class="flex flex-col gap-1">
+                  <a
+                    href={rowData.demoUrl}
+                    class="btn btn-primary btn-xs"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Demo
+                  </a>
                   {rowData.githubUrl && (
                     <a
                       href={rowData.githubUrl}
@@ -67,15 +65,6 @@ const frameworkBadgeColors = {
                       GitHub
                     </a>
                   )}
-
-                  <a
-                    href={rowData.demoUrl}
-                    class="btn btn-primary btn-xs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Demo
-                  </a>
                 </div>
               </td>
             </tr>
