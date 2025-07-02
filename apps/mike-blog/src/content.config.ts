@@ -1,4 +1,5 @@
 import TOML from '@iarna/toml';
+import { z, reference } from 'astro:content';
 // build-in loaders
 import { file, glob } from 'astro/loaders';
 import { defineCollection } from 'astro:content';
@@ -6,8 +7,12 @@ import { defineCollection } from 'astro:content';
 
 // import { countryLoader } from './loaders/index.ts';
 
-import { authorsSchema, blogSchema } from './schemas';
+// import { blogSchema } from './schemas';
 import announcementsSchema from '@repo/schemas/AnnouncementsSchema';
+import authorsSchema from '@repo/schemas/AuthorsSchema';
+
+import { blogSchema } from '#schemas/index.ts';
+
 type ParserReturnType =
   | Record<string, Record<string, unknown>>
   | Record<string, unknown>[];

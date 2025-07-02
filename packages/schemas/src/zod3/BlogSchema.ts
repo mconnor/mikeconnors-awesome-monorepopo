@@ -15,14 +15,5 @@ const blogSchema = z.object({
   tags: z.array(z.string()).default([]),
   cover: z.object({ src: z.string().url(), alt: z.string() }).optional(),
 });
-// z.ZodEffects<z.ZodString, ReferenceDataEntry<"authorsCollection", string>, string>
-// { "id": "SGS", "data": { "cca3": "SGS", "name": { "common": "South Georgia" } }, "collection": "countries" }
+
 export default blogSchema;
-// export {
-//   // yearMonthDateSchema,
-//   announcementsSchema,
-//   authorsSchema,
-//   blogSchema,
-//   tagCountTypeSchema,
-//   zTags,
-// };
