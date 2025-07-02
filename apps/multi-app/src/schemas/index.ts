@@ -4,7 +4,9 @@ const zReact = z.literal('react');
 const zVue = z.literal('vue');
 const zSvelte = z.literal('svelte');
 
-const zProjSchema = z.object({
+const zOneOrTwoDigits = z.number();
+
+const zTableRowSchema = z.object({
   framework: z.union([zReact, zVue, zSvelte]),
   projectName: z.string(),
   description: z.string(),
@@ -12,6 +14,21 @@ const zProjSchema = z.object({
   demoUrl: z.string().url().optional(),
 });
 
-export type ProjectType = z.infer<typeof zProjSchema>;
+const zFrameworkSchema = z.object({
+  framework: z.union([zReact, zVue, zSvelte]),
+  title: z.string(),
+  description: z.string(),
+});
 
-export { zProjSchema };
+const zIntPos = z
+  .number()
+  .int()
+  .positive()
+  .lt(99, { message: 'this👏is👏too👏be a two digit number' });
+
+// export type IntType = z.infer<typeof zIntPos>;
+
+export type TableRowType = z.infer<typeof zTableRowSchema>;
+export type FrameworkType = z.infer<typeof zFrameworkSchema>;
+
+export { zTableRowSchema, zFrameworkSchema, zIntPos };

@@ -17,9 +17,7 @@ const navLinks: NavLinkI[] = [
 
 export { type NavLinkI, navLinks };
 
-import type { ProjectType } from '#schemas/index.ts';
-
-export const projectData = [
+export const tableData = [
   {
     framework: 'react',
     projectName: 'E-commerce Dashboard',
@@ -62,4 +60,37 @@ export const projectData = [
     githubUrl: 'https://github.com/sveltejs/svelte',
     // emoji: '🔥'
   },
-];
+] as const;
+
+export const projectData = [
+  {
+    framework: 'svelte',
+    title: 'Svelte Application',
+    description:
+      'A modern, reactive framework that compiles to vanilla JavaScript for optimal performance.',
+  },
+  {
+    framework: 'vue',
+    title: 'Vue.js Project',
+    description:
+      'Progressive framework for building user interfaces with excellent developer experience.',
+  },
+  {
+    framework: 'react',
+    title: 'React Application',
+    description:
+      'A JavaScript library for building user interfaces with component-based architecture.',
+  },
+  {
+    framework: 'svelte',
+    title: 'SvelteKit App',
+    description:
+      'Full-stack framework built on top of Svelte with server-side rendering capabilities.',
+  },
+  {
+    framework: 'vue',
+    title: 'Nuxt.js Website',
+    description:
+      'The intuitive Vue framework for creating type-safe, performant web applications.',
+  },
+] as const;
