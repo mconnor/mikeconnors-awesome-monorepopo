@@ -1,21 +1,14 @@
 // @ts-check
 import 'eslint-plugin-only-warn';
 import js from '@eslint/js';
-
-// import eslintPluginImport from 'eslint-plugin-import';
-// import barrelFiles from 'eslint-plugin-barrel-files';
 import eslintPluginAstro from 'eslint-plugin-astro';
-// import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
-
-// import onlyWarn from 'eslint-plugin-only-warn';
 import tseslint from 'typescript-eslint';
-
 import astroParser from 'astro-eslint-parser';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
-
 import extensionInstanceObj from './fileExtensions.mjs';
+
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 export default tseslint.config(
@@ -26,7 +19,6 @@ export default tseslint.config(
 
   {
     name: '[*] TS Rules',
-
     languageOptions: {
       ecmaVersion: 'latest',
       parser: tseslint.parser,
@@ -49,21 +41,15 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
       '@typescript-eslint/consistent-type-definitions': 'warn',
-
-      // 'import/named': 'warn',
-      // 'import/namespace': 'warn',
-      // 'import/default': 'off',
-      // 'import/no-named-as-default-member': 'warn',
-      // 'import/no-unresolved': 'warn',
-      // 'import/no-named-as-default': 'warn',
-      // 'import/no-cycle': 'warn',
-      // 'import/no-unused-modules': 'warn',
-      // 'import/no-deprecated': 'warn',
+      '@typescript-eslint/consistent-type-imports': 'warn',
+      '@typescript-eslint/array-type': 'warn',
+      '@typescript-eslint/prefer-nullish-coalescing': 'warn',
+      '@typescript-eslint/prefer-optional-chain': 'warn',
     },
   },
 
   {
-    name: '[*] tseslint: disabled files',
+    name: '[*] Astro Files',
     files: ['**/*.astro'],
     extends: [
       eslintPluginAstro.configs.recommended,
@@ -77,18 +63,13 @@ export default tseslint.config(
         ecmaFeatures: {
           jsx: false,
         },
-        // tsconfigRootDir: import.meta.dirname,
-        // project: [
-        //   '../apps/*/tsconfig.json',
-        //   '../packages/*/tsconfig.json',
-        //   '../packages/ui-components/*tsconfig.json',
-        // ],
         extraFileExtensions,
       },
     },
   },
+
   {
-    name: '[*] .d.ts files',
+    name: '[*] Type Definition Files',
     files: ['**/*.d.ts'],
     rules: {
       '@typescript-eslint/triple-slash-reference': 'warn',
@@ -96,7 +77,9 @@ export default tseslint.config(
       '@typescript-eslint/consistent-type-definitions': 'warn',
     },
   },
+
   {
+    name: '[*] Action Files',
     files: ['**/actions/*.ts'],
     rules: {
       '@typescript-eslint/no-misused-promises': 'warn',
@@ -104,49 +87,10 @@ export default tseslint.config(
   },
 
   {
-    name: '[*] js files',
+    name: '[*] JavaScript Files',
     files: ['**/*.js'],
     extends: [tseslint.configs.disableTypeChecked],
   },
 
-  // ,
-  // {
-  //   files: ['**/*.ts'],
-  //   extends: [
-  //     tseslint.configs.recommendedTypeChecked,
-  //     tseslint.configs.stylisticTypeChecked,
-  //   ],
-  //   rules: {
-  //     '@typescript-eslint/triple-slash-reference': 'warn',
-  //     '@typescript-eslint/array-type': 'error',
-  //     '@typescript-eslint/consistent-type-imports': 'error',
-  //     '@typescript-eslint/no-unused-expressions': [
-  //       'error',
-  //       {
-  //         allowShortCircuit: true, // Allow short-circuit expressions like `a && a()`
-  //         allowTernary: true, // Allow ternary operations like `a ? b() : c()`
-  //         allowTaggedTemplates: true, // Allow tagged template literals like `taggedTemplate` (optional)
-  //       },
-  //     ],
-  //     '@typescript-eslint/no-empty-function': 'warn',
-  //   },
-  // }
-
   eslintConfigPrettier,
 );
-
-// export default [
-//   turboConfig['flat/recommended'],
-//   ...tsConfig,
-//   // Other configuration
-//   {
-//     rules: {
-//       'turbo/no-undeclared-env-vars': [
-//         'error',
-//         {
-//           allowList: ['^ENV_[A-Z]+$'],
-//         },
-//       ],
-//     },
-//   },
-// ];

@@ -6,8 +6,8 @@ import { defineCollection } from 'astro:content';
 
 // import { countryLoader } from './loaders/index.ts';
 
-import { announcementsSchema, authorsSchema, blogSchema } from './schemas';
-
+import { authorsSchema, blogSchema } from './schemas';
+import announcementsSchema from '@repo/schemas/AnnouncementsSchema';
 type ParserReturnType =
   | Record<string, Record<string, unknown>>
   | Record<string, unknown>[];

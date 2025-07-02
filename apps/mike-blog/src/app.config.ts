@@ -1,4 +1,4 @@
-import iconPaths from '@repo/icon-paths/paths';
+import type iconPaths from '@repo/icon-paths/paths';
 type IconType = keyof typeof iconPaths;
 
 const NAME = 'Mike Connor';

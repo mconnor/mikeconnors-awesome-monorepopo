@@ -36,7 +36,7 @@ class MailtoButton extends HTMLElement {
     }
 
     // Get custom button text
-    const buttonText = this.dataset.text || 'email me';
+    const buttonText = this.dataset.text ?? 'email me';
 
     // Display obscured version for UI
     const displayUser = this.obfuscateEmailPart(encodedUser);
