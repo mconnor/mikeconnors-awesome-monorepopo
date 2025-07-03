@@ -1,12 +1,13 @@
 ---
 // import Stack from '@repo/layout-webcomponents/Stack';
 interface Props {
-  children: unknown;
   heading?: string;
   copy?: string;
+  cta: string;
 }
 
 const {
+  cta,
   heading = "Welcome to Mike's Blog",
   copy = 'Exploring Ideas & Technology',
 } = Astro.props;
@@ -27,9 +28,15 @@ const {
     <p
       class="mb-8 overflow-hidden text-xl font-light drop-shadow-sm md:text-2xl"
     >
-      {copy}
+      <a
+        role="button"
+        href="/about"
+        slot="cta"
+        class="btn btn-active animate-bounce-in btn-xl btn-primary"
+      >
+        {cta}
+      </a>
     </p>
-    <slot name="cta" />
   </div>
 </div>
 <!-- </div> -->
