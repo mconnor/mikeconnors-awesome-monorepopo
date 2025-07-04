@@ -12,7 +12,6 @@ import extensionInstanceObj from './fileExtensions.mjs';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 export default tseslint.config(
-  // @ts-ignore
   ignoresConfig,
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,

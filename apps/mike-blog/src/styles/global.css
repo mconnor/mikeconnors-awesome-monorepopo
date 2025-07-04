@@ -1,6 +1,6 @@
 @import 'tailwindcss';
-
-@source "../**/*.astro";
+@source not "../src/public";
+@source '../../src';
 
 @source "./node_modules/@repo/astro-ui/**/*.astro";
 
