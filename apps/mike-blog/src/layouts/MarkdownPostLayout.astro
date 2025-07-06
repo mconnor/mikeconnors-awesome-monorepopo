@@ -13,7 +13,7 @@ import BlogPicWrapper from '#components/BlogPicWrapper.astro';
 import { format } from 'date-fns';
 
 const { data } = Astro.props as CollectionEntry<'blogCollection'>;
-const { title, description, date, cover, author: authorRef } = data;
+const { tags, title, description, date, cover, author: authorRef } = data;
 
 // let authorObj;
 // if (author) {
@@ -26,32 +26,37 @@ const { title, description, date, cover, author: authorRef } = data;
 ---
 
 <!-- TODO: fix the date format -->
-<Layout title={title} description={description} maxW="100%">
+<Layout title={title} description={description} maxW="60ch">
   <!-- <h1>The current URL is: {Astro.url}</h1>
   <h1>The current URL pathname is: {Astro.url.pathname}</h1>
   <h1>The current URL origin is: {Astro.url.origin}</h1> -->
 
   <!-- <h1 class="">{title}</h1> -->
-  <Stack space="var(--space-6)">
+  <Stack space="var(--s1)">
     <Headline headline={title} />
 
     {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
-    <!-- <figure>
-      {
-        cover?.src && cover?.alt && (
-          <img
-            class="aspect-16/9 w-full rounded-lg object-cover shadow-2xl"
-            src={cover.src}
-            alt={cover.alt ?? 'alt image needed'}
-          />
-        )
-      }
-    </figure> -->
+
     {cover?.src && cover?.alt && <BlogPicWrapper cover={cover} />}
 
     {authorRef && <Author authorReference={authorRef} />}
-    <Prose>
-      <slot />
-    </Prose>
+    <div class="border-1">
+      <Prose>
+        <slot />
+      </Prose>
+    </div>
+    <div class="border-1">
+      {
+        tags && (
+          <div class="flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )
+      }
+    </div>
   </Stack>
 </Layout>

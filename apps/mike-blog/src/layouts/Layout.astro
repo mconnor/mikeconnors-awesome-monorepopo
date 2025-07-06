@@ -6,8 +6,8 @@ import Cover from '@repo/layout-webcomponents/Cover';
 import ThemeToggle from '#components/ThemeToggle/index.astro';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 // import Prose from '#components/Prose.astro';
-// import Header from '#components/Header/index.astro';
-import NavBar from '#components/NavBar/index.astro';
+import Header from '#components/Header/index.astro';
+// import NavBar from '#components/NavBar/test.astro';
 
 // import Andy from '#assets/andy_mud_color.webp';
 // import BgImage from '#components/bg-img/index.astro';
@@ -34,7 +34,7 @@ const GUTTERS = '1ch'; // padding for the main content area
 <BaseLayout title={title} {...rest}>
   <slot name="bg" />
   <Cover centeredElement="center-l" noPad minHeight="100dvh">
-    <NavBar transition:persist />
+    <Header transition:persist />
 
     <BreadCrumbs />
     <Center gutters={GUTTERS} max={maxW} transition:animate="slide">

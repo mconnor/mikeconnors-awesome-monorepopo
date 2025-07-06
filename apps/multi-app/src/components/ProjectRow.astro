@@ -16,38 +16,42 @@ const frameworkBadgeColors = {
 ---
 
 <tr class="transition-all duration-300" data-framework={framework}>
-  <td>
-    {projectName}
-    <!-- <div class="flex items-center gap-3">
+  <td class="w-1/6 border-1">
+    <div class="flex flex-col items-stretch">
       <h4 class="font-bold">{projectName}</h4>
       <div class={`badge badge-sm ${frameworkBadgeColors[framework]}`}>
         {framework}
       </div>
-    </div> -->
+    </div>
   </td>
-  <td>
-    <span class="text-base-content/70 text-sm">{description}</span>
+  <td class="w-4/6">
+    <div class="w-full border-1 text-sm text-base-content/70">
+      {description}
+    </div>
   </td>
-  <td>
-    <a
-      href={demoUrl}
-      class="btn btn-primary btn-xs"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Demo
-    </a>
-    <!-- <div class="flex flex-col gap-2">
-      {githubUrl && (
-        <a href={githubUrl} class="btn btn-ghost btn-xs" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      )}
+  <td class="w-1/6">
+    <div class="flex flex-col">
+      <!-- {
+        githubUrl && (
+          <a
+            href={githubUrl}
+            class="btn btn-ghost btn-xs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        )
+      } -->
 
-        <a href={demoUrl} class="btn btn-primary btn-xs" target="_blank" rel="noopener noreferrer">
-          Demo
-        </a>
-
-    </div> -->
+      <a
+        href={demoUrl}
+        class="btn btn-xs btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Demo
+      </a>
+    </div>
   </td>
 </tr>

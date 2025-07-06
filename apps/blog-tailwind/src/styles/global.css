@@ -4,7 +4,6 @@
 
 @source "./node_modules/@repo/astro-ui/**/*.astro";
 
-@source not '@repo/styles';
 @source not '@repo/layout-webcomponents';
 
 @import '@repo/design-system/shared-styles.css';

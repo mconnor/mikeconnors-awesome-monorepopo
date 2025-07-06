@@ -11,17 +11,17 @@ const { emoj, framework, count, textColor } = Astro.props;
 ---
 
 <div
-  class="bg-base-100 flex items-center gap-4 rounded-xl p-6 shadow-lg"
+  class="flex items-center gap-4 rounded-xl bg-base-100 p-6 shadow-lg"
   data-framework="svelte"
 >
   <div class={textColor}>
     <span class="text-4xl">{emoj}</span>
   </div>
   <div>
-    <div class="text-base-content/60 text-sm font-medium">
+    <div class="text-sm font-medium text-base-content/60">
       {framework} Projects
     </div>
     <div class:list={['text-3xl font-bold', { textColor }]}>{count}</div>
-    <div class="text-base-content/70 text-sm"><slot name="copy" /></div>
+    <div class="text-sm text-base-content/70"><slot name="copy" /></div>
   </div>
 </div>

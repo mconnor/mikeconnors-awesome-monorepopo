@@ -1,34 +1,29 @@
 ---
-import { z } from 'astro:content';
 import Filter from '#components/Filter.astro';
 import StatsWidget from '#components/filterDemo/Stats.astro';
 import FrameworkCard from '#components/filterDemo/FrameworkCard.astro';
-import ProjectRow from '#components/ProjectRow.astro';
+// import ProjectRow from '#components/ProjectRow.astro';
 
 import { projectData, tableData } from '#app.config.ts';
 import { zTableRowSchema } from '#schemas/index.ts';
 
 import Layout from '#layouts/Layout.astro';
 
-interface PrType {
-  framework: 'svelte' | 'vue' | 'react';
-  projectName: string;
-  description: string;
-  githubUrl: string;
-  demoUrl: string;
-}
-
-// type ProjDataType= keyof typeof projectData;
+const frameworkBadgeColors = {
+  svelte: 'badge-warning',
+  vue: 'badge-success',
+  react: 'badge-info',
+};
 ---
 
 <Layout centerWidth="100%">
   <div class="mx-auto max-w-7xl p-8">
     <!-- Header -->
-    <div class="border-1 mb-8 text-center">
-      <h1 class="text-base-content mb-4 text-4xl font-bold">
+    <div class="mb-8 text-center">
+      <h1 class="mb-4 text-4xl font-bold text-base-content">
         Framework Filter Demo
       </h1>
-      <p class="text-base-content/70 mx-auto max-w-2xl text-lg">
+      <p class="mx-auto max-w-2xl text-lg text-base-content/70">
         Use the filter below to toggle visibility of components based on their
         framework. This demonstrates how the DaisyUI Filter component can
         control other components.
@@ -36,18 +31,18 @@ interface PrType {
     </div>
 
     <!-- Filter Component -->
-    <div class="border-1 mb-8 flex justify-center">
+    <div class="mb-8 flex justify-center">
       <div class="card bg-base-100 shadow-lg">
         <div class="card-body items-center text-center">
-          <h2 class="card-title mb-4">Filter by Framework</h2>
+          <h2 class="mb-4 card-title">Filter by Framework</h2>
           <Filter />
         </div>
       </div>
     </div>
 
     <!-- Framework Cards Section -->
-    <section class="border-1 mb-12">
-      <h2 class="text-base-content mb-6 text-2xl font-bold">
+    <section class="mb-12">
+      <h2 class="mb-6 text-2xl font-bold text-base-content">
         Framework Showcase
       </h2>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -65,25 +60,70 @@ interface PrType {
 
     <!-- Projects Table Section -->
     <section>
-      <h2 class="text-base-content mb-6 text-2xl font-bold">Projects Table</h2>
+      <h2 class="mb-6 text-2xl font-bold text-base-content">Projects Table</h2>
       <div
-        class="rounded-box border-base-content/5 bg-base-100 overflow-x-auto border"
+        class="overflow-x-auto rounded-box border border-base-content/5 bg-base-100"
       >
-        <table class="table-zebra table table-auto">
+        <table class="table w-full border-collapse">
           <thead>
             <tr>
-              <th>Project</th>
-              <th>Description</th>
-              <th>Links</th>
+              <th class="w-1/6">Project</th>
+              <th class="w-4/6">Description</th>
+              <th class="w-1/6">Links</th>
             </tr>
           </thead>
           <tbody>
             {
               tableData.map((p) => {
                 const { data, error } = zTableRowSchema.safeParse(p);
+
                 if (error) throw new Error(error.message);
 
-                return <ProjectRow project={data} />;
+                return (
+                  <tr
+                    class="w-full transition-all duration-300"
+                    data-framework={data.framework}
+                  >
+                    <td>
+                      <div class="flex flex-col items-stretch">
+                        <h4 class="font-bold">{data.projectName}</h4>
+                        <div
+                          class={`badge badge-sm ${frameworkBadgeColors[data.framework]}`}
+                        >
+                          {data.framework}
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="w-full text-sm text-base-content/70">
+                        {data.description}
+                      </div>
+                    </td>
+                    <td>
+                      <div class="flex flex-col">
+                        {data.githubUrl && (
+                          <a
+                            href={data.githubUrl}
+                            class="btn btn-ghost btn-xs"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            GitHub
+                          </a>
+                        )}
+
+                        <a
+                          href={data.demoUrl}
+                          class="btn btn-xs btn-primary"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Demo
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                );
               })
             }
           </tbody>
@@ -92,8 +132,8 @@ interface PrType {
     </section>
 
     <!-- Additional Filterable Content -->
-    <section class="border-1 mt-12">
-      <h2 class="text-base-content mb-6 text-2xl font-bold">Quick Stats</h2>
+    <section class="mt-12">
+      <h2 class="mb-6 text-2xl font-bold text-base-content">Quick Stats</h2>
 
       <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
         <div data-framework="react">

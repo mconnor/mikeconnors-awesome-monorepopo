@@ -1,0 +1,14 @@
+---
+//import Another from "#components/Another/index.astro";
+interface Props {
+  title: string;
+  copy: string;
+}
+const { title, copy } = Astro.props;
+---
+
+<h2>
+  {title}<h2>
+    <div class={copy}></div>
+  </h2>
+</h2>

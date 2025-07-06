@@ -1,0 +1,61 @@
+---
+import Layout from '#layouts/Layout.astro';
+import MyComponent from '#components/MyComponent/index.astro';
+import Table from '@repo/react/Table';
+const title = 'Table Demo';
+
+// Fake user data
+const fakeUsers: User[] = [
+  {
+    id: 1,
+    name: 'John Doe',
+    email: 'john.doe@example.com',
+    role: 'Admin',
+    status: 'active',
+    lastLogin: '2024-01-15',
+    avatar: 'https://picsum.photos/40/40?random=1',
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    email: 'jane.smith@example.com',
+    role: 'Editor',
+    status: 'active',
+    lastLogin: '2024-01-14',
+    avatar: 'https://picsum.photos/40/40?random=2',
+  },
+  {
+    id: 3,
+    name: 'Bob Johnson',
+    email: 'bob.johnson@example.com',
+    role: 'Viewer',
+    status: 'inactive',
+    lastLogin: '2024-01-10',
+    avatar: 'https://picsum.photos/40/40?random=3',
+  },
+  {
+    id: 4,
+    name: 'Alice Brown',
+    email: 'alice.brown@example.com',
+    role: 'Editor',
+    status: 'pending',
+    lastLogin: '2024-01-12',
+    avatar: 'https://picsum.photos/40/40?random=4',
+  },
+  {
+    id: 5,
+    name: 'Charlie Wilson',
+    email: 'charlie.wilson@example.com',
+    role: 'Admin',
+    status: 'active',
+    lastLogin: '2024-01-16',
+    avatar: 'https://picsum.photos/40/40?random=5',
+  },
+];
+---
+
+<Layout centerWidth="60ch" title={title}>
+  <div class="">
+    <Table />
+  </div>
+</Layout>

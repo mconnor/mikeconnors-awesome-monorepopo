@@ -16,7 +16,7 @@ const frameworkBadgeColors = {
 ---
 
 <div class="w-full overflow-x-auto">
-  <table class="table-zebra table w-full">
+  <table class="table w-full table-zebra">
     <thead>
       <tr>
         <th class="w-1/6">Project</th>
@@ -40,7 +40,7 @@ const frameworkBadgeColors = {
                 </div>
               </td>
               <td class="w-4/6">
-                <span class="text-base-content/70 wrap-break-word text-xs">
+                <span class="text-xs wrap-break-word text-base-content/70">
                   {rowData.description}
                 </span>
               </td>
@@ -49,7 +49,7 @@ const frameworkBadgeColors = {
                 <div class="flex flex-col gap-1">
                   <a
                     href={rowData.demoUrl}
-                    class="btn btn-primary btn-xs"
+                    class="btn btn-xs btn-primary"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
