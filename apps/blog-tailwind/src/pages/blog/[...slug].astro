@@ -5,21 +5,18 @@ import { render } from 'astro:content';
 export const prerender = true;
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  const posts = await getCollection('blogCollection');
   return posts.map((post) => ({
     params: { slug: post.id },
     props: { post },
   }));
 }
 
-type Props = CollectionEntry<'blog'>;
-
-const { pid } = Astro.params;
 const { post } = Astro.props;
 
 const { Content } = await render(post);
 ---
 
-<ProseLayout id={pid} data={post.data}>
+<ProseLayout {...post}>
   <Content />
 </ProseLayout>

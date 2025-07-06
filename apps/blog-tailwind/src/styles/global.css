@@ -1,4 +1,3 @@
-/* @import 'open-props/open-props.min.css'; */
 @import 'tailwindcss';
 @source not "../src/public";
 @source '../../src';

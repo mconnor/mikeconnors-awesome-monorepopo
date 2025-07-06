@@ -1,39 +1,37 @@
-import { defineCollection } from 'astro:content';
-import { parse as parseToml } from '@std/toml/parse';
+import TOML from '@iarna/toml';
+import { z, reference, defineCollection } from 'astro:content';
 // build-in loaders
 import { file, glob } from 'astro/loaders';
 
 // import { countryLoader } from './loaders/index.ts';
 
-// import { authorsSchema, blogSchema } from './schemas';
-import authorsSchema from '@repo/schemas/AuthorsSchema';
-import { blogSchema } from '#schemas/index.ts';
+import { Blog, Author } from '@repo/schemas/Schemas';
+
 type ParserReturnType =
   | Record<string, Record<string, unknown>>
   | Record<string, unknown>[];
 
-const authors = defineCollection({
-  loader: file('src/content/authors.toml', {
-    parser: (text) => {
-      const parsed = parseToml(text);
-      if (!parsed?.authors) {
-        throw new Error('Invalid TOML: missing authors section');
-      }
-      return parsed.authors as ParserReturnType;
-    },
-  }),
-  schema: authorsSchema,
+const refSchema = z.object({
+  author: reference('authorsCollection').optional(),
+  relatedPosts: z.array(reference('blogCollection')).optional(),
 });
 
-// relatedPosts: z.array(reference('blog')).optional(),
+const BlogAuthorSchema = Blog.merge(refSchema);
 
-const blog = defineCollection({
+const blogCollection = defineCollection({
   // type: 'content',
   loader: glob({
     pattern: '**/*.{md,mdx}',
     base: './src/content/blog',
   }),
-  schema: blogSchema,
+  schema: BlogAuthorSchema,
+});
+
+const authorsCollection = defineCollection({
+  loader: file('src/content/authors.toml', {
+    parser: (text) => TOML.parse(text).authors as ParserReturnType,
+  }),
+  schema: Author,
 });
 
 // const announcements = defineCollection({
@@ -54,4 +52,7 @@ const blog = defineCollection({
 //   schema: /* ... */
 // })
 
-export const collections = { blog, authors };
+export const collections = {
+  blogCollection,
+  authorsCollection,
+};

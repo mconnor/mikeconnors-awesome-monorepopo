@@ -1,24 +1,17 @@
 ---
 import Layout from './Layout.astro';
-import { blogSchema } from '#schemas/index.ts';
-import type { z } from 'astro:content';
-interface Props {
-  // maxW?: string;
-  // children: unknown;
-  // title?: string;
-  // description?: string;
-  data: z.infer<typeof blogSchema>;
-  children: unknown;
-}
+import { type CollectionEntry } from 'astro:content';
 
-const { data } = Astro.props;
-const { title, description, tags } = data;
+import { format } from 'date-fns';
+const { data } = Astro.props as CollectionEntry<'blogCollection'>;
+const { date, title, description, tags } = data;
 ---
 
 <Layout title={title} description={description} maxW="60ch">
   <div
     class="prose md:prose-lg lg:prose-xl dark:prose-invert prose-a:text-blue-600 prose-a:hover:text-blue-500"
   >
+    {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
     <slot />
     {
       tags && (

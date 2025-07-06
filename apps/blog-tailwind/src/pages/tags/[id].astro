@@ -12,7 +12,7 @@ export const prerender = true;
 
 export async function getStaticPaths() {
   const publishsedPosts = await getCollection(
-    'blog',
+    'blogCollection',
     ({ data }) => data.draft !== true,
   );
 
