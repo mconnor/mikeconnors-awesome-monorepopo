@@ -1,11 +1,9 @@
-import { z } from 'zod';
-// import * as z from 'zod/v3'; // v4
-import { dateLikeToDate } from './utils/index.ts';
+import * as z from 'zod/v3'; // v4
 
-const zTags = z.array(z.string()).nonempty();
-const tagCountTypeSchema = z.record(z.number());
+const dateLike = z.union([z.number(), z.string(), z.date()]);
+const dateLikeToDate = dateLike.pipe(z.coerce.date());
 
-const blogSchema = z.object({
+const schema = z.object({
   title: z.string(),
   date: dateLikeToDate.optional(),
   description: z.string(),
@@ -16,4 +14,4 @@ const blogSchema = z.object({
   cover: z.object({ src: z.string().url(), alt: z.string() }).optional(),
 });
 
-export default blogSchema;
+export default schema;

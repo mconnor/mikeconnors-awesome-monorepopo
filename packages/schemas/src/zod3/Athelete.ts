@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import * as z from 'zod/v3';
 
 const athleteSchema = z.tuple([
   z.string(), // name
@@ -8,5 +8,5 @@ const athleteSchema = z.tuple([
   }), // statistics
 ]);
 
-export { athleteSchema };
+export default athleteSchema;
 export type Athlete = z.infer<typeof athleteSchema>;

@@ -1,7 +1,7 @@
-import { z } from 'zod';
+import * as z from 'zod/v3'; // v4
 import { zWebSite, zEmail } from './utils/index.ts';
 
-const authorsSchema = z.object({
+const schema = z.object({
   id: z.string(),
   name: z.string(),
   email: zEmail.optional(),
@@ -9,4 +9,4 @@ const authorsSchema = z.object({
   links: z.array(zWebSite).optional(),
 });
 
-export default authorsSchema;
+export default schema;
