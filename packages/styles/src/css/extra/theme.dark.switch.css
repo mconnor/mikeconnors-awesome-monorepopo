@@ -1,8 +1,0 @@
-:where([data-theme='dark'], .dark, .dark-theme) {
-  color-scheme: dark;
-
-  --brand: var(--brand-dark);
-  --link: var(--link-dark);
-  --link-visited: var(--link-visited-dark);
-  --border-color: var(--brand-dark);
-}

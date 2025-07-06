@@ -13,3 +13,4 @@ public/dist
 .astro
 .vercel
 /notes.txt
+/out

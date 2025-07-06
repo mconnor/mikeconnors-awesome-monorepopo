@@ -15,7 +15,6 @@
   "private": true,
   "scripts": {
     "new": "turbo gen workspace --copy",
-    "format": "prettier --write \"**/*.{ts,tsx,md,astro,css,svelte,vue}\" --ignore-path .prettierignore",
     "graph": "turbo run build --graph",
     "build": "turbo build",
     "preview": "turbo preview",
@@ -28,6 +27,7 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
+    "@prettier/plugin-oxc": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
@@ -48,7 +48,8 @@
       "core-js",
       "esbuild",
       "sharp",
-      "svelte-preprocess"
+      "svelte-preprocess",
+      "unrs-resolver"
     ],
     "overrides": {}
   }

@@ -19,7 +19,7 @@
 		"@eslint/compat": "catalog:",
 		"@eslint/js": "catalog:",
 		"@fontsource/fira-mono": "^5.2.6",
-		"@neoconfetti/svelte": "^2.0.0",
+		"@neoconfetti/svelte": "^2.2.2",
 		"@sveltejs/adapter-auto": "catalog:svelte5",
 		"@sveltejs/adapter-vercel": "catalog:svelte5",
 		"@sveltejs/kit": "catalog:svelte5",
@@ -32,7 +32,7 @@
 		"eslint-config-prettier": "catalog:",
 		"eslint-plugin-svelte": "catalog:",
 		"globals": "catalog:",
-		"playwright": "^1.53.1",
+		"playwright": "^1.53.2",
 		"prettier": "catalog:",
 		"prettier-plugin-svelte": "catalog:svelte5",
 		"prettier-plugin-tailwindcss": "catalog:",
@@ -42,7 +42,7 @@
 		"typescript": "catalog:",
 		"typescript-eslint": "catalog:",
 		"vite": "catalog:",
-		"vite-plugin-devtools-json": "^0.2.0",
+		"vite-plugin-devtools-json": "^0.2.1",
 		"vitest": "catalog:",
 		"vitest-browser-svelte": "^1.0.0"
 	}

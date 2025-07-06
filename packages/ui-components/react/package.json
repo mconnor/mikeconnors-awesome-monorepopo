@@ -49,6 +49,7 @@
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/cli": "catalog:",
     "daisyui": "catalog:",
+    "jest": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",

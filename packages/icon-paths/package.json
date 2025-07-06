@@ -23,8 +23,7 @@
     "lint": "eslint --max-warnings=0",
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
-    "check-types": "tsc --noEmit",
-    "@repo/styles": "workspace:*"
+    "check-types": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
