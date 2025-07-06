@@ -30,7 +30,6 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
-    "tsup": "catalog:",
     "vue": "catalog:"
   },
   "peerDependencies": {

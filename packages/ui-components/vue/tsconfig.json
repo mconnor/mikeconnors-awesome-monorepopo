@@ -1,7 +1,5 @@
 {
-  "extends": "@repo/typescript-config/astro-base",
-  "compilerOptions": {
-    "strict": true,
-    "jsx": "preserve"
-  }
+  "extends": "@repo/typescript-config/vue",
+  "compilerOptions": {},
+  "files": ["eslint.config.mjs"]
 }

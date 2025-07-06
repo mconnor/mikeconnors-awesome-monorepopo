@@ -1,7 +1,8 @@
 // @ts-check
 import markdown from '@eslint/markdown';
+import { defineConfig } from 'eslint/config';
 
-export default [
+export default defineConfig([
   {
     // Apply the Markdown processor to all .md files
     files: ['**/*.md'],
@@ -22,4 +23,4 @@ export default [
       'markdown/no-missing-label-refs': 'error', // Disallow missing label references
     },
   },
-];
+]);

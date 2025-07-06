@@ -5,7 +5,7 @@ import ignoresConfig from './ignores.config.mjs';
 import vueParser from 'vue-eslint-parser';
 
 import eslintConfigPrettier from 'eslint-config-prettier';
-
+import eslint from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 import extensionInstanceObj from './fileExtensions.mjs';
@@ -15,20 +15,16 @@ export default tseslint.config(
   ignoresConfig,
   {
     extends: [
-      //   eslint.configs.recommended,
-      //   ...typescriptEslint.configs.recommended,
+      eslint.configs.recommended,
+      ...tseslint.configs.recommended,
       ...pluginVue.configs['flat/recommended'],
     ],
-    files: ['**/*.vue'],
+    files: ['*.vue', '**/*.vue'],
     languageOptions: {
-      //   ecmaVersion: 'latest',
-      //   sourceType: 'module',
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
-        ...globals.browser,
-        // ...globals.nodeBuiltin,
-        // ...globals.worker,
-        // JSX: false,
-        // ...globals.node,
+        ...globals['shared-node-browser'],
       },
 
       parser: vueParser,

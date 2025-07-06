@@ -1,11 +1,6 @@
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
-/**
- * A custom ESLint configuration for libraries that use Next.js.
- *
- * @type {import("eslint").Linter.Config}
- * */
-
+/** @type {import("eslint").Linter.Config} */
 export default [
   {
     plugins: {

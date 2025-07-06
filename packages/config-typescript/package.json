@@ -10,8 +10,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@vue/tsconfig": "^0.7.0",
     "astro": "catalog:",
     "typescript": "catalog:"
   }
