@@ -1,12 +1,16 @@
 /* @import 'open-props/open-props.min.css'; */
 @import 'tailwindcss';
+@source not "../src/public";
+@source '../../src';
 
-@source "../**/*.astro";
+@source "./node_modules/@repo/astro-ui/**/*.astro";
 
 @source not '@repo/styles';
 @source not '@repo/layout-webcomponents';
 
-@import '@repo/design-system';
+@import '@repo/design-system/shared-styles.css';
+@import '@repo/astro-ui/styles.css';
+
 @plugin '@tailwindcss/typography';
 @plugin "daisyui" {
   root: '#my-app';

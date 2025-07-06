@@ -5,8 +5,9 @@ import { file, glob } from 'astro/loaders';
 
 // import { countryLoader } from './loaders/index.ts';
 
-import { authorsSchema, blogSchema } from './schemas';
-
+// import { authorsSchema, blogSchema } from './schemas';
+import authorsSchema from '@repo/schemas/AuthorsSchema';
+import { blogSchema } from '#schemas/index.ts';
 type ParserReturnType =
   | Record<string, Record<string, unknown>>
   | Record<string, unknown>[];
