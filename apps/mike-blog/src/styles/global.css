@@ -9,10 +9,7 @@
 @import '@repo/astro-ui/styles.css';
 
 @plugin "daisyui" {
-  themes:
-    light --default,
-    dark --prefersdark,
-    synthwave;
+  themes: all;
   root: '#blog-app';
 }
 

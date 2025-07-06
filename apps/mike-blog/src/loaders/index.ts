@@ -1,5 +1,5 @@
-import { jsonSchema } from '#schemas/utils.ts';
-import { countriesSchema, countrySchema } from '#schemas/countries.ts';
+import { jsonSchema } from '@repo/schemas/Utils';
+import { countriesSchema, countrySchema } from '@repo/schemas/CountriesSchema';
 import type { Loader, LoaderContext } from 'astro/loaders';
 
 //  parseData<TData extends Record<string, unknown>>(props: ParseDataOptions<TData>): Promise<TData>;

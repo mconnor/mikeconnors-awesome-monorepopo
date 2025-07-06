@@ -1,72 +1,28 @@
 ---
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
-import TimeLine from '#components/TimeLine/index.astro';
-import Frame from '@repo/layout-webcomponents/Frame';
-import Stack from '@repo/layout-webcomponents/Stack';
-import Andy from '#assets/andy_mud_color.webp';
+
 import Carousel from '@repo/astro-ui/Carousel';
 import { Image } from 'astro:assets';
 // import Mix from '@repo/astro-ui/Mix';
 // import Btns from '@repo/astro-ui/Btns';
+import { imageSources } from '#app.config.ts';
 
 // import Andy from '#assets/Andy.jpg';
-export const prerender = true;
-
-const timeCapsules = [
-  { label: 'DC', year: 1990, first: true },
-  { label: 'NYC', year: 1995 },
-  { label: 'Portland, OR', year: 2012 },
-  { label: 'New Orleans', year: 2014 },
-  { label: 'KCMO', year: 2022, last: true },
-];
-
-const imageSources = [
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp',
-    altText: 'Beautiful landscape with mountains and lake',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
-    altText: 'Colorful autumn forest scene',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp',
-    altText: 'Tropical beach with palm trees',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp',
-    altText: 'City skyline at sunset',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp',
-    altText: 'Serene mountain lake reflection',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
-    altText: 'Desert landscape with cacti',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp',
-    altText: 'Ocean waves crashing on rocks',
-  },
-];
+// export const prerender = true;
 ---
 
 <Layout>
   <!-- <Stack space="var(--s4)"> -->
   <!-- <Btns /> -->
-
-  <div class="flex flex-col justify-center -space-x-14">
-    <!-- <Mix alert /> -->
-    <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
+  <div class="flex flex-col md:flex-row">
+    <!-- <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
       <Frame ratio="1.6180:1">
         <Image src={Andy} alt="Andy" class="float-right" />
       </Frame>
-    </div>
-
-    <!-- <TimeLine items={timeCapsules} /> -->
-    <div class="m-0 overflow-hidden p-0">
+    </div> -->
+    <Carousel images={imageSources} />
+    <div class="border-1">
       <Prose>
         <h1>About Me</h1>
         <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
@@ -75,9 +31,9 @@ const imageSources = [
           and fitness.
         </p>
       </Prose>
-
-      <!-- <Carousel images={imageSources} /> -->
     </div>
   </div>
   <!-- </Stack> -->
 </Layout>
+
+<!-- <TimeLine items={timeCapsules} /> -->

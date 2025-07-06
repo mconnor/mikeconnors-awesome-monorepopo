@@ -4,7 +4,8 @@ import { z } from 'astro:content';
 import Headline from '#components/Headline.astro';
 import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
-import { tagCountTypeSchema, zTags } from '#schemas/index.ts';
+
+import { tagsSchema, tagCountSchema } from '@repo/schemas/TagsSchema';
 
 const allBlogPost = await getCollection('blogCollection');
 
@@ -37,10 +38,10 @@ const tagCountsObject = slugTags.reduce(
 
 const uniqueTagArray = [...new Set(slugTags.map((post) => post.tags).flat())];
 
-const zUniqueTagArray = zTags.safeParse(uniqueTagArray);
+const zUniqueTagArray = tagsSchema.safeParse(uniqueTagArray);
 
 const { success: tagCountSuccess, data: tagCountData } =
-  tagCountTypeSchema.safeParse(tagCountsObject);
+  tagCountSchema.safeParse(tagCountsObject);
 
 if (!tagCountSuccess) {
   throw new Error('Invalid tag count data');

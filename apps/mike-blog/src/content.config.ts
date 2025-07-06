@@ -9,19 +9,25 @@ import { defineCollection } from 'astro:content';
 
 // import { blogSchema } from './schemas';
 import announcementsSchema from '@repo/schemas/AnnouncementsSchema';
-import authorsSchema from '@repo/schemas/AuthorsSchema';
 
-import { blogSchema } from '#schemas/index.ts';
+import { Blog, Author } from '@repo/schemas/Schemas';
 
 type ParserReturnType =
   | Record<string, Record<string, unknown>>
   | Record<string, unknown>[];
 
+const refSchema = z.object({
+  author: reference('authorsCollection').optional(),
+  relatedPosts: z.array(reference('blogCollection')).optional(),
+});
+
+const BlogAuthorSchema = Blog.merge(refSchema);
+
 const authorsCollection = defineCollection({
   loader: file('src/content/authors.toml', {
     parser: (text) => TOML.parse(text).authors as ParserReturnType,
   }),
-  schema: authorsSchema,
+  schema: Author,
 });
 
 const blogCollection = defineCollection({
@@ -30,7 +36,7 @@ const blogCollection = defineCollection({
     pattern: '**/*.{md,mdx}',
     base: './src/content/blog',
   }),
-  schema: blogSchema,
+  schema: BlogAuthorSchema,
 });
 
 const announcementsCollection = defineCollection({
