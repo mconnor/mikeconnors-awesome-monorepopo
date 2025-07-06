@@ -45,7 +45,6 @@
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-astro": "catalog:",
     "eslint-plugin-barrel-files": "catalog:",
-    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-lit": "catalog:",
     "eslint-plugin-only-warn": "catalog:",
     "eslint-plugin-react": "catalog:",

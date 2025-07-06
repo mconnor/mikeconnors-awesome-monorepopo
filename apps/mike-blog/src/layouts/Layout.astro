@@ -32,11 +32,12 @@ const GUTTERS = '1ch'; // padding for the main content area
 ---
 
 <BaseLayout title={title} {...rest}>
+  <slot name="bg" />
   <Cover centeredElement="center-l" noPad minHeight="100dvh">
     <NavBar transition:persist />
 
     <BreadCrumbs />
-    <Center gutters={GUTTERS} max={maxW}>
+    <Center gutters={GUTTERS} max={maxW} transition:animate="slide">
       <slot />
     </Center>
 

@@ -22,5 +22,20 @@ const zWebSite = z.object({
   url: z.string().url(),
 });
 
+const cityCodeSch = z.string().length(3);
+
+// Regex for exactly three capital letters
+const threeCapsRegex = /^[A-Z]{3}$/;
+const zThreeCapitalLetters = z
+  .string()
+  .regex(threeCapsRegex, 'Must be exactly three capital letters');
+
 const zEmail = z.coerce.string().email().min(5);
-export { zWebSite, dateLike, dateLikeToDate, jsonSchema, zEmail };
+export {
+  zWebSite,
+  dateLike,
+  dateLikeToDate,
+  jsonSchema,
+  zEmail,
+  zThreeCapitalLetters,
+};

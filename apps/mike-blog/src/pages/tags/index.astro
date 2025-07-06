@@ -4,7 +4,7 @@ import { z } from 'astro:content';
 import Headline from '#components/Headline.astro';
 import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
-import { tagCountTypeSchema, zTags } from '#schemas/index.js';
+import { tagCountTypeSchema, zTags } from '#schemas/index.ts';
 
 const allBlogPost = await getCollection('blogCollection');
 

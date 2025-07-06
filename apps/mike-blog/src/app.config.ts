@@ -73,4 +73,49 @@ const navLinks: NavLinkI[] = [
   // { label: 'Store', href: '/store', icon: 'store' },
 ] as const;
 
-export { NAME, SITE_TITLE, SITE_DESCRIPTION, OUTBOUND_LINKS, navLinks };
+const imageSources = [
+  {
+    img: 'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp',
+    altText: 'Beautiful landscape with mountains and lake',
+  },
+  {
+    img: 'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
+    altText: 'Colorful autumn forest scene',
+  },
+  {
+    img: 'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp',
+    altText: 'Tropical beach with palm trees',
+  },
+  {
+    img: 'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp',
+    altText: 'City skyline at sunset',
+  },
+  {
+    img: 'https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp',
+    altText: 'Serene mountain lake reflection',
+  },
+  {
+    img: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
+    altText: 'Desert landscape with cacti',
+  },
+  {
+    img: 'https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp',
+    altText: 'Ocean waves crashing on rocks',
+  },
+];
+
+const timeCapsules = [
+  { label: 'DC', year: 1990, first: true },
+  { label: 'NYC', year: 1995 },
+  { label: 'Portland, OR', year: 2012 },
+  { label: 'New Orleans', year: 2014 },
+  { label: 'KCMO', year: 2022, last: true },
+];
+export {
+  NAME,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  OUTBOUND_LINKS,
+  navLinks,
+  imageSources,
+};
