@@ -1,5 +1,5 @@
 import * as z from 'zod/v3';
-import { zWebSite, zEmail } from './utils/index.ts';
+import { zWebSite, zEmail } from './Utils.ts';
 
 const personalSchema = z.object({
   name: z.string(),

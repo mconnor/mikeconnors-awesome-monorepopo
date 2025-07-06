@@ -1,8 +1,8 @@
 import TOML from '@iarna/toml';
-import { z, reference } from 'astro:content';
+import { z, reference, defineCollection } from 'astro:content';
 // build-in loaders
 import { file, glob } from 'astro/loaders';
-import { defineCollection } from 'astro:content';
+
 // import { personalSchema } from '#schemas/personalSchema.ts';
 
 // import { countryLoader } from './loaders/index.ts';
