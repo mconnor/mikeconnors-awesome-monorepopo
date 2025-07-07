@@ -3,34 +3,36 @@
 // import { Links } from '#app.config.ts';
 // import Switcher from '@repo/layout-webcomponents/Switcher';
 
-import SocialIcon from './SocialIcon.astro';
+// import SocialIcon from './SocialIcon.astro';
 
-// import EasterEgg from '@repo/astro-ui/EasterEgg';
-// import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
+import EasterEgg from '@repo/astro-ui/EasterEgg';
+import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
 ---
 
-<!-- <footer class="grid grid-cols-1 md:grid-cols-3">
-  <p class="hidden md:block">Site and contents by Mike Connor</p>
+<footer
+  class="flex flex-col items-center gap-4 p-2 text-center md:flex-row md:justify-between md:text-left"
+>
+  <p class="text-sm">Site and contents by Mike Connor</p>
 
   <MailtoBtn buttonText="CONTACT" />
 
   <EasterEgg />
-</footer> -->
-<div class="footer bg-neutral p-10 text-neutral-content sm:footer-horizontal">
+</footer>
+<!-- <div class="footer bg-neutral p-10 text-neutral-content sm:footer-horizontal">
   <aside>
     <SocialIcon company="logo" dim="50" />
     <p>
-      ACME Industries Ltd.
+      © Mike Connor 2025
       <br />
-      Providing reliable tech since 1992
+      Tech Dev/Media Producer
     </p>
   </aside>
   <nav>
-    <h6 class="footer-title">Social</h6>
+
     <div class="grid grid-flow-col gap-4">
       <a href="./"><SocialIcon company="twitter" /></a>
       <a href="./"><SocialIcon company="linkedin" /></a>
       <a href="./"><SocialIcon company="facebook" /></a>
     </div>
   </nav>
-</div>
+</div> -->

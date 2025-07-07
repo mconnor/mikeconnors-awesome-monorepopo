@@ -7,7 +7,7 @@ import Prose from '#components/Prose.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
 import Author from '#components/Author/index.astro';
 import BlogPicWrapper from '#components/BlogPicWrapper.astro';
-
+import Tag from '#components/TagContainer/Tag.astro';
 // interface Props extends CollectionEntry<'blogCollection'> {}
 
 import { format } from 'date-fns';
@@ -40,19 +40,20 @@ const { tags, title, description, date, cover, author: authorRef } = data;
     {cover?.src && cover?.alt && <BlogPicWrapper cover={cover} />}
 
     {authorRef && <Author authorReference={authorRef} />}
-    <div class="border-1">
+    <div class="">
       <Prose>
         <slot />
       </Prose>
     </div>
-    <div class="border-1">
+    <div class="">
       {
         tags && (
           <div class="flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">
-                {tag}
-              </span>
+              // <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800">
+              //   {tag}
+              // </span>
+              <Tag tag={tag} />
             ))}
           </div>
         )

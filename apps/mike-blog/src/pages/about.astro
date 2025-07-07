@@ -1,51 +1,103 @@
 ---
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
-
-import Carousel from '@repo/astro-ui/Carousel';
+import Frame from '@repo/layout-webcomponents/Frame';
+import Stack from '@repo/layout-webcomponents/Stack';
+// import Carousel from '@repo/astro-ui/Carousel';
 import { Image } from 'astro:assets';
 // import Mix from '@repo/astro-ui/Mix';
 // import Btns from '@repo/astro-ui/Btns';
-import { imageSources } from '#app.config.ts';
-
-import Andy from '#assets/andy_mud_color.webp';
-import Kells from '#assets/kelleys.jpg';
-import sovietplane from '#assets/sovietplane.jpg';
+import { imageSources, timeCapsules } from '#app.config.ts';
+import TimeLine from '#components/TimeLine/index.astro';
+import Bushes from '#assets/andyBushes.jpg';
+// import Mud from '#assets/andy_mud_color.webp';
+// import Bushes from '#assets/Andy.jpg';
+// import Kells from '#assets/kelleys.jpg';
+// import sovietplane from '#assets/sovietplane.jpg';
 // export const prerender = true;
 ---
 
 <Layout>
   <!-- <Stack space="var(--s4)"> -->
   <!-- <Btns /> -->
-  <div class="flex flex-col">
-    <!-- <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
+  <Prose>
+    <Stack>
+      <!-- <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
       <Frame ratio="1.6180:1">
         <Image src={Andy} alt="Andy" class="float-right" />
       </Frame>
     </div> -->
-    <Prose>
-      <h1>About Me</h1>
-      <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
+      <h1 class="font-mono">About</h1>
+
+      <Frame ratio="3:2">
+        <Image
+          src={Bushes}
+          alt="Andy"
+          layout="constrained"
+          class="hue-cycle animate-spin rounded-4xl"
+        />
+      </Frame>
+      <div class="not-prose"></div>
+
       <p>
-        This is a blog about my adventures in software development, travel, and
-        fitness.
+        I have a dog named Andy. I am a front-end dev. I've been everywhere. I'm
+        a back to where I began.
       </p>
-    </Prose>
-    <!-- <Carousel images={imageSources} /> -->
 
-    <div class="carousel h-48 w-48 carousel-center rounded-box">
-      <div class="carousel-item">
-        <Image src={Andy} alt="Andy" />
+      <TimeLine items={timeCapsules} />
+      <div
+        class="bg-gradient-to-b from-base-content to-transparent bg-clip-text text-transparent"
+      >
+        <p>
+          At the moment, the blog is all Nostrud adipisicing mollit excepteur in
+          adipisicing commodo deserunt aliquip ut culpa magna aliqua consequat.
+          Excepteur id quis quis reprehenderit et in commodo qui. Velit anim in
+          fugiat cillum laboris reprehenderit sint elit. Nulla aliqua ad dolore
+          incididunt pariatur esse Lorem ex culpa adipisicing nulla sunt. Anim
+          dolor proident fugiat ipsum. Tempor magna commodo dolor excepteur
+          velit Lorem officia eu. Officia tempor non est enim cupidatat et
+          consequat. Sunt fugiat exercitation qui voluptate id. Esse id aliquip
+          consectetur ipsum tempor laboris exercitation adipisicing sit
+          excepteur eu cillum. Minim quis ad aliquip
+        </p>
+        <p>
+          And further more, Lorem eu consequat ipsum velit labore do duis veniam
+          nisi. Ex exercitation labore in cillum ut consectetur ullamco. Amet
+          aliqua sint dolor sunt ad aliquip ullamco dolor pariatur do. Anim duis
+          eu in est eiusmod ad eu nulla. Sint sunt nisi esse duis Lorem
+          incididunt ex eiusmod sunt laborum fugiat excepteur cillum anim. Est
+          culpa quis minim ullamco ipsum amet non exercitation esse sit amet
+          commodo pariatur commodo. Ipsum dolore amet nostrud irure do velit ut
+          laborum labore voluptate. Proident magna ipsum magna adipisicing
+          incididunt ipsum aliqua eiusmod elit nostrud. Esse elit cillum
+          excepteur esse pariatur laborum cillum dolor cillum consequat. Aliquip
+          ex velit proident ipsum nostrud labore nulla ea laboris et in in.
+          Culpa adipisicing mollit nostrud anim non ullamco commodo nisi. Non
+          dolore do excepteur cillum qui exercitation. Ex dolore labore aliquip
+          tempor labore cillum aliqua deserunt. Minim ea ipsum id eiusmod
+          excepteur nulla Lorem ut cillum quis quis anim minim excepteur. Aliqua
+          officia deserunt labore elit esse tempor magna. Nisi ut consectetur
+          culpa irure aute nostrud et occaecat.
+        </p>
       </div>
-      <div class="carousel-item">
-        <Image src={Kells} alt="Kells" />
-      </div>
-      <div class="carousel-item">
-        <Image src={sovietplane} alt="sovietplane" />
-      </div>
-    </div>
-    <!-- </Stack> -->
-  </div>
-
-  <!-- <TimeLine items={timeCapsules} /> -->
+    </Stack>
+  </Prose>
 </Layout>
+<!-- <Carousel images={imageSources} /> -->
+
+<!-- </Stack> -->
+
+<style>
+  .hue-cycle {
+    animation: hue-rotation 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes hue-rotation {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(180deg);
+    }
+  }
+</style>

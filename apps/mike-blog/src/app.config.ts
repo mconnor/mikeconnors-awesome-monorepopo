@@ -1,6 +1,6 @@
 import type iconPaths from '@repo/icon-paths/paths';
 type IconType = keyof typeof iconPaths;
-
+import MyAvatar from '#assets/img-1_200x200.webp';
 const NAME = 'Mike Connor';
 const SITE_TITLE = 'Mike Connor | Developer';
 const SITE_DESCRIPTION =
@@ -55,7 +55,7 @@ export interface NavLinkI {
   subPages?: boolean;
 }
 const navLinks: NavLinkI[] = [
-  { label: 'Home', href: '/', icon: 'home' },
+  // { label: 'Home', href: '/', icon: 'home' },
   { label: 'About', href: '/about', icon: 'projects' },
   // { label: 'countries', href: '/countries', icon: 'country' },
   // { label: 'buttons', href: '/buttons', icon: 'home' },
@@ -75,47 +75,58 @@ const navLinks: NavLinkI[] = [
 
 const imageSources = [
   {
-    img: 'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp',
-    altText: 'Beautiful landscape with mountains and lake',
+    img: './assets/kelleys.jpeg',
+    altText: 'Kelleys',
   },
   {
-    img: 'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
-    altText: 'Colorful autumn forest scene',
+    img: './assets/andy_mud_color.webp',
+    altText: 'webp',
   },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp',
-    altText: 'Tropical beach with palm trees',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp',
-    altText: 'City skyline at sunset',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp',
-    altText: 'Serene mountain lake reflection',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
-    altText: 'Desert landscape with cacti',
-  },
-  {
-    img: 'https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp',
-    altText: 'Ocean waves crashing on rocks',
-  },
+  // {
+  //   img: 'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp',
+  //   altText: 'Beautiful landscape with mountains and lake',
+  // },
+  // {
+  //   img: 'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
+  //   altText: 'Colorful autumn forest scene',
+  // },
+  // {
+  //   img: 'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp',
+  //   altText: 'Tropical beach with palm trees',
+  // },
+  // {
+  //   img: 'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp',
+  //   altText: 'City skyline at sunset',
+  // },
+  // {
+  //   img: 'https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp',
+  //   altText: 'Serene mountain lake reflection',
+  // },
+  // {
+  //   img: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
+  //   altText: 'Desert landscape with cacti',
+  // },
+  // {
+  //   img: 'https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp',
+  //   altText: 'Ocean waves crashing on rocks',
+  // },
 ];
 
 const timeCapsules = [
-  { label: 'DC', year: 1990, first: true },
+  { label: 'KCMO', year: 0, first: true },
+  { label: 'DC', year: 1990 },
   { label: 'NYC', year: 1995 },
   { label: 'Portland, OR', year: 2012 },
   { label: 'New Orleans', year: 2014 },
   { label: 'KCMO', year: 2022, last: true },
 ];
 export {
+  MyAvatar,
   NAME,
   SITE_TITLE,
   SITE_DESCRIPTION,
   OUTBOUND_LINKS,
   navLinks,
   imageSources,
+  timeCapsules,
 };

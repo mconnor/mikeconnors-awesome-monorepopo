@@ -1,14 +1,15 @@
 ---
 import Center from '@repo/layout-webcomponents/Center';
-import BreadCrumbs from '#components/BreadCrumbs/index.astro';
+
 //  cover causes a flash issue
 import Cover from '@repo/layout-webcomponents/Cover';
 import ThemeToggle from '#components/ThemeToggle/index.astro';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
 // import Prose from '#components/Prose.astro';
-import Header from '#components/Header/index.astro';
-// import NavBar from '#components/NavBar/test.astro';
+// import Header from '#components/Header/index.astro';
+// import Header from '#components/NavBar/Responsive.astro';
 
+import Nav from '#components/Nav/index.astro';
 // import Andy from '#assets/andy_mud_color.webp';
 // import BgImage from '#components/bg-img/index.astro';
 // import Headline from '#components/Headline.astro';
@@ -32,11 +33,10 @@ const GUTTERS = '1ch'; // padding for the main content area
 ---
 
 <BaseLayout title={title} {...rest}>
-  <slot name="bg" />
+  <!-- <slot name="bg" /> -->
   <Cover centeredElement="center-l" noPad minHeight="100dvh">
-    <Header transition:persist />
+    <Nav transition:persist />
 
-    <BreadCrumbs />
     <Center gutters={GUTTERS} max={maxW} transition:animate="slide">
       <slot />
     </Center>

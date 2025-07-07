@@ -12,7 +12,7 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<ul class="group timeline timeline-vertical md:timeline-horizontal">
+<ul class="not-prose group timeline timeline-vertical md:timeline-horizontal">
   {
     items.map((item, index) => (
       <Capsule

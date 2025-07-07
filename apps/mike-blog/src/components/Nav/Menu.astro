@@ -1,0 +1,36 @@
+---
+import type { NavLinkI } from '#app.config.ts';
+interface Props {
+  class?: string;
+  menuItems: NavLinkI[];
+  tabindex?: '0' | '1' | '2';
+}
+
+const {
+  menuItems,
+  class:
+    className = 'dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow',
+  tabindex = '0',
+} = Astro.props;
+---
+
+<ul tabindex={tabindex} class={className}>
+  {
+    menuItems.map(({ href, label }) => (
+      <li>
+        <a role="button" class="link" href={href}>
+          {label}
+        </a>
+      </li>
+    ))
+  }
+  <!-- <li><a>Item 1</a></li>
+  <li>
+    <a>Parent</a>
+    <ul class="p-2">
+      <li><a>Submenu 1</a></li>
+      <li><a>Submenu 2</a></li>
+    </ul>
+  </li>
+  <li><a>Item 3</a></li> -->
+</ul>
