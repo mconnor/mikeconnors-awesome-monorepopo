@@ -6,21 +6,66 @@
     "#*": "./*"
   },
   "exports": {
-    "./tailwind-lint": "./tw.lint.config.mjs",
-    "./turbo-config": "./turbo.lint.config.mjs",
-    "./next-lint": "./next.mjs",
-    "./ignores": "./ignores.config.mjs",
-    "./vue-config": "./vue.lint.config.mjs",
-    "./md-config": "./md.lint.config.mjs",
-    "./react-internal": "./react-internal.mjs",
-    "./ts-lint": "./ts.lint.config.mjs",
-    "./lit-config": "./lit.lint.config.mjs",
-    "./type-disable": "./tscheck.disable.config.mjs",
-    "./regex": "./regex.lint.config.mjs",
-    "./svelte5-app": "./svelte5.lint.config.mjs",
-    "./solid": "./sold.lint.config.mjs",
-    "./next-config": "./next.mjs",
-    "./simple-imports-sort": "./simple-imports-sort.lint.config.mjs"
+    "./tailwind-lint": {
+      "types": "./index.d.ts",
+      "default": "./tw.lint.config.mjs"
+    },
+    "./turbo-config": {
+      "types": "./index.d.ts",
+      "default": "./turbo.lint.config.mjs"
+    },
+    "./next-lint": {
+      "types": "./index.d.ts",
+      "default": "./next.mjs"
+    },
+    "./ignores": {
+      "types": "./index.d.ts",
+      "default": "./ignores.config.mjs"
+    },
+    "./vue-config": {
+      "types": "./index.d.ts",
+      "default": "./vue.lint.config.mjs"
+    },
+    "./md-config": {
+      "types": "./index.d.ts",
+      "default": "./md.lint.config.mjs"
+    },
+    "./react-internal": {
+      "types": "./index.d.ts",
+      "default": "./react-internal.mjs"
+    },
+    "./ts-lint": {
+      "types": "./index.d.ts",
+      "default": "./ts.lint.config.mjs"
+    },
+    "./lit-config": {
+      "types": "./index.d.ts",
+      "default": "./lit.lint.config.mjs"
+    },
+    "./type-disable": {
+      "types": "./index.d.ts",
+      "default": "./tscheck.disable.config.mjs"
+    },
+    "./regex": {
+      "types": "./index.d.ts",
+      "default": "./regex.lint.config.mjs"
+    },
+    "./svelte5-app": {
+      "types": "./index.d.ts",
+      "default": "./svelte5.lint.config.mjs"
+    },
+    "./solid": {
+      "types": "./index.d.ts",
+      "default": "./sold.lint.config.mjs"
+    },
+    "./next-config": {
+      "types": "./index.d.ts",
+      "default": "./next.mjs"
+    },
+    "./simple-imports-sort": {
+      "types": "./index.d.ts",
+      "default": "./simple-imports-sort.lint.config.mjs"
+    }
   },
   "scripts": {
     "format": "prettier . --write"
