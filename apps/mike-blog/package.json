@@ -47,6 +47,7 @@
     "@repo/astro-ui": "workspace:*",
     "@repo/icon-paths": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
+    "@repo/preact": "workspace:*",
     "@repo/schemas": "workspace:*",
     "@sentry/astro": "catalog:",
     "@sentry/browser": "catalog:",

@@ -7,7 +7,7 @@
 @import '@repo/design-system/shared-styles.css';
 @import './animations.css';
 @import '@repo/astro-ui/styles.css';
-
+@import '@repo/preact/styles.css';
 @plugin "daisyui" {
   themes: all;
   root: '#blog-app';

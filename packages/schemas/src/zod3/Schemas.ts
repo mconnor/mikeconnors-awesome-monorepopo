@@ -6,6 +6,23 @@ import * as z from 'zod/v3'; // Required for Astro compatibility
 const dateLike = z.union([z.number(), z.string(), z.date()]);
 const dateLikeToDate = dateLike.pipe(z.coerce.date());
 
+export const SimpleLinkSchema = z.object({
+  label: z.string(),
+  href: z.string(),
+});
+
+export const MenuLinkSchema = SimpleLinkSchema.extend({
+  icon: z.string().optional(),
+  subPages: z.boolean().optional(),
+});
+
+// z
+//   .object({
+//     icon: z.string().optional(),
+//     subPages: z.array(SimpleLinkSchema),
+//   })
+// //   .extend(SimpleLinkSchema);
+
 /**
  * Shared Schemas
  */
@@ -67,3 +84,5 @@ export type TProject = z.infer<typeof Project>;
 export type TAuthor = z.infer<typeof Author>;
 export type TImage = z.infer<typeof Image>;
 export type TMetadata = z.infer<typeof Metadata>;
+export type TmenuLink = z.infer<typeof MenuLinkSchema>;
+export type TsimpleLink = z.infer<typeof SimpleLinkSchema>;

@@ -2,7 +2,7 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "dependsOn": ["build:styles", "build:components"]
+      "dependsOn": ["clean", "build:styles", "build:components"]
     },
     "build:styles": {
       "outputs": ["dist/**"]
@@ -11,7 +11,7 @@
       "outputs": ["dist/**"]
     },
     "dev": {
-      "with": ["dev:styles", "dev:components"]
+      "with": ["clean", "dev:styles", "dev:components"]
     },
     "dev:styles": {
       "cache": false,

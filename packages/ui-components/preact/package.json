@@ -7,17 +7,16 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./styles.css": "./dist/index.css",
-    "./index.css": "./dist/index.css",
+    "./styles.css": "./dist/styles.css",
     "./*": {
       "types": "./dist/*/index.d.ts",
       "import": "./dist/*/index.mjs"
     }
   },
   "scripts": {
-    "build:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
+    "build:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
     "build:components": "tsup",
-    "dev:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css --watch",
+    "dev:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
     "dev:components": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
@@ -27,17 +26,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@repo/schemas": "workspace:^"
+  },
   "devDependencies": {
+    "zod": "catalog:",
     "@repo/design-system": "workspace:^",
     "@preact/signals": "catalog:",
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "tsup": "catalog:",
     "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
     "daisyui": "catalog:",
+    "tsup": "catalog:",
     "typescript": "catalog:"
   },
   "eslintConfig": {

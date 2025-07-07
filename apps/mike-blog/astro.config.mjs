@@ -5,7 +5,7 @@ import icon from 'astro-icon';
 import { defineConfig, sharpImageService, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
-
+import preact from '@astrojs/preact';
 // import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
@@ -104,7 +104,7 @@ export default defineConfig({
 
   // scopedStyleStrategy: 'attribute',
 
-  integrations: [icon(), mdx()],
+  integrations: [icon(), mdx(), preact()],
   // Astro v5.0 merges the output: 'hybrid'
   //  and output: 'static' configurations into one single configuration (now called 'static')
   // output: 'static', // default all of your pages will continue to be prerendered

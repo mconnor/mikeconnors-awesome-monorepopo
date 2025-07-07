@@ -1,4 +1,6 @@
 import type iconPaths from '@repo/icon-paths/paths';
+import { type TmenuLink, MenuLinkSchema } from '@repo/schemas/Schemas';
+
 type IconType = keyof typeof iconPaths;
 import MyAvatar from '#assets/img-1_200x200.webp';
 const NAME = 'Mike Connor';
@@ -54,7 +56,8 @@ export interface NavLinkI {
   icon?: string;
   subPages?: boolean;
 }
-const navLinks: NavLinkI[] = [
+// const navLinks: TmenuLink[] = [
+const navLinks = [
   // { label: 'Home', href: '/', icon: 'home' },
   { label: 'About', href: '/about', icon: 'projects' },
   // { label: 'countries', href: '/countries', icon: 'country' },
@@ -71,7 +74,7 @@ const navLinks: NavLinkI[] = [
   // { label: 'get-started', href: '/get-started', icon: 'projects' },
 
   // { label: 'Store', href: '/store', icon: 'store' },
-] as const;
+];
 
 const imageSources = [
   {
