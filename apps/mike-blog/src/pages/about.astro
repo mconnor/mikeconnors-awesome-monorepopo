@@ -8,32 +8,44 @@ import { Image } from 'astro:assets';
 // import Btns from '@repo/astro-ui/Btns';
 import { imageSources } from '#app.config.ts';
 
-// import Andy from '#assets/Andy.jpg';
+import Andy from '#assets/andy_mud_color.webp';
+import Kells from '#assets/kelleys.jpg';
+import sovietplane from '#assets/sovietplane.jpg';
 // export const prerender = true;
 ---
 
 <Layout>
   <!-- <Stack space="var(--s4)"> -->
   <!-- <Btns /> -->
-  <div class="flex flex-col md:flex-row">
+  <div class="flex flex-col">
     <!-- <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
       <Frame ratio="1.6180:1">
         <Image src={Andy} alt="Andy" class="float-right" />
       </Frame>
     </div> -->
-    <Carousel images={imageSources} />
-    <div class="border-1">
-      <Prose>
-        <h1>About Me</h1>
-        <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
-        <p>
-          This is a blog about my adventures in software development, travel,
-          and fitness.
-        </p>
-      </Prose>
-    </div>
-  </div>
-  <!-- </Stack> -->
-</Layout>
+    <Prose>
+      <h1>About Me</h1>
+      <p>Software dev, traveller, white water rafting guide, Crossfitter</p>
+      <p>
+        This is a blog about my adventures in software development, travel, and
+        fitness.
+      </p>
+    </Prose>
+    <!-- <Carousel images={imageSources} /> -->
 
-<!-- <TimeLine items={timeCapsules} /> -->
+    <div class="carousel h-48 w-48 carousel-center rounded-box">
+      <div class="carousel-item">
+        <Image src={Andy} alt="Andy" />
+      </div>
+      <div class="carousel-item">
+        <Image src={Kells} alt="Kells" />
+      </div>
+      <div class="carousel-item">
+        <Image src={sovietplane} alt="sovietplane" />
+      </div>
+    </div>
+    <!-- </Stack> -->
+  </div>
+
+  <!-- <TimeLine items={timeCapsules} /> -->
+</Layout>
