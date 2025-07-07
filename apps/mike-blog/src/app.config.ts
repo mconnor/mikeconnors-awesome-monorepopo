@@ -1,5 +1,4 @@
 import type iconPaths from '@repo/icon-paths/paths';
-import { type TmenuLink, MenuLinkSchema } from '@repo/schemas/Schemas';
 
 type IconType = keyof typeof iconPaths;
 import MyAvatar from '#assets/img-1_200x200.webp';
