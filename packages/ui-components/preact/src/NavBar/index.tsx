@@ -1,12 +1,13 @@
 import Menu from './Menu.tsx';
 import * as z from 'zod/v3';
+import type { ComponentChildren } from 'preact';
 import { MenuLinkSchema } from '@repo/schemas/Schemas';
 import HamburgerIcon from './Icon.tsx';
 interface Props {
   navLinks: z.infer<typeof MenuLinkSchema>[];
   tabindex?: number;
   title?: string;
-  rightButton: Record<string, any>;
+  rightButton: ComponentChildren;
 }
 
 function NavBar({

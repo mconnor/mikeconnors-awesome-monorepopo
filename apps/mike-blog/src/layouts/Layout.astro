@@ -16,7 +16,9 @@ import NavBar from '@repo/preact/NavBar';
 // import Headline from '#components/Headline.astro';
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
-import ThemeToggle from '#components/ThemeToggle/index.astro';
+
+// import ThemeToggle from '#components/ThemeToggle/index.astro';
+// import Bell from '#components/wrappedSVG/Bell/index.astro';
 interface Props {
   maxW?: RmUnitType;
   children: unknown;
@@ -32,13 +34,12 @@ const {
 ---
 
 <BaseLayout title={title} {...rest}>
-  <NavBar client:visible navLinks={navLinks}
-    ><DThemeDropDown client:visible slot="right-button" /></NavBar
-  >
+  <NavBar navLinks={navLinks} client:visible>
+    <DThemeDropDown slot="right-button" />
+  </NavBar>
 
-  <!-- <slot name="bg" /> -->
   <Cover centeredElement="center-l" noPad minHeight="100dvh">
-    <Center max={maxW} transition:persist>
+    <Center max={maxW} gutters="1rem" transition:persist>
       <slot />
     </Center>
 

@@ -69,7 +69,7 @@ const navLinks = [
   { label: 'Tags', href: '/tags', icon: 'projects' },
   { label: 'CV', href: '/resume', icon: 'projects' },
   // { label: 'blank', href: '/blank', icon: 'projects' },
-  // { label: 'Announcements', href: '/announcements', icon: 'projects' },
+  { label: 'Announce', href: '/announcements', icon: 'projects' },
   // { label: 'get-started', href: '/get-started', icon: 'projects' },
 
   // { label: 'Store', href: '/store', icon: 'store' },

@@ -1,7 +1,6 @@
 import { z } from 'astro/zod';
 
-const regex = /^[\/\w\s-]+\.(?:mp3|aac|m4a|ogg|opus|wav|aiff)$/i;
-// const zPath = z.string().regex(regex);
+const regex = /^[/\w\s-]+\.(?:mp3|aac|m4a|ogg|opus|wav|aiff)$/i;
 
 const clipsSchema = z.array(z.string().regex(regex));
 

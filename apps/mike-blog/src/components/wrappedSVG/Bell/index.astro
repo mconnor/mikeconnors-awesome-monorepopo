@@ -1,0 +1,13 @@
+---
+interface Props {
+  class?: string;
+
+  //   width?: string;
+
+  //   height?: string;
+}
+const { class: className = 'h-6 sm:h-8 fill-sky-400' } = Astro.props as Props;
+import Bell from '#assets/svgs/Bell.svg';
+---
+
+<Bell class={className} />

@@ -4,8 +4,6 @@ import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
 import PostList from '#components/PostList/index.astro';
 
-export const prerender = true;
-
 export async function getStaticPaths() {
   const publishsedPosts = await getCollection(
     'blogCollection',

@@ -1,12 +1,12 @@
 ---
 import Layout from './Layout.astro';
-// import Prose from '#components/Prose.astro';
+import Prose from '#components/Prose.astro';
 
 const { title } = Astro.props;
 ---
 
-<Layout title={title} maxW="60ch">
-  <div class="prose max-w-none">
+<Layout title={title} maxW="100%">
+  <Prose>
     <slot />
-  </div>
+  </Prose>
 </Layout>

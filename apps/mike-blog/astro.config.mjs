@@ -114,9 +114,8 @@ export default defineConfig({
       devtools: true,
     }),
   ],
-  // Astro v5.0 merges the output: 'hybrid'
-  //  and output: 'static' configurations into one single configuration (now called 'static')
-  // output: 'static', // default all of your pages will continue to be prerendered
+  // It is no longer necessary to specify output: 'hybrid' in your Astro config to use server-rendered pages. The new output: 'static' has this capability included.
+  output: 'static',
   adapter: vercel({
     imageService: true,
     devImageService: 'sharp',

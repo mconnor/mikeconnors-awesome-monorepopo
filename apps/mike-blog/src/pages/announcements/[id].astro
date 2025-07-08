@@ -1,9 +1,7 @@
 ---
 import { getEntry, render } from 'astro:content';
 
-import Layout from '#layouts/Layout.astro';
-
-import Prose from '#components/Prose.astro';
+import Layout from '#layouts/ProseLayout.astro';
 
 export const prerender = false;
 
@@ -25,8 +23,6 @@ const { Content } = await render(announcement);
 ---
 
 <Layout title={announcement.data.title} maxW="60ch">
-  <Prose>
-    <h1>{announcement.data.title}</h1>
-    <Content />
-  </Prose>
+  <h1>{announcement.data.title}</h1>
+  <Content />
 </Layout>

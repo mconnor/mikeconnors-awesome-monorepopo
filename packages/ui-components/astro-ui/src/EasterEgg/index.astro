@@ -6,9 +6,8 @@ interface Props {
 const { clips } = Astro.props as Props;
 ---
 
-<script>
-  import './EasterEgg';
-</script>
+<script src="./EasterEgg"></script>
+
 <easter-egg data-clips={JSON.stringify(clips)}>
   <audio id="easter-audio" preload="none"></audio>
   <button id="secret-sound" class="btn btn-link"
