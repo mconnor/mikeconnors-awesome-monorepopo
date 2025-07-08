@@ -12,7 +12,8 @@ export default defineConfig({
   outDir: 'dist',
   site: 'https://staging.mikeconnor.tech/',
   image: {
-    responsiveStyles: true,
+    // if you prefer to handle responsive image styling yourself, or need to override these defaults when using Tailwind 4, leave the default false value configured.
+    responsiveStyles: false,
     remotePatterns: [{ protocol: 'https' }],
     // domains: [
     //   'astro.build',
