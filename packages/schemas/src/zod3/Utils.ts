@@ -1,11 +1,5 @@
-// import * as z from 'zod/v4'; // v4
-// biome-ignore assist/source/organizeImports: <explanation>
 import * as z from 'zod';
-// The z.string().date() method validates strings in the format YYYY-MM-DD.
 
-// const yearMonthDateSchema = z.string().date();
-
-// from Zod website
 const literalSchema = z.union([z.string(), z.number(), z.boolean(), z.null()]);
 type Literal = z.infer<typeof literalSchema>;
 type Json = Literal | { [key: string]: Json } | Json[];

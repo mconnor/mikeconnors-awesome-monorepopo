@@ -2,11 +2,14 @@
 // Footer with logo and social icons
 // import { Links } from '#app.config.ts';
 // import Switcher from '@repo/layout-webcomponents/Switcher';
-
+import type { ComponentProps } from 'astro/types';
 // import SocialIcon from './SocialIcon.astro';
-
+type Props = Record<string, never>;
 import EasterEgg from '@repo/astro-ui/EasterEgg';
 import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
+
+const AUDIO_CLIPS = ['/audio/why.mp3', '/audio/drink.mp3'];
+// type EasterEggProps = ComponentProps<typeof EasterEgg>;
 ---
 
 <footer
@@ -16,7 +19,7 @@ import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
 
   <MailtoBtn buttonText="CONTACT" />
 
-  <EasterEgg />
+  <EasterEgg clips={AUDIO_CLIPS} />
 </footer>
 <!-- <div class="footer bg-neutral p-10 text-neutral-content sm:footer-horizontal">
   <aside>

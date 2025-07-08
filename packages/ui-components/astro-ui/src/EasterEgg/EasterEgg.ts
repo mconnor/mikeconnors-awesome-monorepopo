@@ -1,6 +1,9 @@
 import { z } from 'astro/zod';
 
-const clipsSchema = z.array(z.string());
+const regex = /^[\/\w\s-]+\.(?:mp3|aac|m4a|ogg|opus|wav|aiff)$/i;
+// const zPath = z.string().regex(regex);
+
+const clipsSchema = z.array(z.string().regex(regex));
 
 class EasterEgg extends HTMLElement {
   clips: string[] = [];
@@ -8,12 +11,18 @@ class EasterEgg extends HTMLElement {
     // Get clips from data attribute
     const clipsData = this.dataset.clips;
 
-    try {
-      this.clips = clipsSchema.parse(JSON.parse(clipsData!));
-    } catch (error) {
-      console.error('Error parsing clips data:', error);
-      this.clips = ['why', 'drink']; // fallback
-    }
+    // try {
+    //   this.clips = clipsSchema.parse(JSON.parse(clipsData!));
+    // } catch (error) {
+    //   console.error('Error parsing clips data:', error);
+    //   this.clips = ['why', 'drink']; // fallback
+    // }
+
+    const { data, success, error } = clipsSchema.safeParse(
+      JSON.parse(clipsData!),
+    );
+    if (error) throw new Error(error.message);
+    if (success) this.clips = data;
 
     const button = this.querySelector('#secret-sound');
     if (button) {
@@ -44,7 +53,7 @@ class EasterEgg extends HTMLElement {
       audio.currentTime = 0;
 
       // Set the new audio source
-      audio.src = `/audio/${selectedClip}.mp3`;
+      audio.src = selectedClip;
 
       // Play the selected audio
       audio.play().catch((error) => {
