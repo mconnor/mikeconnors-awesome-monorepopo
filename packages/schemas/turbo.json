@@ -1,0 +1,12 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["clean"]
+    },
+
+    "dev": {
+      "with": ["clean", "dev --watch"]
+    }
+  }
+}
