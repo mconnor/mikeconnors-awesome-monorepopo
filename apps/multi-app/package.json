@@ -36,7 +36,6 @@
     "@repo/svelte": "workspace:*",
     "@repo/vue": "workspace:*",
     "@tailwindcss/vite": "catalog:",
-    "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
@@ -44,12 +43,9 @@
     "astro": "catalog:",
     "preact": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
-    "solid-js": "catalog:",
     "svelte": "catalog:svelte5",
-    "svelte-preprocess": "catalog:svelte5",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "vue": "catalog:"
+    "vue": "catalog:",
+    "tailwindcss": "catalog:"
   },
   "devDependencies": {
     "daisyui": "catalog:",
@@ -57,6 +53,7 @@
     "@repo/typescript-config": "workspace:^",
     "theme-change": "catalog:",
     "@sveltejs/vite-plugin-svelte": "catalog:svelte5",
-    "eslint": "catalog:"
+    "eslint": "catalog:",
+    "typescript": "catalog:"
   }
 }

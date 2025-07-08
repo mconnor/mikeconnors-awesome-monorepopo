@@ -27,7 +27,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@repo/schemas": "workspace:^"
+    "@repo/schemas": "workspace:^",
+    "preact": "catalog:"
   },
   "devDependencies": {
     "zod": "catalog:",
@@ -45,8 +46,5 @@
   },
   "eslintConfig": {
     "extends": "preact"
-  },
-  "peerDependencies": {
-    "preact": ">=10"
   }
 }

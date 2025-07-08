@@ -1,7 +1,7 @@
 // Add counter updates when filter changes
 document.addEventListener('framework-filter-change', (event: Event) => {
-  const customEvent = event as CustomEvent;
-  const { filter } = customEvent.detail;
+  // const customEvent = event as CustomEvent;
+  // const { filter } = customEvent.detail;
 
   // Update counters in real-time
   const frameworks = ['react', 'svelte', 'vue'];

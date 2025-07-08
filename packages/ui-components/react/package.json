@@ -39,7 +39,9 @@
   "license": "ISC",
   "dependencies": {
     "@repo/utils": "workspace:^",
-    "cally": "^0.8.0"
+    "cally": "^0.8.0",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
     "@headlessui/react": "catalog:",
@@ -48,6 +50,8 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/cli": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
     "daisyui": "catalog:",
     "tailwindcss": "catalog:",
     "jest": "catalog:",
@@ -59,8 +63,6 @@
   },
   "peerDependencies": {
     "@types/react": ">=19",
-    "@types/react-dom": ">=19",
-    "react": ">=19",
-    "react-dom": ">=19"
+    "@types/react-dom": ">=19"
   }
 }
