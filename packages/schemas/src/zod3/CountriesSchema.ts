@@ -1,4 +1,4 @@
-import * as z from 'zod/v3'; // v4
+import * as z from 'zod';
 
 const countrySchema = z.object({
   cca3: z.string(), // Assuming 'cca3' is a string

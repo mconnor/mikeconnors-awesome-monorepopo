@@ -1,4 +1,4 @@
-import * as z from 'zod/v3';
+import * as z from 'zod';
 
 // import { zWebSite, zEmail } from './utils/index.ts';
 

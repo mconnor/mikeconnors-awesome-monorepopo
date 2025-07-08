@@ -1,4 +1,4 @@
-import * as z from 'zod/v3';
+import * as z from 'zod';
 
 const athleteSchema = z.tuple([
   z.string(), // name

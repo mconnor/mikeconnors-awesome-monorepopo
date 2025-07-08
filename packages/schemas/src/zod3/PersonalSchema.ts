@@ -1,4 +1,4 @@
-import * as z from 'zod/v3';
+import * as z from 'zod';
 import { zWebSite, zEmail } from './Utils.ts';
 
 const personalSchema = z.object({

@@ -1,4 +1,4 @@
-import * as z from 'zod/v3';
+import * as z from 'zod';
 
 // 1. City
 export const CitySchema = z.object({

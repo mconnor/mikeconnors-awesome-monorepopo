@@ -1,4 +1,4 @@
-import * as z from 'zod/v3';
+import * as z from 'zod';
 
 export const gameSchema = {
   dates: z.array(z.date()),

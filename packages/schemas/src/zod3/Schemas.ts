@@ -1,4 +1,4 @@
-import * as z from 'zod/v3'; // Required for Astro compatibility
+import * as z from 'zod'; // Required for Astro compatibility
 
 /**
  * Common Types and Utilities
@@ -26,12 +26,12 @@ export const MenuLinkSchema = SimpleLinkSchema.extend({
 /**
  * Shared Schemas
  */
-export const Image = z.object({
+export const ImageSchema = z.object({
   src: z.string().url(),
   alt: z.string().min(1, 'Alt text is required for accessibility'),
 });
 
-export const Metadata = z.object({
+const Metadata = z.object({
   title: z.string().min(1, 'Title is required'),
   description: z
     .string()
@@ -43,16 +43,16 @@ export const Metadata = z.object({
 /**
  * Blog Schemas
  */
-export const Blog = Metadata.extend({
+export const BlogSchema = Metadata.extend({
   draft: z.boolean().optional().default(false),
   tags: z.array(z.string().min(1)).default([]),
-  cover: Image.optional(),
+  cover: ImageSchema.optional(),
 });
 
 /**
  * Project Schemas
  */
-export const Project = Metadata.extend({
+const ProjectSchema = Metadata.extend({
   repository: z.string().url().optional(),
   technologies: z.array(z.string()).default([]),
   status: z.enum(['active', 'archived', 'planned']).default('active'),
@@ -61,10 +61,10 @@ export const Project = Metadata.extend({
 /**
  * Author Schemas
  */
-export const Author = z.object({
+export const AuthorSchema = z.object({
   id: z.string(),
   name: z.string().min(3, 'Name is required'),
-  avatar: Image.optional(),
+  avatar: ImageSchema.optional(),
   bio: z.string().max(500, 'Bio should not exceed 500 characters'),
   social: z
     .object({
@@ -79,10 +79,10 @@ export const Author = z.object({
  * TypeScript Types
  * Prefix with 'T' to clearly distinguish from schema definitions
  */
-export type TBlog = z.infer<typeof Blog>;
-export type TProject = z.infer<typeof Project>;
-export type TAuthor = z.infer<typeof Author>;
-export type TImage = z.infer<typeof Image>;
-export type TMetadata = z.infer<typeof Metadata>;
+export type TBlog = z.infer<typeof BlogSchema>;
+export type TProject = z.infer<typeof ProjectSchema>;
+export type TAuthor = z.infer<typeof AuthorSchema>;
+export type TImage = z.infer<typeof ImageSchema>;
+// export type TMetadata = z.infer<typeof Metadata>;
 export type TmenuLink = z.infer<typeof MenuLinkSchema>;
 export type TsimpleLink = z.infer<typeof SimpleLinkSchema>;

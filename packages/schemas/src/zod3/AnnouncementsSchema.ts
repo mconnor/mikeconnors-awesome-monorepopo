@@ -1,4 +1,4 @@
-import * as z from 'zod/v3'; // v4
+import * as z from 'zod'; // v4
 
 const schema = z
   .object({

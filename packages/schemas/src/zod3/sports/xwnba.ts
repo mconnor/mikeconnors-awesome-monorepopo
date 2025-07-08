@@ -1,4 +1,4 @@
-import * as z from 'zod/v3';
+import * as z from 'zod';
 
 const WnbaCitySchema = z.object({
   cityCode: z.string().regex(/^[A-Z]{3}$/),
