@@ -1,6 +1,9 @@
 ---
-import PostCard from '#components/PostCard/index.astro';
-
+// import type { TBlog } from '@repo/schemas/Schemas';
+import { format } from 'date-fns';
+import { Image } from 'astro:assets';
+import Andy from '#assets/andyBushes.jpg';
+import Frame from '@repo/layout-webcomponents/Frame';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -21,6 +24,48 @@ const bool3 = posts.length > 2;
       { 'lg:grid-cols-3 lg:gap-4': bool3 },
     ]}
   >
-    {posts.map(({ id, data }) => <PostCard data={data} href={id} showTags />)}
+    {
+      posts.map(({ id, data }) => {
+        const { cover, title, description, tags, date } = data;
+        return (
+          <div class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
+            <figure>
+              <Frame ratio="16:9">
+                {cover ?
+                  <Image
+                    src={cover.src}
+                    alt={cover.alt}
+                    width="1600"
+                    height="900"
+                  />
+                : <Image src={Andy} alt="Andy" width="1600" height="900" />}
+              </Frame>
+            </figure>
+
+            <a
+              href={`/posts/${id}`}
+              class="absolute inset-0 z-10 rounded-2xl"
+              aria-label="Full card link"
+            />
+
+            <div class="card-body">
+              {date && <div class="text-sm">{format(date, 'yyyy-MM-dd')}</div>}
+              <h2 class="card-title line-clamp-1">{title}</h2>
+
+              <p class="line-clamp-3">{description}</p>
+
+              <div class="card-actions justify-end">
+                {tags &&
+                  tags.map((tag) => (
+                    <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
+                      {tag}
+                    </a>
+                  ))}
+              </div>
+            </div>
+          </div>
+        );
+      })
+    }
   </div>
 </div>

@@ -1,13 +1,23 @@
 import Menu from './Menu.tsx';
+// // import ThemePicker from './ThemePicker';
+// import SunMoon from './SunMoon.tsx';
 // import { type TsimpleLink, SimpleLinkSchema } from '@repo/schemas/Schemas';
+
 import { type TmenuLink, MenuLinkSchema } from '@repo/schemas/Schemas';
 import HamburgerIcon from './Icon.tsx';
 interface Props {
   navLinks: TmenuLink[];
   tabindex?: number;
+  title?: string;
+  rightButton: Record<string, any>;
 }
 
-function NavBar({ navLinks, tabindex = 0 }: Props) {
+function NavBar({
+  navLinks,
+  rightButton,
+  title = 'mike connor - tech',
+  tabindex = 0,
+}: Props) {
   // const parsed = SimpleLinkSchema.parse(navLinks);
 
   return (
@@ -26,14 +36,14 @@ function NavBar({ navLinks, tabindex = 0 }: Props) {
             class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
           />
         </div>
-        <a className="btn text-xl btn-ghost">daisyUI</a>
+        <a href="./" className="btn btn-ghost btn-xl">
+          {title}
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <Menu menuItems={navLinks} class="menu menu-horizontal px-1" />
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
-      </div>
+      <div className="navbar-end">{rightButton}</div>
     </div>
   );
 }

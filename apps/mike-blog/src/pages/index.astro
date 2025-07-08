@@ -1,17 +1,10 @@
 ---
 import SplashPage from '#components/SplashPage.astro';
-import Layout from '#layouts/Layout.astro';
+import Layout from '#layouts/BaseLayout.astro';
 // import Icon from '@repo/astro-ui/Icon';
 // import Wiggle from '#components/anims/Wiggle.astro';
 ---
 
-<Layout title="Welcome" description="Mike's Blog - Splash Page" maxW="100ch">
-  <!-- <h1 class="text-4xl font-bold mb-4">Welcome to Mike's Blog</h1>
-    <p class="text-lg mb-8">Explore my latest posts and projects.</p>
-    <a href="/about" class="btn btn-primary btn-lg">
-      <Icon name="arrow-right" className="mr-2" />
-      Let's Go
-    </a> -->
-
+<Layout title="Welcome" description="Mike's Blog - Splash Page">
   <SplashPage cta="Let's Go" />
 </Layout>

@@ -14,7 +14,7 @@ function Menu({
     className = 'dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow',
 }: Props) {
   return (
-    <ul tabindex={0} class={className}>
+    <ul tabindex={tabindex} class={className}>
       {menuItems.map(({ href, label }) => (
         <li>
           <a role="button" class="link" href={href}>

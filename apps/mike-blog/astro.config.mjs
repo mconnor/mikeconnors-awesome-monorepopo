@@ -104,7 +104,15 @@ export default defineConfig({
 
   // scopedStyleStrategy: 'attribute',
 
-  integrations: [icon(), mdx(), preact()],
+  integrations: [
+    icon(),
+    mdx(),
+    preact({
+      include: ['node_modules/@repo/preact/dist/*'],
+      compat: true,
+      devtools: true,
+    }),
+  ],
   // Astro v5.0 merges the output: 'hybrid'
   //  and output: 'static' configurations into one single configuration (now called 'static')
   // output: 'static', // default all of your pages will continue to be prerendered

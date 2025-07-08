@@ -40,7 +40,7 @@ export const daisyuiThemes = [
   'nord',
 ] as const;
 
-export type DaisyThemesType = typeof daisyuiThemes;
+export type DaisyThemesType = keyof typeof daisyuiThemes;
 
 // export type DaisyUITheme = DaisyThemesType[number];
 

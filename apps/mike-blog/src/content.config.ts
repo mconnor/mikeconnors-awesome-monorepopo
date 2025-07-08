@@ -1,5 +1,5 @@
-import TOML from '@iarna/toml';
 import { z, reference, defineCollection } from 'astro:content';
+import TOML from '@iarna/toml';
 // build-in loaders
 import { file, glob } from 'astro/loaders';
 
@@ -10,25 +10,25 @@ import { file, glob } from 'astro/loaders';
 // import { blogSchema } from './schemas';
 import announcementsSchema from '@repo/schemas/AnnouncementsSchema';
 
-import { Blog, Author } from '@repo/schemas/Schemas';
+import { BlogSchema, AuthorSchema } from '@repo/schemas/Schemas';
 
 type ParserReturnType =
   | Record<string, Record<string, unknown>>
   | Record<string, unknown>[];
+
+const authorsCollection = defineCollection({
+  loader: file('src/content/authors.toml', {
+    parser: (text) => TOML.parse(text).authors as ParserReturnType,
+  }),
+  schema: AuthorSchema,
+});
 
 const refSchema = z.object({
   author: reference('authorsCollection').optional(),
   relatedPosts: z.array(reference('blogCollection')).optional(),
 });
 
-const BlogAuthorSchema = Blog.merge(refSchema);
-
-const authorsCollection = defineCollection({
-  loader: file('src/content/authors.toml', {
-    parser: (text) => TOML.parse(text).authors as ParserReturnType,
-  }),
-  schema: Author,
-});
+const BlogAuthorSchema = BlogSchema.merge(refSchema);
 
 const blogCollection = defineCollection({
   // type: 'content',
