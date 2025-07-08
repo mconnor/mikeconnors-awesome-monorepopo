@@ -5,6 +5,8 @@
     "MODE",
     "PRODUCTION",
     "DEV",
+    "USER_NAME",
+    "DOMAIN",
     "PROD",
     "import.meta.env.PROD",
     "import.meta.env.DEV",
