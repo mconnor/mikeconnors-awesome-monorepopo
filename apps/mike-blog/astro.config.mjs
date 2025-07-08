@@ -1,16 +1,15 @@
-// @ts-check
-
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
 import { defineConfig, sharpImageService, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
 import preact from '@astrojs/preact';
-// import { visualizer } from 'rollup-plugin-visualizer';
+import { loadEnv } from 'vite';
+const { DOMAIN } = loadEnv(process.env.NODE_ENV, process.cwd(), '');
 
 export default defineConfig({
   outDir: 'dist',
-  site: 'https://staging.mikeconnor.tech/',
+  site: `https://${DOMAIN}/`,
   image: {
     // if you prefer to handle responsive image styling yourself, or need to override these defaults when using Tailwind 4, leave the default false value configured.
     responsiveStyles: false,
@@ -26,13 +25,6 @@ export default defineConfig({
 
     // experimentalBreakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
     service: sharpImageService(),
-    // service: {
-    //   service: sharpImageService(),
-    //   entrypoint: 'astro/assets/services/sharp',
-    //   config: {
-    //     limitInputPixels: false,
-    //   },
-    // },
   },
   markdown: {
     shikiConfig: {
@@ -70,25 +62,17 @@ export default defineConfig({
     // liveContentCollections: true,
     contentIntellisense: true,
   },
-
-  // compressHTML: true,
-  // trailingSlash: 'never',
-  // cacheDir: './cache-directory',
   vite: {
     // ssr: {
     //   noExternal: ['@repo/astro-ui'],
     // },
     plugins: [
-      tailwindcss(),
-      // visualizer({
-      //   emitFile: true,
-      //   filename: 'stats.html',
-      // }),
-    ],
+      tailwindcss()]
   },
   build: {
     // Example: Generate `page.html` instead of `page/index.html` during build.
     format: 'file',
+    inlineStylesheets: 'auto', // Inline small CSS files
   },
 
   env: {
@@ -102,8 +86,6 @@ export default defineConfig({
       DOMAIN: envField.string({ context: 'server', access: 'secret' }),
     },
   },
-
-  // scopedStyleStrategy: 'attribute',
 
   integrations: [
     icon(),
