@@ -1,9 +1,6 @@
 import Menu from './Menu.tsx';
-// // import ThemePicker from './ThemePicker';
-// import SunMoon from './SunMoon.tsx';
-// import { type TsimpleLink, SimpleLinkSchema } from '@repo/schemas/Schemas';
 
-import { type TmenuLink, MenuLinkSchema } from '@repo/schemas/Schemas';
+import { type TmenuLink } from '@repo/schemas/Schemas';
 import HamburgerIcon from './Icon.tsx';
 interface Props {
   navLinks: TmenuLink[];
