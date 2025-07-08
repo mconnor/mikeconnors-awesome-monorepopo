@@ -82,6 +82,7 @@
     "rollup-plugin-visualizer": "catalog:",
     "zod-validation-error": "catalog:",
     "@repo/design-system": "workspace:*",
+    "vite": "catalog:",
     "typescript": "catalog:"
   }
 }
