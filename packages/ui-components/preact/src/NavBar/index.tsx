@@ -1,9 +1,9 @@
 import Menu from './Menu.tsx';
-
-import { type TmenuLink } from '@repo/schemas/Schemas';
+import * as z from 'zod/v3';
+import { MenuLinkSchema } from '@repo/schemas/Schemas';
 import HamburgerIcon from './Icon.tsx';
 interface Props {
-  navLinks: TmenuLink[];
+  navLinks: z.infer<typeof MenuLinkSchema>[];
   tabindex?: number;
   title?: string;
   rightButton: Record<string, any>;
