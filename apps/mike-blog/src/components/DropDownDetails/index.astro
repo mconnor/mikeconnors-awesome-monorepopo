@@ -1,0 +1,32 @@
+---
+import { daisyuiThemes } from '#utils/daisyui-themes.ts';
+interface Props {
+    cta: string;
+    themes: string [];
+
+}
+const {cta ='theme', themes= daisyuiThemes}= Astro.props;
+---
+
+
+<div class="dropdown dropdown-end">
+  <div tabindex="0" role="button" class="btn m-1">{cta}</div>
+  <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+   {
+    themes.map((theme) => (
+      <li>
+        <label class="label flex cursor-pointer justify-between">
+          <span class="label-text capitalize">{theme}</span>
+          <input
+            type="radio"
+            name="theme-dropdown"
+            class="theme-controller radio radio-sm"
+            value={theme}
+            data-set-theme={theme}
+          />
+        </label>
+      </li>
+    ))
+  }
+  </ul>
+</div>

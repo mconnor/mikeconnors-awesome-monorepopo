@@ -2,8 +2,6 @@
   "extends": "@repo/typescript-config/preact.json",
 
   "compilerOptions": {
-    "strict": true,
-    "outDir": "dist",
     "paths": {
       "react": ["./node_modules/preact/compat/"],
       "react/jsx-runtime": ["./node_modules/preact/jsx-runtime"],
