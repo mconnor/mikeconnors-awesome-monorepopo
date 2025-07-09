@@ -66,8 +66,7 @@ export default defineConfig({
     // ssr: {
     //   noExternal: ['@repo/astro-ui'],
     // },
-    plugins: [
-      tailwindcss()]
+    plugins: [tailwindcss()],
   },
   build: {
     // Example: Generate `page.html` instead of `page/index.html` during build.

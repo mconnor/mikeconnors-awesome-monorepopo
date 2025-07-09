@@ -1,10 +1,12 @@
-import Menu from './Menu.tsx';
-import * as z from 'zod/v3';
+// import * as z from 'zod/v3';
+
+import ComponentProps from 'preact';
 import type { ComponentChildren } from 'preact';
-import { MenuLinkSchema } from '@repo/schemas/Schemas';
+
+import type { allBaseLinksSx } from '@repo/schemas/Links';
 import HamburgerIcon from './Icon.tsx';
 interface Props {
-  navLinks: z.infer<typeof MenuLinkSchema>[];
+  navLinks: allBaseLinksSx;
   tabindex?: number;
   title?: string;
   rightButton: ComponentChildren;
@@ -29,17 +31,34 @@ function NavBar({
           >
             <HamburgerIcon />
           </div>
-          <Menu
-            menuItems={navLinks}
+
+          <ul
+            tabindex={tabindex}
             class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
-          />
+          >
+            {navLinks.map(({ dirPath, name }) => (
+              <li>
+                <a role="button" class="link" href={dirPath}>
+                  {name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <a href="./" className="btn btn-ghost btn-xl">
           {title}
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <Menu menuItems={navLinks} class="menu menu-horizontal px-1" />
+        <ul tabindex={tabindex} class="menu menu-horizontal px-1">
+          {navLinks.map(({ dirPath, name }) => (
+            <li>
+              <a role="button" class="link" href={dirPath}>
+                {name}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="navbar-end">{rightButton}</div>
     </div>

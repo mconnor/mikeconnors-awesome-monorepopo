@@ -10,13 +10,6 @@ class EasterEgg extends HTMLElement {
     // Get clips from data attribute
     const clipsData = this.dataset.clips;
 
-    // try {
-    //   this.clips = clipsSchema.parse(JSON.parse(clipsData!));
-    // } catch (error) {
-    //   console.error('Error parsing clips data:', error);
-    //   this.clips = ['why', 'drink']; // fallback
-    // }
-
     const { data, success, error } = clipsSchema.safeParse(
       JSON.parse(clipsData!),
     );

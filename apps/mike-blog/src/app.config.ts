@@ -42,37 +42,32 @@ const DISCORD: OutboundLinksType = {
   logo: 'discord-logo',
 };
 
-const OUTBOUND_LINKS: OutboundLinksType[] = [
-  GITHUB,
-  TWITTER,
-  LINKEDIN,
-  DISCORD,
-] as const;
+const OUTBOUND_LINKS = new Set([GITHUB, TWITTER, LINKEDIN, DISCORD]);
 
 export interface NavLinkI {
-  label: string;
-  href: string;
+  name: string;
+  dirPath: string;
   icon?: string;
   subPages?: boolean;
 }
 // const navLinks: TmenuLink[] = [
 const navLinks = [
-  // { label: 'Home', href: '/', icon: 'home' },
-  { label: 'About', href: '/about', icon: 'projects' },
-  // { label: 'countries', href: '/countries', icon: 'country' },
-  // { label: 'buttons', href: '/buttons', icon: 'home' },
-  { label: 'Posts', href: '/posts', icon: 'blog', subPages: true },
-  // { label: 'Swatches', href: '/swatch', icon: 'blog' },
-  // { label: 'Sidebar', href: '/about', icon: 'projects' },
-  // { label: 'form', href: '/form-test', icon: 'projects' },
-  // { label: 'Contact', href: '/contact', icon: 'projects' },
-  { label: 'Tags', href: '/tags', icon: 'projects' },
-  { label: 'CV', href: '/resume', icon: 'projects' },
-  // { label: 'blank', href: '/blank', icon: 'projects' },
-  { label: 'Announce', href: '/announcements', icon: 'projects' },
-  // { label: 'get-started', href: '/get-started', icon: 'projects' },
+  // { name: 'Home', dirPath: '/', icon: 'home' },
+  { name: 'About', dirPath: '/about', icon: 'projects' },
+  // { name: 'countries', dirPath: '/countries', icon: 'country' },
+  // { name: 'buttons', dirPath: '/buttons', icon: 'home' },
+  { name: 'Posts', dirPath: '/posts', icon: 'blog', subPages: true },
+  // { name: 'Swatches', dirPath: '/swatch', icon: 'blog' },
+  // { name: 'Sidebar', dirPath: '/about', icon: 'projects' },
+  // { name: 'form', dirPath: '/form-test', icon: 'projects' },
+  // { name: 'Contact', dirPath: '/contact', icon: 'projects' },
+  { name: 'Tags', dirPath: '/tags', icon: 'projects' },
+  { name: 'CV', dirPath: '/resume', icon: 'projects' },
+  // { name: 'blank', dirPath: '/blank', icon: 'projects' },
+  { name: 'Announce', dirPath: '/announcements', icon: 'projects' },
+  // { name: 'get-started', dirPath: '/get-started', icon: 'projects' },
 
-  // { label: 'Store', href: '/store', icon: 'store' },
+  // { name: 'Store', dirPath: '/store', icon: 'store' },
 ];
 
 const imageSources = [
@@ -115,13 +110,33 @@ const imageSources = [
 ];
 
 const timeCapsules = [
-  { label: 'KCMO', year: 0, first: true },
-  { label: 'DC', year: 1990 },
-  { label: 'NYC', year: 1995 },
-  { label: 'Portland, OR', year: 2012 },
-  { label: 'New Orleans', year: 2014 },
-  { label: 'KCMO', year: 2022, last: true },
+  { city: 'KCMO', year: 0 },
+  { city: 'Chicago', year: 1988 },
+  { city: 'DC', year: 1990 },
+  { city: 'NYC', year: 1995 },
+  { city: 'Portland, OR', year: 2012 },
+  { city: 'New Orleans', year: 2014 },
+  { city: 'KCMO', year: 2022 },
 ];
+
+// const map = new Map();
+// // Iterate and record first & last per city
+// for (const entry of timeCapsules) {
+//   const key = entry.city;
+//   if (!map.has(key)) {
+//     // first time we see this city
+//     map.set(key, { first: entry, last: entry });
+//   } else {
+//     // update only the “last” pointer
+//     map.get(key).last = entry;
+//   }
+// }
+
+// // Now for each city you can do:
+// const { first, last } = map.get('KCMO');
+// console.log(first, last);
+// // → { city: 'KCMO', year: 0 }  and  { city: 'KCMO', year: 2022 }
+
 export {
   MyAvatar,
   NAME,

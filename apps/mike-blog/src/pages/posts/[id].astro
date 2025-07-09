@@ -5,7 +5,7 @@ import MarkdownPostLayout from '#layouts/MarkdownPostLayout.astro';
 // STATIC SITE GENERATION
 // This page is statically generated at build time using Astro's getStaticPaths
 // and prerendering capabilities. It fetches all blog posts and generates a static page for each.
-
+// export const prerender = true;
 export async function getStaticPaths() {
   const posts = await getCollection('blogCollection');
 
