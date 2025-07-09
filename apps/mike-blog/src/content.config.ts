@@ -8,8 +8,7 @@ import { file, glob } from 'astro/loaders';
 // import { countryLoader } from './loaders/index.ts';
 
 // import { blogSchema } from './schemas';
-import announcementsSchema from '@repo/schemas/AnnouncementsSchema';
-
+import {announcementsSchema} from '@repo/schemas/AnnouncementsSchema';
 import { BlogSchema, AuthorSchema } from '@repo/schemas/Schemas';
 
 type ParserReturnType =

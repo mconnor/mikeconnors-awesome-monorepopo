@@ -1,12 +1,11 @@
-// import * as z from 'zod/v3';
-
-import ComponentProps from 'preact';
+import * as z from 'zod/v3';
 import type { ComponentChildren } from 'preact';
-
-import type { allBaseLinksSx } from '@repo/schemas/Links';
+import  { allBaseLinksSx  } from '@repo/schemas/Links';
 import HamburgerIcon from './Icon.tsx';
+
+type NavType = z.infer<typeof allBaseLinksSx>;
 interface Props {
-  navLinks: allBaseLinksSx;
+  navLinks: NavType;
   tabindex?: number;
   title?: string;
   rightButton: ComponentChildren;
@@ -18,7 +17,8 @@ function NavBar({
   title = 'mike connor - tech',
   tabindex = 0,
 }: Props) {
-  // const parsed = SimpleLinkSchema.parse(navLinks);
+  const {data: parsedNavs, success, error} = allBaseLinksSx.safeParse(navLinks);
+  if (error ) throw new Error(error.message)
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -36,7 +36,7 @@ function NavBar({
             tabindex={tabindex}
             class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
           >
-            {navLinks.map(({ dirPath, name }) => (
+            {parsedNavs.map(({ dirPath, name }) => (
               <li>
                 <a role="button" class="link" href={dirPath}>
                   {name}
@@ -51,7 +51,7 @@ function NavBar({
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul tabindex={tabindex} class="menu menu-horizontal px-1">
-          {navLinks.map(({ dirPath, name }) => (
+          {parsedNavs.map(({ dirPath, name }) => (
             <li>
               <a role="button" class="link" href={dirPath}>
                 {name}

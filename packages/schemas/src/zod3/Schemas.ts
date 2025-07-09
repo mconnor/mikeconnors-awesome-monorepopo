@@ -69,8 +69,8 @@ export const AuthorSchema = z.object({
  * TypeScript Types
  * Prefix with 'T' to clearly distinguish from schema definitions
  */
-export type TBlog = z.infer<typeof BlogSchema>;
-export type TProject = z.infer<typeof ProjectSchema>;
-export type TAuthor = z.infer<typeof AuthorSchema>;
-export type TImage = z.infer<typeof ImageSchema>;
+// export type TBlog = z.infer<typeof BlogSchema>;
+// export type TProject = z.infer<typeof ProjectSchema>;
+// export type TAuthor = z.infer<typeof AuthorSchema>;
+// export type TImage = z.infer<typeof ImageSchema>;
 // export type TMetadata = z.infer<typeof Metadata>;

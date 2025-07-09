@@ -7,7 +7,7 @@
   "exports": {
     "./*": {
       "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
+      "default": "./dist/*.mjs"
     }
   },
   "scripts": {

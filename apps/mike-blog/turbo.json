@@ -2,7 +2,7 @@
   "extends": ["//"],
   "tasks": {
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["@repo/schemas#build","^build"],
       "inputs": ["$TURBO_DEFAULT$", "!README.md", ".env*"],
       "outputs": ["dist/**"],
       "env": [

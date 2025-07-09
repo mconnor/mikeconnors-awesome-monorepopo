@@ -56,7 +56,7 @@ const navLinks = [
   { name: 'About', dirPath: '/about', icon: 'projects' },
   // { name: 'countries', dirPath: '/countries', icon: 'country' },
   // { name: 'buttons', dirPath: '/buttons', icon: 'home' },
-  { name: 'Posts', dirPath: '/posts', icon: 'blog', subPages: true },
+  { name: 'Posts', dirPath: '/posts', icon: 'blog'},
   // { name: 'Swatches', dirPath: '/swatch', icon: 'blog' },
   // { name: 'Sidebar', dirPath: '/about', icon: 'projects' },
   // { name: 'form', dirPath: '/form-test', icon: 'projects' },

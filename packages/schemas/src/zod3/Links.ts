@@ -15,10 +15,10 @@ const linkSx: z.ZodType<_linkType> = baseLinkSx.extend({
   sublinks: z.lazy(() => linkSx.array()),
 });
 
-const allBaseLinksSx = z.array(baseLinkSx);
-export type allBaseLinksSx = z.infer<typeof allBaseLinksSx>;
+const allBaseLinksSx = z.array(baseLinkSx).nonempty();
 
-export { baseLinkSx, linkSx };
+
+export {allBaseLinksSx, baseLinkSx, linkSx };
 
 // LinkSx.parse({
 //   name: "People",
