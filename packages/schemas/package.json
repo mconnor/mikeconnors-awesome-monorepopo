@@ -7,12 +7,12 @@
   "exports": {
     "./*": {
       "types": "./dist/*.d.ts",
-      "default": "./dist/*.js"
+      "default": "./dist/*.mjs"
     }
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "pnpm clean && tsup",
+    "build": "tsup",
     "dev": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",

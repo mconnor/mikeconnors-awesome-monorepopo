@@ -6,16 +6,6 @@ import * as z from 'zod'; // Required for Astro compatibility
 const dateLike = z.union([z.number(), z.string(), z.date()]);
 const dateLikeToDate = dateLike.pipe(z.coerce.date());
 
-export const SimpleLinkSchema = z.object({
-  label: z.string(),
-  href: z.string(),
-});
-
-export const MenuLinkSchema = SimpleLinkSchema.extend({
-  icon: z.string().optional(),
-  subPages: z.boolean().optional(),
-});
-
 // z
 //   .object({
 //     icon: z.string().optional(),
@@ -79,10 +69,8 @@ export const AuthorSchema = z.object({
  * TypeScript Types
  * Prefix with 'T' to clearly distinguish from schema definitions
  */
-export type TBlog = z.infer<typeof BlogSchema>;
-export type TProject = z.infer<typeof ProjectSchema>;
-export type TAuthor = z.infer<typeof AuthorSchema>;
-export type TImage = z.infer<typeof ImageSchema>;
+// export type TBlog = z.infer<typeof BlogSchema>;
+// export type TProject = z.infer<typeof ProjectSchema>;
+// export type TAuthor = z.infer<typeof AuthorSchema>;
+// export type TImage = z.infer<typeof ImageSchema>;
 // export type TMetadata = z.infer<typeof Metadata>;
-export type TmenuLink = z.infer<typeof MenuLinkSchema>;
-export type TsimpleLink = z.infer<typeof SimpleLinkSchema>;

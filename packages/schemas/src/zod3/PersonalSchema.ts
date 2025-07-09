@@ -1,7 +1,7 @@
 import * as z from 'zod';
 import { zWebSite, zEmail } from './Utils.ts';
 
-const personalSchema = z.object({
+export const personalSchema = z.object({
   name: z.string(),
   city: z.string(),
   email: zEmail,
@@ -9,4 +9,7 @@ const personalSchema = z.object({
   links: z.array(zWebSite).optional(),
 });
 
-export { personalSchema };
+// export { personalSchema,timeLineSchema ,geoTimeNodeSchema};
+
+// export type geoTimeNodeSchema = z.infer<typeof geoTimeNodeSchema>;
+// export type timeLineSchema = z.infer<typeof timeLineSchema>;

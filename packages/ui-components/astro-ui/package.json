@@ -47,7 +47,7 @@
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "astro": ">=5",
+    "astro": "^5.0.0",
     "tailwindcss": ">=4"
   }
 }

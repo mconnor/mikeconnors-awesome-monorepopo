@@ -1,9 +1,9 @@
 import * as z from 'zod'; // v4
 
-const schema = z
+const announcementsSchema = z
   .object({
     title: z.string(),
   })
   .strict();
 
-export default schema;
+export  {announcementsSchema};

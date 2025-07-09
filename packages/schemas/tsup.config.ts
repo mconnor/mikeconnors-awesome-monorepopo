@@ -7,6 +7,10 @@ export default defineConfig({
   sourcemap: true,
   dts: true,
   clean: true,
-  shims: true,
   minify: false,
+  outExtension() {
+    return {
+      js: `.mjs`,
+    };
+  },
 });
