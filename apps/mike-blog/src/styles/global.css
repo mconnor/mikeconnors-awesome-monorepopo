@@ -1,3 +1,5 @@
+@import 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css';
+@import 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css';
 @import 'tailwindcss';
 @source not "../src/public";
 @source '../../src';
@@ -8,7 +10,8 @@
 @import './animations.css';
 @import '@repo/astro-ui/styles.css';
 @import '@repo/preact/styles.css';
-@plugin "daisyui" {
+
+@plugin 'daisyui' {
   themes: all;
   root: '#blog-app';
 }
