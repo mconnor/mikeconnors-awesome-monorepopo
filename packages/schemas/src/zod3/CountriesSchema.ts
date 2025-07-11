@@ -7,6 +7,8 @@ const countrySchema = z.object({
   }),
 });
 
-const countriesSchema = z.array(countrySchema);
+const countriesSchema = countrySchema.array().nonempty({
+  message: "Can't be empty!",
+});
 
 export { countrySchema, countriesSchema };

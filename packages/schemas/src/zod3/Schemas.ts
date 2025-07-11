@@ -3,15 +3,20 @@ import * as z from 'zod'; // Required for Astro compatibility
 /**
  * Common Types and Utilities
  */
+
+// Be careful with the .array() method. It returns a new ZodArray instance. This means the order in which you call methods matters. For instance:
+
+// z.string().optional().array(); // (string | undefined)[]
+// z.string().array().optional(); // string[] | undefined
+
+const stringOrEmptyArray = z.string().optional().array();
+const optionalStringArray = z.string().array().optional();
+
+const nonEmptyStrings = z.string().array().nonempty({
+  message: "Can't be empty!",
+});
 const dateLike = z.union([z.number(), z.string(), z.date()]);
 const dateLikeToDate = dateLike.pipe(z.coerce.date());
-
-// z
-//   .object({
-//     icon: z.string().optional(),
-//     subPages: z.array(SimpleLinkSchema),
-//   })
-// //   .extend(SimpleLinkSchema);
 
 /**
  * Shared Schemas
@@ -33,9 +38,10 @@ const Metadata = z.object({
 /**
  * Blog Schemas
  */
+
 export const BlogSchema = Metadata.extend({
   draft: z.boolean().optional().default(false),
-  tags: z.array(z.string().min(1)).default([]),
+  tags: nonEmptyStrings,
   cover: ImageSchema.optional(),
 });
 
@@ -44,7 +50,7 @@ export const BlogSchema = Metadata.extend({
  */
 const ProjectSchema = Metadata.extend({
   repository: z.string().url().optional(),
-  technologies: z.array(z.string()).default([]),
+  technologies: nonEmptyStrings,
   status: z.enum(['active', 'archived', 'planned']).default('active'),
 });
 
@@ -63,6 +69,10 @@ export const AuthorSchema = z.object({
       linkedin: z.string().url().optional(),
     })
     .optional(),
+});
+
+export const AnnounceSchema = z.object({
+  title: z.string().min(5, 'Title is required'),
 });
 
 /**
