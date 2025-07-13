@@ -3,7 +3,7 @@
 // import js from '@eslint/js';
 import * as svelteParser from 'svelte-eslint-parser';
 import svelte from 'eslint-plugin-svelte';
-// import globals from 'globals';
+import globals from 'globals';
 // import ignoresConfig from './ignores.config.mjs';
 import tseslint from 'typescript-eslint';
 
@@ -12,7 +12,7 @@ const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 export default tseslint.config({
   extends: [...svelte.configs.recommended, ...svelte.configs.prettier],
-  files: ['**/*.svelte'],
+  files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
 
   languageOptions: {
     parser: svelteParser,

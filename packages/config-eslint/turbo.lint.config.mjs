@@ -1,5 +1,5 @@
 import turboPlugin from 'eslint-plugin-turbo';
-
+import { defineConfig, globalIgnores } from 'eslint/config';
 import onlyWarn from 'eslint-plugin-only-warn';
 
 /**
@@ -7,7 +7,7 @@ import onlyWarn from 'eslint-plugin-only-warn';
  *
  * @type {import("eslint").Linter.Config}
  * */
-const config = [
+export default defineConfig([
   {
     plugins: {
       turbo: turboPlugin,
@@ -21,6 +21,4 @@ const config = [
       onlyWarn,
     },
   },
-];
-
-export default config;
+]);

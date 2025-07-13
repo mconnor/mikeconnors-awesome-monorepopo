@@ -6,65 +6,50 @@
     "#*": "./*"
   },
   "exports": {
-    "./tailwind-lint": {
-      "types": "./index.d.ts",
+    "./TailwindLint": {
       "default": "./tw.lint.config.mjs"
     },
     "./turbo-config": {
-      "types": "./index.d.ts",
       "default": "./turbo.lint.config.mjs"
     },
     "./next-lint": {
-      "types": "./index.d.ts",
       "default": "./next.mjs"
     },
     "./ignores": {
-      "types": "./index.d.ts",
       "default": "./ignores.config.mjs"
     },
     "./vue-config": {
-      "types": "./index.d.ts",
       "default": "./vue.lint.config.mjs"
     },
     "./md-config": {
-      "types": "./index.d.ts",
       "default": "./md.lint.config.mjs"
     },
     "./react-internal": {
-      "types": "./index.d.ts",
       "default": "./react-internal.mjs"
     },
     "./ts-lint": {
-      "types": "./index.d.ts",
       "default": "./ts.lint.config.mjs"
     },
     "./lit-config": {
-      "types": "./index.d.ts",
       "default": "./lit.lint.config.mjs"
     },
     "./type-disable": {
-      "types": "./index.d.ts",
       "default": "./tscheck.disable.config.mjs"
     },
     "./regex": {
-      "types": "./index.d.ts",
       "default": "./regex.lint.config.mjs"
     },
     "./svelte5-app": {
-      "types": "./index.d.ts",
       "default": "./svelte5.lint.config.mjs"
     },
     "./solid": {
-      "types": "./index.d.ts",
       "default": "./sold.lint.config.mjs"
     },
     "./next-config": {
-      "types": "./index.d.ts",
       "default": "./next.mjs"
     },
     "./simple-imports-sort": {
-      "types": "./index.d.ts",
-      "default": "./simple-imports-sort.lint.config.mjs"
+      "default": "./simple.imports.config.mjs"
     }
   },
   "scripts": {
@@ -78,7 +63,7 @@
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "catalog:",
     "@eslint/compat": "catalog:",
-    "@eslint/css": "^0.9.0",
+    "@eslint/css": "^0.10.0",
     "@eslint/eslintrc": "catalog:",
     "@eslint/js": "catalog:",
     "@eslint/json": "catalog:",
@@ -104,6 +89,7 @@
     "globals": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "svelte-eslint-parser": "catalog:",
+    "typescript": "catalog:",
     "typescript-eslint": "catalog:",
     "vue-eslint-parser": "catalog:"
   }

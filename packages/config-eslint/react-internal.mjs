@@ -1,7 +1,7 @@
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import globals from 'globals';
-import { defineConfig, globalIgnores } from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 
 import { config as baseConfig } from './nextBase.mjs';
 
@@ -13,7 +13,7 @@ const extraFileExtensions = extensionInstanceObj.getExtensions();
  * Use this and only this script to lint react packages
  *
  * @type {import("eslint").Linter.Config} */
-const reactConfig = defineConfig([
+export default defineConfig([
   ...baseConfig,
 
   pluginReact.configs.flat.recommended,
@@ -45,5 +45,3 @@ const reactConfig = defineConfig([
     },
   },
 ]);
-
-export default reactConfig;

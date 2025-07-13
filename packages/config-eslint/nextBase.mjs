@@ -1,6 +1,7 @@
 import js from '@eslint/js';
 
 // import turboPlugin from 'eslint-plugin-turbo';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import eslintConfigPrettier from 'eslint-config-prettier';
 import onlyWarn from 'eslint-plugin-only-warn';
 import tseslint from 'typescript-eslint';
@@ -10,7 +11,8 @@ import ignoresConfig from './ignores.config.mjs';
  *
  * @type {import("eslint").Linter.Config}
  * */
-export const config = [
+
+export default defineConfig([
   ignoresConfig,
   js.configs.recommended,
 
@@ -29,4 +31,4 @@ export const config = [
     },
   },
   eslintConfigPrettier,
-];
+]);
