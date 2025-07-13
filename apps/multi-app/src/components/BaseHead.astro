@@ -10,7 +10,7 @@
 <script is:inline>
   function applyTheme() {
     if (localStorage.getItem('theme') === null) {
-      document.documentElement.setAttribute('data-theme', 'halloween');
+      document.documentElement.setAttribute('data-theme', 'cupcake');
     } else
       document.documentElement.setAttribute(
         'data-theme',
@@ -19,7 +19,12 @@
   }
 
   document.addEventListener('astro:after-swap', applyTheme);
-  applyTheme();
+
+  try {
+    applyTheme();
+  } catch (error) {
+    console.error('!!!' + error.message);
+  }
 </script>
 <script>
   import { themeChange } from 'theme-change';

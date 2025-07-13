@@ -9,7 +9,7 @@
     "updateAstro": "dlx @astrojs/upgrade",
     "dev": "astro dev",
     "astro-check": "astro check",
-    "build": "astro build",
+    "build": "astro build --devOutput",
     "preview": "astro preview",
     "astro": "astro",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
@@ -42,6 +42,8 @@
     "add": "catalog:",
     "astro": "catalog:",
     "preact": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
     "svelte": "catalog:svelte5",
     "vue": "catalog:",
@@ -54,6 +56,10 @@
     "theme-change": "catalog:",
     "@sveltejs/vite-plugin-svelte": "catalog:svelte5",
     "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "prettier-plugin-toml": "catalog:",
     "typescript": "catalog:"
   }
 }
