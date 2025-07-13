@@ -47,7 +47,7 @@ export default class Center extends HTMLElement {
   }
 
   get max() {
-    return this.getAttribute('max') || 'var(--measure)';
+    return this.getAttribute('max') || 'var(--measure, 60ch)';
   }
 
   set max(val) {

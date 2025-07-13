@@ -1,6 +1,6 @@
 ---
 import './Sidebar.css';
-import type { Percentage, RmUnitType } from '#types/index.ts';
+import type { Percentage, RmUnitType } from '../index.ts';
 
 /**
  * @module sidebar-l
@@ -24,8 +24,7 @@ interface Props {
 const { side = 'left', ...rest } = Astro.props;
 ---
 
+<script src="./Sidebar.js"></script>
 <sidebar-l side={side} {...rest}>
   <slot />
 </sidebar-l>
-
-<script src="./Sidebar.js"></script>

@@ -1,33 +1,24 @@
 ---
-import './Cluster.css';
-
-import type {
-  AlignItemsTypes,
-  JustifyContentTypes,
-  RmUnitType,
-} from '#types/index.ts';
-
 // const LIST = 'list'
 
 interface Props {
-  justify?: JustifyContentTypes; //"flex-start"
-  align?: AlignItemsTypes; // "flex-start"
-  space?: RmUnitType;
+  name: string;
   // role?: typeof LIST
 }
 
-const {
-  justify = 'flex-start',
-  align = 'flex-start',
-  space = 'var(--s1)',
-} = Astro.props;
+const { name } = Astro.props;
 ---
 
-<script src="./Cluster.js"></script>
-
-<cluster-l justify={justify} align={align} space={space}>
+<script src="./Container.js"></script>
+<container-l name={name}>
   <slot />
-</cluster-l>
+</container-l>
+
+<style>
+  container-l {
+    display: block;
+  }
+</style>
 
 <!--
 side	string	"left"	Which element to treat as the sidebar (all values but "left" are considered "right")

@@ -3,6 +3,7 @@
   "version": "3.0.1",
   "description": "",
   "type": "module",
+  "main": "./src/index.ts",
   "imports": {
     "#*": "./src/*"
   },
@@ -11,11 +12,11 @@
       "types": "./src/types/index.ts"
     },
     "./*": {
-      "default": "./src/ed-layouts/*/index.astro"
-    },
-    "./styles.css": "./dist/styles.css"
+      "default": "./src/*/index.astro"
+    }
   },
   "scripts": {
+    "sync": "astro sync",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
@@ -33,7 +34,6 @@
     "eslint": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {

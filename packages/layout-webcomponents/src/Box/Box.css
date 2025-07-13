@@ -1,6 +1,6 @@
 box-l {
   display: block;
-  padding: var(--s1);
+  padding: var(--s1, 1rem);
   border-width: 1px;
   /* ↓ For high contrast mode */
   outline: 1px solid transparent;

@@ -1,7 +1,7 @@
 ---
 import './Switcher.css';
 
-import type { RmUnitType } from '#types/index.ts';
+import type { RmUnitType } from '../index.ts';
 
 interface Props {
   threshold?: RmUnitType; //"var(--measure)"
@@ -12,8 +12,7 @@ interface Props {
 const props = Astro.props;
 ---
 
+<script src="./Switcher.js"></script>
 <switcher-l {...props}>
   <slot />
 </switcher-l>
-
-<script src="./Switcher.js"></script>

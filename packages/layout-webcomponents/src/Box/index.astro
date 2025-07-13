@@ -1,7 +1,7 @@
 ---
 import './Box.css';
 
-import type { RmUnitType } from '#types/index.ts';
+import type { RmUnitType } from '../index.ts';
 
 interface Props {
   padding?: RmUnitType;
@@ -9,7 +9,7 @@ interface Props {
   // highlight?: boolean;
   // borderStyle?: BorderStyle;
   invert?: boolean;
-  children?: unknown;
+  children: unknown;
 }
 const props = Astro.props;
 ---
@@ -19,5 +19,4 @@ const props = Astro.props;
     <slot />
   </box-l>
 </div>
-
 <script src="./Box.js"></script>

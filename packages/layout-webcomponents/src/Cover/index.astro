@@ -1,7 +1,7 @@
 ---
 import './Cover.css';
 
-import type { RmUnitType } from '#types/index.ts';
+import type { RmUnitType } from '../index.ts';
 
 interface Props {
   centeredElement?: string; // h1
@@ -14,8 +14,8 @@ interface Props {
 const { centeredElement: centered, ...rest } = Astro.props;
 ---
 
+<script src="./Cover.js"></script>
+
 <cover-l centered={centered} {...rest}>
   <slot />
 </cover-l>
-
-<script src="./Cover.js"></script>
