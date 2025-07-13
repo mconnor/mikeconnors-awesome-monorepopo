@@ -15,6 +15,11 @@
         "USER_NAME",
         "DOMAIN"
       ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["@repo/schemas#build", "^build"]
     }
   }
 }

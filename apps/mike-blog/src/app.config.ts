@@ -2,6 +2,7 @@ import type iconPaths from '@repo/icon-paths/paths';
 
 type IconType = keyof typeof iconPaths;
 import MyAvatar from '#assets/img-1_200x200.webp';
+
 const NAME = 'Mike Connor';
 const SITE_TITLE = 'Mike Connor | Developer';
 const SITE_DESCRIPTION =
@@ -47,27 +48,17 @@ const OUTBOUND_LINKS = new Set([GITHUB, TWITTER, LINKEDIN, DISCORD]);
 export interface NavLinkI {
   name: string;
   dirPath: string;
-  icon?: string;
-  subPages?: boolean;
+  icon: string;
+  // subPages?: boolean;
 }
 // const navLinks: TmenuLink[] = [
-const navLinks = [
-  // { name: 'Home', dirPath: '/', icon: 'home' },
+
+export const navLinksArray = [
   { name: 'About', dirPath: '/about', icon: 'projects' },
-  // { name: 'countries', dirPath: '/countries', icon: 'country' },
-  // { name: 'buttons', dirPath: '/buttons', icon: 'home' },
-  { name: 'Posts', dirPath: '/posts', icon: 'blog'},
-  // { name: 'Swatches', dirPath: '/swatch', icon: 'blog' },
-  // { name: 'Sidebar', dirPath: '/about', icon: 'projects' },
-  // { name: 'form', dirPath: '/form-test', icon: 'projects' },
-  // { name: 'Contact', dirPath: '/contact', icon: 'projects' },
+  { name: 'Posts', dirPath: '/posts', icon: 'blog' },
   { name: 'Tags', dirPath: '/tags', icon: 'projects' },
   { name: 'CV', dirPath: '/resume', icon: 'projects' },
-  // { name: 'blank', dirPath: '/blank', icon: 'projects' },
-  { name: 'Announce', dirPath: '/announcements', icon: 'projects' },
-  // { name: 'get-started', dirPath: '/get-started', icon: 'projects' },
-
-  // { name: 'Store', dirPath: '/store', icon: 'store' },
+  { name: 'Announce', dirPath: './announcements', icon: 'projects' },
 ];
 
 const imageSources = [

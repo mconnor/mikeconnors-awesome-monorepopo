@@ -1,5 +1,4 @@
 ---
-
 import { format } from 'date-fns';
 import { Image } from 'astro:assets';
 import Andy from '#assets/andyBushes.jpg';
@@ -27,7 +26,7 @@ const bool3 = posts.length > 2;
     posts.map(({ id, data }) => {
       const { cover, title, description, tags, date } = data;
       return (
-        <div class="card max-h-100 bg-base-100 card-sm md:card-md lg:card-lg max-w-full shadow-sm md:max-w-96">
+        <div class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
           <figure>
             <Frame ratio="16:9">
               {cover ?
@@ -56,7 +55,7 @@ const bool3 = posts.length > 2;
             <div class="card-actions justify-end">
               {tags &&
                 tags.map((tag) => (
-                  <a href={`/tags/${tag}`} class="badge badge-sm z-10">
+                  <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
                     {tag}
                   </a>
                 ))}

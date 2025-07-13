@@ -1,17 +1,16 @@
 ---
-import { daisyuiThemes } from '#utils/daisyui-themes.ts';
 interface Props {
-  cta: string;
+  cta?: string;
   themes: string[];
 }
-const { cta = 'theme', themes = daisyuiThemes } = Astro.props;
+const { cta = 'theme', themes } = Astro.props;
 ---
 
 <div class="dropdown dropdown-end">
   <div tabindex="0" role="button" class="btn m-1">{cta}</div>
   <ul
     tabindex="0"
-    class="dropdown-content menu z-1 rounded-box bg-base-100 w-52 p-2 shadow-sm"
+    class="dropdown-content menu z-1 w-52 rounded-box bg-base-100 p-2 shadow-sm"
   >
     {
       themes.map((theme) => (

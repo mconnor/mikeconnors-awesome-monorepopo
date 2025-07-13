@@ -24,7 +24,7 @@
       "dependsOn": ["^transit"]
     },
     "lint": {
-      "dependsOn": ["^lint"]
+      "dependsOn": ["transit"]
     },
     "format": {},
     "sync": {

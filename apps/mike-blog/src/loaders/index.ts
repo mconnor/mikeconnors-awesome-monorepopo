@@ -1,5 +1,5 @@
-import { jsonSchema } from '@repo/schemas/Utils';
-import { countriesSchema, countrySchema } from '@repo/schemas/CountriesSchema';
+import { jsonSchema } from '#schemas/Utils.ts';
+import { countriesSchema, countrySchema } from '#schemas/CountriesSchema.ts';
 import type { Loader, LoaderContext } from 'astro/loaders';
 
 //  parseData<TData extends Record<string, unknown>>(props: ParseDataOptions<TData>): Promise<TData>;
@@ -32,9 +32,6 @@ const countryLoader = (): Loader => {
         if (!result.success) {
           new Error(`Failed to parse JSON: ${result.error.message}`);
         }
-
-        // console.log(rawResponse);
-
         const {
           data: countryData,
           success,

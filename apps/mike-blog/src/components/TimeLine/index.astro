@@ -14,7 +14,7 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<ul class="not-prose timeline timeline-vertical md:timeline-horizontal group">
+<ul class="not-prose group timeline timeline-vertical md:timeline-horizontal">
   {
     items.map(({ city, year }, index, array) => {
       const first = index !== 0;

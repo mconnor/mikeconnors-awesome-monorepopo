@@ -38,9 +38,9 @@ export const daisyuiThemes = [
   'dim',
   'sunset',
   'nord',
-] as const;
+];
 
-export type DaisyThemesType = keyof typeof daisyuiThemes;
+// export type DaisyThemesType = keyof typeof daisyuiThemes;
 
 // export type DaisyUITheme = DaisyThemesType[number];
 

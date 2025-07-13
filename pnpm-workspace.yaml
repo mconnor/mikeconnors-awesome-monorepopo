@@ -25,38 +25,38 @@ catalog:
   '@astrojs/starlight-markdoc': ^0.4.0
   '@astrojs/vercel': ^8.2.1
   '@astrojs/vue': ^5.1.0
-  '@custom-elements-manifest/analyzer': ^0.10.4
+  '@custom-elements-manifest/analyzer': 0.10.4
   '@eslint/compat': ^1.3.1
   '@eslint/eslintrc': ^3.3.1
-  '@eslint/js': ^9.30.1
-  '@eslint/json': ^0.12.0
-  '@eslint/markdown': ^6.6.0
+  '@eslint/js': ^9.31.0
+  '@eslint/json': ^0.13.0
+  '@eslint/markdown': ^7.0.0
   '@headlessui/react': ^2.2.4
   '@headlessui/vue': ^1.7.23
   '@heroicons/react': ^2.2.0
   '@heroicons/vue': ^2.2.0
-  '@iconify-json/mdi': ^1.2.3
   '@iarna/toml': ^2.2.5
+  '@iconify-json/mdi': ^1.2.3
   '@next/eslint-plugin-next': ^15.3.5
-  '@preact/preset-vite': ^2.10.2
   '@open-wc/testing': ^4.0.0
-  '@prettier/plugin-oxc': ^0.0.4
   '@playform/compress': ^0.2.0
+  '@preact/preset-vite': ^2.10.2
   '@preact/signals': ^2.2.1
+  '@prettier/plugin-oxc': ^0.0.4
   '@sentry/astro': ^8.55.0
   '@sentry/browser': ^8.55.0
   '@sentry/cli': ^2.46.0
   '@sentry/vite-plugin': ^3.5.0
   '@tailwindcss/cli': ^4.1.11
-  '@tailwindcss/postcss': ^4.1.11
   '@tailwindcss/forms': ^0.5.10
+  '@tailwindcss/postcss': ^4.1.11
   '@tailwindcss/typography': ^0.5.16
   '@tailwindcss/vite': ^4.1.11
-  '@typescript-eslint/parser': ^8.35.1
   '@types/canvas-confetti': ^1.9.0
-  '@types/node': ^22.16.0
+  '@types/node': ^22.16.3
   '@types/react': ^19.1.8
   '@types/react-dom': ^19.1.6
+  '@typescript-eslint/parser': ^8.36.0
   '@vitejs/plugin-react': ^4.6.0
   '@vitejs/plugin-vue': ^6.0.0
   '@vitest/browser': ^3.2.4
@@ -73,8 +73,8 @@ catalog:
   cssnano: ^7.0.7
   daisyui: ^5.0.46
   date-fns: ^4.1.0
-  dotenv: ^16.6.1
-  eslint: ^9.30.1
+  dotenv: ^17.2.0
+  eslint: ^9.31.0
   eslint-config-prettier: ^10.1.5
   eslint-plugin-astro: ^1.3.1
   eslint-plugin-barrel-files: ^3.0.1
@@ -91,10 +91,11 @@ catalog:
   eslint-plugin-wc: ^3.0.1
   globals: ^16.3.0
   jest: ^30.0.4
-  lit: ^3.3.0
+  lit: ^3.3.1
   lorem-ipsum: ^2.0.8
   luxon: ^3.6.1
   open-props: ^1.7.15
+  playwright: ^1.54.1
   postcss: ^8.5.6
   postcss-custom-media: ^11.0.6
   postcss-html: ^1.8.0
@@ -105,13 +106,13 @@ catalog:
   preact: ^10.26.9
   prettier: ^3.6.2
   prettier-plugin-astro: ^0.14.1
-  prettier-plugin-tailwindcss: ^0.6.13
-  prettier-plugin-toml: ^2.0.5
+  prettier-plugin-tailwindcss: ^0.6.14
+  prettier-plugin-toml: ^2.0.6
   prettier-plugin-vue: ^1.1.6
   react: ^19.1.0
   react-dom: ^19.1.0
   rollup-plugin-visualizer: ^6.0.3
-  sharp: ^0.34.2
+  sharp: ^0.34.3
   solid-js: ^1.9.7
   svelte-eslint-parser: ^1.2.0
   tailwind-merge: ^3.3.1
@@ -125,19 +126,19 @@ catalog:
   vue: ^3.5.17
   vue-eslint-parser: ^10.2.0
   zod: ^3.24.2
-  zod-validation-error: ^3.5.2
+  zod-validation-error: ^3.5.3
 
 catalogs:
   svelte5:
     '@astrojs/svelte': ^7.1.0
     '@sveltejs/adapter-auto': ^6.0.1
-    '@sveltejs/kit': ^2.22.2
-    '@sveltejs/vite-plugin-svelte': ^5.1.0
-    '@testing-library/svelte': ^5.2.8
-    '@testing-library/jest-dom': ^6.6.3
     '@sveltejs/adapter-vercel': ^5.7.2
-    svelte: ^5.35.2
+    '@sveltejs/kit': ^2.22.5
+    '@sveltejs/vite-plugin-svelte': ^6.0.0
+    '@testing-library/jest-dom': ^6.6.3
+    '@testing-library/svelte': ^5.2.8
+    prettier-plugin-svelte: ^3.4.0
+    svelte: ^5.35.6
     svelte-check: ^4.2.2
     svelte-preprocess: ^6.0.3
-    prettier-plugin-svelte: ^3.4.0
     vitest-browser-svelte: ^1.0.0

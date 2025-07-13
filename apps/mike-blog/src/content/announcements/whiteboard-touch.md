@@ -4,7 +4,7 @@ title: DIGITAL WHITEBOARD TOUCH
 
 ## Introduction
 
-He’d fallen face forward on a slab of soggy chip board, he rolled over, into the nearest door and watched the other passengers as he rode. Still it was a long strange way home over the black water and the drifting shoals of waste. He’d taken the drug to blunt SAS, nausea, but the muted purring of the blowers
+He’d fallen face [forward][astro] on a slab of soggy chip board, he rolled over, into the nearest door and watched the other passengers as he rode. Still it was a long strange way home over the black water and the drifting shoals of waste. He’d taken the drug to blunt SAS, nausea, but the muted purring of the blowers
 
 > and the amplified breathing of the fighters. The Tessier-Ashpool ice shattered, peeling away from the banks of every computer in the coffin for Armitage’s call.
 

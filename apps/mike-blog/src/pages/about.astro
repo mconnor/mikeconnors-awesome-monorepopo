@@ -7,7 +7,7 @@ import Stack from '@repo/layout-webcomponents/Stack';
 import { Image } from 'astro:assets';
 // import Mix from '@repo/astro-ui/Mix';
 // import Btns from '@repo/astro-ui/Btns';
-import { imageSources, timeCapsules } from '#app.config.ts';
+import { timeCapsules } from '#app.config.ts';
 import TimeLine from '#components/TimeLine/index.astro';
 import Bushes from '#assets/andyBushes.jpg';
 // import Mud from '#assets/andy_mud_color.webp';
@@ -45,7 +45,7 @@ import Bushes from '#assets/andyBushes.jpg';
 
       <TimeLine items={timeCapsules} />
       <div
-        class="from-base-content bg-gradient-to-b to-transparent bg-clip-text text-transparent"
+        class="bg-gradient-to-b from-base-content to-transparent bg-clip-text text-transparent"
       >
         <p>
           At the moment, the blog is all Nostrud adipisicing mollit excepteur in

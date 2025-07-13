@@ -3,7 +3,7 @@ import icon from 'astro-icon';
 import { defineConfig, sharpImageService, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
-import preact from '@astrojs/preact';
+
 import { loadEnv } from 'vite';
 const { DOMAIN } = loadEnv(process.env.NODE_ENV, process.cwd(), '');
 
@@ -86,17 +86,9 @@ export default defineConfig({
     },
   },
 
-  integrations: [
-    icon(),
-    mdx(),
-    preact({
-      include: ['node_modules/@repo/preact/dist/*'],
-      compat: true,
-      devtools: true,
-    }),
-  ],
+  integrations: [icon(), mdx()],
   // It is no longer necessary to specify output: 'hybrid' in your Astro config to use server-rendered pages. The new output: 'static' has this capability included.
-  output: 'static',
+  // output: 'static',
   adapter: vercel({
     imageService: true,
     devImageService: 'sharp',

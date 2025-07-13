@@ -5,7 +5,7 @@ import Headline from '#components/Headline.astro';
 import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
 
-import { tagsSchema, tagCountSchema } from '@repo/schemas/TagsSchema';
+import { tagsSchema, tagCountSchema } from '#schemas/Blog.ts';
 
 const allBlogPost = await getCollection('blogCollection');
 

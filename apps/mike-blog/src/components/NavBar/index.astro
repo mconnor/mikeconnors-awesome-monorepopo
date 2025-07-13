@@ -1,0 +1,60 @@
+---
+import { daisyuiThemes } from '#utils/daisyui-themes.ts';
+import Hamburger from '#assets/svgs/Hamburger.svg';
+import DropDownDetails from './DropDownDetails.astro';
+
+import { allBaseLinksSx, type LinkTypes } from '#schemas/Links.ts';
+
+interface Props {
+  navLinks: LinkTypes;
+  tabindex?: number;
+  title?: string;
+}
+
+const { navLinks, tabindex = 0, title = 'x' } = Astro.props;
+
+const { data: parsedNavs, success, error } = allBaseLinksSx.safeParse(navLinks);
+if (error) throw new Error(error.message);
+---
+
+<div class="navbar bg-base-100 shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex={tabindex} role="button" class="btn btn-ghost lg:hidden">
+        <Hamburger />
+      </div>
+
+      <ul
+        tabindex={tabindex}
+        class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
+      >
+        {
+          parsedNavs.map(({ dirPath, name }) => (
+            <li>
+              <a role="button" class="link" href={dirPath}>
+                {name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <a href="/" class="btn btn-ghost btn-xl">
+      {title}
+    </a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+    <ul tabindex={tabindex} class="menu menu-horizontal px-1">
+      {
+        parsedNavs.map(({ dirPath, name }) => (
+          <li>
+            <a role="button" class="link" href={dirPath}>
+              {name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <div class="navbar-end"><DropDownDetails themes={daisyuiThemes} /></div>
+</div>

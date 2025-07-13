@@ -1,28 +1,13 @@
 ---
-import type { ComponentProps } from 'astro/types';
-
 import Center from '@repo/layout-webcomponents/Center';
-import ThemeSelector from '#components/DropDownDetails/index.astro';
-import { daisyuiThemes } from '#utils/daisyui-themes.ts';
-// import DThemeDropDown from '#components/DThemeDropDown/index.astro';
+import Header from '#components/Header/index.astro';
 import Cover from '@repo/layout-webcomponents/Cover';
-// import ThemeToggle from '#components/ThemeToggle/index.astro';
-import type { RmUnitType } from '@repo/layout-webcomponents/Types';
-import { navLinks } from '#app.config.ts';
-import NavBar from '@repo/preact/NavBar';
-// import { Image } from 'astro:assets';
-// import Hamburger from '#assets/svgs/Hamburger.svg';
-// import Nav from '#components/Nav/index.astro';
-// import Andy from '#assets/andy_mud_color.webp';
-// import BgImage from '#components/bg-img/index.astro';
-// import Headline from '#components/Headline.astro';
+// import type RmUnitType from '@repo/layout-webcomponents/RmUnitType';
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
 
-type NavBarProps = ComponentProps<typeof NavBar>;
-
 interface Props {
-  maxW?: RmUnitType;
+  maxW?: string;
   children: unknown;
   title?: string;
   description?: string;
@@ -36,9 +21,10 @@ const {
 ---
 
 <BaseLayout title={title} {...rest}>
-  <NavBar navLinks={navLinks} client:visible>
-    <ThemeSelector slot="right-button" />
-  </NavBar>
+  <!-- <NavBar navLinks={navLinksArray} title="x" tabindex={0} client:visible>
+   <ThemeSelector  slot="right-button" />
+  </NavBar> -->
+  <Header />
 
   <Cover centeredElement="center-l" noPad minHeight="100dvh">
     <Center max={maxW} gutters="1rem" transition:persist>
