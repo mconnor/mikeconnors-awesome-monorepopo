@@ -8,13 +8,14 @@
   },
   "exports": {
     "./*": {
-      "default": "./src/*/index.astro"
+      "types": "./src/*/index.astro.tsx",
+      "import": "./src/*/index.astro"
     },
     "./styles.css": "./dist/styles.css"
   },
   "scripts": {
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
+    "build": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
+    "dev": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
     "clean": "rm -rf dist",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
@@ -29,6 +30,7 @@
   "license": "ISC",
   "dependencies": {
     "@repo/icon-paths": "workspace:^",
+    "@repo/schemas": "workspace:^",
     "lorem-ipsum": "catalog:"
   },
   "devDependencies": {
@@ -37,6 +39,7 @@
     "@repo/typescript-config": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@tailwindcss/cli": "catalog:",
+    "@types/node": "catalog:",
     "tailwindcss": "catalog:",
     "astro": "catalog:",
     "daisyui": "catalog:",
@@ -47,7 +50,7 @@
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "astro": "^5.0.0",
-    "tailwindcss": ">=4"
+    "astro": "^5.5.0",
+    "tailwindcss": "^4.1.0"
   }
 }
