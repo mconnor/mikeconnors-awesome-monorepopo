@@ -1,6 +1,6 @@
 {
   "name": "@repo/preact",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "preact ui",
   "type": "module",
   "imports": {
@@ -9,14 +9,13 @@
   "exports": {
     "./styles.css": "./dist/styles.css",
     "./*": {
-      "types": "./dist/*/index.d.ts",
-      "import": "./dist/*/index.mjs"
+      "types": "./src/*/index.tsx",
+      "import": "./src/*/index.tsx"
     }
   },
   "scripts": {
-    "build:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
-    "build:components": "tsup",
-    "dev:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
+    "build:styles": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
+    "dev:styles": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
     "dev:components": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
@@ -37,7 +36,7 @@
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
     "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
     "daisyui": "catalog:",

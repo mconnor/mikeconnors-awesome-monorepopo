@@ -1,14 +1,14 @@
 import * as z from 'zod/v3';
-import type { ComponentChildren } from 'preact';
-import  { allBaseLinksSx  } from '@repo/schemas/Links';
+import type { ComponentChild } from 'preact';
+import type { LinkTypes } from '@repo/schemas/Links';
+import { allBaseLinksSx } from '@repo/schemas/Links';
 import HamburgerIcon from './Icon.tsx';
 
-type NavType = z.infer<typeof allBaseLinksSx>;
 interface Props {
-  navLinks: NavType;
+  navLinks: LinkTypes;
   tabindex?: number;
   title?: string;
-  rightButton: ComponentChildren;
+  rightButton: ComponentChild;
 }
 
 function NavBar({
@@ -17,8 +17,12 @@ function NavBar({
   title = 'mike connor - tech',
   tabindex = 0,
 }: Props) {
-  const {data: parsedNavs, success, error} = allBaseLinksSx.safeParse(navLinks);
-  if (error ) throw new Error(error.message)
+  const {
+    data: parsedNavs,
+    success,
+    error,
+  } = allBaseLinksSx.safeParse(navLinks);
+  if (error) throw new Error(error.message);
 
   return (
     <div className="navbar bg-base-100 shadow-sm">

@@ -11,7 +11,6 @@ export { default as Reel } from './Reel/index.astro';
 export { default as Stack } from './Stack/index.astro';
 export { default as Switcher } from './Switcher/index.astro';
 
-
 type Percentage = `${number}%`;
 type CustomPropType = `var(--${string})`;
 

@@ -12,7 +12,8 @@
       "types": "./src/types/index.ts"
     },
     "./*": {
-      "default": "./src/*/index.astro"
+      "types": "./src/*/index.astro.tsx",
+      "import": "./src/*/index.astro"
     }
   },
   "scripts": {
@@ -37,7 +38,7 @@
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "astro": ">=5"
+    "astro": "^5.5.0"
   },
   "keywords": [],
   "author": "",

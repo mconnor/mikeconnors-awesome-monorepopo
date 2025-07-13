@@ -4,6 +4,9 @@
     "build": {
       "dependsOn": ["clean", "build:styles", "build:components"]
     },
+    "format": {
+      "cache": false
+    },
     "build:styles": {
       "outputs": ["dist/**"]
     },

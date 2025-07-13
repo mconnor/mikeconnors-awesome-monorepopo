@@ -20,8 +20,8 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
-    "dev": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
+    "build": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css",
+    "dev": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/index.css  --watch",
     "astro-check": "astro check",
     "test": "echo 'no tests yet'",
     "format": "prettier . --write",
@@ -52,7 +52,7 @@
   },
   "peerDependencies": {
     "astro": ">=5",
-    "tailwindcss": ">=4"
+    "tailwindcss": "^4.1.0"
   },
   "keywords": [],
   "author": "",

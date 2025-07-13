@@ -12,16 +12,17 @@
   "exports": {
     "./styles.css": "./dist/styles.css",
     "./*": {
-      "types": "./dist/*/index.d.ts",
-      "import": "./dist/*/index.mjs"
+      "types": "./src/*/index.tsx",
+      "import": "./src/*/index.tsx"
     }
   },
   "scripts": {
-    "build:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
-    "build:components": "tsup",
-    "dev:styles": "npx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
+    "build:styles": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
+    "build:components": "echo 'nope'",
+    "dev:styles": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
     "dev:components": "tsup --watch",
     "check-types": "tsc --noEmit",
+    "generate:component": "turbo gen react-component",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "lint": "eslint src --max-warnings 0",
     "test": "jest",
@@ -50,6 +51,7 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/cli": "catalog:",
+    "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "daisyui": "catalog:",
@@ -57,12 +59,15 @@
     "jest": "catalog:",
     "eslint": "catalog:",
     "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
     "tsup": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@types/react": ">=19",
-    "@types/react-dom": ">=19"
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.0"
   }
 }
