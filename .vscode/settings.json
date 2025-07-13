@@ -140,14 +140,6 @@
       }
     }
   },
-  "github.copilot.chat.codeGeneration.instructions": [
-    {
-      "file": "./.vscode/copilot-instructions.md"
-    },
-    {
-      "file": "./.vscode/daisyui.md"
-    }
-  ],
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
   },
