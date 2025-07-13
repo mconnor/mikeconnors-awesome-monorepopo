@@ -1,7 +1,7 @@
 {
   "name": "@app/proj",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "imports": {
     "#*": "./src/*"
   },
@@ -37,6 +37,7 @@
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
+    "prettier-plugin-toml": "catalog:",
     "typescript": "catalog:"
   }
 }

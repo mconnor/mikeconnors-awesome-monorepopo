@@ -1,9 +1,11 @@
 ---
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import FormattedDate from '#components/FormattedDate.astro';
 import { Image } from 'astro:assets';
 import Layout from '#layouts/Layout.astro';
-const posts = (await getCollection('blog')).sort(
+const unsortedPost = await getCollection('blog');
+
+const posts = unsortedPost.sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
@@ -24,9 +26,9 @@ const posts = (await getCollection('blog')).sort(
               />
             )}
             <h4 class="title">{post.data.title}</h4>
-            <p class="date">
+            {/* <p class="date">
               <FormattedDate date={post.data.pubDate} />
-            </p>
+            </p> */}
           </a>
         </li>
       ))

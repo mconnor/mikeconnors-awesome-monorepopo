@@ -5,7 +5,7 @@
   "imports": {
     "#*": "./src/*"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -20,7 +20,6 @@
   },
   "dependencies": {
     "@astrojs/check": "catalog:",
-    "@repo/layout-webcomponents": "workspace:*",
     "astro": "catalog:",
     "astro-icon": "catalog:"
   },
@@ -29,6 +28,9 @@
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
+    "prettier": "catalog:",
+    "prettier-plugin-astro": "catalog:",
+    "@prettier/plugin-oxc": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }
