@@ -1,8 +1,8 @@
 import { z, reference, defineCollection } from 'astro:content';
 import TOML from '@iarna/toml';
 // build-in loaders
-import { file, glob } from 'astro/loaders';
-
+// import { file, glob } from 'astro/loaders';
+import { file, glob, type Loader, type LoaderContext } from 'astro/loaders';
 import { AnnounceSchema } from '#schemas/Announce.ts';
 import { BlogSchema, AuthorSchema } from '#schemas/Blog.ts';
 

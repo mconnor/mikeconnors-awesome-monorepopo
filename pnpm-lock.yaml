@@ -469,6 +469,9 @@ importers:
       theme-change:
         specifier: 'catalog:'
         version: 2.5.0
+      zod:
+        specifier: 'catalog:'
+        version: 3.25.75
     devDependencies:
       '@iconify-json/mdi':
         specifier: 'catalog:'

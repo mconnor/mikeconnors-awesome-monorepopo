@@ -52,15 +52,15 @@ const { title, description, image = FallbackImage } = Astro.props;
 <script is:inline>
   function applyTheme() {
     if (localStorage.getItem('theme') === null) {
-    document.documentElement.setAttribute('data-theme', 'light');
-  } else
-    document.documentElement.setAttribute(
-      'data-theme',
-      localStorage.getItem('theme'),
-    );
+      document.documentElement.setAttribute('data-theme', 'light');
+    } else
+      document.documentElement.setAttribute(
+        'data-theme',
+        localStorage.getItem('theme'),
+      );
   }
 
-  document.addEventListener("astro:after-swap", applyTheme);
+  document.addEventListener('astro:after-swap', applyTheme);
   applyTheme();
 </script>
 

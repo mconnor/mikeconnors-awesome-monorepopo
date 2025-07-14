@@ -65,7 +65,8 @@
     "gsap": "^3.13.0",
     "lorem-ipsum": "catalog:",
     "theme-change": "catalog:",
-    "sharp": "catalog:"
+    "sharp": "catalog:",
+    "zod": "catalog:"
   },
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",

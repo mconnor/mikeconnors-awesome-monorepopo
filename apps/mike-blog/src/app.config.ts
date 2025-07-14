@@ -110,6 +110,11 @@ const timeCapsules = [
   { city: 'KCMO', year: 2022 },
 ];
 
+
+const COUNTRY_URL = new URL(
+  '/v3.1/region/africa/',
+  'https://restcountries.com/',
+);
 // const map = new Map();
 // // Iterate and record first & last per city
 // for (const entry of timeCapsules) {
@@ -137,4 +142,5 @@ export {
   navLinks,
   imageSources,
   timeCapsules,
+  COUNTRY_URL
 };
