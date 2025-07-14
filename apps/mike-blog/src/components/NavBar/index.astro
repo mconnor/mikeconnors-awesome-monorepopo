@@ -11,7 +11,7 @@ interface Props {
   title?: string;
 }
 
-const { navLinks, tabindex = 0, title = 'x' } = Astro.props;
+const { navLinks, tabindex = 0, title = 'MC' } = Astro.props;
 
 const { data: parsedNavs, success, error } = allBaseLinksSx.safeParse(navLinks);
 if (error) throw new Error(error.message);
