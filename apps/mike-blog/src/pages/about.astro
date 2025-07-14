@@ -18,9 +18,9 @@ import Headline from '#components/Headline.astro';
 ---
 
 <Layout title="About">
-  <!-- <Stack space="var(--s4)"> -->
+  <Stack space="var(--s1)">
   <!-- <Btns /> -->
-  <Prose>
+  <!-- <Prose> -->
     <!-- <Stack> -->
     <!-- <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
       <Frame ratio="1.6180:1">
@@ -30,7 +30,7 @@ import Headline from '#components/Headline.astro';
 
     <Headline headline="About" />
     <!-- <Frame ratio="3:2"> -->
-    <div class="">
+    <!-- <div class=""> -->
       <Image
         src={Bushes}
         alt="Andy"
@@ -38,9 +38,9 @@ import Headline from '#components/Headline.astro';
         class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
       />
       <!-- </Frame> -->
-    </div>
+    <!-- </div> -->
 
-    <p>
+    <p class="prose">
       I'm a front-end developer currently based in my hometown of historic
       Westport, KCMO right across from Bronze Jim Bridger. And were my Irish
       great-great grand-father, John Connor, lived in 1857. Right on Westport Rd
@@ -48,13 +48,9 @@ import Headline from '#components/Headline.astro';
     </p>
 
     <TimeLine items={timeCapsules} />
-    <div
-      class="bg-gradient-to-b from-base-content to-transparent bg-clip-text text-transparent"
-    >
-      <p>The best thing about KC.. no rats. But lots of rabbits.</p>
-    </div>
-    <!-- </Stack> -->
-  </Prose>
+       <p class="prose">The best thing about KC.. no rats. But lots of rabbits.</p>
+    </Stack>
+  <!-- </Prose> -->
 </Layout>
 <!-- <Carousel images={imageSources} /> -->
 
