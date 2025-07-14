@@ -10,48 +10,50 @@ import { Image } from 'astro:assets';
 import { timeCapsules } from '#app.config.ts';
 import TimeLine from '#components/TimeLine/index.astro';
 import Bushes from '#assets/andyBushes.jpg';
+import Headline from '#components/Headline.astro';
 // import Mud from '#assets/andy_mud_color.webp';
 // import Bushes from '#assets/Andy.jpg';
 // import Kells from '#assets/kelleys.jpg';
 // import sovietplane from '#assets/sovietplane.jpg';
 ---
 
-<Layout>
+<Layout title="About">
   <!-- <Stack space="var(--s4)"> -->
   <!-- <Btns /> -->
   <Prose>
-    <Stack>
-      <!-- <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
+    <!-- <Stack> -->
+    <!-- <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
       <Frame ratio="1.6180:1">
         <Image src={Andy} alt="Andy" class="float-right" />
       </Frame>
     </div> -->
-      <h1 class="font-mono">About</h1>
 
-      <Frame ratio="3:2">
-        <Image
-          src={Bushes}
-          alt="Andy"
-          layout="constrained"
-          class="hue-cycle rounded-4xl"
-        />
-      </Frame>
-      <div class="not-prose"></div>
+    <Headline headline="About" />
+    <!-- <Frame ratio="3:2"> -->
+    <div class="">
+      <Image
+        src={Bushes}
+        alt="Andy"
+        layout="constrained"
+        class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
+      />
+      <!-- </Frame> -->
+    </div>
 
-      <p>
-        I'm a front-end developer currently based in my hometown of historic
-        Westport, KCMO right across from Bronze Jim Bridger. And were my Irish
-        great-great grand-father, John Connor, lived in 1857. Right on Westport
-        Rd - KC's Bourbon Street.
-      </p>
+    <p>
+      I'm a front-end developer currently based in my hometown of historic
+      Westport, KCMO right across from Bronze Jim Bridger. And were my Irish
+      great-great grand-father, John Connor, lived in 1857. Right on Westport Rd
+      - KC's Bourbon Street.
+    </p>
 
-      <TimeLine items={timeCapsules} />
-      <div
-        class="bg-gradient-to-b from-base-content to-transparent bg-clip-text text-transparent"
-      >
-        <p>The best thing about KC.. no rats. But lots of rabbits.</p>
-      </div>
-    </Stack>
+    <TimeLine items={timeCapsules} />
+    <div
+      class="bg-gradient-to-b from-base-content to-transparent bg-clip-text text-transparent"
+    >
+      <p>The best thing about KC.. no rats. But lots of rabbits.</p>
+    </div>
+    <!-- </Stack> -->
   </Prose>
 </Layout>
 <!-- <Carousel images={imageSources} /> -->
@@ -59,6 +61,12 @@ import Bushes from '#assets/andyBushes.jpg';
 <!-- </Stack> -->
 
 <style>
+  @media (orientation: portrait) {
+    .frame {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
   .hue-cycle {
     animation: hue-rotation 4s ease-in-out infinite alternate;
   }
