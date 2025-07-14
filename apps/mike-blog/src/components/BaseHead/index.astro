@@ -49,7 +49,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 }
 <ClientRouter />
 
-<!-- <script is:inline>
+<script is:inline>
   function applyTheme() {
     if (localStorage.getItem('theme') === null) {
     document.documentElement.setAttribute('data-theme', 'light');
@@ -62,7 +62,7 @@ const { title, description, image = FallbackImage } = Astro.props;
 
   document.addEventListener("astro:after-swap", applyTheme);
   applyTheme();
-</script> -->
+</script>
 
 <script>
   import { themeChange } from 'theme-change';
