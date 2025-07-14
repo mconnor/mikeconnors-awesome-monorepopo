@@ -1,0 +1,23 @@
+{
+  "name": "@app/starlight",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+        "lint": "eslint --max-warnings=0",
+    "format": "prettier ./src/content",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.34.5",
+    "astro": "catalog:",
+    "sharp": "catalog:"
+  },
+  "devDependencies": {
+        "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^","typescript": "catalog:",    "eslint": "catalog:"
+  }
+}
