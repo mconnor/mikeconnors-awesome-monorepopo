@@ -3,6 +3,7 @@ import { format } from 'date-fns';
 import { Image } from 'astro:assets';
 import Andy from '#assets/andyBushes.jpg';
 import Frame from '@repo/layout-webcomponents/Frame';
+import Headline from '#components/Headline.astro';
 import type { CollectionEntry } from 'astro:content';
 
 interface Props {
@@ -10,11 +11,11 @@ interface Props {
   posts: CollectionEntry<'blogCollection'>[];
 }
 
-const { posts } = Astro.props;
+const { posts ,headline} = Astro.props;
 const bool2 = posts.length > 1;
 const bool3 = posts.length > 2;
 ---
-
+  <Headline headline={headline} />
 <div
   class:list={[
     'grid grid-cols-1 gap-1',
