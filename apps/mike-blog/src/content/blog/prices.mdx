@@ -1,0 +1,45 @@
+---
+title: Price Cards
+date: 2025-07-15
+author: mike-connor
+description: Price Cards
+src: 'https://picsum.photos/1600/900?random=3'
+alt: 'this is the alt text'
+tags: ['demo']
+
+---
+
+import PriceCards from '#demos/PriceCards.astro';
+
+<PriceCards />
+
+
+
+PriceCard component takes in data that fits the following schema set up with Zod
+
+```js
+const SubscriptionPriceSchema = z.object({
+  monthly: price,
+  yearly: price,
+  currency: CurrencySymbolSchema,
+});
+
+export const SupportServiceSchema = z.object({
+  id: z.string(),
+  service: z.string(),
+  descrip: z.string(),
+  priceLevels: z.object({
+  monthly: price,
+  yearly: price,
+  currency: CurrencySymbolSchema,
+}),
+  level: PlansSchema,
+  active: z.boolean(),
+  features: z.array(
+  z.object({
+    copy: z.string(),
+    has: z.boolean(),
+  }),
+);,
+});
+```
