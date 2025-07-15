@@ -130,7 +130,7 @@ catalog:
 
 catalogs:
   starlight:
-    '@astrojs/starlight': ^0.34.6
+    '@astrojs/starlight': ^0.34.7
   svelte5:
     '@astrojs/svelte': ^7.1.0
     '@sveltejs/adapter-auto': ^6.0.1
