@@ -32,7 +32,6 @@
     "@astrojs/vercel": "catalog:",
     "@iarna/toml": "catalog:",
     "@repo/astro-ui": "workspace:*",
-    "@repo/schemas": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@tailwindcss/vite": "catalog:",
     "astro": "catalog:",

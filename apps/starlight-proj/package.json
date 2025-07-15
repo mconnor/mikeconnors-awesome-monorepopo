@@ -7,17 +7,19 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-        "lint": "eslint --max-warnings=0",
-    "format": "prettier ./src/content",
+    "lint": "eslint --max-warnings=0",
+    "format": "prettier . --write",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.34.5",
+    "@astrojs/starlight": "catalog: starlight",
     "astro": "catalog:",
     "sharp": "catalog:"
   },
   "devDependencies": {
-        "@repo/eslint-config": "workspace:^",
-    "@repo/typescript-config": "workspace:^","typescript": "catalog:",    "eslint": "catalog:"
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "typescript": "catalog:",
+    "eslint": "catalog:"
   }
 }
