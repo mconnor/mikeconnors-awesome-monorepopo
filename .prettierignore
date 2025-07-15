@@ -4,7 +4,7 @@
 *.local
 apps/
 packages/
-
+.github/
 **/.cache
 **/dist/
 

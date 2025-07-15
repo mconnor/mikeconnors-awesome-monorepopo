@@ -276,6 +276,10 @@ catalogs:
     zod-validation-error:
       specifier: ^3.5.3
       version: 3.5.3
+  starlight:
+    '@astrojs/starlight':
+      specifier: ^0.34.6
+      version: 0.34.6
   svelte5:
     '@astrojs/svelte':
       specifier: ^7.1.0
@@ -790,8 +794,8 @@ importers:
   apps/starlight-proj:
     dependencies:
       '@astrojs/starlight':
-        specifier: ^0.34.5
-        version: 0.34.5(astro@5.11.1(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0))
+        specifier: 'catalog: starlight'
+        version: 0.34.6(astro@5.11.1(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0))
       astro:
         specifier: 'catalog:'
         version: 5.11.1(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0)
@@ -1444,8 +1448,8 @@ packages:
   '@astrojs/sitemap@3.4.1':
     resolution: {integrity: sha512-VjZvr1e4FH6NHyyHXOiQgLiw94LnCVY4v06wN/D0gZKchTMkg71GrAHJz81/huafcmavtLkIv26HnpfDq6/h/Q==}
 
-  '@astrojs/starlight@0.34.5':
-    resolution: {integrity: sha512-Pkojl6csiP+RKwBwIeS4YnnFNrBUT/4r8+bJo+zJpPlGYRx3X7+ZEOvCrWwsj7D9WLMorLbyoLD6u9SG0COfXQ==}
+  '@astrojs/starlight@0.34.6':
+    resolution: {integrity: sha512-cVwZFu7A8Ki1u2d0rTvQwz3zrU6dWk09h40DAOl0IgKFYNPFIAGe04CQ2Zq07sxnxqBRbjkrsFd7X6Lv6WXunw==}
     peerDependencies:
       astro: ^5.5.0
 
@@ -5417,6 +5421,7 @@ packages:
     resolution: {integrity: sha512-/baBXDqkfW8x0UlqfYAfRCkmVWiH8qFZ4uhT6yLVBLssiypDTbe78W6lNBse7huBFv1ipR5PG9evkxEnIXDxjA==}
     peerDependencies:
       eslint: '>= 5'
+    bundledDependencies: []
 
   eslint-plugin-lit@2.1.1:
     resolution: {integrity: sha512-qmyAOnnTCdS+vDnNxtCoF0icSKIio4GUv6ZLnaCtTX6G/YezRa6Ag6tOQ+MfV5Elvtw9CIXeliRX4mIBSwrPIA==}
@@ -9156,7 +9161,7 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.25.74
 
-  '@astrojs/starlight@0.34.5(astro@5.11.1(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0))':
+  '@astrojs/starlight@0.34.6(astro@5.11.1(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.3.2
       '@astrojs/mdx': 4.3.0(astro@5.11.1(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)(rollup@4.44.2)(terser@5.39.0)(typescript@5.8.3)(yaml@2.8.0))
