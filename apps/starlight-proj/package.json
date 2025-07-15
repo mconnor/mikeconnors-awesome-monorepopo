@@ -12,7 +12,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "catalog: starlight",
+    "@astrojs/starlight": "catalog:starlight",
     "astro": "catalog:",
     "sharp": "catalog:"
   },
