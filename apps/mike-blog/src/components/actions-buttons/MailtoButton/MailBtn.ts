@@ -18,7 +18,7 @@ class MailtoButton extends HTMLElement {
     const firstChar = decoded.charAt(0);
     // const lastChar = decoded.charAt(decoded.length - 3);
 
-    const middleChars = '•'.repeat(decoded.length - 6)
+    const middleChars = '•'.repeat(decoded.length - 6);
 
     return `${firstChar}${middleChars}.tech`;
     // return decoded;

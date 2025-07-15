@@ -1,9 +1,22 @@
 ---
-import Layout from '#layouts/HeroLayout.astro';
-import Mix from '@repo/astro-ui/Mix';
+import Layout from '#layouts/Layout.astro';
+
+import type { ComponentProps } from 'astro/types';
+import DaPriceCard from '@repo/astro-ui/DaPriceCard';
+
+import Headline from '#components/Headline.astro';
+import { PRICE_PLANS } from '#app.config.ts';
+import Stack from '@repo/layout-webcomponents/Stack';
+
+type PriceCardProps = ComponentProps<typeof DaPriceCard>;
 ---
 
 <Layout description="animation test" maxW="80ch">
-  <h2>blank</h2>
-  <Mix />
+  <Stack>
+    <Headline headline="Prices Levels" />
+
+    <div class="flex flex-row gap-2">
+      {PRICE_PLANS.map(({ id, ...rest }, index) => <DaPriceCard {...rest} />)}
+    </div>
+  </Stack>
 </Layout>

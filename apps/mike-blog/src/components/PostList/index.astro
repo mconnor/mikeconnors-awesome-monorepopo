@@ -11,11 +11,12 @@ interface Props {
   posts: CollectionEntry<'blogCollection'>[];
 }
 
-const { posts ,headline} = Astro.props;
+const { posts, headline } = Astro.props;
 const bool2 = posts.length > 1;
 const bool3 = posts.length > 2;
 ---
-  <Headline headline={headline} />
+
+<Headline headline={headline} />
 <div
   class:list={[
     'grid grid-cols-1 gap-1',
@@ -28,18 +29,18 @@ const bool3 = posts.length > 2;
       const { cover, title, description, tags, date } = data;
       return (
         <div class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
-          <figure>
-            <Frame ratio="16:9">
-              {cover ?
+          {cover ?
+            <figure>
+              <Frame ratio="16:9">
                 <Image
                   src={cover.src}
                   alt={cover.alt}
-                  width="1600"
-                  height="900"
+                  width="300"
+                  height="300"
                 />
-              : <Image src={Andy} alt="Andy" width="1600" height="900" />}
-            </Frame>
-          </figure>
+              </Frame>
+            </figure>
+          : <div class="h-40 w-full bg-accent" />}
 
           <a
             href={`/posts/${id}`}
@@ -51,7 +52,7 @@ const bool3 = posts.length > 2;
             {date && <div class="text-sm">{format(date, 'yyyy-MM-dd')}</div>}
             <h2 class="card-title line-clamp-1">{title}</h2>
 
-            <p class="line-clamp-3">{description}</p>
+            <p class="line-clamp-1">{description}</p>
 
             <div class="card-actions justify-end">
               {tags &&

@@ -12,11 +12,12 @@ const companies = {
 
 // interface Props extends HTMLAttributes<'a'> {
 interface Props extends HTMLAttributes<'a'> {
-  company: keyof typeof companies;
+  companyName: keyof typeof companies;
+  href: string;
   dim?: string;
 }
 
-const { company, dim = '24' } = Astro.props;
+const { href, companyName, dim = '24' } = Astro.props;
 ---
 
 <a href="./">
@@ -27,6 +28,6 @@ const { company, dim = '24' } = Astro.props;
     viewBox="0 0 24 24"
     class="fill-current"
   >
-    <path d={companies[company]}></path>
+    <path d={companies[companyName]}></path>
   </svg>
 </a>
