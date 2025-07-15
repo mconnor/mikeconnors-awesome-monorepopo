@@ -1,4 +1,4 @@
-import * as z from 'zod'; // v4
+import * as z from 'zod';
 
 const baseCategorySchema = z.object({
   name: z.string(),
@@ -12,17 +12,17 @@ const categorySchema: z.ZodType<Category> = baseCategorySchema.extend({
   subcategories: z.lazy(() => categorySchema.array()),
 });
 
-categorySchema.parse({
-  name: 'People',
-  subcategories: [
-    {
-      name: 'Politicians',
-      subcategories: [
-        {
-          name: 'Presidents',
-          subcategories: [],
-        },
-      ],
-    },
-  ],
-}); // passes
+// categorySchema.parse({
+//   name: 'People',
+//   subcategories: [
+//     {
+//       name: 'Politicians',
+//       subcategories: [
+//         {
+//           name: 'Presidents',
+//           subcategories: [],
+//         },
+//       ],
+//     },
+//   ],
+// }); // passes

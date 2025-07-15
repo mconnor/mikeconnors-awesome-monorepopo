@@ -110,7 +110,6 @@ const timeCapsules = [
   { city: 'KCMO', year: 2022 },
 ];
 
-
 const COUNTRY_URL = new URL(
   '/v3.1/region/africa/',
   'https://restcountries.com/',
@@ -133,6 +132,53 @@ const COUNTRY_URL = new URL(
 // console.log(first, last);
 // // → { city: 'KCMO', year: 0 }  and  { city: 'KCMO', year: 2022 }
 
+import type { SupportServiceType } from '#schemas/SupportServices.ts';
+
+export const PRICE_PLANS: SupportServiceType[] = [
+  {
+    id: 'support-001',
+    service: 'Basic',
+    descrip: '24/7 technical support with priority response times',
+    priceLevels: {
+      monthly: '9.99',
+      yearly: '99.99',
+      currency: '$',
+    },
+    level: 'value',
+    active: true,
+    features: [
+      { copy: '24/7 phone and email support', has: true },
+      { copy: 'Priority response within 2 hours', has: true },
+      { copy: 'Dedicated support specialist', has: false },
+      { copy: 'Remote troubleshooting assistance', has: false },
+    ],
+    // isActive: true,
+    // createdAt: new Date("2024-01-15"),
+    // updatedAt: new Date("2024-01-20")
+  },
+  {
+    id: 'support-002',
+    service: 'Premium Support Package',
+    descrip: '24/7 technical support with priority response times',
+    priceLevels: {
+      monthly: '13.99',
+      yearly: '120.99',
+      currency: '$',
+    },
+    level: 'value',
+    active: true,
+    features: [
+      { copy: '24/7 phone and email support', has: true },
+      { copy: 'Priority response within 2 hours', has: true },
+      { copy: 'Dedicated support specialist', has: true },
+      { copy: 'Remote troubleshooting assistance', has: true },
+    ],
+    // isActive: true,
+    // createdAt: new Date("2024-01-15"),
+    // updatedAt: new Date("2024-01-20")
+  },
+];
+
 export {
   MyAvatar,
   NAME,
@@ -142,5 +188,5 @@ export {
   navLinks,
   imageSources,
   timeCapsules,
-  COUNTRY_URL
+  COUNTRY_URL,
 };

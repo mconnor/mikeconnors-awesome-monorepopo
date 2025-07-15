@@ -1,18 +1,30 @@
 ---
 // import type { ACTION_ERROR_CODES } from 'astro:actions';
+
 import Feature from './Feature.astro';
-interface FeatureI {
+
+type FeatureType = {
   copy: string;
   has: boolean;
-}
+}[];
+
 interface Props {
-  price: string;
-  level?: 'Basic' | 'Premium' | 'Pro';
-  badgeBool?: boolean;
-  features: FeatureI[];
+  service: string;
+  descrip: string;
+  priceLevels: {
+    monthly: string;
+    yearly: string;
+    currency: '$' | '€' | '£' | '¥' | '₹' | '₩' | 'R$' | 'CHF' | 'kr';
+  };
+
+  level: 'value' | 'basic' | 'premium';
+  badgeBool: boolean;
+  features: FeatureType;
 }
 
-const { price, level = 'basic', badgeBool, features } = Astro.props;
+const { dark, service, priceLevels, level, badgeBool, features } = Astro.props;
+
+const themeColor = dark ?? 'dark';
 ---
 
 <div class="card w-96 bg-base-100 shadow-sm">
@@ -23,8 +35,9 @@ const { price, level = 'basic', badgeBool, features } = Astro.props;
       )
     }
     <div class="flex justify-between">
-      <h2 class="text-3xl font-bold">{level}</h2>
-      <span class="text-xl">{price}</span>
+      <h2 class="line-clamp-1 text-2xl font-bold">{service}</h2>
+      <span class="text-xl">{priceLevels.monthly}{priceLevels.currency}</span>
+      <!-- <span class="text-xl">{priceLevels.yearly}{priceLevels.currency}</span> -->
     </div>
     <ul class="mt-6 flex flex-col gap-2 text-xs">
       {

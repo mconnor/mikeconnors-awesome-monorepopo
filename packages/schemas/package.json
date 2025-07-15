@@ -6,13 +6,11 @@
   "type": "module",
   "exports": {
     "./*": {
-      "types": "./dist/*.d.ts",
-      "default": "./dist/*.mjs"
+      "default": "./src/zod3/*.ts"
     }
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "tsup",
     "dev": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",

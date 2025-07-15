@@ -1,4 +1,4 @@
-import { z, reference } from 'astro:content';
+import { z } from 'astro:content';
 
 const ImageSchema = z.object({
   src: z.string().url(),

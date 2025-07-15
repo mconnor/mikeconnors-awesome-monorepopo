@@ -1,5 +1,4 @@
 import * as z from 'zod';
-
 // import { zWebSite, zEmail } from './utils/index.ts';
 
 export const UserSchema = z.object({

@@ -23,12 +23,9 @@ export async function getStaticPaths() {
   }));
 }
 
-// id is tag
 const { tag } = Astro.params;
 //post with at last one tags
 const { posts } = Astro.props;
-
-// see
 ---
 
 <Layout title="Tags" maxW="100ch">

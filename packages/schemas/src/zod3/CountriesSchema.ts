@@ -1,4 +1,4 @@
-import * as z from 'zod';
+import { z } from 'astro:content';
 
 const countrySchema = z.object({
   cca3: z.string(), // Assuming 'cca3' is a string

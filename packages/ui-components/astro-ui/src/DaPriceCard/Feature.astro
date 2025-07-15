@@ -10,11 +10,11 @@ const { copy, checked = false } = Astro.props as FeatureI;
 
 {
   checked ?
-    <li class="flex items-center gap-2">
+    <li class="">
       <Check checked />
       <span>{copy}</span>
     </li>
-  : <li class="flex items-center gap-2 opacity-50">
+  : <li class="opacity-50">
       <Check />
       <span>{copy}</span>
     </li>
