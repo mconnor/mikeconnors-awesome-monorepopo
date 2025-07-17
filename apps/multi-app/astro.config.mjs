@@ -24,14 +24,12 @@ export default defineConfig({
   // Enable many frameworks to support all different kinds of components.
   integrations: [
     preact({
-      include: ['node_modules/@repo/preact/dist/*'],
       compat: true,
-      devtools: true,
     }),
     // solid({
     //   include: ['@repo/solid/**', '**/node_modules/@suid/material/**'],
     // }),
-    react({ include: ['node_modules/@repo/react/dist/*'] }),
+    react(),
     svelte(),
     vue(),
   ],

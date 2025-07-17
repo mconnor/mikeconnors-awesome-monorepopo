@@ -17,7 +17,14 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", "!README.md", ".env*"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md", ".env*",
+        "!test/**/*",
+				"!e2e/**/*",
+				"!performance/**/*",
+				"!.astro/**/*",
+				"!.cache/**/*",
+				"!mod.js",
+				"!mod.js.map"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "transit": {
@@ -32,7 +39,7 @@
     },
     "inspect": {},
     "fix": {
-      "dependsOn": ["^fix"]
+      "dependsOn": ["transit"]
     },
     "dev": {
       "cache": false,

@@ -9,12 +9,13 @@
   "exports": {
     "./styles.css": "./dist/styles.css",
     "./*": {
-      "types": "./src/*/index.tsx",
-      "import": "./src/*/index.tsx"
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.mjs"
     }
   },
   "scripts": {
     "build:styles": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
+    "build:components": "tsup",
     "dev:styles": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
     "dev:components": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,18 +31,16 @@
     "preact": "catalog:"
   },
   "devDependencies": {
-    "zod": "catalog:",
-    "@repo/design-system": "workspace:^",
     "@preact/signals": "catalog:",
+    "@repo/design-system": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "eslint": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
     "@tailwindcss/cli": "catalog:",
-    "tailwindcss": "catalog:",
     "daisyui": "catalog:",
+    "eslint": "catalog:",
+    "tailwindcss": "catalog:",
     "tsup": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "zod": "catalog:"
   },
   "eslintConfig": {
     "extends": "preact"
