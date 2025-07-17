@@ -31,7 +31,7 @@ export default class Box extends HTMLElement {
             background-color: inherit;
           }
         `
-          .replace(/\s\s+/g, ' ')
+          .replace(/\s{2,}/g, ' ')
           .trim();
         document.head.appendChild(styleEl);
       }

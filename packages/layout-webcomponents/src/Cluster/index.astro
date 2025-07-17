@@ -5,23 +5,20 @@ import type {
   AlignItemsTypes,
   JustifyContentTypes,
   RmUnitType,
-} from '../index.ts';
+} from '#types/index.ts';
 
 interface Props {
   justify?: JustifyContentTypes; //"flex-start"
   align?: AlignItemsTypes; // "flex-start"
   space?: RmUnitType;
+  role?: 'list';
 }
 
-const {
-  justify = 'flex-start',
-  align = 'flex-start',
-  space = 'var(--s1)',
-} = Astro.props;
+const props = Astro.props;
 ---
 
 <script src="./Cluster.js"></script>
 
-<cluster-l justify={justify} align={align} space={space}>
+<cluster-l {...props}>
   <slot />
 </cluster-l>
