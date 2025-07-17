@@ -28,9 +28,9 @@
     "@headlessui/react": "catalog:",
     "@heroicons/react": "catalog:",
     "@preact/signals": "catalog:",
+    "@repo/astro-ui": "workspace:*",
     "@repo/design-system": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
-    "@repo/astro-ui": "workspace:*",
     "@repo/preact": "workspace:*",
     "@repo/react": "workspace:*",
     "@repo/svelte": "workspace:*",
@@ -46,20 +46,18 @@
     "react-dom": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
     "svelte": "catalog:svelte5",
-    "vue": "catalog:",
-    "tailwindcss": "catalog:"
+    "tailwindcss": "catalog:",
+    "vue": "catalog:"
   },
   "devDependencies": {
-    "daisyui": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "theme-change": "catalog:",
     "@sveltejs/vite-plugin-svelte": "catalog:svelte5",
+       "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "daisyui": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
-    "prettier-plugin-toml": "catalog:",
+    "theme-change": "catalog:",
     "typescript": "catalog:"
   }
 }

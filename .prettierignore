@@ -2,8 +2,6 @@
 **/node_modules/
 *.log
 *.local
-apps/
-packages/
 .github/
 **/.cache
 **/dist/
@@ -12,12 +10,12 @@ notes.txt
 
 **/cache-directory/
 
-/apps-to-off-ramp/
-/packages/styles/
 
 **/.vercel/
 **/.astro/
 **/.turbo/
+
+
 
 # playwright
 playwright-report/
@@ -43,9 +41,7 @@ pnpm-debug.log*
 **/.svelte-kit
 
 
-# Ignore these for now
-/apps-next
-/apps-themes/
+
 
 
 .npmrc

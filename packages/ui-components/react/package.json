@@ -12,13 +12,13 @@
   "exports": {
     "./styles.css": "./dist/styles.css",
     "./*": {
-      "types": "./src/*/index.tsx",
-      "import": "./src/*/index.tsx"
+      "types": "./dist/*/index.d.ts",
+      "import": "./dist/*/index.mjs"
     }
   },
   "scripts": {
     "build:styles": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css",
-    "build:components": "echo 'nope'",
+    "build:components": "tsup",
     "dev:styles": "pnpm dlx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch",
     "dev:components": "tsup --watch",
     "check-types": "tsc --noEmit",
@@ -41,12 +41,12 @@
   "dependencies": {
     "@repo/utils": "workspace:^",
     "cally": "^0.8.0",
+        "@headlessui/react": "catalog:",
+    "@heroicons/react": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@headlessui/react": "catalog:",
-    "@heroicons/react": "catalog:",
     "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
@@ -55,11 +55,9 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "daisyui": "catalog:",
-    "tailwindcss": "catalog:",
-    "jest": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
+    "jest": "catalog:",
+    "tailwindcss": "catalog:",
     "tsup": "catalog:",
     "typescript": "catalog:"
   },

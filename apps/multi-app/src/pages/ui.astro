@@ -5,8 +5,4 @@ import Layout from '#layouts/Layout.astro';
 import Box from '@repo/layout-webcomponents/Box';
 ---
 
-<Layout>
-  <Stack>
-    <Box><DropDown /></Box>
-  </Stack>
-</Layout>
+<Layout> <Stack> <Box><DropDown client:only="react" /></Box></Stack></Layout>
