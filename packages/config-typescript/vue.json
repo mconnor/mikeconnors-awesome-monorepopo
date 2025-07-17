@@ -1,11 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@vue/tsconfig/tsconfig.dom.json"],
+  "extends": ["./base.json"],
   "compilerOptions": {
     "strict": true,
     "jsx": "preserve",
     "jsxImportSource": "vue"
   },
-  "include": ["${configDir}/src/**/*.vue"],
-  "exclude": ["${configDir}/node_modules", "${configDir}/.turbo"]
+  "include": ["${configDir}/src/**/*.vue", "${configDir}/*.config.mjs"]
 }

@@ -1,4 +1,3 @@
-// @ts-check
 import 'eslint-plugin-only-warn';
 import js from '@eslint/js';
 import eslintPluginAstro from 'eslint-plugin-astro';
@@ -8,14 +7,16 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';
 import extensionInstanceObj from './fileExtensions.mjs';
+import * as regexpPlugin from 'eslint-plugin-regexp';
 
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 
+/** @type {import("eslint").Linter.Config} */
 export default tseslint.config(
   ignoresConfig,
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,
-
+  regexpPlugin.configs['flat/recommended'],
   {
     name: '[*] TS Rules',
     languageOptions: {
@@ -40,7 +41,8 @@ export default tseslint.config(
       '@typescript-eslint/no-unused-vars': 'off',
       '@typescript-eslint/no-unused-expressions': 'off',
       '@typescript-eslint/consistent-type-definitions': 'warn',
-      '@typescript-eslint/consistent-type-imports': 'warn',
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/consistent-type-exports': 'error',
       '@typescript-eslint/array-type': 'warn',
       '@typescript-eslint/prefer-nullish-coalescing': 'warn',
       '@typescript-eslint/prefer-optional-chain': 'warn',

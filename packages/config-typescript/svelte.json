@@ -1,17 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["./base.json"],
+  "extends": "./base.json",
   "compilerOptions": {
-    "lib": ["DOM.Iterable", "ESNext", "DOM"],
-    "sourceMap": true,
-    "strictNullChecks": true
+    "sourceMap": true
   },
-  "include": ["${configDir}/**/*.svelte", "${configDir}/*.config.mjs"],
-  "exclude": [
-    "${configDir}/.svelte-kit",
-  "${configDir}/node_modules",
-    "${configDir}/dist",
-    "${configDir}/.turbo",
-    "${configDir}/.vercel"
-    ]
+  "include": ["${configDir}/**/*.svelte", "${configDir}/*.config.mjs"]
 }

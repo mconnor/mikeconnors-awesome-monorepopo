@@ -4,6 +4,7 @@
   "compilerOptions": {
     // Preact specific settings
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "jsxImportSource": "preact",
+     "types": ["preact"]
   }
 }

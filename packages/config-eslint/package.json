@@ -7,48 +7,63 @@
   },
   "exports": {
     "./TailwindLint": {
+      "types": "./index.d.ts",
       "default": "./tw.lint.config.mjs"
     },
     "./turbo-config": {
+      "types": "./index.d.ts",
       "default": "./turbo.lint.config.mjs"
     },
     "./next-lint": {
+      "types": "./index.d.ts",
       "default": "./next.mjs"
     },
     "./ignores": {
+      "types": "./index.d.ts",
       "default": "./ignores.config.mjs"
     },
     "./vue-config": {
+      "types": "./index.d.ts",
       "default": "./vue.lint.config.mjs"
     },
     "./md-config": {
+      "types": "./index.d.ts",
       "default": "./md.lint.config.mjs"
     },
     "./react-internal": {
+      "types": "./index.d.ts",
       "default": "./react-internal.mjs"
     },
     "./ts-lint": {
+      "types": "./index.d.ts",
       "default": "./ts.lint.config.mjs"
     },
     "./lit-config": {
+      "types": "./index.d.ts",
       "default": "./lit.lint.config.mjs"
     },
     "./type-disable": {
+      "types": "./index.d.ts",
       "default": "./tscheck.disable.config.mjs"
     },
     "./regex": {
+      "types": "./index.d.ts",
       "default": "./regex.lint.config.mjs"
     },
     "./svelte5-app": {
+      "types": "./index.d.ts",
       "default": "./svelte5.lint.config.mjs"
     },
     "./solid": {
+      "types": "./index.d.ts",
       "default": "./sold.lint.config.mjs"
     },
     "./next-config": {
+      "types": "./index.d.ts",
       "default": "./next.mjs"
     },
     "./simple-imports-sort": {
+      "types": "./index.d.ts",
       "default": "./simple.imports.config.mjs"
     }
   },
@@ -57,9 +72,6 @@
   },
   "license": "MIT",
   "type": "module",
-  "peerDependencies": {
-    "eslint": ">=9"
-  },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "catalog:",
     "@eslint/compat": "catalog:",
@@ -82,15 +94,26 @@
     "eslint-plugin-regexp": "catalog:",
     "eslint-plugin-simple-import-sort": "catalog:",
     "eslint-plugin-solid": "catalog:",
-    "eslint-plugin-svelte": "catalog:",
     "eslint-plugin-turbo": "catalog:",
     "eslint-plugin-vue": "catalog:",
     "eslint-plugin-wc": "catalog:",
     "globals": "catalog:",
     "prettier-plugin-astro": "catalog:",
-    "svelte-eslint-parser": "catalog:",
     "typescript": "catalog:",
     "typescript-eslint": "catalog:",
     "vue-eslint-parser": "catalog:"
+  },
+  "peerDependencies": {
+    "eslint": ">=9",
+    "eslint-plugin-svelte": "^3",
+    "svelte-eslint-parser": "^1"
+  },
+  "peerDependenciesMeta": {
+    "svelte-eslint-parser": {
+      "optional": true
+    },
+    "eslint-plugin-svelte": {
+      "optional": true
+    }
   }
 }

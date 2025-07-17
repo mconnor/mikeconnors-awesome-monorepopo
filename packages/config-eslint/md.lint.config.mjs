@@ -1,7 +1,7 @@
-// @ts-check
 import markdown from '@eslint/markdown';
 import { defineConfig } from 'eslint/config';
 
+/** @type {import("eslint").Linter.Config} */
 export default defineConfig([
   {
     // Apply the Markdown processor to all .md files

@@ -1,17 +1,86 @@
 import type { Linter } from 'eslint';
 
-// Export types for all your configurations
-export declare const tsLint: Linter.Config[];
-export declare const nextConfig: Linter.Config[];
-export declare const reactInternal: Linter.Config[];
-export declare const vueConfig: Linter.Config[];
-export declare const svelteConfig: Linter.Config[];
-export declare const litConfig: Linter.Config[];
-export declare const markdownConfig: Linter.Config[];
-export declare const tailwindLint: Linter.Config[];
-export declare const turboConfig: Linter.Config[];
-export declare const ignores: Linter.Config[];
-export declare const regexConfig: Linter.Config[];
-export declare const solidConfig: Linter.Config[];
-export declare const simpleImportsSort: Linter.Config[];
-export declare const typeDisable: Linter.Config[];
+/**
+ * Type definition for ESLint 9 flat configuration arrays
+ * All exported configurations return arrays of Linter.Config objects
+ */
+export type ESLintFlatConfig = Linter.Config[];
+
+/**
+ * Ambient module declarations for all ESLint configuration exports
+ * These provide TypeScript support for the JavaScript .mjs files
+ */
+declare module '@repo/eslint-config/TailwindLint' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/turbo-config' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/next-lint' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/next-config' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/ignores' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/vue-config' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/md-config' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/react-internal' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/ts-lint' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/lit-config' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/type-disable' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/regex' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/svelte5-app' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/solid' {
+  const config: ESLintFlatConfig;
+  export default config;
+}
+
+declare module '@repo/eslint-config/simple-imports-sort' {
+  const config: ESLintFlatConfig;
+  export default config;
+}

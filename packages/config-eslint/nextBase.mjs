@@ -12,7 +12,7 @@ import ignoresConfig from './ignores.config.mjs';
  * @type {import("eslint").Linter.Config}
  * */
 
-export default defineConfig([
+export const config = defineConfig([
   ignoresConfig,
   js.configs.recommended,
 

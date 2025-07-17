@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["${configDir}/src/**/*", "${configDir}/*.config.mjs"],
+  "exclude": [
+    "${configDir}/.svelte-kit",
+    "${configDir}/node_modules",
+    "${configDir}/.astro",
+    "${configDir}/dist",
+    "${configDir}/.turbo",
+    "${configDir}/.vercel",
+    "${configDir}/.next"
+  ]
+}
