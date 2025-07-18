@@ -17,6 +17,7 @@
     "new": "turbo gen workspace --copy",
     "graph": "turbo run build --graph",
     "build": "turbo build",
+    "build:apps": "turbo run build --filter=\"@apps/*\"",
     "preview": "turbo preview",
     "dev": "turbo --filter='@app/blog' dev",
     "dev:demo": "turbo dev --filter=@app/astrodemo",
@@ -29,7 +30,10 @@
   "devDependencies": {
     "@prettier/plugin-oxc": "catalog:",
     "prettier": "catalog:",
-    "turbo": "^2.5.4"
+    "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:",
+    "prettier-plugin-toml": "catalog:",
+    "turbo": "^2.5.5"
   },
   "engines": {
     "node": ">= 22.9.0"
