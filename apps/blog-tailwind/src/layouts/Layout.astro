@@ -15,17 +15,14 @@ interface Props {
   description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, maxW = '60ch' } = Astro.props;
 ---
 
-<BaseLayout title="{title">
-  <Cover centeredElement="center-l" space="0">
-    <Header transition:persist />
+<BaseLayout title={title} description={description}>
+  <Cover centeredElement="center-l" noPad>
+    <Header />
 
-    <Center transition:animate="slide">
-      <!-- <div class="prose md:prose-lg lg:prose-xl prose-blue scheme-light"> -->
-      <slot />
-      <!-- </div> -->
-    </Center>
+    <Center gutters="1ch" max={maxW}><slot /> </Center>
+    <slot />
   </Cover>
 </BaseLayout>

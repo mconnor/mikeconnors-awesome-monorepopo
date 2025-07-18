@@ -1,6 +1,6 @@
 ---
 title: 3d Food
-pubDate: 2024-01-02
+date: 2024-01-02
 author: mike-connor
 description: The Future of Dynamic Web Content
 cover:

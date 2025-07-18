@@ -39,18 +39,14 @@
     "tailwindcss": "catalog:"
   },
   "devDependencies": {
+    "@repo/design-system": "workspace:*",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "@repo/design-system": "workspace:*",
     "@tailwindcss/typography": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
-    "prettier-plugin-toml": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
-    "vite": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vite": "catalog:"
   }
 }

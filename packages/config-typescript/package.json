@@ -2,7 +2,6 @@
   "name": "@repo/typescript-config",
   "version": "3.0.0",
   "private": true,
-  "type": "module",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

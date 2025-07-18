@@ -1,6 +1,6 @@
 ---
 title: About Me
-pubDate: 2022-09-01
+date: 2022-09-01
 author: mike-connor
 description: 'Morlochs and Eloi'
 cover:
@@ -9,11 +9,7 @@ cover:
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 
-# About Me
-
-<div className="note">
-  > Some notable things in a block quote!
-</div>
+## About Me
 
 Officia veniam dolor sit eu veniam eu tempor magna exercitation id minim non
 adipisicing commodo. Laboris nulla consequat veniam sint officia exercitation

@@ -10,6 +10,11 @@
 @import '@repo/astro-ui/styles.css';
 
 @plugin '@tailwindcss/typography';
+
 @plugin "daisyui" {
   root: '#my-app';
+  themes:
+    light --default,
+    dark --prefersdark;
 }
+@plugin "@tailwindcss/typography";

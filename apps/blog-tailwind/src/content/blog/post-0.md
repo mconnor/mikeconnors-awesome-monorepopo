@@ -1,6 +1,6 @@
 ---
 title: Draft Post
-pubDate: 2024-01-13
+date: 2024-01-13
 author: mike-connor
 description:
   'A graphic representation of data abstracted from the banks of every computer

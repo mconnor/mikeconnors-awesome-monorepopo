@@ -3,7 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 
 import { SITE_TITLE } from '#app.config.ts';
-
+import { ClientRouter } from 'astro:transitions';
 interface Props {
   title: string;
   headerDescription: string;
@@ -33,7 +33,7 @@ const {
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link
+<!-- <link
   rel="preload"
   href="/fonts/atkinson-regular.woff"
   as="font"
@@ -46,7 +46,7 @@ const {
   as="font"
   type="font/woff"
   crossorigin
-/>
+/> -->
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -69,3 +69,4 @@ const {
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+<ClientRouter />

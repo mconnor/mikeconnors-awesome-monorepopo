@@ -3,8 +3,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '#app.config.ts';
 import Layout from '#layouts/Layout.astro';
 import MainSvg from '#components/MainSvg.astro';
 ---
+
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION} maxW="100ch">
-  <p class="fake-code">
+  <p class="">
     Until now, trying to style an article, document, or blog post with Tailwind
     has been a tedious task that required a keen eye for typography and a lot of
     complex custom CSS.
@@ -16,21 +17,21 @@ import MainSvg from '#components/MainSvg.astro';
     <img
       src="/img/beams.jpg"
       alt=""
-      class="fixed left-1/2 top-48 max-w-none -translate-x-2/3 -translate-y-1/2"
+      class="fixed top-48 left-1/2 max-w-none -translate-x-2/3 -translate-y-1/2"
       width="1308"
     />
     <div
-      class="absolute inset-0 bg-[url(/img/grid.svg)] bg-top [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"
+      class="absolute inset-0 bg-[url(/img/grid.svg)] [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] bg-top"
     >
     </div>
     <div
-      class="relative w-full bg-white px-6 py-12 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:pb-28 lg:pt-16"
+      class="relative w-full bg-white px-6 py-12 shadow-xl ring-1 shadow-slate-700/10 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:pt-16 lg:pb-28"
     >
       <div class="border-1">
         <MainSvg />
         <!-- <CoolWavgSvg /> -->
       </div>
-      <div class="prose prose-slate lg:prose-lg mx-auto mt-8">
+      <div class="mx-auto prose mt-8 prose-slate lg:prose-lg">
         <p class="lead">
           Until now, trying to style an article, document, or blog post with
           Tailwind has been a tedious task that required a keen eye for
@@ -436,7 +437,3 @@ import MainSvg from '#components/MainSvg.astro';
     </div>
   </div>
 </Layout>
-
-<style>
-  --cols: 3;
-</style>

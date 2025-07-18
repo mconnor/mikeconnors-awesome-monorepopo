@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/typescript-config/vue",
+  "extends": "@repo/typescript-config/vue.json",
   "compilerOptions": {},
   "files": ["eslint.config.mjs"]
 }

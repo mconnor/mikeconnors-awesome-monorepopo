@@ -11,12 +11,12 @@ export default defineConfig({
   site: 'https://example.com',
   image: {
     domains: ['astro.build', 'picsum.photos', 'https://doodleipsum.com'],
-    responsiveStyles: true,
+    responsiveStyles: false,
     // Used for all `<Image />` and `<Picture />` components unless overridden
   },
 
   integrations: [sitemap(), mdx()],
-  output: 'server',
+
   vite: {
     plugins: [tailwindcss()],
   },

@@ -1,14 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 
-import BlogCard from '#components/BlogCard/index.astro';
 import Layout from '#layouts/Layout.astro';
-
-export const prerender = true;
-
-// interface Props {
-//   posts: CollectionEntry<'blog'>[];
-// }
+import PostList from '#components/PostList/index.astro';
 
 export async function getStaticPaths() {
   const publishsedPosts = await getCollection(
@@ -21,7 +15,8 @@ export async function getStaticPaths() {
   ];
 
   return uniqueTags.map((tag) => ({
-    params: { id: tag },
+    // params: { tag: tag },
+    params: { tag },
     props: {
       posts: publishsedPosts.filter(({ data }) => data.tags.includes(tag)),
     },
@@ -29,20 +24,13 @@ export async function getStaticPaths() {
 }
 
 // id is tag
-const { id } = Astro.params;
+const { tag } = Astro.params;
 //post with at last one tags
 const { posts } = Astro.props;
+
+// see
 ---
 
-<Layout title={id}>
-  {
-    posts.map(({ data, id }) => (
-      <BlogCard
-        backgroundColor="var(--surface-4)"
-        foregroundColor="var(--text-2)"
-        id={id}
-        postData={data}
-      />
-    ))
-  }
+<Layout title="Tags" maxW="100ch">
+  <PostList posts={posts} headline={tag} />
 </Layout>

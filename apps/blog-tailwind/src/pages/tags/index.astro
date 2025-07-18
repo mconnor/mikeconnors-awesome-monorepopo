@@ -1,14 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import { z } from 'astro:content';
-import Box from '@repo/layout-webcomponents/Box';
-import TagContainer from '#components/TagContainer.astro';
+import { z } from 'astro/zod';
+// import Headline from '#components/Headline.astro';
+import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
-import { tagCountTypeSchema, zTags } from '#schemas/index.js';
 
+import { tagsSchema, tagCountSchema } from '#schemas/index.ts';
 const allBlogPost = await getCollection('blogCollection');
-
-// const allBlogDataObjs = allBlogPost.map((post) => post);
 
 /// we only need a list of unique tags and their counts
 const slugTags = allBlogPost
@@ -18,15 +16,7 @@ const slugTags = allBlogPost
     tags: post.data.tags,
   }));
 
-// const { success, data: zslugTagsDataArray } = z
-//   .array(blogSchema)
-//   .safeParse(slugTags);
-
-// if (!success) {
-//   throw new Error('Invalid blog post data');
-// }
-
-const zString = z.string();
+const zString = z.string().regex(/^[a-z](?:[a-z-]*[a-z])?$/);
 
 const tagCountsObject = slugTags.reduce(
   (tagCountAcc, post) => {
@@ -47,22 +37,23 @@ const tagCountsObject = slugTags.reduce(
 
 const uniqueTagArray = [...new Set(slugTags.map((post) => post.tags).flat())];
 
-const zUniqueTagArray = zTags.safeParse(uniqueTagArray);
+const zUniqueTagArray = tagsSchema.safeParse(uniqueTagArray);
 
 const { success: tagCountSuccess, data: tagCountData } =
-  tagCountTypeSchema.safeParse(tagCountsObject);
+  tagCountSchema.safeParse(tagCountsObject);
 
 if (!tagCountSuccess) {
   throw new Error('Invalid tag count data');
 }
 ---
 
-<Layout title="Tag Index" description="Index of tags">
-  <Box padding="2rem">
-    {
-      zUniqueTagArray.success && tagCountSuccess ?
+<Layout title="Tag Index" description="Index of tags" title="Tags" maxW="60ch">
+  {
+    zUniqueTagArray.success && tagCountSuccess ?
+      <div class="flex flex-col gap-y-6">
+        <h2>Tags</h2>
         <TagContainer tags={zUniqueTagArray.data} tagCounts={tagCountData} />
-      : <p>No tags</p>
-    }
-  </Box>
+      </div>
+    : <p>No tags</p>
+  }
 </Layout>

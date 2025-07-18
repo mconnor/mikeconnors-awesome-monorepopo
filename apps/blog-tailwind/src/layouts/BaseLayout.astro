@@ -7,15 +7,15 @@ import BaseHead from '#components/BaseHead.astro';
 interface Props {
   title?: string;
   children: unknown;
-  headerDescription?: string;
+  description?: string;
 }
 
-const { title = SITE_TITLE, headerDescription = 'Blog Post' } = Astro.props;
+const { title = SITE_TITLE, description = 'Blog Post' } = Astro.props;
 ---
 
-<html lang="en" data-theme="cupcake" id="my-app">
+<html lang="en" data-theme="light" id="my-app">
   <head>
-    <BaseHead title={title} headerDescription={headerDescription} />
+    <BaseHead title={title} headerDescription={description} />
   </head>
 
   <body>

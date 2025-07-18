@@ -1,0 +1,24 @@
+---
+// import Tag from './Tag.astro';
+interface Props {
+  tags: string[];
+  tagCounts: Record<string, number>;
+}
+import Cluster from '@repo/layout-webcomponents/Cluster';
+const { tagCounts } = Astro.props;
+---
+
+<Cluster role="list">
+  {
+
+             Object.entries(tagCounts).map(([tag, count]) => (
+                <div>
+            <a
+            href=`tags/${tag}` class="badge badge-xl badge-info">
+              <i class="ph ph-tag"></i>
+              {tag}: {count}
+            </a>
+        </div>
+      ))
+  }
+</Cluster>

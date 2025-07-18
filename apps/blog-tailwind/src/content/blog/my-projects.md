@@ -1,6 +1,6 @@
 ---
 title: My Past and Current Projects
-pubDate: 2022-09-01
+date: 2022-09-01
 author: mike-connor
 description: 'Morlochs and Eloi'
 cover:

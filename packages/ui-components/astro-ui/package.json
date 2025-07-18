@@ -30,23 +30,19 @@
   "license": "ISC",
   "dependencies": {
     "@repo/icon-paths": "workspace:^",
-    "@repo/schemas": "workspace:^",
     "lorem-ipsum": "catalog:"
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",
+    "@repo/design-system": "workspace:*",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@repo/design-system": "workspace:*",
     "@tailwindcss/cli": "catalog:",
     "@types/node": "catalog:",
-    "tailwindcss": "catalog:",
     "astro": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
+    "tailwindcss": "catalog:",
     "typescript": "catalog:"
   },
   "peerDependencies": {

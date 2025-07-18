@@ -1,6 +1,7 @@
 ---
 interface Props {
   clips: string[];
+  // class?: string;
 }
 
 const { clips } = Astro.props as Props;
@@ -10,7 +11,8 @@ const { clips } = Astro.props as Props;
 
 <easter-egg data-clips={JSON.stringify(clips)}>
   <audio id="easter-audio" preload="none"></audio>
-  <button id="secret-sound" class="btn btn-link"
+
+  <button id="secret-sound" class="btn place-self-center btn-primary"
     ><i class="ph ph-rabbit scale-200"></i></button
   >
 </easter-egg>

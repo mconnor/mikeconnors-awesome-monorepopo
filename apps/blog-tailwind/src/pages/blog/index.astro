@@ -5,32 +5,47 @@ import { getCollection } from 'astro:content';
 import FormattedDate from '#components/FormattedDate.astro';
 import { Image } from 'astro:assets';
 
-const posts = (await getCollection('blogCollection')).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+const publishsedPosts = await getCollection(
+  'blogCollection',
+  // ({ data }) => data.draft !== true,
 );
+
+const posts = publishsedPosts.sort((a, b) => {
+  const dateA = a.data.date ? a.data.date.valueOf() : 0;
+  const dateB = b.data.date ? b.data.date.valueOf() : 0;
+  return dateB - dateA;
+});
 ---
 
-<Layout>
-  <section>
-    <ul>
-      {
-        posts.map(({ id, data }) => (
-          <li>
-            <a href={`/blog/${id}/`}>
+<Layout title="blog" description="blogs" maxW="960px">
+  <!-- <p>there are {posts.length} posts</p> -->
+  <!-- <details>
+    <summary>Posts[0] object:</summary>
+    <pre>{JSON.stringify(posts[0], null, 2)}</pre>
+  </details>
+  <section> -->
+  <ul class="flex flex-wrap gap-2 md:gap-8">
+    {
+      posts.map(({ id, data }, index) => {
+        const { cover, title, description, tags, date } = data;
+        return (
+          <li class="group w-[50%-1rem] py-[calc(--spacing(4)-1px)] first:mb-0 first:w-full first:text-center md:first:mb-4">
+            <a href={`/blog/${id}/`} class="block">
               <Image
                 src={data.cover.src}
                 alt={data.cover.alt}
-                width="200"
-                height="100"
+                width={360}
+                height={180}
+                class:list={[{ 'w-full': index === 0 }, 'rounded-xl']}
               />
-              <h4 class="title">{data.title}</h4>
+              <h4 class:list={[{ 'text-4xl': index === 0 }]}>{data.title}</h4>
               <p class="date">
-                <FormattedDate date={data.pubDate} />
+                <FormattedDate date={data.date} />
               </p>
             </a>
           </li>
-        ))
-      }
-    </ul>
-  </section>
+        );
+      })
+    }
+  </ul>
 </Layout>

@@ -18,9 +18,7 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
-    "eslint": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:"
+    "eslint": "catalog:"
   },
   "dependencies": {
     "@preact/preset-vite": "catalog:",
