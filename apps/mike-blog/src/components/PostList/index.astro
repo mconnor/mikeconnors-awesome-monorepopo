@@ -1,10 +1,14 @@
 ---
+import AnimatedBg from './AnimatedBg.astro';
 import { format } from 'date-fns';
 import { Image } from 'astro:assets';
-import Andy from '#assets/andyBushes.jpg';
-import Frame from '@repo/layout-webcomponents/Frame';
+import { ImageSchema, WebImageSchema } from '#schemas/Utils.ts';
+import Stack from '@repo/layout-webcomponents/Stack';
 import Headline from '#components/Headline.astro';
 import type { CollectionEntry } from 'astro:content';
+
+import WebImage from './WebImage.astro';
+import LocalImg from './LocalImg.astro';
 
 interface Props {
   headline: string;
@@ -16,55 +20,52 @@ const bool2 = posts.length > 1;
 const bool3 = posts.length > 2;
 ---
 
-<Headline headline={headline} />
-<div
-  class:list={[
-    'grid grid-cols-1 gap-1',
-    { 'md:grid-cols-2 md:gap-2': bool2 },
-    { 'lg:grid-cols-3 lg:gap-4': bool3 },
-  ]}
->
-  {
-    posts.map(({ id, data }) => {
-      const { cover, title, description, tags, date } = data;
-      return (
-        <div class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
-          {cover ?
-            <figure>
-              <Frame ratio="16:9">
-                <Image
-                  src={cover.src}
-                  alt={cover.alt}
-                  width="300"
-                  height="300"
-                />
-              </Frame>
-            </figure>
-          : <div class="h-40 w-full bg-accent" />}
+<Stack>
+  <Headline headline={headline} />
+  <div
+    class:list={[
+      'grid grid-cols-1 gap-1',
+      { 'md:grid-cols-2 md:gap-2': bool2 },
+      { 'lg:grid-cols-3 lg:gap-4': bool3 },
+    ]}
+  >
+    {
+      posts.map(({ id, data }) => {
+        const { cover, title, description, tags, date } = data;
+        cover && console.log(title + ' ' + cover!.src);
+        return (
+          <div class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
+            {cover &&
+              (WebImageSchema.safeParse(cover).success ?
+                <WebImage cover={cover} />
+              : ImageSchema.safeParse(cover).success ?
+                <LocalImg imagePath={cover.src} altText={cover.alt} />
+              : <div class="h-full w-full skeleton" />)}
 
-          <a
-            href={`/posts/${id}`}
-            class="absolute inset-0 z-10 rounded-2xl"
-            aria-label="Full card link"
-          />
+            <a
+              href={`/posts/${id}`}
+              class="absolute inset-0 z-10 rounded-2xl"
+              aria-label="Full card link"
+            />
 
-          <div class="card-body">
-            {date && <div class="text-sm">{format(date, 'yyyy-MM-dd')}</div>}
-            <h2 class="card-title line-clamp-1">{title}</h2>
+            <div class="card-body">
+              {date && <div class="text-sm">{format(date, 'yyyy-MM-dd')}</div>}
+              <h2 class="card-title line-clamp-1">{title}</h2>
 
-            <p class="line-clamp-1">{description}</p>
+              <p class="line-clamp-1">{description}</p>
 
-            <div class="card-actions justify-end">
-              {tags &&
-                tags.map((tag) => (
-                  <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
-                    {tag}
-                  </a>
-                ))}
+              <div class="card-actions justify-end">
+                {tags &&
+                  tags.map((tag) => (
+                    <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
+                      {tag}
+                    </a>
+                  ))}
+              </div>
             </div>
           </div>
-        </div>
-      );
-    })
-  }
-</div>
+        );
+      })
+    }
+  </div>
+</Stack>

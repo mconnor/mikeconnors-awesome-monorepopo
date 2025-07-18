@@ -1,7 +1,7 @@
 import type iconPaths from '@repo/icon-paths/paths';
 
 type IconType = keyof typeof iconPaths;
-import MyAvatar from '#assets/img-1_200x200.webp';
+import MyAvatar from './assets/img-1_200x200.webp';
 
 const NAME = 'Mike Connor';
 const SITE_TITLE = 'Mike Connor | Developer';
@@ -53,51 +53,12 @@ export interface NavLinkI {
 }
 // const navLinks: TmenuLink[] = [
 
-export const navLinksArray = [
+const navLinksArray = [
   { name: 'About', dirPath: '/about', icon: 'projects' },
   { name: 'Posts', dirPath: '/posts', icon: 'blog' },
   { name: 'Tags', dirPath: '/tags', icon: 'projects' },
   { name: 'CV', dirPath: '/resume', icon: 'projects' },
   { name: 'Announce', dirPath: './announcements', icon: 'projects' },
-];
-
-const imageSources = [
-  {
-    img: './assets/kelleys.jpeg',
-    altText: 'Kelleys',
-  },
-  {
-    img: './assets/andy_mud_color.webp',
-    altText: 'webp',
-  },
-  // {
-  //   img: 'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp',
-  //   altText: 'Beautiful landscape with mountains and lake',
-  // },
-  // {
-  //   img: 'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp',
-  //   altText: 'Colorful autumn forest scene',
-  // },
-  // {
-  //   img: 'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp',
-  //   altText: 'Tropical beach with palm trees',
-  // },
-  // {
-  //   img: 'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp',
-  //   altText: 'City skyline at sunset',
-  // },
-  // {
-  //   img: 'https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp',
-  //   altText: 'Serene mountain lake reflection',
-  // },
-  // {
-  //   img: 'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp',
-  //   altText: 'Desert landscape with cacti',
-  // },
-  // {
-  //   img: 'https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp',
-  //   altText: 'Ocean waves crashing on rocks',
-  // },
 ];
 
 const timeCapsules = [
@@ -185,8 +146,8 @@ export {
   SITE_TITLE,
   SITE_DESCRIPTION,
   OUTBOUND_LINKS,
-  navLinks,
-  imageSources,
+  navLinksArray,
+  // imageSources,
   timeCapsules,
   COUNTRY_URL,
 };

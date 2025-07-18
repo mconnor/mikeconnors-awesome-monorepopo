@@ -1,5 +1,5 @@
 import { z, reference, defineCollection } from 'astro:content';
-import TOML from '@iarna/toml';
+// import TOML from '@iarna/toml';
 
 import { file, glob, type Loader, type LoaderContext } from 'astro/loaders';
 import { AnnounceSchema } from '#schemas/Announce.ts';
@@ -16,9 +16,7 @@ type ParserReturnType =
   | Record<string, unknown>[];
 
 const authorsCollection = defineCollection({
-  loader: file('src/content/authors.toml', {
-    parser: (text) => TOML.parse(text).authors as ParserReturnType,
-  }),
+  loader: file('src/content/authors.toml'),
   schema: AuthorSchema,
 });
 

@@ -10,7 +10,7 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-import FallbackImage from '#assets/andy-og.webp';
+import FallbackImage from '../../assets/andy-og.webp';
 
 const { title, description, image = FallbackImage } = Astro.props;
 ---

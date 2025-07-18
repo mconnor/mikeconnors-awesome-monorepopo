@@ -1,4 +1,4 @@
-import { z } from 'astro:content';
+import { z } from 'astro/zod';
 
 const dollar = z.literal('$');
 const euro = z.literal('€');

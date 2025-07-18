@@ -2,6 +2,8 @@
 import { getCollection } from 'astro:content';
 import PostList from '#components/PostList/index.astro';
 import Layout from '#layouts/Layout.astro';
+import Headline from '#components/Headline.astro';
+
 export const prerender = true;
 const publishsedPosts = await getCollection(
   'blogCollection',

@@ -1,8 +1,8 @@
 ---
 interface Props {
-  headline: string;
+  headline?: string;
 }
-const { headline } = Astro.props;
+const { headline = 'NEEDS A HEADLINE' } = Astro.props;
 ---
 
 <h2 class="not-prose font-mono text-xl font-semibold sm:text-5xl">

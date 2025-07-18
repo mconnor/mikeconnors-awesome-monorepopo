@@ -2,10 +2,11 @@
 import Center from '@repo/layout-webcomponents/Center';
 import Header from '#components/Header/index.astro';
 import Cover from '@repo/layout-webcomponents/Cover';
+
 // import type RmUnitType from '@repo/layout-webcomponents/RmUnitType';
 import Footer from '#components/Footer/index.astro';
 import BaseLayout from './BaseLayout.astro';
-
+import Stack from '@repo/layout-webcomponents/Stack';
 interface Props {
   maxW?: string;
   children: unknown;
@@ -25,12 +26,14 @@ const {
    <ThemeSelector  slot="right-button" />
   </NavBar> -->
 
-  <Cover space="0" centeredElement="center-l" noPad minHeight="100dvh">
+  <Cover space="2rem" centeredElement="center-l" noPad minHeight="100dvh">
     <Header />
     <Center max={maxW} gutters="1rem">
-      <slot />
+      <Stack>
+        <slot name="layoutHeadline" />
+        <slot />
+      </Stack>
     </Center>
-
     <Footer />
   </Cover>
 </BaseLayout>

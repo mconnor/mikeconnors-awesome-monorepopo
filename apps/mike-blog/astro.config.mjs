@@ -11,19 +11,33 @@ export default defineConfig({
   outDir: 'dist',
   site: `https://${DOMAIN}/`,
   image: {
-    // if you prefer to handle responsive image styling yourself, or need to override these defaults when using Tailwind 4, leave the default false value configured.
-    responsiveStyles: false,
-    remotePatterns: [{ protocol: 'https' }],
-    // domains: [
-    //   'astro.build',
-    //   'picsum.photos',
-    //   'https://doodleipsum.com',
-    //   'unsplash.com',
-    //   'img.daisyui.com',
-    // ],
-    // Used for all `<Image />` and `<Picture />` components unless overridden
+    // if you prefer to handle responsive image styling yourself,
+    // or need to override these defaults when using Tailwind 4,
+    //  leave the default false value configured.
+    responsiveStyles: true,
 
-    // experimentalBreakpoints: [640, 750, 828, 1080, 1280, 1668, 2048, 2560],
+    //Defines a list of permitted image source domains for
+    //  remote image optimization. No other remote images
+    // will be optimized by Astro.
+
+    domains: [
+      'astro.build',
+      'docs.astro.build',
+      'picsum.photos',
+      // 'https://doodleipsum.com',
+      'images.unsplash.com',
+      'img.daisyui.com',
+    ],
+
+    layout: 'constrained',
+    // Used for all `<Image />` and `<Picture />` components unless overridden
+    // breakpoints:
+    //   [640, 750, 828, 1080, 1280, 1668, 2048, 2560] |
+    //   [
+    //     640, 750, 828, 960, 1080, 1280, 1668, 1920, 2048, 2560, 3200, 3840,
+    //     4480, 5120, 6016,
+    //   ],
+
     service: sharpImageService(),
   },
   markdown: {

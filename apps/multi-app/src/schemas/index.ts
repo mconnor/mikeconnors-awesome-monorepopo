@@ -1,4 +1,4 @@
-import { z } from 'astro:content';
+import { z } from 'astro/zod';
 
 const zReact = z.literal('react');
 const zVue = z.literal('vue');

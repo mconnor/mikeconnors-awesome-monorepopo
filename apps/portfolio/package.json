@@ -24,13 +24,11 @@
     "astro-icon": "catalog:"
   },
   "devDependencies": {
+    "@prettier/plugin-oxc": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",
     "eslint": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "@prettier/plugin-oxc": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }

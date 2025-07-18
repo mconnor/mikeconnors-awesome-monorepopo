@@ -1,0 +1,26 @@
+---
+
+---
+
+<style>
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .gradient-animated {
+    @apply h-48 w-full rounded-lg shadow-lg;
+    background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff);
+    background-size: 300% 300%;
+    animation: gradientShift 8s ease infinite;
+  }
+</style>
+
+<div class="gradient-animated h-full w-full"></div>

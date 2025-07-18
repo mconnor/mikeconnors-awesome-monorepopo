@@ -1,20 +1,17 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import { Image } from 'astro:assets';
+
+import BlogsContainer from '#components/BlogsContainer.astro';
 import Layout from '#layouts/Layout.astro';
-const posts = (await getCollection('blog')).sort(
+const posts = (await getCollection('blogCollection')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
 <Layout>
   <section>
-    <ul>
+    <BlogsContainer posts={posts} />
+    <!-- <ul>
       {
         posts.map((post) => (
           <li>
@@ -35,6 +32,6 @@ const posts = (await getCollection('blog')).sort(
           </li>
         ))
       }
-    </ul>
+    </ul> -->
   </section>
 </Layout>

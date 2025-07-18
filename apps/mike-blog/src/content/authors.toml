@@ -1,17 +1,19 @@
-[[authors]]
-id = "mike-connor"
-name = "Mike Connor"
-email = "mike@mikeconnor.tech"
-bio = "Mike is a software developer and writer based in Kansas City."
-links = [
-  { platform = 'twitter', url = 'https://x.com/mikeconnor504' },
-  { platform = 'facebook', url = 'https://www.facebook.com/mike.connor.50702' },
-  { platform = 'linkedin', url = 'https://www.linkedin.com/in/michaelgconnor/' },
+# All fields use double quotes; singular table name
+[[author]]
+id      = "mike-connor"  # slug for URL and lookups
+name    = "Mike Connor"
+email   = "mike@mikeconnor.tech"
+bio     = "Mike is a software developer and writer based in Kansas City."
+links   = [
+  { platform = "twitter",  url = "https://x.com/mikeconnor504" },
+  { platform = "facebook", url = "https://www.facebook.com/mike.connor.50702" },
+  { platform = "linkedin", url = "https://www.linkedin.com/in/michaelgconnor/" },
+  { platform = "github",   url = "https://github.com/mconnor/" },
 ]
 
-[[authors]]
-id = "bob-dobbs"
-name = "Bob Dobbs"
+[[author]]
+id    = "bob-dobbs"
+name  = "Bob Dobbs"
 email = "bob@dobbs.com"
-bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-links = []
+bio   = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+# no links field since Bob has none

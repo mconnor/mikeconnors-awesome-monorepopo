@@ -2,7 +2,7 @@
 import { zIntPos } from '#schemas/index.ts';
 
 import { string, unknown } from 'astro:schema';
-import { z } from 'astro:content';
+import { z } from 'astro/zod';
 interface Props {
   daisyColor: 'primary' | 'secondary' | 'accent';
   emoji: string;

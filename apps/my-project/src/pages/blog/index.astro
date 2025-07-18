@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import FormattedDate from '#components/FormattedDate.astro';
+// import FormattedDate from '#components/FormattedDate.astro';
 import { Image } from 'astro:assets';
 import Layout from '#layouts/Layout.astro';
 const unsortedPost = await getCollection('blog');
@@ -10,22 +10,24 @@ const posts = unsortedPost.sort(
 );
 ---
 
-<Layout title="blog" description="blogs" maxW="80%">
-  <ul class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+<Layout title="blog" description="blogs" maxW="960px">
+  <ul class="flex flex-wrap gap-2 md:gap-8">
     {
-      posts.map((post) => (
-        <li>
-          <a href={`/blog/${post.id}/`}>
+      posts.map((post, index) => (
+        <li class="group w-[50%-1rem] py-[calc(--spacing(4)-1px)] first:mb-0 first:w-full first:text-center md:first:mb-4">
+          <a href={`/blog/${post.id}/`} class="block hover:text-yellow-300">
             {post.data.heroImage && (
               <Image
                 width={360}
                 height={180}
                 src={post.data.heroImage}
                 alt={post.data.description}
-                class="rounded-lg"
+                class:list={[{ 'w-full': index === 0 }, 'rounded-xl']}
               />
             )}
-            <h4 class="title">{post.data.title}</h4>
+            <h4 class:list={[{ 'text-4xl': index === 0 }]}>
+              {post.data.title}
+            </h4>
             {/* <p class="date">
               <FormattedDate date={post.data.pubDate} />
             </p> */}
@@ -35,3 +37,9 @@ const posts = unsortedPost.sort(
     }
   </ul>
 </Layout>
+
+<style>
+  /* .my-element {
+  margin: calc(var(--spacing) * 4);
+} */
+</style>

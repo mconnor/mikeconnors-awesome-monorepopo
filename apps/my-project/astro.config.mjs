@@ -11,5 +11,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  output: 'static',
+    image:{
+    responsiveStyles: false, //default is false
+  }
+  // output: 'static',
 });

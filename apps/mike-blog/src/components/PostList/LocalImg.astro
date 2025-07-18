@@ -1,0 +1,28 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import Frame from '@repo/layout-webcomponents/Frame';
+
+interface Props {
+  imagePath: string;
+
+  altText: string;
+  //   name: string;
+  //   age: number;
+}
+
+const { imagePath, altText } = Astro.props;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/*.{jpeg,jpg,png,gif,png}',
+);
+if (!images[imagePath])
+  throw new Error(
+    `"${imagePath}" does not exist in glob: "/src/assets/images/*.{jpeg,jpg,png,gif,png}"`,
+  );
+---
+
+<figure>
+  <Frame ratio="16:9">
+    <Image src={images[imagePath]()} alt={altText} />
+  </Frame>
+</figure>

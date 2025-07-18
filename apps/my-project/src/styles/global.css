@@ -6,6 +6,7 @@
 @import 'tailwindcss';
 
 @theme {
+  --spacing: 1px;
   --accent: #2337ff;
   --accent-dark: #000d8a;
   --black: 15, 18, 25;
@@ -19,3 +20,22 @@
 }
 
 @plugin "@tailwindcss/typography";
+
+@layer components {
+  .typography {
+    p {
+      font-size: var(--text-base);
+      color: var(--color-gray-700);
+    }
+    h1 {
+      font-size: var(--text-2xl--line-height);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-gray-950);
+    }
+  }
+}

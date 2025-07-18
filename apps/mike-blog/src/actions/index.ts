@@ -1,11 +1,8 @@
-import type { ActionErrorCode } from 'astro:actions';
-import { ActionError, defineAction } from 'astro:actions';
+import { defineAction, ActionError } from 'astro:actions';
 import { z } from 'astro:schema';
 // // import { navigate } from 'astro:transitions/client';
 
-const notFound: ActionErrorCode = 'NOT_FOUND';
-// // import { user } from './user';
-
+// https://docs.astro.build/en/reference/modules/astro-actions/#actionerror
 // * Better Comments Extension Examples:
 // ! Critical: Remember to handle all error cases
 // ? TODO: Should we add rate limiting to these actions?
@@ -21,7 +18,7 @@ export const server = {
 
       if (!input.name) {
         throw new ActionError({
-          code: notFound,
+          code: 'NOT_FOUND',
           message: 'no input',
         });
       }

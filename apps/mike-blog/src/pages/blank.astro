@@ -1,22 +1,15 @@
 ---
 import Layout from '#layouts/Layout.astro';
-
-import type { ComponentProps } from 'astro/types';
-import DaPriceCard from '@repo/astro-ui/DaPriceCard';
-
-import Headline from '#components/Headline.astro';
-import { PRICE_PLANS } from '#app.config.ts';
 import Stack from '@repo/layout-webcomponents/Stack';
-
-type PriceCardProps = ComponentProps<typeof DaPriceCard>;
+import ImageWrapper from '#components/ImageWrapper/index.astro';
+// import type { ComponentProps } from 'astro/types';
 ---
 
 <Layout description="animation test" maxW="80ch">
-  <Stack>
-    <Headline headline="Prices Levels" />
-
-    <div class="flex flex-row gap-2">
-      {PRICE_PLANS.map(({ id, ...rest }, index) => <DaPriceCard {...rest} />)}
-    </div>
-  </Stack>
+  <ImageWrapper
+    imagePath="/src/assets/andyBushes.jpg"
+    altText="A headshot of Priya against a brick wall background."
+    name="Andy"
+    age={5}
+  />
 </Layout>

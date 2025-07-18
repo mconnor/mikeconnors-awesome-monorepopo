@@ -1,4 +1,4 @@
-import { z } from 'astro:content';
+import { z } from 'astro/zod';
 
 const baseLinkSx = z.object({
   name: z.string(),
@@ -22,18 +22,3 @@ export const allBaseLinksSx = baseLinkSx.array().nonempty({
 
 // export { allBaseLinksSx };
 export type LinkTypes = z.infer<typeof allBaseLinksSx>;
-// LinkSx.parse({
-//   name: "People",
-//   path: "jobs",
-//   sublinks: [
-//     {
-//       name: "Politicians",
-//       sublinks: [
-//         {
-//           name: "Presidents",
-//           sublinks: [],
-//         },
-//       ],
-//     },
-//   ],
-// });

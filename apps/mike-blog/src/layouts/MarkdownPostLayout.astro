@@ -1,12 +1,17 @@
 ---
 import Layout from '#layouts/Layout.astro';
-// import { Image } from 'astro:assets';
+import { Image } from 'astro:assets';
+
+import LocalImg from '#components/PostList/LocalImg.astro';
 import Headline from '#components/Headline.astro';
 import { type CollectionEntry } from 'astro:content';
 import Prose from '#components/Prose.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
 import Author from '#components/Author/index.astro';
-import BlogPicWrapper from '#components/BlogPicWrapper.astro';
+// import BlogPicWrapper from '#components/BlogPicWrapper.astro';
+
+import { ImageSchema, WebImageSchema } from '#schemas/Utils.ts';
+
 import Tag from '#components/TagContainer/Tag.astro';
 // interface Props extends CollectionEntry<'blogCollection'> {}
 
@@ -16,6 +21,7 @@ type Props = CollectionEntry<'blogCollection'>;
 const { data } = Astro.props;
 const { tags, title, description, date, cover, author: authorRef } = data;
 
+// ImageSchema.safeParse(cover);
 // let authorObj;
 // if (author) {
 //   authorObj = await getEntry('authorsCollection', author.id);
@@ -24,10 +30,14 @@ const { tags, title, description, date, cover, author: authorRef } = data;
 // if (authorObj === undefined) {
 //   return Astro.redirect('/404');
 // }
+
+// width={1020} height={510}
+const W = 1020;
+const H = 510;
 ---
 
 <!-- TODO: fix the date format -->
-<Layout title={title} description={description} maxW="60ch">
+<Layout title={title} description={description} maxW="100%">
   <!-- <h1>The current URL is: {Astro.url}</h1>
   <h1>The current URL pathname is: {Astro.url.pathname}</h1>
   <h1>The current URL origin is: {Astro.url.origin}</h1> -->
@@ -38,7 +48,15 @@ const { tags, title, description, date, cover, author: authorRef } = data;
 
     {date && <p>Pub.on: {format(date, 'yyyy-MM-dd')}</p>}
 
-    {cover?.src && cover?.alt && <BlogPicWrapper cover={cover} />}
+    {
+      cover && WebImageSchema.safeParse(cover).success ?
+        <Image src={cover.src} alt={cover.alt} width={W} height={H} />
+      : cover &&
+        ImageSchema.safeParse(cover).success && (
+          //  <Image src={cover.src} alt={cover.alt} width={W} height={H} />
+          <LocalImg imagePath={cover.src} altText={cover.alt} />
+        )
+    }
 
     {authorRef && <Author authorReference={authorRef} />}
     <div class="">

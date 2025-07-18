@@ -30,8 +30,6 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
-    "prettier": "catalog:",
-    "prettier-plugin-astro": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }
