@@ -1,12 +1,8 @@
 # build output
 dist/
-
 # generated types
 .astro/
-.vercel/
-.turbo
-.frontmatter
-cache-directory
+
 # dependencies
 node_modules/
 
@@ -16,8 +12,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# environment variables
 
+# environment variables
+.env
+.env.production
 
 # macOS-specific files
 .DS_Store

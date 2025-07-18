@@ -1,0 +1,35 @@
+{
+  "name": "@app/wavelength",
+  "type": "module",
+  "version": "0.0.1",
+    "imports": {
+    "#*": "./src/*"
+  },
+  "scripts": {
+    "astro-check": "astro check",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "eslint --max-warnings=0",
+    "inspect": "pnpm dlx @eslint/config-inspector@latest",
+    "fix": "eslint . --fix",
+    "check-types": "tsc --noEmit",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "catalog:",
+    "@astrojs/mdx": "catalog:",
+    "@astrojs/rss": "catalog:",
+    "@astrojs/sitemap": "catalog:",
+    "astro": "catalog:",
+    "sharp": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@repo/typescript-config": "workspace:^",
+    "typescript": "catalog:",
+    "eslint": "catalog:"
+  }
+}
