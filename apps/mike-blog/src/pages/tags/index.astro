@@ -5,9 +5,9 @@ import Headline from '#components/Headline.astro';
 import TagContainer from '#components/TagContainer/index.astro';
 import Layout from '#layouts/Layout.astro';
 
-import { tagsSchema, tagCountSchema } from '#schemas/Blog.ts';
+import { tagsSchema, tagCountSchema } from '#schemas/index.ts';
 
-const allBlogPost = await getCollection('blogCollection');
+const allBlogPost = await getCollection('blog');
 
 /// we only need a list of unique tags and their counts
 const slugTags = allBlogPost

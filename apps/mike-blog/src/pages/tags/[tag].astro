@@ -6,7 +6,7 @@ import PostList from '#components/PostList/index.astro';
 
 export async function getStaticPaths() {
   const publishsedPosts = await getCollection(
-    'blogCollection',
+    'blog',
     ({ data }) => data.draft !== true,
   );
 

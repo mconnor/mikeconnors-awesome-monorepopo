@@ -20,12 +20,11 @@ interface Props {
 const { post } = Astro.props;
 const { title, description, date, cover } = post.data;
 
-// const authorObj =
-//   postData.author ?
-//     await getEntry(postData.author.collection, postData.author.id)
-//   : null;
+// const authorObj = author ? await getEntry(author.collection, author.id) : null;
 
-// console.log(authorObj);
+// const authData = authorObj ? authorObj.data : null;
+// console.log('_____________authData');
+// console.log(authData);
 // ImageSchema.safeParse(cover);
 // let authorObj;
 // if (authorRef) {
@@ -58,11 +57,11 @@ const H = 510;
     }
 
     <!-- {
-      authorObj ?
-        <a class="mx-auto link" href={`../authors/${authorObj.data.id}`}>
-          {authorObj.data.name}
+      authData ?
+        <a class="mx-auto link" href={`../authors/${authData.id}`}>
+          {authData.name}
         </a>
-      : <p>NOT AUTHOR</p>
+      : <p>NO AUTHOR</p>
     } -->
     <div class="">
       <Prose>

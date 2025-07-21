@@ -4,17 +4,16 @@ import Layout from '#layouts/Layout.astro';
 
 export async function getStaticPaths() {
   const authorsObj = await getCollection('authors');
-  const { data: authorsData } = authorsObj[0];
+  // const { data: authorsData } = authorsObj;
 
-  return authorsData.map((author) => ({
-    params: { id: author.slug },
+  return authorsObj.map((author) => ({
+    params: { id: author.id },
     props: author,
   }));
 }
 
-// const id = Astro.params;
-const author = Astro.props;
-const { name, bio, links } = author;
+const { data } = Astro.props;
+const { name, bio, links } = data;
 ---
 
 <Layout maxW="60ch">
@@ -22,30 +21,16 @@ const { name, bio, links } = author;
     <div class="card-body">
       <h2 class="card-title">{name}</h2>
       {bio && <p>{bio}</p>}
-      <!-- <div class="card-actions justify-end">
-       {
-       links && links.map(({(platform, url)}) => (
-        <a href={url} class="link">
-          {platform}
-        </a>
-        ))
-
+      <div class="card-actions justify-end">
+        {
+          links &&
+            links.map(({ platform, url }) => (
+              <a href={url} class="link">
+                {platform}
+              </a>
+            ))
         }
-      </div> -->
+      </div>
     </div>
-    )
   </div>
-
-  <!-- <h1>{name}</h1>
-  <p>{bio}</p>
-  {
-    links &&
-      links.map(({ platform, url }) => (
-        <li>
-          <a href={url} class="link">
-            {platform}
-          </a>
-        </li>
-      ))
-  } -->
 </Layout>
