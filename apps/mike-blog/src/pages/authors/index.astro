@@ -1,17 +1,26 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
-const authors = await getCollection('authorsCollection');
+const authorsObj = await getCollection('authors');
+// console.log('+++++++authors');
+// console.log({ ...authors });
+// console.log('-----authors');
+// console.log('+++++++authors');
+
+const { data: authorsData } = authorsObj[0];
+// authorsData.map((d) => console.log({ ...d }));
+// console.log('-----authors');
 ---
 
 <Layout title="authors">
   <!-- <Debug {tag} />
     <Debug {posts} /> -->
-
+  <!-- <p>{authors.length}</p> -->
+  <p>authors</p>
   {
-    authors.map(({ data }) => (
+    authorsData.map((authorData) => (
       <div class="flex items-center gap-2">
-        <a href={`/authors/${data.id}`}>{data.name}</a>
+        <a href={`/authors/${authorData.slug}`}>{authorData.name}</a>
       </div>
     ))
   }
