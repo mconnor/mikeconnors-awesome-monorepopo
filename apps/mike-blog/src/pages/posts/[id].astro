@@ -1,5 +1,11 @@
 ---
-import { getCollection, render } from 'astro:content';
+import {
+  getCollection,
+  render,
+  type CollectionEntry,
+  getEntry,
+  getEntries,
+} from 'astro:content';
 import MarkdownPostLayout from '#layouts/MarkdownPostLayout.astro';
 
 // STATIC SITE GENERATION
@@ -10,17 +16,34 @@ export async function getStaticPaths() {
   const posts = await getCollection('blog');
 
   return posts.map((post) => ({
-    params: { id: decodeURI(post.id) },
+    params: { id: post.id },
     props: { post },
   }));
 }
-// type Props = CollectionEntry<'blogCollection'>;
+// type Props = CollectionEntry<'blog'>;
 
+const { id } = Astro.params;
 const { post } = Astro.props;
 
+// const authorData =
+//   post.data.author ?
+//     await getEntry(post.data.author.collection, post.data.author.id)
+//   : null;
+// const authorsArray =
+//   post.data.author ? await getEntries(post.data.author) : null;
+
+// const { data: authorsData } = author;
 const { Content } = await render(post);
+
+// console.log('_____________authData ');
+
+// console.log(authorData);
 ---
 
 <MarkdownPostLayout post={post}>
+  <!-- {
+    authorsArray &&
+      authorsArray.map((author) => <p>Author: {author.data.name}</p>)
+  } -->
   <Content />
 </MarkdownPostLayout>
