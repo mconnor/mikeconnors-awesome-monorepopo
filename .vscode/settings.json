@@ -1,9 +1,8 @@
 {
   "editor.formatOnSave": false,
-  "editor.rulers": [80],
+  "editor.rulers": [160],
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 80,
-  "better-comments.multilineComments": true,
+  "editor.wordWrapColumn": 160,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -44,7 +43,6 @@
     "vue-html": "html",
     "svelte": "html",
     "preact": "html",
-    "lit": "html",
     "markdown": "html",
     "postcss": "css"
   },
@@ -54,25 +52,10 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // "[astro]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  // "[javascript]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  // "[typescript]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  // "[json]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  // "[jsonc]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
   "[astro]": {
-    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
     "editor.formatOnPaste": false,
     "editor.formatOnType": false
   },
@@ -121,30 +104,117 @@
   // },
 
   "editor.parameterHints.enabled": false,
-  "editor.lineNumbers": "on",
+  "editor.lineNumbers": "off",
   "explorer.incrementalNaming": "simple",
-  "mcp": {
-    "inputs": [],
-    "servers": {
-      "Context7": {
-        "type": "stdio",
-        "command": "npx",
-        "args": ["-y", "@upstash/context7-mcp@latest"]
-      },
-      "filesystem": {
-        "type": "stdio",
-        "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-filesystem", "./"]
-      },
-      "github": {
-        "type": "stdio",
-        "command": "npx",
-        "args": ["-y", "@modelcontextprotocol/server-github"]
-      }
-    }
-  },
+
+  // Explorer icon settings - make icons larger and more visible
+  "workbench.tree.indent": 20,
+  "workbench.tree.renderIndentGuides": "always",
+  "explorer.decorations.colors": true,
+  "explorer.decorations.badges": true,
+
   "debug.javascript.defaultRuntimeExecutable": {
     "pwa-node": "/Users/mikeconnor/.local/share/mise/shims/node"
   },
-  "editor.inlineSuggest.enabled": false
+  "editor.inlineSuggest.enabled": false,
+  // GitHub Copilot settings
+  "github.copilot.enable": {
+    "markdown": true,
+    "plaintext": false,
+    "zod": true,
+    "astro": true,
+    "react": true,
+    "preact": true,
+    "svelte": true,
+    "vue": true
+  },
+
+  // Support for Node.js subpath imports with # prefix
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+
+  // Monorepo workspace settings
+  // "typescript.tsdk": "node_modules/typescript/lib",
+  // "typescript.enablePromptUseWorkspaceTsdk": true,
+  // "typescript.preferences.preferTypeOnlyAutoImports": true,
+
+  // Zod schema development
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // Framework-specific settings
+  "svelte.enable-ts-plugin": true,
+  "css.customData": [".vscode/tailwind.json"],
+
+  // Search Configuration - Files to exclude from searches
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.next": true,
+    "**/.nuxt": true,
+    "**/.astro": true,
+    "**/coverage": true,
+    "**/.nyc_output": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/pnpm-lock.yaml": true,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true,
+    "**/*.min.js": true,
+    "**/*.min.css": true,
+    "**/vendor": true,
+    "**/.cache": true,
+    "**/.temp": true,
+    "**/.tmp": true,
+    "**/logs": true,
+    "**/*.log": true
+  },
+
+  // Files to exclude from the file explorer
+  // Note: This completely overrides user settings, doesn't merge with them
+  "files.exclude": {
+    // Version control (hide these)
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    // System files (hide these)
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    // Dependencies and build outputs (keep visible for debugging)
+    "**/node_modules": false,
+    "**/.next/**": false,
+    "**/.turbo/**": false,
+    "**/.vercel/**": false,
+    "**/.astro": false,
+    "**/.svelte-kit/**": false,
+    "**/coverage/**": false,
+    "./pnpm-lock.yaml": false,
+    // Cache and temp files (hide these)
+    "**/.cache": true,
+    "**/.temp": true,
+    "**/.tmp": true
+  },
+
+  // Files to exclude from file watchers (performance)
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/.next/**": true,
+    "**/.nuxt/**": true,
+    "**/.astro/**": true,
+    "**/coverage/**": true,
+    "**/.nyc_output/**": true,
+    "**/logs/**": true,
+    "**/*.log": true
+  },
+  "deno.path": "/Users/mikeconnor/.local/share/mise/shims/deno"
 }

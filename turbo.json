@@ -35,7 +35,7 @@
     },
     "format": {},
     "sync": {
-      "dependsOn": ["^sync"]
+      "dependsOn": ["transit"]
     },
     "inspect": {},
     "fix": {

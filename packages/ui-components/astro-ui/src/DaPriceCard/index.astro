@@ -23,9 +23,7 @@ interface Props {
   features: FeatureType;
 }
 
-const { dark, service, priceLevels, level, badgeBool, features } = Astro.props;
-
-const themeColor = dark ?? 'dark';
+const { service, priceLevels, badgeBool, features } = Astro.props;
 ---
 
 <div class="card w-96 bg-base-100 shadow-sm">
