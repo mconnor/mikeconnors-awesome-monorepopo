@@ -1,72 +1,76 @@
-import * as z from 'zod/v3';
-import type { ComponentChild } from 'preact';
-import type { LinkTypes } from '@repo/schemas/Links';
-import { allBaseLinksSx } from '@repo/schemas/Links';
-import HamburgerIcon from './Icon.tsx';
-
-interface Props {
-  navLinks: LinkTypes;
-  tabindex?: number;
-  title?: string;
-  rightButton: ComponentChild;
-}
-
-function NavBar({
-  navLinks,
-  rightButton,
-  title = 'mike connor - tech',
-  tabindex = 0,
-}: Props) {
-  const {
-    data: parsedNavs,
-    success,
-    error,
-  } = allBaseLinksSx.safeParse(navLinks);
-  if (error) throw new Error(error.message);
-
+export default function NavBar() {
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
-          <div
-            tabIndex={tabindex}
-            role="button"
-            className="btn btn-ghost lg:hidden"
-          >
-            <HamburgerIcon />
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {' '}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />{' '}
+            </svg>
           </div>
-
           <ul
-            tabindex={tabindex}
-            class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
+            tabIndex={0}
+            className="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
           >
-            {parsedNavs.map(({ dirPath, name }) => (
-              <li>
-                <a role="button" class="link" href={dirPath}>
-                  {name}
-                </a>
-              </li>
-            ))}
+            <li>
+              <a href="./">hello</a>
+            </li>
+            <li>
+              <a href="./">Parent</a>
+              <ul className="p-2">
+                <li>
+                  <a href="./">Submenu 1</a>
+                </li>
+                <li>
+                  <a href="./">Submenu 2</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="./">Item 3</a>
+            </li>
           </ul>
         </div>
-        <a href="./" className="btn btn-ghost btn-xl">
-          {title}
-        </a>
+        <a className="btn text-xl btn-ghost">daisyUI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul tabindex={tabindex} class="menu menu-horizontal px-1">
-          {parsedNavs.map(({ dirPath, name }) => (
-            <li>
-              <a role="button" class="link" href={dirPath}>
-                {name}
-              </a>
-            </li>
-          ))}
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <a href="./">Item 1</a>
+          </li>
+          <li>
+            <details>
+              <summary>Parent</summary>
+              <ul className="p-2">
+                <li>
+                  <a href="./">Submenu 1</a>
+                </li>
+                <li>
+                  <a href="./">Submenu 2</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li>
+            <a href="./">Item 3</a>
+          </li>
         </ul>
       </div>
-      <div className="navbar-end">{rightButton}</div>
+      <div className="navbar-end">
+        <a className="btn">Button</a>
+      </div>
     </div>
   );
 }
-
-export default NavBar;

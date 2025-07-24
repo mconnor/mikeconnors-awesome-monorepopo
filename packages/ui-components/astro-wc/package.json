@@ -34,18 +34,16 @@
     "date-fns": "catalog:"
   },
   "devDependencies": {
-    "daisyui": "catalog:",
     "@astrojs/check": "catalog:",
     "@open-wc/testing": "catalog:",
+    "@repo/design-system": "workspace:^",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
+    "@tailwindcss/cli": "catalog:",
     "astro": "catalog:",
+    "daisyui": "catalog:",
     "eslint": "catalog:",
     "luxon": "catalog:",
-    "prettier-plugin-astro": "catalog:",
-    "prettier-plugin-tailwindcss": "catalog:",
-    "@repo/design-system": "workspace:^",
-    "@tailwindcss/cli": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:"

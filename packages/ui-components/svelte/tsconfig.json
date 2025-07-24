@@ -1,5 +1,6 @@
 {
   "extends": "@repo/typescript-config/svelte",
   "compilerOptions": {},
-  "files": ["eslint.config.mjs"]
+  "files": ["eslint.config.mjs"],
+  "include": ["/src/**/*.svelte", "/*.config.mjs"]
 }

@@ -20,14 +20,13 @@
     "dev:components": "tsup --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier . --write",
-    "check-types": "echo skip: check-types",
+    "check-types": "tsc --noEmit",
     "clean": "rm -rf dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@repo/schemas": "workspace:^",
     "preact": "catalog:"
   },
   "devDependencies": {
@@ -39,8 +38,7 @@
     "eslint": "catalog:",
     "tailwindcss": "catalog:",
     "tsup": "catalog:",
-    "typescript": "catalog:",
-    "zod": "catalog:"
+    "typescript": "catalog:"
   },
   "eslintConfig": {
     "extends": "preact"

@@ -41,7 +41,7 @@
   "dependencies": {
     "@repo/utils": "workspace:^",
     "cally": "^0.8.0",
-        "@headlessui/react": "catalog:",
+    "@headlessui/react": "catalog:",
     "@heroicons/react": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
@@ -62,10 +62,6 @@
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
     "tailwindcss": "^4.1.0"
   }
 }

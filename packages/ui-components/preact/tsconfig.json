@@ -1,4 +1,3 @@
 {
-  "extends": "@repo/typescript-config/preact.json",
-
+  "extends": "@repo/typescript-config/preact.json"
 }
