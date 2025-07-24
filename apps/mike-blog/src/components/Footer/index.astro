@@ -1,49 +1,10 @@
 ---
-// Footer with logo and social icons
-// import { Links } from '#app.config.ts';
-import Switcher from '@repo/layout-webcomponents/Switcher';
-import type { ComponentProps } from 'astro/types';
-import SocialIcon from './SocialIcon.astro';
 type Props = Record<string, never>;
-import EasterEgg from '@repo/astro-ui/EasterEgg';
-import MailtoBtn from '#components/actions-buttons/MailtoButton/index.astro';
 
-const AUDIO_CLIPS = ['/audio/why.mp3', '/audio/drink.mp3'];
-
+import type { PlatformLinkType } from '#schemas/platforms.ts';
 import { OUTBOUND_LINKS } from '#app.config.ts';
-// type EasterEggProps = ComponentProps<typeof EasterEgg>;
 ---
 
-<!-- <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10"
-  transition:persist
-
->
-<div class="py-2 grid grid-cols-3 gap-4 place-content-center">
-  <p >Site and contents by Mike Connor</p>
-
-  <MailtoBtn buttonText="CONTACT" />
-
-
-  <EasterEgg clips={AUDIO_CLIPS} />
-</div>
-</footer> --><!-- <div class="footer bg-neutral p-10 text-neutral-content sm:footer-horizontal">
-  <aside>
-    <SocialIcon company="logo" dim="50" />
-    <p>
-      © Mike Connor 2025
-      <br />
-      Tech Dev/Media Producer
-    </p>
-  </aside>
-  <nav>
-
-    <div class="grid grid-flow-col gap-4">
-      <a href="./"><SocialIcon company="twitter" /></a>
-      <a href="./"><SocialIcon company="linkedin" /></a>
-      <a href="./"><SocialIcon company="facebook" /></a>
-    </div>
-  </nav>
-</div> -->
 <footer
   class="footer items-center bg-neutral p-4 text-neutral-content sm:footer-horizontal"
 >
@@ -64,13 +25,20 @@ import { OUTBOUND_LINKS } from '#app.config.ts';
     <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
   </aside>
   <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <!-- <a href="./"><SocialIcon company="twitter" /></a>
-      <a href="./"><SocialIcon company="linkedin" /></a>
-      <a href="./"><SocialIcon company="facebook" /></a -->
-
     {
-      OUTBOUND_LINKS.forEach(({ url, company }) => (
-        <SocialIcon companyName={company} />
+      OUTBOUND_LINKS.forEach(({ url, path }: PlatformLinkType) => (
+        // <SocialIcon href="./" platform={platform as KeyType} />
+        <a href={url}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            class="fill-current"
+          >
+            <path d={path} />
+          </svg>
+        </a>
       ))
     }
   </nav>

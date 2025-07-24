@@ -1,9 +1,0 @@
----
-import Headline from '#components/Headline.astro';
-import { PRICE_PLANS } from '#app.config.ts';
-import DaPriceCard from '@repo/astro-ui/DaPriceCard';
----
-
-<div class="flex flex-row gap-2">
-  {PRICE_PLANS.map(({ id, ...rest }, index) => <DaPriceCard {...rest} />)}
-</div>

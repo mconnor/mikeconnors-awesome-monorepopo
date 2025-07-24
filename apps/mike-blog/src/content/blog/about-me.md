@@ -1,11 +1,10 @@
 ---
 title: About Me
 date: 2022-09-01
-author: mike-connor
+author: ['Mike Connor']
 description: 'Morlochs and Eloi'
-cover:
-  src: '../../assets/markdown-cartoon.png'
-  alt: 'A photograph of a sunset behind a mountain range.'
+cover: '../../assets/markdown-cartoon.png'
+alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 

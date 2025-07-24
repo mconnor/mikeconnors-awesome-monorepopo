@@ -1,10 +1,12 @@
 ---
 import Center from '@repo/layout-webcomponents/Center';
-import Header from '#components/Header/index.astro';
+import { navLinksArray } from '#app.config.ts';
 import Cover from '@repo/layout-webcomponents/Cover';
-
-// import type RmUnitType from '@repo/layout-webcomponents/RmUnitType';
+import Header from '#components/Header/index.astro';
 import Footer from '#components/Footer/index.astro';
+// import type RmUnitType from '@repo/layout-webcomponents/RmUnitType';
+// import NavBar from '@repo/preact/Navbar'
+import NavBar from '#components/AstroNavBar/index.astro';
 import BaseLayout from './BaseLayout.astro';
 import Stack from '@repo/layout-webcomponents/Stack';
 interface Props {
@@ -22,12 +24,11 @@ const {
 ---
 
 <BaseLayout title={title} {...rest}>
-  <!-- <NavBar navLinks={navLinksArray} title="x" tabindex={0} client:visible>
-   <ThemeSelector  slot="right-button" />
-  </NavBar> -->
-
   <Cover space="2rem" centeredElement="center-l" noPad minHeight="100dvh">
-    <Header />
+    <header>
+      <NavBar navLinks={navLinksArray} title="x" tabindex={0} />
+    </header>
+
     <Center max={maxW} gutters="1rem">
       <Stack>
         <slot name="layoutHeadline" />

@@ -1,11 +1,10 @@
 ---
 title: My past and current Projects
 date: 2022-09-01
-author: mike-connor
+author: ['Mike Connor']
 description: 'Morlochs and Eloi'
-cover:
-  src: 'https://picsum.photos/1600/900?random=5'
-  alt: 'A photograph of a sunset behind a mountain range.'
+cover: '../../assets/markdown-cartoon.png'
+alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['astro', 'blogging', 'learning-in-public']
 ---
 

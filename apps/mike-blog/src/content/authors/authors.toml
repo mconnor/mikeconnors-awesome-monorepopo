@@ -1,0 +1,9 @@
+[mike-connor]
+name = "Mike Connor"
+email = "mike@mikeconnor.tech"
+bio = "Mike is a software developer and writer based in Kansas City."
+
+[bob-dobbs]
+name = "Bob Dobbs"
+email = "bob@dobbs.com"
+bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."

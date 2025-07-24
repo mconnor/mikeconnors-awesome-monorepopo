@@ -3,18 +3,21 @@ import { daisyuiThemes } from '#utils/daisyui-themes.ts';
 import Hamburger from '#assets/svgs/Hamburger.svg';
 import DropDownDetails from './DropDownDetails.astro';
 
-import { allBaseLinksSx, type LinkTypes } from '#schemas/Links.ts';
+import {
+  // allBaseLinksSx,
+  type NavLinkType,
+} from '#app.config.ts';
 
 interface Props {
-  navLinks: LinkTypes;
+  navLinks: NavLinkType;
   tabindex?: number;
   title?: string;
 }
 
 const { navLinks, tabindex = 0, title = 'MC' } = Astro.props;
 
-const { data: parsedNavs, success, error } = allBaseLinksSx.safeParse(navLinks);
-if (error) throw new Error(error.message);
+// const { data: parsedNavs, success, error } = allBaseLinksSx.safeParse(navLinks);
+// if (error) throw new Error(error.message);
 ---
 
 <div class="navbar bg-base-100 shadow-sm">
@@ -29,10 +32,10 @@ if (error) throw new Error(error.message);
         class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
       >
         {
-          parsedNavs.map(({ dirPath, name }) => (
+          navLinks.map((link) => (
             <li>
-              <a role="button" class="link" href={dirPath}>
-                {name}
+              <a role="button" class="link" href={link.dirPath}>
+                {link.name}
               </a>
             </li>
           ))
@@ -46,10 +49,10 @@ if (error) throw new Error(error.message);
   <div class="navbar-center hidden lg:flex">
     <ul tabindex={tabindex} class="menu menu-horizontal px-1">
       {
-        parsedNavs.map(({ dirPath, name }) => (
+        navLinks.map((link) => (
           <li>
-            <a role="button" class="link" href={dirPath}>
-              {name}
+            <a role="button" class="link" href={link.dirPath}>
+              {link.name}
             </a>
           </li>
         ))

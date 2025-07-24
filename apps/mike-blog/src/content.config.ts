@@ -1,42 +1,58 @@
-import { z, reference, defineCollection } from 'astro:content';
-// import TOML from '@iarna/toml';
+import { file, glob } from 'astro/loaders';
+import {
+  z,
+  defineCollection,
+  reference,
+  type SchemaContext,
+} from 'astro:content';
 
-import { file, glob, type Loader, type LoaderContext } from 'astro/loaders';
-import { AnnounceSchema } from '#schemas/Announce.ts';
-import { BlogSchema, AuthorSchema } from '#schemas/Blog.ts';
+import { dateLikeToDate } from '#schemas/Utils.ts';
+// import { LinkSetSchema } from '#schemas/Links.ts';
+import { AuthorSchema, AnnounceSchema, tagsSchema } from '#schemas/index.ts';
 
-// import { personalSchema } from '#schemas/personalSchema.ts';
+const zTitle = z.string().min(1, 'Title is required');
 
-// import { countryLoader } from './loaders/index.ts';
+const zDescrip = z
+  .string()
+  .min(10, 'Description should be at least 10 characters')
+  .max(200, 'Description should not exceed 200 characters');
 
-// import { blogSchema } from './schemas';
+// const BlogAuthorSchema = ({ image }: SchemaContext) =>
+//   z.object({
+//     title: zTitle,
+//     description: zDescrip,
+//     date: dateLikeToDate,
+//     draft: z.boolean().optional().default(false),
+//     tags: tagsSchema,
+//     author: reference("authors"),
+//     cover: image().optional(),
+//     alt: z.string().optional(),
+//   });
 
-type ParserReturnType =
-  | Record<string, Record<string, unknown>>
-  | Record<string, unknown>[];
-
-const authorsCollection = defineCollection({
-  loader: file('src/content/authors.toml'),
+const authors = defineCollection({
+  loader: file('src/content/authors/authors.toml'),
   schema: AuthorSchema,
 });
 
-const refSchema = z.object({
-  author: reference('authorsCollection').optional(),
-  relatedPosts: z.array(reference('blogCollection')).optional(),
-});
-
-const BlogAuthorSchema = BlogSchema.merge(refSchema);
-
-const blogCollection = defineCollection({
+const blog = defineCollection({
   // type: 'content',
   loader: glob({
     pattern: '**/*.{md,mdx}',
     base: './src/content/blog',
   }),
-  schema: BlogAuthorSchema,
+  schema: ({ image }: SchemaContext) =>
+    z.object({
+      title: zTitle,
+      description: zDescrip,
+      date: dateLikeToDate,
+      draft: z.boolean().optional().default(false),
+      tags: tagsSchema,
+      author: z.array(reference('authors')),
+      cover: image().optional(),
+      alt: z.string().optional(),
+    }),
 });
-
-const announcementsCollection = defineCollection({
+const announcements = defineCollection({
   loader: glob({
     pattern: '**/*.md',
     base: 'src/content/announcements',
@@ -45,7 +61,8 @@ const announcementsCollection = defineCollection({
 });
 
 export const collections = {
-  blogCollection,
-  authorsCollection,
-  announcementsCollection,
+  blog,
+  authors,
+
+  announcements,
 };

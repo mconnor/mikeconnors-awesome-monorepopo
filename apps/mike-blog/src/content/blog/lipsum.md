@@ -1,11 +1,10 @@
 ---
 title: Vernunft fängt wieder an zu sprechen Und Hoffnung wieder an zu sprechen Und Hoffnung wieder
 date: 2022-01-04
-author: mike-connor
+author: ['Mike Connor']
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor sed do eiusmod tempor incididunt ut labore et dolore magna aliqua incididunt ut labore et dolore magna aliqua.'
-cover:
-  src: 'https://picsum.photos/1600/900?random=1'
-  alt: 'A photograph of a sunset behind a mountain range.'
+cover: '../../assets/markdown-cartoon.png'
+alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['astro', 'blogging', 'learning-in-public', 'tailwindcss']
 ---
 

@@ -1,11 +1,10 @@
 ---
 title: star signals are cool
 date: 2024-01-02
-author: mike-connor
+author: ['Bob Dobbs', 'Mike Connor']
 description: The Future
-# cover:
-#   src: 'https://picsum.photos/1600/900?random=3'
-#   alt: 'lorem'
+cover: '../../assets/markdown-cartoon.png'
+alt: 'this is the alt text'
 tags: ['coding', 'successes', 'learning-in-public']
 ---
 

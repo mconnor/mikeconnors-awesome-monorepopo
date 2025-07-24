@@ -11,7 +11,7 @@ if (id === undefined) {
   return Astro.redirect('/404');
 }
 // 2. Query for the entry directly using the request slug
-const announcement = await getEntry('announcementsCollection', id!);
+const announcement = await getEntry('announcements', id!);
 
 // 3. Redirect if the entry does not exist
 if (announcement === undefined) {

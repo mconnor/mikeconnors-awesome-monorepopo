@@ -1,10 +1,9 @@
 ---
 title: It's Friday
 date: 2024-01-11
-author: mike-connor
-cover:
-  src: 'https://picsum.photos/1600/900?random=4'
-  alt: 'lorem'
+author: ['Mike Connor']
+cover: '../../assets/markdown-cartoon.png'
+alt: 'lorem'
 description: The Future of Dynamic Web Content
 tags: ['coding', 'successes', 'learning-in-public']
 ---

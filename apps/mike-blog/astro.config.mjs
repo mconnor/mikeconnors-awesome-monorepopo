@@ -1,6 +1,7 @@
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
-import { defineConfig, sharpImageService, envField } from 'astro/config';
+
+import { defineConfig, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
 
@@ -37,8 +38,6 @@ export default defineConfig({
     //     640, 750, 828, 960, 1080, 1280, 1668, 1920, 2048, 2560, 3200, 3840,
     //     4480, 5120, 6016,
     //   ],
-
-    service: sharpImageService(),
   },
   markdown: {
     shikiConfig: {
@@ -100,7 +99,10 @@ export default defineConfig({
     },
   },
 
-  integrations: [icon(), mdx()],
+  integrations: [
+    icon(),
+    mdx(),
+  ],
   // It is no longer necessary to specify output: 'hybrid' in your Astro config to use server-rendered pages. The new output: 'static' has this capability included.
   // output: 'static',
   adapter: vercel({

@@ -1,12 +1,10 @@
 ---
 title: Draft Post
 date: 2024-01-13
-draft: true
-author: mike-connor
+author: ['Mike Connor', 'Bob Dobbs']
 description: 'A graphic representation of data abstracted from the banks of every computer in the coffin for Armitage’s call.'
-cover:
-  src: 'https://picsum.photos/1600/900?random=0'
-  alt: 'A photograph of a sunset behind a mountain range.'
+cover: '../../assets/markdown-cartoon.png'
+alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['space', 'liver', 'xanadu']
 ---
 

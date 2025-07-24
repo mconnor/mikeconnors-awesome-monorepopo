@@ -52,8 +52,7 @@
     "@sentry/cli": "catalog:",
     "@sentry/vite-plugin": "catalog:",
     "@tailwindcss/vite": "catalog:",
-    "@types/react": "catalog:",
-    "@types/react-dom": "catalog:",
+
     "astro": "catalog:",
     "astro-icon": "catalog:",
     "date-fns": "catalog:",
@@ -65,6 +64,7 @@
     "theme-change": "catalog:"
   },
   "devDependencies": {
+
     "@iconify-json/mdi": "catalog:",
     "@prettier/plugin-oxc": "catalog:",
     "@repo/design-system": "workspace:*",

@@ -1,18 +1,16 @@
 ---
-import AnimatedBg from './AnimatedBg.astro';
+// import AnimatedBg from './AnimatedBg.astro';
 import { format } from 'date-fns';
 import { Image } from 'astro:assets';
-import { ImageSchema, WebImageSchema } from '#schemas/Utils.ts';
+import { Debug } from 'astro:components';
 import Stack from '@repo/layout-webcomponents/Stack';
 import Headline from '#components/Headline.astro';
-import type { CollectionEntry } from 'astro:content';
 
-import WebImage from './WebImage.astro';
-import LocalImg from './LocalImg.astro';
+import type { CollectionEntry } from 'astro:content';
 
 interface Props {
   headline: string;
-  posts: CollectionEntry<'blogCollection'>[];
+  posts: CollectionEntry<'blog'>[];
 }
 
 const { posts, headline } = Astro.props;
@@ -30,18 +28,23 @@ const bool3 = posts.length > 2;
     ]}
   >
     {
-      posts.map(({ id, data }) => {
-        const { cover, title, description, tags, date } = data;
-        cover && console.log(title + ' ' + cover!.src);
-        return (
-          <div class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
-            {cover &&
-              (WebImageSchema.safeParse(cover).success ?
-                <WebImage cover={cover} />
-              : ImageSchema.safeParse(cover).success ?
-                <LocalImg imagePath={cover.src} altText={cover.alt} />
-              : <div class="h-full w-full skeleton" />)}
+      posts.map(({ id, data }, index) => {
+        const { cover, alt, title, description, tags, date } = data;
 
+        return (
+          // <Debug id={id} />
+          <div class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
+            {cover && alt && (
+              <figure>
+                <Image
+                  src={cover}
+                  alt={alt}
+                  width={360}
+                  height={180}
+                  class:list={[{ 'w-full': index === 0 }, 'rounded-xl']}
+                />
+              </figure>
+            )}
             <a
               href={`/posts/${id}`}
               class="absolute inset-0 z-10 rounded-2xl"

@@ -1,11 +1,6 @@
 {
-  "extends": [
-    "astro/tsconfigs/base",
-    "@repo/typescript-config/include-exclude"
-  ],
+  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "strict": true,
-    "strictNullChecks": true, // add if using `base` template
     "allowJs": true // required, and included with all Astro templates
   }
 }

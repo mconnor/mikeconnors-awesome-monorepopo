@@ -11,4 +11,4 @@ const countriesSchema = countrySchema.array().nonempty({
   message: "Can't be empty!",
 });
 
-// export { countrySchema, countriesSchema };
+export { countrySchema, countriesSchema };

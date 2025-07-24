@@ -1,0 +1,19 @@
+---
+import type { AuthorType } from '#schemas/index.ts';
+
+interface Props {
+  author: AuthorType;
+}
+const { author } = Astro.props;
+const { name, bio, email } = author;
+---
+
+<div class="card w-96 bg-base-100 shadow-sm card-sm">
+  <div class="card-body">
+    <h2 class="card-title">{name}</h2>
+    <p>{bio}</p>
+    <div class="card-actions justify-end">
+      <div class="link">{email}</div>
+    </div>
+  </div>
+</div>

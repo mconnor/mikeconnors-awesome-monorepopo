@@ -1,9 +1,5 @@
 ---
-import { navLinksArray } from '#app.config.ts';
 
-import NavBar from '#components/NavBar/index.astro';
 ---
 
-<header transition:persist>
-  <NavBar navLinks={navLinksArray} title="MC" tabindex={0} />
-</header>
+<header transition:persist><slot /></header>
