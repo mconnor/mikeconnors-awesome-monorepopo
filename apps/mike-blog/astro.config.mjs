@@ -99,10 +99,7 @@ export default defineConfig({
     },
   },
 
-  integrations: [
-    icon(),
-    mdx(),
-  ],
+  integrations: [icon(), mdx()],
   // It is no longer necessary to specify output: 'hybrid' in your Astro config to use server-rendered pages. The new output: 'static' has this capability included.
   // output: 'static',
   adapter: vercel({

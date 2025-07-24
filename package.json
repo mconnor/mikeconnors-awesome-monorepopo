@@ -36,7 +36,8 @@
     "turbo": "^2.5.5"
   },
   "engines": {
-    "node": ">= 22.9.0"
+    "node": ">= 22.9.0",
+    "pnpm": ">=10"
   },
   "packageManager": "pnpm@10.13.1",
   "pnpm": {
@@ -46,6 +47,7 @@
       "@tailwindcss/oxide",
       "core-js",
       "esbuild",
+      "eslint-config-prettier",
       "sharp",
       "svelte-preprocess",
       "unrs-resolver"
