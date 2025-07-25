@@ -1,7 +1,7 @@
 ---
 title: About Me
 date: 2022-09-01
-author: ['Mike Connor']
+author: ['mike-connor']
 description: 'Morlochs and Eloi'
 cover: '../../assets/markdown-cartoon.png'
 alt: 'A photograph of a sunset behind a mountain range.'

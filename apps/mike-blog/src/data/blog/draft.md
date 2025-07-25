@@ -1,14 +1,14 @@
 ---
 title: Draft Post
 date: 2024-01-13
-author: ['Mike Connor', 'Bob Dobbs']
+author: ['mike-connor', 'bob-dobbs']
 description: 'A graphic representation of data abstracted from the banks of every computer in the coffin for Armitage’s call.'
 cover: '../../assets/markdown-cartoon.png'
 alt: 'A photograph of a sunset behind a mountain range.'
 tags: ['space', 'liver', 'xanadu']
 ---
 
-I can link internally to [my conclusion](#conclusion) on the same page when
+I can link internally to [my resolution](#resoltuion) on the same page when
 writing Markdown.
 
 ## Lorem tempor magna irure anim anim enim eu reprehenderit laboris proident magna

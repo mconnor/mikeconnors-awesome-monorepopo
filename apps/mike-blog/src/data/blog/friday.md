@@ -1,7 +1,7 @@
 ---
 title: It's Friday
 date: 2024-01-11
-author: ['Mike Connor']
+author: ['mike-connor']
 cover: '../../assets/markdown-cartoon.png'
 alt: 'lorem'
 description: The Future of Dynamic Web Content
