@@ -16,12 +16,12 @@ const { items } = Astro.props;
 
 <ul class="not-prose group timeline timeline-vertical md:timeline-horizontal">
   {
-    items.map(({ city, year }, index, array) => {
-      const first = index !== 0;
-      const last = array.length - 1;
+    items.map(({ city, year }, index, arr) => {
+      const last = arr.length - 1;
       return (
         <li>
-          {first && <hr />}
+          {/* <span>{index}</span> */}
+          {index !== 0 && <hr />}
 
           <div class="timeline-start">{year}</div>
           <div class="timeline-middle">
@@ -38,8 +38,9 @@ const { items } = Astro.props;
               />
             </svg>
           </div>
+
           <div class="timeline-end timeline-box">{city}</div>
-          {!last && <hr />}
+          {index !== last && <hr />}
         </li>
       );
     })
