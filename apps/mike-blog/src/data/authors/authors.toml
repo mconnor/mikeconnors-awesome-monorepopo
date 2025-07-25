@@ -3,6 +3,34 @@ name = "Mike Connor"
 email = "mike@mikeconnor.tech"
 bio = "Mike is a software developer and writer based in Kansas City."
 
+[[mike-connor.timeline]]
+year = 0
+city = "KCMO"
+
+[[mike-connor.timeline]]
+year = 1988
+city = "Chicago"
+
+[[mike-connor.timeline]]
+year = 1990
+city = "DC"
+
+[[mike-connor.timeline]]
+year = 1995
+city = "NYC"
+
+[[mike-connor.timeline]]
+year = 2012
+city = "Portland, OR"
+
+[[mike-connor.timeline]]
+year = 2014
+city = "New Orleans"
+
+[[mike-connor.timeline]]
+year = 2022
+city = "KCMO"
+
 [bob-dobbs]
 name = "Bob Dobbs"
 email = "bob@dobbs.com"

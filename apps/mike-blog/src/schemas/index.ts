@@ -1,5 +1,13 @@
 import { z } from 'astro:content';
 
+// Timeline entry: unique year + city
+const TimelineEntrySchema = z.object({
+  year: z.number(),
+  city: z.string(),
+});
+
+type tlType = z.infer<typeof TimelineEntrySchema>
+
 const AuthorSchema = z.object({
   name: z
     .string()
@@ -7,7 +15,10 @@ const AuthorSchema = z.object({
     .max(100, 'Name too long'),
   email: z.string().email(),
   bio: z.string().max(500, 'Bio must be ≤ 500 chars').optional(),
+  timeline: z.array(TimelineEntrySchema).optional()
 });
+
+// const AuthorSchema = z.record(_authorSchema)
 
 export type AuthorType = z.infer<typeof AuthorSchema>;
 

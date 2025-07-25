@@ -92,15 +92,8 @@ const navLinksArray = [
 
 export type NavLinkType = typeof navLinksArray;
 
-const timeCapsules = [
-  { city: 'KCMO', year: 0 },
-  { city: 'Chicago', year: 1988 },
-  { city: 'DC', year: 1990 },
-  { city: 'NYC', year: 1995 },
-  { city: 'Portland, OR', year: 2012 },
-  { city: 'New Orleans', year: 2014 },
-  { city: 'KCMO', year: 2022 },
-];
+
+
 
 const COUNTRY_URL = new URL(
   '/v3.1/region/africa/',
@@ -179,6 +172,6 @@ export {
   OUTBOUND_LINKS,
   navLinksArray,
   // imageSources,
-  timeCapsules,
+
   COUNTRY_URL,
 };

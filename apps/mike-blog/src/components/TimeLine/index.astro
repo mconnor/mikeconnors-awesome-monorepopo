@@ -8,15 +8,17 @@ const geoTimeNodeSchema = z.object({
 const timeLineSchema = z.array(geoTimeNodeSchema);
 
 interface Props {
-  items: z.infer<typeof timeLineSchema>;
+  timeline: {
+    year: number;
+    city: string;
+  }[];
 }
-
-const { items } = Astro.props;
+const { timeline } = Astro.props;
 ---
 
 <ul class="not-prose group timeline timeline-vertical md:timeline-horizontal">
   {
-    items.map(({ city, year }, index, arr) => {
+    timeline.map(({ city, year }, index, arr) => {
       const last = arr.length - 1;
       return (
         <li>

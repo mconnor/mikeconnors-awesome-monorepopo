@@ -1,7 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
-
+// import { timeCapsules } from '#app.config.ts';
+import TimeLine from '#components/TimeLine/index.astro';
 export async function getStaticPaths() {
   const authorsObj = await getCollection('authors');
   // const { data: authorsData } = authorsObj;
@@ -13,7 +14,7 @@ export async function getStaticPaths() {
 }
 
 const { data } = Astro.props;
-const { name, bio } = data;
+const { name, bio, timeline } = data;
 ---
 
 <Layout maxW="60ch">
@@ -21,6 +22,7 @@ const { name, bio } = data;
     <div class="card-body">
       <h2 class="card-title">{name}</h2>
       {bio && <p>{bio}</p>}
+      {timeline && <TimeLine timeline={timeline} />}
       <!-- <div class="card-actions justify-end">
         {
           links &&
