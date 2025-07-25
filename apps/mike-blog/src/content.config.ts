@@ -6,6 +6,9 @@ import {
   type SchemaContext,
 } from 'astro:content';
 
+import { countryLoader } from '#loaders/index.ts';
+import { countrySchema } from '#schemas/CountriesSchema.ts';
+
 import { dateLikeToDate } from '#schemas/Utils.ts';
 // import { LinkSetSchema } from '#schemas/Links.ts';
 import { AuthorSchema, AnnounceSchema, tagsSchema } from '#schemas/index.ts';
@@ -29,8 +32,13 @@ const zDescrip = z
 //     alt: z.string().optional(),
 //   });
 
+const countries = defineCollection({
+  loader: countryLoader({ region: 'Americas' }),
+  schema: countrySchema,
+});
+
 const authors = defineCollection({
-  loader: file('src/content/authors/authors.toml'),
+  loader: file('src/data/authors/authors.toml'),
   schema: AuthorSchema,
 });
 
@@ -38,7 +46,7 @@ const blog = defineCollection({
   // type: 'content',
   loader: glob({
     pattern: '**/*.{md,mdx}',
-    base: './src/content/blog',
+    base: './src/data/blog',
   }),
   schema: ({ image }: SchemaContext) =>
     z.object({
@@ -55,7 +63,7 @@ const blog = defineCollection({
 const announcements = defineCollection({
   loader: glob({
     pattern: '**/*.md',
-    base: 'src/content/announcements',
+    base: 'src/data/announcements',
   }),
   schema: AnnounceSchema,
 });
@@ -63,6 +71,6 @@ const announcements = defineCollection({
 export const collections = {
   blog,
   authors,
-
   announcements,
+  countries,
 };

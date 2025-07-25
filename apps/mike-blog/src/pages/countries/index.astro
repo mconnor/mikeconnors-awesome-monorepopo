@@ -1,0 +1,35 @@
+---
+// import { Debug } from 'astro:components';
+import { getCollection } from 'astro:content';
+import Layout from '#layouts/Layout.astro';
+const countries = await getCollection('countries');
+// console.log('+++++++countries');
+// console.log({ ...countries });
+// console.log('-----countries');
+// console.log('+++++++countries');
+
+// const { data: authorsData } = authorsObj;
+// authorsData.map((d) => console.log({ ...d }));
+// console.log('-----countries');
+---
+
+<Layout title="countires">
+  <!-- <Debug countries={countries} /> -->
+
+  <p>countries</p>
+  <ul>
+    {
+      countries.map(({ data }) => (
+        <li>{data.name.common}</li>
+        // <div class="flex items-center gap-2">
+
+        //   <a href={`/countries/${countries.id}`}>
+        //     <div class="flex">
+        //       <div>id: {country.id}----</div> <div>{country.data.name}</div>
+        //     </div>
+        //   </a>
+        // </div>
+      ))
+    }
+  </ul>
+</Layout>

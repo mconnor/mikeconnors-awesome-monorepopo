@@ -1,5 +1,4 @@
 ---
-import { Debug } from 'astro:components';
 import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
 
@@ -18,7 +17,6 @@ const { name, bio } = data;
 ---
 
 <Layout maxW="60ch">
-  <Debug data={data} />
   <div class="card card-side bg-base-100 shadow-sm card-lg">
     <div class="card-body">
       <h2 class="card-title">{name}</h2>

@@ -1,4 +1,4 @@
-import type iconPaths from '@repo/icon-paths/paths';
+// import type iconPaths from '@repo/icon-paths/paths';
 
 import MyAvatar from './assets/img-1_200x200.webp';
 
