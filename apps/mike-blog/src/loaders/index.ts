@@ -27,7 +27,7 @@ const countryLoader = ({ region }: CType): Loader => {
     // load:  getCountriesByRegion(region)
     load: async (loaderContext: LoaderContext) => {
       const url = new URL(
-        `/v3.1/region/${region}/`,
+        `/v3.1/region/${region}`,
         'https://restcountries.com/',
       );
 
@@ -43,8 +43,6 @@ const countryLoader = ({ region }: CType): Loader => {
           .catch((error) => {
             logger.error('Fetch failed: ' + error);
           });
-
-        //  const unknownObj = await getCountriesByRegion({region: reg})
 
         const result = jsonSchema.safeParse(unknownObj);
 

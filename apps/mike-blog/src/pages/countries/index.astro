@@ -3,20 +3,12 @@
 import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
 const countries = await getCollection('countries');
-// console.log('+++++++countries');
-// console.log({ ...countries });
-// console.log('-----countries');
-// console.log('+++++++countries');
-
-// const { data: authorsData } = authorsObj;
-// authorsData.map((d) => console.log({ ...d }));
-// console.log('-----countries');
 ---
 
 <Layout title="countires">
   <!-- <Debug countries={countries} /> -->
 
-  <p>countries</p>
+  <p>countries in</p>
   <ul>
     {
       countries.map(({ data }) => (

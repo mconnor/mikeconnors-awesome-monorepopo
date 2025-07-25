@@ -1,7 +1,7 @@
 ---
 title: star signals are cool
 date: 2024-01-02
-author: ['bob-dobbs', 'mike-connor]
+author: ['bob-dobbs', 'mike-connor']
 description: The Future
 cover: '../../assets/markdown-cartoon.png'
 alt: 'this is the alt text'

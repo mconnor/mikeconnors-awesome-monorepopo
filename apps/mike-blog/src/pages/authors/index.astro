@@ -2,26 +2,14 @@
 import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
 const authors = await getCollection('authors');
-// console.log('+++++++authors');
-// console.log({ ...authors });
-// console.log('-----authors');
-// console.log('+++++++authors');
-
-// const { data: authorsData } = authorsObj;
-// authorsData.map((d) => console.log({ ...d }));
-// console.log('-----authors');
 ---
 
 <Layout title="authors">
-  <p>authors</p>
+  <h2 class="card-title">Authors</h2>
   {
     authors.map((author) => (
       <div class="flex items-center gap-2">
-        <a href={`/authors/${author.id}`}>
-          <div class="flex">
-            <div>id: {author.id}----</div> <div>{author.data.name}</div>
-          </div>
-        </a>
+        <a href={`/authors/${author.id}`}>{author.data.name}</a>
       </div>
     ))
   }
