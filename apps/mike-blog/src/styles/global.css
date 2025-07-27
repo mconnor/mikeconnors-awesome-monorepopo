@@ -2,13 +2,11 @@
 @import 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css';
 @import './animations.css';
 
-
 @import '@repo/design-system/shared-styles.css';
 
 @import 'tailwindcss';
 
 @source not "../../src/public";
-
 
 @plugin 'daisyui' {
   themes: all;
