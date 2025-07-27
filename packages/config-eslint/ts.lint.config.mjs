@@ -67,6 +67,9 @@ export default tseslint.config(
         extraFileExtensions,
       },
     },
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'warn',
+    },
   },
 
   {
