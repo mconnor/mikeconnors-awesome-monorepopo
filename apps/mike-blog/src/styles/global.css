@@ -1,14 +1,19 @@
 @import 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css';
 @import 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css';
-@import 'tailwindcss';
-@source not "../src/public";
-@source '../../src';
-
-@source "./node_modules/@repo/astro-ui/**/*.astro";
-
-@import '@repo/design-system/shared-styles.css';
 @import './animations.css';
+
+
+
+
 @import '@repo/astro-ui/styles.css';
+@import '@repo/design-system/shared-styles.css';
+
+@import 'tailwindcss';
+
+@source not "../../src/public";
+
+
+
 
 @plugin 'daisyui' {
   themes: all;
