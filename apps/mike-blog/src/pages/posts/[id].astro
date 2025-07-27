@@ -1,7 +1,6 @@
 ---
 import { getCollection, render, getEntries } from 'astro:content';
 import MarkdownPostLayout from '#layouts/MarkdownPostLayout.astro';
-import { Debug } from 'astro:components';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -12,36 +11,28 @@ export async function getStaticPaths() {
   }));
 }
 
-const { id } = Astro.params;
+// const { id } = Astro.params;
 const { post } = Astro.props;
 
-// const authorData =
-//   post.data.author ?
-//     await getEntry(post.data.author.collection, post.data.author.id)
-//   : null;
-// console.log('______');
-// console.log('post.data' + post.data);
 const { data } = post;
 const authorsArray = await getEntries(data.author);
 
 const { Content } = await render(post);
 ---
 
-<!-- <Debug aut={post.data.author} /> -->
 <MarkdownPostLayout {...data}>
-  <!-- <Debug post.id={post.id} /> -->
-
   <Content />
-  <div slot="authors">
-    <div class="flex justify-around">
-      {
-        authorsArray &&
-          authorsArray.map((author) => (
+
+  <ul slot="authors" class="flex justify-around">
+    {
+      authorsArray &&
+        authorsArray.map((author) => (
+          <li>
             <a class="link" href={'/authors/' + author.id}>
               {author.data.name}
             </a>
-          ))
-      }
-    </div>
-  </div>
+          </li>
+        ))
+    }
+  </ul>
 </MarkdownPostLayout>

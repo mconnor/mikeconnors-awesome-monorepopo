@@ -41,6 +41,6 @@ Dolor sint velit cupidatat sunt proident ut ipsum do. Excepteur nostrud et eu in
 irure veniam. Incididunt sunt ut enim dolor esse tempor sint exercitation
 consequat ex est.
 
-![Astro](https://picsum.photos/800/300)
+<!-- ![Astro](https://picsum.photos/800/300) -->
 
 <!-- TODO - create mdx -->

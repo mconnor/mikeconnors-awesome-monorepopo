@@ -92,9 +92,6 @@ const navLinksArray = [
 
 export type NavLinkType = typeof navLinksArray;
 
-
-
-
 const COUNTRY_URL = new URL(
   '/v3.1/region/africa/',
   'https://restcountries.com/',
@@ -172,6 +169,5 @@ export {
   OUTBOUND_LINKS,
   navLinksArray,
   // imageSources,
-
   COUNTRY_URL,
 };

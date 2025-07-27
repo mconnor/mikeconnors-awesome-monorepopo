@@ -1,48 +1,38 @@
 ---
+import { getEntry } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
-// import Prose from '#components/Prose.astro';
+import Prose from '#components/Prose.astro';
 // import Frame from '@repo/layout-webcomponents/Frame';
-import Stack from '@repo/layout-webcomponents/Stack';
+
 // import Carousel from '@repo/astro-ui/Carousel';
 import { Image } from 'astro:assets';
 // import Mix from '@repo/astro-ui/Mix';
-// import Btns from '@repo/astro-ui/Btns';
-import { timeCapsules } from '#app.config.ts';
+
 import TimeLine from '#components/TimeLine/index.astro';
 import Bushes from '../assets/andyBushes.jpg';
 import Headline from '#components/Headline.astro';
+
+const me = await getEntry('authors', 'mike-connor');
 ---
 
 <Layout title="About">
-  <Stack space="var(--s1)">
-    <!-- <Btns /> -->
-    <!-- <Prose> -->
-    <!-- <Stack> -->
-    <!-- <div class="prose md:prose-lg md:prose-xl prose-img:rounded-xl">
-      <Frame ratio="1.6180:1">
-        <Image src={Andy} alt="Andy" class="float-right" />
-      </Frame>
-    </div> -->
+  <Headline headline="About" slot="headline" />
 
-    <Headline headline="About" />
-
-    <Image
-      src={Bushes}
-      alt="Andy"
-      layout="constrained"
-      class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
-    />
-
-    <p class="prose">
+  <Image
+    src={Bushes}
+    alt="Andy"
+    layout="constrained"
+    class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
+  />
+  <Prose>
+    <p>
       I'm a front-end developer currently based in my hometown of historic
       Westport, KCMO, right across from Bronze-Jim Bridger. And where my Irish
       great-great grand-father, John Connor, lived in 1857. Right on Westport Rd
       - KC's Bourbon Street.
     </p>
-
-    <TimeLine items={timeCapsules} />
-    <p class="prose">The best thing about KC.. no rats. But lots of rabbits.</p>
-  </Stack>
+  </Prose>
+  {me?.data?.timeline && <TimeLine timeline={me.data.timeline} />}
 </Layout>
 
 <style>

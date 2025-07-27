@@ -1,5 +1,4 @@
 ---
-import Tag from './Tag.astro';
 interface Props {
   tags: string[];
   tagCounts: Record<string, number>;
@@ -8,15 +7,23 @@ interface Props {
 const { tagCounts } = Astro.props;
 ---
 
-<div class="inline-flex flex-row flex-wrap gap-4">
+<ul class="inline-flex flex-row flex-wrap gap-4">
   {
     // If tagCounts is not defined, we can skip rendering tags
     !tagCounts && <p>No tags available</p>
   }
   {
     tagCounts &&
-      Object.entries(tagCounts).map(([tag, count]) => (
-        <Tag count={count} tag={tag} />
-      ))
+      Object.entries(tagCounts).map(([tag, count]) => {
+        const url = `/tags/${tag}`;
+        return (
+          <li>
+            <a href={url} class="badge badge-xl badge-info">
+              <i class="ph ph-tag" />
+              {tag}: {count}
+            </a>
+          </li>
+        );
+      })
   }
-</div>
+</ul>

@@ -1,0 +1,17 @@
+---
+// import type { ChildNavType } from '#schemas/NavSchema.ts';
+import type { NavItemType } from '#schemas/NavSchema.ts';
+
+// or extend with an `interface`
+interface Props {
+  nav: NavItemType;
+}
+
+const { nav } = Astro.props;
+---
+
+<li>
+  <a role="button" class="link" href={nav.url}>
+    {nav.label}
+  </a>
+</li>

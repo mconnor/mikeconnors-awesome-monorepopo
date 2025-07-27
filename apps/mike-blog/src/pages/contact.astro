@@ -1,7 +1,7 @@
 ---
 import Stack from '@repo/layout-webcomponents/Stack';
 import Box from '@repo/layout-webcomponents/Box';
-
+import TimeLine from '#components/TimeLine/index.astro';
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
 // Form submission handling
@@ -39,6 +39,19 @@ if (Astro.request.method === 'POST') {
 
 <Layout maxW="80ch" title="Contact">
   <Prose><h1>Contact</h1></Prose>
+  <TimeLine
+    timeline={[
+      { year: 1977, milestone: 'Star Wars: Episode IV – A New Hope' },
+      {
+        year: 1980,
+        milestone: 'Star Wars: Episode V – The Empire Strikes Back',
+      },
+      { year: 1983, milestone: 'Star Wars: Episode VI – Return of the Jedi' },
+      { year: 1999, milestone: 'Star Wars: Episode I – The Phantom Menace' },
+    ]}
+    class="timeline timeline-vertical"
+  />
+
   <Box padding="4rem">
     {
       success ?

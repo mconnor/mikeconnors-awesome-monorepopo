@@ -20,7 +20,7 @@ const bool3 = posts.length > 2;
 
 <Stack>
   <Headline headline={headline} />
-  <div
+  <ul
     class:list={[
       'grid grid-cols-1 gap-1',
       { 'md:grid-cols-2 md:gap-2': bool2 },
@@ -33,7 +33,7 @@ const bool3 = posts.length > 2;
 
         return (
           // <Debug id={id} />
-          <div class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
+          <li class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
             {cover && alt && (
               <figure>
                 <Image
@@ -58,17 +58,21 @@ const bool3 = posts.length > 2;
               <p class="line-clamp-1">{description}</p>
 
               <div class="card-actions justify-end">
-                {tags &&
-                  tags.map((tag) => (
-                    <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
-                      {tag}
-                    </a>
-                  ))}
+                <ul>
+                  {tags &&
+                    tags.map((tag) => (
+                      <li>
+                        <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
+                          {tag}
+                        </a>
+                      </li>
+                    ))}
+                </ul>
               </div>
             </div>
-          </div>
+          </li>
         );
       })
     }
-  </div>
+  </ul>
 </Stack>

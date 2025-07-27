@@ -8,9 +8,9 @@ interface Props {
 const { tag, count } = Astro.props;
 ---
 
-<div>
+<li>
   <a href=`/tags/${tag}` class="badge badge-xl badge-info">
     <i class="ph ph-tag"></i>
     {tag}: {count}
   </a>
-</div>
+</li>

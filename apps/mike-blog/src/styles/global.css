@@ -3,16 +3,11 @@
 @import './animations.css';
 
 
-
-
-@import '@repo/astro-ui/styles.css';
 @import '@repo/design-system/shared-styles.css';
 
 @import 'tailwindcss';
 
 @source not "../../src/public";
-
-
 
 
 @plugin 'daisyui' {

@@ -1,25 +1,23 @@
 ---
+// import { Debug } from 'astro:components';
+import { getCollection } from 'astro:content';
 import { daisyuiThemes } from '#utils/daisyui-themes.ts';
 import Hamburger from '#assets/svgs/Hamburger.svg';
 import DropDownDetails from './DropDownDetails.astro';
-
-import {
-  // allBaseLinksSx,
-  type NavLinkType,
-} from '#app.config.ts';
+import NavLink from './NavLink.astro';
 
 interface Props {
-  navLinks: NavLinkType;
-  tabindex?: number;
   title?: string;
+  tabindex?: number;
 }
-
-const { navLinks, tabindex = 0, title = 'MC' } = Astro.props;
-
+const collection = await getCollection('siteNav');
+const navLinks = collection[0].data;
+const { title = 'MC Tech', tabindex = 0 } = Astro.props;
 // const { data: parsedNavs, success, error } = allBaseLinksSx.safeParse(navLinks);
 // if (error) throw new Error(error.message);
 ---
 
+<!-- <Debug links={navLinks} /> -->
 <div class="navbar bg-base-100 shadow-sm">
   <div class="navbar-start">
     <div class="dropdown">
@@ -31,33 +29,20 @@ const { navLinks, tabindex = 0, title = 'MC' } = Astro.props;
         tabindex={tabindex}
         class="dropdown-content menu z-1 mt-3 w-52 menu-sm rounded-box bg-base-100 p-2 shadow"
       >
-        {
-          navLinks.map((link) => (
-            <li>
-              <a role="button" class="link" href={link.dirPath}>
-                {link.name}
-              </a>
-            </li>
-          ))
-        }
+        {navLinks.map((nav) => <NavLink nav={nav} />)}
       </ul>
     </div>
+
     <a href="/" class="btn btn-ghost btn-xl">
       {title}
     </a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul tabindex={tabindex} class="menu menu-horizontal px-1">
-      {
-        navLinks.map((link) => (
-          <li>
-            <a role="button" class="link" href={link.dirPath}>
-              {link.name}
-            </a>
-          </li>
-        ))
-      }
+      {navLinks.map((nav) => <NavLink nav={nav} />)}
     </ul>
   </div>
-  <div class="navbar-end"><DropDownDetails themes={daisyuiThemes} /></div>
+  <div class="navbar-end">
+    <DropDownDetails themes={daisyuiThemes} />
+  </div>
 </div>

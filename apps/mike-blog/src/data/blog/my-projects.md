@@ -12,7 +12,7 @@ tags: ['astro', 'blogging', 'learning-in-public']
 
 > Some notable things in a block quote!
 
-![Astro](https://picsum.photos/800/300)
+<!-- ![Astro](https://picsum.photos/800/300) -->
 
 Officia veniam dolor sit eu veniam eu tempor magna exercitation id minim non
 adipisicing commodo. Laboris nulla consequat veniam sint officia exercitation

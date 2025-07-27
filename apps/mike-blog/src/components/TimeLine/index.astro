@@ -1,24 +1,21 @@
 ---
-import { z } from 'astro/zod';
-
-const geoTimeNodeSchema = z.object({
-  city: z.string(),
-  year: z.number().int().gte(1964),
-});
-const timeLineSchema = z.array(geoTimeNodeSchema);
-
 interface Props {
   timeline: {
     year: number;
-    city: string;
+    milestone: string;
   }[];
+  class?: string;
 }
-const { timeline } = Astro.props;
+const {
+  timeline,
+  class:
+    className = 'not-prose timeline timeline-vertical lg:timeline-horizontal',
+} = Astro.props;
 ---
 
-<ul class="not-prose group timeline timeline-vertical md:timeline-horizontal">
+<ul class={className}>
   {
-    timeline.map(({ city, year }, index, arr) => {
+    timeline.map(({ milestone, year }, index, arr) => {
       const last = arr.length - 1;
       return (
         <li>
@@ -41,7 +38,7 @@ const { timeline } = Astro.props;
             </svg>
           </div>
 
-          <div class="timeline-end timeline-box">{city}</div>
+          <div class="timeline-end timeline-box">{milestone}</div>
           {index !== last && <hr />}
         </li>
       );

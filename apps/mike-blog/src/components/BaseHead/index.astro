@@ -42,14 +42,14 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-{
+<!-- {
   image && (
     <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
   )
-}
+} -->
 <ClientRouter />
 
-<script is:inline>
+<!-- <script is:inline>
   function applyTheme() {
     if (localStorage.getItem('theme') === null) {
       document.documentElement.setAttribute('data-theme', 'light');
@@ -67,5 +67,4 @@ const { title, description, image = FallbackImage } = Astro.props;
 <script>
   import { themeChange } from 'theme-change';
   themeChange();
-  // 👆 you could import the CDN directly instead of these two lines
-</script>
+</script> -->

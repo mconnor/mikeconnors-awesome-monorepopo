@@ -44,7 +44,6 @@
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
     "@astrojs/vercel": "catalog:",
-    "@repo/astro-ui": "workspace:*",
     "@repo/icon-paths": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@sentry/astro": "catalog:",

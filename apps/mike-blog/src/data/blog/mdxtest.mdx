@@ -1,7 +1,7 @@
 ---
 title: MDX
 date: 2024-11-30
-author: ["mike-connor"]
+author: ['mike-connor']
 description: The Future of Dynamic Web Content
 cover: '../../assets/markdown-cartoon.png'
 alt: 'this is the alt text'
@@ -11,28 +11,105 @@ relatedPosts:
   - my-projects # references `src/data/blog/my-year-in-review.md`
 ---
 
-import TimeLine from '#components/TimeLine/index.astro';
 
-<TimeLine
-  items={[
-    { 'Star Wars: Episode IV – A New Hope': 1977 },
-    { 'Star Wars: Episode V – The Empire Strikes Back': 1980 },
-    { 'Star Wars: Episode VI – Return of the Jedi': 1983 },
-    { 'Star Wars: Episode I – The Phantom Menace': 1999 },
-    {
-      /* { 'Star Wars: Episode II – Attack of the Clones': 2002 },
-    { 'Star Wars: Episode III – Revenge of the Sith': 2005 },
-    { 'Star Wars: The Clone Wars': 2008 },
-    { 'Star Wars: Episode VII – The Force Awakens': 2015 },
-    { 'Rogue One: A Star Wars Story': 2016 },
-    { 'Star Wars: Episode VIII – The Last Jedi': 2017 },
-    { 'Solo: A Star Wars Story': 2018 },
-    { 'Star Wars: Episode IX – The Rise of Skywalker': 2019 }, */
-    },
-  ]}
-/>
+ ## This asttro page is a test of MDX
 
-This asttro page is a test of MDX.
+<ul class="timeline timeline-vertical">
+  <li>
+    <div class="timeline-start timeline-box">First Macintosh computer</div>
+    <div class="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="text-primary h-5 w-5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <hr class="bg-primary" />
+  </li>
+  <li>
+    <hr class="bg-primary" />
+    <div class="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="text-primary h-5 w-5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div class="timeline-end timeline-box">iMac</div>
+    <hr class="bg-primary" />
+  </li>
+  <li>
+    <hr class="bg-primary" />
+    <div class="timeline-start timeline-box">iPod</div>
+    <div class="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="text-primary h-5 w-5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div class="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="h-5 w-5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <div class="timeline-end timeline-box">iPhone</div>
+    <hr />
+  </li>
+  <li>
+    <hr />
+    <div class="timeline-start timeline-box">Apple Watch</div>
+    <div class="timeline-middle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        class="h-5 w-5"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+  </li>
+</ul>
+
 
 ## mdx astro page
 
