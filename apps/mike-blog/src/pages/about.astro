@@ -8,7 +8,7 @@ import Prose from '#components/Prose.astro';
 import { Image } from 'astro:assets';
 import Mix from '@repo/astro-ui/Mix';
 import Avatars from '@repo/astro-ui/Avatars';
-import IntMix from '#components/IntMix/index.astro';
+// import IntMix from '#components/IntMix/index.astro';
 
 import TimeLine from '#components/TimeLine/index.astro';
 import Bushes from '../assets/andyBushes.jpg';
@@ -19,7 +19,7 @@ const me = await getEntry('authors', 'mike-connor');
 
 <Layout title="About">
   <Headline headline="About" slot="headline" />
-  <!-- <Mix /> -->
+  <Mix />
   <!-- <IntMix /> -->
   <Avatars />
 
