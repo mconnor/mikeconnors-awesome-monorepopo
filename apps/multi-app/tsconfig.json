@@ -1,6 +1,6 @@
 {
   "extends": [
-    "astro/tsconfigs/base",
+    "./node_modules/astro/tsconfigs/base.json",
     "@repo/typescript-config/include-exclude"
   ],
   "compilerOptions": {
