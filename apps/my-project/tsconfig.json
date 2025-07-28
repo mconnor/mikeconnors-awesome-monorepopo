@@ -1,8 +1,5 @@
 {
-  "extends": [
-    "astro/tsconfigs/strict",
-    "@repo/typescript-config/include-exclude.json"
-  ],
+  "extends": "@repo/typescript-config/astro-base.json",
   "compilerOptions": {
     "strictNullChecks": true
   }

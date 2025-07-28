@@ -1,0 +1,52 @@
+---
+// import type { ACTION_ERROR_CODES } from 'astro:actions';
+
+import Feature from './Feature.astro';
+
+type FeatureType = {
+  copy: string;
+  has: boolean;
+}[];
+
+interface Props {
+  dark?: boolean;
+  service: string;
+  descrip: string;
+  priceLevels: {
+    monthly: string;
+    yearly: string;
+    currency: '$' | '€' | '£' | '¥' | '₹' | '₩' | 'R$' | 'CHF' | 'kr';
+  };
+
+  level: 'value' | 'basic' | 'premium';
+  badgeBool: boolean;
+  features: FeatureType;
+}
+
+const { service, priceLevels, badgeBool, features } = Astro.props;
+---
+
+<div class="card w-96 bg-base-100 shadow-sm">
+  <div class="card-body">
+    {
+      badgeBool && (
+        <span class="badge badge-xs badge-warning">Most Popular</span>
+      )
+    }
+    <div class="flex justify-between">
+      <h2 class="line-clamp-1 text-2xl font-bold">{service}</h2>
+      <span class="text-xl">{priceLevels.monthly}{priceLevels.currency}</span>
+      <!-- <span class="text-xl">{priceLevels.yearly}{priceLevels.currency}</span> -->
+    </div>
+    <ul class="mt-6 flex flex-col gap-2 text-xs">
+      {
+        features.map(({ copy, has }) =>
+          has ? <Feature copy={copy} checked={has} /> : <Feature copy={copy} />,
+        )
+      }
+    </ul>
+    <div class="mt-6">
+      <button class="btn btn-block btn-primary">Subscribe</button>
+    </div>
+  </div>
+</div>

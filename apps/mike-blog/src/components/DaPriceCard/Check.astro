@@ -1,0 +1,25 @@
+---
+interface Props {
+  checked?: boolean;
+}
+
+const { checked } = Astro.props as Props;
+
+const className =
+  checked ?
+    'text-success me-2 inline-block size-4'
+  : 'text-error me-2 inline-block size-4';
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  class={className}
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  ><path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M5 13l4 4L19 7"></path></svg
+>
