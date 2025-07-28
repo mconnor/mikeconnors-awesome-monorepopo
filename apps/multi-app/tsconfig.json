@@ -4,7 +4,7 @@
     "@repo/typescript-config/include-exclude"
   ],
   "compilerOptions": {
-    "strict": true,
+    "strict": true
     // Needed for TypeScript intellisense in the template inside Vue files
     // "jsx": "preserve"
   },
