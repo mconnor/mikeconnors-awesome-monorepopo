@@ -1,15 +1,6 @@
-@import 'tailwindcss';
-
-@source "../**/*.astro";
-
-@source "./node_modules/@repo/astro-ui/**/*.astro";
-@source "./node_modules/@repo/preact/**/*.{ts,tsx}";
-@source "./node_modules/@repo/react/**/*.{ts,tsx}";
-
-@import '@repo/design-system/shared-styles.css';
-
 @import '@repo/react/styles.css';
 @import '@repo/preact/styles.css';
+@import '@repo/design-system/shared-styles.css';
 
 @plugin "daisyui" {
   themes:

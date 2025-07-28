@@ -1,6 +1,8 @@
 /* Astro UI Component Styles */
-@import 'tailwindcss';
+
 @import '@repo/design-system/shared-styles.css';
 
+
+
+@import 'tailwindcss' prefix(ui);
 @plugin "daisyui";
-/* Additional component-specific styles can be added here */

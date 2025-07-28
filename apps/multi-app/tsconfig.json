@@ -6,6 +6,7 @@
   "compilerOptions": {
     "strict": true,
     // Needed for TypeScript intellisense in the template inside Vue files
-    "jsx": "preserve"
-  }
+    // "jsx": "preserve"
+  },
+  "files": ["./.astro/types.d.ts"]
 }

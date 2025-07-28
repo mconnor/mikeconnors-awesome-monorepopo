@@ -2,10 +2,10 @@
 import Center from '@repo/layout-webcomponents/Center';
 import Cover from '@repo/layout-webcomponents/Cover';
 import type { RmUnitType } from '@repo/layout-webcomponents/Types';
-
+// import Nav from '#components/Nav.tsx';
 import Header from '#components/Header/index.astro';
 import BaseLayout from '#layouts/BaseLayout.astro';
-import ThemeToggle from '@repo/react/ThemeToggle';
+// import ThemeToggle from '@repo/react/ThemeToggle';
 interface Props {
   title?: string;
   centerWidth?: RmUnitType;
@@ -17,9 +17,10 @@ const { centerWidth = '60ch', title = 'mike connor' } = Astro.props;
 
 <BaseLayout title={title}>
   <Cover centeredElement="center-l" noPad>
-    <ThemeToggle />
-    <!-- <Header desc={title} /> -->
     <Header />
+    <!-- <ThemeToggle /> -->
+    <!-- <Header desc={title} /> -->
+    <!-- <Header /> -->
     <Center max={centerWidth}><slot /></Center>
   </Cover>
 </BaseLayout>
