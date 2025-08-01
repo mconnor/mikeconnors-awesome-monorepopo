@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
 // import { timeCapsules } from '#app.config.ts';
 import TimeLine from '#components/TimeLine/index.astro';
 export async function getStaticPaths() {
@@ -18,21 +20,31 @@ const { name, bio, timeline } = data;
 ---
 
 <Layout maxW="60ch">
-  <div class="card card-side bg-base-100 shadow-sm card-lg">
+  <div class="card card-side bg-base-100 shadow-sm">
+    <figure>
+      {
+        data.photo && (
+          <div class="w-36 rounded-full">
+            {data.photo ?
+              <Image
+                src={data.photo}
+                alt="athor photo"
+                width={200}
+                height={200}
+              />
+            : <div class="avatar avatar-placeholder text-3xl">
+                {data.name[0]}
+              </div>
+            }
+          </div>
+        )
+      }
+    </figure>
     <div class="card-body">
       <h2 class="card-title">{name}</h2>
-      {bio && <p>{bio}</p>}
-      {timeline && <TimeLine timeline={timeline} />}
-      <!-- <div class="card-actions justify-end">
-        {
-          links &&
-            links.map(({ platform, url }) => (
-              <a href={url} class="link">
-                {platform}
-              </a>
-            ))
-        }
-      </div> -->
+      <div class="card-actions">
+        {bio && <p>{bio}</p>}
+      </div>
     </div>
   </div>
 </Layout>

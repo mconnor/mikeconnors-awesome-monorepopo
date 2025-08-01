@@ -1,16 +1,53 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Frame from '@repo/layout-webcomponents/Frame';
+import AuthorCard from './AuthorCard.astro';
 import Layout from '#layouts/Layout.astro';
 const authors = await getCollection('authors');
+import Headline from '#components/Headline.astro';
 ---
 
 <Layout title="authors">
-  <h2 class="card-title">Authors</h2>
-  {
-    authors.map((author) => (
-      <div class="flex items-center gap-2">
-        <a href={`/authors/${author.id}`}>{author.data.name}</a>
-      </div>
-    ))
-  }
+  <Headline headline="Authors" />
+  <ul class="flex flex-wrap justify-center gap-2">
+    {
+      authors.map(({ id, data }) => (
+        <li class="relative">
+          <div class="card w-48 bg-base-100 shadow-sm">
+            <Frame ratio="1:1">
+              {data.photo ?
+                <Image
+                  class="rounded-md border-3"
+                  src={data.photo}
+                  alt="athor photo"
+                  width={200}
+                  height={200}
+                />
+              : <div class="avatar avatar-placeholder text-3xl">
+                  {data.name[0]}
+                </div>
+              }
+            </Frame>
+            <a
+              href={`/authors/${id}`}
+              class="absolute inset-0 z-10 rounded-2xl"
+              aria-label="Full card link"
+            />
+          </div>
+
+          <div class="card-body">
+            <h2 class="card-title">
+              {data.name}
+              <div class="badge badge-secondary">Fresh</div>
+            </h2>
+
+            {/* <a href={`/authors/${id}`} class="card-title">
+                {data.name}
+              </a> */}
+          </div>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>

@@ -1,0 +1,16 @@
+---
+const { data } = Astro.props;
+import { Image } from 'astro:assets';
+---
+
+<figure>
+  {
+    data.photo && (
+      <div class="w-36 rounded-full">
+        {data.photo ?
+          <Image src={data.photo} alt="athor photo" width={200} height={200} />
+        : <div class="avatar avatar-placeholder text-3xl">{data.name[0]}</div>}
+      </div>
+    )
+  }
+</figure>

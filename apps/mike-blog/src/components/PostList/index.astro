@@ -18,61 +18,59 @@ const bool2 = posts.length > 1;
 const bool3 = posts.length > 2;
 ---
 
-<Stack>
-  <Headline headline={headline} />
-  <ul
-    class:list={[
-      'grid grid-cols-1 gap-1',
-      { 'md:grid-cols-2 md:gap-2': bool2 },
-      { 'lg:grid-cols-3 lg:gap-4': bool3 },
-    ]}
-  >
-    {
-      posts.map(({ id, data }, index) => {
-        const { cover, alt, title, description, tags, date } = data;
+<!-- <Stack> -->
+<Headline headline={headline} />
+<ul
+  class:list={[
+    'grid grid-cols-1 gap-1',
+    { 'md:grid-cols-2 md:gap-2': bool2 },
+    { 'lg:grid-cols-3 lg:gap-4': bool3 },
+  ]}
+>
+  {
+    posts.map(({ id, data }, index) => {
+      const { cover, alt, title, description, tags, date } = data;
 
-        return (
-          // <Debug id={id} />
-          <li class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
-            {cover && alt && (
-              <figure>
-                <Image
-                  src={cover}
-                  alt={alt}
-                  width={360}
-                  height={180}
-                  class:list={[{ 'w-full': index === 0 }, 'rounded-xl']}
-                />
-              </figure>
-            )}
-            <a
-              href={`/posts/${id}`}
-              class="absolute inset-0 z-10 rounded-2xl"
-              aria-label="Full card link"
-            />
+      return (
+        // <Debug id={id} />
+        <li class="card max-h-100 max-w-full bg-base-100 shadow-sm card-sm md:max-w-96 md:card-md lg:card-lg">
+          {cover && alt && (
+            <figure>
+              <Image
+                src={cover}
+                alt={alt}
+                width={360}
+                height={180}
+                class:list={[{ 'w-full': index === 0 }, 'rounded-xl']}
+              />
+            </figure>
+          )}
+          <a
+            href={`/posts/${id}`}
+            class="absolute inset-0 z-10 rounded-2xl"
+            aria-label="Full card link"
+          />
 
-            <div class="card-body">
-              {date && <div class="text-sm">{format(date, 'yyyy-MM-dd')}</div>}
-              <h2 class="card-title line-clamp-1">{title}</h2>
+          <div class="card-body">
+            {date && <div class="text-sm">{format(date, 'yyyy-MM-dd')}</div>}
+            <h2 class="card-title line-clamp-1">{title}</h2>
 
-              <p class="line-clamp-1">{description}</p>
+            <p class="line-clamp-1">{description}</p>
 
-              <div class="card-actions justify-end">
-                <ul>
-                  {tags &&
-                    tags.map((tag) => (
-                      <li>
-                        <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
-                          {tag}
-                        </a>
-                      </li>
-                    ))}
-                </ul>
-              </div>
-            </div>
-          </li>
-        );
-      })
-    }
-  </ul>
-</Stack>
+            <ul class="card-actions justify-end">
+              {tags &&
+                tags.map((tag) => (
+                  <li>
+                    <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
+                      {tag}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </div>
+        </li>
+      );
+    })
+  }
+</ul>
+<!-- </Stack> -->

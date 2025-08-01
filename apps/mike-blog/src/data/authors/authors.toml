@@ -2,7 +2,7 @@
 name = "Mike Connor"
 email = "mike@mikeconnor.tech"
 bio = "Mike is a software developer and writer based in Kansas City."
-photo = "TIYBE5463.jpeg"
+photo = "src/assets/TIYBE5463.jpeg"
 timeline = [
   { year = 0, milestone = "KCMO" },
   { year = 1988, milestone = "Chicago" },
@@ -17,4 +17,4 @@ timeline = [
 name = "Bob Dobbs"
 email = "bob@dobbs.com"
 bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-photo ="templeMike.jpeg"
+photo ="src/assets/templeMike.jpeg"
