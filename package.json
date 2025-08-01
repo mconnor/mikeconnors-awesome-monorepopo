@@ -28,8 +28,9 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
-    "@prettier/plugin-oxc": "catalog:",
     "prettier": "catalog:",
+    "@prettier/plugin-oxc": "catalog:",
+    "prettier-plugin-svelte": "catalog:svelte5",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-tailwindcss": "catalog:",
     "prettier-plugin-toml": "catalog:",
@@ -39,7 +40,7 @@
      "node": "22.x",
      "pnpm": "^10.13.1"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",

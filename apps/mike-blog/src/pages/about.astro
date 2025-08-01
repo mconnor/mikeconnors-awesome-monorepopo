@@ -2,11 +2,13 @@
 import { getEntry } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
-// import Frame from '@repo/layout-webcomponents/Frame';
+import Stack from '@repo/layout-webcomponents/Stack';
 
 // import Carousel from '@repo/astro-ui/Carousel';
 import { Image } from 'astro:assets';
-// import Mix from '@repo/astro-ui/Mix';
+import Mix from '@repo/astro-ui/Mix';
+import Avatars from '@repo/astro-ui/Avatars';
+// import IntMix from '#components/IntMix/index.astro';
 
 import TimeLine from '#components/TimeLine/index.astro';
 import Bushes from '../assets/andyBushes.jpg';
@@ -16,23 +18,28 @@ const me = await getEntry('authors', 'mike-connor');
 ---
 
 <Layout title="About">
-  <Headline headline="About" slot="headline" />
+  <Stack>
+    <Headline headline="About" />
+    <Mix />
+    <!-- <IntMix /> -->
+    <Avatars />
 
-  <Image
-    src={Bushes}
-    alt="Andy"
-    layout="constrained"
-    class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
-  />
-  <Prose>
-    <p>
-      I'm a front-end developer currently based in my hometown of historic
-      Westport, KCMO, right across from Bronze-Jim Bridger. And where my Irish
-      great-great grand-father, John Connor, lived in 1857. Right on Westport Rd
-      - KC's Bourbon Street.
-    </p>
-  </Prose>
-  {me?.data?.timeline && <TimeLine timeline={me.data.timeline} />}
+    <Image
+      src={Bushes}
+      alt="Andy"
+      layout="constrained"
+      class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
+    />
+    <Prose>
+      <p>
+        I'm a front-end developer currently based in my hometown of historic
+        Westport, KCMO, right across from Bronze-Jim Bridger. And where my Irish
+        great-great grand-father, John Connor, lived in 1857. Right on Westport
+        Rd - KC's Bourbon Street.
+      </p>
+    </Prose>
+    {me?.data?.timeline && <TimeLine timeline={me.data.timeline} />}
+  </Stack>
 </Layout>
 
 <style>

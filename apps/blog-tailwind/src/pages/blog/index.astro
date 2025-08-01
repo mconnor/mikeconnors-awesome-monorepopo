@@ -24,6 +24,7 @@ const posts = publishsedPosts.sort((a, b) => {
     <pre>{JSON.stringify(posts[0], null, 2)}</pre>
   </details>
   <section> -->
+  <h2>blog</h2>
   <ul class="flex flex-wrap gap-2 md:gap-8">
     {
       posts.map(({ id, data }, index) => {
@@ -31,13 +32,13 @@ const posts = publishsedPosts.sort((a, b) => {
         return (
           <li class="group w-[50%-1rem] py-[calc(--spacing(4)-1px)] first:mb-0 first:w-full first:text-center md:first:mb-4">
             <a href={`/blog/${id}/`} class="block">
-              <Image
+              {/* <Image
                 src={data.cover.src}
                 alt={data.cover.alt}
                 width={360}
                 height={180}
                 class:list={[{ 'w-full': index === 0 }, 'rounded-xl']}
-              />
+              /> */}
               <h4 class:list={[{ 'text-4xl': index === 0 }]}>{data.title}</h4>
               <p class="date">
                 <FormattedDate date={data.date} />

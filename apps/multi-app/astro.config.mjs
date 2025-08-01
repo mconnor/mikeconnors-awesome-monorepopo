@@ -25,15 +25,16 @@ export default defineConfig({
   integrations: [
     preact({
       compat: true,
+      include: ['**/preact/*'],
     }),
     // solid({
     //   include: ['@repo/solid/**', '**/node_modules/@suid/material/**'],
     // }),
-    react(),
+    react({
+      include: ['**/react/*'],
+    }),
     svelte(),
     vue(),
   ],
-
-  output: 'server',
   adapter: vercel(),
 });

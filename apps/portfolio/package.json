@@ -24,7 +24,6 @@
     "astro-icon": "catalog:"
   },
   "devDependencies": {
-    "@prettier/plugin-oxc": "catalog:",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@types/node": "catalog:",

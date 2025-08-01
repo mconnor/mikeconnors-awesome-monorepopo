@@ -1,5 +1,3 @@
-
-
 // import { z ,type SchemaContext } from 'astro/zod';
 
 // export const BlogSchema = ({ image }: SchemaContext) =>

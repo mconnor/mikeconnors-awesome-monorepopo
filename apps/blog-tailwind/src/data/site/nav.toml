@@ -1,0 +1,38 @@
+# navigation.toml
+
+# Main navigation items, in order
+[[navigation]]
+id = "home"
+label = "Home"
+url = "/"
+icon = "home"
+
+[[navigation]]
+id = "posts"
+label = "Posts"
+url = "/posts"
+icon = "book"
+
+[[navigation]]
+id = "about"
+label = "About"
+url = "/about"
+icon = "user"
+
+[[navigation]]
+id = "authors"
+label = "Authors"
+url = "/authors"
+icon = "pen"
+
+[[navigation]]
+id = "countries"
+label = "Countries"
+url = "/countries"
+icon = "map"
+
+[[navigation]]
+id = "tags"
+label = "Tags"
+url = "/tags"
+icon = "tag"

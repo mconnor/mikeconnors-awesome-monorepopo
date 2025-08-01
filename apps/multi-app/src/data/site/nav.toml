@@ -1,0 +1,38 @@
+# navigation.toml
+
+# Main navigation items, in order
+[[navigation]]
+id = "home"
+label = "Home"
+url = "/"
+icon = "home"
+
+[[navigation]]
+id = "filter"
+label = "Filter"
+url = "/filter-demo"
+icon = "filter"
+
+[[navigation]]
+id = "popOver"
+label = "PopOver"
+url = "/popOver"
+icon = "user"
+
+[[navigation]]
+id = "authors"
+label = "Authors"
+url = "/authors"
+icon = "pen"
+
+[[navigation]]
+id = "countries"
+label = "Countries"
+url = "/countries"
+icon = "map"
+
+[[navigation]]
+id = "tags"
+label = "Tags"
+url = "/tags"
+icon = "tag"

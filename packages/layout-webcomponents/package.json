@@ -7,10 +7,9 @@
     "#*": "./src/*"
   },
   "exports": {
-    "./Types": {
-      "types": "./src/types/index.ts"
-    },
+    "./Types": "./src/types/index.ts",
     "./*": {
+      "types": "./src/*/index.astro.tsx",
       "import": "./src/*/index.astro"
     }
   },

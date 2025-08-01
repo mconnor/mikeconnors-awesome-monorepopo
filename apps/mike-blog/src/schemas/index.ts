@@ -15,6 +15,7 @@ const AuthorSchema = z.object({
     .max(100, 'Name too long'),
   email: z.string().email(),
   bio: z.string().max(500, 'Bio must be ≤ 500 chars').optional(),
+  photo: z.string(),
   timeline: z.array(TimelineEntrySchema).optional(),
 });
 

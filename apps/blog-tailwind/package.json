@@ -11,7 +11,7 @@
     "astro-check": "astro check",
     "build": "astro build",
     "build:debug": "npm run diagnose && astro build",
-    "diagnose": "node -v && ls -la src/content && cat src/content/authors.toml",
+    "diagnose": "node -v && ls -la src/data && cat src/data/authors.toml",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier . --write",

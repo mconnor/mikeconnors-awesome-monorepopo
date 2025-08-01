@@ -44,6 +44,7 @@
     "@astrojs/mdx": "catalog:",
     "@astrojs/rss": "catalog:",
     "@astrojs/vercel": "catalog:",
+    "@repo/astro-ui": "workspace:*",
     "@repo/icon-paths": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@sentry/astro": "catalog:",
@@ -64,7 +65,6 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",
-    "@prettier/plugin-oxc": "catalog:",
     "@repo/design-system": "workspace:*",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",

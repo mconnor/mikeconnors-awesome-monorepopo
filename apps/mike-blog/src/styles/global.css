@@ -2,15 +2,25 @@
 @import 'https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css';
 @import './animations.css';
 
+@import '@repo/astro-ui/styles.css';
+
 @import '@repo/design-system/shared-styles.css';
+/* @import 'tailwindcss' source('../../src'); */
 
-@import 'tailwindcss';
+@source "../node_modules/@repo/astro-ui";
 
-@source not "../../src/public";
+@plugin "daisyui";
 
-@plugin 'daisyui' {
-  themes: all;
-  root: '#blog-app';
+@plugin "daisyui/theme" {
+  name: 'light';
+  default: true;
+  --color-primary: blue;
+  --color-secondary: teal;
+}
+
+@plugin "daisyui/theme" {
+  name: 'dark';
+  default: true;
 }
 
 @plugin "@tailwindcss/typography";

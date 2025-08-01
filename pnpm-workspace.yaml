@@ -14,30 +14,30 @@ packages:
 catalog:
   '@astrojs/check': ^0.9.4
   '@astrojs/markdoc': ^0.15.1
-  '@astrojs/mdx': ^4.3.1
+  '@astrojs/mdx': ^4.3.2
   '@astrojs/node': ^9.3.0
   '@astrojs/preact': ^4.1.0
   '@astrojs/react': ^4.3.0
   '@astrojs/rss': ^4.0.12
-  '@astrojs/sitemap': ^3.4.1
+  '@astrojs/sitemap': ^3.4.2
   '@astrojs/solid-js': ^5.1.0
-  '@astrojs/starlight': ^0.35.1
+  '@astrojs/starlight': ^0.35.2
   '@astrojs/starlight-markdoc': ^0.5.0
-  '@astrojs/vercel': ^8.2.3
+  '@astrojs/vercel': ^8.2.4
   '@astrojs/vue': ^5.1.0
   '@custom-elements-manifest/analyzer': 0.10.4
   '@eslint/compat': ^1.3.1
   '@eslint/eslintrc': ^3.3.1
-  '@eslint/js': ^9.31.2
+  '@eslint/js': ^9.32.0
   '@eslint/json': ^0.13.1
   '@eslint/markdown': ^7.1.0
-  '@headlessui/react': ^2.2.6
+  '@headlessui/react': ^2.2.7
   '@headlessui/vue': ^1.7.23
   '@heroicons/react': ^2.2.0
   '@heroicons/vue': ^2.2.0
   '@iarna/toml': ^2.2.5
   '@iconify-json/mdi': ^1.2.3
-  '@next/eslint-plugin-next': ^15.4.3
+  '@next/eslint-plugin-next': ^15.4.4
   '@open-wc/testing': ^4.0.0
   '@playform/compress': ^0.2.0
   '@preact/preset-vite': ^2.10.2
@@ -53,16 +53,16 @@ catalog:
   '@tailwindcss/typography': ^0.5.16
   '@tailwindcss/vite': ^4.1.11
   '@types/canvas-confetti': ^1.9.0
-  '@types/node': ^22.16.5
-  '@types/react': ^19.1.8
-  '@types/react-dom': ^19.1.6
+  '@types/node': ^22.17.0
+  '@types/react': ^19.1.9
+  '@types/react-dom': ^19.1.7
   '@typescript-eslint/parser': ^8.38.0
-  '@vitejs/plugin-react': ^4.6.0
-  '@vitejs/plugin-vue': ^6.0.0
+  '@vitejs/plugin-react': ^4.7.0
+  '@vitejs/plugin-vue': ^6.0.1
   '@vitest/browser': ^3.2.4
   '@webcomponents/template-shadowroot': ^0.2.1
   add: ^2.0.6
-  astro: 5.12.3
+  astro: 5.12.7
   astro-embed: ^0.9.0
   astro-eslint-parser: ^1.2.2
   astro-icon: ^1.1.5
@@ -71,7 +71,7 @@ catalog:
   canvas-confetti: ^1.9.3
   clsx: ^2.1.1
   cssnano: ^7.0.7
-  daisyui: ^5.0.47
+  daisyui: ^5.0.50
   date-fns: ^4.1.0
   dotenv: ^17.2.1
   eslint: ^9.32.0
@@ -86,7 +86,7 @@ catalog:
   eslint-plugin-simple-import-sort: ^12.1.1
   eslint-plugin-solid: ^0.14.5
   eslint-plugin-turbo: ^2.5.5
-  eslint-plugin-vue: ^10.3.0
+  eslint-plugin-vue: ^10.4.0
   eslint-plugin-wc: ^3.0.1
   globals: ^16.3.0
   jest: ^30.0.5
@@ -102,14 +102,14 @@ catalog:
   postcss-jit-props: ^1.0.16
   postcss-nesting: ^13.0.2
   postcss-pow: ^1.0.1
-  preact: ^10.26.9
+  preact: ^10.27.0
   prettier: ^3.6.2
   prettier-plugin-astro: ^0.14.1
   prettier-plugin-tailwindcss: ^0.6.14
   prettier-plugin-toml: ^2.0.6
   prettier-plugin-vue: ^1.1.6
-  react: ^19.1.0
-  react-dom: ^19.1.0
+  react: ^19.1.1
+  react-dom: ^19.1.1
   rollup-plugin-visualizer: ^6.0.3
   sharp: ^0.34.3
   solid-js: ^1.9.7
@@ -117,7 +117,7 @@ catalog:
   tailwindcss: 4.1.11
   theme-change: ^2.5.0
   tsup: ^8.5.0
-  typescript: ^5.8.3
+  typescript: ^5.9.2
   typescript-eslint: ^8.38.0
   vite: ^6.3.5
   vitest: ^3.2.4
@@ -139,7 +139,7 @@ catalogs:
     '@testing-library/svelte': ^5.2.8
     eslint-plugin-svelte: ^3.11.0
     prettier-plugin-svelte: ^3.4.0
-    svelte: ^5.36.16
+    svelte: ^5.37.1
     svelte-check: ^4.3.0
     svelte-eslint-parser: ^1.3.0
     svelte-preprocess: ^6.0.3

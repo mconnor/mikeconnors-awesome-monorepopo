@@ -1,11 +1,12 @@
 {
   "extends": [
-    "astro/tsconfigs/base",
+    "./node_modules/astro/tsconfigs/base.json",
     "@repo/typescript-config/include-exclude"
   ],
   "compilerOptions": {
-    "strict": true,
+    "strict": true
     // Needed for TypeScript intellisense in the template inside Vue files
-    "jsx": "preserve"
-  }
+    // "jsx": "preserve"
+  },
+  "files": ["./.astro/types.d.ts"]
 }
