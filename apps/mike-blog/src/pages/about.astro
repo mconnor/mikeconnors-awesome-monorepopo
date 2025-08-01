@@ -7,7 +7,7 @@ import Stack from '@repo/layout-webcomponents/Stack';
 // import Carousel from '@repo/astro-ui/Carousel';
 import { Image } from 'astro:assets';
 import Mix from '@repo/astro-ui/Mix';
-import Avatars from '@repo/astro-ui/Avatars';
+
 // import IntMix from '#components/IntMix/index.astro';
 
 import TimeLine from '#components/TimeLine/index.astro';
@@ -18,28 +18,26 @@ const me = await getEntry('authors', 'mike-connor');
 ---
 
 <Layout title="About">
-  <Stack>
-    <Headline headline="About" />
-    <Mix />
-    <!-- <IntMix /> -->
-    <Avatars />
+  <Headline headline="About" />
+  <Mix />
 
-    <Image
-      src={Bushes}
-      alt="Andy"
-      layout="constrained"
-      class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
-    />
-    <Prose>
-      <p>
-        I'm a front-end developer currently based in my hometown of historic
-        Westport, KCMO, right across from Bronze-Jim Bridger. And where my Irish
-        great-great grand-father, John Connor, lived in 1857. Right on Westport
-        Rd - KC's Bourbon Street.
-      </p>
-    </Prose>
-    {me?.data?.timeline && <TimeLine timeline={me.data.timeline} />}
-  </Stack>
+  <!-- <Avatars /> -->
+
+  <Image
+    src={Bushes}
+    alt="Andy"
+    layout="constrained"
+    class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
+  />
+  <Prose>
+    <p>
+      I'm a front-end developer currently based in my hometown of historic
+      Westport, KCMO, right across from Bronze-Jim Bridger. And where my Irish
+      great-great grand-father, John Connor, lived in 1857. Right on Westport Rd
+      - KC's Bourbon Street.
+    </p>
+  </Prose>
+  {me?.data?.timeline && <TimeLine timeline={me.data.timeline} />}
 </Layout>
 
 <style>
