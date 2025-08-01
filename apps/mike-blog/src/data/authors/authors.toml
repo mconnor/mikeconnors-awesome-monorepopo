@@ -17,4 +17,4 @@ timeline = [
 name = "Bob Dobbs"
 email = "bob@dobbs.com"
 bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-photo ="src/assets/templeMike.jpeg"
+photo = "src/assets/templeMike.jpeg"

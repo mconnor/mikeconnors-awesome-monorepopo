@@ -8,8 +8,6 @@ const TimelineEntrySchema = z.object({
 
 // type tlType = z.infer<typeof TimelineEntrySchema>;
 
-
-
 const AuthorSchema = z.object({
   name: z
     .string()
