@@ -9,18 +9,12 @@
 
 @source "../node_modules/@repo/astro-ui";
 
-@plugin "daisyui";
 
-@plugin "daisyui/theme" {
-  name: 'light';
-  default: true;
-  --color-primary: blue;
-  --color-secondary: teal;
+
+@plugin "daisyui" {
+  themes: all;
 }
 
-@plugin "daisyui/theme" {
-  name: 'dark';
-  default: true;
-}
+
 
 @plugin "@tailwindcss/typography";
