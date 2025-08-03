@@ -25,11 +25,11 @@ label = "Authors"
 url = "/authors"
 icon = "pen"
 
-[[navigation]]
-id = "countries"
-label = "Countries"
-url = "/countries"
-icon = "map"
+# [[navigation]]
+# id = "countries"
+# label = "Countries"
+# url = "/countries"
+# icon = "map"
 
 [[navigation]]
 id = "tags"

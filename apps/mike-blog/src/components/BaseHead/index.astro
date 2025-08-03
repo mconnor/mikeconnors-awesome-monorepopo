@@ -20,7 +20,6 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
-<meta name="robots" content="noindex, nofollow" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
@@ -47,6 +46,19 @@ const { title, description, image = FallbackImage } = Astro.props;
     <meta property="twitter:image" content={new URL(image.src, Astro.url)} />
   )
 } -->
+
+<!-- <link
+  rel="stylesheet"
+  href="https://early.webawesome.com/webawesome@3.0.0-beta.3/dist/styles/webawesome.css"
+/> -->
+
+<link
+  rel="stylesheet"
+  href="https://early.webawesome.com/webawesome@3.0.0-beta.3/dist/styles/themes/default.css"
+/>
+<script src="https://kit.fontawesome.com/fe2049e447.js" crossorigin="anonymous"
+></script>
+
 <ClientRouter />
 
 <script is:inline>

@@ -81,16 +81,16 @@ export interface NavLinkI {
 }
 // const navLinks: TmenuLink[] = [
 
-const navLinksArray = [
-  { name: 'About', dirPath: '/about', icon: 'projects' },
-  { name: 'authors', dirPath: '/authors', icon: 'projects' },
-  { name: 'Posts', dirPath: '/posts', icon: 'blog' },
-  { name: 'Tags', dirPath: '/tags', icon: 'projects' },
-  { name: 'CV', dirPath: '/resume', icon: 'projects' },
-  { name: 'Announce', dirPath: './announcements', icon: 'projects' },
-];
+// const navLinksArray = [
+//   { name: 'About', dirPath: '/about', icon: 'projects' },
+//   { name: 'authors', dirPath: '/authors', icon: 'projects' },
+//   { name: 'Posts', dirPath: '/posts', icon: 'blog' },
+//   { name: 'Tags', dirPath: '/tags', icon: 'projects' },
+//   { name: 'CV', dirPath: '/resume', icon: 'projects' },
+//   { name: 'Announce', dirPath: './announcements', icon: 'projects' },
+// ];
 
-export type NavLinkType = typeof navLinksArray;
+// export type NavLinkType = typeof navLinksArray;
 
 const COUNTRY_URL = new URL(
   '/v3.1/region/africa/',
