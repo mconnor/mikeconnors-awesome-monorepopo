@@ -1,4 +1,5 @@
 ---
+import Icon from '#components/Icon.astro';
 interface Props {
   tags: string[];
   tagCounts: Record<string, number>;
@@ -19,7 +20,7 @@ const { tagCounts } = Astro.props;
         return (
           <li>
             <a href={url} class="badge badge-xl badge-info">
-              <i class="ph ph-tag" />
+              <Icon name="tag" />
               {tag}: {count}
             </a>
           </li>

@@ -18,8 +18,6 @@ export type PlatformType = z.infer<typeof PlatformsSchema>;
 export const PlatformLinkSchema = z.object({
   platform: PlatformsSchema,
   url: z.string().url(),
-  logo: z.string(),
-  path: z.string(),
 });
 export type PlatformLinkType = z.infer<typeof PlatformLinkSchema>;
 

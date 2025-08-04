@@ -9,12 +9,8 @@
 
 @source "../node_modules/@repo/astro-ui";
 
-
-
 @plugin "daisyui" {
   themes: all;
 }
-
-
 
 @plugin "@tailwindcss/typography";

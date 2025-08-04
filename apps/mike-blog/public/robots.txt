@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# This robots.txt file prevents all search engines from indexing any pages on this site
-# The meta tag "noindex, nofollow" in BaseHead component provides additional protection
+Sitemap: https://mikeconnor.tech/sitemap-index.xml

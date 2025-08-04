@@ -1,20 +1,15 @@
 ---
 type Props = Record<string, never>;
 import { Image } from 'astro:assets';
-import EasterEgg from '@repo/astro-ui/EasterEgg';
-import Icon from '@repo/astro-ui/Icon';
+// import EasterEgg from '@repo/astro-ui/EasterEgg';
+import Icon from '#components/Icon.astro';
 import type { PlatformLinkType } from '#schemas/platforms.ts';
 import { OUTBOUND_LINKS } from '#app.config.ts';
 import Andy from '#assets/IMG_1278.png';
 
-const CLIPS = ['/audio/drink.mp3', '/audio why.mp3'];
+// const CLIPS = ['/audio/drink.mp3', '/audio why.mp3'];
 ---
 
-<script type="module">
-  import 'https://early.webawesome.com/webawesome@3.0.0-beta.3/dist/components/icon/icon.js';
-
-  // <wa-button> is ready to use!
-</script>
 <footer
   class="footer items-center bg-neutral p-10 text-neutral-content sm:footer-horizontal"
 >
@@ -36,9 +31,9 @@ const CLIPS = ['/audio/drink.mp3', '/audio why.mp3'];
     class="grid-flow-col gap-4 text-3xl md:place-self-center md:justify-self-end"
   >
     {
-      OUTBOUND_LINKS.map(({ platform, url, path, logo }: PlatformLinkType) => (
+      OUTBOUND_LINKS.map(({ platform, url }: PlatformLinkType) => (
         <a href={url} class="">
-          <wa-icon name={platform} family="brands" />
+          <Icon name={platform} family="brands" />
         </a>
       ))
     }

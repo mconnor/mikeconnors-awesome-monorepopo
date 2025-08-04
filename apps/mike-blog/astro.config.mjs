@@ -1,16 +1,19 @@
 import vercel from '@astrojs/vercel';
 import icon from 'astro-icon';
-
+import sitemap from '@astrojs/sitemap';
 import { defineConfig, envField } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwindcss from '@tailwindcss/vite';
 
-import { loadEnv } from 'vite';
-const { DOMAIN } = loadEnv(process.env.NODE_ENV, process.cwd(), '');
+// import { loadEnv } from 'vite';
+// const { DOMAIN } = loadEnv(process.env.NODE_ENV, process.cwd(), '');
 
 export default defineConfig({
+  redirects: {
+    '/': '/posts/live',
+  },
   outDir: 'dist',
-  site: `https://${DOMAIN}/`,
+  site: `https://mikeconnor.tech/`,
   image: {
     // if you prefer to handle responsive image styling yourself,
     // or need to override these defaults when using Tailwind 4,
@@ -99,7 +102,7 @@ export default defineConfig({
     },
   },
 
-  integrations: [icon(), mdx()],
+  integrations: [icon(), mdx(), sitemap()],
   // It is no longer necessary to specify output: 'hybrid' in your Astro config to use server-rendered pages. The new output: 'static' has this capability included.
   // output: 'static',
   adapter: vercel({

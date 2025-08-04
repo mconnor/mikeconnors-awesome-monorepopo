@@ -1,0 +1,14 @@
+---
+interface Props {
+  name: string;
+  family?: string;
+}
+
+const props = Astro.props;
+---
+
+<wa-icon {...props}></wa-icon>
+
+<script>
+  import '@awesome.me/webawesome/dist/components/icon/icon.js';
+</script>
