@@ -1,23 +1,30 @@
 ---
 interface Props {
+  id: string;
   cta?: string;
   headline?: string;
   children: unknown;
+  closeText?: string;
 }
 
-const { cta = 'open modal', headline = 'headline' } = Astro.props;
+const {
+  id,
+  cta = 'open modal',
+  headline = 'headline',
+  closeText = 'close',
+} = Astro.props;
 ---
 
 <!-- daiseyui Open the modal using ID.showModal() method -->
 <button class="btn" onclick="my_modal_1.showModal()">{cta}</button>
-<dialog id="my_modal_1" class="modal">
+<dialog id={id} class="modal">
   <div class="modal-box">
     <h3 class="text-lg font-bold">{headline}</h3>
-    <p class="py-4"><slot /></p>
+    <p class="py-4"><slot name="body" /></p>
     <div class="modal-action">
       <form method="dialog">
         <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
+        <button class="btn">{closeText}</button>
       </form>
     </div>
   </div>

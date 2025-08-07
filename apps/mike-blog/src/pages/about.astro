@@ -5,7 +5,7 @@ import Prose from '#components/Prose.astro';
 
 // import Carousel from '@repo/astro-ui/Carousel';
 import { Image } from 'astro:assets';
-import Mix from '@repo/astro-ui/Mix';
+// import Mix from '@repo/astro-ui/Mix';
 
 // import IntMix from '#components/IntMix/index.astro';
 
@@ -18,7 +18,7 @@ const me = await getEntry('authors', 'mike-connor');
 
 <Layout title="About">
   <Headline headline="About" />
-  <Mix />
+  <!-- <Mix /> -->
 
   <!-- <Avatars /> -->
 
@@ -26,7 +26,7 @@ const me = await getEntry('authors', 'mike-connor');
     src={Bushes}
     alt="Andy"
     layout="constrained"
-    class="hue-cycle aspect-3/2 object-none py-0 portrait:aspect-square"
+    class="hue-cycle aspect-3/2 rounded-xl object-none py-0 portrait:aspect-square"
   />
   <Prose>
     <p>
