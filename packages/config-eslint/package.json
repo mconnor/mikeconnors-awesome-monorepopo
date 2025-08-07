@@ -14,10 +14,6 @@
       "types": "./index.d.ts",
       "default": "./turbo.lint.config.mjs"
     },
-    "./next-lint": {
-      "types": "./index.d.ts",
-      "default": "./next.mjs"
-    },
     "./ignores": {
       "types": "./index.d.ts",
       "default": "./ignores.config.mjs"
@@ -54,10 +50,6 @@
       "types": "./index.d.ts",
       "default": "./svelte5.lint.config.mjs"
     },
-    "./solid": {
-      "types": "./index.d.ts",
-      "default": "./sold.lint.config.mjs"
-    },
     "./next-config": {
       "types": "./index.d.ts",
       "default": "./next.mjs"
@@ -80,7 +72,6 @@
     "@eslint/js": "catalog:",
     "@eslint/json": "catalog:",
     "@eslint/markdown": "catalog:",
-    "@next/eslint-plugin-next": "catalog:",
     "@typescript-eslint/parser": "catalog:",
     "astro-eslint-parser": "catalog:",
     "eslint": "catalog:",
@@ -93,7 +84,6 @@
     "eslint-plugin-react-hooks": "catalog:",
     "eslint-plugin-regexp": "catalog:",
     "eslint-plugin-simple-import-sort": "catalog:",
-    "eslint-plugin-solid": "catalog:",
     "eslint-plugin-turbo": "catalog:",
     "eslint-plugin-vue": "catalog:",
     "eslint-plugin-wc": "catalog:",
