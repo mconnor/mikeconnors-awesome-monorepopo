@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-
+@import './modular.css'
 /*
 When you import tailwindcss into your project, Preflight is automatically injected into the base layer:
 
@@ -9,20 +9,7 @@ When you import tailwindcss into your project, Preflight is automatically inject
 @import "tailwindcss/utilities.css" layer(utilities); */
 
 @theme {
-  --ratio: 1.618;
-  --font-size-base: 1rem;
-  --s0: var(--font-size-base);
-  --s000: calc(var(--s0) * pow(var(--ratio), -3));
-  --s00: calc(var(--s0) * pow(var(--ratio), -2));
-  --s1: calc(var(--s0) * pow(var(--ratio), 1));
-  --s2: calc(var(--s0) * pow(var(--ratio), 2));
 
-  --s3: calc(var(--s0) * pow(var(--ratio), 3));
-  --s4: calc(var(--s0) * pow(var(--ratio), 4));
-  --s5: calc(var(--s0) * pow(var(--ratio), 5));
-  --s6: calc(var(--s0) * pow(var(--ratio), 6));
-  --s7: calc(var(--s0) * pow(var(--ratio), 7));
-  --s8: calc(var(--s0) * pow(var(--ratio), 8));
 
   --measure: 60ch;
   --border-thin: 1px;
@@ -31,40 +18,3 @@ When you import tailwindcss into your project, Preflight is automatically inject
     --color-dark: var(--color-primary-900); */
 }
 
-@utility battery {
-  --n: 6; /* the number of bar */
-  --g: 5px; /* the gap  */
-
-  width: 200px; /* control the size */
-  color: #2a363b;
-  aspect-ratio: 2;
-  border: var(--g) solid;
-  padding: var(--g);
-  border-radius: 10px;
-  background: repeating-linear-gradient(
-      90deg,
-      currentColor 0 calc(100% / var(--n) - var(--g)),
-      #0000 0 calc(100% / var(--n))
-    )
-    0 0 / calc(100% + var(--g)) content-box;
-  position: relative;
-  box-sizing: border-box;
-  &:hover {
-    background: blue;
-  }
-
-  &:focus {
-    outline: 2px solid blue;
-  }
-
-  &::after {
-    content: '→';
-    margin-left: 0.5rem;
-  }
-  &:before {
-    content: '';
-    position: absolute;
-    inset: 30% -20px 30% 100%;
-    background: currentColor;
-  }
-}
