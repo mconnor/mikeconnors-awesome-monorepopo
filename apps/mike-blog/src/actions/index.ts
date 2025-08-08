@@ -40,13 +40,13 @@ export const server = {
       // Otherwise, like the post
     },
   }),
-  getAuthors: defineAction({
-    input: z.object({ authorID: z.string() }),
-    handler: async () => {
-      await Promise.resolve(); // Add await to fix lint error
-      return ['Sarah', 'Chris', 'Yan', 'Elian'];
-    },
-  }),
+  // getAuthors: defineAction({
+  //   input: z.object({ authorID: z.string() }),
+  //   handler: async () => {
+  //     await Promise.resolve(); // Add await to fix lint error
+  //     return ['Sarah', 'Chris', 'Yan', 'Elian'];
+  //   },
+  // }),
 
   // mailto: defineAction({
   //   input: z.object({ user: z.string(), domain: z.string() }),
