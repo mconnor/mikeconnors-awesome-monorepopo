@@ -1,8 +1,8 @@
 {
   "editor.formatOnSave": false,
-  "editor.rulers": [160],
-  "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 160,
+  "editor.rulers": [80],
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 80,
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
@@ -126,7 +126,12 @@
     "react": true,
     "preact": true,
     "svelte": true,
-    "vue": true
+    "vue": true,    "javascript": true,
+    "typescript": true,
+    "typescriptreact": true,
+    "json": true,
+    "jsonc": true,
+    "yaml": true
   },
 
   // Support for Node.js subpath imports with # prefix
@@ -145,7 +150,6 @@
 
   // Framework-specific settings
   "svelte.enable-ts-plugin": true,
-  "css.customData": [".vscode/tailwind.json"],
 
   // Search Configuration - Files to exclude from searches
   "search.exclude": {
