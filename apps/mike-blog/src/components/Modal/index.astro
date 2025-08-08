@@ -1,0 +1,53 @@
+---
+interface Props {
+  id?: string;
+  cta?: string;
+  headline?: string;
+  children: unknown;
+  closeText?: string;
+  class?: string;
+  btnClass?: string;
+}
+
+const {
+  id = 'my_modal_1',
+  cta = 'open modal',
+  headline = 'headline',
+  closeText = 'close',
+  btnClass = 'btn btn-accent',
+} = Astro.props;
+
+const clickFunc = id + '.showModal()';
+
+// const btnVarients = {
+//   ghost: 'btn btn-ghost',
+//   link: 'btn btn-link',
+//   active: 'btn btn-active',
+//   accent: 'btn btn-accent',
+// };
+
+//   <button class="btn btn-active">Default</button>
+// <button class="btn btn-active btn-primary">Primary</button>
+// <button class="btn btn-active btn-secondary">Secondary</button>
+// <button class="btn btn-active btn-accent">Accent</button>
+// <button class="btn btn-active btn-info">Info</button>
+// <button class="btn btn-active btn-success">Success</button>
+// <button class="btn btn-active btn-warning">Warning</button>
+// <button class="btn btn-active btn-error">Error</button>
+---
+
+<!-- daiseyui Open the modal using ID.showModal() method --><!-- <div data-theme="dark"> -->
+<button class={btnClass} onclick={clickFunc}>{cta}</button>
+<dialog id={id} class="modal" data-theme="dark">
+  <div class="modal-box">
+    <h3 class="text-lg font-bold">{headline}</h3>
+    <p class="py-4"><slot name="body" /></p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">{closeText}</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+<!-- </div> -->

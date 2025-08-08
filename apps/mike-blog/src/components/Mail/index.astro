@@ -1,0 +1,73 @@
+---
+const key = import.meta.env.ACCESS_KEY;
+---
+
+<fieldset
+  class="fieldset w-xs rounded-box border border-base-300 bg-base-200 p-4"
+>
+  <legend class="fieldset-legend">Contact</legend>
+  <form method="POST" id="form">
+    <input type="hidden" name="access_key" value={key} />
+
+    <label class="label">Name</label>
+
+    <input type="text" name="name" class="input" required />
+
+    <!-- <label for="name" class="mb-1 block text-sm font-medium"> Name </label> -->
+    <label class="label">email</label>
+    <input type="email" name="email" class="validator input" required />
+    <label class="label">your message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="5"
+      class="textarea h-24"
+      required></textarea>
+
+    <button type="submit" class="btn mt-4 btn-neutral">Submit Form</button>
+
+    <div id="result"></div>
+  </form>
+</fieldset>
+<script is:inline>
+  const form = document.getElementById('form');
+  const result = document.getElementById('result');
+
+  form.addEventListener('submit', function (e) {
+    const formData = new FormData(form);
+    e.preventDefault();
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = 'Please wait...';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.innerHTML = json.message;
+        } else {
+          console.log(response);
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = 'Something went wrong!';
+      })
+      .then(function () {
+        form.reset();
+        setTimeout(() => {
+          result.style.display = 'none';
+        }, 3000);
+      });
+  });
+</script>

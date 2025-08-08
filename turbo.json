@@ -6,13 +6,14 @@
     "PRODUCTION",
     "DEV",
     "USER_NAME",
+    "ACCESS_KEY",
     "DOMAIN",
     "PROD",
     "import.meta.env.PROD",
     "import.meta.env.DEV",
     "ENABLE_EXPERIMENTAL_COREPACK"
   ],
-  "globalPassThroughEnv": ["AWS_SECRET_KEY", "GITHUB_TOKEN"],
+  "globalPassThroughEnv": ["AWS_SECRET_KEY", "GITHUB_TOKEN","PLAYWRIGHT_*"],
   "envMode": "strict",
   "tasks": {
     "build": {
@@ -26,6 +27,9 @@
 				"!mod.js",
 				"!mod.js.map"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+        "e2e": {
+      "dependsOn": ["^build"]
     },
     "transit": {
       "dependsOn": ["^transit"]

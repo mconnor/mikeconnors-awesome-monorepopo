@@ -7,6 +7,9 @@ import type { PlatformLinkType } from '#schemas/platforms.ts';
 import { OUTBOUND_LINKS } from '#app.config.ts';
 import Andy from '#assets/IMG_1278.png';
 
+import Modal from '#components/Modal/index.astro';
+import Mail from '#components/Mail/index.astro';
+
 // const CLIPS = ['/audio/drink.mp3', '/audio why.mp3'];
 ---
 
@@ -22,9 +25,14 @@ import Andy from '#assets/IMG_1278.png';
     <!-- <EasterEgg clips={CLIPS}>
       <wa-icon name="egg" class="text-3xl"></wa-icon></EasterEgg
     > -->
-    <p class="pro">
+
+    <Modal id="showModal" cta="Contact Me" btnClass="btn btn-link btn-lg">
+      <Mail slot="body" />
+    </Modal>
+
+    <!-- <p>
       Copyright © {new Date().getFullYear()} - All right reserved
-    </p>
+    </p> -->
   </aside>
 
   <nav
