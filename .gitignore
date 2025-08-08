@@ -38,3 +38,4 @@ yarn-error.log*
 /.vscode/custom.css
 /apps/whole-wavelength
 /packages/park
+/packages/ui-components/astro-wc/src/OldContact
