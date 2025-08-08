@@ -7,7 +7,7 @@
   },
   "scripts": {
     "updateAstro": "dlx @astrojs/upgrade",
-    "dev": "astro dev",
+    "dev": "astro dev --port 4323",
     "astro-check": "astro check",
     "build": "astro build --devOutput",
     "preview": "astro preview",
