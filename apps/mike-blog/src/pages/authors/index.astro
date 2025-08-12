@@ -1,11 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
+import Headline from '#components/Headline.astro';
 import { Image } from 'astro:assets';
 import Frame from '@repo/layout-webcomponents/Frame';
 // import AuthorCard from './AuthorCard.astro';
 import Layout from '#layouts/Layout.astro';
+
 const authors = await getCollection('authors');
-import Headline from '#components/Headline.astro';
 ---
 
 <Layout title="authors">

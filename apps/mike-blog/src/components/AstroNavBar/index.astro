@@ -1,18 +1,21 @@
 ---
 // import { Debug } from 'astro:components';
-import { getCollection } from 'astro:content';
+// import { getCollection } from 'astro:content';
 import { daisyuiThemes } from '#utils/daisyui-themes.ts';
 import Hamburger from '#assets/svgs/Hamburger.svg';
 import DropDownDetails from './DropDownDetails.astro';
 import NavLink from './NavLink.astro';
+import { type NavType, NavigationSchema } from '#schemas/NavSchema.ts';
 
 interface Props {
   title?: string;
   tabindex?: number;
+  navLinks: NavType[];
 }
-const collection = await getCollection('siteNav');
-const navLinks = collection[0].data;
-const { title = 'MC Tech', tabindex = 0 } = Astro.props;
+
+// const navLinks = NavigationSchema.parse(_navLinks);
+
+const { title = 'MC Tech', tabindex = 0, navLinks } = Astro.props;
 // const { data: parsedNavs, success, error } = allBaseLinksSx.safeParse(navLinks);
 // if (error) throw new Error(error.message);
 ---

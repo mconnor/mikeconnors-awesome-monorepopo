@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import Center from '@repo/layout-webcomponents/Center';
 
 import Cover from '@repo/layout-webcomponents/Cover';
@@ -20,12 +21,15 @@ const {
   title = Astro.url.pathname.slice(1),
   ...rest
 } = Astro.props;
+
+const navData = await getCollection('siteNav');
+const navLinks = navData[0]?.data || [];
 ---
 
 <BaseLayout title={title} {...rest}>
   <Cover space="2rem" centeredElement="center-l" noPad minHeight="100dvh">
     <header>
-      <NavBar />
+      <NavBar navLinks={navLinks} />
     </header>
 
     <Center max={maxW} gutters="1rem">

@@ -8,7 +8,7 @@ import {
 
 import { countryLoader } from '#loaders/index.ts';
 import { countrySchema } from '#schemas/CountriesSchema.ts';
-import { NavItemSchema } from '#schemas/NavSchema.ts';
+import { NavigationSchema } from '#schemas/NavSchema.ts';
 import { dateLikeToDate } from '#schemas/Utils.ts';
 // import { LinkSetSchema } from '#schemas/Links.ts';
 import { AuthorSchema, AnnounceSchema, tagsSchema } from '#schemas/index.ts';
@@ -70,7 +70,7 @@ const announcements = defineCollection({
 
 const siteNav = defineCollection({
   loader: file('src/data/site/nav.toml'),
-  schema: z.array(NavItemSchema),
+  schema: NavigationSchema,
 });
 
 export const collections = {

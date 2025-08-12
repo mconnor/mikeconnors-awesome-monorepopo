@@ -1,44 +1,53 @@
-# navigation.toml
 
-# Main navigation items, in order
-[[navigation]]
-id = "home"
+[[nav]]
 label = "Home"
 url = "/"
-icon = "home"
 
-[[navigation]]
-id = "posts"
+
+[[nav]]
 label = "Posts"
 url = "/posts"
-icon = "book"
 
-# [[navigation]]
-# id = "contact"
-# label = "Contact"
-# url = "/contact"
-# icon = "envelope"
 
-[[navigation]]
-id = "about"
+  [[nav.children]]
+  label = "Tech"
+  url = "/posts/tech"
+
+  [[nav.children]]
+  label = "Travel"
+  url = "/posts/travel"
+
+
+
+[[nav]]
+label = "CV"
+url = "/resume"
+
+
+
+[[nav]]
 label = "About"
 url = "/about"
-icon = "user"
 
-[[navigation]]
-id = "authors"
+
+[[nav]]
 label = "Authors"
 url = "/authors"
-icon = "pen"
 
-# [[navigation]]
+
+# [[nav]]
 # id = "countries"
 # label = "Countries"
 # url = "/countries"
 # icon = "map"
 
-[[navigation]]
-id = "tags"
+[[nav]]
 label = "Tags"
 url = "/tags"
-icon = "tag"
+
+
+[[nav]]
+label = "External"
+url = "https://example.com"
+target = "_blank"
+rel = "noopener noreferrer"

@@ -1,29 +1,26 @@
 import { z } from 'astro/zod';
 
-// Schema for a sub-navigation item
-const SubNavItemSchema = z.object({
-  parent_id: z.string(), // should equal its parent nav’s id
-  id: z.string(), // unique within its parent
-  label: z.string(),
-  url: z.string(),
-  icon: z.string().optional(),
+// Base navigation item schema without children first
+const BaseNavigationItemSchema = z.object({
+  label: z.string().min(1, 'Label is required'),
+  url: z.string().min(1, 'URL is required'),
+  target: z.enum(['_self', '_blank', '_parent', '_top']).optional(),
+  rel: z.string().optional(), // for external links (noopener, noreferrer, etc.)
+  description: z.string().optional(), // for accessibility/tooltips
 });
 
-// Schema for a main navigation item
-export const NavItemSchema = z.object({
-  id: z.string(), // e.g. "services"
-  label: z.string(), // e.g. "Services"
-  url: z.string(), // e.g. "/services"
-  icon: z.string().optional(), // e.g. "settings"
-  subnavigation: z.array(SubNavItemSchema).optional(),
+// Define the recursive type
+type NavigationItem = z.infer<typeof BaseNavigationItemSchema> & {
+  children?: NavigationItem[];
+};
+
+// Create the recursive schema
+export const NavigationItemSchema: z.ZodType<NavigationItem> = BaseNavigationItemSchema.extend({
+  children: z.lazy(() => NavigationItemSchema.array()).optional().default([]),
 });
 
-// Top-level schema for the whole navigation.toml
-const NavigationSchema = z.object({
-  navigation: z.array(NavItemSchema).nonempty(), // at least one nav item
-});
+// Schema for the entire TOML structure
+export const NavigationSchema = z.array(NavigationItemSchema);
 
-export type NavItemType = z.infer<typeof NavItemSchema>;
-export type NavType = z.infer<typeof NavigationSchema>;
-
-export type ChildNavType = z.infer<typeof SubNavItemSchema>;
+export type NavType = z.infer<typeof NavigationItemSchema>;
+export type NavItemType = NavType; // Alias for compatibility
