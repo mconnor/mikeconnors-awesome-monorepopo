@@ -1,38 +1,62 @@
-
 [[nav]]
 label = "Home"
 url = "/"
-
-
-[[nav]]
-label = "Posts"
-url = "/posts"
-
-
-  [[nav.children]]
-  label = "Tech"
-  url = "/posts/tech"
-
-  [[nav.children]]
-  label = "Travel"
-  url = "/posts/travel"
-
-
-
-[[nav]]
-label = "CV"
-url = "/resume"
-
-
 
 [[nav]]
 label = "About"
 url = "/about"
 
-
 [[nav]]
+label = "Blog"
+url = "/posts"
+
+[[nav.children]]
+label = "Posts"
+url = "/posts"
+
+[[nav.children]]
 label = "Authors"
 url = "/authors"
+
+
+[[nav.children]]
+label = "Tags"
+url = "/tags"
+
+# [[nav.children]]
+# label = "Tech"
+# url = "/posts/tech"
+
+# [[nav.children]]
+# label = "Travel"
+# url = "/posts/travel"
+
+[[nav]]
+label = "CV"
+url = "/resume"
+
+# [[nav]]
+# label = "outbound"
+# url = "/"
+
+# [[nav.children]]
+# label = "x"
+# url = "https://www.x.com/mikeconnor504"
+# target = '_blank'
+# rel= 'external'
+
+# [[nav.children]]
+# label = "linkedin"
+# url = "https://www.linkedin.com/in/michaelgconnor/"
+# target = '_blank'
+# rel= 'external'
+
+# [[nav.children]]
+# label = "discord"
+# url = "https://discord.com/users/mike4989"
+# target = '_blank'
+# rel= 'external'
+
 
 
 # [[nav]]
@@ -41,13 +65,9 @@ url = "/authors"
 # url = "/countries"
 # icon = "map"
 
-[[nav]]
-label = "Tags"
-url = "/tags"
 
-
-[[nav]]
-label = "External"
-url = "https://example.com"
-target = "_blank"
-rel = "noopener noreferrer"
+# [[nav]]
+# label = "External"
+# url = "https://example.com"
+# target = "_blank"
+# rel = "noopener noreferrer"
