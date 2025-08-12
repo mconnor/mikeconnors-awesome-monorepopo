@@ -65,7 +65,6 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
-    "@custom-elements-manifest/analyzer": "catalog:",
     "@eslint/compat": "catalog:",
     "@eslint/css": "^0.10.0",
     "@eslint/eslintrc": "catalog:",
