@@ -16,18 +16,13 @@ import Headline from '#components/Headline.astro';
         <li class="relative">
           <div class="card w-48 bg-base-100 shadow-sm">
             <Frame ratio="1:1">
-              {data.photo ?
-                <Image
-                  class="rounded-md border-3"
-                  src={data.photo}
-                  alt="athor photo"
-                  width={200}
-                  height={200}
-                />
-              : <div class="avatar avatar-placeholder text-3xl">
-                  {data.name[0]}
-                </div>
-              }
+              <Image
+                class="rounded-md border-3"
+                src={data.photo}
+                alt="athor photo"
+                width={200}
+                height={200}
+              />
             </Frame>
             <a
               href={`/authors/${id}`}
@@ -41,10 +36,6 @@ import Headline from '#components/Headline.astro';
               {data.name}
               <div class="badge badge-secondary">Fresh</div>
             </h2>
-
-            {/* <a href={`/authors/${id}`} class="card-title">
-                {data.name}
-              </a> */}
           </div>
         </li>
       ))

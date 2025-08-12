@@ -22,23 +22,9 @@ const { name, bio } = data;
 <Layout maxW="60ch">
   <div class="card card-side bg-base-100 shadow-sm">
     <figure>
-      {
-        data.photo && (
-          <div class="w-36 rounded-full">
-            {data.photo ?
-              <Image
-                src={data.photo}
-                alt="athor photo"
-                width={200}
-                height={200}
-              />
-            : <div class="avatar avatar-placeholder text-3xl">
-                {data.name[0]}
-              </div>
-            }
-          </div>
-        )
-      }
+      <div class="w-36 rounded-full">
+        <Image src={data.photo} alt="athor photo" width={200} height={200} />
+      </div>
     </figure>
     <div class="card-body">
       <h2 class="card-title">{name}</h2>

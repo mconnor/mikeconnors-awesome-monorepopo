@@ -25,14 +25,13 @@ const { Content } = await render(post);
 
   <ul slot="authors" class="flex justify-around">
     {
-      authorsArray &&
-        authorsArray.map((author) => (
-          <li>
-            <a class="link" href={'/authors/' + author.id}>
-              {author.data.name}
-            </a>
-          </li>
-        ))
+      authorsArray.map((author) => (
+        <li>
+          <a class="link" href={'/authors/' + author.id}>
+            {author.data.name}
+          </a>
+        </li>
+      ))
     }
   </ul>
 </MarkdownPostLayout>
