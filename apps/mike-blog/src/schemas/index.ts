@@ -29,7 +29,6 @@ const AnnounceSchema = z.object({
   title: z.string().min(5, 'Title is required'),
 });
 
-
 const nonEmptyStrings = z.string().array().nonempty({
   message: "Can't be empty!",
 });

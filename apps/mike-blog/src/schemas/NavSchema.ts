@@ -15,9 +15,13 @@ type NavigationItem = z.infer<typeof BaseNavigationItemSchema> & {
 };
 
 // Create the recursive schema
-export const NavigationItemSchema: z.ZodType<NavigationItem> = BaseNavigationItemSchema.extend({
-  children: z.lazy(() => NavigationItemSchema.array()).optional().default([]),
-});
+export const NavigationItemSchema: z.ZodType<NavigationItem> =
+  BaseNavigationItemSchema.extend({
+    children: z
+      .lazy(() => NavigationItemSchema.array())
+      .optional()
+      .default([]),
+  });
 
 // Schema for the entire TOML structure
 export const NavigationSchema = z.array(NavigationItemSchema);

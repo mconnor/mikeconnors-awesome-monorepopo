@@ -11,22 +11,24 @@ const hasChildren = nav.children && nav.children.length > 0;
 
 {
   hasChildren ?
-    <li class="dropdown-hover dropdown">
-      <div tabindex="0" role="button" class="link">
-        {nav.label}
+    <li class="">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="link">
+          {nav.label}
+        </div>
+        <ul
+          tabindex="0"
+          class="dropdown-content menu z-1 w-52 rounded-box bg-base-100 p-2 shadow-sm"
+        >
+          {nav.children?.map((child) => (
+            <li>
+              <a href={child.url} target={child.target} rel={child.rel}>
+                {child.label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul
-        tabindex="0"
-        class="dropdown-content menu z-[1] w-52 rounded-box bg-base-100 p-2 shadow"
-      >
-        {nav.children?.map((child) => (
-          <li>
-            <a href={child.url} target={child.target} rel={child.rel}>
-              {child.label}
-            </a>
-          </li>
-        ))}
-      </ul>
     </li>
   : <li>
       <a href={nav.url} target={nav.target} rel={nav.rel} class="link">
