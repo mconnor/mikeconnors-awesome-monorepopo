@@ -1,0 +1,21 @@
+[[card]]
+label = "Dev Tools"
+[[card.bullet]]
+label = "Astro"
+[[card.bullet]]
+label = "Tailwind"
+
+[[card]]
+label = "Monorepos"
+
+[[card.bp]]
+label = "linting & custom libs"
+
+[[card.bp]]
+label = "reusable ui - react, web-components"
+
+[[card.bp]]
+label = "Design System"
+
+[[card.bp]]
+label = "Design System"

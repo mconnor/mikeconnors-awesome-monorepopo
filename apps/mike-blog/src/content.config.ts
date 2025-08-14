@@ -73,6 +73,11 @@ const siteNav = defineCollection({
   schema: NavigationSchema,
 });
 
+// const myOutboundLinks = defineCollection({
+//   loader: file('src/data/site/nav.toml'),
+//   schema: NavigationSchema,
+// });
+
 export const collections = {
   blog,
   authors,

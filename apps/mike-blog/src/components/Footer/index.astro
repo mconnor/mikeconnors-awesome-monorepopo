@@ -1,49 +1,60 @@
 ---
-type Props = Record<string, never>;
 import { Image } from 'astro:assets';
 // import EasterEgg from '@repo/astro-ui/EasterEgg';
 import Icon from '#components/Icon.astro';
-import type { PlatformLinkType } from '#schemas/platforms.ts';
-import { OUTBOUND_LINKS } from '#app.config.ts';
-import Andy from '#assets/IMG_1278.png';
+
+import { type NavType } from '#schemas/NavSchema.ts';
+import Andy from '#assets/headshot.jpg';
 
 import Modal from '#components/Modal/index.astro';
-import Mail from '#components/Mail/index.astro';
+import MailForm from '#components/Mail/index.astro';
 
+interface Props {
+  navLinks: NavType[];
+}
+const { navLinks } = Astro.props;
 // const CLIPS = ['/audio/drink.mp3', '/audio why.mp3'];
 ---
 
-<footer
-  class="footer items-center bg-neutral p-10 text-neutral-content sm:footer-horizontal"
->
+<footer class="footer items-center bg-base-200 p-10 sm:footer-horizontal">
   <aside class="grid-flow-col items-center">
-    <div class="avatar">
-      <div class="w-24 rounded-full">
-        <Image src={Andy} alt="Andy" decoding="async" loading="lazy" />
-      </div>
+    <div class="avatar w-24">
+      <!-- <div class="w-24 rounded-full"> -->
+      <Image
+        src={Andy}
+        class="rounded-full"
+        alt="Andy"
+        decoding="async"
+        loading="lazy"
+      />
     </div>
+
+    <Modal id="showModal" cta="Contact Me" btnClass="btn btn-link-content">
+      <Fragment slot="body"><MailForm /> </Fragment>
+    </Modal>
+
     <!-- <EasterEgg clips={CLIPS}>
       <wa-icon name="egg" class="text-3xl"></wa-icon></EasterEgg
     > -->
-
-    <Modal id="showModal" cta="Contact Me" btnClass="btn btn-link btn-lg">
-      <Mail slot="body" />
-    </Modal>
 
     <!-- <p>
       Copyright © {new Date().getFullYear()} - All right reserved
     </p> -->
   </aside>
 
-  <nav
-    class="grid-flow-col gap-4 text-3xl md:place-self-center md:justify-self-end"
-  >
+  <ul class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
     {
-      OUTBOUND_LINKS.map(({ platform, url }: PlatformLinkType) => (
-        <a href={url} class="">
-          <Icon name={platform} family="brands" />
-        </a>
+      navLinks.map((nav) => (
+        <li class="btn relative btn-ghost btn-xl">
+          <a
+            href={nav.url}
+            class="absolute inset-0 z-10"
+            aria-label="Full card link"
+          >
+            <Icon name={nav.label} family="brands" />
+          </a>
+        </li>
       ))
     }
-  </nav>
+  </ul>
 </footer>

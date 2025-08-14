@@ -5,36 +5,7 @@ const SITE_TITLE = 'Mike Connor | Developer';
 const SITE_DESCRIPTION =
   'Developer, Designer, and Creator. I love to learn and share my knowledge with others. I am a full-stack developer with a passion for creating beautiful and functional web applications.';
 
-import { type PlatformLinkType } from '#schemas/platforms.ts';
-
-const TWITTER = 'twitter';
-// const FB = 'facebook';
-const LI = 'linkedin';
-const DISCORD = 'discord';
-
-const TWITTER_OBJ: PlatformLinkType = {
-  platform: TWITTER,
-  url: `https://www.${TWITTER}.com/mikeconnor504`,
-};
-const LINKEDIN_OBJ: PlatformLinkType = {
-  platform: LI,
-  url: `https://www.${LI}.com/in/michaelgconnor/`,
-};
-const DISCORD_OBJ: PlatformLinkType = {
-  platform: DISCORD,
-  url: `https://${DISCORD}.com/users/mike4989`,
-};
-
-const OUTBOUND_LINKS = [TWITTER_OBJ, LINKEDIN_OBJ, DISCORD_OBJ];
-
 // export type OutLinkTypes = typeof OUTBOUND_LINKS
-
-export interface NavLinkI {
-  name: string;
-  dirPath: string;
-  icon: string;
-  // subPages?: boolean;
-}
 
 const COUNTRY_URL = new URL(
   '/v3.1/region/africa/',
@@ -110,7 +81,7 @@ export {
   NAME,
   SITE_TITLE,
   SITE_DESCRIPTION,
-  OUTBOUND_LINKS,
+
   // imageSources,
   COUNTRY_URL,
 };

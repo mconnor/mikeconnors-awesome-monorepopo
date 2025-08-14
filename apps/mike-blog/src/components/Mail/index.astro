@@ -1,5 +1,20 @@
 ---
 const key = import.meta.env.ACCESS_KEY;
+
+interface Props {
+  cta?: string;
+  btnClass?: string;
+}
+
+const {
+  cta = 'Submit',
+
+  btnClass = 'btn mt-4 btn-neutral',
+} = Astro.props;
+
+// const btnVariants = {
+//   neutral: 'btn mt-4 btn-neutral',
+// };
 ---
 
 <fieldset
@@ -24,7 +39,7 @@ const key = import.meta.env.ACCESS_KEY;
       class="textarea h-24"
       required></textarea>
 
-    <button type="submit" class="btn mt-4 btn-neutral">Submit Form</button>
+    <button type="submit" class={btnClass}>{cta}</button>
 
     <div id="result"></div>
   </form>

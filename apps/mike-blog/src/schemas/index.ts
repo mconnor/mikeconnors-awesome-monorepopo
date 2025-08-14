@@ -13,10 +13,10 @@ const AuthorSchema = z.object({
     .string()
     .min(2, 'Name must be at least 2 characters')
     .max(100, 'Name too long'),
-  email: z.string().email(),
-  bio: z.string().max(500, 'Bio must be ≤ 500 chars').optional(),
+  email: z.string().email().optional(),
+  bio: z.string().max(2500, 'Bio must be ≤ 500 chars'),
   photo: z.string(),
-  timeline: z.array(TimelineEntrySchema).optional(),
+  timeline: z.array(TimelineEntrySchema),
 });
 
 // const AuthorSchema = z.record(_authorSchema)

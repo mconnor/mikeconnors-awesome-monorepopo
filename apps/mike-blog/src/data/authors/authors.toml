@@ -1,5 +1,5 @@
 [mike-connor]
-name = "Mike Connor"
+name = "M Connor"
 email = "mike@mikeconnor.tech"
 bio = "Mike is a software developer and writer based in Kansas City."
 photo = "/images/dfoleypic.jpg"
@@ -13,8 +13,39 @@ timeline = [
   { year = 2022, milestone = "KCMO" },
 ]
 
-[bob-dobbs]
-name = "Bob Dobbs"
-email = "bob@dobbs.com"
-bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-photo = "/images/templeMike.jpg"
+# [bob-dobbs]
+# name = "Bob Dobbs"
+# email = "bob@dobbs.com"
+# bio = "J.R. “Bob” Dobbs
+# He’s got the Pipe. He’s got the Plan. He’s got your number.
+# Discover the man who can sell you eternal Slack at below-wholesale prices. Founder of the Church of the SubGenius, sworn enemy of the Conspiracy, and living proof that salvation comes in an easy-payment plan. Trust Bob — he’s already three steps ahead of you… and two drinks in."
+# photo = "/images/templeMike.jpg"
+
+[henry-miller]
+name = "H Miller"
+photo = "/images/henry-miller.jpg"
+bio = "H Miller — failed water-colorist, successful loafer, professional fornicator of words. Born in the wrong century and in the wrong country, I made up for it by inventing a few of my own. I wrote dirty books in Paris, holy books in Big Sur, and travel books about places I never intended to improve. Critics call me obscene; I call myself honest. My real job was living — the writing was just to pay for coffee, wine, and the occasional woman foolish enough to believe I’d settle down."
+timeline = [
+  { year = 1934, milestone = "Tropic of Cancer" },
+  { year = 1936, milestone = "Black Spring" },
+  { year = 1938, milestone = "Tropic of Capricorn" },
+  { year = 1940, milestone = "The Colossus of Maroussi" },
+  { year = 1945, milestone = "The Air-Conditioned Nightmare" },
+  { year = 1949, milestone = "Sexus" },
+  { year = 1953, milestone = "Plexus" },
+  { year = 1960, milestone = "Nexus" },
+  { year = 1962, milestone = "Big Sur and the Oranges of Hieronymus Bosch" },
+]
+
+[emperor-guillotine]
+name = "Emperor Guillotine"
+photo = "/images/emporer.webp"
+bio = "I am Emperor Guillotine — supreme overlord of the Gargoyle Gang, master of monsters, and architect of Earth’s inevitable conquest. I came from the far reaches of space, where lesser worlds tremble at the whisper of my name. This fragile little planet? Merely the next jewel in my cosmic crown. My Flying Robot was to be my unstoppable instrument, but alas, meddling children and their petty ideals interfere. No matter. My power is eternal, my patience limitless, and my plans… intricate. Bow now, or bow later — but bow you will."
+timeline = [
+  { year = 1959, milestone = "Zarkon-5" },
+  { year = 1961, milestone = "Nebula of Screams" },
+  { year = 1962, milestone = "Gamma Hydra VII" },
+  { year = 1963, milestone = "Earth (attempted)" },
+  { year = 1965, milestone = "The Moons of Dravok" },
+  { year = 1968, milestone = "Black Sun Citadel" },
+]

@@ -24,6 +24,7 @@ const {
 
 const navData = await getCollection('siteNav');
 const navLinks = navData[0]?.data || [];
+const outboundLinks = navData[1]?.data || [];
 ---
 
 <BaseLayout title={title} {...rest}>
@@ -38,6 +39,6 @@ const navLinks = navData[0]?.data || [];
         <slot />
       </Stack>
     </Center>
-    <Footer />
-  </Cover>
-</BaseLayout>
+    <Footer navLinks={outboundLinks} />
+  </Cover></BaseLayout
+>

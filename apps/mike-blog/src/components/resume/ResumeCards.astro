@@ -1,0 +1,71 @@
+---
+import Card from './MyCard.astro';
+---
+
+<div class="mb-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <Card title="Frontend Frameworks" color="primary">
+    <li>
+      <a href="https://astro.build/" class="link link-primary">Astro</a> - Static
+      Site Generation
+    </li>
+    <li>Native Mobile: React Native with Expo</li>
+    <li>Next.js - Full-stack React</li>
+    <!-- <li>Svelte & SvelteKit</li>
+    <li>Vue.js & Nuxt</li> -->
+  </Card>
+
+  <Card title="Development Tools" color="secondary">
+    <li>
+      <a href="https://astro.build/" class="link link-primary">Astro</a> - Static
+      Site Generation
+    </li>
+    <li>TypeScript/JavaScript</li>
+    <!-- <li>Vite - Lightning-fast builds</li> -->
+    <li>
+      Monorepos
+
+      <ul>
+        <li>linting and lib packages</li>
+        <li>reusable ui: react, svelte, vue, web-components</li>
+      </ul>
+    </li>
+
+    <li>pnpm workspaces</li>
+    <li>ESLint & Prettier</li>
+  </Card>
+
+  <Card title="Styling & UI" color="accent">
+    <li>Tailwind CSS</li>
+    <li>
+      <a href="https://daisyui.com/" class="link link-accent"> DaisyUI </a>
+      - Component library
+    </li>
+    <li>CSS-in-JS solutions</li>
+    <li>Responsive design</li>
+    <li>Design systems</li>
+  </Card>
+
+  <Card title="Backend & Database" color="info">
+    <li>
+      <a href="https://supabase.com/" class="link link-info">Supabase</a>
+      - Backend-as-a-Service
+    </li>
+    <li>PostgreSQL</li>
+    <li>Serverless functions</li>
+    <li>API integration</li>
+  </Card>
+
+  <Card title="Deployment & DevOps" color="success">
+    <li>Vercel - Serverless deployment</li>
+    <li>GitHub Actions</li>
+    <li>Docker containers</li>
+    <li>CI/CD pipelines</li>
+  </Card>
+  <Card title="Current Monorepo" color="warning">
+    <li>Turborepo with pnpm</li>
+    <li>Multiple Astro apps</li>
+    <li>Shared TypeScript configs</li>
+    <li>Centralized styling system</li>
+    <li>Component libraries</li>
+  </Card>
+</div>

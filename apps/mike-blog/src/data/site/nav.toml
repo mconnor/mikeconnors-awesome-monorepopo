@@ -18,7 +18,6 @@ url = "/posts"
 label = "Authors"
 url = "/authors"
 
-
 [[nav.children]]
 label = "Tags"
 url = "/tags"
@@ -31,40 +30,47 @@ url = "/tags"
 # label = "Travel"
 # url = "/posts/travel"
 
-[[nav]]
-label = "CV"
-url = "/resume"
+# [[nav]]
+# label = "CV"
+# url = "/cv"
+
+# [[nav]]
+# label = "res"
+# url = "/resume"
 
 # [[nav]]
 # label = "outbound"
 # url = "/"
 
-# [[nav.children]]
-# label = "x"
-# url = "https://www.x.com/mikeconnor504"
-# target = '_blank'
-# rel= 'external'
+[[outbound]]
+label = "twitter"
+url = "https://www.x.com/mikeconnor504"
+target = '_blank'
+rel = 'external'
 
-# [[nav.children]]
-# label = "linkedin"
-# url = "https://www.linkedin.com/in/michaelgconnor/"
-# target = '_blank'
-# rel= 'external'
+[[outbound]]
+label = "linkedin"
+url = "https://www.linkedin.com/in/michaelgconnor/"
+target = '_blank'
+rel = 'external'
 
-# [[nav.children]]
-# label = "discord"
-# url = "https://discord.com/users/mike4989"
-# target = '_blank'
-# rel= 'external'
+[[outbound]]
+label = "discord"
+url = "https://discord.com/users/mike4989"
+target = '_blank'
+rel = 'external'
 
-
+[[outbound]]
+label = "github"
+url = "https://github/mconnor"
+target = '_blank'
+rel = 'external'
 
 # [[nav]]
 # id = "countries"
 # label = "Countries"
 # url = "/countries"
 # icon = "map"
-
 
 # [[nav]]
 # label = "External"

@@ -1,0 +1,25 @@
+---
+interface Props {
+  title: string;
+  color?: 'primary' | 'secondary' | 'accent' | 'success' | 'info' | 'warning';
+}
+const { title, color = 'primary' } = Astro.props;
+
+const colorVariants = {
+  primary: 'card-title text-primary',
+  secondary: 'card-title text-secondary',
+  accent: 'card-title text-accent',
+  success: 'card-title text-success',
+  info: 'card-title text-info',
+  warning: 'card-title text-warning',
+};
+---
+
+<div class="card bg-base-100 shadow-xl">
+  <div class="card-body">
+    <h3 class={`${colorVariants[color]}`}>{title}</h3>
+    <ul class="list-inside list-disc">
+      <slot />
+    </ul>
+  </div>
+</div>

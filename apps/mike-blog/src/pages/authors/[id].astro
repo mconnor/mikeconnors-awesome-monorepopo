@@ -2,7 +2,8 @@
 import { getCollection } from 'astro:content';
 import Layout from '#layouts/Layout.astro';
 import { Image } from 'astro:assets';
-
+import Frame from '@repo/layout-webcomponents/Frame';
+import TimeLine from '#components/TimeLine/index.astro';
 // import { timeCapsules } from '#app.config.ts';
 // import TimeLine from '#components/TimeLine/index.astro';
 export async function getStaticPaths() {
@@ -19,18 +20,39 @@ const { data } = Astro.props;
 const { name, bio } = data;
 ---
 
-<Layout maxW="60ch">
-  <div class="card card-side bg-base-100 shadow-sm">
+<Layout maxW="80ch">
+  <div class="card bg-base-100 shadow-sm md:card-xl">
     <figure>
-      <div class="w-36 rounded-full">
-        <Image src={data.photo} alt="athor photo" width={200} height={200} />
-      </div>
+      <Frame ratio="1:1">
+        <Image
+          class="rounded-md border-3"
+          src={data.photo}
+          alt="author photo"
+          width={1200}
+          height={1200}
+        />
+      </Frame>
     </figure>
     <div class="card-body">
       <h2 class="card-title">{name}</h2>
+      <p>{bio}</p>
+
       <div class="card-actions">
-        {bio && <p>{bio}</p>}
+        <TimeLine timeline={data.timeline} />
       </div>
     </div>
   </div>
+
+  <!-- <div class="relative">
+    <Frame ratio="1:1">
+      <Image
+        class="rounded-md border-3"
+        src={data.photo}
+        alt="author photo"
+        width={1200}
+        height={1200}
+      />
+    </Frame>
+    <div class="absolute inset-0 z-10 bg-primary/50 p-10"><p>{bio}</p></div>
+  </div> -->
 </Layout>

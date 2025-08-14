@@ -41,13 +41,13 @@ const bool3 = posts.length > 2;
                 alt={alt}
                 width={360}
                 height={180}
-                class:list={[{ 'w-full': index === 0 }, 'rounded-xl']}
+                class:list={[{ 'w-full': index === 0 }]}
               />
             </figure>
           )}
           <a
             href={`/posts/${id}`}
-            class="absolute inset-0 z-10 rounded-2xl"
+            class="card absolute z-10 size-full bg-secondary/30"
             aria-label="Full card link"
           />
 
@@ -60,10 +60,8 @@ const bool3 = posts.length > 2;
             <ul class="card-actions justify-end">
               {tags &&
                 tags.map((tag) => (
-                  <li>
-                    <a href={`/tags/${tag}`} class="z-10 badge badge-sm">
-                      {tag}
-                    </a>
+                  <li class="z-11 border-1">
+                    <a href={`/tags/${tag}`}>{tag}</a>
                   </li>
                 ))}
             </ul>

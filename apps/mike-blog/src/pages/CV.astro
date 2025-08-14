@@ -4,40 +4,36 @@ import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
 
 // import Carousel from '@repo/astro-ui/Carousel';
-import { Image } from 'astro:assets';
+// import { Image } from 'astro:assets';
 // import Mix from '@repo/astro-ui/Mix';
 
 // import IntMix from '#components/IntMix/index.astro';
 
 import TimeLine from '#components/TimeLine/index.astro';
-import Bushes from '../assets/andyBushes.jpg';
+// import Bushes from '../assets/andyBushes.jpg';
 import Headline from '#components/Headline.astro';
 
 const me = await getEntry('authors', 'mike-connor');
 ---
 
 <Layout title="About">
-  <Headline headline="About" />
-
+  <Headline headline="CV" />
   <!-- <Mix /> -->
 
   <!-- <Avatars /> -->
 
-  <Image
-    src={Bushes}
-    alt="Andy"
-    layout="constrained"
-    class="hue-cycle aspect-3/2 rounded-xl object-none py-0 portrait:aspect-square"
-  />
-
   <Prose>
+    <h2>Professional Summary</h2>
     <p>
-      I'm a front-end developer currently based in my hometown of historic
-      Westport, KCMO, right across from Bronze-Jim Bridger. And where my Irish
-      great-great grand-father, John Connor, lived in 1857. Right on Westport Rd
-      - KC's Bourbon Street.
+      Frontend web and mobile developer with over twenty years of experience
+      building web applications and single-page applications for automotive,
+      pharmaceutical, entertainment, and advertising industries. Specializes in
+      modern development workflows, TypeScript, and scalable monorepo
+      architectures. Currently leveraging AI tools to maximize development
+      efficiency and code quality.
     </p>
   </Prose>
+  <!-- <Cards /> -->
   {me?.data?.timeline && <TimeLine timeline={me.data.timeline} />}
 </Layout>
 
