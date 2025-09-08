@@ -5,16 +5,16 @@ author: ['henry-miller']
 description: 'Rescue Pets'
 cover: '../../assets/snow.png'
 alt: 'Dogs and wife in snow storm'
-tags: ['rescue', 'dogs', 'AI']
+tags: ['rescue', 'dogs', 'AI','culture']
 ---
 
-> You think you’re the savior,<br />
-> the one leaning down into the pit.<br />
+> You think you’re the savior,
+> the one leaning down into the pit.
 >
-> But the truth is simpler.<br />
-> More merciless.<br />
+> But the truth is simpler.
+> More merciless.
 >
-> **You are the one in the pit.**<br />
+> **You are the one in the pit.**
 > _They are the rope._
 
 ## Who Rescued Whom

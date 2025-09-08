@@ -5,7 +5,7 @@ author: ['mike-connor']
 description: 'Morlochs and Eloi'
 cover: '../../assets/TIYBE5463.jpeg'
 alt: 'photo of mike as little bo'
-tags: ['culture']
+tags: ['culture','coding']
 ---
 
 ## Is this thing on?
@@ -26,6 +26,6 @@ Topics:
 - rescue dogs (and cats...but mostly dogs)
 - ...and money, sex, power
 
-_So check back_
+### So check back
 
 ![Astro](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWwxaWt3bTJsaGdsZG1lanV1dWRvcHU2cG84OW8wdnBkZjdzdDljcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7bZC2IiRKAap0UbXrr/giphy.gif)
