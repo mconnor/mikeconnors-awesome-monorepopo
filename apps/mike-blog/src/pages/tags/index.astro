@@ -1,4 +1,5 @@
 ---
+import { Debug } from 'astro:components';
 import { getCollection } from 'astro:content';
 import { z } from 'astro/zod';
 import Headline from '#components/Headline.astro';
@@ -17,7 +18,8 @@ const slugTags = allBlogPost
     tags: post.data.tags,
   }));
 
-const zString = z.string().regex(/^[a-z](?:[a-z-]*[a-z])?$/);
+const zString = z.string();
+//.regex(/^[a-z](?:[a-z-]*[a-z])?$/);
 
 const tagCountsObject = slugTags.reduce(
   (tagCountAcc, post) => {
