@@ -22,7 +22,6 @@
     "fix": "eslint . --fix",
     "inspect": "pnpm dlx @eslint/config-inspector@latest",
     "check-types": "tsc --noEmit"
-
   },
   "devDependencies": {
     "@astrojs/check": "catalog:",

@@ -66,7 +66,7 @@
   "type": "module",
   "devDependencies": {
     "@eslint/compat": "catalog:",
-    "@eslint/css": "^0.10.0",
+    "@eslint/css": "catalog:",
     "@eslint/eslintrc": "catalog:",
     "@eslint/js": "catalog:",
     "@eslint/json": "catalog:",

@@ -20,8 +20,6 @@ declare module '@repo/eslint-config/turbo-config' {
   export default config;
 }
 
-
-
 declare module '@repo/eslint-config/next-config' {
   const config: ESLintFlatConfig;
   export default config;
@@ -71,8 +69,6 @@ declare module '@repo/eslint-config/svelte5-app' {
   const config: ESLintFlatConfig;
   export default config;
 }
-
-
 
 declare module '@repo/eslint-config/simple-imports-sort' {
   const config: ESLintFlatConfig;

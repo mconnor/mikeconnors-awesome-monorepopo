@@ -1,20 +1,16 @@
 @import 'tailwindcss';
 @import './modular.css'
-/*
+  /*
 When you import tailwindcss into your project, Preflight is automatically injected into the base layer:
 
 @layer theme, base, components, utilities;
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities); */
-
-@theme {
-
-
+  @theme {
   --measure: 60ch;
   --border-thin: 1px;
   /* used in Reel */
   /* --color-light: var(--color-primary-100);
     --color-dark: var(--color-primary-900); */
 }
-

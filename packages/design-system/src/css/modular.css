@@ -13,7 +13,6 @@
   --s7: calc(var(--s0) * pow(var(--ratio), 7));
   --s8: calc(var(--s0) * pow(var(--ratio), 8));
 
-
   /* used in Reel */
   /* --color-light: var(--color-primary-100);
     --color-dark: var(--color-primary-900); */

@@ -29,19 +29,19 @@
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
-    "prettier": "catalog:",
     "@prettier/plugin-oxc": "catalog:",
-    "prettier-plugin-svelte": "catalog:svelte5",
+    "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
+    "prettier-plugin-svelte": "catalog:svelte5",
     "prettier-plugin-tailwindcss": "catalog:",
     "prettier-plugin-toml": "catalog:",
-    "turbo": "^2.5.5"
+    "turbo": "^2.5.6"
   },
   "engines": {
-     "node": "22.x",
-     "pnpm": "^10.13.1"
+    "node": "22.x",
+    "pnpm": "^10.13.x"
   },
-  "packageManager": "pnpm@10.14.0",
+  "packageManager": "pnpm@10.15.1",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",

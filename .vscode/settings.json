@@ -220,5 +220,5 @@
     "**/logs/**": true,
     "**/*.log": true
   },
-  "deno.path": "/Users/mikeconnor/.local/share/mise/shims/deno"
+  "chat.mcp.discovery.enabled": true
 }
