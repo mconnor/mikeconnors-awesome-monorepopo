@@ -48,7 +48,7 @@ import PostList from '#components/PostList/index.astro';
 - **Frameworks**: Astro, React, Preact, Svelte, Vue, Preact
 - **Languages**: TypeScript, JavaScript
 - **Styling**: TailwindCSS with DaisyUI component library
-- **UI Components**: React, Preact, DaisyUI for semantic component classes
+- **UI Components**: React, Preact, Svelte, Vue, Astro, DaisyUI for semantic component classes
 - **Build Tools**: Vite, Astro
 - **Linting**: ESLint with custom configs
 - **Package Manager**: pnpm
@@ -80,10 +80,4 @@ Web-components wrapped by an astro file
 - Prefix private class members with underscore (\_)
 - Use ALL_CAPS for constants
 
-## TypeScript Guidelines
 
-- Use TypeScript for all new code
-- Follow functional programming principles where possible
-- Use interfaces for data structures and type definitions
-- Prefer immutable data (const, readonly)
-- Use optional chaining (?.) and nullish coalescing (??) operators
