@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "include": ["${configDir}/src/**/*", "${configDir}/*.config.mjs"],
+  "include": ["${configDir}/src/**/*", "${configDir}/*.config.*"],
   "exclude": [
     "${configDir}/.svelte-kit",
     "${configDir}/node_modules",

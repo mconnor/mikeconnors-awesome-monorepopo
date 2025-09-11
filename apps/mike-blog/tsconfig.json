@@ -4,7 +4,7 @@
     "@repo/typescript-config/include-exclude"
   ],
   "compilerOptions": {
-    "allowJs": true // required, and included with all Astro templates
+    "strictNullChecks": true
   },
   "files": ["./.astro/types.d.ts"]
 }

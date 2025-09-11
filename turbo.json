@@ -13,22 +13,26 @@
     "import.meta.env.DEV",
     "ENABLE_EXPERIMENTAL_COREPACK"
   ],
-  "globalPassThroughEnv": ["AWS_SECRET_KEY", "GITHUB_TOKEN","PLAYWRIGHT_*"],
+  "globalPassThroughEnv": ["AWS_SECRET_KEY", "GITHUB_TOKEN", "PLAYWRIGHT_*"],
   "envMode": "strict",
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", "!README.md", ".env*",
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!README.md",
+        ".env*",
         "!test/**/*",
-				"!e2e/**/*",
-				"!performance/**/*",
-				"!.astro/**/*",
-				"!.cache/**/*",
-				"!mod.js",
-				"!mod.js.map"],
+        "!e2e/**/*",
+        "!performance/**/*",
+        "!.astro/**/*",
+        "!.cache/**/*",
+        "!mod.js",
+        "!mod.js.map"
+      ],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
-        "e2e": {
+    "e2e": {
       "dependsOn": ["^build"]
     },
     "transit": {
@@ -65,7 +69,18 @@
       "dependsOn": ["^astro-check"]
     },
     "test": {
-      "dependsOn": ["^lint", "^clean", "^build"]
+      "inputs": ["$TURBO_DEFAULT$", "$TURBO_ROOT$/vitest.config.ts"],
+      "dependsOn": ["transit", "@repo/vitest-config#build"],
+      "outputs": ["coverage.json"]
+    },
+    "merge-json-reports": {
+      "inputs": ["coverage/raw/**"],
+      "outputs": ["coverage.json"]
+    },
+    "report": {
+      "dependsOn": ["merge-json-reports"],
+      "inputs": ["coverage/merge"],
+      "outputs": ["coverage/report/**"]
     },
     "spell-check": {
       "inputs": ["**/*.md", "**/*.mdx"]

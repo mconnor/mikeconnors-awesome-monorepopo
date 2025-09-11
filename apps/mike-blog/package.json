@@ -68,7 +68,7 @@
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",
     "@repo/design-system": "workspace:*",
-       "@repo/vitest-config": "workspace:*",
+    "@repo/vitest-config": "workspace:*",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/typography": "catalog:",
