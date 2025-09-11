@@ -36,7 +36,8 @@
     "sentry-build": "astro check && astro build && pnpm sentry:sourcemaps",
     "vdeploy": "vercel deploy --prebuilt",
     "devbuild": "astro check && astro build development",
-    "test": "vitest run",
+    "test": "vitest",
+    "coverage": "vitest --coverage",
     "sentry:sourcemaps": "sentry-cli sourcemaps inject --org mike-connor --project astro-openprops-blog-w-tags ./dist && sentry-cli sourcemaps upload --org mike-connor --project astro-openprops-blog-w-tags ./dist"
   },
   "dependencies": {
@@ -45,7 +46,6 @@
     "@astrojs/rss": "catalog:",
     "@astrojs/sitemap": "catalog:",
     "@astrojs/vercel": "catalog:",
-    "@awesome.me/webawesome": "catalog:",
     "@repo/astro-ui": "workspace:*",
     "@repo/layout-webcomponents": "workspace:*",
     "@sentry/astro": "catalog:",
@@ -68,15 +68,17 @@
   "devDependencies": {
     "@iconify-json/mdi": "catalog:",
     "@repo/design-system": "workspace:*",
+       "@repo/vitest-config": "workspace:*",
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@tailwindcss/typography": "catalog:",
+    "@vitest/coverage-istanbul": "catalog:",
     "@webcomponents/template-shadowroot": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
     "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:",
-    "vite": "catalog:",
+    "vitest": "catalog:",
     "zod-validation-error": "catalog:"
   }
 }

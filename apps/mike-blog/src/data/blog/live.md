@@ -5,7 +5,7 @@ author: ['mike-connor']
 description: 'Morlochs and Eloi'
 cover: '../../assets/TIYBE5463.jpeg'
 alt: 'photo of mike as little bo'
-tags: ['culture','coding']
+tags: ['culture', 'coding']
 ---
 
 ## Is this thing on?

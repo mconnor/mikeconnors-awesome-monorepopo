@@ -1,16 +1,15 @@
 ---
 import { getEntry } from 'astro:content';
+import { Image } from 'astro:assets';
 import Layout from '#layouts/Layout.astro';
 import Prose from '#components/Prose.astro';
 
 // import Carousel from '@repo/astro-ui/Carousel';
-import { Image } from 'astro:assets';
 // import Mix from '@repo/astro-ui/Mix';
-
 // import IntMix from '#components/IntMix/index.astro';
 
 import TimeLine from '#components/TimeLine/index.astro';
-import Bushes from '../assets/andyBushes.jpg';
+import Bushes from '#assets/andyBushes.jpg';
 import Headline from '#components/Headline.astro';
 
 const me = await getEntry('authors', 'mike-connor');

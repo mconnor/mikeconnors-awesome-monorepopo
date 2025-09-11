@@ -5,7 +5,7 @@ author: ['henry-miller']
 description: 'Rescue Pets'
 cover: '../../assets/snow.png'
 alt: 'Dogs and wife in snow storm'
-tags: ['rescue', 'dogs', 'AI','culture']
+tags: ['rescue', 'dogs', 'AI', 'culture']
 ---
 
 > You think you’re the savior,
