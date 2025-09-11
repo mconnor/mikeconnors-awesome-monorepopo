@@ -16,7 +16,7 @@ export default defineConfig({
     ssr: {
       noExternal: [
         'open-props',
-        'https://early.webawesome.com/webawesome@3.0.0-alpha.12/',
+        'https://early.webawesome.com/webawesome@3.0.0-beta.5/',
       ],
     },
   },

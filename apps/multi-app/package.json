@@ -6,6 +6,8 @@
     "#*": "./src/*"
   },
   "scripts": {
+          "test": "vitest run",
+    "coverage": "vitest run --coverage",
     "updateAstro": "dlx @astrojs/upgrade",
     "dev": "astro dev --port 4323",
     "astro-check": "astro check",
@@ -56,6 +58,7 @@
     "daisyui": "catalog:",
     "eslint": "catalog:",
     "theme-change": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vitest":  "catalog:"
   }
 }

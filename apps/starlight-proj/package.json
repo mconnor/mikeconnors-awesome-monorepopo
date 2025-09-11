@@ -3,6 +3,8 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+        "test": "vitest",
+    "coverage": "vitest run --coverage",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
