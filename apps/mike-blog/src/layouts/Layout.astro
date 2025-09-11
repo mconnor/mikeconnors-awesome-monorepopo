@@ -29,7 +29,7 @@ const outboundLinks = navData[1]?.data || [];
 
 <BaseLayout title={title} {...rest}>
   <Cover space="2rem" centeredElement="center-l" noPad minHeight="100dvh">
-    <header>
+    <header transition:persist>
       <NavBar navLinks={navLinks} />
     </header>
 
@@ -39,6 +39,6 @@ const outboundLinks = navData[1]?.data || [];
         <slot />
       </Stack>
     </Center>
-    <Footer navLinks={outboundLinks} />
+    <Footer navLinks={outboundLinks} transition:persist />
   </Cover></BaseLayout
 >
