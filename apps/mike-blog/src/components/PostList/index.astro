@@ -47,7 +47,7 @@ const bool3 = posts.length > 2;
           )}
           <a
             href={`/posts/${id}`}
-            class="card absolute z-10 size-full bg-secondary/30"
+            class="card absolute z-10 size-full"
             aria-label="Full card link"
           />
 
@@ -60,7 +60,7 @@ const bool3 = posts.length > 2;
             <ul class="card-actions justify-end">
               {tags &&
                 tags.map((tag) => (
-                  <li class="z-11 border-1">
+                  <li class="z-11">
                     <a href={`/tags/${tag}`}>{tag}</a>
                   </li>
                 ))}
