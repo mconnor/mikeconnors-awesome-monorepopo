@@ -26,6 +26,7 @@
     "check-types": "turbo run check-types",
     "all": "turbo run lint test build",
     "update:all": "turbo run update --filter=...",
+    "check": "turbo run --filter=@app/blog astro-check",
     "lint": "turbo run --filter=@app/blog lint"
   },
   "devDependencies": {
@@ -41,7 +42,7 @@
     "node": "22.x",
     "pnpm": "^10.13.x"
   },
-  "packageManager": "pnpm@10.15.1",
+  "packageManager": "pnpm@10.16.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",

@@ -10,15 +10,17 @@ const { tagCounts } = Astro.props;
 
 <Cluster role="list">
   {
-
-             Object.entries(tagCounts).map(([tag, count]) => (
-                <div>
-            <a
-            href=`tags/${tag}` class="badge badge-xl badge-info">
-              <i class="ph ph-tag"></i>
+    tagCounts &&
+      Object.entries(tagCounts).map(([tag, count]) => {
+        const url = `/tags/${tag}`;
+        return (
+          <li>
+            <a href={url} class="badge badge-xl badge-info">
+              <i class="ph ph-tag" />
               {tag}: {count}
             </a>
-        </div>
-      ))
+          </li>
+        );
+      })
   }
 </Cluster>

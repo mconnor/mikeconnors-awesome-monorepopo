@@ -7,7 +7,7 @@
   },
   "private": true,
   "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "astro dev --host --port 4322",
     "astro-check": "astro check",
     "build": "astro build",

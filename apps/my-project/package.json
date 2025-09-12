@@ -6,7 +6,7 @@
     "#*": "./src/*"
   },
   "scripts": {
-        "test": "vitest",
+    "test": "vitest",
     "coverage": "vitest run --coverage",
     "astro-check": "astro check",
     "dev": "astro dev --port 4326",

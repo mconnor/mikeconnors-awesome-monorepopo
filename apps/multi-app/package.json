@@ -6,7 +6,7 @@
     "#*": "./src/*"
   },
   "scripts": {
-          "test": "vitest run",
+    "test": "vitest run",
     "coverage": "vitest run --coverage",
     "updateAstro": "dlx @astrojs/upgrade",
     "dev": "astro dev --port 4323",
@@ -59,6 +59,6 @@
     "eslint": "catalog:",
     "theme-change": "catalog:",
     "typescript": "catalog:",
-    "vitest":  "catalog:"
+    "vitest": "catalog:"
   }
 }
