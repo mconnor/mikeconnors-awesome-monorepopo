@@ -80,7 +80,6 @@ catalog:
   jest: ^30.1.3
   jsdom: ^26.1.0
   lorem-ipsum: ^2.0.8
-  luxon: ^3.7.2
   nyc: ^17.1.0
   preact: ^10.27.1
   prettier: ^3.6.2

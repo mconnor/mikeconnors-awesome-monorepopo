@@ -43,7 +43,6 @@
     "astro": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
-    "luxon": "catalog:",
     "tailwindcss": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:"

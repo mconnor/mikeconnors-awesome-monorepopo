@@ -17,7 +17,7 @@
     "test-blog": "turbo run e2e --filter=@app/blog --only",
     "new": "turbo gen workspace --copy",
     "graph": "turbo run build --graph",
-    "build": "turbo build",
+    "build": "turbo run --filter=@app/blog build",
     "build:apps": "turbo run build --filter=\"@apps/*\"",
     "preview": "turbo preview",
     "dev": "turbo --filter='@app/blog' dev",

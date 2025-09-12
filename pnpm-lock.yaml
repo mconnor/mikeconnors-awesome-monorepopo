@@ -213,9 +213,6 @@ catalogs:
     lorem-ipsum:
       specifier: ^2.0.8
       version: 2.0.8
-    luxon:
-      specifier: ^3.7.2
-      version: 3.7.2
     nyc:
       specifier: ^17.1.0
       version: 17.1.0
@@ -1007,9 +1004,6 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.35.0(jiti@2.5.1)
-      luxon:
-        specifier: 'catalog:'
-        version: 3.7.2
       tailwindcss:
         specifier: 'catalog:'
         version: 4.1.13
@@ -6411,10 +6405,6 @@ packages:
   lru-cache@8.0.5:
     resolution: {integrity: sha512-MhWWlVnuab1RG5/zMRRcVGXZLCXrZTgfwMikgzCegsPnG62yDQo5JnqKkrK4jO5iKqDAZGItAqN5CtKBCBWRUA==}
     engines: {node: '>=16.14'}
-
-  luxon@3.7.2:
-    resolution: {integrity: sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==}
-    engines: {node: '>=12'}
 
   magic-string@0.30.19:
     resolution: {integrity: sha512-2N21sPY9Ws53PZvsEpVtNuSW+ScYbQdp4b9qUaL+9QkHUrGFKo56Lg9Emg5s9V/qrtNBmiR01sYhUOwu3H+VOw==}
@@ -15464,8 +15454,6 @@ snapshots:
       yallist: 3.1.1
 
   lru-cache@8.0.5: {}
-
-  luxon@3.7.2: {}
 
   magic-string@0.30.19:
     dependencies:
