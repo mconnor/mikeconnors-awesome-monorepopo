@@ -1,16 +1,14 @@
 ---
-import Layout from '#layouts/Layout.astro';
 import { Image } from 'astro:assets';
-
-import Headline from '#components/Headline.astro';
 import { type CollectionEntry } from 'astro:content';
+import Headline from '#components/Headline.astro';
 import Prose from '#components/Prose.astro';
-
+import Layout from '#layouts/Layout.astro';
 import { format } from 'date-fns';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, date, cover } = Astro.props;
+const { title, description, date, cover, alt } = Astro.props;
 ---
 
 <Layout title={title} description={description} maxW="60ch">
@@ -22,7 +20,7 @@ const { title, description, date, cover } = Astro.props;
     cover && (
       <Image
         src={cover}
-        alt="xxx"
+        alt={alt}
         width={10}
         height={10}
         class={'w-full rounded-xl'}

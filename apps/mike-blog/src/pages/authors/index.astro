@@ -20,7 +20,7 @@ const authors = await getCollection('authors');
               <Image
                 class="rounded-md border-3"
                 src={data.photo}
-                alt="author photo"
+                alt={data.name}
                 width={1000}
                 height={1000}
               />
@@ -35,7 +35,7 @@ const authors = await getCollection('authors');
           <div class="card-body">
             <h2 class="card-title">
               {data.name}
-              <div class="badge badge-secondary">Fresh</div>
+              {/* <div class="badge badge-secondary">Fresh</div> */}
             </h2>
           </div>
         </li>
