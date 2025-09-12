@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '#layouts/Layout.astro';
+import Prose from '#components/Prose.astro';
+
+// import Carousel from '@repo/astro-ui/Carousel';
+// import Mix from '@repo/astro-ui/Mix';
+// import IntMix from '#components/IntMix/index.astro';
+
+import Bushes from '#assets/andyBushes.jpg';
+import Headline from '#components/Headline.astro';
+---
+
+<Layout title="VIP Lounge">
+  <Headline headline="VIP Lounge" />
+
+  <!-- <Mix /> -->
+
+  <!-- <Avatars /> -->
+
+  <Image
+    src={Bushes}
+    alt="Andy"
+    layout="constrained"
+    class="hue-cycle aspect-3/2 rounded-xl object-none py-0 portrait:aspect-square"
+  />
+
+  <Prose>
+    <p>Only the cool kid's get in here</p>
+  </Prose>
+</Layout>

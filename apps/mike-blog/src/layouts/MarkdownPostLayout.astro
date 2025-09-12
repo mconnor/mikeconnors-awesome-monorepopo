@@ -20,7 +20,7 @@ const { title, description, date, cover, alt } = Astro.props;
     cover && (
       <Image
         src={cover}
-        alt={alt}
+        alt={alt ? alt : 'needs alt'}
         width={10}
         height={10}
         class={'w-full rounded-xl'}

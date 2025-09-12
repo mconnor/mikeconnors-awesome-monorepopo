@@ -102,7 +102,12 @@ export default defineConfig({
     },
   },
 
-  integrations: [icon(), mdx(), sitemap()],
+  integrations: [icon(), mdx(), sitemap({
+      filter: (page) => page !== 'https://mikeconnor.tech/secret-vip-lounge/' &&
+       page !== 'https://mikeconnor.tech/randomnumber/'
+
+      ,
+    })],
   // It is no longer necessary to specify output: 'hybrid' in your Astro config to use server-rendered pages. The new output: 'static' has this capability included.
   // output: 'static',
   adapter: vercel({
