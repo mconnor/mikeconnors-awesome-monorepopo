@@ -30,9 +30,9 @@ url = "/tags"
 # label = "Travel"
 # url = "/posts/travel"
 
-# [[nav]]
-# label = "CV"
-# url = "/cv"
+[[nav]]
+label = "CV"
+url = "/cv"
 
 # [[nav]]
 # label = "res"

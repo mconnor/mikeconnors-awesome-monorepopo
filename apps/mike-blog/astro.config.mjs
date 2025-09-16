@@ -19,20 +19,6 @@ export default defineConfig({
     // or need to override these defaults when using Tailwind 4,
     //  leave the default false value configured.
     responsiveStyles: true,
-
-    //Defines a list of permitted image source domains for
-    //  remote image optimization. No other remote images
-    // will be optimized by Astro.
-
-    domains: [
-      'astro.build',
-      'docs.astro.build',
-      'picsum.photos',
-      // 'https://doodleipsum.com',
-      'images.unsplash.com',
-      'img.daisyui.com',
-    ],
-
     layout: 'constrained',
     // Used for all `<Image />` and `<Picture />` components unless overridden
     // breakpoints:
@@ -76,6 +62,7 @@ export default defineConfig({
   },
   experimental: {
     // liveContentCollections: true,
+    csp: true,
     contentIntellisense: true,
   },
   vite: {
@@ -102,15 +89,19 @@ export default defineConfig({
     },
   },
 
-  integrations: [icon(), mdx(), sitemap({
-      filter: (page) => page !== 'https://mikeconnor.tech/secret-vip-lounge/' &&
-       page !== 'https://mikeconnor.tech/randomnumber/'
-
-      ,
-    })],
+  integrations: [
+    icon(),
+    mdx(),
+    sitemap({
+      filter: (page) =>
+        page !== 'https://mikeconnor.tech/secret-vip-lounge/' &&
+        page !== 'https://mikeconnor.tech/randomnumber/',
+    }),
+  ],
   // It is no longer necessary to specify output: 'hybrid' in your Astro config to use server-rendered pages. The new output: 'static' has this capability included.
-  // output: 'static',
+  output: 'static',
   adapter: vercel({
+    //  experimentalStaticHeaders: true,
     imageService: true,
     devImageService: 'sharp',
     excludeFiles: ['./src/assets/markdown-cartoon.png'],
