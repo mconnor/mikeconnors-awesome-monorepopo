@@ -101,7 +101,7 @@ export default defineConfig({
   // It is no longer necessary to specify output: 'hybrid' in your Astro config to use server-rendered pages. The new output: 'static' has this capability included.
   output: 'static',
   adapter: vercel({
-    //  experimentalStaticHeaders: true,
+     experimentalStaticHeaders: true,
     imageService: true,
     devImageService: 'sharp',
     excludeFiles: ['./src/assets/markdown-cartoon.png'],
