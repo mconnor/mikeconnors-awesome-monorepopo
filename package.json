@@ -42,7 +42,7 @@
     "node": "22.x",
     "pnpm": "^10.13.x"
   },
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.19.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",

@@ -63,7 +63,7 @@
     "gsap": "catalog:",
     "lorem-ipsum": "catalog:",
     "sharp": "catalog:",
-    "sitemap": "^8.0.0",
+    "sitemap": "catalog:",
     "tailwindcss": "catalog:",
     "theme-change": "catalog:"
   },
