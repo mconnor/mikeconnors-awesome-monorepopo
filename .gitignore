@@ -39,3 +39,4 @@ yarn-error.log*
 /apps/whole-wavelength
 /packages/park
 /packages/ui-components/astro-wc/src/OldContact
+/mise.toml

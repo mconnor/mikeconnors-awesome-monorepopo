@@ -7,7 +7,8 @@ When you import tailwindcss into your project, Preflight is automatically inject
 @import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities); */
-  @theme {
+
+@theme {
   --measure: 60ch;
   --border-thin: 1px;
   /* used in Reel */
