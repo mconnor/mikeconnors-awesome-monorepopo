@@ -75,6 +75,7 @@
     "astro-eslint-parser": "catalog:",
     "eslint": "catalog:",
     "eslint-config-prettier": "catalog:",
+    "eslint-config-turbo": "^2.6.3",
     "eslint-plugin-astro": "catalog:",
     "eslint-plugin-barrel-files": "catalog:",
     "eslint-plugin-lit": "catalog:",

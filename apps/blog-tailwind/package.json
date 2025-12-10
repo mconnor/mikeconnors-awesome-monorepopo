@@ -46,7 +46,6 @@
     "@tailwindcss/typography": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
-    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:"
   }

@@ -30,7 +30,6 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "eslint": "catalog:",
-    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:"
   }
 }

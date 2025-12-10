@@ -1,5 +1,6 @@
 import 'eslint-plugin-only-warn';
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import eslintPluginAstro from 'eslint-plugin-astro';
 import tseslint from 'typescript-eslint';
 import astroParser from 'astro-eslint-parser';
@@ -12,7 +13,7 @@ import * as regexpPlugin from 'eslint-plugin-regexp';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 
 /** @type {import("eslint").Linter.Config} */
-export default tseslint.config(
+export default defineConfig(
   ignoresConfig,
   js.configs.recommended,
   tseslint.configs.recommendedTypeChecked,

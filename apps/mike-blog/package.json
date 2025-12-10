@@ -78,7 +78,6 @@
     "@webcomponents/template-shadowroot": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
-    "rollup-plugin-visualizer": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:",
     "zod-validation-error": "catalog:"

@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@prettier/plugin-oxc": "catalog:",
+    "node-gyp": "^12.1.0",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
@@ -39,10 +40,10 @@
     "turbo": "^2.6.1"
   },
   "engines": {
-    "node": "22.x",
+    "node": "24.x",
     "pnpm": "^10.13.x"
   },
-  "packageManager": "pnpm@10.21.0",
+  "packageManager": "pnpm@10.25.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
@@ -52,6 +53,7 @@
       "esbuild",
       "eslint-config-prettier",
       "msw",
+      "rollup",
       "sharp",
       "svelte-preprocess",
       "unrs-resolver"
