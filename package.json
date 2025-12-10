@@ -36,13 +36,13 @@
     "prettier-plugin-svelte": "catalog:svelte5",
     "prettier-plugin-tailwindcss": "catalog:",
     "prettier-plugin-toml": "catalog:",
-    "turbo": "^2.6.0"
+    "turbo": "^2.6.1"
   },
   "engines": {
     "node": "22.x",
     "pnpm": "^10.13.x"
   },
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.21.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
