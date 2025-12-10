@@ -3,7 +3,7 @@ import svelte from 'eslint-plugin-svelte';
 import globals from 'globals';
 // import ignoresConfig from './ignores.config.mjs';
 import tseslint from 'typescript-eslint';
-
+import { defineConfig } from 'eslint/config';
 import extensionInstanceObj from './fileExtensions.mjs';
 const extraFileExtensions = extensionInstanceObj.getExtensions();
 

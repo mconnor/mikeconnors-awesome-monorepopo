@@ -43,7 +43,6 @@
     "@vitejs/plugin-vue": "catalog:",
     "add": "catalog:",
     "astro": "catalog:",
-    "rollup-plugin-visualizer": "catalog:",
     "svelte": "catalog:svelte5",
     "tailwindcss": "catalog:",
     "vue": "catalog:"
@@ -52,11 +51,11 @@
     "@repo/eslint-config": "workspace:^",
     "@repo/typescript-config": "workspace:^",
     "@sveltejs/vite-plugin-svelte": "catalog:svelte5",
-    "preact": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "daisyui": "catalog:",
     "eslint": "catalog:",
+    "preact": "catalog:",
     "theme-change": "catalog:",
     "typescript": "catalog:",
     "vitest": "catalog:"
