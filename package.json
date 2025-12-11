@@ -39,6 +39,9 @@
     "prettier-plugin-toml": "catalog:",
     "turbo": "^2.6.3"
   },
+    "engines": {
+    "node": "22.x"
+  },
   "packageManager": "pnpm@10.25.0",
   "pnpm": {
     "onlyBuiltDependencies": [
