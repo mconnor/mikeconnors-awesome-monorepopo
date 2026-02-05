@@ -56,7 +56,6 @@
       "esbuild",
       "eslint-config-prettier",
       "msw",
-      "rollup",
       "sharp",
       "svelte-preprocess",
       "unrs-resolver"
