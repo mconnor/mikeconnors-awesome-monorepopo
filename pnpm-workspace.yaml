@@ -44,10 +44,10 @@ catalog:
   '@tailwindcss/typography': ^0.5.19
   '@tailwindcss/vite': 4.1.18
   '@types/node': ^22.19.2
-  '@types/react': 19.2.7
+  '@types/react': 19.2.13
   '@types/react-dom': 19.2.3
   '@typescript-eslint/parser': ^8.54.0
-  '@vitejs/plugin-react': ^5.1.1
+  '@vitejs/plugin-react': ^5.1.3
   '@vitejs/plugin-vue': ^6.0.4
   '@vitest/coverage-istanbul': ^4.0.8
   '@vitest/ui': ^4.0.10

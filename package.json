@@ -14,6 +14,7 @@
   ],
   "private": true,
   "scripts": {
+    "postinstall": "patch-package",
     "test-blog": "turbo run e2e --filter=@app/blog --only",
     "new": "turbo gen workspace --copy",
     "graph": "turbo run build --graph",
