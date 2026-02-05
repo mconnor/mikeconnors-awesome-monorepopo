@@ -29,10 +29,12 @@
     "check": "turbo run --filter=@app/blog astro-check",
     "lint": "turbo run --filter=@app/blog lint"
   },
+  "dependencies": {
+    "patch-package": "^8.0.0"
+  },
   "devDependencies": {
     "@prettier/plugin-oxc": "catalog:",
     "node-gyp": "^12.1.0",
-    "patch-package": "^8.0.0",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
