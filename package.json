@@ -32,17 +32,19 @@
   "devDependencies": {
     "@prettier/plugin-oxc": "catalog:",
     "node-gyp": "^12.1.0",
+    "patch-package": "^8.0.0",
     "prettier": "catalog:",
     "prettier-plugin-astro": "catalog:",
     "prettier-plugin-svelte": "catalog:svelte5",
     "prettier-plugin-tailwindcss": "catalog:",
     "prettier-plugin-toml": "catalog:",
-    "turbo": "^2.6.3"
+    "turbo": "^2.8.3"
   },
-    "engines": {
-    "node": "22.x"
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
   },
-  "packageManager": "pnpm@10.25.0",
+  "packageManager": "pnpm@10.28.2",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
