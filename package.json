@@ -19,7 +19,6 @@
     "graph": "turbo run build --graph",
     "build": "turbo run --filter=@app/blog build",
     "build:apps": "turbo run build --filter=\"@apps/*\"",
-    "preview": "turbo preview",
     "dev": "turbo --filter='@app/blog' dev",
     "dev:demo": "turbo dev --filter=@app/astrodemo",
     "inspect": "turbo inspect",
