@@ -309,6 +309,10 @@ catalogs:
 importers:
 
   .:
+    dependencies:
+      patch-package:
+        specifier: ^8.0.0
+        version: 8.0.1
     devDependencies:
       '@prettier/plugin-oxc':
         specifier: 'catalog:'
@@ -316,9 +320,6 @@ importers:
       node-gyp:
         specifier: ^12.1.0
         version: 12.1.0
-      patch-package:
-        specifier: ^8.0.0
-        version: 8.0.1
       prettier:
         specifier: 'catalog:'
         version: 3.8.1
