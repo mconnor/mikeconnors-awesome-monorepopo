@@ -1,8 +1,26 @@
-# Build output
+# generated types
+
+#  default ignored files
+# .git
+# .svn
+# .hg
+# node_modules
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
 dist/
 
-# Node modules
-node_modules/
+# Directories
 
-# Cache directories
+# macOS-specific files
+.DS_Store
+# Files
+pnpm-lock.yaml
+
+# default
+
 .turbo/
