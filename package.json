@@ -19,6 +19,7 @@
     "new": "turbo gen workspace --copy",
     "graph": "turbo run build --graph",
     "build": "turbo run --filter=@app/blog build",
+     "format": "turbo run --filter=@app/blog format",
     "build:apps": "turbo run build --filter=\"@apps/*\"",
     "dev": "turbo --filter='@app/blog' dev",
     "dev:demo": "turbo dev --filter=@app/astrodemo",
