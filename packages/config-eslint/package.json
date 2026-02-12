@@ -6,10 +6,6 @@
     "#*": "./*"
   },
   "exports": {
-    "./TailwindLint": {
-      "types": "./index.d.ts",
-      "default": "./tw.lint.config.mjs"
-    },
     "./turbo-config": {
       "types": "./index.d.ts",
       "default": "./turbo.lint.config.mjs"

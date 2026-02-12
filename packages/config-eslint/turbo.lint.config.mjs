@@ -1,5 +1,5 @@
 import turboPlugin from 'eslint-plugin-turbo';
-import { defineConfig, globalIgnores } from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 import onlyWarn from 'eslint-plugin-only-warn';
 
 /**
