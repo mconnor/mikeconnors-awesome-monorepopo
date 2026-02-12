@@ -23,7 +23,6 @@
         "!README.md",
         ".env*",
         "!test/**/*",
-        "!e2e/**/*",
         "!performance/**/*",
         "!.astro/**/*",
         "!.cache/**/*",
@@ -32,14 +31,11 @@
       ],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
-    "e2e": {
-      "dependsOn": ["^build"]
-    },
     "transit": {
       "dependsOn": ["^transit"]
     },
     "lint": {
-      "dependsOn": ["transit"]
+      "dependsOn": ["^lint", "transit"]
     },
     "format": {},
     "sync": {
