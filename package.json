@@ -45,20 +45,5 @@
   "engines": {
     "node": ">=22"
   },
-  "packageManager": "pnpm@10.29.3",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "@sentry/cli",
-      "@tailwindcss/oxide",
-      "core-js",
-      "esbuild",
-      "eslint-config-prettier",
-      "msw",
-      "sharp",
-      "svelte-preprocess",
-      "unrs-resolver"
-    ],
-    "overrides": {}
-  }
+  "packageManager": "pnpm@11.9.0"
 }

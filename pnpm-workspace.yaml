@@ -118,3 +118,16 @@ catalogs:
     svelte-eslint-parser: ^1.4.1
 
 cleanupUnusedCatalogs: true
+overrides: {}
+autoInstallPeers: true
+allowBuilds:
+  '@parcel/watcher': true
+  '@sentry/cli': true
+  '@tailwindcss/oxide': true
+  core-js: true
+  esbuild: true
+  eslint-config-prettier: true
+  msw: true
+  sharp: true
+  svelte-preprocess: true
+  unrs-resolver: true
