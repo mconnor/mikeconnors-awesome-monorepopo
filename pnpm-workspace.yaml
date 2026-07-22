@@ -118,7 +118,8 @@ catalogs:
     svelte-eslint-parser: ^1.4.1
 
 cleanupUnusedCatalogs: true
-overrides: {}
+overrides:
+  '@emmetio/css-parser': ^0.4.1
 autoInstallPeers: true
 allowBuilds:
   '@parcel/watcher': true
@@ -131,3 +132,11 @@ allowBuilds:
   sharp: true
   svelte-preprocess: true
   unrs-resolver: true
+minimumReleaseAgeExclude:
+  - '@turbo/darwin-64@2.10.6'
+  - '@turbo/darwin-arm64@2.10.6'
+  - '@turbo/linux-64@2.10.6'
+  - '@turbo/linux-arm64@2.10.6'
+  - '@turbo/windows-64@2.10.6'
+  - '@turbo/windows-arm64@2.10.6'
+  - turbo@2.10.6
