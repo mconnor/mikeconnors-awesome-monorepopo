@@ -3,7 +3,7 @@ import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import eslintPluginAstro from 'eslint-plugin-astro';
 import tseslint from 'typescript-eslint';
-import astroParser from 'astro-eslint-parser';
+import * as astroParser from "astro-eslint-parser"
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 import globals from 'globals';
 import ignoresConfig from './ignores.config.mjs';

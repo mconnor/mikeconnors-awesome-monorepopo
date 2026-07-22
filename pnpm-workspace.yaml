@@ -91,16 +91,16 @@ catalog:
   prettier-plugin-vue: ^1.1.6
   react: 19.2.4
   react-dom: 19.2.4
-  sharp: ^0.34.5
-  sitemap: ^9.0.0
+  sharp: ^0.35.3
+  sitemap: ^9.0.1
   tailwind-merge: 3.4.0
   tailwindcss: ~4.1.18
   theme-change: ^2.5.0
   tsup: ^8.5.1
-  typescript: ^5.9.3
-  typescript-eslint: ^8.55.0
-  vite: ^7.3.1
-  vitest: ^4.0.18
+  typescript: ^6.0.3
+  typescript-eslint: ^8.65.0
+  vite: ^8.1.5
+  vitest: ^4.1.10
   vue: ^3.5.28
   vue-eslint-parser: ^10.2.0
   zod-validation-error: ^3.5.3
