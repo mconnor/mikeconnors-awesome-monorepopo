@@ -38,7 +38,9 @@ const countryLoader = ({ region }: CType): Loader => {
         const { store, logger } = _loaderCtx;
         const parseData = _loaderCtx.parseData.bind(_loaderCtx);
 
-        const unknownObj = await fetch(url.href)
+        const unknownObj = await fetch(url.href, {
+          signal: AbortSignal.timeout(8000),
+        })
           .then((res) => res.json() as unknown)
           .catch((error) => {
             logger.error('Fetch failed: ' + error);
